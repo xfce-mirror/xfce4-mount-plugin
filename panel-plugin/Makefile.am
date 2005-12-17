@@ -18,7 +18,7 @@ libmount_la_SOURCES =                                        \
         devices.h                                                     \
         mount-plugin.c                                                   
 
-libmount_la_CFLAGS =  @XFCE4_PANEL_CFLAGS@
+libmount_la_CFLAGS = @XFCE4_PANEL_CFLAGS@
 
 libmount_la_LIBADD = @XFCE4_PANEL_LIBS@
 

@@ -26,12 +26,8 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include "devices.h"
 #include <gtk/gtk.h>
 
-
-/* for debugging */
-#include <libxfce4util/debug.h>
-
-/* for internationalization, by F. Nowak */
-#include <libxfce4util/i18n.h>
+/* for internationalization and debugging, by F. Nowak */
+#include <libxfce4util/libxfce4util.h>
 /* end i18n extension */
 
 #include <panel/xfce.h>
@@ -39,12 +35,24 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <libxfcegui4/libxfcegui4.h>
 #include "icons.h"
 
+#define APP_NAME N_("Mount Plugin")
+
 #define BORDER 6
+
+#define DEFAULT_MOUNT_COMMAND "mount"
+#define DEFAULT_UMOUNT_COMMAND "umount"
+
+#define DEBUG
+#define DEBUG_TRACE
 
 /*--------- graphical interface ----------*/
 typedef struct 
 {
-	char * on_mount_cmd ;
+	char *on_mount_cmd;
+	/* fabian on 2005-12-17 */
+	char *mount_command;
+	char *umount_command;
+	/* end fabian */
 	GtkWidget * button ;
 	GtkWidget * menu ;
 	GPtrArray * pdisks ; /* contains pointers to struct t_disk */
@@ -60,6 +68,24 @@ typedef struct
 	GtkWidget * progress_bar ;
 } t_disk_display ;
 /*------------------------------------------------*/
+
+
+/*------------- settings dialog --------------------------*/
+typedef struct
+{
+	t_mounter * mt ;
+	GtkWidget * dialog ;
+	/* options */
+	GtkWidget * string_cmd;
+	/* fabian on 2005-12-17 */
+	GtkWidget *specify_commands;
+	GtkWidget *box_mount_commands;
+	GtkWidget *string_mount_command;
+	GtkWidget *string_umount_command;
+	/* end fabian */
+}
+t_mounter_dialog ;
+/*------------------------------------------------------*/
 
 
 /*---------------- on_activate_disk_display ---------------*/
@@ -124,7 +150,7 @@ static t_disk_display * disk_display_new(t_disk * disk, t_mounter * mounter)
 /*-------------------- disk_display_refresh -----------------*/
 static void disk_display_refresh(t_disk_display * disk_display, t_mount_info * mount_info)
 {
-	TRACE("enters disk_display_refresh");
+	TRACE ("enters disk_display_refresh");
 	if (disk_display != NULL)
 	{
 		if (mount_info != NULL)
@@ -157,7 +183,7 @@ static void disk_display_refresh(t_disk_display * disk_display, t_mount_info * m
 
 		}
 	}
-	TRACE("leaves disk_display_refresh");
+	TRACE ("leaves disk_display_refresh");
 }
 /*----------------------------------------------*/
 
@@ -230,7 +256,7 @@ static void mounter_refresh(t_mounter * mt)
 /* --------------plugin event --------------------------------*/
 static gboolean on_button_press(GtkWidget * widget , GdkEventButton * event,t_mounter * mounter)
 {
-	TRACE("enters on_button_pressed");
+	TRACE ("enters on_button_pressed");
 	if (mounter != NULL && event->button == 1)
 	{
 		
@@ -238,7 +264,7 @@ static gboolean on_button_press(GtkWidget * widget , GdkEventButton * event,t_mo
 		gtk_menu_popup(GTK_MENU(mounter->menu),NULL,NULL,NULL,NULL,0,event->time);
 		return TRUE;
 	}
-	TRACE("leaves on_button_pressed");
+	TRACE ("leaves on_button_pressed");
 	return FALSE ;
 }
 /*------------------------------------------------------*/
@@ -247,7 +273,7 @@ static gboolean on_button_press(GtkWidget * widget , GdkEventButton * event,t_mo
 static void
 mounter_read_config (Control * control, xmlNodePtr node)
 {
-	DBG("enter read_config");
+	TRACE ("enter read_config");
 	xmlChar *value;
 	t_mounter *mt;
 	
@@ -269,7 +295,26 @@ mounter_read_config (Control * control, xmlNodePtr node)
 		DBG("apply on_mount_cmd = %s",value);
 		mt->on_mount_cmd = (char *) value;
 	}
-	DBG("leaves read_config");
+	
+	value = xmlGetProp (node, (const xmlChar *) "mount_cmd");
+   if (value) {
+      g_free (mt->mount_command);
+   	DBG("apply on_mount_cmd = %s",value);
+   	mt->mount_command = (char *) (value);
+   }
+   else
+      mt->mount_command = strdup (DEFAULT_MOUNT_COMMAND);
+         
+   value = xmlGetProp (node, (const xmlChar *) "umount_cmd");
+   if (value) {
+      g_free (mt->umount_command );
+   	DBG("apply on_mount_cmd = %s",value);
+   	mt->umount_command = (char *) (value);
+   }
+   else
+      mt->umount_command = strdup (DEFAULT_UMOUNT_COMMAND);
+
+	TRACE ("leaves read_config");
 
 
 }
@@ -279,12 +324,18 @@ mounter_read_config (Control * control, xmlNodePtr node)
 static void
 mounter_write_config (Control * control, xmlNodePtr parent)
 {
-	DBG("enter write_config");
+	TRACE ("enter write_config");
+	
 	t_mounter * mt;
 	mt = (t_mounter *) control->data;
 	DBG("save on_mount_cmd : %s", mt->on_mount_cmd);
-	xmlSetProp (parent, "on_mount_cmd", mt->on_mount_cmd);
-	DBG("leaves write config");
+	xmlSetProp (parent, (xmlChar*) "on_mount_cmd", (xmlChar*) mt->on_mount_cmd);
+	DBG("save mount_cmd : %s", mt->mount_command);
+	xmlSetProp (parent, (xmlChar*) "mount_cmd", (xmlChar*) mt->mount_command);
+	DBG("save umount_cmd : %s", mt->umount_command);
+	xmlSetProp (parent, (xmlChar*) "umount_cmd", (xmlChar*) mt->umount_command);
+	
+	TRACE ("leaves write config");
 }
 /*----------------------------------------------------------*/
 
@@ -337,16 +388,6 @@ static gboolean create_mounter_control (Control * control)
 
 /*--------------------------------------------------------*/
 
-/*------------- settings dialog --------------------------*/
-typedef struct
-{
-	t_mounter * mt ;
-	GtkWidget * dialog ;
-	/* options */
-	GtkWidget * string_cmd ;	
-}
-t_mounter_dialog ;
-/*------------------------------------------------------*/
 
 /*---------- free_mounter_dialog ---------------------*/
 static void free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
@@ -371,6 +412,17 @@ static void mounter_apply_options (t_mounter_dialog * md)
 }
 /*------------------------------------------------------*/
 
+static gboolean
+specify_command_toggled (GtkWidget *widget, t_mounter_dialog *md) {
+
+    gboolean is_active = gtk_toggle_button_get_active 
+                            (GTK_TOGGLE_BUTTON (widget));
+    gtk_widget_set_sensitive ( md->box_mount_commands, is_active );
+
+    return TRUE;
+}
+
+
 /*-------------- entry_lost_focus -----------------------*/
 /* This shows a way to update plugin settings when the user leaves a text entry, by connecting to the "focus-out" event on the entry.*/
 
@@ -392,7 +444,7 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	t_mounter_dialog * md;
 	t_mounter * mt;
 	
-	xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+	/* xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8"); */
 	
 	md = g_new0(t_mounter_dialog, 1);
 	
@@ -407,8 +459,119 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	
 	
 	/* entries */
+	GtkWidget *eventbox = gtk_event_box_new ();
+	gtk_widget_show (eventbox);
+	gtk_container_set_border_width (GTK_CONTAINER (eventbox), BORDER);
+	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE, 
+	                   0);
 	
-	label = gtk_label_new (_("command to execute after mounting a device"));
+	GtkWidget *hbox = gtk_hbox_new (FALSE, BORDER);
+	gtk_widget_show (hbox);
+	gtk_container_add (GTK_CONTAINER (eventbox), hbox);
+	
+	label = gtk_label_new (_("Execute after mounting:"));
+	gtk_widget_show (label);
+	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
+	
+	GtkTooltips *tip = gtk_tooltips_new ();
+	gtk_tooltips_enable (tip);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+        _("This command will be executed after mounting the device with the "
+          "mount point of the device as argument. \n"
+          "If you are unsure what to insert, try \"xffm\" or \"rox\" or "
+          "\"thunar\"."), 
+        NULL );
+	
+	md->string_cmd = gtk_entry_new ();
+	if (mt->on_mount_cmd != NULL)
+		gtk_entry_set_text (GTK_ENTRY(md->string_cmd), 
+		                    g_strdup(mt->on_mount_cmd));
+    gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 21);
+	gtk_widget_show (md->string_cmd);
+	gtk_box_pack_start (GTK_BOX(hbox), md->string_cmd, FALSE, FALSE, 0);
+
+    GtkWidget *innervbox = gtk_vbox_new (FALSE, 0);
+    gtk_container_set_border_width (GTK_CONTAINER (innervbox), BORDER);
+    gtk_widget_show (innervbox);
+    gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (innervbox), FALSE, FALSE, 
+	                    0);
+
+	eventbox = gtk_event_box_new ();
+	gtk_widget_show (eventbox);
+	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE, 
+	                    0);
+	
+	md->specify_commands = gtk_check_button_new_with_label ( 
+	                               _("Specify own commands") );
+	                               
+   printf ("mc: %s, uc: %s; dmc: %s, duc: %s \n", mt->mount_command, mt->umount_command, DEFAULT_MOUNT_COMMAND, DEFAULT_UMOUNT_COMMAND);
+            
+    gboolean set_active;
+    
+    if (mt->mount_command==NULL && mt->mount_command==NULL)
+      set_active = FALSE;
+    else
+      set_active = 
+           ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 || 
+             strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ? 
+             TRUE : FALSE;
+                                    
+    gtk_widget_show (md->specify_commands);
+    gtk_container_add (GTK_CONTAINER (eventbox), md->specify_commands );
+    
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+        _("WARNING: These options are for experts only! If you do not know "
+          "what they may be good for, keep your hands off!"), 
+        NULL );
+        
+    eventbox = gtk_event_box_new ();
+	gtk_widget_show (eventbox);
+	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE,
+	                    0);
+	
+    md->box_mount_commands = gtk_table_new (2, 2, FALSE);
+    gtk_widget_show (md->box_mount_commands);
+    gtk_container_add (GTK_CONTAINER (eventbox), md->box_mount_commands);
+	                  
+    /* FIXME: labels are centered.
+        gtk_label_set_justify does not work,
+        adding alignment containers does not do s, either.
+        so it must be something with the table: GTK_FILL doesn't do it. */
+	label = gtk_label_new (_("Mount command:"));
+	gtk_label_set_justify (GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+	gtk_widget_show (label);
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 0, 1, 
+	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
+	
+	                  
+	label = gtk_label_new (_("Unmount command:"));
+	gtk_label_set_justify (GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+	gtk_widget_show (label);
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 1, 2, 
+	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
+	                  
+	md->string_mount_command = gtk_entry_new ();
+	gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ), 
+	                    g_strdup(mt->mount_command ));
+	gtk_widget_show (md->string_mount_command );
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands),
+	                  md->string_mount_command , 1, 2,
+	                  0, 1, GTK_SHRINK, GTK_SHRINK, 0, 0);
+	
+	md->string_umount_command = gtk_entry_new ();
+	gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ), 
+	                    g_strdup(mt->umount_command ));
+	gtk_widget_show (md->string_umount_command );
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands), 
+	                  md->string_umount_command , 1, 2,
+	                  1, 2, GTK_SHRINK, GTK_SHRINK, 0, 0);
+	
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+        _("Most users will only want to prepend \"sudo\" to both "
+          "commands."), 
+        NULL );
+	
+	/* label = gtk_label_new (_("command to execute after mounting a device"));
 	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
 	gtk_size_group_add_widget (sg, label);
 	gtk_widget_show (label);
@@ -436,12 +599,21 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	if (mt->on_mount_cmd != NULL)
 		gtk_entry_set_text(GTK_ENTRY(md->string_cmd), g_strdup(mt->on_mount_cmd));
 	gtk_widget_show(md->string_cmd);
-	gtk_box_pack_start (GTK_BOX(vbox), md->string_cmd, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX(vbox), md->string_cmd, FALSE, FALSE, 0); */
 	
-	g_signal_connect_swapped (md->string_cmd, "focus-out-event",
-			G_CALLBACK(entry_lost_focus), md);
+	/* uh no, never ever save before we hit "close"! */
+	/* g_signal_connect_swapped (md->string_cmd, "focus-out-event",
+			G_CALLBACK(entry_lost_focus), md); */
 	
 	/* update settings when dialog is closed */
+	
+	g_signal_connect ( G_OBJECT(md->specify_commands), "toggled",
+			G_CALLBACK(specify_command_toggled), md);
+			
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->specify_commands),
+                                  set_active);
+    if (!set_active) /* following command wasn't executed by signal handler! */
+        gtk_widget_set_sensitive ( md->box_mount_commands, FALSE );
 	
 	g_signal_connect_swapped (done, "clicked",
 				G_CALLBACK (mounter_apply_options), md);

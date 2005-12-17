@@ -27,7 +27,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include "devices.h"
 
 /* for internationalization, by F. Nowak */
-#include <libxfce4util/i18n.h>
+#include <libxfce4util/libxfce4util.h>
 /* end i18n extension */
 
 #include <panel/xfce.h>
