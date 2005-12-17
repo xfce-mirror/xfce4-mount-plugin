@@ -1,0 +1,157 @@
+# German translation for the xfce4-mount-plugin.
+# Copyright (C) 2004, 2005 Jean-Baptiste Dulong
+# This file is distributed under the same license as the xfce4-mount-plugin 
+# package.
+# Fabian Nowak <timystery@arcor.de>, 2005
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-mount-plugin 0.4.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-22 13:29+0200\n"
+"PO-Revision-Date: 2005-09-17 22:24+0200\n"
+"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
+"Language-Team: German <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/devices.c:43
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f B"
+
+#: ../panel-plugin/devices.c:44
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../panel-plugin/devices.c:45
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MBytes"
+
+#: ../panel-plugin/devices.c:46
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../panel-plugin/devices.c:56
+#, c-format
+msgid "size : %g\n"
+msgstr "Größe: %g\n"
+
+#: ../panel-plugin/devices.c:57
+#, c-format
+msgid "used size : %g\n"
+msgstr "Verwendeter Platz: %g\n"
+
+#: ../panel-plugin/devices.c:58
+#, c-format
+msgid "available size : %g\n"
+msgstr "Verfügbarer Platz: %g\n"
+
+#: ../panel-plugin/devices.c:59
+#, c-format
+msgid "percentage used: %d\n"
+msgstr "Verwendeter Anteil: %d\n"
+
+#: ../panel-plugin/devices.c:60
+#, c-format
+msgid "file system type : %s\n"
+msgstr "Dateisystemtyp: %s\n"
+
+#: ../panel-plugin/devices.c:61
+#, c-format
+msgid "actual mount point : %s\n"
+msgstr "Eigentlicher Einhängepunkt: %s\n"
+
+#: ../panel-plugin/devices.c:137
+#, c-format
+msgid "disk : %s\n"
+msgstr "Platte: %s\n"
+
+#: ../panel-plugin/devices.c:138
+#, c-format
+msgid "mount point : %s\n"
+msgstr "Einhängepunkt: %s\n"
+
+#: ../panel-plugin/devices.c:141
+#, c-format
+msgid "not mounted\n"
+msgstr "nicht eingehängt\n"
+
+#: ../panel-plugin/devices.c:200 ../panel-plugin/devices.c:222
+msgid "Mount Plugin: Error executing command."
+msgstr "Mount Plugin: Fehler beim Ausführen des Befehls."
+
+#: ../panel-plugin/mount-plugin.c:34
+msgid "Mount Plugin"
+msgstr "Mount Plugin"
+
+#. remove mount info
+#: ../panel-plugin/mount-plugin.c:184
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">nicht eingehängt</span>"
+
+#. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
+#: ../panel-plugin/mount-plugin.c:399
+msgid "devices"
+msgstr "Geräte"
+
+#: ../panel-plugin/mount-plugin.c:496
+msgid "Edit Properties"
+msgstr "Eigenschaften ändern"
+
+#. end extensions for panel 4.4
+#: ../panel-plugin/mount-plugin.c:503
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "Geräte einhängen"
+
+#: ../panel-plugin/mount-plugin.c:537
+msgid "Execute after mounting:"
+msgstr "Nach dem Einhängen ausführen:"
+
+#: ../panel-plugin/mount-plugin.c:544
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument. \n"
+"If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
+msgstr ""
+"Dieser Befehl wird mit dem Einhängepunkt des Geräts als Argument nach dem "
+"Einhängen ausgeführt. \n"
+"Falls du unsicher bist, was eingetragen werden kann, probier doch mal \"xffm"
+"\" oder \"rox\" oder \"thunar\"."
+
+#: ../panel-plugin/mount-plugin.c:570
+msgid "Specify own commands"
+msgstr "Eigene Befehle angeben"
+
+#: ../panel-plugin/mount-plugin.c:580
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"ACHTUNG: Diese Optionen sind nur für Experten gedacht. Falls du nicht weißt, "
+"wozu sie gut sein sollen, lass deine Hände von ihnen weg!"
+
+#. FIXME: labels are centered.
+#. gtk_label_set_justify does not work,
+#. adding alignment containers does not do s, either.
+#. so it must be something with the table: GTK_FILL doesn't do it.
+#: ../panel-plugin/mount-plugin.c:597
+msgid "Mount command:"
+msgstr "Befehl zum Einhängen:"
+
+#: ../panel-plugin/mount-plugin.c:604
+msgid "Unmount command:"
+msgstr "Befehl zum Aushängen:"
+
+#: ../panel-plugin/mount-plugin.c:627
+msgid "Most users will only want to prepend \"sudo\" to both commands."
+msgstr ""
+"Die meisten Nutzer wollen nur ein \"sudo\" vor die beiden Befehle hängen."
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+msgid "Show all mountable devices and (un)mount them on click."
+msgstr "Zeigt alle einhängbaren Geräte und hängt sie per Mausklick ein/aus."

@@ -1,0 +1,40 @@
+18 september 2005 - version 0.3.2
+- ukrainian tranlation
+- russian translation
+
+17 september 2005 - version 0.3.1
+- corrected some wrong settings
+- hungarian translation
+
+17 september 2005 - version 0.3 
+- now maintained by Fabian Nowak <timystery@arcor.de>
+- basic translation possibilities added
+- german tranlsaation added
+
+5 june 2005 - version 0.3
+this third release brings out :
+-a brighter display and panel integration.
+-corrected bug in free space calculation (sorry)
+-mount in background (I use the exec_silent function so the panel execute the mount command when not busy)
+-the new settings window allow you to define a command to be run on a succesfull mount of device. The command is executed by a call to exec_silent wich argument is : bash -c "mount /path/to/mount_point && your_command /path/to/mount_point". You just have to specify the correct command with options in the settings and the plugin adds the /path/to/mount_point accordingly. I just tested it with "konqueror", send me reports for bugs...
+
+
+14 april 2005
+
+this second release only changes a few things in the plugin :
+- the list of devices is now dynamic, it gets updated from /etc/fstab entries on each refresh.
+- the display of devices is clearer although the possibility of adaptating it to your wishes is not available yet. sorry.
+- the problem with duplicated device entries in the first release has been corrected in an ugly way. The plugin now compares data from /etc/fstab and data from /etc/mtab using the "mount point" field instead of the "device name" field.
+- the mount command executed by the plugin now works like a "mount /path/to/mount_point" instead of "mount /dev/mydevice", makes things clearer I though.
+
+1 march 2005
+
+This is the first release of xfce4-mount-plugin. this little plugin behaves like the "kwikdisk - removable media utility" shipped with KDE.
+Press it and it displays a list of items representing your various devices. If you click on an unmounted devices it will mount it and vice versa. There is no warning in case a device can't be mounted or unmounted.
+The plugin displays various information on each device :
+"device name" > "mount point" ["used size"/"total size"] "available size" free 
+and an obvious progress bar
+
+BUG
+The main bug relies in the way the plugin gather information on your devices. It builds a list of devices from your /etc/fstab (using setfsent() and getfsent() ) and compares it to the list of actually mounted devices (ie same data as the df command, using setmntent() and getmntent() ). New entries are created for new devices not included in the static device list gathered from /etc/fstab. The device names returned by getfsent and getmntent can be different. for example getfsent will return a device named "/dev/discs/disc0/part3" and getmntent will return a device named "/dev/hda3", the plugin will therefore create 2 entries for the same device. and things get confused, you have two entries for the same device, one is mounted the other is not...
+a workaround could be to rewrite your /etc/fstab so that the devices names are the same as the output of the "df" command...

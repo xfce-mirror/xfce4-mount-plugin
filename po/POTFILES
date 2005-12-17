@@ -1,0 +1,3 @@
+	../panel-plugin/devices.c \
+	../panel-plugin/mount-plugin.c \
+	../panel-plugin/xfce4-mount-plugin.desktop.in.in
