@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-09-17 23:01+0200\n"
+"PO-Revision-Date: 2005-09-17 23:02+0100\n"
+"Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: panel-plugin/devices.c:44
+#, c-format
+msgid "%.1f B"
+msgstr ""
+
+#: panel-plugin/devices.c:45
+#, c-format
+msgid "%.1f KB"
+msgstr ""
+
+#: panel-plugin/devices.c:46
+#, c-format
+msgid "%.1f MB"
+msgstr ""
+
+#: panel-plugin/devices.c:47
+#, c-format
+msgid "%.1f GB"
+msgstr ""
+
+#: panel-plugin/devices.c:57
+#, c-format
+msgid "size : %g\n"
+msgstr "méret : %g\n"
+
+#: panel-plugin/devices.c:58
+#, c-format
+msgid "used size : %g\n"
+msgstr "használt : %g\n"
+
+#: panel-plugin/devices.c:59
+#, c-format
+msgid "available size : %g\n"
+msgstr "elérhető méret : %g\n"
+
+#: panel-plugin/devices.c:60
+#, c-format
+msgid "percentage used: %d\n"
+msgstr "használt százalék: %d\n"
+
+#: panel-plugin/devices.c:61
+#, c-format
+msgid "file system type : %s\n"
+msgstr "fájlrendszer típus : %s\n"
+
+#: panel-plugin/devices.c:62
+#, c-format
+msgid "actual mount point : %s\n"
+msgstr "jelen csatolási pont : %s\n"
+
+#: panel-plugin/devices.c:137
+#, c-format
+msgid "disk : %s\n"
+msgstr "lemez : %s\n"
+
+#: panel-plugin/devices.c:138
+#, c-format
+msgid "mount point : %s\n"
+msgstr "csatolási pont : %s\n"
+
+#: panel-plugin/devices.c:141
+#, c-format
+msgid "not mounted\n"
+msgstr "nincs csatolva\n"
+
+#. remove mount info
+#: panel-plugin/mount-plugin.c:155
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">nincs csatolva</span>"
+
+#: panel-plugin/mount-plugin.c:322
+msgid "devices"
+msgstr "eszközök"
+
+#. entries
+#: panel-plugin/mount-plugin.c:411
+msgid "command to execute after mounting a device"
+msgstr "csatolás után futtatandó parancs"
+
+#: panel-plugin/mount-plugin.c:417
+msgid "(mount directory is added to the command)"
+msgstr "(a csatolt könyvtár a parancshoz rendelve)"
+
+#: panel-plugin/mount-plugin.c:423
+msgid "eg. konqueror"
+msgstr "pl. konqueror"
+
+#: panel-plugin/mount-plugin.c:429
+msgid "eg. xffm"
+msgstr "pl. xffm"
+
+#: panel-plugin/mount-plugin.c:465
+msgid "mount/display devices"
+msgstr "eszközök csatolása/kijelzése"

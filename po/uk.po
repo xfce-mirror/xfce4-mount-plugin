@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-mount-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-09-17 23:01+0200\n"
+"PO-Revision-Date: 2005-09-18 13:54+0300\n"
+"Last-Translator: Eugene Ostapets <eostapets@altlinux.ru>\n"
+"Language-Team: Ukainian <eostapets@altlinux.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Ukrainian\n"
+"X-Poedit-Country: UKRAINE\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+
+#: panel-plugin/devices.c:44
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f б"
+
+#: panel-plugin/devices.c:45
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f КБ"
+
+#: panel-plugin/devices.c:46
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f МБ"
+
+#: panel-plugin/devices.c:47
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f ГБ"
+
+#: panel-plugin/devices.c:57
+#, c-format
+msgid "size : %g\n"
+msgstr "розмір : %g\n"
+
+#: panel-plugin/devices.c:58
+#, c-format
+msgid "used size : %g\n"
+msgstr "використаний розмір : %g\n"
+
+#: panel-plugin/devices.c:59
+#, c-format
+msgid "available size : %g\n"
+msgstr "доступний розмір : %g\n"
+
+#: panel-plugin/devices.c:60
+#, c-format
+msgid "percentage used: %d\n"
+msgstr "відсоток використання: %d\n"
+
+#: panel-plugin/devices.c:61
+#, c-format
+msgid "file system type : %s\n"
+msgstr "тип файлової системи : %s\n"
+
+#: panel-plugin/devices.c:62
+#, c-format
+msgid "actual mount point : %s\n"
+msgstr "поточна точка монтування : %s\n"
+
+#: panel-plugin/devices.c:137
+#, c-format
+msgid "disk : %s\n"
+msgstr "диск : %s\n"
+
+#: panel-plugin/devices.c:138
+#, c-format
+msgid "mount point : %s\n"
+msgstr "точка монтування : %s\n"
+
+#: panel-plugin/devices.c:141
+#, c-format
+msgid "not mounted\n"
+msgstr "не змонтовано\n"
+
+#. remove mount info
+#: panel-plugin/mount-plugin.c:155
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">не змонтовано</span>"
+
+#: panel-plugin/mount-plugin.c:322
+msgid "devices"
+msgstr "пристрої"
+
+#. entries
+#: panel-plugin/mount-plugin.c:411
+msgid "command to execute after mounting a device"
+msgstr "команда, яка виконається після монтування пристрою"
+
+#: panel-plugin/mount-plugin.c:417
+msgid "(mount directory is added to the command)"
+msgstr "(каталог монтування буде додано до команди)"
+
+#: panel-plugin/mount-plugin.c:423
+msgid "eg. konqueror"
+msgstr "напр. konqueror"
+
+#: panel-plugin/mount-plugin.c:429
+msgid "eg. xffm"
+msgstr "напр. xffm"
+
+#: panel-plugin/mount-plugin.c:465
+msgid "mount/display devices"
+msgstr "монтування/відображення пристроїв"

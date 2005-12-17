@@ -1,0 +1,15 @@
+Add more translations from all over the world ;-)
+
+To add your language, simply copy po/xfce4-mount-plugin.pot to 
+po/languagecode.po and edit ALL the msgstr fields in your language with an 
+UTF-8 capable editor. 
+
+Try to also add your name and email to the information at the beginning of the 
+file.
+
+When you've finished translating, send the gzipped PO file to 
+<timystery@arcor.de>.
+
+Thanks, Fabian Nowak and all other users speaking your newly translated 
+language!
+

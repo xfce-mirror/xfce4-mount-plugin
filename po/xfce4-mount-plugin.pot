@@ -1,0 +1,114 @@
+# Xfce4-mount-plugin - Displays (un)mounted devices and (un)mounts them on 
+# click.
+# Copyright (C) 2005 Jean-Baptiste Dulon
+# This file is distributed under the same license as the 
+# xfce4-mount-plugin package.
+# Jean-Baptiste Dulon <Jean-Baptiste.Dulon@no-log.org>, 2005.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-09-17 23:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: panel-plugin/devices.c:44
+#, c-format
+msgid "%.1f B"
+msgstr ""
+
+#: panel-plugin/devices.c:45
+#, c-format
+msgid "%.1f KB"
+msgstr ""
+
+#: panel-plugin/devices.c:46
+#, c-format
+msgid "%.1f MB"
+msgstr ""
+
+#: panel-plugin/devices.c:47
+#, c-format
+msgid "%.1f GB"
+msgstr ""
+
+#: panel-plugin/devices.c:57
+#, c-format
+msgid "size : %g\n"
+msgstr ""
+
+#: panel-plugin/devices.c:58
+#, c-format
+msgid "used size : %g\n"
+msgstr ""
+
+#: panel-plugin/devices.c:59
+#, c-format
+msgid "available size : %g\n"
+msgstr ""
+
+#: panel-plugin/devices.c:60
+#, c-format
+msgid "percentage used: %d\n"
+msgstr ""
+
+#: panel-plugin/devices.c:61
+#, c-format
+msgid "file system type : %s\n"
+msgstr ""
+
+#: panel-plugin/devices.c:62
+#, c-format
+msgid "actual mount point : %s\n"
+msgstr ""
+
+#: panel-plugin/devices.c:137
+#, c-format
+msgid "disk : %s\n"
+msgstr ""
+
+#: panel-plugin/devices.c:138
+#, c-format
+msgid "mount point : %s\n"
+msgstr ""
+
+#: panel-plugin/devices.c:141
+#, c-format
+msgid "not mounted\n"
+msgstr ""
+
+#. remove mount info
+#: panel-plugin/mount-plugin.c:155
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr ""
+
+#: panel-plugin/mount-plugin.c:322
+msgid "devices"
+msgstr ""
+
+#. entries
+#: panel-plugin/mount-plugin.c:411
+msgid "command to execute after mounting a device"
+msgstr ""
+
+#: panel-plugin/mount-plugin.c:417
+msgid "(mount directory is added to the command)"
+msgstr ""
+
+#: panel-plugin/mount-plugin.c:423
+msgid "eg. konqueror"
+msgstr ""
+
+#: panel-plugin/mount-plugin.c:429
+msgid "eg. xffm"
+msgstr ""
+
+#: panel-plugin/mount-plugin.c:465
+msgid "mount/display devices"
+msgstr ""
