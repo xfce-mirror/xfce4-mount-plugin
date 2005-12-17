@@ -1,0 +1,8 @@
+[Xfce Panel]
+Type=X-XFCE-PanelPlugin
+Encoding=UTF-8
+_Name=Mount devices
+_Comment=Shows all mountable devices and (un)mounts them on request.
+Icon = xfce-mount
+X-XFCE-Exec = @PLUGIN_PATH@/xfce4-mount-plugin
+
