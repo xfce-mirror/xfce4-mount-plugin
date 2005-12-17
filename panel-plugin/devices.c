@@ -177,18 +177,22 @@ void disk_free(t_disk * * pdisk)
 
 /*------------ mount a t_disk ---------------*/
 /* return exit status of the mount command*/
-void disk_mount(t_disk * pdisk, char * on_mount_cmd)
+void disk_mount (t_disk * pdisk, char * on_mount_cmd, char* mount_command)
 {
 	if (pdisk != NULL)
 	{
 		char * cmd ;
 
-		cmd = g_strconcat("bash -c 'mount ",pdisk->mount_point,NULL);
+		cmd = g_strconcat ("bash -c '", mount_command, " ", 
+		                   pdisk->mount_point, NULL);
+		                   
 		if (on_mount_cmd != NULL)
 			cmd = g_strconcat(cmd," && ",on_mount_cmd," ", pdisk->mount_point, " ' ", NULL);
 		else
 			cmd = g_strconcat(cmd," ' ",NULL);
+			
 		DBG("cmd :%s",cmd);
+		
 		exec_cmd_silent(cmd,FALSE,FALSE);
 		g_free(cmd);
 	}
@@ -197,19 +201,14 @@ void disk_mount(t_disk * pdisk, char * on_mount_cmd)
 
 /* --------------unmount a t_disk ----------------*/
 /* return exit status of the mount command*/
-void disk_umount(t_disk * pdisk )
+void disk_umount (t_disk * pdisk, char* umount_command )
 {
 	if (pdisk != NULL)
 	{
 		char * cmd ;
-		/*char * standard_output ;
-		char * standard_error ;
-		int exit_status ;
-		GError * error ;
-		gboolean bresult ;
-		*/
+
 		/* changed from pdisk->device to pdisk->mount_point */
-		cmd = g_strconcat("umount ",pdisk->mount_point,NULL);
+		cmd = g_strconcat (umount_command, " ", pdisk->mount_point, NULL);
 		
 		/*bresult = g_spawn_command_line_sync(cmd,&standard_output,&standard_error,&exit_status,&error);
 		if (bresult)
@@ -222,7 +221,7 @@ void disk_umount(t_disk * pdisk )
 			return exit_status ;
 		}
 		*/
-		exec_cmd_silent(cmd,FALSE,FALSE);
+		exec_cmd_silent (cmd, FALSE, FALSE);
 		g_free(cmd);
 	}
 	//return -1 ;

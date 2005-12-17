@@ -53,10 +53,10 @@ char * get_size_human_readable(float size);
 
 /*------------ mount a t_disk ---------------*/
 /* return exit status of the mount command*/
-void disk_mount(t_disk * pdisk, char * on_mount_cmd);
+void disk_mount(t_disk * pdisk, char * on_mount_cmd, char* mount_command);
 
 /* --------------unmount a t_disk ----------------*/
-void disk_umount(t_disk * pdisk );
+void disk_umount(t_disk * pdisk, char* umount_command);
 
 /*------------------------- disks_new ----------------*/
 /* fill a GPtrArray with pointers on struct t_disk containing infos on devices and theoretical mount point. use setfsent() and getfsent(). */

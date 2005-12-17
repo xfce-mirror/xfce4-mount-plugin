@@ -42,9 +42,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #define DEFAULT_MOUNT_COMMAND "mount"
 #define DEFAULT_UMOUNT_COMMAND "umount"
 
-#define DEBUG
-#define DEBUG_TRACE
-
 /*--------- graphical interface ----------*/
 typedef struct 
 {
@@ -96,13 +93,13 @@ static void on_activate_disk_display(GtkWidget * widget,t_disk * disk)
 	{
 		if (disk->mount_info != NULL)
 		{/*disk is mounted*/
-			disk_umount(disk);
+			disk_umount (disk, mt->umount_command);
 			/* disk->mount_info is freed by disk_mount */
 		}
 		else
 		{/*disk is not mounted*/
 			mt = (t_mounter*)g_object_get_data(G_OBJECT(widget),"mounter");
-			disk_mount(disk,mt->on_mount_cmd);
+			disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
 			/* needs a refresh, a global refresh is done whe the window becomes visible*/
 		}
 	}
@@ -399,16 +396,28 @@ static void free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 /*---------------- mounter_apply_options ---------------*/
 static void mounter_apply_options (t_mounter_dialog * md)
 {
-	const char * tmp;
 	t_mounter * mt = md->mt;
 
-	tmp = gtk_entry_get_text(GTK_ENTRY(md->string_cmd));
+    const char * tmp;
+	tmp = gtk_entry_get_text (GTK_ENTRY(md->string_cmd));
 	
 	g_free(mt->on_mount_cmd);
 	if (tmp && *tmp)
 		mt->on_mount_cmd = g_strdup(tmp);
 	else
-		mt->on_mount_cmd = NULL ;
+		mt->on_mount_cmd = NULL;
+
+    if ( gtk_toggle_button_get_active 
+            (GTK_TOGGLE_BUTTON(md->specify_commands)) ) {
+        mt->mount_command = g_strdup ( gtk_entry_get_text 
+                        (GTK_ENTRY(md->string_mount_command)) );
+        mt->umount_command = g_strdup ( gtk_entry_get_text 
+                        (GTK_ENTRY(md->string_umount_command)) ); 
+    }
+    else {
+        mt->mount_command = g_strdup ( DEFAULT_MOUNT_COMMAND ); 
+        mt->umount_command = g_strdup ( DEFAULT_UMOUNT_COMMAND );
+    }
 }
 /*------------------------------------------------------*/
 
@@ -503,8 +512,11 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	
 	md->specify_commands = gtk_check_button_new_with_label ( 
 	                               _("Specify own commands") );
-	                               
-   printf ("mc: %s, uc: %s; dmc: %s, duc: %s \n", mt->mount_command, mt->umount_command, DEFAULT_MOUNT_COMMAND, DEFAULT_UMOUNT_COMMAND);
+
+   #ifdef DEBUG	                               
+      printf ("mc: %s, uc: %s; dmc: %s, duc: %s \n", mt->mount_command, 
+            mt->umount_command, DEFAULT_MOUNT_COMMAND, DEFAULT_UMOUNT_COMMAND);
+   #endif
             
     gboolean set_active;
     
