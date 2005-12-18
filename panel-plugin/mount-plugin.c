@@ -88,21 +88,22 @@ t_mounter_dialog ;
 /*---------------- on_activate_disk_display ---------------*/
 static void on_activate_disk_display(GtkWidget * widget,t_disk * disk)
 {
-	t_mounter * mt ;
-	if (disk != NULL)
-	{
-		if (disk->mount_info != NULL)
-		{/*disk is mounted*/
-			disk_umount (disk, mt->umount_command);
-			/* disk->mount_info is freed by disk_mount */
-		}
-		else
-		{/*disk is not mounted*/
-			mt = (t_mounter*)g_object_get_data(G_OBJECT(widget),"mounter");
-			disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
-			/* needs a refresh, a global refresh is done whe the window becomes visible*/
-		}
-	}
+    t_mounter * mt ;
+    if (disk != NULL)
+    {
+        mt = (t_mounter*) g_object_get_data (G_OBJECT(widget), "mounter");
+
+    	if (disk->mount_info != NULL)
+    	{/*disk is mounted*/
+    		disk_umount (disk, mt->umount_command);
+    		/* disk->mount_info is freed by disk_mount */
+    	}
+    	else
+    	{/*disk is not mounted*/
+    		disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
+    		/* needs a refresh, a global refresh is done whe the window becomes visible*/
+    	}
+    }
 }
 
 /*---------------------------------------------------------*/
@@ -202,13 +203,18 @@ static void mounter_free(Control * control)
 	t_mounter * mt = (t_mounter*) control->data ;
 	mounter_data_free(mt);
 	g_free(mt->on_mount_cmd);
+	g_free(mt->mount_command);
+	g_free(mt->umount_command);
 	g_free(mt);
 	TRACE ("leaves mounter_free");
 }
 /*----------------------------------------------*/
+
 /*---------------- mounter_data_new --------------------------*/
-static void mounter_data_new(t_mounter * mt)
+static void mounter_data_new (t_mounter * mt)
 {
+    TRACE ("enters mounter_data_new");
+    
 	int i ;
 	t_disk * disk ;
 	t_disk_display * disk_display ;
@@ -221,8 +227,6 @@ static void mounter_data_new(t_mounter * mt)
 	
 	/* menu with menu_item */
 	mt->menu = gtk_menu_new();
-	/* gtk_menu_shell_append(GTK_MENU_SHELL(mt->menu),gtk_menu_item_new_with_label("devices")); */
-	/* gtk_menu_shell_append(GTK_MENU_SHELL(mt->menu),gtk_separator_menu_item_new());*/
 	
 	for(i=0;i < mt->pdisks->len;i++)
 	{
@@ -232,6 +236,8 @@ static void mounter_data_new(t_mounter * mt)
 		gtk_menu_shell_append(GTK_MENU_SHELL(mt->menu),disk_display->menu_item);//add the menu_item to the menu
 	}
 	gtk_widget_show_all(mt->menu);
+	
+	TRACE ("leaves mounter_data_new");
 	
 	return ;
 }
@@ -357,8 +363,12 @@ static gboolean create_mounter_control (Control * control)
 	
 	mounter = g_new0(t_mounter,1);
 
-	/* default mount command */
-	mounter->on_mount_cmd = NULL;	
+	/* default on_mount command */
+	mounter->on_mount_cmd = NULL;
+
+	/* default mount commands */
+	mounter->mount_command = strdup (DEFAULT_MOUNT_COMMAND);
+	mounter->umount_command = strdup (DEFAULT_UMOUNT_COMMAND);
 
 	/*plugin button */
 	
@@ -466,7 +476,6 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	vbox = gtk_vbox_new (FALSE, BORDER);
 	gtk_widget_show (vbox);
 	
-	
 	/* entries */
 	GtkWidget *eventbox = gtk_event_box_new ();
 	gtk_widget_show (eventbox);
@@ -496,7 +505,7 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 		gtk_entry_set_text (GTK_ENTRY(md->string_cmd), 
 		                    g_strdup(mt->on_mount_cmd));
     gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 21);
-	gtk_widget_show (md->string_cmd);
+    gtk_widget_show (md->string_cmd);
 	gtk_box_pack_start (GTK_BOX(hbox), md->string_cmd, FALSE, FALSE, 0);
 
     GtkWidget *innervbox = gtk_vbox_new (FALSE, 0);
@@ -513,14 +522,14 @@ static void mounter_create_options (Control * control, GtkContainer * container,
 	md->specify_commands = gtk_check_button_new_with_label ( 
 	                               _("Specify own commands") );
 
-   #ifdef DEBUG	                               
-      printf ("mc: %s, uc: %s; dmc: %s, duc: %s \n", mt->mount_command, 
+    #ifdef DEBUG	                               
+        printf ("mc: %s, uc: %s; dmc: %s, duc: %s \n", mt->mount_command, 
             mt->umount_command, DEFAULT_MOUNT_COMMAND, DEFAULT_UMOUNT_COMMAND);
-   #endif
+    #endif
             
     gboolean set_active;
     
-    if (mt->mount_command==NULL && mt->mount_command==NULL)
+    if (mt->mount_command==NULL && mt->umount_command==NULL)
       set_active = FALSE;
     else
       set_active = 

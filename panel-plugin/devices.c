@@ -207,6 +207,10 @@ void disk_umount (t_disk * pdisk, char* umount_command )
 	{
 		char * cmd ;
 
+      #ifdef DEBUG
+         g_printf("umount command: %s \n", umount_command);
+      #endif
+
 		/* changed from pdisk->device to pdisk->mount_point */
 		cmd = g_strconcat (umount_command, " ", pdisk->mount_point, NULL);
 		
