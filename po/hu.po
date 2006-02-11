@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-01-04 21:41+0900\n"
-"PO-Revision-Date: 2006-01-04 21:37+0900\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
+"PO-Revision-Date: 2006-02-11 17:43+0100\n"
+"Last-Translator: SZERVÑC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -20,22 +20,22 @@ msgstr ""
 #: ../panel-plugin/devices.c:45
 #, c-format
 msgid "%.1f B"
-msgstr ""
+msgstr "%.1f B"
 
 #: ../panel-plugin/devices.c:46
 #, c-format
 msgid "%.1f KB"
-msgstr ""
+msgstr "%.1f KB"
 
 #: ../panel-plugin/devices.c:47
 #, c-format
 msgid "%.1f MB"
-msgstr ""
+msgstr "%.1f MB"
 
 #: ../panel-plugin/devices.c:48
 #, c-format
 msgid "%.1f GB"
-msgstr ""
+msgstr "%.1f GB"
 
 #: ../panel-plugin/devices.c:58
 #, c-format
@@ -82,13 +82,14 @@ msgstr "csatolási pont : %s\n"
 msgid "not mounted\n"
 msgstr "nincs csatolva\n"
 
-#: ../panel-plugin/devices.c:202 ../panel-plugin/devices.c:224
+#: ../panel-plugin/devices.c:202
+#: ../panel-plugin/devices.c:224
 msgid "Mount Plugin: Error executing command."
-msgstr ""
+msgstr "Hiba a parancs futtatásakor"
 
 #: ../panel-plugin/mount-plugin.c:34
 msgid "Mount Plugin"
-msgstr ""
+msgstr "Csatoló"
 
 #. remove mount info
 #: ../panel-plugin/mount-plugin.c:184
@@ -102,36 +103,33 @@ msgstr "eszközök"
 
 #: ../panel-plugin/mount-plugin.c:496
 msgid "Edit Properties"
-msgstr ""
+msgstr "Tulajdonságok"
 
 #. end extensions for panel 4.4
 #: ../panel-plugin/mount-plugin.c:503
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Mount devices"
-msgstr "eszközök csatolása/kijelzése"
+msgstr "Eszközök csatolása"
 
 #: ../panel-plugin/mount-plugin.c:537
-#, fuzzy
 msgid "Execute after mounting:"
-msgstr "csatolás után futtatandó parancs"
+msgstr "Csatolás után fut:"
 
 #: ../panel-plugin/mount-plugin.c:544
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument. \n"
+"This command will be executed after mounting the device with the mount point of the device as argument. \n"
 "If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
 msgstr ""
+"E parancs fut egy eszköz csatolása után annak pontját argumentumként átadva. \n"
+"Jó tippek: \"xffm\", \"thunar\" vagy \"rox\"."
 
 #: ../panel-plugin/mount-plugin.c:570
 msgid "Specify own commands"
-msgstr ""
+msgstr "Saját parancs megadása"
 
 #: ../panel-plugin/mount-plugin.c:580
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne módosítsd!"
 
 #. FIXME: labels are centered.
 #. gtk_label_set_justify does not work,
@@ -139,11 +137,11 @@ msgstr ""
 #. so it must be something with the table: GTK_FILL doesn't do it.
 #: ../panel-plugin/mount-plugin.c:597
 msgid "Mount command:"
-msgstr ""
+msgstr "Csatoló parancs:"
 
 #: ../panel-plugin/mount-plugin.c:604
 msgid "Unmount command:"
-msgstr ""
+msgstr "Lecsatoló parancs:"
 
 #: ../panel-plugin/mount-plugin.c:627
 msgid "Most users will only want to prepend \"sudo\" to both commands."
@@ -151,4 +149,5 @@ msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
+msgstr "Minden csatolható eszközt mutat és kérésre (le)csatolja őket"
+
