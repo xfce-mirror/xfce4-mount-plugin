@@ -9,7 +9,7 @@
 #
 ###################################
 
-xfce4-mount-plugin
+xfce4-mount-plugin - version 0.4.4
 
 This little plugin behaves like the "kwikdisk - removable media utility" shipped
 with KDE.
