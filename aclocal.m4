@@ -2058,4 +2058,3 @@ AC_DEFUN([BM_I18N],
 ])
 
 
-m4_include([acinclude.m4])

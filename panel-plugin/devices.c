@@ -2,6 +2,7 @@
 
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
+Copyright (C) 2005, 2006 Fabian Nowak timystery@arcor.de.
 
 This program is free software; you can redistribute it and/or 
 modify it under the terms of the GNU General Public License 
@@ -183,7 +184,7 @@ void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command)
 	{
 		char * cmd ;
 
-		cmd = g_strconcat ("bash -c '", mount_command, " ", 
+		cmd = g_strconcat ("sh -c '", mount_command, " ", 
 		                   pdisk->mount_point, NULL);
 		if (on_mount_cmd != NULL)
 			cmd = g_strconcat (cmd, " && ", on_mount_cmd, " ", 
@@ -213,10 +214,12 @@ void disk_umount (t_disk *pdisk, char* umount_command )
 		char * cmd ;
 
 		/* changed from pdisk->device to pdisk->mount_point */
-		cmd = g_strconcat (umount_command, " ", pdisk->mount_point, NULL);
+		cmd = g_strconcat ("sh -c '", umount_command, " ", 
+							pdisk->mount_point, " ' ", NULL);
 		
 		GError *error = NULL;
 		
+		g_printf("\ncommand line: %s\n\n", cmd);
 		gboolean val = xfce_exec (cmd, FALSE, FALSE, &error);
 		if  (!val)
 		   xfce_err(_("Mount Plugin: Error executing command."));

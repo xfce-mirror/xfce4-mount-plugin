@@ -38,7 +38,7 @@ localedir = $(libdir)/locale
 gnulocaledir = $(datadir)/locale
 gettextsrcdir = $(datadir)/glib-2.0/gettext/po
 subdir = po
-install_sh = /home/tim/tmp/mount-plugin-0.4.2/install-sh
+install_sh = /home/tim/tmp/xfce-4.3/mount-plugin/install-sh
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 
 INSTALL = /usr/bin/install -c
@@ -64,15 +64,15 @@ INCLUDES = -I.. -I$(top_srcdir)/intl
 COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS)
 
 SOURCES = 
-POFILES =  de.po el.po fr.po hu.po ko.po lt.po ru.po uk.po
-GMOFILES =  de.gmo el.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
+POFILES =  de.po el.po eu.po fr.po hu.po ko.po lt.po ru.po uk.po
+GMOFILES =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
 DISTFILES = ChangeLog Makefile.in.in POTFILES.in \
 $(POFILES) $(SOURCES)
 EXTRA_DISTFILES = POTFILES.skip Makevars LINGUAS
 
 POTFILES = \
 
-CATALOGS =  de.gmo el.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
+CATALOGS =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
 CATOBJEXT = .gmo
 INSTOBJEXT = .mo
 

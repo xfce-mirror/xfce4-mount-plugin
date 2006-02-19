@@ -2,6 +2,7 @@
 
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
+Copyright (C) 2005, 2006 Fabian Nowak timystery@arcor.de.
 
 This program is free software; you can redistribute it and/or 
 modify it under the terms of the GNU General Public License 
@@ -22,6 +23,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+
+#define DEBUG 1
+#define DEBUG_TRACE 1
 
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
@@ -47,6 +51,7 @@ typedef struct
 	char *on_mount_cmd;
 	gchar *mount_command;
 	gchar *umount_command;
+	gboolean message_dialog;
 	GtkWidget * button;
 	GtkWidget * menu;
 	GPtrArray * pdisks; /* contains pointers to struct t_disk */
@@ -75,26 +80,53 @@ typedef struct
 	GtkWidget *box_mount_commands;
 	GtkWidget *string_mount_command;
 	GtkWidget *string_umount_command;
+	GtkWidget *show_message_dialog;
 }
 t_mounter_dialog;
 /*------------------------------------------------------*/
 
 
+static void
+on_message_dialog_response (GtkWidget *widget, gpointer *data) {
+	gtk_widget_destroy(widget);
+}
+
 /*---------------- on_activate_disk_display ---------------*/
 static void 
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 {
+	TRACE ("enters on_activate_disk_display");
+	
 	t_mounter * mt;
 	mt = (t_mounter *) g_object_get_data (G_OBJECT(widget), "mounter");
+	
+	DBG ("message dialog to be shown? %d", mt->message_dialog);
 	
 	if (disk != NULL) {
 		if (disk->mount_info != NULL) { /* disk is mounted */
 			disk_umount (disk, mt->umount_command);
+			
+			if (mt->message_dialog) { /* popup dialog */
+				 GtkWidget *my_dlg;
+				 my_dlg = gtk_message_dialog_new (NULL,
+                        GTK_DIALOG_DESTROY_WITH_PARENT,
+                        GTK_MESSAGE_INFO,
+                        GTK_BUTTONS_OK,
+                        _("The device \"%s\" should be removable safely now."), 
+                        disk->mount_point);
+                 
+                 g_signal_connect (my_dlg, "response",
+            			G_CALLBACK(on_message_dialog_response), my_dlg);
+            		 gtk_widget_show (my_dlg);
+            		// gtk_dialog_run (GTK_DIALOG (my_dlg));
+            }
 		}
 		else { /* disk is not mounted */
 			disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
 		}
 	}
+	
+	TRACE ("leaves on_activate_disk_display");
 }
 /*---------------------------------------------------------*/
 
@@ -113,6 +145,8 @@ mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 static t_disk_display* 
 disk_display_new (t_disk *disk, t_mounter *mounter)
 {
+	TRACE ("enters disk_display_new");
+
 	if (disk != NULL) 
 	{
 		t_disk_display * dd ;
@@ -143,6 +177,8 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 		gtk_box_pack_start(GTK_BOX(dd->hbox),dd->progress_bar,TRUE,TRUE,0);
 		return dd ;
 	}
+	TRACE ("leaves disk_display_new");
+	
 	return NULL ;
 }
 /*-----------------------------------------------------------*/
@@ -221,6 +257,8 @@ mounter_free (XfcePanelPlugin *plugin, t_mounter *mounter)
 static void 
 mounter_data_new (t_mounter *mt)
 {
+	TRACE ("enters mounter_data_new");
+
 	int i ;
 	t_disk * disk ;
 	t_disk_display * disk_display ;
@@ -248,7 +286,11 @@ mounter_data_new (t_mounter *mt)
 	gtk_widget_show_all(mt->menu);
 	
 	mt->mount_command = DEFAULT_MOUNT_COMMAND;
-	mt->umount_command = DEFAULT_UMOUNT_COMMAND; 
+	mt->umount_command = DEFAULT_UMOUNT_COMMAND;
+	
+	mt->message_dialog = FALSE;
+	
+	TRACE ("leaves mounter_data_new");
 	
 	return ;
 }
@@ -263,10 +305,12 @@ mounter_refresh (t_mounter * mt)
 	mounter_data_free (mt);
 	gchar *mount = g_strdup(mt->mount_command);
 	gchar *umount = g_strdup(mt->umount_command);
+	gboolean msg_dlg = mt->message_dialog;
 	
 	mounter_data_new (mt);
 	mt->mount_command = g_strdup(mount);
 	mt->umount_command = g_strdup(umount);
+	mt->message_dialog = msg_dlg;
 
 	TRACE ("leaves mounter_refresh");
 	
@@ -295,7 +339,7 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
 static void
 mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
-	DBG ("enter read_config");
+	TRACE ("enter read_config");
 	
 	const char *value;
     char *file;
@@ -320,10 +364,13 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
         mt->umount_command = g_strdup (value);
     else
         mt->umount_command = g_strdup (DEFAULT_UMOUNT_COMMAND);
+        
+    if ( value = xfce_rc_read_entry(rc, "message_dialog", NULL) )
+      mt->message_dialog = atoi (value);
     
     xfce_rc_close (rc);
 
-    DBG ("leaves read_config");
+    TRACE ("leaves read_config");
 }
 /*-------------------------------------------------------*/
 
@@ -331,7 +378,7 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 static void
 mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
-	DBG("enter write_config");
+	TRACE ("enter write_config");
 	
 	 XfceRc *rc;
     char *file;
@@ -349,6 +396,7 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
         return;
 	
 	DBG ("save on_mount_cmd : %s", mt->on_mount_cmd);
+	DBG ("save message_dialog : %d", mt->message_dialog);
 
     xfce_rc_write_entry (rc, "on_mount_cmd", 
          mt->on_mount_cmd ? mt->on_mount_cmd : "");
@@ -358,11 +406,14 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
     
     if ( strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) 
         xfce_rc_write_entry (rc, "umount_command", mt->umount_command); 
+        
+    if ( mt->message_dialog==1 ) 
+        xfce_rc_write_entry (rc, "message_dialog", "1"); 
     
          
     xfce_rc_close (rc);
 
-	DBG ("leaves write config");
+	TRACE ("leaves write config");
 }
 /*--------------------------------------------*/
 
@@ -424,6 +475,8 @@ free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 static void
 mounter_apply_options (t_mounter_dialog *md) 
 {
+	TRACE ("enters mounter_apply_options");
+
 	t_mounter * mt = md->mt;
 
     const char * tmp;
@@ -446,6 +499,12 @@ mounter_apply_options (t_mounter_dialog *md)
         mt->mount_command = g_strdup ( DEFAULT_MOUNT_COMMAND ); 
         mt->umount_command = g_strdup ( DEFAULT_UMOUNT_COMMAND );
     }
+    
+    mt->message_dialog = gtk_toggle_button_get_active 
+            (GTK_TOGGLE_BUTTON(md->show_message_dialog));
+    DBG ("message dialog checkbox activated? %d", mt->message_dialog);
+    
+    TRACE ("leaves mounter_apply_options");
 		
 }
 
@@ -485,10 +544,13 @@ specify_command_toggled (GtkWidget *widget, t_mounter_dialog *md) {
     return TRUE;
 }
 
+
 /*----------------- mounter_create_options -------------*/
 static void 
 mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 {
+
+	TRACE ("enters mounter_create_options");
 
     xfce_panel_plugin_block_menu (plugin);
 
@@ -542,7 +604,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 	gtk_tooltips_enable (tip);
     gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
         _("This command will be executed after mounting the device with the "
-          "mount point of the device as argument. \n"
+          "mount point of the device as argument.\n"
           "If you are unsure what to insert, try \"xffm\" or \"rox\" or "
           "\"thunar\"."), 
         NULL );
@@ -595,14 +657,14 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
         adding alignment containers does not do s, either.
         so it must be something with the table: GTK_FILL doesn't do it. */
 	label = gtk_label_new (_("Mount command:"));
-	gtk_label_set_justify (GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+	gtk_misc_set_alignment (GTK_MISC(label), 0.0, 0.5);
 	gtk_widget_show (label);
 	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 0, 1, 
 	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
 	
 	                  
 	label = gtk_label_new (_("Unmount command:"));
-	gtk_label_set_justify (GTK_LABEL(label), GTK_JUSTIFY_LEFT);
+	gtk_misc_set_alignment (GTK_MISC(label), 0.0, 0.5);
 	gtk_widget_show (label);
 	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 1, 2, 
 	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
@@ -625,7 +687,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 	
 	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
         _("Most users will only want to prepend \"sudo\" to both "
-          "commands."), 
+          "commands or prepend \"sync &&\" to the \"unmount\" command."), 
         NULL );
 	
 	/* g_signal_connect_swapped (md->string_cmd, "focus-out-event",
@@ -638,11 +700,33 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                                   set_active);
     if (!set_active) /* following command wasn't executed by signal handler! */
         gtk_widget_set_sensitive ( md->box_mount_commands, FALSE );
+        
+    // show message dialog stuff
+    eventbox = gtk_event_box_new ();
+	gtk_widget_show (eventbox);
+	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE,
+	                    0);
+    md->show_message_dialog = gtk_check_button_new_with_label ( 
+	                               _("Show message after unmount") );
+	gtk_widget_show (md->show_message_dialog);
+    gtk_container_add (GTK_CONTAINER (eventbox), md->show_message_dialog );
+
+    gtk_widget_show (md->show_message_dialog);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+        _("This is only useful and recommended if you specify \"sync\" as part "
+        "of the \"unmount\" command string."), 
+        NULL );
+        
+    DBG ("message dialog checkbox to be activated? %d", mt->message_dialog);
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_message_dialog),
+                                  mt->message_dialog);
 				
 	g_signal_connect (dlg, "response",
             G_CALLBACK(on_optionsDialog_response), md);
 	
 	gtk_widget_show (dlg);
+	
+	TRACE ("enters mounter_create_options");
 }
 /*----------------------------------------------------*/
 
