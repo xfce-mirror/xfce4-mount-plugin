@@ -171,6 +171,5 @@ msgid ""
 msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Minden csatolható eszközt mutat és kérésre (le)csatolja őket"
