@@ -80,7 +80,7 @@ AUTOCONF = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin/missing --run automake-1.9
 AWK = mawk
-CATALOGS =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
+CATALOGS =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo vi.gmo
 CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -97,7 +97,7 @@ ECHO_T =
 EGREP = grep -E
 EXEEXT = 
 GETTEXT_PACKAGE = xfce4-mount-plugin
-GMOFILES =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo
+GMOFILES =  de.gmo el.gmo eu.gmo fr.gmo hu.gmo ko.gmo lt.gmo ru.gmo uk.gmo vi.gmo
 GMSGFMT = /usr/bin/msgfmt
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -121,6 +121,7 @@ INTLTOOL_PONG_RULE = %.pong:      %.pong.in      $(INTLTOOL_MERGE) $(wildcard $(
 INTLTOOL_PROP_RULE = %.prop:      %.prop.in      $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 INTLTOOL_SCHEMAS_RULE = %.schemas:   %.schemas.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -s -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 INTLTOOL_SERVER_RULE = %.server:    %.server.in    $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -o -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
+INTLTOOL_SERVICE_RULE = %.service: %.service.in   $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 INTLTOOL_SHEET_RULE = %.sheet:     %.sheet.in     $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -x -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 INTLTOOL_SOUNDLIST_RULE = %.soundlist: %.soundlist.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 INTLTOOL_THEME_RULE = %.theme:     %.theme.in     $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
@@ -154,7 +155,7 @@ PACKAGE_TARNAME = xfce4-mount-plugin
 PACKAGE_VERSION = 0.4.4
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
-POFILES =  de.po el.po eu.po fr.po hu.po ko.po lt.po ru.po uk.po
+POFILES =  de.po el.po eu.po fr.po hu.po ko.po lt.po ru.po uk.po vi.po
 POSUB = po
 PO_IN_DATADIR_FALSE = 
 PO_IN_DATADIR_TRUE = 

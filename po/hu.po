@@ -82,8 +82,7 @@ msgstr "csatolási pont : %s\n"
 msgid "not mounted\n"
 msgstr "nincs csatolva\n"
 
-#: ../panel-plugin/devices.c:201
-#: ../panel-plugin/devices.c:225
+#: ../panel-plugin/devices.c:201 ../panel-plugin/devices.c:225
 msgid "Mount Plugin: Error executing command."
 msgstr "Hiba a parancs futtatásakor"
 
@@ -122,10 +121,12 @@ msgstr "Csatolás után fut:"
 
 #: ../panel-plugin/mount-plugin.c:606
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
 "If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
 msgstr ""
-"E parancs fut egy eszköz csatolása után annak csatolási pontját argumentumként átadva. \n"
+"E parancs fut egy eszköz csatolása után annak csatolási pontját "
+"argumentumként átadva. \n"
 "Jó tippek: \"xffm\", \"thunar\" vagy \"rox\"."
 
 #: ../panel-plugin/mount-plugin.c:632
@@ -133,8 +134,12 @@ msgid "Specify own commands"
 msgstr "Saját parancs megadása"
 
 #: ../panel-plugin/mount-plugin.c:642
-msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne módosítsd!"
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne "
+"módosítsd!"
 
 #. FIXME: labels are centered.
 #. gtk_label_set_justify does not work,
@@ -149,18 +154,24 @@ msgid "Unmount command:"
 msgstr "Lecsatoló parancs:"
 
 #: ../panel-plugin/mount-plugin.c:689
-msgid "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync &&\" to the \"unmount\" command."
-msgstr "A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync &&\"-t az \"unmount\" parancs elé."
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync &&\" to the \"unmount\" command."
+msgstr ""
+"A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync &&\"-"
+"t az \"unmount\" parancs elé."
 
 #: ../panel-plugin/mount-plugin.c:710
 msgid "Show message after unmount"
 msgstr "Üzenet mutatása lecsatolás után"
 
 #: ../panel-plugin/mount-plugin.c:716
-msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Ez csak akkor ajánlott, ha megadod a \"sync\"-et az \"unmount\" prancsban."
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Ez csak akkor ajánlott, ha megadod a \"sync\"-et az \"unmount\" prancsban."
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Minden csatolható eszközt mutat és kérésre (le)csatolja őket"
-

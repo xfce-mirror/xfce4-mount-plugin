@@ -177,3 +177,7 @@ msgstr ""
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Zeigt alle einhängbaren Geräte an und hängt sie bei Mausklick ein/aus."
+
+#~ msgid "An error occured. The device should not be removed!"
+#~ msgstr ""
+#~ "Ein Fehler hat sich ereignet. Das Gerät sollte nicht entfernt werden!"

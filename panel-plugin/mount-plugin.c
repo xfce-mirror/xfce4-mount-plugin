@@ -95,38 +95,45 @@ on_message_dialog_response (GtkWidget *widget, gpointer *data) {
 static void 
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 {
-	TRACE ("enters on_activate_disk_display");
+    TRACE ("enters on_activate_disk_display");
 	
-	t_mounter * mt;
-	mt = (t_mounter *) g_object_get_data (G_OBJECT(widget), "mounter");
+    t_mounter * mt;
+    mt = (t_mounter *) g_object_get_data (G_OBJECT(widget), "mounter");
 	
-	DBG ("message dialog to be shown? %d", mt->message_dialog);
+    DBG ("message dialog to be shown? %d", mt->message_dialog);
 	
-	if (disk != NULL) {
-		if (disk->mount_info != NULL) { /* disk is mounted */
-			disk_umount (disk, mt->umount_command);
+    if (disk != NULL) {
+        if (disk->mount_info != NULL) { /* disk is mounted */
+            int result = disk_umount (disk, mt->umount_command, mt->message_dialog);
 			
-			if (mt->message_dialog) { /* popup dialog */
-				 GtkWidget *my_dlg;
-				 my_dlg = gtk_message_dialog_new (NULL,
-                        GTK_DIALOG_DESTROY_WITH_PARENT,
+            if (mt->message_dialog) { /* popup dialog */
+            
+            		gchar *msg = (gchar *) g_malloc (1024*sizeof(gchar));
+            	    if (result==NONE)
+            	    		msg = _("The device \"%s\" should be removable safely now.");
+            	    	else
+            	    		msg = _("An error occured. The device should not be removed!");
+            
+                GtkWidget *my_dlg;
+                my_dlg = gtk_message_dialog_new (NULL, 
+                        GTK_DIALOG_DESTROY_WITH_PARENT, 
                         GTK_MESSAGE_INFO,
                         GTK_BUTTONS_OK,
-                        _("The device \"%s\" should be removable safely now."), 
+                        msg,
                         disk->mount_point);
                  
                  g_signal_connect (my_dlg, "response",
-            			G_CALLBACK(on_message_dialog_response), my_dlg);
-            		 gtk_widget_show (my_dlg);
-            		// gtk_dialog_run (GTK_DIALOG (my_dlg));
+                        G_CALLBACK(on_message_dialog_response), my_dlg);
+                 gtk_widget_show (my_dlg);
+            		/* gtk_dialog_run (GTK_DIALOG (my_dlg)); */
             }
-		}
-		else { /* disk is not mounted */
-			disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
-		}
-	}
-	
-	TRACE ("leaves on_activate_disk_display");
+        }
+        else { /* disk is not mounted */
+            disk_mount (disk, mt->on_mount_cmd, mt->mount_command);
+        }
+    }
+
+    TRACE ("leaves on_activate_disk_display");
 }
 /*---------------------------------------------------------*/
 
