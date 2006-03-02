@@ -7,9 +7,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.4.3\n"
+"Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-19 21:11+0100\n"
+"POT-Creation-Date: 2006-03-03 00:27+0900\n"
 "PO-Revision-Date: 2006-01-04 21:41+0900\n"
 "Last-Translator: Eugene Ostapets <eostapets@altlinux.ru>\n"
 "Language-Team: Ukainian <eostapets@altlinux.ru>\n"
@@ -20,72 +20,72 @@ msgstr ""
 "X-Poedit-Country: UKRAINE\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
 
-#: ../panel-plugin/devices.c:44
+#: ../panel-plugin/devices.c:45
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f б"
 
-#: ../panel-plugin/devices.c:45
+#: ../panel-plugin/devices.c:46
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f КБ"
 
-#: ../panel-plugin/devices.c:46
+#: ../panel-plugin/devices.c:47
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f МБ"
 
-#: ../panel-plugin/devices.c:47
+#: ../panel-plugin/devices.c:48
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f ГБ"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:58
 #, c-format
 msgid "size : %g\n"
 msgstr "розмір : %g\n"
 
-#: ../panel-plugin/devices.c:58
+#: ../panel-plugin/devices.c:59
 #, c-format
 msgid "used size : %g\n"
 msgstr "використаний розмір : %g\n"
 
-#: ../panel-plugin/devices.c:59
+#: ../panel-plugin/devices.c:60
 #, c-format
 msgid "available size : %g\n"
 msgstr "доступний розмір : %g\n"
 
-#: ../panel-plugin/devices.c:60
+#: ../panel-plugin/devices.c:61
 #, c-format
 msgid "percentage used: %d\n"
 msgstr "відсоток використання: %d\n"
 
-#: ../panel-plugin/devices.c:61
+#: ../panel-plugin/devices.c:62
 #, c-format
 msgid "file system type : %s\n"
 msgstr "тип файлової системи : %s\n"
 
-#: ../panel-plugin/devices.c:62
+#: ../panel-plugin/devices.c:63
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr "поточна точка монтування : %s\n"
 
-#: ../panel-plugin/devices.c:138
+#: ../panel-plugin/devices.c:139
 #, c-format
 msgid "disk : %s\n"
 msgstr "диск : %s\n"
 
-#: ../panel-plugin/devices.c:139
+#: ../panel-plugin/devices.c:140
 #, c-format
 msgid "mount point : %s\n"
 msgstr "точка монтування : %s\n"
 
-#: ../panel-plugin/devices.c:142
+#: ../panel-plugin/devices.c:143
 #, c-format
 msgid "not mounted\n"
 msgstr "не змонтовано\n"
 
-#: ../panel-plugin/devices.c:201 ../panel-plugin/devices.c:225
+#: ../panel-plugin/devices.c:202 ../panel-plugin/devices.c:242
 msgid "Mount Plugin: Error executing command."
 msgstr ""
 
@@ -93,49 +93,53 @@ msgstr ""
 msgid "Mount Plugin"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:115
+#: ../panel-plugin/mount-plugin.c:113
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr ""
 
+#: ../panel-plugin/mount-plugin.c:115
+msgid "An error occured. The device should not be removed!"
+msgstr ""
+
 #. remove mount info
-#: ../panel-plugin/mount-plugin.c:220
+#: ../panel-plugin/mount-plugin.c:227
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">не змонтовано</span>"
 
 #. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
-#: ../panel-plugin/mount-plugin.c:450
+#: ../panel-plugin/mount-plugin.c:457
 msgid "devices"
 msgstr "пристрої"
 
-#: ../panel-plugin/mount-plugin.c:558
+#: ../panel-plugin/mount-plugin.c:565
 msgid "Edit Properties"
 msgstr ""
 
 #. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:565
+#: ../panel-plugin/mount-plugin.c:572
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 #, fuzzy
 msgid "Mount devices"
 msgstr "монтування/відображення пристроїв"
 
-#: ../panel-plugin/mount-plugin.c:599
+#: ../panel-plugin/mount-plugin.c:606
 #, fuzzy
 msgid "Execute after mounting:"
 msgstr "команда, яка виконається після монтування пристрою"
 
-#: ../panel-plugin/mount-plugin.c:606
+#: ../panel-plugin/mount-plugin.c:613
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
 "If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:632
+#: ../panel-plugin/mount-plugin.c:639
 msgid "Specify own commands"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:642
+#: ../panel-plugin/mount-plugin.c:649
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -145,25 +149,25 @@ msgstr ""
 #. gtk_label_set_justify does not work,
 #. adding alignment containers does not do s, either.
 #. so it must be something with the table: GTK_FILL doesn't do it.
-#: ../panel-plugin/mount-plugin.c:659
+#: ../panel-plugin/mount-plugin.c:666
 msgid "Mount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:666
+#: ../panel-plugin/mount-plugin.c:673
 msgid "Unmount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:689
+#: ../panel-plugin/mount-plugin.c:696
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:717
 msgid "Show message after unmount"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:716
+#: ../panel-plugin/mount-plugin.c:723
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."

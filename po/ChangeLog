@@ -1,28 +1,84 @@
-2005-12-17 12:06  Fabian Nowak <timystery@arcor.de>
+2006-03-02  Daichi Kawahata <daichi@xfce.org>
+
+	* de.po, el.po, eu.po, fr.po, hu.po, ko.po, lt.po, ru.po, uk.po,
+	  vi.po, xfce4-mount-plugin.pot: Updated.
+
+2006-03-01  Fabian Nowak <timystery@arcor.de>
+
+	* Makefile.in: changed version number to 0.4.5. to reflect more
+	  changes; 0.4.4 is deprecated now!
+
+2006-03-01  Fabian Nowak <timystery@arcor.de>
+
+	* Makefile.in, Makefile.in.in, de.po, hu.po: implemented "notify
+	  after umount" option waiting for results using xfce_exec_sync
+
+2006-02-23  SZERVAC Attila <sas@321.hu>
+
+	* hu.po: hu updates
+
+2006-02-23  Daichi Kawahata <daichi@xfce.org>
+
+	* vi.po: Added Vietnamese translations by Phan Vinh Thinh
+	  <teppi@vnlinux.org>.
+
+2006-02-22  Daichi Kawahata <daichi@xfce.org>
+
+	* hu.po: Updated.
+
+2006-02-19  Fabian Nowak <timystery@arcor.de>
+
+	* Makefile.in: changed version number, removed DEBUG define
+	  statements
+
+2006-02-19  Fabian Nowak <timystery@arcor.de>
+
+	* Makefile.in, de.po, el.po, eu.po, fr.po, hu.po, ko.po, lt.po,
+	  ru.po, uk.po, xfce4-mount-plugin.pot: No more depends on bash
+	  but only sh; new option in settings dialog to display message
+	  after unmount assuming that xfce_exec is synchronous but i
+	  doubt that. german translation is updated to the changes and
+	  new strings.
+
+2006-02-15  Daichi Kawahata <daichi@xfce.org>
+
+	* eu.po: Added Basque translations by Piarres Beobide
+	  <pi@beobide.net>.
+
+2006-02-11  SZERVAC Attila <sas@321.hu>
+
+	* hu.po: Add Hungarian Translations
+
+2006-01-04  Daichi Kawahata <daichi@xfce.org>
+
+	* ChangeLog, de.po, el.po, fr.po, hu.po, ko.po, lt.po, ru.po,
+	  uk.po: Updated.
+
+2005-12-17  Fabian Nowak <timystery@arcor.de>
 
 	* POTFILES: remove truink/po/POTFILES
 
-2005-12-17 12:05  Fabian Nowak <timystery@arcor.de>
+2005-12-17  Fabian Nowak <timystery@arcor.de>
 
 	* Makefile: remove po/Makefile
 
-2005-12-17 11:47  Fabian Nowak <timystery@arcor.de>
+2005-12-17  Fabian Nowak <timystery@arcor.de>
 
 	* Makefile, Makefile.in, POTFILES, POTFILES.in, de.po, el.gmo,
 	  el.po, fr.gmo, fr.po, hu.gmo, hu.po, ko.gmo, ko.po, lt.gmo,
 	  lt.po, ru.gmo, ru.po, uk.gmo, uk.po, xfce4-mount-plugin.pot:
 	  fourth try to move studd to trunk
 
-2005-10-08 14:08  Fabian Nowak <timystery@arcor.de>
+2005-10-08  Fabian Nowak <timystery@arcor.de>
 
 	* de.gmo: deleted german compiled translation
 
-2005-10-08 14:01  Fabian Nowak <timystery@arcor.de>
+2005-10-08  Fabian Nowak <timystery@arcor.de>
 
 	* Makefile, Makefile.in, Makefile.in.in, de.gmo, de.po:
 	  updated german translation
 
-2005-09-29 20:48  Fabian Nowak <timystery@arcor.de>
+2005-09-29  Fabian Nowak <timystery@arcor.de>
 
 	* ChangeLog, Makefile, Makefile.in, Makefile.in.in, POTFILES,
 	  POTFILES.in, de.gmo, de.po, el.gmo, el.po, fr.gmo, fr.po,
