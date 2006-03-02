@@ -1,5 +1,7 @@
 2006-03-02  Daichi Kawahata <daichi@xfce.org>
 
+	* fr.po: Updated French translations by Stephane Roy
+	  <sroy@j2n.net>.
 	* de.po, el.po, eu.po, fr.po, hu.po, ko.po, lt.po, ru.po, uk.po,
 	  vi.po, xfce4-mount-plugin.pot: Updated.
 
