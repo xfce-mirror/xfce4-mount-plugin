@@ -62,7 +62,7 @@ int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous);
 
 /*------------------------- disks_new ----------------*/
 /* fill a GPtrArray with pointers on struct t_disk containing infos on devices and theoretical mount point. use setfsent() and getfsent(). */
-GPtrArray * disks_new() ;
+GPtrArray * disks_new(gboolean include_NFSs) ;
 
 /*--------------------- disks_free --------------------------*/
 /* free a GPtrArray containing pointer on struct t_disk elements */

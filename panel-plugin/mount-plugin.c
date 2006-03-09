@@ -20,70 +20,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
-/* #define DEBUG 1
-#define DEBUG_TRACE 1 */
-
-#include <gtk/gtk.h>
-#include <libxfce4panel/xfce-panel-plugin.h>
-#include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/libxfcegui4.h>
-
-#include "devices.h"
-#include "icons.h"
-
-#define APP_NAME N_("Mount Plugin")
-
-#define BORDER 6
-
-#define DEFAULT_MOUNT_COMMAND "mount"
-#define DEFAULT_UMOUNT_COMMAND "umount"
-
-static GtkTooltips *tooltips = NULL;
-
-/*--------- graphical interface ----------*/
-typedef struct 
-{
-   XfcePanelPlugin *plugin;
-	char *on_mount_cmd;
-	gchar *mount_command;
-	gchar *umount_command;
-	gboolean message_dialog;
-	GtkWidget * button;
-	GtkWidget * menu;
-	GPtrArray * pdisks; /* contains pointers to struct t_disk */
-} t_mounter;
-/*---------------------------------*/
-
-/*--------- disk button data ------------------*/
-typedef struct
-{
-	GtkWidget * menu_item;
-	GtkWidget * hbox;
-	GtkWidget * label_disk;
-	GtkWidget * label_mount_info;
-	GtkWidget * progress_bar;
-} t_disk_display;
-/*------------------------------------------------*/
-
-/*------------- settings dialog --------------------------*/
-typedef struct
-{
-	t_mounter *mt;
-	GtkWidget *dialog;
-	/* options */
-	GtkWidget *string_cmd;
-	GtkWidget *specify_commands;
-	GtkWidget *box_mount_commands;
-	GtkWidget *string_mount_command;
-	GtkWidget *string_umount_command;
-	GtkWidget *show_message_dialog;
-}
-t_mounter_dialog;
-/*------------------------------------------------------*/
+#include "mount-plugin.h"
 
 
 static void
@@ -271,7 +208,7 @@ mounter_data_new (t_mounter *mt)
 	t_disk_display * disk_display ;
 	
 	/*get static infos from /etc/fstab */
-	mt->pdisks = disks_new();
+	mt->pdisks = disks_new(mt->include_NFSs);
 	
 	/* get dynamic infos on mounts */
 	disks_refresh (mt->pdisks);
@@ -297,6 +234,8 @@ mounter_data_new (t_mounter *mt)
 	
 	mt->message_dialog = FALSE;
 	
+	mt->include_NFSs = FALSE;
+	
 	TRACE ("leaves mounter_data_new");
 	
 	return ;
@@ -313,11 +252,13 @@ mounter_refresh (t_mounter * mt)
 	gchar *mount = g_strdup(mt->mount_command);
 	gchar *umount = g_strdup(mt->umount_command);
 	gboolean msg_dlg = mt->message_dialog;
+	gboolean incl_NFSs = mt->include_NFSs;
 	
 	mounter_data_new (mt);
 	mt->mount_command = g_strdup(mount);
 	mt->umount_command = g_strdup(umount);
 	mt->message_dialog = msg_dlg;
+	mt->include_NFSs = incl_NFSs;
 
 	TRACE ("leaves mounter_refresh");
 	
@@ -374,6 +315,9 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
         
     if ( value = xfce_rc_read_entry(rc, "message_dialog", NULL) )
       mt->message_dialog = atoi (value);
+      
+    if ( value = xfce_rc_read_entry(rc, "include_NFSs", NULL) )
+      mt->include_NFSs= atoi (value);
     
     xfce_rc_close (rc);
 
@@ -415,7 +359,10 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
         xfce_rc_write_entry (rc, "umount_command", mt->umount_command); 
         
     if ( mt->message_dialog==1 ) 
-        xfce_rc_write_entry (rc, "message_dialog", "1"); 
+        xfce_rc_write_entry (rc, "message_dialog", "1");
+        
+    if ( mt->include_NFSs==1 ) 
+        xfce_rc_write_entry (rc, "include_NFSs", "1");
     
          
     xfce_rc_close (rc);
@@ -489,6 +436,8 @@ mounter_apply_options (t_mounter_dialog *md)
     const char * tmp;
 	tmp = gtk_entry_get_text (GTK_ENTRY(md->string_cmd));
 	
+	gboolean incl_NFSs = mt->include_NFSs;
+	
 	g_free(mt->on_mount_cmd);
 	if (tmp && *tmp)
 		mt->on_mount_cmd = g_strdup(tmp);
@@ -509,20 +458,30 @@ mounter_apply_options (t_mounter_dialog *md)
     
     mt->message_dialog = gtk_toggle_button_get_active 
             (GTK_TOGGLE_BUTTON(md->show_message_dialog));
-    DBG ("message dialog checkbox activated? %d", mt->message_dialog);
+            
+    mt->include_NFSs = gtk_toggle_button_get_active 
+            (GTK_TOGGLE_BUTTON(md->show_include_NFSs));
+            
+    if (mt->include_NFSs!=incl_NFSs) {
+    		/* re-read disk information */
+    		mounter_refresh (mt);
+    }
+            
+    DBG ("include_NFSs activated? %d; before: %d", mt->include_NFSs, incl_NFSs);
     
     TRACE ("leaves mounter_apply_options");
-		
 }
 
 static void 
 on_optionsDialog_response (GtkWidget *dlg, int response, t_mounter_dialog * md)
 {
+	TRACE ("enters on_optionsDialog_response");
 	mounter_apply_options (md);
 
     gtk_widget_destroy (md->dialog);
     xfce_panel_plugin_unblock_menu (md->mt->plugin);
     mounter_write_config (md->mt->plugin, md->mt);
+    TRACE ("leaves on_optionsDialog_response");
 }
 /*------------------------------------------------------*/
 
@@ -711,7 +670,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     // show message dialog stuff
     eventbox = gtk_event_box_new ();
 	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE,
+	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE,
 	                    0);
     md->show_message_dialog = gtk_check_button_new_with_label ( 
 	                               _("Show message after unmount") );
@@ -727,6 +686,26 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     DBG ("message dialog checkbox to be activated? %d", mt->message_dialog);
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_message_dialog),
                                   mt->message_dialog);
+      
+    // show include_NFSs
+    eventbox = gtk_event_box_new ();
+	gtk_widget_show (eventbox);
+	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE,
+	                    0);
+    md->show_include_NFSs = gtk_check_button_new_with_label ( 
+	                               _("Also display network file systems") );
+	gtk_widget_show (md->show_message_dialog);
+    gtk_container_add (GTK_CONTAINER (eventbox), md->show_include_NFSs );
+
+    gtk_widget_show (md->show_include_NFSs);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+        _("Activate this option to also display network file systems like "
+          "NFS, SMBFS, SHFS and SSHFS."), 
+        NULL );  
+      
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_include_NFSs),
+                                  mt->include_NFSs);   
+    
 				
 	g_signal_connect (dlg, "response",
             G_CALLBACK(on_optionsDialog_response), md);

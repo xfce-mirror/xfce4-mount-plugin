@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = xfce4-mount-plugin
 PACKAGE = xfce4-mount-plugin
-VERSION = 0.4.5
+VERSION = 0.4.6
 
 SHELL = /bin/sh
 

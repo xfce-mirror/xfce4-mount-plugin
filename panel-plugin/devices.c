@@ -261,10 +261,16 @@ int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous)
 /*------------------------------------------------*/
 
 /*------------------------- disks_new ----------------*/
-/* fill a GPtrArray with pointers on struct t_disk containing infos on devices and theoretical mount point. use setfsent() and getfsent(). */
-GPtrArray * disks_new()
+/* fill a GPtrArray with pointers on struct t_disk containing infos on devices 
+ * and theoretical mount point. use setfsent() and getfsent(). 
+ *
+ * @param include_NFSs: whether to include network file systems
+ *
+ * @return	GPtrArray *pdisks containing elements to be displayed
+ */
+GPtrArray * disks_new(gboolean include_NFSs)
 {
-    GPtrArray * pdisks ;
+    GPtrArray * pdisks ; // to be returned
     t_disk * pdisk ;
     struct fstab * pfstab ;
     
@@ -278,9 +284,19 @@ GPtrArray * disks_new()
     {
         pfstab = getfsent() ; //read a line in fstab
         if (pfstab == NULL) break ; // on eof exit
-        // if pfstab->fs_spec do not begins with /dev discard
-        //if pfstab->fs_file == none discard
-        if ( g_str_has_prefix(pfstab->fs_spec,"/dev/") && (g_str_has_prefix(pfstab->fs_file,"/") != 0) )
+        // if pfstab->fs_spec does not begin with /dev, discard [Mount device]
+        // if pfstab->fs_file == none, discard [Mount point]
+        gboolean has_valid_mount_device = 
+        			g_str_has_prefix(pfstab->fs_spec,"/dev/");
+
+		if (include_NFSs)
+			has_valid_mount_device = has_valid_mount_device | 
+		        		g_str_has_prefix(pfstab->fs_spec, "shfs") | 
+		        		g_str_has_prefix(pfstab->fs_spec, "nfs") |
+		        		g_str_has_prefix(pfstab->fs_spec, "smbfs") |
+		        		g_str_has_prefix(pfstab->fs_spec, "sshfs");
+	        		
+        if ( has_valid_mount_device && (g_str_has_prefix(pfstab->fs_file,"/") != 0) )
         {
             pdisk = disk_new(pfstab->fs_spec, pfstab->fs_file);
             g_ptr_array_add( pdisks , pdisk );
