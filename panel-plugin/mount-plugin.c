@@ -25,7 +25,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 static void
 on_message_dialog_response (GtkWidget *widget, gpointer *data) {
-	gtk_widget_destroy(widget);
+	gtk_widget_destroy (widget);
 }
 
 /*---------------- on_activate_disk_display ---------------*/
@@ -41,15 +41,18 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 	
     if (disk != NULL) {
         if (disk->mount_info != NULL) { /* disk is mounted */
-            int result = disk_umount (disk, mt->umount_command, mt->message_dialog);
+            int result = disk_umount (disk, mt->umount_command, 
+                                      mt->message_dialog);
 			
             if (mt->message_dialog) { /* popup dialog */
             
             		gchar *msg = (gchar *) g_malloc (1024*sizeof(gchar));
             	    if (result==NONE)
-            	    		msg = _("The device \"%s\" should be removable safely now.");
+            	    		msg = _("The device \"%s\" should be removable safely "
+                    	    		"now.");
             	    	else
-            	    		msg = _("An error occured. The device should not be removed!");
+            	    		msg = _("An error occured. The device should not be "
+            	    		        "removed!");
             
                 GtkWidget *my_dlg;
                 my_dlg = gtk_message_dialog_new (NULL, 
@@ -60,7 +63,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
                         disk->mount_point);
                  
                  g_signal_connect (my_dlg, "response",
-                        G_CALLBACK(on_message_dialog_response), my_dlg);
+                        G_CALLBACK (on_message_dialog_response), my_dlg);
                  gtk_widget_show (my_dlg);
             		/* gtk_dialog_run (GTK_DIALOG (my_dlg)); */
             }
@@ -91,14 +94,15 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 {
 	TRACE ("enters disk_display_new");
 
-	if (disk != NULL) 
+	if (disk!=NULL) 
 	{
 		t_disk_display * dd ;
 		dd = g_new0 (t_disk_display, 1) ;
 		dd->menu_item = gtk_menu_item_new();
 		g_signal_connect (G_OBJECT(dd->menu_item), "activate",
 		                  G_CALLBACK(on_activate_disk_display), disk);
-		g_object_set_data (G_OBJECT(dd->menu_item), "mounter", (gpointer)mounter);
+		g_object_set_data (G_OBJECT(dd->menu_item), "mounter", 
+		                   (gpointer)mounter);
 		
 		dd->hbox = gtk_hbox_new (FALSE, 10);
 		gtk_container_add (GTK_CONTAINER(dd->menu_item), dd->hbox);
@@ -114,13 +118,16 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 		/*change to uniform label size*/
 		gtk_label_set_width_chars(GTK_LABEL(dd->label_mount_info),25);
 		gtk_label_set_use_markup(GTK_LABEL(dd->label_mount_info),TRUE);
-		gtk_label_set_justify(GTK_LABEL(dd->label_mount_info),GTK_JUSTIFY_RIGHT);
+		gtk_label_set_justify (GTK_LABEL(dd->label_mount_info),
+		                       GTK_JUSTIFY_RIGHT);
 		gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_info,TRUE,TRUE,0);
 		
 		dd->progress_bar = gtk_progress_bar_new();
 		gtk_box_pack_start(GTK_BOX(dd->hbox),dd->progress_bar,TRUE,TRUE,0);
+		
 		return dd ;
 	}
+	
 	TRACE ("leaves disk_display_new");
 	
 	return NULL ;
@@ -139,30 +146,35 @@ disk_display_refresh(t_disk_display * disk_display,
 		if (mount_info != NULL)
 		{	/* device is mounted */
 			char * text ;
-			char * used = get_size_human_readable(mount_info->used);
+			char * used = get_size_human_readable (mount_info->used);
 			//DBG("used is now : %s",used);
-			char * size = get_size_human_readable(mount_info->size);
+			char * size = get_size_human_readable (mount_info->size);
 			//DBG("size is now : %s",size);
-			char * avail = get_size_human_readable(mount_info->avail);
+			char * avail = get_size_human_readable (mount_info->avail);
 			//DBG("avail is now : %s",size);
-			text = g_strdup_printf("[%s/%s] %s free", used ,size,avail );
+			text = g_strdup_printf ("[%s/%s] %s free", used, size, avail);
 			//DBG("text is now : %s",text);
 			
 			g_free(used);
 			g_free(size);
 			g_free(avail);
 			//text = g_strdup_printf("mounted on : %s\t[%g Mb/%g Mb] %g Mb free",mount_info->mounted_on, mount_info->used, mount_info->size, mount_info->avail);
-			gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info),text);
+			gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
 			
-			gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(disk_display->progress_bar),((gdouble)mount_info->percent / 100) );
-			gtk_progress_bar_set_text(GTK_PROGRESS_BAR(disk_display->progress_bar),g_strdup_printf("%d",mount_info->percent));
-			gtk_widget_show(GTK_WIDGET(disk_display->progress_bar));
+			gtk_progress_bar_set_fraction (
+			         GTK_PROGRESS_BAR(disk_display->progress_bar), 
+			         ((gdouble)mount_info->percent / 100) );
+			gtk_progress_bar_set_text (
+			         GTK_PROGRESS_BAR(disk_display->progress_bar),
+			         g_strdup_printf ("%d",mount_info->percent));
+			gtk_widget_show (GTK_WIDGET(disk_display->progress_bar));
 		}
 		else /* mount_info == NULL */
 		{
 			/*remove mount info */
-			gtk_label_set_markup(GTK_LABEL(disk_display->label_mount_info),_("<span foreground=\"#FF0000\">not mounted</span>"));
-			gtk_widget_hide(GTK_WIDGET(disk_display->progress_bar));
+			gtk_label_set_markup (GTK_LABEL(disk_display->label_mount_info), 
+			             _("<span foreground=\"#FF0000\">not mounted</span>"));
+			gtk_widget_hide (GTK_WIDGET(disk_display->progress_bar));
 
 		}
 	}
@@ -208,7 +220,7 @@ mounter_data_new (t_mounter *mt)
 	t_disk_display * disk_display ;
 	
 	/*get static infos from /etc/fstab */
-	mt->pdisks = disks_new(mt->include_NFSs);
+	mt->pdisks = disks_new (mt->include_NFSs);
 	
 	/* get dynamic infos on mounts */
 	disks_refresh (mt->pdisks);
@@ -218,14 +230,15 @@ mounter_data_new (t_mounter *mt)
 	
 	for(i=0;i < mt->pdisks->len;i++)
 	{
-		disk = g_ptr_array_index(mt->pdisks,i); /* get the disk */
-		disk_display = disk_display_new(disk,mt); /* creates a disk_display */
+		disk = g_ptr_array_index (mt->pdisks,i); /* get the disk */
+		disk_display = disk_display_new (disk,mt); /* creates a disk_display */
 		
 		/* fill in mount infos */
-		disk_display_refresh(disk_display,disk->mount_info); 
+		disk_display_refresh (disk_display,disk->mount_info); 
 		
 		/* add the menu_item to the menu */
-		gtk_menu_shell_append(GTK_MENU_SHELL(mt->menu),disk_display->menu_item); 
+		gtk_menu_shell_append (GTK_MENU_SHELL(mt->menu), 
+		                       disk_display->menu_item); 
 	}
 	gtk_widget_show_all(mt->menu);
 	
@@ -249,14 +262,14 @@ mounter_refresh (t_mounter * mt)
 	TRACE ("enters mounter_refresh");
 	
 	mounter_data_free (mt);
-	gchar *mount = g_strdup(mt->mount_command);
-	gchar *umount = g_strdup(mt->umount_command);
+	gchar *mount = g_strdup (mt->mount_command);
+	gchar *umount = g_strdup (mt->umount_command);
 	gboolean msg_dlg = mt->message_dialog;
 	gboolean incl_NFSs = mt->include_NFSs;
 	
 	mounter_data_new (mt);
-	mt->mount_command = g_strdup(mount);
-	mt->umount_command = g_strdup(umount);
+	mt->mount_command = g_strdup (mount);
+	mt->umount_command = g_strdup (umount);
 	mt->message_dialog = msg_dlg;
 	mt->include_NFSs = incl_NFSs;
 
@@ -591,15 +604,16 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
 	eventbox = gtk_event_box_new ();
 	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE, 
-	                    0);
+	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, 
+	                    FALSE, 0);
 	
 	md->specify_commands = gtk_check_button_new_with_label ( 
 	                               _("Specify own commands") );
             
     gboolean set_active = 
         ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 || 
-          strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ? TRUE : FALSE;
+          strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ? 
+                TRUE : FALSE;
                                     
     gtk_widget_show (md->specify_commands);
     gtk_container_add (GTK_CONTAINER (eventbox), md->specify_commands );
@@ -611,8 +625,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
         
     eventbox = gtk_event_box_new ();
 	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, FALSE,
-	                    0);
+	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE,
+	                    FALSE, 0);
 	
     md->box_mount_commands = gtk_table_new (2, 2, FALSE);
     gtk_widget_show (md->box_mount_commands);
@@ -732,7 +746,8 @@ mount_construct (XfcePanelPlugin *plugin)
     
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
     
-    g_signal_connect (plugin, "save", G_CALLBACK (mounter_write_config), mounter);
+    g_signal_connect (plugin, "save", G_CALLBACK (mounter_write_config),
+                      mounter);
     
     xfce_panel_plugin_menu_show_configure (plugin);
     g_signal_connect (plugin, "configure-plugin", 
