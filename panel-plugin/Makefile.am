@@ -6,7 +6,8 @@ LIBS = @LIBS@ @SOLLIBS@
 xfce4_mount_plugin_SOURCES =                                \
         devices.c                                           \
         devices.h                                           \
-        mount-plugin.c  
+        mount-plugin.c  				\
+	mount-plugin.h
 
 xfce4_mount_plugin_CFLAGS =			         \
 	     -DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
