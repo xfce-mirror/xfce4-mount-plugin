@@ -291,10 +291,10 @@ GPtrArray * disks_new(gboolean include_NFSs)
 
 		if (include_NFSs)
 			has_valid_mount_device = has_valid_mount_device | 
-		        		g_str_has_prefix(pfstab->fs_spec, "shfs") | 
-		        		g_str_has_prefix(pfstab->fs_spec, "nfs") |
-		        		g_str_has_prefix(pfstab->fs_spec, "smbfs") |
-		        		g_str_has_prefix(pfstab->fs_spec, "sshfs");
+		        		g_str_has_prefix(pfstab->fs_vfstype, "shfs") | 
+		        		g_str_has_prefix(pfstab->fs_vfstype, "nfs") |
+		        		g_str_has_prefix(pfstab->fs_vfstype, "smbfs") |
+		        		g_str_has_prefix(pfstab->fs_vfstype, "sshfs");
 	        		
         if ( has_valid_mount_device && (g_str_has_prefix(pfstab->fs_file,"/") != 0) )
         {
