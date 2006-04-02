@@ -1,0 +1,195 @@
+# $Id$
+#
+# Japanese translation for the xfce4-mount-plugin.
+# Copyright (C) 2004, 2005 Jean-Baptiste Dulong.
+# Copytight (C) 2005, 2006 Fabian Nowak.
+# This file is distributed under the same license as the
+#   xfce4-mount-plugin package.
+# Daichi Kawahata <daichi@xfce.org>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-02 20:32+0900\n"
+"PO-Revision-Date: 2006-04-02 20:42+0900\n"
+"Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
+"Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../panel-plugin/devices.c:54
+#, c-format
+msgid "%.1f B"
+msgstr "%.1fバイト"
+
+#: ../panel-plugin/devices.c:55
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1fキロバイト"
+
+#: ../panel-plugin/devices.c:56
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1fメガバイト"
+
+#: ../panel-plugin/devices.c:57
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1fギガバイト"
+
+#: ../panel-plugin/devices.c:67
+#, c-format
+msgid "size : %g\n"
+msgstr "サイズ : %g\n"
+
+#: ../panel-plugin/devices.c:68
+#, c-format
+msgid "used size : %g\n"
+msgstr "使用済み : %g\n"
+
+#: ../panel-plugin/devices.c:69
+#, c-format
+msgid "available size : %g\n"
+msgstr "使用可能 : %g\n"
+
+#: ../panel-plugin/devices.c:70
+#, c-format
+msgid "percentage used: %d\n"
+msgstr "使用率 : %d\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "file system type : %s\n"
+msgstr "ファイルシステム : %s\n"
+
+#: ../panel-plugin/devices.c:72
+#, c-format
+msgid "actual mount point : %s\n"
+msgstr "実際のマウント場所 : %s\n"
+
+#: ../panel-plugin/devices.c:159
+#, c-format
+msgid "disk : %s\n"
+msgstr "ディスク : %s\n"
+
+#: ../panel-plugin/devices.c:160
+#, c-format
+msgid "mount point : %s\n"
+msgstr "マウント場所 : %s\n"
+
+#: ../panel-plugin/devices.c:164
+#, c-format
+msgid "not mounted\n"
+msgstr "マウントされていません\n"
+
+#: ../panel-plugin/devices.c:227 ../panel-plugin/devices.c:274
+msgid "Mount Plugin: Error executing command."
+msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
+
+#: ../panel-plugin/mount-plugin.c:51
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "デバイス「%s」を取り外す用意が整いました。"
+
+#: ../panel-plugin/mount-plugin.c:54
+msgid "An error occured. The device should not be removed!"
+msgstr "エラーが発生しました。デバイスを取り外してはいけません！"
+
+#: ../panel-plugin/mount-plugin.c:176
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">マウントされていません</span>"
+
+#. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
+#: ../panel-plugin/mount-plugin.c:417
+msgid "devices"
+msgstr "デバイス"
+
+#: ../panel-plugin/mount-plugin.c:537
+msgid "Edit Properties"
+msgstr "プロパティの編集"
+
+#. end extensions for panel 4.4
+#: ../panel-plugin/mount-plugin.c:544
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "マウントデバイス"
+
+#: ../panel-plugin/mount-plugin.c:578
+msgid "Execute after mounting:"
+msgstr "マウント後に実行:"
+
+#: ../panel-plugin/mount-plugin.c:585
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
+msgstr ""
+"このコマンドは、引数にあるデバイスのマウント場所にデバイスがマウントされた後"
+"に実行されます。\n"
+"何を入力するか分からないのでしたら、「xffm」,「rox」または「thunar」を試して"
+"みて下さい。"
+
+#: ../panel-plugin/mount-plugin.c:611
+msgid "Specify own commands"
+msgstr "その他のコマンドを指定"
+
+#: ../panel-plugin/mount-plugin.c:622
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"警告: これらのオプションは上級者専用です！ これらが何を意味するのか分からない"
+"のでしたら、決していじらないで下さい！"
+
+#. FIXME: labels are centered.
+#. gtk_label_set_justify does not work,
+#. adding alignment containers does not do s, either.
+#. so it must be something with the table: GTK_FILL doesn't do it.
+#: ../panel-plugin/mount-plugin.c:639
+msgid "Mount command:"
+msgstr "マウントコマンド:"
+
+#: ../panel-plugin/mount-plugin.c:646
+msgid "Unmount command:"
+msgstr "マウント解除コマンド:"
+
+#: ../panel-plugin/mount-plugin.c:669
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync &&\" to the \"unmount\" command."
+msgstr ""
+"大半のユーザーは両コマンドの先頭に「sudo」を付けるか、「unmount」コマンドの先"
+"頭に「sync &&」を付けるだけでよいと思います。"
+
+#: ../panel-plugin/mount-plugin.c:690
+msgid "Show message after unmount"
+msgstr "マウント解除後にメッセージを表示する"
+
+#: ../panel-plugin/mount-plugin.c:696
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"このオプションは「unmount」コマンド文字列に「sync」を入れている場合にお勧めし"
+"ます。"
+
+#: ../panel-plugin/mount-plugin.c:710
+msgid "Also display network file systems"
+msgstr "ネットワーク・ファイルシステムも表示する"
+
+#: ../panel-plugin/mount-plugin.c:716
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"このオプションを有効にすると NFS, SMBFS, SHFS および SSHFS のようなネットワー"
+"ク・ファイルシステムも表示します。"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr ""
+"マウント可能なデバイスを表示します。また、必要に応じてこれらをマウント(解除)"
+"します。"
