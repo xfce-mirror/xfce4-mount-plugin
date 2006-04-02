@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
+"Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-10 17:52+0100\n"
+"POT-Creation-Date: 2006-04-02 20:32+0900\n"
 "PO-Revision-Date: 2006-02-14 10:49+0100\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Librezale <librezale@librezale.org>\n"
@@ -16,67 +16,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Pootle 0.6.3.20060126\n"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:58
+#: ../panel-plugin/devices.c:57
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "size : %g\n"
 msgstr "tamaina : %g\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "used size : %g\n"
 msgstr "tamaina erabilia : %g\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "available size : %g\n"
 msgstr "tamaina erabilgarria : %g\n"
 
-#: ../panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "percentage used: %d\n"
 msgstr "ehuneko erabilia: %d\n"
 
-#: ../panel-plugin/devices.c:72
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "file system type : %s\n"
 msgstr "fitxategi sistema mota : %s\n"
 
-#: ../panel-plugin/devices.c:73
+#: ../panel-plugin/devices.c:72
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr "erabilitako muntatze puntua : %s\n"
 
-#: ../panel-plugin/devices.c:160
+#: ../panel-plugin/devices.c:159
 #, c-format
 msgid "disk : %s\n"
 msgstr "diskoa : %s\n"
 
-#: ../panel-plugin/devices.c:161
+#: ../panel-plugin/devices.c:160
 #, c-format
 msgid "mount point : %s\n"
 msgstr "muntatze puntua : %s\n"
 
-#: ../panel-plugin/devices.c:165
+#: ../panel-plugin/devices.c:164
 #, c-format
 msgid "not mounted\n"
 msgstr "ez muntaturik\n"

@@ -7,9 +7,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
+"Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-10 17:52+0100\n"
+"POT-Creation-Date: 2006-04-02 20:32+0900\n"
 "PO-Revision-Date: 2006-02-19 19:13+0100\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -17,67 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MBytes"
 
-#: ../panel-plugin/devices.c:58
+#: ../panel-plugin/devices.c:57
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "size : %g\n"
 msgstr "Größe: %g\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "used size : %g\n"
 msgstr "Verwendeter Platz: %g\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "available size : %g\n"
 msgstr "Verfügbarer Platz: %g\n"
 
-#: ../panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "percentage used: %d\n"
 msgstr "Verwendeter Anteil: %d\n"
 
-#: ../panel-plugin/devices.c:72
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "file system type : %s\n"
 msgstr "Dateisystemtyp: %s\n"
 
-#: ../panel-plugin/devices.c:73
+#: ../panel-plugin/devices.c:72
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr "Eigentlicher Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:160
+#: ../panel-plugin/devices.c:159
 #, c-format
 msgid "disk : %s\n"
 msgstr "Platte: %s\n"
 
-#: ../panel-plugin/devices.c:161
+#: ../panel-plugin/devices.c:160
 #, c-format
 msgid "mount point : %s\n"
 msgstr "Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:165
+#: ../panel-plugin/devices.c:164
 #, c-format
 msgid "not mounted\n"
 msgstr "nicht eingehängt\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-09 11:38+0100\n"
+"POT-Creation-Date: 2006-04-02 20:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,120 +16,119 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/devices.c:45
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f B"
 msgstr ""
 
-#: ../panel-plugin/devices.c:46
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f KB"
 msgstr ""
 
-#: ../panel-plugin/devices.c:47
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f MB"
 msgstr ""
 
-#: ../panel-plugin/devices.c:48
+#: ../panel-plugin/devices.c:57
 #, c-format
 msgid "%.1f GB"
 msgstr ""
 
-#: ../panel-plugin/devices.c:58
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "size : %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:59
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "used size : %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:60
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "available size : %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:61
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "percentage used: %d\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:62
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "file system type : %s\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:63
+#: ../panel-plugin/devices.c:72
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:139
+#: ../panel-plugin/devices.c:159
 #, c-format
 msgid "disk : %s\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:140
+#: ../panel-plugin/devices.c:160
 #, c-format
 msgid "mount point : %s\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:143
+#: ../panel-plugin/devices.c:164
 #, c-format
 msgid "not mounted\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:202 ../panel-plugin/devices.c:242
+#: ../panel-plugin/devices.c:227 ../panel-plugin/devices.c:274
 msgid "Mount Plugin: Error executing command."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:50
+#: ../panel-plugin/mount-plugin.c:51
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:52
+#: ../panel-plugin/mount-plugin.c:54
 msgid "An error occured. The device should not be removed!"
 msgstr ""
 
-#. remove mount info
-#: ../panel-plugin/mount-plugin.c:164
+#: ../panel-plugin/mount-plugin.c:176
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr ""
 
 #. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
-#: ../panel-plugin/mount-plugin.c:404
+#: ../panel-plugin/mount-plugin.c:417
 msgid "devices"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:516
+#: ../panel-plugin/mount-plugin.c:537
 msgid "Edit Properties"
 msgstr ""
 
 #. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:523
+#: ../panel-plugin/mount-plugin.c:544
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:578
 msgid "Execute after mounting:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:564
+#: ../panel-plugin/mount-plugin.c:585
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
 "If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:590
+#: ../panel-plugin/mount-plugin.c:611
 msgid "Specify own commands"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:600
+#: ../panel-plugin/mount-plugin.c:622
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -139,35 +138,35 @@ msgstr ""
 #. gtk_label_set_justify does not work,
 #. adding alignment containers does not do s, either.
 #. so it must be something with the table: GTK_FILL doesn't do it.
-#: ../panel-plugin/mount-plugin.c:617
+#: ../panel-plugin/mount-plugin.c:639
 msgid "Mount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:624
+#: ../panel-plugin/mount-plugin.c:646
 msgid "Unmount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:647
+#: ../panel-plugin/mount-plugin.c:669
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:668
+#: ../panel-plugin/mount-plugin.c:690
 msgid "Show message after unmount"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:674
+#: ../panel-plugin/mount-plugin.c:696
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:688
+#: ../panel-plugin/mount-plugin.c:710
 msgid "Also display network file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:694
+#: ../panel-plugin/mount-plugin.c:716
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
