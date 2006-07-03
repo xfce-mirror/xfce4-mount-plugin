@@ -37,8 +37,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #define MB 1048576
 #define GB 1073741824
 
-#define DEBUG 1
-
 #define MTAB "/etc/mtab"
 
 /*-------------------- get_size_human_readable --------------------*/
@@ -108,10 +106,10 @@ mount_info_new_from_stat (struct statfs * pstatfs,
     if (pstatfs!=NULL && mnt_type!=NULL && mnt_dir!=NULL)
     {
         t_mount_info * mount_info ;
-        float size ; // total size of device
-        float used; // used size of device
-        float avail; //Available size of device
-        unsigned int percent ; //percentage used
+        float size;  /* total size of device */
+        float used;  /* used size of device */
+        float avail; /* Available size of device */
+        unsigned int percent ; /* percentage used */
         
         /* compute sizes in bytes */
         size = (float)pstatfs->f_bsize * (float)pstatfs->f_blocks;
@@ -275,11 +273,12 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous)
             retval = ERROR;
         }
         
-        if (!synchronous) { // already return from this function at this stage
+        if (!synchronous)  /* already return from this function at this stage */
+        {
             return retval;
         }
         
-        // synchronous only
+        /* synchronous only */
         gchar *contents;
         error = NULL;
         g_file_get_contents (tmpfile, &contents, NULL, &error);
@@ -309,13 +308,13 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous)
 GPtrArray * 
 disks_new (gboolean include_NFSs)
 {
-    GPtrArray * pdisks; // to be returned
+    GPtrArray * pdisks; /* to be returned */
     t_disk * pdisk;
     struct fstab *pfstab;
     
-    // open fstab
+    /* open fstab */
     if (setfsent()!=1)
-        return NULL ; // on error return NULL
+        return NULL; /* on error return NULL */
     
     pdisks = g_ptr_array_new();
     
@@ -343,9 +342,9 @@ disks_new (gboolean include_NFSs)
 
         }
 
-    } // end for
+    } /* end for */
     
-    endfsent(); // close file
+    endfsent(); /* close file */
 
     return pdisks;
 }
@@ -428,8 +427,8 @@ disks_refresh(GPtrArray * pdisks)
 {
     /* using getmntent to get filesystems mount information */
     
-    FILE * fmtab = NULL; // file /etc/mtab
-    struct mntent * pmntent = NULL; // struct for mnt info
+    FILE * fmtab = NULL; /* file /etc/mtab */
+    struct mntent * pmntent = NULL; /* struct for mnt info */
     struct statfs * pstatfs = NULL;
     
     t_mount_info * mount_info;
@@ -442,17 +441,15 @@ disks_refresh(GPtrArray * pdisks)
     pstatfs = g_new0 (struct statfs, 1);
     
     /* open file */
-    fmtab = setmntent (MTAB, "r"); // mtab file
+    fmtab = setmntent (MTAB, "r"); /* mtab file */
     
     /* start looking for mounted devices */
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab)) {
 
-#ifdef DEBUG
-printf (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
-#endif
+	DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
     
         /* getstat on disk */
-//        if (statfs(pmntent->mnt_dir, pstatfs)==0 && (pstatfs->f_blocks != 0)) {
+/*        if (statfs(pmntent->mnt_dir, pstatfs)==0 && (pstatfs->f_blocks != 0)) { */
             statfs(pmntent->mnt_dir, pstatfs);
             
             /* if we got the stat and the block number is non-zero */
@@ -460,10 +457,10 @@ printf (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
             /* get pointer on disk from pdisks */
             /* CHANGED to reflect change in disk_search */
             pdisk = disks_search (pdisks, pmntent->mnt_dir);
-            if (pdisk == NULL) { //if disk is not found in pdisks
+            if (pdisk == NULL) { /* if disk is not found in pdisks */
 
-                // create a new struct t_disk and add it to pdisks
-                // test for mnt_dir!=none or neither block device nor NFS
+                /* create a new struct t_disk and add it to pdisks */
+                /* test for mnt_dir!=none or neither block device nor NFS */
                 if ( (g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0) ||
                 !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") || 
                   g_str_has_prefix(pmntent->mnt_type, "fuse") ||
@@ -472,7 +469,7 @@ printf (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
                   g_str_has_prefix(pmntent->mnt_type, "shfs") )
                 ) continue;
 
-                // else have valid entry reflecting block device or NFS        
+                /* else have valid entry reflecting block device or NFS */
                 pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
                 g_ptr_array_add (pdisks, pdisk);
             }
@@ -483,8 +480,8 @@ printf (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
             /* add it to pdisk */
             pdisk->mount_info = mount_info ;
         
-//        } // if statfs
-    } // end for
+/*        } */ /* if statfs */
+    } /* end for */
     
     g_free (pstatfs);
     endmntent (fmtab); // close file

@@ -28,6 +28,7 @@ on_message_dialog_response (GtkWidget *widget, gpointer *data) {
 	gtk_widget_destroy (widget);
 }
 
+
 /*---------------- on_activate_disk_display ---------------*/
 static void 
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
@@ -36,8 +37,6 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 	
     t_mounter * mt;
     mt = (t_mounter *) g_object_get_data (G_OBJECT(widget), "mounter");
-	
-    DBG ("message dialog to be shown? %d", mt->message_dialog);
 	
     if (disk != NULL) {
         if (disk->mount_info != NULL) { /* disk is mounted */
@@ -48,10 +47,10 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
             
             		gchar *msg = (gchar *) g_malloc (1024*sizeof(gchar));
             	    if (result==NONE)
-            	    		msg = _("The device \"%s\" should be removable safely "
+            	    	msg = _("The device \"%s\" should be removable safely "
                     	    		"now.");
-            	    	else
-            	    		msg = _("An error occured. The device should not be "
+            	    else
+            	    	msg = _("An error occured. The device should not be "
             	    		        "removed!");
             
                 GtkWidget *my_dlg;
@@ -77,6 +76,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 }
 /*---------------------------------------------------------*/
 
+
 /*---------------------- mounter_set_size ----------------------*/
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
@@ -86,6 +86,7 @@ mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
  
 }
 /*---------------------------------------------------------*/
+
 
 /*-------------------- disk_display_new -----------------*/
 /*create a new t_disk_display from t_disk infos */
@@ -147,18 +148,18 @@ disk_display_refresh(t_disk_display * disk_display,
 		{	/* device is mounted */
 			char * text ;
 			char * used = get_size_human_readable (mount_info->used);
-			//DBG("used is now : %s",used);
+			DBG("used is now : %s",used);
 			char * size = get_size_human_readable (mount_info->size);
-			//DBG("size is now : %s",size);
+			DBG("size is now : %s",size);
 			char * avail = get_size_human_readable (mount_info->avail);
-			//DBG("avail is now : %s",size);
+			DBG("avail is now : %s",size);
 			text = g_strdup_printf ("[%s/%s] %s free", used, size, avail);
-			//DBG("text is now : %s",text);
+			DBG("text is now : %s",text);
 			
 			g_free(used);
 			g_free(size);
 			g_free(avail);
-			//text = g_strdup_printf("mounted on : %s\t[%g Mb/%g Mb] %g Mb free",mount_info->mounted_on, mount_info->used, mount_info->size, mount_info->avail);
+			/* text = g_strdup_printf("mounted on : %s\t[%g Mb/%g Mb] %g Mb free",mount_info->mounted_on, mount_info->used, mount_info->size, mount_info->avail); */
 			gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
 			
 			gtk_progress_bar_set_fraction (
@@ -182,6 +183,7 @@ disk_display_refresh(t_disk_display * disk_display,
 }
 /*----------------------------------------------*/
 
+
 /*--------------- mounter_data_free -----------------*/
 static void 
 mounter_data_free (t_mounter * mt)
@@ -196,6 +198,7 @@ mounter_data_free (t_mounter * mt)
 }
 /*----------------------------------------------*/
 
+
 /*--------------- mounter_free -----------------*/
 static void 
 mounter_free (XfcePanelPlugin *plugin, t_mounter *mounter)
@@ -209,6 +212,8 @@ mounter_free (XfcePanelPlugin *plugin, t_mounter *mounter)
 	TRACE ("leaves mounter_free");
 }
 /*----------------------------------------------*/
+
+
 /*---------------- mounter_data_new --------------------------*/
 static void 
 mounter_data_new (t_mounter *mt)
@@ -242,6 +247,7 @@ mounter_data_new (t_mounter *mt)
 	}
 	gtk_widget_show_all(mt->menu);
 	
+	mt->icon = PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg";
 	mt->mount_command = DEFAULT_MOUNT_COMMAND;
 	mt->umount_command = DEFAULT_UMOUNT_COMMAND;
 	
@@ -255,6 +261,7 @@ mounter_data_new (t_mounter *mt)
 }
 /*------------------------------------------------------*/
 
+
 /*---------------------- mounter_refresh ---------------*/
 static void 
 mounter_refresh (t_mounter * mt)
@@ -264,10 +271,14 @@ mounter_refresh (t_mounter * mt)
 	mounter_data_free (mt);
 	gchar *mount = g_strdup (mt->mount_command);
 	gchar *umount = g_strdup (mt->umount_command);
+	gchar *icon = g_strdup (mt->icon);
+	DBG ("Changed icon value from '%s' to '%s'.\n", mt->icon, icon);
 	gboolean msg_dlg = mt->message_dialog;
 	gboolean incl_NFSs = mt->include_NFSs;
 	
 	mounter_data_new (mt);
+	mt->icon = g_strdup (icon);
+	DBG ("Changed icon value from '%s' to '%s'.\n", icon, mt->icon);
 	mt->mount_command = g_strdup (mount);
 	mt->umount_command = g_strdup (umount);
 	mt->message_dialog = msg_dlg;
@@ -278,12 +289,13 @@ mounter_refresh (t_mounter * mt)
 }
 /*---------------------------------------------------------*/
 
+
 /* --------------plugin event --------------------------------*/
 static gboolean 
 on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
 {
-	TRACE ("enters on_button_pressed");
-	if (mounter != NULL && event->button == 1)
+	TRACE ("enters on_button_press");
+	if (mounter != NULL && event->button == 1) /* left click only */
 	{
 		
 		mounter_refresh (mounter); /* refreshs infos regarding mounts data */
@@ -291,10 +303,11 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
 		                event->time);
 		return TRUE;
 	}
-	TRACE ("leaves on_button_pressed");
+	TRACE ("leaves on_button_press");
 	return FALSE ;
 }
 /*------------------------------------------------------*/
+
 
 /*---------------------- mounter_read_config --------------------*/
 static void
@@ -314,7 +327,11 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     
     if ( value = xfce_rc_read_entry(rc, "on_mount_cmd", NULL) )
       mt->on_mount_cmd = g_strdup (value);
-    
+      
+    if ( value = xfce_rc_read_entry(rc, "icon", NULL) )
+    	mt->icon = g_strdup (value);
+    else
+    	asprintf (&(mt->icon), "%s/icons/hicolor/scalable/apps/xfce-mount.svg", PACKAGE_DATA_DIR);
     
     if ( value = xfce_rc_read_entry (rc, "mount_command", NULL) )
         mt->mount_command = g_strdup (value);
@@ -338,6 +355,7 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 }
 /*-------------------------------------------------------*/
 
+
 /*------------------- mounter_write_config -----------------------*/
 static void
 mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
@@ -346,7 +364,6 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 	
 	 XfceRc *rc;
     char *file;
-    char value[20];
 
     if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
         return;
@@ -358,9 +375,6 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 
     if (!rc)
         return;
-	
-	DBG ("save on_mount_cmd : %s", mt->on_mount_cmd);
-	DBG ("save message_dialog : %d", mt->message_dialog);
 
     xfce_rc_write_entry (rc, "on_mount_cmd", 
          mt->on_mount_cmd ? mt->on_mount_cmd : "");
@@ -377,12 +391,14 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
     if ( mt->include_NFSs==1 ) 
         xfce_rc_write_entry (rc, "include_NFSs", "1");
     
+    xfce_rc_write_entry (rc, "icon", mt->icon);
          
     xfce_rc_close (rc);
 
 	TRACE ("leaves write config");
 }
 /*--------------------------------------------*/
+
 
 /*------------------- create_mounter -------------------*/
 static t_mounter *
@@ -395,7 +411,9 @@ create_mounter_control (XfcePanelPlugin *plugin)
 	mounter = g_new0(t_mounter,1);
 
 	/* default mount command */
-	mounter->on_mount_cmd = NULL;	
+	mounter->on_mount_cmd = NULL;
+	
+	mounter->icon = NULL;
 	
 	mounter->plugin = plugin;
 	
@@ -406,28 +424,30 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
 	/*plugin button */
 	
-	GdkPixbuf * pb ;
+/*	GdkPixbuf * pb;
 	pb = gdk_pixbuf_new_from_inline (sizeof(icon_plugin), icon_plugin, FALSE, 
-	                                 NULL);
-	mounter->button = xfce_iconbutton_new_from_pixbuf (pb);
-	gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
+	                                 NULL); */
 
-	/* add_tooltip (GTK_WIDGET(mounter->button), _("devices")); */
+	/*get the data*/	
+	mounter_data_new (mounter);
+
+	g_assert (mounter->icon!=NULL);
+		
+	mounter->button_pb = gdk_pixbuf_new_from_file (mounter->icon, NULL);
+	mounter->button = xfce_iconbutton_new_from_pixbuf (mounter->button_pb);
+	gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
 
     gtk_tooltips_set_tip (tooltips, GTK_WIDGET(mounter->button), _("devices"), 
                          NULL);
 
-	/*-------------------------------------------------------------*/
 	g_signal_connect (G_OBJECT(mounter->button), "button_press_event",
 	                  G_CALLBACK(on_button_press), mounter);
 	gtk_widget_show(mounter->button);
-	
-	/*get the data*/	
-	mounter_data_new (mounter);
-	
+
 	TRACE ("leaves create_mounter_control");
 	return mounter;
 }
+/*----------------------------------------------------*/
 
 
 /*---------- free_mounter_dialog ---------------------*/
@@ -437,6 +457,7 @@ free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 	g_free(md);
 }
 /*----------------------------------------------------*/
+
 
 /*---------------- mounter_apply_options ---------------*/
 static void
@@ -451,9 +472,9 @@ mounter_apply_options (t_mounter_dialog *md)
 	
 	gboolean incl_NFSs = mt->include_NFSs;
 	
-	g_free(mt->on_mount_cmd);
+	g_free (mt->on_mount_cmd);
 	if (tmp && *tmp)
-		mt->on_mount_cmd = g_strdup(tmp);
+		mt->on_mount_cmd = g_strdup (tmp);
 	else
 		mt->on_mount_cmd = NULL;
 
@@ -479,29 +500,46 @@ mounter_apply_options (t_mounter_dialog *md)
     		/* re-read disk information */
     		mounter_refresh (mt);
     }
-            
-    DBG ("include_NFSs activated? %d; before: %d", mt->include_NFSs, incl_NFSs);
+    
+    if ( gtk_file_chooser_get_filename (GTK_FILE_CHOOSER(md->string_icon))
+            !=NULL )
+    	mt->icon = g_strdup( gtk_file_chooser_get_filename (
+    	                           GTK_FILE_CHOOSER(md->string_icon)) );
+    else
+    	asprintf (&(mt->icon), 
+    	           "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
+    	           PACKAGE_DATA_DIR);
+
+   	mt->button_pb = gdk_pixbuf_new_from_file (mt->icon, NULL);
+   	xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mt->button), mt->button_pb);
     
     TRACE ("leaves mounter_apply_options");
 }
 
+
+/*-------------------- on_options_dialog_response --------------------- */
 static void 
 on_optionsDialog_response (GtkWidget *dlg, int response, t_mounter_dialog * md)
 {
 	TRACE ("enters on_optionsDialog_response");
+	
 	mounter_apply_options (md);
 
     gtk_widget_destroy (md->dialog);
+    
     xfce_panel_plugin_unblock_menu (md->mt->plugin);
+    
     mounter_write_config (md->mt->plugin, md->mt);
+    
     TRACE ("leaves on_optionsDialog_response");
 }
 /*------------------------------------------------------*/
 
-/*-------------- entry_lost_focus -----------------------*/
-/* This shows a way to update plugin settings when the user leaves a text entry,
-by connecting to the "focus-out" event on the entry.*/
 
+/*-------------- entry_lost_focus -----------------------*/
+/* This shows a way to update plugin settings when the user leaves a text  
+ * entry, by connecting to the "focus-out" event on the entry.
+ */
 static gboolean
 entry_lost_focus(t_mounter_dialog * md)
 {
@@ -531,201 +569,260 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
 	TRACE ("enters mounter_create_options");
 
-    xfce_panel_plugin_block_menu (plugin);
+	xfce_panel_plugin_block_menu (plugin);
 
-    GtkWidget *dlg, *header;
-    dlg = gtk_dialog_new_with_buttons (_("Edit Properties"), 
-                GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-                GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
-                GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
-                
-    gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
+	GtkWidget *dlg, *header;
+	dlg = gtk_dialog_new_with_buttons (_("Edit Properties"), 
+	            GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
+	            GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
+	            GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
+	            
+	gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
 
-    header = xfce_create_header (NULL, _("Mount devices"));
-    gtk_widget_set_size_request (GTK_BIN (header)->child, -1, 32);
-    gtk_container_set_border_width (GTK_CONTAINER (header), BORDER - 2);
-    gtk_widget_show (header);
-    gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header, FALSE, 
-                        TRUE, 0);
+	header = xfce_create_header (NULL, _("Mount devices"));
+	gtk_widget_set_size_request (GTK_BIN (header)->child, -1, 32);
+	gtk_container_set_border_width (GTK_CONTAINER (header), BORDER - 2);
+	gtk_widget_show (header);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header, FALSE, 
+	                    TRUE, 0);
 
 	GtkWidget *vbox, *label;
 	t_mounter_dialog * md;
-	
+
 	md = g_new0 (t_mounter_dialog, 1);
-	
+
 	md->mt = mt;
-	
+
 	md->dialog = dlg;
-	
+
 	/* don't set a border width, the dialog will take care of that */
-	
-	vbox =  GTK_DIALOG (dlg)->vbox; /* gtk_vbox_new (FALSE, BORDER); */
+
+	vbox = GTK_DIALOG (dlg)->vbox; /* gtk_vbox_new (FALSE, BORDER); */
 	/* gtk_widget_show (vbox);
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), GTK_WIDGET (vbox), 
-	                    TRUE, TRUE, 0); */
-	
-	/* entries */	
-	GtkWidget *eventbox = gtk_event_box_new ();
-	gtk_widget_show (eventbox);
-	gtk_container_set_border_width (GTK_CONTAINER (eventbox), BORDER);
-	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE, 
-	                   0);
-	
-	GtkWidget *hbox = gtk_hbox_new (FALSE, BORDER);
-	gtk_widget_show (hbox);
-	gtk_container_add (GTK_CONTAINER (eventbox), hbox);
-	
-	label = gtk_label_new (_("Execute after mounting:"));
-	gtk_widget_show (label);
-	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
-	
-	GtkTooltips *tip = gtk_tooltips_new ();
+	                TRUE, TRUE, 0); */
+
+	/* "local" variables */	
+	GtkWidget *_eventbox;
+	GtkWidget *_frame;
+	GtkWidget *_label;
+	GtkWidget *_vbox2;
+	GtkWidget *_hbox;
+	GtkTooltips *tip;
+	GtkWidget *_innervbox;
+
+	_eventbox = gtk_event_box_new ();
+	_frame = gtk_frame_new (_("Commands"));
+	_label = gtk_label_new ("");
+	_vbox2 = gtk_vbox_new (FALSE, 0);
+	gtk_container_set_border_width (GTK_CONTAINER(_vbox2), BORDER<<1);
+
+	gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET(_eventbox), 
+	                    FALSE, FALSE, 0);
+	gtk_widget_show (_eventbox);
+
+	gtk_widget_show (_label);
+
+	gtk_widget_show (_vbox2);
+	gtk_container_add(GTK_CONTAINER(_frame), _vbox2);
+
+	gtk_label_set_markup (GTK_LABEL(_label), _("<b>Commands</b>"));
+	gtk_frame_set_label_widget (GTK_FRAME(_frame), _label);
+
+	gtk_frame_set_shadow_type  (GTK_FRAME(_frame), GTK_SHADOW_NONE);
+	gtk_widget_show (_frame);
+	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET(_frame), 
+	                    FALSE, FALSE, BORDER);
+
+	_hbox = gtk_hbox_new (FALSE, 0);
+	gtk_widget_show (_hbox);
+	gtk_container_add (GTK_CONTAINER (_eventbox), _hbox);
+
+	_label = gtk_label_new (_("Execute after mounting:"));
+	gtk_widget_show (_label);
+	gtk_box_pack_start (GTK_BOX (_hbox), _label, FALSE, FALSE, 0);
+
+	tip = gtk_tooltips_new ();
 	gtk_tooltips_enable (tip);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
         _("This command will be executed after mounting the device with the "
-          "mount point of the device as argument.\n"
-          "If you are unsure what to insert, try \"xffm\" or \"rox\" or "
-          "\"thunar\"."), 
-        NULL );
-	
+        "mount point of the device as argument.\n"
+        "If you are unsure what to insert, try \"xffm\" or \"rox\" or "
+        "\"thunar\"."), 
+        NULL);
+
 	md->string_cmd = gtk_entry_new ();
 	if (mt->on_mount_cmd != NULL)
-		gtk_entry_set_text (GTK_ENTRY(md->string_cmd), 
-		                    g_strdup(mt->on_mount_cmd));
-    gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 21);
+	gtk_entry_set_text (GTK_ENTRY(md->string_cmd), 
+	                    g_strdup(mt->on_mount_cmd));
+	gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 15);
 	gtk_widget_show (md->string_cmd);
-	gtk_box_pack_start (GTK_BOX(hbox), md->string_cmd, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX(_hbox), md->string_cmd, TRUE, TRUE, BORDER);
 
-    GtkWidget *innervbox = gtk_vbox_new (FALSE, 0);
-    gtk_container_set_border_width (GTK_CONTAINER (innervbox), BORDER);
-    gtk_widget_show (innervbox);
-    gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (innervbox), FALSE, FALSE, 
-	                    0);
+	_innervbox = gtk_vbox_new (FALSE, 0);
+	gtk_container_set_border_width (GTK_CONTAINER (_innervbox), 0);
+	gtk_widget_show (_innervbox);
+	gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET (_innervbox), FALSE, FALSE, 
+	                BORDER);
 
-	eventbox = gtk_event_box_new ();
-	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE, 
-	                    FALSE, 0);
-	
+	_eventbox = gtk_event_box_new ();
+	gtk_widget_show (_eventbox);
+	gtk_box_pack_start (GTK_BOX (_innervbox), GTK_WIDGET (_eventbox), FALSE, 
+	                FALSE, 0);
+
 	md->specify_commands = gtk_check_button_new_with_label ( 
-	                               _("Specify own commands") );
-            
-    gboolean set_active = 
-        ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 || 
-          strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ? 
-                TRUE : FALSE;
-                                    
-    gtk_widget_show (md->specify_commands);
-    gtk_container_add (GTK_CONTAINER (eventbox), md->specify_commands );
-    
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
-        _("WARNING: These options are for experts only! If you do not know "
-          "what they may be good for, keep your hands off!"), 
-        NULL );
-        
-    eventbox = gtk_event_box_new ();
-	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (innervbox), GTK_WIDGET (eventbox), FALSE,
-	                    FALSE, 0);
-	
-    md->box_mount_commands = gtk_table_new (2, 2, FALSE);
-    gtk_widget_show (md->box_mount_commands);
-    gtk_container_add (GTK_CONTAINER (eventbox), md->box_mount_commands);
-	                  
-    /* FIXME: labels are centered.
-        gtk_label_set_justify does not work,
-        adding alignment containers does not do s, either.
-        so it must be something with the table: GTK_FILL doesn't do it. */
-	label = gtk_label_new (_("Mount command:"));
-	gtk_misc_set_alignment (GTK_MISC(label), 0.0, 0.5);
-	gtk_widget_show (label);
-	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 0, 1, 
-	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
-	
-	                  
-	label = gtk_label_new (_("Unmount command:"));
-	gtk_misc_set_alignment (GTK_MISC(label), 0.0, 0.5);
-	gtk_widget_show (label);
-	gtk_table_attach (GTK_TABLE(md->box_mount_commands), label, 0, 1, 1, 2, 
-	                  GTK_SHRINK, GTK_SHRINK, BORDER, 0);
-	                  
+	                            _("Specify own commands") );
+	        
+	gboolean set_active = 
+	    ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 || 
+	    strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ? 
+	            TRUE : FALSE;
+	                                
+	gtk_widget_show (md->specify_commands);
+	gtk_container_add (GTK_CONTAINER (_eventbox), md->specify_commands );
+
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
+	    _("WARNING: These options are for experts only! If you do not know "
+	    "what they may be good for, keep your hands off!"), 
+	    NULL );
+	    
+	_eventbox = gtk_event_box_new ();
+	gtk_widget_show (_eventbox);
+	gtk_box_pack_start (GTK_BOX (_innervbox), GTK_WIDGET (_eventbox), FALSE,
+	                FALSE, 0);
+
+	md->box_mount_commands = gtk_table_new (2, 2, FALSE);
+	gtk_widget_show (md->box_mount_commands);
+	gtk_container_add (GTK_CONTAINER (_eventbox), md->box_mount_commands);
+
+	_label = gtk_label_new (_("Mount command:"));
+	gtk_misc_set_alignment (GTK_MISC(_label), 0.0, 0.5);
+	gtk_widget_show (_label);
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands), _label, 0, 1, 0, 1, 
+	                GTK_FILL, GTK_SHRINK, 0, 0);
+
+	                
+	_label = gtk_label_new (_("Unmount command:"));
+	gtk_misc_set_alignment (GTK_MISC(_label), 0.0, 0.5);
+	gtk_widget_show (_label);
+	gtk_table_attach (GTK_TABLE(md->box_mount_commands), _label, 0, 1, 1, 2, 
+	                GTK_FILL, GTK_SHRINK, 0, 0);
+	                
 	md->string_mount_command = gtk_entry_new ();
 	gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ), 
-	                    g_strdup(mt->mount_command ));
+	                g_strdup(mt->mount_command ));
 	gtk_widget_show (md->string_mount_command );
 	gtk_table_attach (GTK_TABLE(md->box_mount_commands),
-	                  md->string_mount_command , 1, 2,
-	                  0, 1, GTK_SHRINK, GTK_SHRINK, 0, 0);
-	
+	                md->string_mount_command , 1, 2,
+	                0, 1, GTK_EXPAND|GTK_FILL, GTK_SHRINK, BORDER, 0);
+
 	md->string_umount_command = gtk_entry_new ();
 	gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ), 
-	                    g_strdup(mt->umount_command ));
+	                g_strdup(mt->umount_command ));
 	gtk_widget_show (md->string_umount_command );
 	gtk_table_attach (GTK_TABLE(md->box_mount_commands), 
-	                  md->string_umount_command , 1, 2,
-	                  1, 2, GTK_SHRINK, GTK_SHRINK, 0, 0);
-	
-	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
-        _("Most users will only want to prepend \"sudo\" to both "
-          "commands or prepend \"sync &&\" to the \"unmount\" command."), 
-        NULL );
-	
+	                md->string_umount_command , 1, 2,
+	                1, 2, GTK_EXPAND|GTK_FILL, GTK_SHRINK, BORDER, 0);
+
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
+	    _("Most users will only want to prepend \"sudo\" to both "
+	    "commands or prepend \"sync &&\" to the \"unmount\" command."), 
+	    NULL );
+
 	/* g_signal_connect_swapped (md->string_cmd, "focus-out-event",
-			G_CALLBACK(entry_lost_focus), md); */
-			
+		G_CALLBACK(entry_lost_focus), md); */
+		
 	g_signal_connect ( G_OBJECT(md->specify_commands), "toggled",
-			G_CALLBACK(specify_command_toggled), md);
-			
+		G_CALLBACK(specify_command_toggled), md);
+		
 	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->specify_commands),
-                                  set_active);
-    if (!set_active) /* following command wasn't executed by signal handler! */
-        gtk_widget_set_sensitive ( md->box_mount_commands, FALSE );
-        
-    // show message dialog stuff
-    eventbox = gtk_event_box_new ();
-	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE,
-	                    0);
-    md->show_message_dialog = gtk_check_button_new_with_label ( 
-	                               _("Show message after unmount") );
-	gtk_widget_show (md->show_message_dialog);
-    gtk_container_add (GTK_CONTAINER (eventbox), md->show_message_dialog );
+	                            set_active);
+	if (!set_active) /* following command wasn't executed by signal handler! */
+	    gtk_widget_set_sensitive ( md->box_mount_commands, FALSE );
+	    
+	    
+	/* show message-dialog stuff */
+	_label = gtk_label_new("");
+	gtk_label_set_markup (GTK_LABEL(_label), _("<b>General</b>"));
+	gtk_widget_show(_label);
 
-    gtk_widget_show (md->show_message_dialog);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
-        _("This is only useful and recommended if you specify \"sync\" as part "
-        "of the \"unmount\" command string."), 
-        NULL );
-        
-    DBG ("message dialog checkbox to be activated? %d", mt->message_dialog);
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_message_dialog),
-                                  mt->message_dialog);
-      
-    // show include_NFSs
-    eventbox = gtk_event_box_new ();
-	gtk_widget_show (eventbox);
-	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (eventbox), FALSE, FALSE,
-	                    0);
-    md->show_include_NFSs = gtk_check_button_new_with_label ( 
-	                               _("Also display network file systems") );
-	gtk_widget_show (md->show_message_dialog);
-    gtk_container_add (GTK_CONTAINER (eventbox), md->show_include_NFSs );
+	_frame = gtk_frame_new (_("General"));
+	gtk_frame_set_label_widget (GTK_FRAME(_frame), _label);
+	gtk_frame_set_shadow_type  (GTK_FRAME(_frame), GTK_SHADOW_NONE);
+	gtk_widget_show(_frame);
+	gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET (_frame), 
+	                    FALSE, FALSE, BORDER);
 
-    gtk_widget_show (md->show_include_NFSs);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), eventbox, 
-        _("Activate this option to also display network file systems like "
-          "NFS, SMBFS, SHFS and SSHFS."), 
-        NULL );  
-      
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_include_NFSs),
-                                  mt->include_NFSs);   
-    
-				
+	_vbox2 = gtk_vbox_new (FALSE, 0);
+	gtk_widget_show (_vbox2);
+	gtk_container_set_border_width (GTK_CONTAINER (_vbox2), BORDER<<1);
+	gtk_container_add (GTK_CONTAINER(_frame), GTK_WIDGET(_vbox2));
+
+	_eventbox = gtk_event_box_new ();
+	gtk_widget_show (_eventbox);
+	gtk_box_pack_start(GTK_BOX(_vbox2), GTK_WIDGET(_eventbox), FALSE, FALSE, 0);
+
+	md->show_message_dialog = gtk_check_button_new_with_label ( 
+	                            _("Show message after unmount") );
+	gtk_widget_show (md->show_message_dialog);
+	gtk_container_add (GTK_CONTAINER (_eventbox), md->show_message_dialog );
+
+	gtk_widget_show (md->show_message_dialog);
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
+	    _("This is only useful and recommended if you specify \"sync\" as part "
+	    "of the \"unmount\" command string."), 
+	    NULL );
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_message_dialog),
+	                            mt->message_dialog);
+
+	/* show include_NFSs */
+	_eventbox = gtk_event_box_new ();
+	gtk_widget_show (_eventbox);
+	gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET (_eventbox), 
+	                    FALSE, FALSE, 0);
+	md->show_include_NFSs = gtk_check_button_new_with_label ( 
+	                            _("Also display network file systems") );
+	gtk_widget_show (md->show_message_dialog);
+	gtk_container_add (GTK_CONTAINER (_eventbox), md->show_include_NFSs );
+
+	gtk_widget_show (md->show_include_NFSs);
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
+	    _("Activate this option to also display network file systems like "
+	    "NFS, SMBFS, SHFS and SSHFS."), 
+	    NULL );  
+
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_include_NFSs),
+	                            mt->include_NFSs);   
+
+	/* Icon */
+	_eventbox = gtk_event_box_new ();
+	gtk_widget_show (_eventbox);
+	gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox, 
+	    _("You can specify a distinct icon to be displayed in the panel."), 
+	    NULL );
+	
+	_hbox = gtk_hbox_new (FALSE, 0);
+	gtk_widget_show (_hbox);
+	gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET (_hbox), FALSE, FALSE, 0);
+	                    
+	_label = gtk_label_new (_("Icon:"));
+	gtk_widget_show (_label);
+	gtk_box_pack_start (GTK_BOX (_hbox), _label, FALSE, FALSE, 0);
+
+	md->string_icon = gtk_file_chooser_button_new (_("Select an image"), 
+	                               GTK_FILE_CHOOSER_ACTION_OPEN);
+	gtk_file_chooser_set_filename (GTK_FILE_CHOOSER(md->string_icon),
+                                   mt->icon);
+	gtk_widget_show (md->string_icon);
+	gtk_container_add (GTK_CONTAINER (_eventbox), GTK_WIDGET(md->string_icon) );
+	gtk_box_pack_start (GTK_BOX(_hbox), _eventbox, TRUE, TRUE, BORDER);
+	
 	g_signal_connect (dlg, "response",
-            G_CALLBACK(on_optionsDialog_response), md);
-	
+	                  G_CALLBACK(on_optionsDialog_response), md);
+
 	gtk_widget_show (dlg);
-	
+
 	TRACE ("enters mounter_create_options");
 }
 /*----------------------------------------------------*/
@@ -743,6 +840,10 @@ mount_construct (XfcePanelPlugin *plugin)
     mounter = create_mounter_control (plugin);
 
     mounter_read_config (plugin, mounter);
+    
+    mounter->button_pb = gdk_pixbuf_new_from_file (mounter->icon, NULL);
+   	xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mounter->button), 
+   	                            mounter->button_pb);
     
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
     

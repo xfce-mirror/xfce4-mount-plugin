@@ -27,15 +27,17 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <config.h>
 #endif
 
-/* 
+/*
 #define DEBUG 1
-#define DEBUG_TRACE 1 
+#define DEBUG_TRACE 1
 */
 
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/libxfcegui4.h>
+
+#include <string.h>
 
 #include "devices.h"
 #include "icons.h"
@@ -47,20 +49,24 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #define DEFAULT_MOUNT_COMMAND "mount"
 #define DEFAULT_UMOUNT_COMMAND "umount"
 
+#define DEFAULT_ICON PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg"
+
 static GtkTooltips *tooltips = NULL;
 
 /*--------- graphical interface ----------*/
 typedef struct 
 {
-   XfcePanelPlugin *plugin;
-	char *on_mount_cmd;
-	gchar *mount_command;
-	gchar *umount_command;
-	gboolean message_dialog; /* whether to show (un)success after umount */
-	gboolean include_NFSs; /* whether to also display network file systems */
-	GtkWidget * button;
-	GtkWidget * menu;
-	GPtrArray * pdisks; /* contains pointers to struct t_disk */
+    XfcePanelPlugin *plugin;
+    char  *on_mount_cmd;
+    gchar *mount_command;
+    gchar *umount_command;
+    gchar *icon;
+    gboolean message_dialog; /* whether to show (un)success after umount */
+    gboolean include_NFSs; /* whether to also display network file systems */
+    GtkWidget *button;
+    GdkPixbuf *button_pb;
+    GtkWidget *menu;
+    GPtrArray *pdisks; /* contains pointers to struct t_disk */
 } t_mounter;
 /*---------------------------------*/
 
@@ -82,6 +88,7 @@ typedef struct
 	GtkWidget *dialog;
 	/* options */
 	GtkWidget *string_cmd;
+	GtkWidget *string_icon;
 	GtkWidget *specify_commands;
 	GtkWidget *box_mount_commands;
 	GtkWidget *string_mount_command;
