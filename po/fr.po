@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-02 20:32+0900\n"
+"POT-Creation-Date: 2006-07-07 21:01+0200\n"
 "PO-Revision-Date: 2006-03-02 16:08+0100\n"
 "Last-Translator: Stephane Roy <sroy@j2n.net>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -18,108 +18,115 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:52
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f o"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:53
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f Ko"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f Mo"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f Go"
 
-#: ../panel-plugin/devices.c:67
+#: ../panel-plugin/devices.c:65
 #, c-format
 msgid "size : %g\n"
 msgstr "espace : %g\n"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:66
 #, c-format
 msgid "used size : %g\n"
 msgstr "espace utilisé : %g\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "available size : %g\n"
 msgstr "espace libre : %g\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "percentage used: %d\n"
 msgstr "pourcentage utilisé : %d\n"
 
-#: ../panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "file system type : %s\n"
 msgstr "type du système de fichier : %s\n"
 
-#: ../panel-plugin/devices.c:72
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr "point de montage actuel : %s\n"
 
-#: ../panel-plugin/devices.c:159
+#: ../panel-plugin/devices.c:157
 #, c-format
 msgid "disk : %s\n"
 msgstr "disque : %s\n"
 
-#: ../panel-plugin/devices.c:160
+#: ../panel-plugin/devices.c:158
 #, c-format
 msgid "mount point : %s\n"
 msgstr "point de montage : %s\n"
 
-#: ../panel-plugin/devices.c:164
+#: ../panel-plugin/devices.c:162
 #, c-format
 msgid "not mounted\n"
 msgstr "non monté\n"
 
-#: ../panel-plugin/devices.c:227 ../panel-plugin/devices.c:274
+#: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
 msgid "Mount Plugin: Error executing command."
 msgstr "Greffon de montage : erreur en exécutant la commande."
 
-#: ../panel-plugin/mount-plugin.c:51
+#: ../panel-plugin/mount-plugin.c:50
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Le périphérique \"%s\" peut maintenant être supprimé de manière sûre."
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:53
 msgid "An error occured. The device should not be removed!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:176
+#: ../panel-plugin/mount-plugin.c:177
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#000000\" size=\"%s\">non monté</span>"
 
-#. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
-#: ../panel-plugin/mount-plugin.c:417
+#: ../panel-plugin/mount-plugin.c:440
 msgid "devices"
 msgstr "périphériques"
 
-#: ../panel-plugin/mount-plugin.c:537
+#: ../panel-plugin/mount-plugin.c:575
 msgid "Edit Properties"
 msgstr "Éditer les propriétés"
 
 #. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:544
+#: ../panel-plugin/mount-plugin.c:582
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "Monter les périphériques"
 
-#: ../panel-plugin/mount-plugin.c:578
+#: ../panel-plugin/mount-plugin.c:615
+msgid "Commands"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:629
+msgid "<b>Commands</b>"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
 msgstr "Exécuter avec le montage :"
 
-#: ../panel-plugin/mount-plugin.c:585
+#: ../panel-plugin/mount-plugin.c:648
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
@@ -130,11 +137,11 @@ msgstr ""
 "Si vous n'êtes pas sûr de ce qu'il faut mettre, essayez d'utiliser \"xffm\" "
 "ou \"rox\" ou \"thunar\"."
 
-#: ../panel-plugin/mount-plugin.c:611
+#: ../panel-plugin/mount-plugin.c:674
 msgid "Specify own commands"
 msgstr "Préciser vos propres commandes"
 
-#: ../panel-plugin/mount-plugin.c:622
+#: ../panel-plugin/mount-plugin.c:685
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -142,19 +149,15 @@ msgstr ""
 "ATTENTION : ces options sont réservés aux experts ! Si vous ne savez pas à "
 "quoi elle peuvent bien servir, laissez vos mains ailleurs !"
 
-#. FIXME: labels are centered.
-#. gtk_label_set_justify does not work,
-#. adding alignment containers does not do s, either.
-#. so it must be something with the table: GTK_FILL doesn't do it.
-#: ../panel-plugin/mount-plugin.c:639
+#: ../panel-plugin/mount-plugin.c:698
 msgid "Mount command:"
 msgstr "Commande de montage :"
 
-#: ../panel-plugin/mount-plugin.c:646
+#: ../panel-plugin/mount-plugin.c:705
 msgid "Unmount command:"
 msgstr "Commande de démontage :"
 
-#: ../panel-plugin/mount-plugin.c:669
+#: ../panel-plugin/mount-plugin.c:728
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
@@ -162,11 +165,19 @@ msgstr ""
 "La plupart des utilisateurs veulent seulement faire précéder les commandes "
 "par \"sudo\" ou la commande \"unmount\" par \"sync\"."
 
-#: ../panel-plugin/mount-plugin.c:690
+#: ../panel-plugin/mount-plugin.c:746
+msgid "<b>General</b>"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:749
+msgid "General"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
 msgstr "Monter un message après le démontage"
 
-#: ../panel-plugin/mount-plugin.c:696
+#: ../panel-plugin/mount-plugin.c:772
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -174,14 +185,26 @@ msgstr ""
 "Ceci est utile et recommandé uniquement si vous spécifiez \"sync\" dans la "
 "ligne de commande de \"unmount\"."
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:785
 msgid "Also display network file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:716
+#: ../panel-plugin/mount-plugin.c:791
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:802
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:809
+msgid "Icon:"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:813
+msgid "Select an image"
 msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2

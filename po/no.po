@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-02 17:41+0200\n"
+"POT-Creation-Date: 2006-07-07 21:01+0200\n"
 "PO-Revision-Date: 2006-06-22 00:00+0200\n"
 "Last-Translator: Jon Kristian Nilsen <jonn3@broadpark.no>\n"
 "Language-Team: NORWEGIAN <no@li.org>\n"
@@ -86,47 +86,46 @@ msgstr "ikke montert\n"
 msgid "Mount Plugin: Error executing command."
 msgstr "Mount Plugin: Feil ved utføring av kommando."
 
-#: ../panel-plugin/mount-plugin.c:51
+#: ../panel-plugin/mount-plugin.c:50
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Enheten \"%s\" kan trygt fjernes."
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:53
 msgid "An error occured. The device should not be removed!"
 msgstr "En feil oppstod. Enheten må ikke fjernes!"
 
-#: ../panel-plugin/mount-plugin.c:176
+#: ../panel-plugin/mount-plugin.c:177
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ikke montert</span>"
 
-#. add_tooltip (GTK_WIDGET(mounter->button), _("devices"));
-#: ../panel-plugin/mount-plugin.c:439
+#: ../panel-plugin/mount-plugin.c:440
 msgid "devices"
 msgstr "enheter"
 
-#: ../panel-plugin/mount-plugin.c:569
+#: ../panel-plugin/mount-plugin.c:575
 msgid "Edit Properties"
 msgstr "Editer Oppsett"
 
 #. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:576
+#: ../panel-plugin/mount-plugin.c:582
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "Monteringsenheter"
 
-#: ../panel-plugin/mount-plugin.c:606
+#: ../panel-plugin/mount-plugin.c:615
 msgid "Commands"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:619
+#: ../panel-plugin/mount-plugin.c:629
 msgid "<b>Commands</b>"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:631
+#: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
 msgstr "Kjør etter montering:"
 
-#: ../panel-plugin/mount-plugin.c:638
+#: ../panel-plugin/mount-plugin.c:648
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
@@ -136,11 +135,11 @@ msgstr ""
 "Hvis du er usikker på hva du vil sette inn, prøv \"xffm\" , \"rox\" eller "
 "\"thunar\"."
 
-#: ../panel-plugin/mount-plugin.c:664
+#: ../panel-plugin/mount-plugin.c:674
 msgid "Specify own commands"
 msgstr "Angi egne kommandoer"
 
-#: ../panel-plugin/mount-plugin.c:675
+#: ../panel-plugin/mount-plugin.c:685
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -148,19 +147,15 @@ msgstr ""
 "ADVARSEL: Disse valgene er kun for eksperter! Hvis du ikke vet hva de "
 "innebærer så kan det være lurt å finne ut av det før du prøver."
 
-#. FIXME: labels are centered.
-#. gtk_label_set_justify does not work,
-#. adding alignment containers does not do s, either.
-#. so it must be something with the table: GTK_FILL doesn't do it.
-#: ../panel-plugin/mount-plugin.c:692
+#: ../panel-plugin/mount-plugin.c:698
 msgid "Mount command:"
 msgstr "Monteringskommando:"
 
-#: ../panel-plugin/mount-plugin.c:699
+#: ../panel-plugin/mount-plugin.c:705
 msgid "Unmount command:"
 msgstr "Avmonteringskommando:"
 
-#: ../panel-plugin/mount-plugin.c:722
+#: ../panel-plugin/mount-plugin.c:728
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
@@ -168,19 +163,19 @@ msgstr ""
 "De fleste brukere har mulighet til å kjøre \"sudo\" foran begge kommandoer, "
 "eller \"sync &&\" foran \"avmonteringskommandoen\"."
 
-#: ../panel-plugin/mount-plugin.c:740
+#: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:743
+#: ../panel-plugin/mount-plugin.c:749
 msgid "General"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:759
+#: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
 msgstr "Vis melding etter avmontering"
 
-#: ../panel-plugin/mount-plugin.c:765
+#: ../panel-plugin/mount-plugin.c:772
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -188,11 +183,11 @@ msgstr ""
 "Dette valget er kun å anbefale hvis du har angitt \"sync\" som en del av "
 "\"avmonteringskommandoen\"."
 
-#: ../panel-plugin/mount-plugin.c:778
+#: ../panel-plugin/mount-plugin.c:785
 msgid "Also display network file systems"
 msgstr "Vis også filsystemer i nettverket"
 
-#: ../panel-plugin/mount-plugin.c:784
+#: ../panel-plugin/mount-plugin.c:791
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -200,15 +195,15 @@ msgstr ""
 "Aktiver dette valget for også å vise filsystem som ligger i nettverket, f."
 "eks. NFS, SMBFS, SHFS og SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:802
+#: ../panel-plugin/mount-plugin.c:809
 msgid "Icon:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:806
+#: ../panel-plugin/mount-plugin.c:813
 msgid "Select an image"
 msgstr ""
 
