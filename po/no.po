@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-07-07 21:01+0200\n"
-"PO-Revision-Date: 2006-06-22 00:00+0200\n"
+"PO-Revision-Date: 2006-08-07 00:00+0200\n"
 "Last-Translator: Jon Kristian Nilsen <jonn3@broadpark.no>\n"
 "Language-Team: NORWEGIAN <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,17 +40,17 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:65
 #, c-format
 msgid "size : %g\n"
-msgstr "størrelse: %g\n"
+msgstr "størrelse : %g\n"
 
 #: ../panel-plugin/devices.c:66
 #, c-format
 msgid "used size : %g\n"
-msgstr "benyttet plass: %g\n"
+msgstr "benyttet plass : %g\n"
 
 #: ../panel-plugin/devices.c:67
 #, c-format
 msgid "available size : %g\n"
-msgstr "tilgjengelig plass: %g\n"
+msgstr "tilgjengelig plass : %g\n"
 
 #: ../panel-plugin/devices.c:68
 #, c-format
@@ -60,12 +60,12 @@ msgstr "prosentvis benyttet: %d\n"
 #: ../panel-plugin/devices.c:69
 #, c-format
 msgid "file system type : %s\n"
-msgstr "filsystem type: %s\n"
+msgstr "filsystem type : %s\n"
 
 #: ../panel-plugin/devices.c:70
 #, c-format
 msgid "actual mount point : %s\n"
-msgstr "virkelig monteringspunkt: %s\n"
+msgstr "virkelig monteringspunkt : %s\n"
 
 #: ../panel-plugin/devices.c:157
 #, c-format
@@ -75,7 +75,7 @@ msgstr "disk : %s\n"
 #: ../panel-plugin/devices.c:158
 #, c-format
 msgid "mount point : %s\n"
-msgstr "monteringspunkt: %s\n"
+msgstr "monteringspunkt : %s\n"
 
 #: ../panel-plugin/devices.c:162
 #, c-format
@@ -115,11 +115,11 @@ msgstr "Monteringsenheter"
 
 #: ../panel-plugin/mount-plugin.c:615
 msgid "Commands"
-msgstr ""
+msgstr "Kommandoer"
 
 #: ../panel-plugin/mount-plugin.c:629
 msgid "<b>Commands</b>"
-msgstr ""
+msgstr "<b>Kommandoer</b>"
 
 #: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
@@ -165,11 +165,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>Generellt</b>"
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "General"
-msgstr ""
+msgstr "Generellt"
 
 #: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
@@ -181,7 +181,7 @@ msgid ""
 "\"unmount\" command string."
 msgstr ""
 "Dette valget er kun å anbefale hvis du har angitt \"sync\" som en del av "
-"\"avmonteringskommandoen\"."
+"\"unmount\" Kommandoen."
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Also display network file systems"
@@ -197,15 +197,15 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
+msgstr "Du kan angi et eget ikon for framvisning i panelet."
 
 #: ../panel-plugin/mount-plugin.c:809
 msgid "Icon:"
-msgstr ""
+msgstr "Ikon:"
 
 #: ../panel-plugin/mount-plugin.c:813
 msgid "Select an image"
-msgstr ""
+msgstr "Velg et bilde"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
