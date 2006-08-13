@@ -72,16 +72,16 @@ DATA = $(desktop_DATA) $(noinst_DATA)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run aclocal-1.9
-ALL_LINGUAS = ca de el eu fr hu ja ko lt no pl ru uk vi
+ACLOCAL = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run aclocal-1.9
+ALL_LINGUAS = ca de el eu fr hu ja ko lt no pl ru uk vi zh_TW
 AMDEP_FALSE = #
 AMDEP_TRUE = 
-AMTAR = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run tar
-AUTOCONF = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run automake-1.9
-AWK = gawk
-CATALOGS =  ca.gmo de.gmo el.gmo eu.gmo fr.gmo hu.gmo ja.gmo ko.gmo lt.gmo no.gmo pl.gmo ru.gmo uk.gmo vi.gmo
+AMTAR = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run tar
+AUTOCONF = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run automake-1.9
+AWK = mawk
+CATALOGS =  ca.gmo de.gmo el.gmo eu.gmo fr.gmo hu.gmo ja.gmo ko.gmo lt.gmo no.gmo pl.gmo ru.gmo uk.gmo vi.gmo zh_TW.gmo
 CATOBJEXT = .gmo
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -98,7 +98,7 @@ ECHO_T =
 EGREP = /bin/grep -E
 EXEEXT = 
 GETTEXT_PACKAGE = xfce4-mount-plugin
-GMOFILES =  ca.gmo de.gmo el.gmo eu.gmo fr.gmo hu.gmo ja.gmo ko.gmo lt.gmo no.gmo pl.gmo ru.gmo uk.gmo vi.gmo
+GMOFILES =  ca.gmo de.gmo el.gmo eu.gmo fr.gmo hu.gmo ja.gmo ko.gmo lt.gmo no.gmo pl.gmo ru.gmo uk.gmo vi.gmo zh_TW.gmo
 GMSGFMT = /usr/bin/msgfmt
 GREP = /bin/grep
 INSTALL_DATA = ${INSTALL} -m 644
@@ -136,15 +136,15 @@ INTLTOOL_XML_RULE = %.xml:       %.xml.in       $(INTLTOOL_MERGE) $(wildcard $(t
 LDFLAGS = 
 LIBOBJS = 
 LIBS =  
-LIBXFCE4PANEL_CFLAGS = -DXTHREADS -I/usr/local/include/xfce4/ -I/usr/X11R6/include -I/usr/local/include/xfce4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/atk-1.0  
-LIBXFCE4PANEL_LIBS = -L/usr/local/lib -L/usr/X11R6/lib -lxfce4panel -lxfcegui4 -lgtk-x11-2.0 -lxfce4util -lgdk-x11-2.0 -lXrandr -lXi -lXinerama -lXext -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXcursor -lpango-1.0 -lcairo -lXrender -lX11 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
+LIBXFCE4PANEL_CFLAGS = -DXTHREADS -I/usr/local/include/xfce4/ -I/usr/local/include/xfce4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/cairo -I/usr/include/atk-1.0  
+LIBXFCE4PANEL_LIBS = -L/usr/local/lib -L/usr/X11R6/lib -lxfce4panel -lxfcegui4 -lgtk-x11-2.0 -lxfce4util -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lX11 -lXinerama -lXi -lXrandr -lXcursor -lXfixes -lpango-1.0 -lcairo -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
 LIBXFCE4PANEL_REQUIRED_VERSION = 4.3.20
 LIBXFCE4PANEL_VERSION = 4.3.90.2
 LTLIBOBJS = 
 MAINT = 
 MAINTAINER_MODE_FALSE = #
 MAINTAINER_MODE_TRUE = 
-MAKEINFO = ${SHELL} /home/tim/xfce4-mount-plugin/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/missing --run makeinfo
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
 NO_PREFIX_PACKAGE_DATA_DIR = share
@@ -159,7 +159,7 @@ PACKAGE_TARNAME = xfce4-mount-plugin
 PACKAGE_VERSION = 0.4.7
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
-POFILES =  ca.po de.po el.po eu.po fr.po hu.po ja.po ko.po lt.po no.po pl.po ru.po uk.po vi.po
+POFILES =  ca.po de.po el.po eu.po fr.po hu.po ja.po ko.po lt.po no.po pl.po ru.po uk.po vi.po zh_TW.po
 POSUB = po
 PO_IN_DATADIR_FALSE = 
 PO_IN_DATADIR_TRUE = 
@@ -190,7 +190,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = /home/tim/xfce4-mount-plugin/install-sh
+install_sh = /home/tim/tmp/xfce-4.3/mount-plugin.foo-projects/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -215,11 +215,11 @@ xfce4_mount_plugin_SOURCES = \
 
 xfce4_mount_plugin_CFLAGS = \
 	     -DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
-	     -DXTHREADS -I/usr/local/include/xfce4/ -I/usr/X11R6/include -I/usr/local/include/xfce4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/atk-1.0  
+	     -DXTHREADS -I/usr/local/include/xfce4/ -I/usr/local/include/xfce4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/cairo -I/usr/include/atk-1.0  
 
 xfce4_mount_plugin_LDFLAGS = \
                                            			\
-	     -L/usr/local/lib -L/usr/X11R6/lib -lxfce4panel -lxfcegui4 -lgtk-x11-2.0 -lxfce4util -lgdk-x11-2.0 -lXrandr -lXi -lXinerama -lXext -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXcursor -lpango-1.0 -lcairo -lXrender -lX11 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
+	     -L/usr/local/lib -L/usr/X11R6/lib -lxfce4panel -lxfcegui4 -lgtk-x11-2.0 -lxfce4util -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lX11 -lXinerama -lXi -lXrandr -lXcursor -lXfixes -lpango-1.0 -lcairo -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0  
 
 
 # .desktop file

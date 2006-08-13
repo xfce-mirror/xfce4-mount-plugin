@@ -83,8 +83,7 @@ msgstr "point de montage : %s\n"
 msgid "not mounted\n"
 msgstr "non monté\n"
 
-#: ../panel-plugin/devices.c:225
-#: ../panel-plugin/devices.c:272
+#: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
 msgid "Mount Plugin: Error executing command."
 msgstr "Greffon de montage : erreur en exécutant la commande."
 
@@ -95,7 +94,8 @@ msgstr "Le périphérique \"%s\" peut maintenant être supprimé de manière sû
 
 #: ../panel-plugin/mount-plugin.c:53
 msgid "An error occured. The device should not be removed!"
-msgstr "Une erreur s'est produite. Le périphérique ne devrait pas être déconnecté!"
+msgstr ""
+"Une erreur s'est produite. Le périphérique ne devrait pas être déconnecté!"
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -129,19 +129,26 @@ msgstr "Exécuter avec le montage :"
 
 #: ../panel-plugin/mount-plugin.c:648
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
 "If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
 msgstr ""
-"Cette commande sera exécutée après avoir monté le périphérique avec le point de montage du périphérique en argument.\n"
-"Si vous n'êtes pas sûr de ce qu'il faut mettre, essayez d'utiliser \"xffm\" ou \"rox\" ou \"thunar\"."
+"Cette commande sera exécutée après avoir monté le périphérique avec le point "
+"de montage du périphérique en argument.\n"
+"Si vous n'êtes pas sûr de ce qu'il faut mettre, essayez d'utiliser \"xffm\" "
+"ou \"rox\" ou \"thunar\"."
 
 #: ../panel-plugin/mount-plugin.c:674
 msgid "Specify own commands"
 msgstr "Préciser vos propres commandes"
 
 #: ../panel-plugin/mount-plugin.c:685
-msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "ATTENTION : ces options sont réservés aux experts ! Si vous ne savez pas à quoi elle peuvent bien servir, laissez vos mains ailleurs !"
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"ATTENTION : ces options sont réservés aux experts ! Si vous ne savez pas à "
+"quoi elle peuvent bien servir, laissez vos mains ailleurs !"
 
 #: ../panel-plugin/mount-plugin.c:698
 msgid "Mount command:"
@@ -152,8 +159,12 @@ msgid "Unmount command:"
 msgstr "Commande de démontage :"
 
 #: ../panel-plugin/mount-plugin.c:728
-msgid "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync &&\" to the \"unmount\" command."
-msgstr "La plupart des utilisateurs veulent seulement faire précéder les commandes par \"sudo\" ou la commande \"unmount\" par \"sync\"."
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync &&\" to the \"unmount\" command."
+msgstr ""
+"La plupart des utilisateurs veulent seulement faire précéder les commandes "
+"par \"sudo\" ou la commande \"unmount\" par \"sync\"."
 
 #: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
@@ -168,16 +179,24 @@ msgid "Show message after unmount"
 msgstr "Monter un message après le démontage"
 
 #: ../panel-plugin/mount-plugin.c:772
-msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Ceci est utile et recommandé uniquement si vous spécifiez \"sync\" dans la ligne de commande de \"unmount\"."
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Ceci est utile et recommandé uniquement si vous spécifiez \"sync\" dans la "
+"ligne de commande de \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Also display network file systems"
 msgstr "Afficher aussi les systèmes de fichiers réseau"
 
 #: ../panel-plugin/mount-plugin.c:791
-msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "Activer cette option pour afficher aussi les systèmes de fichiers réseau comme NFS, SMBFS, SHFS et SSHFS."
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Activer cette option pour afficher aussi les systèmes de fichiers réseau "
+"comme NFS, SMBFS, SHFS et SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -193,8 +212,9 @@ msgstr "Choisir une image"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Montrer tous les périphériques qui peuvent être montés et les (dé)monter à la demande. "
+msgstr ""
+"Montrer tous les périphériques qui peuvent être montés et les (dé)monter à "
+"la demande. "
 
 #~ msgid "Mount Plugin"
 #~ msgstr "Greffon de montage"
-
