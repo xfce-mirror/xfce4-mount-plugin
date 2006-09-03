@@ -115,11 +115,11 @@ msgstr "Zamontuj urządzenia"
 
 #: ../panel-plugin/mount-plugin.c:615
 msgid "Commands"
-msgstr ""
+msgstr "Polecenia"
 
 #: ../panel-plugin/mount-plugin.c:629
 msgid "<b>Commands</b>"
-msgstr ""
+msgstr "<b>Polecenia</b>"
 
 #: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
@@ -163,11 +163,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>Ogólne</b>"
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "General"
-msgstr ""
+msgstr "Ogólne"
 
 #: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
@@ -191,15 +191,15 @@ msgstr "Opcja ta umożliwia wyświetlanie zasobów NFS, SMBFS, SSHFS i innych."
 
 #: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
+msgstr "Możesz określić ikonę do wyświetlania w panelu"
 
 #: ../panel-plugin/mount-plugin.c:809
 msgid "Icon:"
-msgstr ""
+msgstr "Ikona:"
 
 #: ../panel-plugin/mount-plugin.c:813
 msgid "Select an image"
-msgstr ""
+msgstr "Wybierz grafikę"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
