@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-10 21:29+0200\n"
-"PO-Revision-Date: 2006-04-17 21:07+0100\n"
+"PO-Revision-Date: 2006-09-20 13:32+0200\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: catalan\n"
 "MIME-Version: 1.0\n"
@@ -86,9 +86,8 @@ msgid "not mounted\n"
 msgstr "no muntat\n"
 
 #: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
-#, fuzzy
 msgid "Mount Plugin: Error executing command."
-msgstr "Connector per muntar: Error al executar l'ordre."
+msgstr "Connector per muntar: s’ha produït un error en executar l'ordre."
 
 #: ../panel-plugin/mount-plugin.c:50
 #, c-format
@@ -119,11 +118,11 @@ msgstr "Dispositius muntables"
 
 #: ../panel-plugin/mount-plugin.c:615
 msgid "Commands"
-msgstr ""
+msgstr "Ordres"
 
 #: ../panel-plugin/mount-plugin.c:629
 msgid "<b>Commands</b>"
-msgstr ""
+msgstr "<b>Ordres</b>"
 
 #: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
@@ -161,21 +160,18 @@ msgstr "Ordre per desmuntar:"
 
 # Traduit "unmount" per «umount», s'hauria de comprovar.
 #: ../panel-plugin/mount-plugin.c:728
-#, fuzzy
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
-msgstr ""
-"Molts usuaris només voldran afegir-li al inici «sudo» a amb dos ordres o "
-"«sync &&» a l'ordre «umount»."
+msgstr "Molts usuaris només voldran afegir-li al inici «sudo» a ambdós ordres o «sync &&» a l'ordre «umount»."
 
 #: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>General</b>"
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
@@ -183,7 +179,6 @@ msgstr "Mostra els missatges després de desmuntar"
 
 # Traduit "unmount" per «umount», s'hauria de comprovar.
 #: ../panel-plugin/mount-plugin.c:772
-#, fuzzy
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -192,9 +187,8 @@ msgstr ""
 "l'ordre «umount»."
 
 #: ../panel-plugin/mount-plugin.c:785
-#, fuzzy
 msgid "Also display network file systems"
-msgstr "Mostra també el sistema de fitxers de xarxa."
+msgstr "Mostra també els sistemes de fitxers de xarxa."
 
 #: ../panel-plugin/mount-plugin.c:791
 msgid ""
@@ -205,17 +199,16 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
+msgstr "Podeu especificar la icona a mostar al quadre."
 
 #: ../panel-plugin/mount-plugin.c:809
 msgid "Icon:"
-msgstr ""
+msgstr "Icona:"
 
 #: ../panel-plugin/mount-plugin.c:813
 msgid "Select an image"
-msgstr ""
+msgstr "Seleccioneu una imatge"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
-#, fuzzy
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Mostra tots els dispositius muntables i (des)muntals a petició."
