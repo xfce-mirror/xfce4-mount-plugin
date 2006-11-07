@@ -143,7 +143,7 @@ msgstr "나만의 명령어"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""경고: 이 옵션은 고급사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 "
+msgstr "경고: 이 옵션은 고급사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 "
 "만지지 마십시오."
 
 #: ../panel-plugin/mount-plugin.c:698
@@ -158,7 +158,7 @@ msgstr "언마운트 명령:"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync &&\" to the \"unmount\" command."
-msgstr ""대부분 사용자들은 명령어에 \"sudo\"를 덧붙이거나 "
+msgstr "대부분 사용자들은 명령어에 \"sudo\"를 덧붙이거나 "
 "\"unmount\" 명령에 \"sync &&\"를 덧붙여 사용하기를 원합니다."
 
 #: ../panel-plugin/mount-plugin.c:746
@@ -177,7 +177,7 @@ msgstr "언마운트하고 나서 메시지 보이기"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 "
+msgstr "\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 "
 "추천하고자 합니다."
 
 #: ../panel-plugin/mount-plugin.c:785
@@ -188,7 +188,7 @@ msgstr "네트워크 화일 시스템 보이기"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 화일 시스템을 "
+msgstr "이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 화일 시스템을 "
 "보여주기 위한 것입니다."
 
 #: ../panel-plugin/mount-plugin.c:802
