@@ -80,7 +80,7 @@ msgstr "마운트 위치 : %s\n"
 #: ../panel-plugin/devices.c:162
 #, c-format
 msgid "not mounted\n"
-msgstr "마운트되지 않았습니다."
+msgstr "마운트되지 않았습니다\n"
 
 #: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
 msgid "Mount Plugin: Error executing command."
