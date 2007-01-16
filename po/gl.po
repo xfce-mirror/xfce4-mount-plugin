@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.01\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-10 21:29+0200\n"
+"POT-Creation-Date: 2007-01-16 20:05+0100\n"
 "PO-Revision-Date: 2006-08-24 13:37+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <trasno@trasno.net>\n"
@@ -38,17 +38,17 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:65
 #, c-format
 msgid "size : %g\n"
-msgstr "tamaño : %g\n"
+msgstr "tamaÃ±o : %g\n"
 
 #: ../panel-plugin/devices.c:66
 #, c-format
 msgid "used size : %g\n"
-msgstr "tamaño usado : %g\n"
+msgstr "tamaÃ±o usado : %g\n"
 
 #: ../panel-plugin/devices.c:67
 #, c-format
 msgid "available size : %g\n"
-msgstr "tamaño dispoñible : %g\n"
+msgstr "tamaÃ±o dispoÃ±ible : %g\n"
 
 #: ../panel-plugin/devices.c:68
 #, c-format
@@ -82,7 +82,7 @@ msgstr "non montado\n"
 
 #: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
 msgid "Mount Plugin: Error executing command."
-msgstr "Plugin de Montaxe: Erro ó executar o comando."
+msgstr "Plugin de Montaxe: Erro Ã³ executar o comando."
 
 #: ../panel-plugin/mount-plugin.c:50
 #, c-format
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 "Este comando hase executar despois de montar o dispositivo co punto de "
 "montaxe do dispositivo coma argumento.\n"
-"Se non está seguro de que introducir, probe \"xffm\" ou \"rox\" ou \"thunar"
+"Se non estÃ¡ seguro de que introducir, probe \"xffm\" ou \"rox\" ou \"thunar"
 "\"."
 
 #: ../panel-plugin/mount-plugin.c:674
@@ -143,8 +143,8 @@ msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
-"ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que son, "
-"manteña as súas mans alonxadas!"
+"ADVERTENCIA: Estas opciÃ³ns son sÃ³ para expertos! Se non sabe para que son, "
+"manteÃ±a as sÃºas mans alonxadas!"
 
 #: ../panel-plugin/mount-plugin.c:698
 msgid "Mount command:"
@@ -180,14 +180,14 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Also display network file systems"
-msgstr "Amosar tamén sistemas de ficheiros por rede"
+msgstr "Amosar tamÃ©n sistemas de ficheiros por rede"
 
 #: ../panel-plugin/mount-plugin.c:791
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
-"Activar esta opción para amosar tamén sistemas de ficheiros por rede coma "
+"Activar esta opciÃ³n para amosar tamÃ©n sistemas de ficheiros por rede coma "
 "NFS, SMBFS, SHFS e SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:802
