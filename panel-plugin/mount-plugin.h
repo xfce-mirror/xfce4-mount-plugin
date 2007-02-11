@@ -4,10 +4,10 @@
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
 Copyright (C) 2005, 2006 Fabian Nowak timystery@arcor.de.
 
-This program is free software; you can redistribute it and/or 
-modify it under the terms of the GNU General Public License 
-as published by the Free Software Foundation; either 
-version 2 of the License, or (at your option) any later 
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later
 version.
 
 This program is distributed in the hope that it will be useful,
@@ -27,10 +27,10 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <config.h>
 #endif
 
-/*
+
 #define DEBUG 1
 #define DEBUG_TRACE 1
-*/
+
 
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
@@ -54,15 +54,18 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 static GtkTooltips *tooltips = NULL;
 
 /*--------- graphical interface ----------*/
-typedef struct 
+typedef struct
 {
     XfcePanelPlugin *plugin;
     char  *on_mount_cmd;
     gchar *mount_command;
     gchar *umount_command;
     gchar *icon;
+    gchar *excluded_filesystems;
     gboolean message_dialog; /* whether to show (un)success after umount */
     gboolean include_NFSs; /* whether to also display network file systems */
+    gboolean exclude_FSs;
+    gboolean eject_drives;
     GtkWidget *button;
     GdkPixbuf *button_pb;
     GtkWidget *menu;
@@ -95,6 +98,9 @@ typedef struct
 	GtkWidget *string_umount_command;
 	GtkWidget *show_message_dialog;
 	GtkWidget *show_include_NFSs;
+	GtkWidget *show_exclude_FSs;
+	GtkWidget *show_eject_drives;
+	GtkWidget *string_excluded_filesystems;
 }
 t_mounter_dialog;
 /*------------------------------------------------------*/

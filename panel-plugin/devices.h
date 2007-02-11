@@ -2,10 +2,10 @@
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
 
-This program is free software; you can redistribute it and/or 
-modify it under the terms of the GNU General Public License 
-as published by the Free Software Foundation; either 
-version 2 of the License, or (at your option) any later 
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later
 version.
 
 This program is distributed in the hope that it will be useful,
@@ -49,44 +49,49 @@ typedef struct s_disk {
 /*----------------------------------------------*/
 
 /*-------------------- get_size_human_readable --------------------*/
-/* return a string containing a size expressed in KB,MB or GB and the unit it 
+/* return a string containing a size expressed in KB,MB or GB and the unit it
  * is expressed in
  */
 char * get_size_human_readable(float size);
 
-
 /*------------ mount a t_disk ---------------*/
 /* return exit status of the mount command
  */
-void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command);
+void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject);
 
 /* --------------unmount a t_disk ----------------*/
-int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous);
+int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject);
 
 /*------------------------- disks_new ----------------*/
-/* fill a GPtrArray with pointers on struct t_disk containing infos on devices 
- * and theoretical mount point. use setfsent() and getfsent(). 
+/* fill a GPtrArray with pointers on struct t_disk containing infos on devices
+ * and theoretical mount point. use setfsent() and getfsent().
  */
 GPtrArray * disks_new (gboolean include_NFSs) ;
 
 /*--------------------- disks_free --------------------------*/
-/* free a GPtrArray containing pointer on struct t_disk elements 
+/* free a GPtrArray containing pointer on struct t_disk elements
  */
 void disks_free (GPtrArray * * pdisks);
 
 /*----------------------- disks_print----------------------*/
-/* print a GPtrArray containing pointer on struct t_disk elements 
+/* print a GPtrArray containing pointer on struct t_disk elements
  */
 void disks_print (GPtrArray * pdisks);
 
+/* Removes specfied device from array. */
+gboolean disks_remove_device (GPtrArray * pdisks, char *device);
+
+/* Removes specfied mount point from array. */
+gboolean disks_remove_mountpoint (GPtrArray * pdisks, char *device);
+
 /*-------------------- disks_search -------------------------*/
-/* return a pointer on FIRST struct t_disk containing char * device as device 
+/* return a pointer on FIRST struct t_disk containing char * device as device
  * field; if not found return NULL
  */
 t_disk * disks_search (GPtrArray * pdisks, char * device);
 
 /* --------------- disks_refresh ----------------------*/
-/* refresh t_mount_info infos in a GPtrArray containing 
+/* refresh t_mount_info infos in a GPtrArray containing
  * struct t_disk * elements
  */
 void disks_refresh (GPtrArray * pdisks);
