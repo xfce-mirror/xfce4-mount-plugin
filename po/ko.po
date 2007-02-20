@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 20:05+0100\n"
-"PO-Revision-Date: 2006-10-20 11:42+0900\n"
+"PO-Revision-Date: 2007-02-20 12:37+0900\n"
 "Last-Translator: ByungHyun Choi <byunghyun.choi@debianusers.org>\n"
 "Language-Team: Korean <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,6 @@ msgid "An error occured. The device should not be removed!"
 msgstr "오류발생! 장치를 분리하지 마십시오!"
 
 #: ../panel-plugin/mount-plugin.c:177
-#, fuzzy
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#000000\">마운트되지 않음</span>"
 
@@ -116,11 +115,11 @@ msgstr "마운트 장치"
 
 #: ../panel-plugin/mount-plugin.c:615
 msgid "Commands"
-msgstr ""
+msgstr "명령어"
 
 #: ../panel-plugin/mount-plugin.c:629
 msgid "<b>Commands</b>"
-msgstr ""
+msgstr "<b>명령어</b>"
 
 #: ../panel-plugin/mount-plugin.c:641
 msgid "Execute after mounting:"
@@ -150,7 +149,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:698
 msgid "Mount command:"
-msgstr "마운트 며령:"
+msgstr "마운트 명령:"
 
 #: ../panel-plugin/mount-plugin.c:705
 msgid "Unmount command:"
@@ -166,11 +165,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:746
 msgid "<b>General</b>"
-msgstr ""
+msgstr "<b>일반</b>"
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "General"
-msgstr ""
+msgstr "일반"
 
 #: ../panel-plugin/mount-plugin.c:766
 msgid "Show message after unmount"
@@ -198,15 +197,15 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:802
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
+msgstr "패널에 보이는 아이콘을 설정합니다."
 
 #: ../panel-plugin/mount-plugin.c:809
 msgid "Icon:"
-msgstr ""
+msgstr "아이콘:"
 
 #: ../panel-plugin/mount-plugin.c:813
 msgid "Select an image"
-msgstr ""
+msgstr "그림 선택"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
