@@ -2,7 +2,7 @@
 
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
-Copyright (C) 2005, 2006 Fabian Nowak timystery@arcor.de.
+Copyright (C) 2005, 2006, 2007 Fabian Nowak timystery@arcor.de.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -46,14 +46,17 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #define BORDER 6
 
-#define DEFAULT_MOUNT_COMMAND "mount"
-#define DEFAULT_UMOUNT_COMMAND "umount"
+#define DEFAULT_MOUNT_COMMAND "mount %d"
+#define DEFAULT_UMOUNT_COMMAND "umount %d"
 
 #define DEFAULT_ICON PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg"
 
 static GtkTooltips *tooltips = NULL;
 
-/*--------- graphical interface ----------*/
+/**
+ * structure t_mounter.
+ * Contains values and strings for functionality and GtkWidgets for the GUI.
+ */
 typedef struct
 {
     XfcePanelPlugin *plugin;
@@ -62,8 +65,8 @@ typedef struct
     gchar *umount_command;
     gchar *icon;
     gchar *excluded_filesystems;
-    gboolean message_dialog; /* whether to show (un)success after umount */
-    gboolean include_NFSs; /* whether to also display network file systems */
+    gboolean message_dialog; /**< whether to show (un)success after umount */
+    gboolean include_NFSs; /**< whether to also display network file systems */
     gboolean exclude_FSs;
     gboolean eject_drives;
     GtkWidget *button;
@@ -71,38 +74,43 @@ typedef struct
     GtkWidget *menu;
     GPtrArray *pdisks; /* contains pointers to struct t_disk */
 } t_mounter;
-/*---------------------------------*/
 
-/*--------- disk button data ------------------*/
+
+/**
+ * Disk button data.
+ * Contains labels, progress bars, ... for one line in the menu.
+ */
 typedef struct
 {
-	GtkWidget * menu_item;
-	GtkWidget * hbox;
-	GtkWidget * label_disk;
-	GtkWidget * label_mount_info;
-	GtkWidget * progress_bar;
+    GtkWidget * menu_item;
+    GtkWidget * hbox;
+    GtkWidget * label_disk;
+    GtkWidget * label_mount_info;
+    GtkWidget * progress_bar;
 } t_disk_display;
-/*------------------------------------------------*/
 
-/*------------- settings dialog --------------------------*/
+
+/**
+ * Settings dialog.
+ * Contains widgets needed for determining the user's preferences.
+ */
 typedef struct
 {
-	t_mounter *mt;
-	GtkWidget *dialog;
-	/* options */
-	GtkWidget *string_cmd;
-	GtkWidget *string_icon;
-	GtkWidget *specify_commands;
-	GtkWidget *box_mount_commands;
-	GtkWidget *string_mount_command;
-	GtkWidget *string_umount_command;
-	GtkWidget *show_message_dialog;
-	GtkWidget *show_include_NFSs;
-	GtkWidget *show_exclude_FSs;
-	GtkWidget *show_eject_drives;
-	GtkWidget *string_excluded_filesystems;
+    t_mounter *mt;
+    GtkWidget *dialog;
+    /* options */
+    GtkWidget *string_cmd;
+    GtkWidget *string_icon;
+    GtkWidget *specify_commands;
+    GtkWidget *box_mount_commands;
+    GtkWidget *string_mount_command;
+    GtkWidget *string_umount_command;
+    GtkWidget *show_message_dialog;
+    GtkWidget *show_include_NFSs;
+    GtkWidget *show_exclude_FSs;
+    GtkWidget *show_eject_drives;
+    GtkWidget *string_excluded_filesystems;
 }
 t_mounter_dialog;
-/*------------------------------------------------------*/
 
 #endif /* __MOUNT_PLUGIN_H */

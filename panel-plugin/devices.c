@@ -2,7 +2,7 @@
 
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
-Copyright (C) 2005, 2006 Fabian Nowak timystery@arcor.de.
+Copyright (C) 2005, 2006, 2007 Fabian Nowak timystery@arcor.de.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -32,6 +32,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <libxfcegui4/xfce-exec.h>
 
 #include "devices.h"
+#include "helpers.c"
 
 #define KB 1024
 #define MB 1048576
@@ -39,11 +40,11 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #define MTAB "/etc/mtab"
 
-/*-------------------- get_size_human_readable --------------------*/
-/* Return a string containing a size expressed in KB, MB or GB and the unit
+/**
+ * Return a string containing a size expressed in KB, MB or GB and the unit
  * it is expressed in.
  *
- * @params  size: Size in bytes
+ * @param  size: Size in bytes
  * @return  Formatted output, e.g. "1.5 GB"
  */
 char *
@@ -54,33 +55,32 @@ get_size_human_readable (float size)
     if (size < GB) return g_strdup_printf (_("%.1f MB"), size/MB);
     return g_strdup_printf (_("%.1f GB"), size/GB);
 }
-/*--------------------------------------------------------------------*/
 
-/*-------------------------- mount_info_print --------------------------*/
+
 void
 mount_info_print(t_mount_info * mount_info)
 {
     if (mount_info != NULL)
     {
-        printf (_("size : %g\n"), mount_info->size);
-        printf (_("used size : %g\n") ,mount_info->used);
-        printf (_("available size : %g\n"), mount_info->avail);
-        printf (_("percentage used: %d\n"), mount_info->percent);
-        printf (_("file system type : %s\n"), mount_info->type);
-        printf (_("actual mount point : %s\n"), mount_info->mounted_on);
+        printf (_("size:                %g\n"), mount_info->size);
+        printf (_("used size:           %g\n") ,mount_info->used);
+        printf (_("available siz:       %g\n"), mount_info->avail);
+        printf (_("percentage used:     %d\n"), mount_info->percent);
+        printf (_("file system type:    %s\n"), mount_info->type);
+        printf (_("actual mount point:  %s\n"), mount_info->mounted_on);
     }
     return ;
 }
-/*-----------------------------------------------*/
 
-/*------------------------- mount_info_new --------------------*/
+
 t_mount_info *
 mount_info_new (float size, float used, float avail,
                     unsigned int percent, char * type, char * mounted_on)
 {
+    t_mount_info * mount_info;
+
     if ( type != NULL && mounted_on != NULL /* && size != 0 */ )
     {
-        t_mount_info * mount_info;
         mount_info = g_new0(t_mount_info,1);
         mount_info->size = size;
         mount_info->used = used;
@@ -92,25 +92,24 @@ mount_info_new (float size, float used, float avail,
     }
     return NULL;
 }
-/*-----------------------------------------------------*/
 
-/* ------------- mount_info_new_from_stat----------------*/
-/* Creates a new struct t_mount_info from a struct statfs data.
- *
+
+/**
+ * Creates a new struct t_mount_info from a struct statfs data.
  */
 t_mount_info *
 mount_info_new_from_stat (struct statfs * pstatfs,
                                          char * mnt_type,
                                          char * mnt_dir)
 {
+    t_mount_info * mount_info ;
+    float size;  /* total size of device */
+    float used;  /* used size of device */
+    float avail; /* Available size of device */
+    unsigned int percent ; /* percentage used */
+
     if (pstatfs!=NULL && mnt_type!=NULL && mnt_dir!=NULL)
     {
-        t_mount_info * mount_info ;
-        float size;  /* total size of device */
-        float used;  /* used size of device */
-        float avail; /* Available size of device */
-        unsigned int percent ; /* percentage used */
-
         /* compute sizes in bytes */
         size = (float)pstatfs->f_bsize * (float)pstatfs->f_blocks;
         used = (float)pstatfs->f_bsize
@@ -127,10 +126,8 @@ mount_info_new_from_stat (struct statfs * pstatfs,
     return NULL;
 
 }
-/*---------------------------------------------------------*/
 
 
-/*-------- free a struct t_mount_info -------------------*/
 void
 mount_info_free(t_mount_info * * mount_info)
 {
@@ -143,19 +140,15 @@ mount_info_free(t_mount_info * * mount_info)
     }
     return;
 }
-/*------------------------------------------------------*/
 
 
-
-
-/*------- print a t_disk struct using printf -------------*/
 void
 disk_print (t_disk * pdisk)
 {
     if (pdisk != NULL)
     {
-        printf (_("disk : %s\n"),pdisk->device);
-        printf (_("mount point : %s\n"), pdisk->mount_point);
+        printf (_("disk: %s\n"),pdisk->device);
+        printf (_("mount point: %s\n"), pdisk->mount_point);
 
         if (pdisk->mount_info != NULL)
             mount_info_print (pdisk->mount_info);
@@ -163,15 +156,15 @@ disk_print (t_disk * pdisk)
     }
     return;
 }
-/*----------------------------------------*/
 
-/* create a new t_disk struct */
+
 t_disk *
 disk_new (const char * dev, const char * mp)
 {
+    t_disk  * pdisk;
+
     if ( dev != NULL && mp != NULL)
     {
-        t_disk  * pdisk ;
         pdisk = g_new0 (t_disk,1);
         pdisk->device = g_strdup(dev);
         pdisk->mount_point = g_strdup(mp);
@@ -181,9 +174,8 @@ disk_new (const char * dev, const char * mp)
     }
     return NULL;
 }
-/* -------------------------------------*/
 
-/* free a t_disk struct */
+
 void
 disk_free(t_disk **pdisk)
 {
@@ -197,84 +189,82 @@ disk_free(t_disk **pdisk)
     }
     return;
 }
-/* ----------------------------------------*/
 
-gchar *
-replace_placeholder (char *source, char *replacement) {
-	gchar *retval = "", *duplicate;
-	duplicate = g_strdup (source);
-	int i;
-	for (i = strlen(duplicate)-1; i >0; i--) {
-		if (duplicate[i-1]=='%' && duplicate[i]=='d')
-		{
-			duplicate[i-1]='\0';
-			retval = g_strconcat (duplicate+i+1, retval, NULL);
-			i--;
-		}
 
-	}
-	retval = g_strconcat (duplicate+i, retval, NULL);
-
-	return retval;
-}
-
-/*------------ mount a t_disk ---------------*/
-/* return exit status of the mount command*/
+/**
+ * Return exit status of the mount command
+ */
 void
 disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject)
 {
-	gchar *tmp;
+    gchar *tmp=NULL, *cmd, *tmp2 = NULL;
+    GError *error = NULL;
+    gboolean val;
+
+    #ifdef DEBUG
+    g_printf ("disk_mount: eject=%d\n", eject);
+    #endif
+
     if (pdisk != NULL)
     {
-        gchar * cmd ;
-
-		tmp = replace_placeholder (mount_command, pdisk->mount_point);
-		if (eject)
-			cmd = g_strconcat ("sh -c ' eject -t ", pdisk->mount_point, " && ", tmp, " ",
-                           pdisk->mount_point, NULL);
+        deviceprintf (&tmp, mount_command, pdisk->device);
+        mountpointprintf (&tmp2, tmp, pdisk->mount_point);
+        if (eject)
+            cmd = g_strconcat ("sh -c ' eject -t ", pdisk->device, " && ", tmp2, NULL);
         else
-			cmd = g_strconcat ("sh -c ' ", tmp, " ",
-                           pdisk->mount_point, NULL);
+            cmd = g_strconcat ("sh -c ' ", tmp2, NULL);
+
+        g_free(tmp);
+        g_free(tmp2);
+        tmp = NULL;
+        tmp2 = NULL;
 
         if (on_mount_cmd != NULL) {
-        	tmp = replace_placeholder (on_mount_cmd, pdisk->mount_point);
-            cmd = g_strconcat (cmd, " && ", tmp, " ",
-                               pdisk->mount_point, " ' ", NULL);
+            deviceprintf(&tmp, on_mount_cmd, pdisk->device);
+            mountpointprintf(&tmp2, tmp, pdisk->mount_point);
+            cmd = g_strconcat (cmd, " && ", tmp2, " '", NULL);
         }
         else
-            cmd = g_strconcat (cmd, " ' ", NULL);
+            cmd = g_strconcat (cmd, " '", NULL);
 
-        DBG("cmd :%s \n",cmd);
+        #ifdef DEBUG
+        g_printf ("cmd: '%s'\n", cmd);
+        #endif
 
-        GError *error = NULL;
-
-        gboolean val = xfce_exec (cmd, FALSE, FALSE, &error);
+        val = xfce_exec (cmd, FALSE, FALSE, &error);
         if (!val)
             xfce_err (_("Mount Plugin: Error executing command."));
 
         g_free(cmd);
+        g_free(tmp);
+        g_free(tmp2);
     }
 }
-/*-------------------------------------------*/
 
-/* --------------unmount a t_disk ----------------*/
-/* return exit status of the mount command*/
+
+/**
+ * Return exit status of the umount command.
+ */
 int
 disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject)
 {
     int retval = NONE;
-    gchar *tmp;
+    gchar *tmp = NULL, *tmp2 = NULL, *tmpfile;
+    gboolean val;
+    char *cmd;
+    gint filehandle;
+    GError *error = NULL;
+
+    #ifdef DEBUG
+    g_printf ("disk_umount: eject=%d\n", eject);
+    #endif
+
 
     if (pdisk != NULL)
     {
-        GError *error = NULL;
-        gchar *tmpfile;
 
-        char *cmd;
-
-        gboolean val;
         if (synchronous) {
-            gint filehandle = g_file_open_tmp (NULL, &tmpfile, &error);
+            filehandle = g_file_open_tmp (NULL, &tmpfile, &error);
 
             if (filehandle==-1) {
                 close (filehandle);
@@ -285,56 +275,66 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
             g_return_val_if_fail (tmpfile!=NULL, ERROR);
             error = NULL;
 
-            /* changed from pdisk->device to pdisk->mount_point */
-            tmp = replace_placeholder (umount_command, pdisk->mount_point);
-            cmd = g_strconcat ("sh -c '", tmp, " ",
-                     pdisk->mount_point, " 2>", tmpfile, " ' ", NULL);
-            val = xfce_exec_sync (cmd, FALSE, FALSE, &error);
+            deviceprintf(&tmp, umount_command, pdisk->device);
+            mountpointprintf(&tmp2, tmp, pdisk->mount_point);
+            cmd = g_strconcat ("sh -c '", tmp2, " 2>", tmpfile, NULL);
+
         }
         else {
-            /* changed from pdisk->device to pdisk->mount_point */
-            tmp = replace_placeholder (umount_command, pdisk->mount_point);
-            cmd = g_strconcat ("sh -c '", tmp, " ",
-                     pdisk->mount_point, " ' ", NULL);
-            val = xfce_exec (cmd, FALSE, FALSE, &error);
+            deviceprintf(&tmp, umount_command, pdisk->device);
+            mountpointprintf(&tmp2, tmp, pdisk->mount_point);
+            cmd = g_strconcat ("sh -c '", tmp2, NULL);
         }
+
+        /* re-use tmp */
+        g_free(tmp);
+        tmp = NULL;
+
+        if (eject)
+           tmp = g_strconcat (cmd, " && eject ", pdisk->device, " '", NULL);
+        else
+            tmp = g_strconcat (cmd, " '", NULL);
+
+        #ifdef DEBUG
+        g_printf ("cmd: '%s'\n", tmp);
+        #endif
+
+        val = xfce_exec_sync (tmp, FALSE, FALSE, &error);
 
         if  (!val) {
             xfce_err (_("Mount Plugin: Error executing command."));
             retval = ERROR;
         }
 
-        if (!synchronous)  /* already return from this function at this stage */
-        {
-            return retval;
+        if (synchronous) {
+            g_free(tmp);
+            tmp = NULL;
+
+            error = NULL;
+
+            g_file_get_contents (tmpfile, &tmp, NULL, &error);
+            g_unlink (tmpfile);
+
+            if (strlen( (const char*)tmp )!=0)
+                    retval = ERROR;
+
+            g_free (tmpfile);
+            g_free (cmd);
+            g_free (tmp);
+            g_free (tmp2);
         }
-
-        /* synchronous only */
-        gchar *contents;
-        error = NULL;
-        g_file_get_contents (tmpfile, &contents, NULL, &error);
-        g_unlink (tmpfile);
-        g_free (tmpfile);
-
-        if (strlen( (const char*)contents )!=0)
-                retval = ERROR;
-
-        g_free (cmd);
-        g_free (contents);
     }
 
     return retval;
 }
-/*------------------------------------------------*/
 
-/*------------------------- disks_new ----------------*/
-/* Fill a GPtrArray with pointers on struct t_disk containing infos on devices
+
+/**
+ * Fill a GPtrArray with pointers on struct t_disk containing infos on devices
  * and theoretical mount point. used setfsent() and getfsent(),
  * now uses setmntent() and getmntent() and enmntent().
- *
- * @param include_NFSs: whether to include network file systems
- *
- * @return    GPtrArray *pdisks containing elements to be displayed
+ * @param include_NFSs    whether to include network file systems
+ * @return                GPtrArray *pdisks containing elements to be displayed
  */
 GPtrArray *
 disks_new (gboolean include_NFSs)
@@ -342,6 +342,7 @@ disks_new (gboolean include_NFSs)
     GPtrArray * pdisks; /* to be returned */
     t_disk * pdisk;
     struct fstab *pfstab;
+    gboolean has_valid_mount_device;
 
     /* open fstab */
     if (setfsent()!=1)
@@ -349,14 +350,9 @@ disks_new (gboolean include_NFSs)
 
     pdisks = g_ptr_array_new();
 
-    for (pfstab = getfsent(); pfstab!=NULL; pfstab = getfsent()) {
-
-        /*
-        pfstab = getfsent(); //read a line in fstab
-        if (pfstab == NULL) break ; // on EOF exit loop
-        */
-
-        gboolean has_valid_mount_device =
+    for (pfstab = getfsent(); pfstab!=NULL; pfstab = getfsent())
+    {
+        has_valid_mount_device =
                         g_str_has_prefix(pfstab->fs_spec, "/dev/");
 
         if (include_NFSs)
@@ -369,6 +365,7 @@ disks_new (gboolean include_NFSs)
         if ( has_valid_mount_device &&
                 g_str_has_prefix(pfstab->fs_file, "/") ) {
             pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file);
+            pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
             g_ptr_array_add (pdisks , pdisk);
 
         }
@@ -380,15 +377,18 @@ disks_new (gboolean include_NFSs)
     return pdisks;
 }
 
-/*--------------------- disks_free --------------------------*/
-/* free a GPtrArray containing pointer on struct t_disk elements */
+
+/**
+ * Free a GPtrArray containing pointer on struct t_disk elements
+ */
 void
 disks_free (GPtrArray ** pdisks)
 {
+    int i ;
+    t_disk * pdisk ;
+
     if (*pdisks != NULL)
     {
-        int i ;
-        t_disk * pdisk ;
         for (i=0; i < (*pdisks)->len ; i++)
         {
             pdisk = (t_disk *) (g_ptr_array_index((*pdisks),i));
@@ -399,8 +399,10 @@ disks_free (GPtrArray ** pdisks)
     }
 }
 
-/*----------------------- disks_print----------------------*/
-/* print a GPtrArray containing pointer on struct t_disk elements */
+
+/**
+ * Print a GPtrArray containing pointer on struct t_disk elements
+ */
 void
 disks_print (GPtrArray * pdisks)
 {
@@ -413,53 +415,64 @@ disks_print (GPtrArray * pdisks)
 
 }
 
-/*--------------------disks_remove_device ----------------------------*/
-/* Removes specfied device from array.
- * Returns true on success, else false.
+
+/**
+ * Removes specfied device from array.
+ * @return true on success, else false.
  */
 gboolean
 disks_remove_device (GPtrArray * pdisks, char *device)
 {
-	int i;
-	for (i=0; i < pdisks->len ; i++)
+    int i;
+    gpointer p;
+
+    for (i=0; i < pdisks->len ; i++)
     {
         if (strcmp (((t_disk *) g_ptr_array_index(pdisks, i))->device,
-			device)==0)
-			g_ptr_array_remove_index(pdisks, i);
+            device)==0)
+            p = g_ptr_array_remove_index(pdisks, i);
     }
 
-	return FALSE;
+	if (p==NULL)
+		return FALSE;
+	else
+		return TRUE;
 }
 
 
-/*--------------------disks_remove_mountpoint ----------------------------*/
-/* Removes specfied mount point from array.
- * Returns true on success, else false.
+/**
+ * Removes specfied mount point from array.
+ * @return true on success, else false.
  */
 gboolean
 disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
 {
-	int i;
-	for (i=0; i < pdisks->len ; i++)
+    int i;
+    gpointer p;
+
+    for (i=0; i < pdisks->len ; i++)
     {
         if (strcmp ( ((t_disk *) g_ptr_array_index(pdisks, i))->mount_point,
-			mountp)==0)
-			g_ptr_array_remove_index(pdisks, i);
+            mountp)==0)
+            p = g_ptr_array_remove_index(pdisks, i);
     }
 
-	return FALSE;
+	if (p==NULL)
+		return FALSE;
+	else
+		return TRUE;
 }
 
 
-/*-------------------- disks_search -------------------------*/
-/* CHANGE !!!!!! search on mount directory rather than device name */
-/* Returns a pointer on FIRST struct t_disk containing char * device as
+/**
+ * @return a pointer on FIRST struct t_disk containing char * device as
  * device field; if not found return NULL.
  */
 t_disk *
 disks_search (GPtrArray * pdisks, char * mount_point)
 {
     int i ;
+
     for (i=0; i < pdisks->len ; i++)
     {
         if (g_ascii_strcasecmp (
@@ -470,14 +483,17 @@ disks_search (GPtrArray * pdisks, char * mount_point)
     return NULL;
 }
 
-/* -------- disks_free_mount_info ----------------*/
-/* Remove struct t_mount_info from a GPtrArray containing
+
+/**
+ * Remove struct t_mount_info from a GPtrArray containing
  * struct t_disk * elements.
+ * @param pdisks	Array of t_mount_info
  */
 void
 disks_free_mount_info(GPtrArray * pdisks)
 {
     int i ;
+
     for (i=0; i < pdisks->len ; i++)
     {
         mount_info_free( &(((t_disk*)g_ptr_array_index(pdisks,i))->mount_info)) ;
@@ -487,8 +503,8 @@ disks_free_mount_info(GPtrArray * pdisks)
 }
 
 
-/* --------------- disks_refresh ----------------------*/
-/* Refreshes t_mount_info infos in a GPtrArray containing
+/**
+ * Refreshes t_mount_info infos in a GPtrArray containing
  * struct t_disk * elements.
  */
 void
@@ -515,7 +531,7 @@ disks_refresh(GPtrArray * pdisks)
     /* start looking for mounted devices */
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab)) {
 
-	DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
+    DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
 
         /* getstat on disk */
 /*        if (statfs(pmntent->mnt_dir, pstatfs)==0 && (pstatfs->f_blocks != 0)) { */
@@ -530,7 +546,7 @@ disks_refresh(GPtrArray * pdisks)
 
                 /* create a new struct t_disk and add it to pdisks */
                 /* test for mnt_dir!=none or neither block device nor NFS */
-                if ( (g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0) ||
+                if ( (g_ascii_strcasecmp(pmntent->mnt_dir, "none") != 0) ||
                 !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
                   g_str_has_prefix(pmntent->mnt_type, "fuse") ||
                   g_str_has_prefix(pmntent->mnt_type, "nfs") ||
@@ -540,6 +556,7 @@ disks_refresh(GPtrArray * pdisks)
 
                 /* else have valid entry reflecting block device or NFS */
                 pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
+                pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
                 g_ptr_array_add (pdisks, pdisk);
             }
 
@@ -555,4 +572,35 @@ disks_refresh(GPtrArray * pdisks)
     g_free (pstatfs);
     endmntent (fmtab); // close file
     return;
+}
+
+
+t_deviceclass disk_classify (char *device, char *mountpoint)
+{
+    t_deviceclass dc = UNKNOWN;
+
+    /* Note: Since linux-2.6.19, you cannot distinguish between scsi/removale
+     * drives by sdX and hard disks by hdY, since hdY is replaced by sdY.
+     */
+    if (strstr(device, "/dev")==NULL) { /* remote or unknown */
+        if (strstr(device, "nfs") || strstr(device, "smbfs")
+            || strstr(device, "shfs") || strstr(device, "fuse")) {
+            dc = REMOTE;
+        }
+    }
+    else if ( strstr(device, "cdrom") || strstr(device, "cdrw")
+                || strstr(device, "dvd") || strstr(mountpoint, "cdrom")
+                || strstr(mountpoint, "cdrw") || strstr(mountpoint, "dvd")) {
+        dc = CD_DVD;
+    }
+    else if ( strstr(mountpoint, "usr") || strstr(mountpoint, "var")
+                || strstr(mountpoint, "home") || strcmp(mountpoint, "/")==0 ) {
+        dc = HARDDISK;
+    }
+
+    else if ( strstr(mountpoint, "media") || strstr(mountpoint, "usb") ) {
+        dc = REMOVABLE;
+    }
+
+    return dc;
 }

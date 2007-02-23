@@ -1,6 +1,7 @@
 /* devices.h */
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
+Copyright (C) 2007 Fabian Nowak <timystery@arcor.de>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -22,79 +23,154 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 # define _DEVICES_H_
 #include <glib.h>
 
+/* #define DEBUG 1
+#define DEBUG_TRACE 1 */
+
+/**
+ * An enum.
+ * NONE and ERROR as aliases.
+ */
 enum {
-	NONE = 0,
-	ERROR
+    NONE = 0,
+    ERROR
 };
 
 
-/* struct mount info, additional info when a t_disk is mounted */
+/**
+ * Device class.
+ * Used for classification of devices discovered in the system into CDs,
+ * removable media etc.
+ */
+typedef enum {
+    HARDDISK = 0,
+    REMOTE,
+    CD_DVD,
+    REMOVABLE,
+    UNKNOWN
+} t_deviceclass;
+
+
+/**
+ * Mount information.
+ * Additional info when a t_disk is mounted.
+ */
 typedef struct s_mount_info {
-	float size; /* total size of device */
-	float used; /* used size of device */
-	float avail; /* Available size of device */
-	unsigned int percent; /* percentage used */
-	char *type;
-	char *mounted_on; /* actual mount point - current??? */
+    float size;                /**< Total size of device */
+    float used;                /**< Used size of device */
+    float avail;            /**< Available size of device */
+    unsigned int percent;     /**< Percentage used */
+    char *type;                /**< Unused? Distinguish remote file systems? */
+    char *mounted_on;        /**< Current mount point */
 } t_mount_info;
-/*-------------------------------------------------*/
 
-/* struct t_disk, describes a t_disk */
+
+/**
+ * Disk information.
+ */
 typedef struct s_disk {
-	char *device; /* device name, e.g. /dev/cdrom */
-	char *mount_point; /* device mount point, e.g. /mnt/cdrom */
-	t_mount_info *  mount_info; /* NULL if not mounted */
-
+    char *device;                 /**< Device name, e.g. /dev/cdrom */
+    char *mount_point;             /**< Device mount point, e.g. /mnt/cdrom */
+    t_mount_info *  mount_info; /**< NULL if not mounted */
+    t_deviceclass dc;             /**<Ddevice classification */
 } t_disk;
-/*----------------------------------------------*/
 
-/*-------------------- get_size_human_readable --------------------*/
-/* return a string containing a size expressed in KB,MB or GB and the unit it
- * is expressed in
+
+/**
+ *  Return a string containing a size expressed in KB, MB or GB and the unit it
+ * is expressed in.
+ * @param size    Disk size in Bytes
+ * @return        Disk size in MBytes or GBytes
  */
 char * get_size_human_readable(float size);
 
-/*------------ mount a t_disk ---------------*/
-/* return exit status of the mount command
+
+/**
+ * Mount a t_disk.
+ * @param pdisk            Disk to mount
+ * @param on_mount_cmd    Command to execute after successfully mounting the device
+ * @param mount_command    Command to use for mounting the device, still containing placeholders like \%d and \%m.
+ * @param eject            Whether to inject the device before mounting.
+ * @return                Exit status of the mount command
  */
 void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject);
 
-/* --------------unmount a t_disk ----------------*/
+
+/**
+ * Unmount a t_disk.
+ * @param pdisk            Disk to mount
+ * @param umount_command    Command to use for unmounting the device, still containing placeholders like \%d and \%m.
+ * @param synchronous    Whether to execute the command synchronously to the program itself thus waiting for the output
+ * @param eject            Whether to eject the device after unmounting.
+ * @return                 Exit status of the mount command
+ */
 int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject);
 
-/*------------------------- disks_new ----------------*/
-/* fill a GPtrArray with pointers on struct t_disk containing infos on devices
- * and theoretical mount point. use setfsent() and getfsent().
+
+/**
+ * Fill a GPtrArray with pointers on struct t_disk containing infos on devices
+ * and theoretical mount point. Uses setfsent() and getfsent().
+ * @param include_NFSs    TRUE if remote file systems should also be displayed.
+ * @return                GPtrArray with t_disks
  */
 GPtrArray * disks_new (gboolean include_NFSs) ;
 
-/*--------------------- disks_free --------------------------*/
-/* free a GPtrArray containing pointer on struct t_disk elements
+
+/**
+ * Free a GPtrArray containing pointer on struct t_disk elements.
+ * @param pdisks    Pointer array of t_disk
  */
 void disks_free (GPtrArray * * pdisks);
 
-/*----------------------- disks_print----------------------*/
-/* print a GPtrArray containing pointer on struct t_disk elements
+
+/**
+ * Print a GPtrArray containing pointer on struct t_disk elements.
+ * @param pdisks    Pointer array of t_disk
  */
 void disks_print (GPtrArray * pdisks);
 
-/* Removes specfied device from array. */
+
+/**
+ * Removes specfied device from array.
+ * @param pdisks    Pointer array of t_disk
+ * @param device    Device to remove from list
+ * @return            TRUE on success.
+ */
 gboolean disks_remove_device (GPtrArray * pdisks, char *device);
 
-/* Removes specfied mount point from array. */
-gboolean disks_remove_mountpoint (GPtrArray * pdisks, char *device);
 
-/*-------------------- disks_search -------------------------*/
-/* return a pointer on FIRST struct t_disk containing char * device as device
- * field; if not found return NULL
+/**
+ * Removes specfied mountpoint from array.
+ * @param pdisks    Pointer array of t_disk
+ * @param device    Mountpoint to remove from list
+ * @return            TRUE on success.
+ */
+gboolean disks_remove_mountpoint (GPtrArray * pdisks, char *mountpoint);
+
+
+/**
+ * Search for device in pointer array of t_disks.
+ * @param pdisks    Pointer array of t_disk
+ * @param device    Device to search for
+ * @return            pointer to t_disk if found, NULL else.
  */
 t_disk * disks_search (GPtrArray * pdisks, char * device);
 
-/* --------------- disks_refresh ----------------------*/
-/* refresh t_mount_info infos in a GPtrArray containing
- * struct t_disk * elements
+
+/**
+ * Refresh t_mount_info infos in a GPtrArray containing struct t_disk *
+ * elements.
+ * @param pdisks    Pointer array of t_disk
  */
 void disks_refresh (GPtrArray * pdisks);
+
+
+/**
+ * Returns classification for given information
+ * @param device        Device to get class for
+ * @param mountpoint    Mountpoint used as additional information for classfication
+ * @return                Device class
+ */
+t_deviceclass disk_classify (char *device, char *mountpoint);
 
 #endif /* _DEVICES_H_ */
 

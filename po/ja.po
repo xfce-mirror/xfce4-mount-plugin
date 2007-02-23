@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-16 20:05+0100\n"
+"POT-Creation-Date: 2007-02-18 13:39+0100\n"
 "PO-Revision-Date: 2006-04-02 20:42+0900\n"
 "Last-Translator: Daichi Kawahata <daichi@xfce.org>\n"
 "Language-Team: Japanese <xfce-users-jp@ml.fdiary.net>\n"
@@ -20,166 +20,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../panel-plugin/devices.c:52
+#: ../panel-plugin/devices.c:53
 #, c-format
 msgid "%.1f B"
 msgstr "%.1fバイト"
 
-#: ../panel-plugin/devices.c:53
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1fキロバイト"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1fメガバイト"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1fギガバイト"
 
-#: ../panel-plugin/devices.c:65
+#: ../panel-plugin/devices.c:66
 #, c-format
 msgid "size : %g\n"
 msgstr "サイズ : %g\n"
 
-#: ../panel-plugin/devices.c:66
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "used size : %g\n"
 msgstr "使用済み : %g\n"
 
-#: ../panel-plugin/devices.c:67
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "available size : %g\n"
 msgstr "使用可能 : %g\n"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "percentage used: %d\n"
 msgstr "使用率 : %d\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "file system type : %s\n"
 msgstr "ファイルシステム : %s\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point : %s\n"
 msgstr "実際のマウント場所 : %s\n"
 
-#: ../panel-plugin/devices.c:157
+#: ../panel-plugin/devices.c:158
 #, c-format
 msgid "disk : %s\n"
 msgstr "ディスク : %s\n"
 
-#: ../panel-plugin/devices.c:158
+#: ../panel-plugin/devices.c:159
 #, c-format
 msgid "mount point : %s\n"
 msgstr "マウント場所 : %s\n"
 
-#: ../panel-plugin/devices.c:162
+#: ../panel-plugin/devices.c:163
 #, c-format
 msgid "not mounted\n"
 msgstr "マウントされていません\n"
 
-#: ../panel-plugin/devices.c:225 ../panel-plugin/devices.c:272
+#: ../panel-plugin/devices.c:263 ../panel-plugin/devices.c:315
 msgid "Mount Plugin: Error executing command."
 msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
 
-#: ../panel-plugin/mount-plugin.c:50
+#: ../panel-plugin/mount-plugin.c:53
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "デバイス「%s」を取り外す用意が整いました。"
 
-#: ../panel-plugin/mount-plugin.c:53
+#: ../panel-plugin/mount-plugin.c:56
 msgid "An error occured. The device should not be removed!"
 msgstr "エラーが発生しました。デバイスを取り外してはいけません！"
 
-#: ../panel-plugin/mount-plugin.c:177
+#: ../panel-plugin/mount-plugin.c:182
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">マウントされていません</span>"
 
-#: ../panel-plugin/mount-plugin.c:440
+#: ../panel-plugin/mount-plugin.c:477
 msgid "devices"
 msgstr "デバイス"
 
-#: ../panel-plugin/mount-plugin.c:575
+#: ../panel-plugin/mount-plugin.c:641
 msgid "Edit Properties"
 msgstr "プロパティの編集"
 
 #. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:582
+#: ../panel-plugin/mount-plugin.c:648
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "マウントデバイス"
 
-#: ../panel-plugin/mount-plugin.c:615
-msgid "Commands"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:629
-msgid "<b>Commands</b>"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:641
-msgid "Execute after mounting:"
-msgstr "マウント後に実行:"
-
-#: ../panel-plugin/mount-plugin.c:648
-msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
-"If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
-msgstr ""
-"このコマンドは、引数にあるデバイスのマウント場所にデバイスがマウントされた後"
-"に実行されます。\n"
-"何を入力するか分からないのでしたら、「xffm」,「rox」または「thunar」を試して"
-"みて下さい。"
-
-#: ../panel-plugin/mount-plugin.c:674
-msgid "Specify own commands"
-msgstr "その他のコマンドを指定"
-
-#: ../panel-plugin/mount-plugin.c:685
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"警告: これらのオプションは上級者専用です！ これらが何を意味するのか分からない"
-"のでしたら、決していじらないで下さい！"
-
-#: ../panel-plugin/mount-plugin.c:698
-msgid "Mount command:"
-msgstr "マウントコマンド:"
-
-#: ../panel-plugin/mount-plugin.c:705
-msgid "Unmount command:"
-msgstr "マウント解除コマンド:"
-
-#: ../panel-plugin/mount-plugin.c:728
-msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync &&\" to the \"unmount\" command."
-msgstr ""
-"大半のユーザーは両コマンドの先頭に「sudo」を付けるか、「unmount」コマンドの先"
-"頭に「sync &&」を付けるだけでよいと思います。"
-
-#: ../panel-plugin/mount-plugin.c:746
-msgid "<b>General</b>"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:749
-msgid "General"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:766
-msgid "Show message after unmount"
-msgstr "マウント解除後にメッセージを表示する"
-
-#: ../panel-plugin/mount-plugin.c:772
+#: ../panel-plugin/mount-plugin.c:700
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -187,11 +124,84 @@ msgstr ""
 "このオプションは「unmount」コマンド文字列に「sync」を入れている場合にお勧めし"
 "ます。"
 
-#: ../panel-plugin/mount-plugin.c:785
-msgid "Also display network file systems"
-msgstr "ネットワーク・ファイルシステムも表示する"
+#: ../panel-plugin/mount-plugin.c:705
+#, fuzzy
+msgid "Show _message after unmount"
+msgstr "マウント解除後にメッセージを表示する"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:717
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:724
+msgid "Icon:"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:729
+msgid "Select an image"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:736
+msgid "_General"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:751
+#, fuzzy, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"thunar \\%m\".\n"
+"'\\%d' can be used to specify the device, '\\%m' for the mountpoint."
+msgstr ""
+"このコマンドは、引数にあるデバイスのマウント場所にデバイスがマウントされた後"
+"に実行されます。\n"
+"何を入力するか分からないのでしたら、「xffm」,「rox」または「thunar」を試して"
+"みて下さい。"
+
+#: ../panel-plugin/mount-plugin.c:761
+#, fuzzy
+msgid "_Execute after mounting:"
+msgstr "マウント後に実行:"
+
+#: ../panel-plugin/mount-plugin.c:784
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"警告: これらのオプションは上級者専用です！ これらが何を意味するのか分からない"
+"のでしたら、決していじらないで下さい！"
+
+#: ../panel-plugin/mount-plugin.c:789
+#, fuzzy
+msgid "_Custom commands"
+msgstr "マウントコマンド:"
+
+#: ../panel-plugin/mount-plugin.c:808
+#, fuzzy, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync \\%d &&\" to the \"unmount \\%d\" command.\n"
+"'\\%d' is used to specify the device, '\\%m' for the mountpoint."
+msgstr ""
+"大半のユーザーは両コマンドの先頭に「sudo」を付けるか、「unmount」コマンドの先"
+"頭に「sync &&」を付けるだけでよいと思います。"
+
+#: ../panel-plugin/mount-plugin.c:817
+#, fuzzy
+msgid "_Mount command:"
+msgstr "マウントコマンド:"
+
+#: ../panel-plugin/mount-plugin.c:823
+#, fuzzy
+msgid "_Unmount command:"
+msgstr "マウント解除コマンド:"
+
+#: ../panel-plugin/mount-plugin.c:848
+#, fuzzy
+msgid "_Commands"
+msgstr "マウントコマンド:"
+
+#: ../panel-plugin/mount-plugin.c:863
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -199,16 +209,34 @@ msgstr ""
 "このオプションを有効にすると NFS, SMBFS, SHFS および SSHFS のようなネットワー"
 "ク・ファイルシステムも表示します。"
 
-#: ../panel-plugin/mount-plugin.c:802
-msgid "You can specify a distinct icon to be displayed in the panel."
+#: ../panel-plugin/mount-plugin.c:868
+#, fuzzy
+msgid "Display _network file systems"
+msgstr "ネットワーク・ファイルシステムも表示する"
+
+#: ../panel-plugin/mount-plugin.c:881
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:809
-msgid "Icon:"
+#: ../panel-plugin/mount-plugin.c:886
+msgid "_Eject CD-drives"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:813
-msgid "Select an image"
+#: ../panel-plugin/mount-plugin.c:899
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:909
+msgid "E_xclude specified file systems"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:924
+msgid "_File sytems"
 msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
@@ -216,3 +244,6 @@ msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr ""
 "マウント可能なデバイスを表示します。また、必要に応じてこれらをマウント(解除)"
 "します。"
+
+#~ msgid "Specify own commands"
+#~ msgstr "その他のコマンドを指定"
