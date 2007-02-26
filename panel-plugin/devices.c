@@ -503,7 +503,7 @@ disks_refresh(GPtrArray * pdisks)
 
 		DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
 
-		/* statfs(pmntent->mnt_dir, pstatfs); */
+		statfs(pmntent->mnt_dir, pstatfs);
 
 		/* if we got the stat and the block number is non-zero */
 
