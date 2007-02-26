@@ -32,8 +32,7 @@ int
 seperate_list (GPtrArray *array, char *list)
 {
     int retval = 0;
-    char *p, *q; /* , *r;
-    r = p; */
+    char *p, *q;
 
 	if (list==NULL)
 		return retval;
@@ -47,7 +46,7 @@ seperate_list (GPtrArray *array, char *list)
     while ( q < p+strlen(p) && q!=NULL)
     {
         q[0] = '\0';
-        g_ptr_array_add (array, (gpointer) p);
+        g_ptr_array_add (array, g_strdup(p));
         g_printf("p=%s\n", p);
         p = q+2;
 
@@ -55,10 +54,8 @@ seperate_list (GPtrArray *array, char *list)
         retval++;
     }
     g_printf("p=%s\n", p);
-    g_ptr_array_add (array, (gpointer) p);
+    g_ptr_array_add (array, g_strdup(p));
     retval++;
-
-    /* free (r); */
 
     return retval;
 }

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-18 13:39+0100\n"
+"POT-Creation-Date: 2007-02-27 00:11+0100\n"
 "PO-Revision-Date: 2007-02-17 16:04+0100\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <de@li.org>\n"
@@ -37,83 +37,82 @@ msgstr "%.1f MBytes"
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:66
+#: ../panel-plugin/devices.c:65
 #, c-format
-msgid "size : %g\n"
-msgstr "Größe: %g\n"
+msgid "size:                %g\n"
+msgstr ""
 
-#: ../panel-plugin/devices.c:67
-#, c-format
-msgid "used size : %g\n"
+#: ../panel-plugin/devices.c:66
+#, fuzzy, c-format
+msgid "used size:           %g\n"
 msgstr "Verwendeter Platz: %g\n"
 
-#: ../panel-plugin/devices.c:68
-#, c-format
-msgid "available size : %g\n"
+#: ../panel-plugin/devices.c:67
+#, fuzzy, c-format
+msgid "available siz:       %g\n"
 msgstr "Verfügbarer Platz: %g\n"
 
-#: ../panel-plugin/devices.c:69
-#, c-format
-msgid "percentage used: %d\n"
+#: ../panel-plugin/devices.c:68
+#, fuzzy, c-format
+msgid "percentage used:     %d\n"
 msgstr "Verwendeter Anteil: %d\n"
 
-#: ../panel-plugin/devices.c:70
-#, c-format
-msgid "file system type : %s\n"
+#: ../panel-plugin/devices.c:69
+#, fuzzy, c-format
+msgid "file system type:    %s\n"
 msgstr "Dateisystemtyp: %s\n"
 
-#: ../panel-plugin/devices.c:71
-#, c-format
-msgid "actual mount point : %s\n"
+#: ../panel-plugin/devices.c:70
+#, fuzzy, c-format
+msgid "actual mount point:  %s\n"
 msgstr "Eigentlicher Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:158
-#, c-format
-msgid "disk : %s\n"
+#: ../panel-plugin/devices.c:150
+#, fuzzy, c-format
+msgid "disk: %s\n"
 msgstr "Platte: %s\n"
 
-#: ../panel-plugin/devices.c:159
-#, c-format
-msgid "mount point : %s\n"
+#: ../panel-plugin/devices.c:151
+#, fuzzy, c-format
+msgid "mount point: %s\n"
 msgstr "Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:163
+#: ../panel-plugin/devices.c:155
 #, c-format
 msgid "not mounted\n"
 msgstr "nicht eingehängt\n"
 
-#: ../panel-plugin/devices.c:263 ../panel-plugin/devices.c:315
+#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:286
 msgid "Mount Plugin: Error executing command."
 msgstr "Mount Plugin: Fehler beim Ausführen des Befehls."
 
-#: ../panel-plugin/mount-plugin.c:53
+#: ../panel-plugin/mount-plugin.c:56
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Das Gerät \"%s\" sollte sich jetzt sicher entfernen lassen."
 
-#: ../panel-plugin/mount-plugin.c:56
+#: ../panel-plugin/mount-plugin.c:59
 msgid "An error occured. The device should not be removed!"
 msgstr "Ein Fehler hat sich ereignet. Das Gerät sollte nicht entfernt werden!"
 
-#: ../panel-plugin/mount-plugin.c:182
+#: ../panel-plugin/mount-plugin.c:185
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nicht eingehängt</span>"
 
-#: ../panel-plugin/mount-plugin.c:477
+#: ../panel-plugin/mount-plugin.c:476
 msgid "devices"
 msgstr "Geräte"
 
-#: ../panel-plugin/mount-plugin.c:641
+#: ../panel-plugin/mount-plugin.c:630
 msgid "Edit Properties"
 msgstr "Eigenschaften ändern"
 
-#. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:648
+#: ../panel-plugin/mount-plugin.c:637
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "Geräte einhängen"
 
-#: ../panel-plugin/mount-plugin.c:700
+#: ../panel-plugin/mount-plugin.c:684
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -121,29 +120,29 @@ msgstr ""
 "Dies ist nur sinnvoll und empfohlen, falls \"sync\" als Teil des \"unmount\"-"
 "Befehls angegeben wird."
 
-#: ../panel-plugin/mount-plugin.c:705
+#: ../panel-plugin/mount-plugin.c:689
 msgid "Show _message after unmount"
 msgstr "Be_nachrichtigung nach Aushängen"
 
-#: ../panel-plugin/mount-plugin.c:717
+#: ../panel-plugin/mount-plugin.c:701
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 "Hier kann ein bestimmtes Symbol angegeben werden, das in der Leiste "
 "angezeigt werden soll."
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Icon:"
 msgstr "Symbol:"
 
-#: ../panel-plugin/mount-plugin.c:729
+#: ../panel-plugin/mount-plugin.c:712
 msgid "Select an image"
 msgstr "Bild wählen"
 
-#: ../panel-plugin/mount-plugin.c:736
+#: ../panel-plugin/mount-plugin.c:719
 msgid "_General"
 msgstr "_Allgemein"
 
-#: ../panel-plugin/mount-plugin.c:751
+#: ../panel-plugin/mount-plugin.c:734
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -158,11 +157,11 @@ msgstr ""
 "'\\%d' kann dazu verwendet werden, das Gerät anzugeben, '\\%m' für den "
 "Einhängepunkt."
 
-#: ../panel-plugin/mount-plugin.c:761
+#: ../panel-plugin/mount-plugin.c:744
 msgid "_Execute after mounting:"
 msgstr "Nach dem _Einhängen ausführen:"
 
-#: ../panel-plugin/mount-plugin.c:784
+#: ../panel-plugin/mount-plugin.c:767
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -170,11 +169,11 @@ msgstr ""
 "ACHTUNG: Diese Optionen sind nur für Experten gedacht. Falls du nicht weißt, "
 "wozu sie gut sein sollen, lass deine Hände von ihnen weg!"
 
-#: ../panel-plugin/mount-plugin.c:789
+#: ../panel-plugin/mount-plugin.c:772
 msgid "_Custom commands"
 msgstr "Be_nutzerdefinierte Befehle"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -186,19 +185,19 @@ msgstr ""
 "'\\%d' kann dazu verwendet werden, das Gerät anzugeben, '\\%m' für den "
 "Einhängepunkt."
 
-#: ../panel-plugin/mount-plugin.c:817
+#: ../panel-plugin/mount-plugin.c:800
 msgid "_Mount command:"
 msgstr "Befehl zum _Einhängen:"
 
-#: ../panel-plugin/mount-plugin.c:823
+#: ../panel-plugin/mount-plugin.c:806
 msgid "_Unmount command:"
 msgstr "Befehl zum _Aushängen:"
 
-#: ../panel-plugin/mount-plugin.c:848
+#: ../panel-plugin/mount-plugin.c:832
 msgid "_Commands"
 msgstr "_Befehle"
 
-#: ../panel-plugin/mount-plugin.c:863
+#: ../panel-plugin/mount-plugin.c:847
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -206,11 +205,11 @@ msgstr ""
 "Diese Option verwenden, um auch Netzwerkdateisysteme wie NFS, SMBFS, SHFS "
 "und SSHFS anzuzeigen."
 
-#: ../panel-plugin/mount-plugin.c:868
+#: ../panel-plugin/mount-plugin.c:852
 msgid "Display _network file systems"
 msgstr "_Netzwerkdateisysteme ebenfalls anzeigen"
 
-#: ../panel-plugin/mount-plugin.c:881
+#: ../panel-plugin/mount-plugin.c:865
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -218,11 +217,11 @@ msgstr ""
 "Schalten Sie diese Option ein, um ein CD-Laufwerk nach dem Aushängen "
 "auszufahren oder vor dem Einhängen einzufahren."
 
-#: ../panel-plugin/mount-plugin.c:886
+#: ../panel-plugin/mount-plugin.c:870
 msgid "_Eject CD-drives"
 msgstr "CD-_Laufwerke auswerfen"
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:883
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -232,17 +231,20 @@ msgstr ""
 "Die Liste wird durch normale Leerzeichen unterteilt.\n"
 "Es liegt an Ihnen, korrekte Geräte oder Einhängepunkte anzugeben."
 
-#: ../panel-plugin/mount-plugin.c:909
+#: ../panel-plugin/mount-plugin.c:893
 msgid "E_xclude specified file systems"
 msgstr "_Folgende Dateisysteme ausschließen"
 
-#: ../panel-plugin/mount-plugin.c:924
+#: ../panel-plugin/mount-plugin.c:908
 msgid "_File sytems"
 msgstr "_Dateisysteme"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Zeigt alle einhängbaren Geräte an und hängt sie bei Mausklick ein/aus."
+
+#~ msgid "size : %g\n"
+#~ msgstr "Größe: %g\n"
 
 #~ msgid "<b>Commands</b>"
 #~ msgstr "<b>Befehle</b>"

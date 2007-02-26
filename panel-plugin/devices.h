@@ -170,7 +170,15 @@ void disks_refresh (GPtrArray * pdisks);
  * @param mountpoint    Mountpoint used as additional information for classfication
  * @return                Device class
  */
-t_deviceclass disk_classify (char *device, char *mountpoint);
+t_deviceclass disk_classify (char* device, char *mountpoint);
+
+
+/**
+ * Checks, if disk is still mounted
+ * @param disk			device name or mountpoint to check
+ * @return				true, if mounted, else false.
+ */
+gboolean disk_check_mounted (const char *disk);
 
 #endif /* _DEVICES_H_ */
 
