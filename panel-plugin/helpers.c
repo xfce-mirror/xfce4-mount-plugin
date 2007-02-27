@@ -48,7 +48,7 @@ seperate_list (GPtrArray *array, char *list)
         q[0] = '\0';
         g_ptr_array_add (array, g_strdup(p));
         g_printf("p=%s\n", p);
-        p = q+2;
+        p = q+1;
 
         q = strchr (p, ' ');
         retval++;
