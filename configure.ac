@@ -7,7 +7,7 @@ dnl 2005-2007 Fabian Nowak <timystery@arcor.de>
 dnl
 dnl for Xfce4-panel 4.3 and higher only!
 
-m4_define([mount_version],[0.5.0])
+m4_define([mount_version],[0.5.0alpha])
 
 AC_INIT([xfce4-mount-plugin], [mount_version()],
 	[timystery@arcor.de])

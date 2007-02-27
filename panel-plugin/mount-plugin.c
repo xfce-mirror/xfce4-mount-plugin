@@ -233,15 +233,17 @@ mounter_data_new (t_mounter *mt)
     mt->pdisks = disks_new (mt->include_NFSs);
 
 	/* remove unwanted file systems from list */
-	array = g_ptr_array_new();
-	DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
-	res = seperate_list(array, mt->excluded_filesystems);
-	for (i=0; i<array->len; i++) {
-		dev_mp = (char*) g_ptr_array_index(array, i);
-		if ( strstr(dev_mp , "/dev") )
-			removed_device = disks_remove_device(mt->pdisks, dev_mp);
-		else
-			removed_device = disks_remove_mountpoint (mt->pdisks, dev_mp);
+		if (mt->exclude_FSs) {
+		array = g_ptr_array_new();
+		DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
+		res = seperate_list(array, mt->excluded_filesystems);
+		for (i=0; i<array->len; i++) {
+			dev_mp = (char*) g_ptr_array_index(array, i);
+			if ( strstr(dev_mp , "/dev") )
+				removed_device = disks_remove_device(mt->pdisks, dev_mp);
+			else
+				removed_device = disks_remove_mountpoint (mt->pdisks, dev_mp);
+		}
 	}
 
     /* get dynamic infos on mounts */
