@@ -49,7 +49,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
             int result = disk_umount (disk, mt->umount_command,
                                       mt->message_dialog, eject);
 
-            if (mt->message_dialog) { /* popup dialog */
+            if (mt->message_dialog && (!eject || result!=NONE) ) { /* popup dialog */
 
                     msg = (gchar *) g_malloc (1024*sizeof(gchar));
                     if (result==NONE)
