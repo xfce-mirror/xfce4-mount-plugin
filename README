@@ -1,5 +1,5 @@
 # ========================================================== #
-# Version 0.4.3 for Xfce Panel 4.3.20 and higher             #
+# Version 0.5.0 for Xfce Panel 4.3.99 and higher             #
 # Ported and maintained by Fabian Nowak <timystery@arcor.de> #
 # ========================================================== #
 
@@ -16,15 +16,17 @@ with KDE.
 
 Press it and it will display a list of items representing your various devices. 
 If you click on an unmounted devices it will mount it and vice versa. There is 
-no warning in case a device can't be mounted or unmounted.
+no warning in case a device can't be mounted, but there is one when unmounting 
+fails.
 
 The plugin displays various information on each device:
 "device name" > "mount point" ["used size"/"total size"] "available size" free 
-and an obvious progress bar
+and an obvious progress bar.
 
 The plugin works in a very simple way. It builds a list of devices from your 
-/etc/fstab (using setfsent() and getfsent() ) and get device stat from the list 
-of mounted devices (i.e. same data as the 'df' command), using setmntent() and 
-getmntent().
+/etc/fstab (using setfsent() and getfsent() ) and gets device stats from the 
+list of mounted devices (i.e. same data as the 'df' command), using setmntent()
+and getmntent().
 For mouting a device, the plugin simply runs a "mount /mount_point/ " command if
 no other command is explicitly specified in the options dialog.
+
