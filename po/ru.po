@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-28 22:23+0100\n"
+"POT-Creation-Date: 2007-03-01 00:19+0100\n"
 "PO-Revision-Date: 2006-01-04 21:40+0900\n"
 "Last-Translator: Eugene Ostapets <eostapets@altlinux.ru>\n"
 "Language-Team: Russian <eostapets@altlinux.ru>\n"
@@ -89,135 +89,135 @@ msgstr "не смонтировано\n"
 msgid "Mount Plugin: Error executing command."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:56
+#: ../panel-plugin/mount-plugin.c:60
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:59
+#: ../panel-plugin/mount-plugin.c:63
 msgid "An error occured. The device should not be removed!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:185
+#: ../panel-plugin/mount-plugin.c:189
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">не смонтировано</span>"
 
-#: ../panel-plugin/mount-plugin.c:478
+#: ../panel-plugin/mount-plugin.c:482
 msgid "devices"
 msgstr "Устройства"
 
-#: ../panel-plugin/mount-plugin.c:632
+#: ../panel-plugin/mount-plugin.c:636
 msgid "Edit Properties"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:639
+#: ../panel-plugin/mount-plugin.c:643
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 #, fuzzy
 msgid "Mount devices"
 msgstr "монтирование/отображение устройств"
 
-#: ../panel-plugin/mount-plugin.c:686
+#: ../panel-plugin/mount-plugin.c:690
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:691
+#: ../panel-plugin/mount-plugin.c:695
 msgid "Show _message after unmount"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:703
+#: ../panel-plugin/mount-plugin.c:707
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:714
 msgid "Icon:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:714
+#: ../panel-plugin/mount-plugin.c:718
 msgid "Select an image"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:721
+#: ../panel-plugin/mount-plugin.c:725
 msgid "_General"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:736
+#: ../panel-plugin/mount-plugin.c:740
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar \\%m\".\n"
-"'\\%d' can be used to specify the device, '\\%m' for the mountpoint."
+"If you are unsure what to insert, try \"thunar %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:746
+#: ../panel-plugin/mount-plugin.c:750
 #, fuzzy
 msgid "_Execute after mounting:"
 msgstr "команда исполняемая после монтирования устройства"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:773
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:774
+#: ../panel-plugin/mount-plugin.c:778
 msgid "_Custom commands"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:793
+#: ../panel-plugin/mount-plugin.c:797
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync \\%d &&\" to the \"unmount \\%d\" command.\n"
-"'\\%d' is used to specify the device, '\\%m' for the mountpoint."
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:802
+#: ../panel-plugin/mount-plugin.c:806
 msgid "_Mount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:812
 msgid "_Unmount command:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:838
 msgid "_Commands"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:853
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:854
+#: ../panel-plugin/mount-plugin.c:858
 msgid "Display _network file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:871
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:872
+#: ../panel-plugin/mount-plugin.c:876
 msgid "_Eject CD-drives"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:885
+#: ../panel-plugin/mount-plugin.c:889
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:899
 msgid "E_xclude specified file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:910
+#: ../panel-plugin/mount-plugin.c:914
 msgid "_File sytems"
 msgstr ""
 

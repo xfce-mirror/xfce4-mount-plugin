@@ -219,7 +219,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         tmp = NULL;
         tmp2 = NULL;
 
-        if (on_mount_cmd != NULL) {
+        if (on_mount_cmd != NULL && strlen(on_mount_cmd)!=0) {
             deviceprintf(&tmp, on_mount_cmd, pdisk->device);
             mountpointprintf(&tmp2, tmp, pdisk->mount_point);
             cmd = g_strconcat (cmd, " && ", tmp2, " '", NULL);

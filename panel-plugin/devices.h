@@ -23,8 +23,8 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 # define _DEVICES_H_
 #include <glib.h>
 
-/* #define DEBUG 1
-#define DEBUG_TRACE 1 */
+#define DEBUG 1
+#define DEBUG_TRACE 1
 
 /**
  * An enum.

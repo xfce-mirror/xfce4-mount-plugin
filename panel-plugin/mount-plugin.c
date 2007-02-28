@@ -49,6 +49,10 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
             int result = disk_umount (disk, mt->umount_command,
                                       mt->message_dialog, eject);
 
+			g_printf("mt->message_dialog=%d\n"
+					"eject=%d\n"
+					"result=%d\n", mt->message_dialog, eject, result);
+
             if (mt->message_dialog && (!eject || result!=NONE) ) { /* popup dialog */
 
                     msg = (gchar *) g_malloc (1024*sizeof(gchar));
@@ -735,8 +739,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
         _("This command will be executed after mounting the device with the "
         "mount point of the device as argument.\n"
-        "If you are unsure what to insert, try \"thunar \%m\".\n"
-        "'\%d' can be used to specify the device, '\%m' for the mountpoint."),
+        "If you are unsure what to insert, try \"thunar %m\".\n"
+        "'%d' can be used to specify the device, '%m' for the mountpoint."),
         NULL);
 
     _hbox = gtk_hbox_new (FALSE, BORDER);
@@ -791,8 +795,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_widget_show (_eventbox);
     gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
         _("Most users will only want to prepend \"sudo\" to both "
-        "commands or prepend \"sync \%d &&\" to the \"unmount \%d\" command.\n"
-        "'\%d' is used to specify the device, '\%m' for the mountpoint."),
+        "commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+        "'%d' is used to specify the device, '%m' for the mountpoint."),
         NULL );
 
     md->box_mount_commands = gtk_table_new (2, 2, FALSE);

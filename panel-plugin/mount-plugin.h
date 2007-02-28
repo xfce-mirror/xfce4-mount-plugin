@@ -28,8 +28,8 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #endif
 
 
-/* #define DEBUG 1
-#define DEBUG_TRACE 1 */
+#define DEBUG 1
+#define DEBUG_TRACE 1
 
 
 #include <gtk/gtk.h>
