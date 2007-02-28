@@ -34,6 +34,7 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = 						      	                     \
+	helpers.c													\
 	icons.h 						                                 \
 	kcmpartitions.png                                        \
 	$(desktop_in_in_files)
