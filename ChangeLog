@@ -1,3 +1,18 @@
+01 march 2007 - version 0.5.0
+- removed bug with mount points containing ugly spaces
+- removed compilation warnings
+
+01 march 2007 - version 0.5.0beta
+- testing pre-release
+
+28 february 2007 - version 0.5.0alpha
+- exclusion of file systems
+- new translation: ukrainian
+
+25 february 2007 - version pre 0.5.0
+- new settings dialog
+- CD eject option
+
 18 september 2005 - version 0.3.2
 - ukrainian tranlation
 - russian translation

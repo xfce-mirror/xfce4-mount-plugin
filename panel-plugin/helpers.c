@@ -118,7 +118,7 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
 			s = strchr(t, ' ');
 			s[0] = '\\';
 			s[1] = '\0';
-			s = g_strconcat (t, strchr(mountpoint, ' '));
+			s = g_strconcat (t, strchr(mountpoint, ' '), NULL);
 			/* g_free(t); */
         }
         else
