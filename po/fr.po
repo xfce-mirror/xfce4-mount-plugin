@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-01 00:19+0100\n"
-"PO-Revision-Date: 2007-02-27 18:02+0100\n"
+"PO-Revision-Date: 2007-03-01 20:11+0100\n"
 "Last-Translator: Maximilian Schleiss <maxschleiss@bluewin.ch>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -83,20 +83,19 @@ msgstr "point de montage :     %s\n"
 msgid "not mounted\n"
 msgstr "non monté\n"
 
-#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:286
+#: ../panel-plugin/devices.c:236
+#: ../panel-plugin/devices.c:286
 msgid "Mount Plugin: Error executing command."
 msgstr "Greffon de montage : erreur en exécutant la commande."
 
 #: ../panel-plugin/mount-plugin.c:60
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr ""
-"Le périphérique \"%s\" peut maintenant être déconnecté de manière sûre."
+msgstr "Le périphérique \"%s\" peut maintenant être déconnecté de manière sûre."
 
 #: ../panel-plugin/mount-plugin.c:63
 msgid "An error occured. The device should not be removed!"
-msgstr ""
-"Une erreur s'est produite. Le périphérique ne devrait pas être déconnecté !"
+msgstr "Une erreur s'est produite. Le périphérique ne devrait pas être déconnecté !"
 
 #: ../panel-plugin/mount-plugin.c:189
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -116,12 +115,8 @@ msgid "Mount devices"
 msgstr "Monter les périphériques"
 
 #: ../panel-plugin/mount-plugin.c:690
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"Ceci est utile et recommandé uniquement si vous spécifiez \"sync\" dans la "
-"ligne de commande de \"unmount\"."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "Ceci est utile et recommandé uniquement si vous spécifiez \"sync\" dans la ligne de commande de \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:695
 msgid "Show _message after unmount"
@@ -144,45 +139,36 @@ msgid "_General"
 msgstr "_Général"
 
 #: ../panel-plugin/mount-plugin.c:740
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Cette commande sera exécutée après le montage du périphérique et son point "
-"de montage comme argument.\n"
-"Si vous n'êtes pas sûr de la commande, tapez \"thunar \\%m\" dans la "
-"console.\n"
-"'\\%d' spécifie le périphérique et '\\%m' le point de montage."
+"Cette commande sera exécutée après le montage du périphérique avec son point de montage comme argument.\n"
+"Si vous n'êtes pas sûr de la commande, tapez \"thunar %m\" dans la console.\n"
+"'%d' spécifie le périphérique et '%m' le point de montage."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "_Execute after mounting:"
 msgstr "_Exécuter après le montage :"
 
 #: ../panel-plugin/mount-plugin.c:773
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"ATTENTION : ces options sont réservées aux experts ! Si vous ne savez pas à "
-"quoi elle servent, ne les touchez pas !"
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "ATTENTION : ces options sont réservées aux experts ! Si vous ne savez pas à quoi elle servent, ne les touchez pas !"
 
 #: ../panel-plugin/mount-plugin.c:778
 msgid "_Custom commands"
 msgstr "_Commandes personnalisées :"
 
 #: ../panel-plugin/mount-plugin.c:797
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"La plupart des utilisateurs voudront ajouter \"sudo\" au début de chaque "
-"commande ou \"sync \\%d &&\" à la commande \"unmount \\%d\".\n"
-"'\\%d' spécifie le périphérique et '\\%m' le point de montage."
+"La plupart des utilisateurs voudront ajouter \"sudo\" au début de chaque commande ou \"sync %d &&\" à la commande \"unmount %d\".\n"
+"'%d' spécifie le périphérique et '\\%m' le point de montage."
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Mount command:"
@@ -197,24 +183,16 @@ msgid "_Commands"
 msgstr "_Commandes"
 
 #: ../panel-plugin/mount-plugin.c:853
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"Activer cette option pour afficher aussi les systèmes de fichiers réseau "
-"comme NFS, SMBFS, SHFS et SSHFS."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "Activer cette option pour afficher aussi les systèmes de fichiers réseau comme NFS, SMBFS, SHFS et SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:858
 msgid "Display _network file systems"
 msgstr "Afficher les systèmes de fichiers _réseau"
 
 #: ../panel-plugin/mount-plugin.c:871
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Cocher cette option pour éjecter un lecteur de CD après le démontage et "
-"permettre l'insertion avant le montage."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "Cocher cette option pour éjecter un lecteur de CD après le démontage et permettre l'insertion avant le montage."
 
 #: ../panel-plugin/mount-plugin.c:876
 msgid "_Eject CD-drives"
@@ -240,21 +218,16 @@ msgstr "Systèmes de _fichiers"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Affiche tous les périphériques pouvant être montés et les (dé)monte à la "
-"demande. "
+msgstr "Affiche tous les périphériques pouvant être montés et les (dé)monte à la demande. "
 
 #~ msgid "size : %g\n"
 #~ msgstr "espace : %g\n"
-
 #~ msgid "<b>Commands</b>"
 #~ msgstr "<b>Commandes</b>"
-
 #~ msgid "Specify own commands"
 #~ msgstr "Préciser vos propres commandes"
-
 #~ msgid "<b>General</b>"
 #~ msgstr "<b>Général</b>"
-
 #~ msgid "Mount Plugin"
 #~ msgstr "Greffon de montage"
+
