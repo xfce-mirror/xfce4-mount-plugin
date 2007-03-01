@@ -19,9 +19,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
-
 #include "mount-plugin.h"
-
 
 static void
 on_message_dialog_response (GtkWidget *widget, gpointer *data)
@@ -48,10 +46,6 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
         if (disk->mount_info != NULL) { /* disk is mounted */
             int result = disk_umount (disk, mt->umount_command,
                                       mt->message_dialog, eject);
-
-			g_printf("mt->message_dialog=%d\n"
-					"eject=%d\n"
-					"result=%d\n", mt->message_dialog, eject, result);
 
             if (mt->message_dialog && (!eject || result!=NONE) ) { /* popup dialog */
 
@@ -354,39 +348,41 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     rc = xfce_rc_simple_open (file, TRUE);
     g_free (file);
 
-    if ( value = xfce_rc_read_entry(rc, "on_mount_cmd", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "on_mount_cmd", NULL)) )
       mt->on_mount_cmd = g_strdup (value);
 
-    if ( value = xfce_rc_read_entry(rc, "icon", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "icon", NULL)) )
         mt->icon = g_strdup (value);
     else
-        asprintf (&(mt->icon), "%s/icons/hicolor/scalable/apps/xfce-mount.svg", PACKAGE_DATA_DIR);
+        mt->icon = g_strdup_printf (
+				"%s/icons/hicolor/scalable/apps/xfce-mount.svg",
+				PACKAGE_DATA_DIR );
 
-    if ( value = xfce_rc_read_entry (rc, "mount_command", NULL) )
+    if ( (value = xfce_rc_read_entry (rc, "mount_command", NULL)) )
         mt->mount_command = g_strdup (value);
     else
         mt->mount_command = g_strdup (DEFAULT_MOUNT_COMMAND);
 
-    if ( value = xfce_rc_read_entry (rc, "umount_command", NULL) )
+    if ( (value = xfce_rc_read_entry (rc, "umount_command", NULL)) )
         mt->umount_command = g_strdup (value);
     else
         mt->umount_command = g_strdup (DEFAULT_UMOUNT_COMMAND);
 
-    if ( value = xfce_rc_read_entry (rc, "excluded_filesystems", NULL) )
+    if ( (value = xfce_rc_read_entry (rc, "excluded_filesystems", NULL)) )
         mt->excluded_filesystems = g_strdup (value);
     else
         mt->excluded_filesystems = g_strdup ("");
 
-    if ( value = xfce_rc_read_entry(rc, "message_dialog", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "message_dialog", NULL)) )
         mt->message_dialog = atoi (value);
 
-    if ( value = xfce_rc_read_entry(rc, "include_NFSs", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "include_NFSs", NULL)) )
         mt->include_NFSs= atoi (value);
 
-    if ( value = xfce_rc_read_entry(rc, "exclude_FSs", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "exclude_FSs", NULL)) )
         mt->exclude_FSs= atoi (value);
 
-    if ( value = xfce_rc_read_entry(rc, "eject_drives", NULL) )
+    if ( (value = xfce_rc_read_entry(rc, "eject_drives", NULL)) )
         mt->eject_drives= atoi (value);
 
     xfce_rc_close (rc);
@@ -491,11 +487,11 @@ create_mounter_control (XfcePanelPlugin *plugin)
 }
 
 
-static void
+/* static void
 free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 {
     g_free(md);
-}
+} */
 
 
 static void
@@ -555,9 +551,9 @@ mounter_apply_options (t_mounter_dialog *md)
         mt->icon = g_strdup( gtk_file_chooser_get_filename (
                                    GTK_FILE_CHOOSER(md->string_icon)) );
     else
-        asprintf (&(mt->icon),
+        mt->icon = g_strdup_printf (
                    "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
-                   PACKAGE_DATA_DIR);
+                   PACKAGE_DATA_DIR );
 
        mt->button_pb = gdk_pixbuf_new_from_file (mt->icon, NULL);
        xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mt->button), mt->button_pb);
@@ -587,16 +583,16 @@ on_optionsDialog_response (GtkWidget *dlg, int response, t_mounter_dialog * md)
  * This shows a way to update plugin settings when the user leaves a text
  * entry, by connecting to the "focus-out" event on the entry.
  */
-static gboolean
+/* static gboolean
 entry_lost_focus(t_mounter_dialog * md)
 {
     mounter_apply_options (md);
 
-    /* also write config? */
+    // also write config?
 
-    /* NB: needed to let entry handle focus-out as well */
+    // NB: needed to let entry handle focus-out as well
     return FALSE;
-}
+} */
 
 
 static gboolean
@@ -647,7 +643,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header, FALSE,
                         TRUE, 0);
 
-    GtkWidget *vbox, *label;
+    GtkWidget *vbox;
     t_mounter_dialog * md;
 
     md = g_new0 (t_mounter_dialog, 1);

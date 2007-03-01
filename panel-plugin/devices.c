@@ -30,9 +30,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <libxfce4panel/xfce-panel-plugin.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfcegui4/xfce-exec.h>
+#include <libxfcegui4/dialogs.h>
 
 #include "devices.h"
-#include "helpers.c"
 
 #define KB 1024
 #define MB 1048576
@@ -252,7 +252,6 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
     gchar *tmp = NULL, *tmp2 = NULL;
     gboolean val;
     char *cmd;
-    gint filehandle;
     GError *error = NULL;
 
     #ifdef DEBUG
@@ -394,7 +393,7 @@ gboolean
 disks_remove_device (GPtrArray * pdisks, char *device)
 {
     int i;
-    gpointer p;
+    gpointer p=NULL;
 
     for (i=0; i < pdisks->len ; i++)
     {
@@ -418,7 +417,7 @@ gboolean
 disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
 {
     int i;
-    gpointer p;
+    gpointer p=NULL;
 
     for (i=0; i < pdisks->len ; i++)
     {
@@ -581,7 +580,6 @@ disk_check_mounted (const char *disk)
 	FILE *fmtab = NULL; /* file /etc/mtab */
     struct mntent *pmntent = NULL; /* struct for mnt info */
     gboolean retval = FALSE;
-    int i = 0;
 
     /* open file */
     fmtab = setmntent (MTAB, "r"); /* mtab file */

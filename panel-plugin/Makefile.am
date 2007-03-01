@@ -7,7 +7,9 @@ xfce4_mount_plugin_SOURCES =                                \
         devices.c                                           \
         devices.h                                           \
         mount-plugin.c  				\
-	mount-plugin.h
+		mount-plugin.h					\
+		helpers.c						\
+		helpers.h
 
 xfce4_mount_plugin_CFLAGS =			         \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
@@ -34,7 +36,6 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = 						      	                     \
-	helpers.c													\
 	icons.h 						                                 \
 	kcmpartitions.png                                        \
 	$(desktop_in_in_files)

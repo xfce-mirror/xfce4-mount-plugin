@@ -40,6 +40,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <string.h>
 
 #include "devices.h"
+#include "helpers.h"
 #include "icons.h"
 
 #define APP_NAME N_("Mount Plugin")
