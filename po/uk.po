@@ -1,4 +1,3 @@
-# translation of uk.po to Ukrainian
 # Ukrainian translations for xfce4-mount-plugin package.
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
 # Copytight (C) 2005 Fabian Nowak.
