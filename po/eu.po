@@ -41,42 +41,42 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:65
 #, c-format
 msgid "size:                %g\n"
-msgstr ""
+msgstr "tamina:              %g\n"
 
 #: ../panel-plugin/devices.c:66
-#, fuzzy, c-format
+#, c-format
 msgid "used size:           %g\n"
-msgstr "tamaina erabilia : %g\n"
+msgstr "tamaina erabilia:    %g\n"
 
 #: ../panel-plugin/devices.c:67
-#, fuzzy, c-format
+#, c-format
 msgid "available siz:       %g\n"
-msgstr "tamaina erabilgarria : %g\n"
+msgstr "tamaina erabilgarria: %g\n"
 
 #: ../panel-plugin/devices.c:68
-#, fuzzy, c-format
+#, c-format
 msgid "percentage used:     %d\n"
-msgstr "ehuneko erabilia: %d\n"
+msgstr "ehuneko erabilia:    %d\n"
 
 #: ../panel-plugin/devices.c:69
-#, fuzzy, c-format
+#, c-format
 msgid "file system type:    %s\n"
-msgstr "fitxategi sistema mota : %s\n"
+msgstr "fitxategi sistema mota: %s\n"
 
 #: ../panel-plugin/devices.c:70
-#, fuzzy, c-format
+#, c-format
 msgid "actual mount point:  %s\n"
-msgstr "erabilitako muntatze puntua : %s\n"
+msgstr "uneko muntatze puntua: %s\n"
 
 #: ../panel-plugin/devices.c:150
-#, fuzzy, c-format
+#, c-format
 msgid "disk: %s\n"
-msgstr "diskoa : %s\n"
+msgstr "diskoa: %s\n"
 
 #: ../panel-plugin/devices.c:151
-#, fuzzy, c-format
+#, c-format
 msgid "mount point: %s\n"
-msgstr "muntatze puntua : %s\n"
+msgstr "muntatze puntua: %s\n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -122,9 +122,8 @@ msgstr ""
 "komandoarekin."
 
 #: ../panel-plugin/mount-plugin.c:695
-#, fuzzy
 msgid "Show _message after unmount"
-msgstr "Bistarazi mezua desmuntatu ostean"
+msgstr "Bistarazi _mezua desmuntatu ostean"
 
 #: ../panel-plugin/mount-plugin.c:707
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -139,12 +138,11 @@ msgid "Select an image"
 msgstr "Irudi bat hautatu"
 
 #: ../panel-plugin/mount-plugin.c:725
-#, fuzzy
 msgid "_General"
-msgstr "Orokorra"
+msgstr "_Orokorra"
 
 #: ../panel-plugin/mount-plugin.c:740
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
@@ -152,13 +150,13 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Komando hau gailua muntatzerakon honen muntzate puntua argumentu bezala "
-"abiaraziko da.\n"
-"Zer ipini ziur ez badakizu probatu, \"xffm\" edo \"rox\" edo \"thunar\"."
+"erabiliaz abiaraziko da.\n"
+"Zer ipini ziur ez badakizu probatu, \"thunar %m\" erabiliaz.\n"
+"'%d' erabili daiteke gailua zehazteko, '%m' muntatze puntuarentzat."
 
 #: ../panel-plugin/mount-plugin.c:750
-#, fuzzy
 msgid "_Execute after mounting:"
-msgstr "Munatze ondoren exekutatu:"
+msgstr "Munatze ondoren _exekutatu:"
 
 #: ../panel-plugin/mount-plugin.c:773
 msgid ""
@@ -169,34 +167,31 @@ msgstr ""
 "ez badakizu mantendu zure eskuak hemendik kanpo!"
 
 #: ../panel-plugin/mount-plugin.c:778
-#, fuzzy
 msgid "_Custom commands"
-msgstr "Koandoak"
+msgstr "Koando _Pertsonalizatuak"
 
 #: ../panel-plugin/mount-plugin.c:797
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Erabiltzaile gehienek \"sudo\" beharko dute bi komandoentzat, edo \"sync &&"
-"\" gehitu aurretik \"unmount\" komandoari."
+"Erabiltzaile gehienek \"sudo\" beharko dute bi komandoentzat, edo \"sync %d &&\" "
+" gehitu aurretik \"unmount %d\" komandoari.\n"
+"'%d' erabili daiteke gailua zehazteko, '%m' muntatze puntuarentzat."
 
 #: ../panel-plugin/mount-plugin.c:806
-#, fuzzy
 msgid "_Mount command:"
-msgstr "Munatze komandoa:"
+msgstr "_Muntatze komandoa:"
 
 #: ../panel-plugin/mount-plugin.c:812
-#, fuzzy
 msgid "_Unmount command:"
-msgstr "Desmuntatze komandoa:"
+msgstr "_Desmuntatze komandoa:"
 
 #: ../panel-plugin/mount-plugin.c:838
-#, fuzzy
 msgid "_Commands"
-msgstr "Koandoak"
+msgstr "_Koandoak"
 
 #: ../panel-plugin/mount-plugin.c:853
 msgid ""
@@ -207,19 +202,20 @@ msgstr ""
 "sistemak ere bistaratzeko."
 
 #: ../panel-plugin/mount-plugin.c:858
-#, fuzzy
 msgid "Display _network file systems"
-msgstr "Sare fitxategi sistemak ere bistarazi"
+msgstr "_Sare fitxategi sistemak ere bistarazi"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
+"Aukera hau gaitu CD-gailua desmuntatu ondoren egotzi eta muntatu aurretik "
+"ixteko."
 
 #: ../panel-plugin/mount-plugin.c:876
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "CD-gailuak _egotzi"
 
 #: ../panel-plugin/mount-plugin.c:889
 msgid ""
@@ -227,14 +223,17 @@ msgid ""
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
+"Hurrengo fitxategi sistemak menutik kanpora utzi.\n"
+"Zerrenda zuriune arruntez bereizirik dago.\n"
+"Hau gailu eta muntatze puntu zuzenak ezartzeko dago hemen."
 
 #: ../panel-plugin/mount-plugin.c:899
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "Zehazturiko muntatze puntuak ez erabili"
 
 #: ../panel-plugin/mount-plugin.c:914
 msgid "_File sytems"
-msgstr ""
+msgstr "_Fixtategi sistemak"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
