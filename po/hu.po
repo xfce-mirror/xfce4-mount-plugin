@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-01 00:19+0100\n"
-"PO-Revision-Date: 2007-03-02 08:41+0100\n"
+"PO-Revision-Date: 2007-04-22 12:03+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -138,14 +138,15 @@ msgid "_General"
 msgstr "Általános"
 
 #: ../panel-plugin/mount-plugin.c:740
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "E parancs fut egy eszköz csatolása után annak csatolási pontját argumentumként átadva. \n"
-"Jó tippek: \"xffm\", \"thunar\" vagy \"rox\"."
+"Használd például ezt: \"thunar\ %m\".\n"
+"A '%d' eszközt, a '%m' csatolási pontot ad."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "_Execute after mounting:"
@@ -160,11 +161,13 @@ msgid "_Custom commands"
 msgstr "Egyéni parancsok"
 
 #: ../panel-plugin/mount-plugin.c:797
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync &&\"-t az \"unmount\" parancs elé."
+msgstr ""
+"A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync %d &&\"-t az \"unmount\ %d\" parancs elé.\n"
+"A '%d' eszközt, a '%m' csatolási pontot ad."
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Mount command:"
@@ -188,11 +191,11 @@ msgstr "Hálózati fájlrendszereket is"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr ""
+msgstr "Használd e lehetőséget egy CD-meghajtó kinyitásához lecsatolás után és becsukásához csatolás előtt."
 
 #: ../panel-plugin/mount-plugin.c:876
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "CD-meghajtók kinyitása."
 
 #: ../panel-plugin/mount-plugin.c:889
 msgid ""
@@ -200,10 +203,13 @@ msgid ""
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
+"Az alábbi fájlrendszerek kizárása a menüből.\n"
+"A listában a szóköz választ el.\n"
+"Helyes eszközöket és csatolási pontokat használj."
 
 #: ../panel-plugin/mount-plugin.c:899
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "Kivéve az alábbi fájlrendszereket"
 
 #: ../panel-plugin/mount-plugin.c:914
 msgid "_File sytems"
