@@ -907,7 +907,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_widget_show(md->string_excluded_filesystems);
     gtk_box_pack_start (GTK_BOX(_vbox2), md->string_excluded_filesystems, TRUE, TRUE, 0);
 
-    _label = gtk_label_new_with_mnemonic (_("_File sytems"));
+    _label = gtk_label_new_with_mnemonic (_("_File systems"));
     gtk_widget_show(_label);
     gtk_notebook_append_page (GTK_NOTEBOOK(_notebook), _vbox, _label);
 

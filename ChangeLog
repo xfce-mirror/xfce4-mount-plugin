@@ -1,3 +1,11 @@
+05 may 2007 - version 0.5.2 beginning...
+- fixed broken string, thus breaking the translations...
+- fixed hungarian translation using '\ ' for unknown reasons, which is invalid
+   escape sequence.
+
+02 march 2007 - version 0.5.1
+- added "NULL" to g_strconcat -> prevents segfault
+
 01 march 2007 - version 0.5.0
 - removed bug with mount points containing ugly spaces
 - removed compilation warnings

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-01 00:19+0100\n"
+"POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2006-07-28 23:47+0800\n"
 "Last-Translator: Cosmo Chene <cosmolax@gmail.com>\n"
 "Language-Team: Chinese/Traditional <zh-l10n@linux.org.tw>\n"
@@ -82,65 +82,65 @@ msgstr "掛載點 : %s\n"
 msgid "not mounted\n"
 msgstr "未掛載\n"
 
-#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:286
+#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:285
 msgid "Mount Plugin: Error executing command."
 msgstr "掛載小外掛: 執行指令時發生錯誤。"
 
-#: ../panel-plugin/mount-plugin.c:60
+#: ../panel-plugin/mount-plugin.c:54
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "您現在可以安心移除裝置 \"%s\" 。"
 
-#: ../panel-plugin/mount-plugin.c:63
+#: ../panel-plugin/mount-plugin.c:57
 msgid "An error occured. The device should not be removed!"
 msgstr "發生錯誤。您不應貿然移除這個裝置！"
 
-#: ../panel-plugin/mount-plugin.c:189
+#: ../panel-plugin/mount-plugin.c:183
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">未掛載</span>"
 
-#: ../panel-plugin/mount-plugin.c:482
+#: ../panel-plugin/mount-plugin.c:478
 msgid "devices"
 msgstr "裝置"
 
-#: ../panel-plugin/mount-plugin.c:636
+#: ../panel-plugin/mount-plugin.c:632
 msgid "Edit Properties"
 msgstr "編輯屬性"
 
-#: ../panel-plugin/mount-plugin.c:643
+#: ../panel-plugin/mount-plugin.c:639
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "掛載裝置"
 
-#: ../panel-plugin/mount-plugin.c:690
+#: ../panel-plugin/mount-plugin.c:686
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "啟用此選項只有在您將同步化(sync)與卸載指令(unmount)作結合時才會有用。"
 
-#: ../panel-plugin/mount-plugin.c:695
+#: ../panel-plugin/mount-plugin.c:691
 #, fuzzy
 msgid "Show _message after unmount"
 msgstr "卸載後顯示提示訊息"
 
-#: ../panel-plugin/mount-plugin.c:707
+#: ../panel-plugin/mount-plugin.c:703
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "您可以挑選特定的小圖示讓外掛在面板上看起來很明顯。"
 
-#: ../panel-plugin/mount-plugin.c:714
+#: ../panel-plugin/mount-plugin.c:710
 msgid "Icon:"
 msgstr "圖示:"
 
-#: ../panel-plugin/mount-plugin.c:718
+#: ../panel-plugin/mount-plugin.c:714
 msgid "Select an image"
 msgstr "請選擇圖片檔"
 
-#: ../panel-plugin/mount-plugin.c:725
+#: ../panel-plugin/mount-plugin.c:721
 #, fuzzy
 msgid "_General"
 msgstr "一般"
 
-#: ../panel-plugin/mount-plugin.c:740
+#: ../panel-plugin/mount-plugin.c:736
 #, fuzzy, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -151,24 +151,24 @@ msgstr ""
 "在此指定的指令會在成功掛載裝置後繼續處理已掛上裝置的掛載點。\n"
 "如果您不確定要作什麼，可以填入\"xffm\"、\"rox\"，或是\"thunar\"。"
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:746
 #, fuzzy
 msgid "_Execute after mounting:"
 msgstr "掛載成功後執行:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:769
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
 "警告: 這些選項限定專家使用！如果您不清楚這些選項的作用，最好還是不要嘗試！"
 
-#: ../panel-plugin/mount-plugin.c:778
+#: ../panel-plugin/mount-plugin.c:774
 #, fuzzy
 msgid "_Custom commands"
 msgstr "指令"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:793
 #, fuzzy, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -178,55 +178,55 @@ msgstr ""
 "多數使用者會想在掛載或卸載前預先執行 \"sudo\" 或是在卸載前(unmount)預先執行同"
 "步化(sync &&)。"
 
-#: ../panel-plugin/mount-plugin.c:806
+#: ../panel-plugin/mount-plugin.c:802
 #, fuzzy
 msgid "_Mount command:"
 msgstr "掛載指令:"
 
-#: ../panel-plugin/mount-plugin.c:812
+#: ../panel-plugin/mount-plugin.c:808
 #, fuzzy
 msgid "_Unmount command:"
 msgstr "卸載指令:"
 
-#: ../panel-plugin/mount-plugin.c:838
+#: ../panel-plugin/mount-plugin.c:834
 #, fuzzy
 msgid "_Commands"
 msgstr "指令"
 
-#: ../panel-plugin/mount-plugin.c:853
+#: ../panel-plugin/mount-plugin.c:849
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "啟用這個選項後也會顯示網路檔案系統，如：NFS、SMBFS、SHFS 和 SSHFS。"
 
-#: ../panel-plugin/mount-plugin.c:858
+#: ../panel-plugin/mount-plugin.c:854
 #, fuzzy
 msgid "Display _network file systems"
 msgstr "也顯示網路檔案系統"
 
-#: ../panel-plugin/mount-plugin.c:871
+#: ../panel-plugin/mount-plugin.c:867
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:876
+#: ../panel-plugin/mount-plugin.c:872
 msgid "_Eject CD-drives"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:889
+#: ../panel-plugin/mount-plugin.c:885
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:895
 msgid "E_xclude specified file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:914
-msgid "_File sytems"
+#: ../panel-plugin/mount-plugin.c:910
+msgid "_File systems"
 msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2

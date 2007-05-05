@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-16 20:05+0100\n"
+"POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2007-01-29 12:35+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <translation-team-sq@lists.sourceforge.net>\n"
@@ -15,181 +15,238 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-
-#: ../panel-plugin/devices.c:52
+#: ../panel-plugin/devices.c:53
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:53
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
 #: ../panel-plugin/devices.c:65
 #, c-format
-msgid "size : %g\n"
-msgstr "madhësi : %g\n"
+msgid "size:                %g\n"
+msgstr ""
 
 #: ../panel-plugin/devices.c:66
-#, c-format
-msgid "used size : %g\n"
+#, fuzzy, c-format
+msgid "used size:           %g\n"
 msgstr "madhësi e të përdorurës : %g\n"
 
 #: ../panel-plugin/devices.c:67
-#, c-format
-msgid "available size : %g\n"
+#, fuzzy, c-format
+msgid "available siz:       %g\n"
 msgstr "madhësi e të passhmes : %g\n"
 
 #: ../panel-plugin/devices.c:68
-#, c-format
-msgid "percentage used: %d\n"
+#, fuzzy, c-format
+msgid "percentage used:     %d\n"
 msgstr "përqindje e së përdorurës: %d\n"
 
 #: ../panel-plugin/devices.c:69
-#, c-format
-msgid "file system type : %s\n"
+#, fuzzy, c-format
+msgid "file system type:    %s\n"
 msgstr "tip sistemi kartelash : %s\n"
 
 #: ../panel-plugin/devices.c:70
-#, c-format
-msgid "actual mount point : %s\n"
+#, fuzzy, c-format
+msgid "actual mount point:  %s\n"
 msgstr "pikë montimi aktuale : %s\n"
 
-#: ../panel-plugin/devices.c:157
-#, c-format
-msgid "disk : %s\n"
+#: ../panel-plugin/devices.c:150
+#, fuzzy, c-format
+msgid "disk: %s\n"
 msgstr "disk : %s\n"
 
-#: ../panel-plugin/devices.c:158
-#, c-format
-msgid "mount point : %s\n"
+#: ../panel-plugin/devices.c:151
+#, fuzzy, c-format
+msgid "mount point: %s\n"
 msgstr "pikë montimi : %s\n"
 
-#: ../panel-plugin/devices.c:162
+#: ../panel-plugin/devices.c:155
 #, c-format
 msgid "not mounted\n"
 msgstr "e pamontuar\n"
 
-#: ../panel-plugin/devices.c:225
-#: ../panel-plugin/devices.c:272
+#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:285
 msgid "Mount Plugin: Error executing command."
 msgstr "Shtojca e Montimeve: Gabim gjatë përmbushjes së urdhrit."
 
-#: ../panel-plugin/mount-plugin.c:50
+#: ../panel-plugin/mount-plugin.c:54
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Pajisja \"%s\" tani mund të hiqet pa rrezik."
 
-#: ../panel-plugin/mount-plugin.c:53
+#: ../panel-plugin/mount-plugin.c:57
 msgid "An error occured. The device should not be removed!"
 msgstr "Pati një gabim. Pajisja nuk do të duhej hequr!"
 
-#: ../panel-plugin/mount-plugin.c:177
+#: ../panel-plugin/mount-plugin.c:183
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">e pamontuar</span>"
 
-#: ../panel-plugin/mount-plugin.c:440
+#: ../panel-plugin/mount-plugin.c:478
 msgid "devices"
 msgstr "pajisje"
 
-#: ../panel-plugin/mount-plugin.c:575
+#: ../panel-plugin/mount-plugin.c:632
 msgid "Edit Properties"
 msgstr "Përpunoni Veti"
 
-#. end extensions for panel 4.4
-#: ../panel-plugin/mount-plugin.c:582
+#: ../panel-plugin/mount-plugin.c:639
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "Monto pajisje"
 
-#: ../panel-plugin/mount-plugin.c:615
-msgid "Commands"
-msgstr "Urdhra"
-
-#: ../panel-plugin/mount-plugin.c:629
-msgid "<b>Commands</b>"
-msgstr "<b>Urdhra</b>"
-
-#: ../panel-plugin/mount-plugin.c:641
-msgid "Execute after mounting:"
-msgstr "Ekzekuto pas montimit:"
-
-#: ../panel-plugin/mount-plugin.c:648
+#: ../panel-plugin/mount-plugin.c:686
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"xffm\" or \"rox\" or \"thunar\"."
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
 msgstr ""
-"Ky urdhër do të përmbushet pas montimit të pajisjes, duke përdorur pikën e montimit të pajisjes si argument.\n"
-"Nëse jeni i pasigurtë rreth asaj se çfarë të jepni, provoni \"xffm\" ose \"rox\" ose \"thunar\"."
+"Ky është i dobishëm dhe i këshilluar vetëm nëse jepni \"njëkohëso\" si pjesë "
+"e vargut të urdhrit \"çmonto\"."
 
-#: ../panel-plugin/mount-plugin.c:674
-msgid "Specify own commands"
-msgstr "Tregoni urdhra vetjake"
-
-#: ../panel-plugin/mount-plugin.c:685
-msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "KUJDES: Këto mundësi janë vetëm për të sprovuarit! Nëse nuk e dini se çfarë është me vlerë për ju, larg duart që këtej!"
-
-#: ../panel-plugin/mount-plugin.c:698
-msgid "Mount command:"
-msgstr "Urdhër montimi:"
-
-#: ../panel-plugin/mount-plugin.c:705
-msgid "Unmount command:"
-msgstr "Urdhër çmontimi:"
-
-#: ../panel-plugin/mount-plugin.c:728
-msgid "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync &&\" to the \"unmount\" command."
-msgstr "Shumica  e përdoruesve do të duan vetëm të paravendosin \"sudo\" për të dy urdhrat ose të paravendosin \"sync &&\" te urdhri \"çmonto\"."
-
-#: ../panel-plugin/mount-plugin.c:746
-msgid "<b>General</b>"
-msgstr "<b>Të përgjithshme</b>"
-
-#: ../panel-plugin/mount-plugin.c:749
-msgid "General"
-msgstr "Të përgjithshme"
-
-#: ../panel-plugin/mount-plugin.c:766
-msgid "Show message after unmount"
+#: ../panel-plugin/mount-plugin.c:691
+#, fuzzy
+msgid "Show _message after unmount"
 msgstr "Shfaq mesazh pas çmontimi"
 
-#: ../panel-plugin/mount-plugin.c:772
-msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Ky është i dobishëm dhe i këshilluar vetëm nëse jepni \"njëkohëso\" si pjesë e vargut të urdhrit \"çmonto\"."
-
-#: ../panel-plugin/mount-plugin.c:785
-msgid "Also display network file systems"
-msgstr "Shfaq gjithashtu sisteme kartelash rrjeti"
-
-#: ../panel-plugin/mount-plugin.c:791
-msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "Aktivizojeni këtë mundësi për të shfaqur edhe sisteme kartelash rrjeti si NFS, SMBFS, SHFS dhe SSHFS."
-
-#: ../panel-plugin/mount-plugin.c:802
+#: ../panel-plugin/mount-plugin.c:703
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Për paraqitjen në panel, mund të caktoni një ikonë të dallueshme."
 
-#: ../panel-plugin/mount-plugin.c:809
+#: ../panel-plugin/mount-plugin.c:710
 msgid "Icon:"
 msgstr "Ikonë:"
 
-#: ../panel-plugin/mount-plugin.c:813
+#: ../panel-plugin/mount-plugin.c:714
 msgid "Select an image"
 msgstr "Përzgjidhni një pamje"
+
+#: ../panel-plugin/mount-plugin.c:721
+#, fuzzy
+msgid "_General"
+msgstr "Të përgjithshme"
+
+#: ../panel-plugin/mount-plugin.c:736
+#, fuzzy, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"thunar %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Ky urdhër do të përmbushet pas montimit të pajisjes, duke përdorur pikën e "
+"montimit të pajisjes si argument.\n"
+"Nëse jeni i pasigurtë rreth asaj se çfarë të jepni, provoni \"xffm\" ose "
+"\"rox\" ose \"thunar\"."
+
+#: ../panel-plugin/mount-plugin.c:746
+#, fuzzy
+msgid "_Execute after mounting:"
+msgstr "Ekzekuto pas montimit:"
+
+#: ../panel-plugin/mount-plugin.c:769
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"KUJDES: Këto mundësi janë vetëm për të sprovuarit! Nëse nuk e dini se çfarë "
+"është me vlerë për ju, larg duart që këtej!"
+
+#: ../panel-plugin/mount-plugin.c:774
+#, fuzzy
+msgid "_Custom commands"
+msgstr "Urdhra"
+
+#: ../panel-plugin/mount-plugin.c:793
+#, fuzzy, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Shumica  e përdoruesve do të duan vetëm të paravendosin \"sudo\" për të dy "
+"urdhrat ose të paravendosin \"sync &&\" te urdhri \"çmonto\"."
+
+#: ../panel-plugin/mount-plugin.c:802
+#, fuzzy
+msgid "_Mount command:"
+msgstr "Urdhër montimi:"
+
+#: ../panel-plugin/mount-plugin.c:808
+#, fuzzy
+msgid "_Unmount command:"
+msgstr "Urdhër çmontimi:"
+
+#: ../panel-plugin/mount-plugin.c:834
+#, fuzzy
+msgid "_Commands"
+msgstr "Urdhra"
+
+#: ../panel-plugin/mount-plugin.c:849
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Aktivizojeni këtë mundësi për të shfaqur edhe sisteme kartelash rrjeti si "
+"NFS, SMBFS, SHFS dhe SSHFS."
+
+#: ../panel-plugin/mount-plugin.c:854
+#, fuzzy
+msgid "Display _network file systems"
+msgstr "Shfaq gjithashtu sisteme kartelash rrjeti"
+
+#: ../panel-plugin/mount-plugin.c:867
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:872
+msgid "_Eject CD-drives"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:885
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:895
+msgid "E_xclude specified file systems"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:910
+#, fuzzy
+msgid "_File systems"
+msgstr "tip sistemi kartelash : %s\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Shfaq tërë pajisjet e montueshme dhe i (ç)monton ato sipas kërkesave."
 
+#~ msgid "size : %g\n"
+#~ msgstr "madhësi : %g\n"
+
+#~ msgid "<b>Commands</b>"
+#~ msgstr "<b>Urdhra</b>"
+
+#~ msgid "Specify own commands"
+#~ msgstr "Tregoni urdhra vetjake"
+
+#~ msgid "<b>General</b>"
+#~ msgstr "<b>Të përgjithshme</b>"
