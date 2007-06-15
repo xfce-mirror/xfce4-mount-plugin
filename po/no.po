@@ -1,18 +1,17 @@
-# Xfce4-Mount-Plugin for easily (un)mounting devices in your system.
-# Copyright (C) 2004, 2005 Jean-Baptiste Dulong.
-# Copyright (C) 2005, 2006 Fabian Nowak.
-# This file is distributed under the same license as the
-#   xfce4-mount-plugin package.
+# Norwegian translation of the xfce4-mount-plugin package.
+# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
+# Copytight (C) 2005-2007 Fabian Nowak.
+# This file is distributed under the same license as the xfce4-mount-plugin package.
 # Jon Kristian Nilsen <jonn3@broadpark.no>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.4.5\n"
+"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2006-08-07 00:00+0200\n"
 "Last-Translator: Jon Kristian Nilsen <jonn3@broadpark.no>\n"
-"Language-Team: NORWEGIAN <no@li.org>\n"
+"Language-Team: Norwegian <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

@@ -1,14 +1,13 @@
-# Ukrainian translations for xfce4-mount-plugin package.
+# Ukrainian translation of the xfce4-mount-plugin package.
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005 Fabian Nowak.
-# This file is distributed under the same license as the
-#   xfce4-mount-plugin package.
-#
+# Copytight (C) 2005-2007 Fabian Nowak.
+# This file is distributed under the same license as the xfce4-mount-plugin package.
 # Eugene Ostapets <eostapets@altlinux.ru>, 2005.
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: uk\n"
+"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2007-03-01 20:14+0100\n"

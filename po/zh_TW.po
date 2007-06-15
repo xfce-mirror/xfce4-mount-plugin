@@ -1,18 +1,17 @@
-# Chinese/Traditional translation for xfce4-mount-plugin.
-# Copyright (C) 2006 Fabian Nowak
+# Traditional Chinese translation of the xfce4-mount-plugin package.
+# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
+# Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Cosmo Chene <cosmolax@gmail.com>, 2006.
 # 
-# 
-# 
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
+"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2006-07-28 23:47+0800\n"
 "Last-Translator: Cosmo Chene <cosmolax@gmail.com>\n"
-"Language-Team: Chinese/Traditional <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese/Traditional <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

@@ -1,18 +1,19 @@
-#
+# Galician translation of the xfce4-mount-plugin package.
+# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
+# Copytight (C) 2005-2007 Fabian Nowak.
+# This file is distributed under the same license as the xfce4-mount-plugin package.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006
-#
-# Proxecto Trasno http://trasno.net
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.01\n"
+"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-05 20:03+0200\n"
 "PO-Revision-Date: 2006-08-24 13:37+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <trasno@trasno.net>\n"
+"Language-Team: Galician <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../panel-plugin/devices.c:53
