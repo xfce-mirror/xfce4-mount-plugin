@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: xfce4-mount-plugin 0.5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-05 20:03+0200\n"
-"PO-Revision-Date: 2007-02-17 16:04+0100\n"
+"POT-Creation-Date: 2007-07-04 22:53+0200\n"
+"PO-Revision-Date: 2007-07-04 23:21+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "Das Gerät »%s« sollte sich jetzt sicher entfernen lassen."
 
 #: ../panel-plugin/mount-plugin.c:57
-msgid "An error occured. The device should not be removed!"
+msgid "An error occurred. The device should not be removed!"
 msgstr "Ein Fehler hat sich ereignet. Das Gerät sollte nicht entfernt werden!"
 
 #: ../panel-plugin/mount-plugin.c:183
@@ -235,7 +235,6 @@ msgid "E_xclude specified file systems"
 msgstr "_Folgende Dateisysteme ausschließen"
 
 #: ../panel-plugin/mount-plugin.c:910
-#, fuzzy
 msgid "_File systems"
 msgstr "_Dateisysteme"
 

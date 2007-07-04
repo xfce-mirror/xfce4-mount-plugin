@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-05 20:03+0200\n"
+"POT-Creation-Date: 2007-07-04 22:53+0200\n"
 "PO-Revision-Date: 2006-07-28 23:47+0800\n"
 "Last-Translator: Cosmo Chene <cosmolax@gmail.com>\n"
 "Language-Team: Chinese/Traditional <xfce-i18n@xfce.org>\n"
@@ -91,7 +91,8 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "您現在可以安心移除裝置 \"%s\" 。"
 
 #: ../panel-plugin/mount-plugin.c:57
-msgid "An error occured. The device should not be removed!"
+#, fuzzy
+msgid "An error occurred. The device should not be removed!"
 msgstr "發生錯誤。您不應貿然移除這個裝置！"
 
 #: ../panel-plugin/mount-plugin.c:183

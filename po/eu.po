@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-05 20:03+0200\n"
+"POT-Creation-Date: 2007-07-04 22:53+0200\n"
 "PO-Revision-Date: 2006-04-20 22:26+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <xfce-i18n@xfce.org>\n"
@@ -92,7 +92,8 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" gailua orain ziurtasunez deskonektatu daiteke."
 
 #: ../panel-plugin/mount-plugin.c:57
-msgid "An error occured. The device should not be removed!"
+#, fuzzy
+msgid "An error occurred. The device should not be removed!"
 msgstr "Errore bat gertatu da. Gailua ezin da ezabatu!"
 
 #: ../panel-plugin/mount-plugin.c:183

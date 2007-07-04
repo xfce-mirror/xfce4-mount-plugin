@@ -54,7 +54,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
                         msg = _("The device \"%s\" should be removable safely "
                                     "now.");
                     else
-                        msg = _("An error occured. The device should not be "
+                        msg = _("An error occurred. The device should not be "
                                     "removed!");
 
                 my_dlg = gtk_message_dialog_new (NULL,

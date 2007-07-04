@@ -1,3 +1,8 @@
+04 july 2007 - version 0.5.3
+- fixed another broken string
+- added language "nb"
+- added cifs to list of network filesystems
+
 05 may 2007 - version 0.5.2 beginning...
 - fixed broken string, thus breaking the translations...
 - fixed hungarian translation using '\ ' for unknown reasons, which is invalid

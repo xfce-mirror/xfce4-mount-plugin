@@ -9,7 +9,7 @@
 #
 ###################################
 
-xfce4-mount-plugin - version 0.4.4
+xfce4-mount-plugin - version 0.5.3
 
 This little plugin behaves like the "kwikdisk - removable media utility" shipped
 with KDE.
@@ -29,4 +29,21 @@ list of mounted devices (i.e. same data as the 'df' command), using setmntent()
 and getmntent().
 For mouting a device, the plugin simply runs a "mount /mount_point/ " command if
 no other command is explicitly specified in the options dialog.
+
+Acknowledgements go to the following people for several major or minor reasons,
+mostly for nice ideas and fea tures, but also for bugfixes and other stuff:
+
+ - Christoph Kühne
+ - Pavol Rusnak
+ - Lionel Le Folgoc
+ - Enrico Troeger
+ - Sergei "GeoNix"
+ - Neoklis
+ - Robby Workman
+ - Matthias Eller
+ - Jari Eskelinen
+ - Joost Kremers
+ - Jean-Baptiste Dulong
+
+Thank you.
 

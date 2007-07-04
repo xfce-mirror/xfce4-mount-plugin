@@ -329,6 +329,7 @@ disks_new (gboolean include_NFSs)
                 g_str_has_prefix(pfstab->fs_vfstype, "fuse") |
                 g_str_has_prefix(pfstab->fs_vfstype, "shfs") |
                 g_str_has_prefix(pfstab->fs_vfstype, "nfs") |
+                g_str_has_prefix(pfstab->fs_vfstype, "cifs") |
                 g_str_has_prefix(pfstab->fs_vfstype, "smbfs");
 
         if ( has_valid_mount_device &&
@@ -518,6 +519,7 @@ disks_refresh(GPtrArray * pdisks)
 			  g_str_has_prefix(pmntent->mnt_type, "fuse") ||
 			  g_str_has_prefix(pmntent->mnt_type, "nfs") ||
 			  g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
+			  g_str_has_prefix(pmntent->mnt_type, "cifs") ||
 			  g_str_has_prefix(pmntent->mnt_type, "shfs") )
 			) continue;
 
@@ -552,7 +554,7 @@ disk_classify (char *device, char *mountpoint)
      */
     if (strstr(device, "/dev")==NULL) { /* remote or unknown */
         if (strstr(device, "nfs") || strstr(device, "smbfs")
-            || strstr(device, "shfs") || strstr(device, "fuse")) {
+            || strstr(device, "shfs") || strstr(device, "cifs") || strstr(device, "fuse")) {
             dc = REMOTE;
         }
     }
