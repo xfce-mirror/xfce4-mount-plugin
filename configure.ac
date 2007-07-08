@@ -63,7 +63,7 @@ XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.20])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
 
 dnl Check for i18n support
-XDT_I18N([ca cs de el en_GB eu fr gl hu ja ko lt nb no pl ru sq uk vi zh_TW])
+XDT_I18N([ca cs de el en_GB eu fr gl hu ja ko lt nb no pl pt_PT ru sq uk vi zh_TW])
 
 dnl Check for debugging support
 XDT_FEATURE_DEBUG()
