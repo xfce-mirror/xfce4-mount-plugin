@@ -64,7 +64,7 @@ msgstr "sistema de arquivos:    %s\n"
 #: ../panel-plugin/devices.c:70
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "ponto de montagem atual:  %s\n"
+msgstr "ponto de montagem real:  %s\n"
 
 #: ../panel-plugin/devices.c:150
 #, c-format
