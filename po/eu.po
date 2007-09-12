@@ -92,9 +92,8 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" gailua orain ziurtasunez deskonektatu daiteke."
 
 #: ../panel-plugin/mount-plugin.c:57
-#, fuzzy
 msgid "An error occurred. The device should not be removed!"
-msgstr "Errore bat gertatu da. Gailua ezin da ezabatu!"
+msgstr "Errore bat gertatu da. Gailua ez zen kendu beharko!"
 
 #: ../panel-plugin/mount-plugin.c:183
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -232,9 +231,8 @@ msgid "E_xclude specified file systems"
 msgstr "Zehazturiko muntatze puntuak ez erabili"
 
 #: ../panel-plugin/mount-plugin.c:910
-#, fuzzy
 msgid "_File systems"
-msgstr "_Fixtategi sistemak"
+msgstr "_Fitxategi sistemak"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
