@@ -1,0 +1,13 @@
+----- 2007-09-16 21:32 GMT -----
+Version 0.5.4 now detects automatically mounted devices.
+Note that for unmounting  them, you might need to setup 
+special commands, like "pmount", or "sudo umount".
+
+Also does it automatically map the rather long name
+"/dev/mapper/logvol1/volume2" to "LVM 1:2". Currently,
+you cannot disable this behavior, as its is more than 
+strongly recommended. Upon thousands of requests, I
+might consider adding another switch in the already 
+rather big options dialog.
+
+

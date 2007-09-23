@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.4.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-04 22:53+0200\n"
+"POT-Creation-Date: 2007-09-18 21:50+0200\n"
 "PO-Revision-Date: 2006-02-19 22:51+0300\n"
 "Last-Translator: Phan Vĩnh Thịnh <teppi@vnlinux.org>\n"
 "Language-Team: Vietnamese <xfce-i18n@xfce.org>\n"
@@ -17,72 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 
-#: ../panel-plugin/devices.c:53
+#: ../panel-plugin/devices.c:54
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:57
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:65
+#: ../panel-plugin/devices.c:66
 #, c-format
 msgid "size:                %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:66
+#: ../panel-plugin/devices.c:67
 #, fuzzy, c-format
 msgid "used size:           %g\n"
 msgstr "sử dụng : %g\n"
 
-#: ../panel-plugin/devices.c:67
+#: ../panel-plugin/devices.c:68
 #, fuzzy, c-format
 msgid "available siz:       %g\n"
 msgstr "còn : %g\n"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:69
 #, fuzzy, c-format
 msgid "percentage used:     %d\n"
 msgstr "phần trăm đã dùng: %d\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:70
 #, fuzzy, c-format
 msgid "file system type:    %s\n"
 msgstr "dạng hệ thống tập tin: %s\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:71
 #, fuzzy, c-format
 msgid "actual mount point:  %s\n"
 msgstr "điểm gắn thật sự : %s\n"
 
-#: ../panel-plugin/devices.c:150
+#: ../panel-plugin/devices.c:155
 #, fuzzy, c-format
 msgid "disk: %s\n"
 msgstr "đĩa : %s\n"
 
-#: ../panel-plugin/devices.c:151
+#: ../panel-plugin/devices.c:156
 #, fuzzy, c-format
 msgid "mount point: %s\n"
 msgstr "điểm gắn : %s\n"
 
-#: ../panel-plugin/devices.c:155
+#: ../panel-plugin/devices.c:160
 #, c-format
 msgid "not mounted\n"
 msgstr "chưa gắn\n"
 
-#: ../panel-plugin/devices.c:236 ../panel-plugin/devices.c:285
+#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
 msgstr "Plugin gắn: Lỗi thực hiện câu lệnh."
 
@@ -95,50 +95,50 @@ msgstr ""
 msgid "An error occurred. The device should not be removed!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:183
+#: ../panel-plugin/mount-plugin.c:216
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">chưa gắn</span>"
 
-#: ../panel-plugin/mount-plugin.c:478
+#: ../panel-plugin/mount-plugin.c:511
 msgid "devices"
 msgstr "thiết bị"
 
-#: ../panel-plugin/mount-plugin.c:632
+#: ../panel-plugin/mount-plugin.c:665
 msgid "Edit Properties"
 msgstr "Sửa thuộc tính"
 
-#: ../panel-plugin/mount-plugin.c:639
+#: ../panel-plugin/mount-plugin.c:672
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "Thiết bị gắn"
 
-#: ../panel-plugin/mount-plugin.c:686
+#: ../panel-plugin/mount-plugin.c:719
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:691
+#: ../panel-plugin/mount-plugin.c:724
 msgid "Show _message after unmount"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:703
+#: ../panel-plugin/mount-plugin.c:736
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:743
 msgid "Icon:"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:714
+#: ../panel-plugin/mount-plugin.c:747
 msgid "Select an image"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:721
+#: ../panel-plugin/mount-plugin.c:754
 msgid "_General"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:736
+#: ../panel-plugin/mount-plugin.c:769
 #, fuzzy, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -150,12 +150,12 @@ msgstr ""
 "số. \n"
 "Nếu không biết điền gì, thì hãy thử \"xffm\" hoặc \"rox\" hoặc \"thunar\"."
 
-#: ../panel-plugin/mount-plugin.c:746
+#: ../panel-plugin/mount-plugin.c:779
 #, fuzzy
 msgid "_Execute after mounting:"
 msgstr "Lệnh chạy sau khi gắn:"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:802
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -163,12 +163,12 @@ msgstr ""
 "CẢNH BÁO: Những tùy chọn này chỉ dành cho người dùng có kinh nghiệm! Nếu "
 "không biết rõ về chúng, xin đừng thay đổi gì!"
 
-#: ../panel-plugin/mount-plugin.c:774
+#: ../panel-plugin/mount-plugin.c:807
 #, fuzzy
 msgid "_Custom commands"
 msgstr "Câu lệnh gắn:"
 
-#: ../panel-plugin/mount-plugin.c:793
+#: ../panel-plugin/mount-plugin.c:826
 #, fuzzy, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -176,53 +176,53 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Đa số người dùng chỉ cần thêm \"sudo\" vào trước cả hai câu lệnh."
 
-#: ../panel-plugin/mount-plugin.c:802
+#: ../panel-plugin/mount-plugin.c:835
 #, fuzzy
 msgid "_Mount command:"
 msgstr "Câu lệnh gắn:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:841
 #, fuzzy
 msgid "_Unmount command:"
 msgstr "Câu lệnh huỷ gắn:"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:867
 #, fuzzy
 msgid "_Commands"
 msgstr "Câu lệnh gắn:"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:882
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:854
+#: ../panel-plugin/mount-plugin.c:887
 msgid "Display _network file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:900
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:872
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Eject CD-drives"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:885
+#: ../panel-plugin/mount-plugin.c:918
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:928
 msgid "E_xclude specified file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:910
+#: ../panel-plugin/mount-plugin.c:943
 msgid "_File systems"
 msgstr ""
 

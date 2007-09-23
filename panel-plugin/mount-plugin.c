@@ -87,6 +87,35 @@ mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 
 }
 
+/**
+ * Format the long /dev/mapper/volume to something better:
+ *	LVM	x:y
+ */
+void
+format_LVM_name	(const char *disk_device, gchar **formatted_diskname)
+{
+
+	gint volume, logvol, i;
+
+	i = strlen(disk_device) - 1;
+
+	do
+		i--;
+	while (i>0 && g_ascii_isdigit(disk_device[i]) );
+	logvol = atoi(disk_device+i+1);
+
+	do
+		i--;
+	while (i>0 && g_ascii_isalpha (disk_device[i]));
+
+	do
+		i--;
+	while (i>0 && g_ascii_isdigit(disk_device[i]));
+	volume = atoi(disk_device+i+1);
+
+	*formatted_diskname = g_strdup_printf("LVM	%d:%d", volume, logvol);
+}
+
 
 /**
  * Create a new t_disk_display from t_disk infos.
@@ -95,6 +124,7 @@ static t_disk_display*
 disk_display_new (t_disk *disk, t_mounter *mounter)
 {
 	t_disk_display * dd;
+	char *formatted_diskname;
 
     TRACE ("enters disk_display_new");
 
@@ -110,8 +140,15 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         dd->hbox = gtk_hbox_new (FALSE, 10);
         gtk_container_add (GTK_CONTAINER(dd->menu_item), dd->hbox);
 
-        dd->label_disk = gtk_label_new (g_strconcat(disk->device, " -> ",
+        if (g_str_has_prefix(disk->device, "/dev/mapper/volume"))
+        	format_LVM_name	(disk->device, &formatted_diskname);
+        else
+			formatted_diskname = g_strdup(disk->device);
+
+        dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
                                         disk->mount_point, NULL));
+		g_free (formatted_diskname);
+
         /*change to uniform label size*/
         gtk_label_set_width_chars(GTK_LABEL(dd->label_disk),28);
         /* gtk_label_set_justify(GTK_LABEL(dd->label_disk),GTK_JUSTIFY_LEFT); */
@@ -140,7 +177,7 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 
 
 static void
-disk_display_refresh(t_disk_display * disk_display,
+disk_display_refresh (t_disk_display * disk_display,
                                  t_mount_info * mount_info)
 {
 	char * text;
@@ -155,13 +192,9 @@ disk_display_refresh(t_disk_display * disk_display,
         if (mount_info != NULL)
         {    /* device is mounted */
             used = get_size_human_readable (mount_info->used);
-            DBG("used is now : %s",used);
             size = get_size_human_readable (mount_info->size);
-            DBG("size is now : %s",size);
             avail = get_size_human_readable (mount_info->avail);
-            DBG("avail is now : %s",size);
             text = g_strdup_printf ("[%s/%s] %s free", used, size, avail);
-            DBG("text is now : %s",text);
 
             g_free(used);
             g_free(size);
@@ -223,7 +256,7 @@ mounter_data_new (t_mounter *mt)
     int i, res;
     t_disk * disk;
     t_disk_display * disk_display;
-    GPtrArray *array;
+    GPtrArray *array =	NULL;
     char *dev_mp; /* device or mountpoint */
     gboolean removed_device;
 
@@ -231,7 +264,7 @@ mounter_data_new (t_mounter *mt)
     mt->pdisks = disks_new (mt->include_NFSs);
 
 	/* remove unwanted file systems from list */
-		if (mt->exclude_FSs) {
+	if (mt->exclude_FSs) {
 		array = g_ptr_array_new();
 		DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
 		res = seperate_list(array, mt->excluded_filesystems);
@@ -245,7 +278,7 @@ mounter_data_new (t_mounter *mt)
 	}
 
     /* get dynamic infos on mounts */
-    disks_refresh (mt->pdisks);
+    disks_refresh (mt->pdisks, array /*	=GPtrArray *excluded_FSs */ );
 
     /* menu with menu_item */
     mt->menu = gtk_menu_new ();

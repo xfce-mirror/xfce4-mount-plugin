@@ -27,10 +27,12 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <config.h>
 #endif
 
-
-/* #define DEBUG 1
-#define DEBUG_TRACE 1 */
-
+#ifdef DEBUG
+#undef DEBUG
+#endif
+#ifdef DEBUG_TRACE
+#undef DEBUG_TRACE
+#endif
 
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>

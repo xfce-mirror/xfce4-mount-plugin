@@ -19,20 +19,21 @@ rpm: dist
 	rpmbuild -ta $(PACKAGE)-$(VERSION).tar.gz
 	@rm -f $(PACKAGE)-$(VERSION).tar.gz
 
-EXTRA_DIST =                     \
-	AUTHORS								\
-	COPYING								\
-	ChangeLog							\
-	INSTALL								\
-	NEWS								   \
-	README								\
-	TODO								   \
-	xfce4-mount-plugin.spec       \
-	intltool-extract.in				\
-	intltool-merge.in					\
-	intltool-update.in            
+EXTRA_DIST =                     			\
+	AUTHORS									\
+	COPYING									\
+	ChangeLog								\
+	INSTALL									\
+	NEWS									\
+	README									\
+	TODO									\
+	xfce4-mount-plugin.spec.in       		\
+	intltool-extract.in						\
+	intltool-merge.in						\
+	intltool-update.in
 
 DISTCLEANFILES =							\
 	intltool-extract						\
 	intltool-merge							\
-	intltool-update
+	intltool-update							\
+	xfce4-mount-plugin.spec

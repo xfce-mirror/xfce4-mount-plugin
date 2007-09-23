@@ -7,7 +7,7 @@ dnl 2005-2007 Fabian Nowak <timystery@arcor.de>
 dnl
 dnl for Xfce4-panel 4.3 and higher only!
 
-m4_define([mount_version],[0.5.3])
+m4_define([mount_version],[0.5.4])
 
 AC_INIT([xfce4-mount-plugin], [mount_version()],
 	[timystery@arcor.de])
@@ -63,7 +63,7 @@ XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.20])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20])
 
 dnl Check for i18n support
-XDT_I18N([ca cs de el en_GB eu fr gl hu ja ko lt nb_NO pl pt_PT ru sq uk vi zh_TW])
+XDT_I18N([ca cs de el en_GB eu fr gl hu ja ko lt nb_NO pl pt_PT pt_BR ru sq uk vi zh_TW])
 
 dnl Check for debugging support
 XDT_FEATURE_DEBUG()

@@ -24,8 +24,13 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <glib.h>
 
 #include "helpers.h"
-/* #define DEBUG 1
-#define DEBUG_TRACE 1 */
+
+#ifdef DEBUG
+#undef DEBUG
+#endif
+#ifdef DEBUG_TRACE
+#undef DEBUG_TRACE
+#endif
 
 /**
  * An enum.
@@ -156,13 +161,21 @@ gboolean disks_remove_mountpoint (GPtrArray * pdisks, char *mountpoint);
  */
 t_disk * disks_search (GPtrArray * pdisks, char * device);
 
+/**
+ * Lookup given mountpoint and device for exclusion
+ * @param excluded_FSs	Pointer to array of excluded filesystems
+ * @param mountpoint	Mountpoint of device to search for
+ * @param device		Original device path to search for
+ * @return				TRUE, if device is to be excluded
+ */
+gboolean exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device);
 
 /**
  * Refresh t_mount_info infos in a GPtrArray containing struct t_disk *
  * elements.
  * @param pdisks    Pointer array of t_disk
  */
-void disks_refresh (GPtrArray * pdisks);
+void disks_refresh (GPtrArray * pdisks, GPtrArray *excluded_FSs);
 
 
 /**

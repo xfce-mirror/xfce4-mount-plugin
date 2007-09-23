@@ -40,6 +40,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #define MTAB "/etc/mtab"
 
+
 /**
  * Return a string containing a size expressed in KB, MB or GB and the unit
  * it is expressed in.
@@ -79,8 +80,9 @@ mount_info_new (float size, float used, float avail,
 {
     t_mount_info * mount_info;
 
-    if ( type != NULL && mounted_on != NULL /* && size != 0 */ )
-    {
+	/* check superfluous, as already done in mount_info_new_from_stat */
+    /* if ( type != NULL && mounted_on != NULL ) // && size != 0 )
+    	{ */
         mount_info = g_new0(t_mount_info,1);
         mount_info->size = size;
         mount_info->used = used;
@@ -89,8 +91,8 @@ mount_info_new (float size, float used, float avail,
         mount_info->type = g_strdup(type);
         mount_info->mounted_on = g_strdup(mounted_on);
         return mount_info;
-    }
-    return NULL;
+    /*	}
+    return NULL; */
 }
 
 
@@ -108,21 +110,24 @@ mount_info_new_from_stat (struct statfs * pstatfs,
     float avail; /* Available size of device */
     unsigned int percent ; /* percentage used */
 
+    TRACE("Entering mount_info_new_from_stat");
+
     if (pstatfs!=NULL && mnt_type!=NULL && mnt_dir!=NULL)
     {
         /* compute sizes in bytes */
-        size = (float)pstatfs->f_bsize * (float)pstatfs->f_blocks;
-        used = (float)pstatfs->f_bsize
-                * ((float)pstatfs->f_blocks - (float)pstatfs->f_bfree);
-        avail = (float)pstatfs->f_bsize * (float)pstatfs->f_bavail;
-        percent = ((float)pstatfs->f_blocks - (float)pstatfs->f_bavail) * 100
-                / (float)pstatfs->f_blocks;
+        size = (float) pstatfs->f_bsize * (float) pstatfs->f_blocks;
+        used = (float) pstatfs->f_bsize
+                * ( (float) pstatfs->f_blocks - (float) pstatfs->f_bfree );
+        avail = (float) pstatfs->f_bsize * (float) pstatfs->f_bavail;
+        percent = ( (float) pstatfs->f_blocks - (float) pstatfs->f_bavail ) * 100
+                / (float) pstatfs->f_blocks;
 
         /* create new t_mount_info */
-        mount_info = mount_info_new (size, used, avail, percent,
-                                     mnt_type, mnt_dir);
+        mount_info = mount_info_new (size, used, avail, percent, mnt_type,
+									mnt_dir);
         return mount_info;
     }
+    TRACE("Leaving mount_info_new_from_stat with NULL");
     return NULL;
 
 }
@@ -159,19 +164,23 @@ disk_print (t_disk * pdisk)
 
 
 t_disk *
-disk_new (const char * dev, const char * mp)
+disk_new (const char * dev, const char * mountpoint)
 {
     t_disk  * pdisk;
 
-    if ( dev != NULL && mp != NULL)
+    TRACE("Entering disk_new");
+
+    if ( dev != NULL && mountpoint != NULL)
     {
         pdisk = g_new0 (t_disk,1);
         pdisk->device = g_strdup(dev);
-        pdisk->mount_point = g_strdup(mp);
+        pdisk->mount_point = g_strdup (mountpoint);
         pdisk->mount_info = NULL;
 
         return pdisk ;
     }
+
+    TRACE("Leaving disk_new with NULL");
     return NULL;
 }
 
@@ -398,8 +407,8 @@ disks_remove_device (GPtrArray * pdisks, char *device)
 
     for (i=0; i < pdisks->len ; i++)
     {
-        if (strcmp (((t_disk *) g_ptr_array_index(pdisks, i))->device,
-            device)==0)
+        if ( strcmp ( ((t_disk *) g_ptr_array_index(pdisks, i))->device,
+            device )==0 )
             p = g_ptr_array_remove_index(pdisks, i);
     }
 
@@ -474,17 +483,50 @@ disks_free_mount_info(GPtrArray * pdisks)
 
 
 /**
+ * Searches array for device and mounpoint. Returns TRUE if found.
+ */
+gboolean
+exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
+{
+	int i;
+
+	TRACE("Entering exclude_filesystems\n");
+
+	g_assert(excluded_FSs != NULL);
+
+    for (i=0; i < excluded_FSs->len; i++)
+    {
+		DBG("Comparing %s and %s to %s\n", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
+        if (g_ascii_strcasecmp (
+                (gchar *) g_ptr_array_index(excluded_FSs, i), mountpoint)==0
+            ||
+            g_ascii_strcasecmp (
+                (gchar *) g_ptr_array_index(excluded_FSs, i), device)==0
+            )
+            return TRUE;
+    }
+
+    TRACE("Leaving exclude_filesystems with FALSE\n");
+
+	return FALSE;
+}
+
+
+/**
  * Refreshes t_mount_info infos in a GPtrArray containing
  * struct t_disk * elements.
  */
 void
-disks_refresh(GPtrArray * pdisks)
+disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 {
     /* using getmntent to get filesystems mount information */
 
     FILE * fmtab = NULL; /* file /etc/mtab */
     struct mntent * pmntent = NULL; /* struct for mnt info */
     struct statfs * pstatfs = NULL;
+    gboolean exclude =	FALSE;
+
+    TRACE("Entering disks_refresh\n");
 
     t_mount_info * mount_info;
     t_disk * pdisk ;
@@ -503,24 +545,30 @@ disks_refresh(GPtrArray * pdisks)
 
 		DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
 
-		statfs(pmntent->mnt_dir, pstatfs);
+		statfs (pmntent->mnt_dir, pstatfs);
 
 		/* if we got the stat and the block number is non-zero */
 
 		/* get pointer on disk from pdisks */
 		/* CHANGED to reflect change in disk_search */
 		pdisk = disks_search (pdisks, pmntent->mnt_dir);
+		if (excluded_FSs!=NULL)
+			exclude = exclude_filesystem (excluded_FSs, pmntent->mnt_dir, pmntent->mnt_fsname);
+
 		if (pdisk == NULL) { /* if disk is not found in pdisks */
 
 			/* create a new struct t_disk and add it to pdisks */
-			/* test for mnt_dir!=none or neither block device nor NFS */
-			if ( (g_ascii_strcasecmp(pmntent->mnt_dir, "none") != 0) ||
-			!(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
+			/* test for mnt_dir==none or neither block device nor NFS or system device */
+			if ( exclude ||
+			  g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
+			  !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
 			  g_str_has_prefix(pmntent->mnt_type, "fuse") ||
 			  g_str_has_prefix(pmntent->mnt_type, "nfs") ||
 			  g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
 			  g_str_has_prefix(pmntent->mnt_type, "cifs") ||
-			  g_str_has_prefix(pmntent->mnt_type, "shfs") )
+			  g_str_has_prefix(pmntent->mnt_type, "shfs") ) ||
+			  g_str_has_prefix(pmntent->mnt_dir, "/sys/")
+
 			) continue;
 
 			/* else have valid entry reflecting block device or NFS */
@@ -549,7 +597,7 @@ disk_classify (char *device, char *mountpoint)
 {
     t_deviceclass dc = UNKNOWN;
 
-    /* Note: Since linux-2.6.19, you cannot distinguish between scsi/removale
+    /* Note: Since linux-2.6.19, you cannot distinguish between scsi/removable
      * drives by sdX and hard disks by hdY, since hdY is replaced by sdY.
      */
     if (strstr(device, "/dev")==NULL) { /* remote or unknown */
