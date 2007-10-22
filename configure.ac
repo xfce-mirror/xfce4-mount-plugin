@@ -9,7 +9,7 @@ dnl for Xfce4-panel 4.3 and higher only!
 
 m4_define([mount_version],[0.5.4])
 
-AC_INIT([xfce4-mount-plugin], [mount_version()],
+AC_INIT([xfce4-mount-plugin], [mount_version],
 	[timystery@arcor.de])
 
 MOUNT_VERSION=mount_version()

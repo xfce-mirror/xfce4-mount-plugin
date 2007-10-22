@@ -1,3 +1,9 @@
+23 septermber - version 0.5.4
+- new language pt_BR
+- dynamic handling of USB devices and perhaps others
+- LVMs are abbreviated
+- changed a little bit the menu appearance
+
 04 july 2007 - version 0.5.3
 - fixed another broken string
 - added language "nb"
