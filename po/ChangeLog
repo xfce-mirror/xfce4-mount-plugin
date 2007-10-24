@@ -1,3 +1,7 @@
+2007-10-24  Mike Massonnet <mmassonnet@xfce.org>
+
+	* fr.po: Update translation
+
 2007-09-12  Mike Massonnet <mmassonnet@xfce.org>
 
 	* eu.po: Update Basque translations
@@ -40,7 +44,7 @@
 
 2007-03-14	Piarres Beobide <pi@beobide.net>
 
-        * eu.po: Basque translation update
+	* eu.po: Basque translation update
 
 2007-03-01	Maximilian Schleiss <maximilian@xfce.org>
 
@@ -70,8 +74,8 @@
 
 2006-12-15  Pau Rul-lan Ferragut <paurullan@bulma.net>
 
-    * ko.po: Updated Korean translations
-      by ByungHyun Choi <byunghyun.choi@debianusers.org>
+	* ko.po: Updated Korean translations
+	by ByungHyun Choi <byunghyun.choi@debianusers.org>
 
 2006-11-27  Pau Rul-lan Ferragut <paurullan@bulma.net>
 
