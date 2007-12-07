@@ -180,7 +180,7 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Die meisten Nutzer wollen nur ein »sudo« vor beide Befehle oder »sync %d &&« "
-"vor den »unmount«-Befehl hängen.\n"
+"vor den »unmount %d«-Befehl hängen.\n"
 "'%d' kann dazu verwendet werden, das Gerät anzugeben, '%m' für den "
 "Einhängepunkt."
 
