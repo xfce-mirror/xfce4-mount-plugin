@@ -4,12 +4,12 @@ plugin_PROGRAMS = xfce4-mount-plugin
 LIBS = @LIBS@ @SOLLIBS@
 
 xfce4_mount_plugin_SOURCES =                                \
-        devices.c                                           \
-        devices.h                                           \
-        mount-plugin.c  				\
-		mount-plugin.h					\
-		helpers.c						\
-		helpers.h
+	devices.c                                           \
+	devices.h                                           \
+	mount-plugin.c  				\
+	mount-plugin.h					\
+	helpers.c						\
+	helpers.h
 
 xfce4_mount_plugin_CFLAGS =			         \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
@@ -17,7 +17,7 @@ xfce4_mount_plugin_CFLAGS =			         \
 	@LIBXFCEGUI4_CFLAGS@
 
 xfce4_mount_plugin_LDADD =                                \
-        @SOLLIBS@                                   			\
+	@SOLLIBS@                                   			\
 	@LIBXFCE4PANEL_LIBS@				\
 	@LIBXFCEGUI4_LIBS@
 
@@ -35,12 +35,12 @@ desktopdir = $(datadir)/xfce4/panel-plugins
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = 						      	                     \
-	icons.h 						                                 \
-	kcmpartitions.png                                        \
+EXTRA_DIST =														\
+	icons.h 														\
+	kcmpartitions.png												\
 	$(desktop_in_in_files)
 
-DISTCLEANFILES =				                        \
+DISTCLEANFILES =													\
 	$(desktop_DATA) $(desktop_in_files)
 	
 noinst_DATA =							                           \
