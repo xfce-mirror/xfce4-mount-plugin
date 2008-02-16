@@ -140,17 +140,21 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         dd->hbox = gtk_hbox_new (FALSE, 10);
         gtk_container_add (GTK_CONTAINER(dd->menu_item), dd->hbox);
 
-        if (g_str_has_prefix(disk->device, "/dev/mapper/volume"))
+        if (g_str_has_prefix(disk->device, "/dev/mapper/"))
         	format_LVM_name	(disk->device, &formatted_diskname);
         else
 			formatted_diskname = g_strdup(disk->device);
 
-        dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
+        if (mounter->exclude_devicenames)
+		dd->label_disk = gtk_label_new (disk->mount_point);
+	else
+		dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
                                         disk->mount_point, NULL));
-		g_free (formatted_diskname);
+	
+	g_free (formatted_diskname);
 
         /*change to uniform label size*/
-        gtk_label_set_width_chars(GTK_LABEL(dd->label_disk),28);
+        gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32);
         /* gtk_label_set_justify(GTK_LABEL(dd->label_disk),GTK_JUSTIFY_LEFT); */
         gtk_misc_set_alignment(GTK_MISC(dd->label_disk),0.0, 0.5);
         gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
@@ -311,6 +315,8 @@ mounter_data_new (t_mounter *mt)
 
     mt->eject_drives = FALSE;
 
+    mt->exclude_devicenames = FALSE;
+
     TRACE ("leaves mounter_data_new");
 
     return ;
@@ -331,6 +337,7 @@ mounter_refresh (t_mounter * mt)
     gboolean msg_dlg = mt->message_dialog;
     gboolean incl_NFSs = mt->include_NFSs;
     gboolean excl_FSs = mt->exclude_FSs;
+    gboolean excl_DNs = mt->exclude_devicenames;
     gboolean eject = mt->eject_drives;
 
     mounter_data_new (mt);
@@ -342,6 +349,7 @@ mounter_refresh (t_mounter * mt)
     mt->message_dialog = msg_dlg;
     mt->include_NFSs = incl_NFSs;
     mt->exclude_FSs = excl_FSs;
+    mt->exclude_devicenames = excl_DNs;
     mt->eject_drives = eject;
 
     TRACE ("leaves mounter_refresh");
@@ -415,6 +423,9 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     if ( (value = xfce_rc_read_entry(rc, "exclude_FSs", NULL)) )
         mt->exclude_FSs= atoi (value);
 
+    if ( (value = xfce_rc_read_entry(rc, "exclude_devicenames", NULL)) )
+        mt->exclude_devicenames= atoi (value);
+
     if ( (value = xfce_rc_read_entry(rc, "eject_drives", NULL)) )
         mt->eject_drives= atoi (value);
 
@@ -463,6 +474,9 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 
     if ( mt->exclude_FSs==1 )
         xfce_rc_write_entry (rc, "exclude_FSs", "1");
+
+    if ( mt->exclude_devicenames==1 )
+        xfce_rc_write_entry (rc, "exclude_devicenames", "1");
 
     if ( mt->eject_drives==1 )
         xfce_rc_write_entry (rc, "eject_drives", "1");
@@ -573,6 +587,9 @@ mounter_apply_options (t_mounter_dialog *md)
     mt->exclude_FSs = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_exclude_FSs));
 
+    mt->exclude_devicenames = gtk_toggle_button_get_active
+    		(GTK_TOGGLE_BUTTON(md->show_exclude_devicenames));
+
     if (mt->include_NFSs!=incl_NFSs || mt->exclude_FSs!=excl_FSs
         || strlen(mt->excluded_filesystems)!=0) {
             /* re-read disk information */
@@ -652,6 +669,14 @@ exlude_FSs_toggled (GtkWidget *widget, t_mounter_dialog *md)
     return TRUE;
 }
 
+
+static gboolean
+exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
+{
+    
+    
+    return TRUE;
+}
 
 static void
 mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
@@ -908,6 +933,25 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_container_add (GTK_CONTAINER (_eventbox), md->show_eject_drives );
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_eject_drives),
                                 mt->eject_drives);
+
+	/* exclude device names */
+	_eventbox = gtk_event_box_new ();
+    gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
+                        FALSE, FALSE, 0);
+    gtk_widget_show (_eventbox);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+        _("Activate this option to only have the mount points be displayed."),
+        NULL );
+
+    md->show_exclude_devicenames = gtk_check_button_new_with_mnemonic (
+                                _("Display _mount points only") );
+
+    gtk_widget_show (md->show_exclude_devicenames);
+    gtk_container_add (GTK_CONTAINER (_eventbox), md->show_exclude_devicenames );
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames),
+                                mt->exclude_devicenames);
+
+
 
         /* Exclude file systems  */
     _eventbox = gtk_event_box_new ();

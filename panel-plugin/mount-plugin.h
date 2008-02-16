@@ -71,6 +71,7 @@ typedef struct
     gboolean message_dialog; /**< whether to show (un)success after umount */
     gboolean include_NFSs; /**< whether to also display network file systems */
     gboolean exclude_FSs;
+    gboolean exclude_devicenames;
     gboolean eject_drives;
     GtkWidget *button;
     GdkPixbuf *button_pb;
@@ -112,6 +113,7 @@ typedef struct
     GtkWidget *show_include_NFSs;
     GtkWidget *show_exclude_FSs;
     GtkWidget *show_eject_drives;
+    GtkWidget *show_exclude_devicenames;
     GtkWidget *string_excluded_filesystems;
 }
 t_mounter_dialog;

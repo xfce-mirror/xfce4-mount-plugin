@@ -1,4 +1,8 @@
-23 septermber - version 0.5.4
+16 february 2008 - version 0.5.5
+- added option to exclude device names and only show mount points
+- changed some code for the LVM renaming
+
+23 september 2007 - version 0.5.4
 - new language pt_BR
 - dynamic handling of USB devices and perhaps others
 - LVMs are abbreviated
