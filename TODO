@@ -1,3 +1,5 @@
+Have a look at the icon stuff: when changing from binary install to custom and thus from /usr to /ur/local, no image is shown at all; can't find the nice image in the filesystem easily
+
 Add more translations from all over the world ;-)
 
 To add your language, simply copy po/xfce4-mount-plugin.pot to 
