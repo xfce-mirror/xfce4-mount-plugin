@@ -215,13 +215,12 @@ msgid "_Eject CD-drives"
 msgstr "_Løs ut CD enheten"
 
 #: ../panel-plugin/mount-plugin.c:943
-#, fuzzy
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Aktiver denne for også å løse ut CD'en etter avmontering."
+msgstr "Aktiver denne for å kun vise monteringspunktene."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Vis kun _monteringspunkter"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
