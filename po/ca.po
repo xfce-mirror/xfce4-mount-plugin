@@ -2,14 +2,14 @@
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
-# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006, 2007.
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006-2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-16 16:30+0100\n"
-"PO-Revision-Date: 2007-05-11 19:30+0100\n"
+"PO-Revision-Date: 2008-03-21 20:50+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -94,9 +94,8 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "El dispositiu «%s» ja es pot extreure de forma segura."
 
 #: ../panel-plugin/mount-plugin.c:57
-#, fuzzy
 msgid "An error occurred. The device should not be removed!"
-msgstr "Error: El dispositiu no s'ha d'extreure!"
+msgstr "Hi ha hagut un error: El dispositiu no s'ha d'extreure!"
 
 #: ../panel-plugin/mount-plugin.c:220
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -221,15 +220,14 @@ msgid "_Eject CD-drives"
 msgstr "_Extreu la unitat de CD"
 
 #: ../panel-plugin/mount-plugin.c:943
-#, fuzzy
 msgid "Activate this option to only have the mount points be displayed."
 msgstr ""
-"Activeu aquesta opció i també podreu obrir la safata de CD després desmuntar "
-"i per introduir abans de muntar-lo."
+"Activeu aquesta opció per tenir tant sols tenir els punts de muntatge "
+"mostrats."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Mostra tant sols els punts de muntatge"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
