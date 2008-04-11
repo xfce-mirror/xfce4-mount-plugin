@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Automatically generated, 2007.
 # Andrius da Costa Ribas <andriusmao@gmail.com>, 2007.
-# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
+# Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007-2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin (XFCE 4.4 Goodies)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-16 16:30+0100\n"
-"PO-Revision-Date: 2007-11-06 12:53-0400\n"
+"PO-Revision-Date: 2008-03-15 21:20-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
@@ -219,15 +220,12 @@ msgid "_Eject CD-drives"
 msgstr "_Ejetar drives de CD"
 
 #: ../panel-plugin/mount-plugin.c:943
-#, fuzzy
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
-"Ative esta opção para também ejetar um drive de CD depois de desmontar e "
-"para inserir antes de montar."
+msgstr "Ative esta opção para ter exibidos somente os pontos de montagem."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Exibir somente os pontos de _montagem"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
