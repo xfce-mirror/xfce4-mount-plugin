@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-16 16:30+0100\n"
-"PO-Revision-Date: 2007-10-29 05:37+0100\n"
+"PO-Revision-Date: 2008-04-17 09:31+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -81,7 +81,8 @@ msgstr "csatolási pont: %s\n"
 msgid "not mounted\n"
 msgstr "nincs csatolva\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:245
+#: ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
 msgstr "Hiba a parancs futtatásakor"
 
@@ -112,11 +113,8 @@ msgid "Mount devices"
 msgstr "Eszközök csatolása"
 
 #: ../panel-plugin/mount-plugin.c:744
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"Ez csak akkor ajánlott, ha megadod a \"sync\"-et az \"unmount\" prancsban."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "Ez csak akkor ajánlott, ha megadod a \"sync\"-et az \"unmount\" prancsban."
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "Show _message after unmount"
@@ -141,13 +139,11 @@ msgstr "Általános"
 #: ../panel-plugin/mount-plugin.c:794
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"E parancs fut egy eszköz csatolása után annak csatolási pontját "
-"argumentumként átadva. \n"
+"E parancs fut egy eszköz csatolása után annak csatolási pontját argumentumként átadva. \n"
 "Használd például ezt: \"thunar %m\".\n"
 "A '%d' eszközt, a '%m' csatolási pontot ad."
 
@@ -156,12 +152,8 @@ msgid "_Execute after mounting:"
 msgstr "Csatolás után fut:"
 
 #: ../panel-plugin/mount-plugin.c:827
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne "
-"módosítsd!"
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne módosítsd!"
 
 #: ../panel-plugin/mount-plugin.c:832
 msgid "_Custom commands"
@@ -170,12 +162,10 @@ msgstr "Egyéni parancsok"
 #: ../panel-plugin/mount-plugin.c:851
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync %d &&"
-"\"-t az \"unmount %d\" parancs elé.\n"
+"A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync %d &&\"-t az \"unmount %d\" parancs elé.\n"
 "A '%d' eszközt, a '%m' csatolási pontot ad."
 
 #: ../panel-plugin/mount-plugin.c:860
@@ -191,38 +181,28 @@ msgid "_Commands"
 msgstr "Parancsok"
 
 #: ../panel-plugin/mount-plugin.c:907
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"E lehetőség az NFS, SMBFS, SHFS, SSHFS, stb. fájlrendszereket is kiírja."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "E lehetőség az NFS, SMBFS, SHFS, SSHFS, stb. fájlrendszereket is kiírja."
 
 #: ../panel-plugin/mount-plugin.c:912
 msgid "Display _network file systems"
 msgstr "Hálózati fájlrendszereket is"
 
 #: ../panel-plugin/mount-plugin.c:925
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Használd e lehetőséget egy CD-meghajtó kinyitásához lecsatolás után és "
-"becsukásához csatolás előtt."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "Használd e lehetőséget egy CD-meghajtó kinyitásához lecsatolás után és becsukásához csatolás előtt."
 
 #: ../panel-plugin/mount-plugin.c:930
 msgid "_Eject CD-drives"
 msgstr "CD-meghajtók kinyitása."
 
 #: ../panel-plugin/mount-plugin.c:943
-#, fuzzy
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
-"Használd e lehetőséget egy CD-meghajtó kinyitásához lecsatolás után és "
-"becsukásához csatolás előtt."
+msgstr "Használd e lehetőséget csak a csatolási pontok mutatásához."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Csak a csatolási pontok mutatása"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
@@ -248,15 +228,12 @@ msgstr "Minden csatolható eszközt mutat és kérésre (le)csatolja őket"
 
 #~ msgid "size : %g\n"
 #~ msgstr "méret : %g\n"
-
 #~ msgid "<b>Commands</b>"
 #~ msgstr "<b>Parancsok</b>"
-
 #~ msgid "Specify own commands"
 #~ msgstr "Saját parancs megadása"
-
 #~ msgid "<b>General</b>"
 #~ msgstr "<b>Általános</b>"
-
 #~ msgid "Mount Plugin"
 #~ msgstr "Csatoló"
+
