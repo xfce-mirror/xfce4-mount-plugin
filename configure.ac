@@ -3,7 +3,7 @@ dnl
 dnl xfce4-mount-plugin - Mount plugin for xfce4-panel
 dnl
 dnl 2003, 2004 Benedikt Meurer <benny@xfce.org>
-dnl 2005-2007 Fabian Nowak <timystery@arcor.de>
+dnl 2005-2008 Fabian Nowak <timystery@arcor.de>
 dnl
 dnl for Xfce4-panel 4.3 and higher only!
 

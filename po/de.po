@@ -1,6 +1,6 @@
 # German translation of the xfce4-mount-plugin package.
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005-2007 Fabian Nowak.
+# Copyright (C) 2005-2008 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Fabian Nowak <timystery@arcor.de>, 2005-2006.
 #

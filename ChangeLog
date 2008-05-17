@@ -1,3 +1,7 @@
+17 may 2008 - addition to version 0.5.5
+- updated German translation
+- allow UUID device points
+
 16 february 2008 - version 0.5.5
 - added option to exclude device names and only show mount points
 - changed some code for the LVM renaming
