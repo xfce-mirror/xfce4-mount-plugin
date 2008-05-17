@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-16 16:30+0100\n"
+"POT-Creation-Date: 2008-05-17 11:38+0200\n"
 "PO-Revision-Date: 2008-02-25 01:26+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -221,7 +221,8 @@ msgstr "Ej_ecter le CD"
 
 #: ../panel-plugin/mount-plugin.c:943
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Cocher cette option pour que seuls les points de montages soient affichés."
+msgstr ""
+"Cocher cette option pour que seuls les points de montages soient affichés."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"

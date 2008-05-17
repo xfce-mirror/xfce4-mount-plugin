@@ -82,38 +82,38 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
-   /* schrink the gtk button's image to new size - */
+   /* shrink the gtk button's image to new size -*/
    gtk_widget_set_size_request (GTK_WIDGET(mt->button), size - 4, size - 4);
 
 }
 
 /**
  * Format the long /dev/mapper/volume to something better:
- *	LVM	x:y
+ *  LVM x:y
  */
 void
-format_LVM_name	(const char *disk_device, gchar **formatted_diskname)
+format_LVM_name (const char *disk_device, gchar **formatted_diskname)
 {
 
-	gint volume, logvol, i;
+    gint volume, logvol, i;
 
-	i = strlen(disk_device) - 1;
+    i = strlen(disk_device) - 1;
 
-	do
-		i--;
-	while (i>0 && g_ascii_isdigit(disk_device[i]) );
-	logvol = atoi(disk_device+i+1);
+    do
+        i--;
+    while (i>0 && g_ascii_isdigit(disk_device[i]) );
+    logvol = atoi(disk_device+i+1);
 
-	do
-		i--;
-	while (i>0 && g_ascii_isalpha (disk_device[i]));
+    do
+        i--;
+    while (i>0 && g_ascii_isalpha (disk_device[i]));
 
-	do
-		i--;
-	while (i>0 && g_ascii_isdigit(disk_device[i]));
-	volume = atoi(disk_device+i+1);
+    do
+        i--;
+    while (i>0 && g_ascii_isdigit(disk_device[i]));
+    volume = atoi(disk_device+i+1);
 
-	*formatted_diskname = g_strdup_printf("LVM	%d:%d", volume, logvol);
+    *formatted_diskname = g_strdup_printf("LVM  %d:%d", volume, logvol);
 }
 
 
@@ -123,8 +123,8 @@ format_LVM_name	(const char *disk_device, gchar **formatted_diskname)
 static t_disk_display*
 disk_display_new (t_disk *disk, t_mounter *mounter)
 {
-	t_disk_display * dd;
-	char *formatted_diskname;
+    t_disk_display * dd;
+    char *formatted_diskname;
 
     TRACE ("enters disk_display_new");
 
@@ -141,17 +141,17 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         gtk_container_add (GTK_CONTAINER(dd->menu_item), dd->hbox);
 
         if (g_str_has_prefix(disk->device, "/dev/mapper/"))
-        	format_LVM_name	(disk->device, &formatted_diskname);
+            format_LVM_name (disk->device, &formatted_diskname);
         else
-			formatted_diskname = g_strdup(disk->device);
+            formatted_diskname = g_strdup(disk->device);
 
         if (mounter->exclude_devicenames)
-		dd->label_disk = gtk_label_new (disk->mount_point);
-	else
-		dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
+        dd->label_disk = gtk_label_new (disk->mount_point);
+    else
+        dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
                                         disk->mount_point, NULL));
-	
-	g_free (formatted_diskname);
+
+    g_free (formatted_diskname);
 
         /*change to uniform label size*/
         gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32);
@@ -184,7 +184,7 @@ static void
 disk_display_refresh (t_disk_display * disk_display,
                                  t_mount_info * mount_info)
 {
-	char * text;
+    char * text;
     char * used;
     char * size;
     char * avail;
@@ -260,29 +260,29 @@ mounter_data_new (t_mounter *mt)
     int i, res;
     t_disk * disk;
     t_disk_display * disk_display;
-    GPtrArray *array =	NULL;
+    GPtrArray *array =  NULL;
     char *dev_mp; /* device or mountpoint */
     gboolean removed_device;
 
     /*get static infos from /etc/fstab */
     mt->pdisks = disks_new (mt->include_NFSs);
 
-	/* remove unwanted file systems from list */
-	if (mt->exclude_FSs) {
-		array = g_ptr_array_new();
-		DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
-		res = seperate_list(array, mt->excluded_filesystems);
-		for (i=0; i<array->len; i++) {
-			dev_mp = (char*) g_ptr_array_index(array, i);
-			if ( strstr(dev_mp , "/dev") )
-				removed_device = disks_remove_device(mt->pdisks, dev_mp);
-			else
-				removed_device = disks_remove_mountpoint (mt->pdisks, dev_mp);
-		}
-	}
+    /* remove unwanted file systems from list */
+    if (mt->exclude_FSs) {
+        array = g_ptr_array_new();
+        DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
+        res = seperate_list(array, mt->excluded_filesystems);
+        for (i=0; i<array->len; i++) {
+            dev_mp = (char*) g_ptr_array_index(array, i);
+            if ( strstr(dev_mp , "/dev") )
+                removed_device = disks_remove_device(mt->pdisks, dev_mp);
+            else
+                removed_device = disks_remove_mountpoint (mt->pdisks, dev_mp);
+        }
+    }
 
     /* get dynamic infos on mounts */
-    disks_refresh (mt->pdisks, array /*	=GPtrArray *excluded_FSs */ );
+    disks_refresh (mt->pdisks, array /* =GPtrArray *excluded_FSs */ );
 
     /* menu with menu_item */
     mt->menu = gtk_menu_new ();
@@ -396,8 +396,8 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
         mt->icon = g_strdup (value);
     else
         mt->icon = g_strdup_printf (
-				"%s/icons/hicolor/scalable/apps/xfce-mount.svg",
-				PACKAGE_DATA_DIR );
+                "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
+                PACKAGE_DATA_DIR );
 
     if ( (value = xfce_rc_read_entry (rc, "mount_command", NULL)) )
         mt->mount_command = g_strdup (value);
@@ -588,7 +588,7 @@ mounter_apply_options (t_mounter_dialog *md)
             (GTK_TOGGLE_BUTTON(md->show_exclude_FSs));
 
     mt->exclude_devicenames = gtk_toggle_button_get_active
-    		(GTK_TOGGLE_BUTTON(md->show_exclude_devicenames));
+            (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames));
 
     if (mt->include_NFSs!=incl_NFSs || mt->exclude_FSs!=excl_FSs
         || strlen(mt->excluded_filesystems)!=0) {
@@ -673,8 +673,8 @@ exlude_FSs_toggled (GtkWidget *widget, t_mounter_dialog *md)
 static gboolean
 exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
-    
-    
+
+
     return TRUE;
 }
 
@@ -934,8 +934,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_eject_drives),
                                 mt->eject_drives);
 
-	/* exclude device names */
-	_eventbox = gtk_event_box_new ();
+    /* exclude device names */
+    _eventbox = gtk_event_box_new ();
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);

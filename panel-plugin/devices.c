@@ -80,9 +80,9 @@ mount_info_new (float size, float used, float avail,
 {
     t_mount_info * mount_info;
 
-	/* check superfluous, as already done in mount_info_new_from_stat */
+    /* check superfluous, as already done in mount_info_new_from_stat */
     /* if ( type != NULL && mounted_on != NULL ) // && size != 0 )
-    	{ */
+        { */
         mount_info = g_new0(t_mount_info,1);
         mount_info->size = size;
         mount_info->used = used;
@@ -91,7 +91,7 @@ mount_info_new (float size, float used, float avail,
         mount_info->type = g_strdup(type);
         mount_info->mounted_on = g_strdup(mounted_on);
         return mount_info;
-    /*	}
+    /*  }
     return NULL; */
 }
 
@@ -124,7 +124,7 @@ mount_info_new_from_stat (struct statfs * pstatfs,
 
         /* create new t_mount_info */
         mount_info = mount_info_new (size, used, avail, percent, mnt_type,
-									mnt_dir);
+                                    mnt_dir);
         return mount_info;
     }
     TRACE("Leaving mount_info_new_from_stat with NULL");
@@ -272,8 +272,8 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
     {
 
         deviceprintf(&tmp, umount_command, pdisk->device);
-		mountpointprintf(&tmp2, tmp, pdisk->mount_point);
-		cmd = g_strconcat ("sh -c '", tmp2, NULL);
+        mountpointprintf(&tmp2, tmp, pdisk->mount_point);
+        cmd = g_strconcat ("sh -c '", tmp2, NULL);
 
         /* re-use tmp */
         g_free(tmp);
@@ -295,12 +295,12 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
             retval = ERROR;
         }
 
-		if (disk_check_mounted(pdisk->device))
-			retval = ERROR;
+        if (disk_check_mounted(pdisk->device))
+            retval = ERROR;
 
-		g_free (cmd);
-		g_free (tmp);
-		g_free (tmp2);
+        g_free (cmd);
+        g_free (tmp);
+        g_free (tmp2);
     }
 
     return retval;
@@ -331,7 +331,7 @@ disks_new (gboolean include_NFSs)
     for (pfstab = getfsent(); pfstab!=NULL; pfstab = getfsent())
     {
         has_valid_mount_device =
-                        g_str_has_prefix(pfstab->fs_spec, "/dev/");
+                        g_str_has_prefix(pfstab->fs_spec, "/dev/") ||  g_str_has_prefix(pfstab->fs_spec, "UUID=");
 
         if (include_NFSs)
             has_valid_mount_device = has_valid_mount_device |
@@ -412,10 +412,10 @@ disks_remove_device (GPtrArray * pdisks, char *device)
             p = g_ptr_array_remove_index(pdisks, i);
     }
 
-	if (p==NULL)
-		return FALSE;
-	else
-		return TRUE;
+    if (p==NULL)
+        return FALSE;
+    else
+        return TRUE;
 }
 
 
@@ -436,10 +436,10 @@ disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
             p = g_ptr_array_remove_index(pdisks, i);
     }
 
-	if (p==NULL)
-		return FALSE;
-	else
-		return TRUE;
+    if (p==NULL)
+        return FALSE;
+    else
+        return TRUE;
 }
 
 
@@ -466,7 +466,7 @@ disks_search (GPtrArray * pdisks, char * mount_point)
 /**
  * Remove struct t_mount_info from a GPtrArray containing
  * struct t_disk * elements.
- * @param pdisks	Array of t_mount_info
+ * @param pdisks    Array of t_mount_info
  */
 void
 disks_free_mount_info(GPtrArray * pdisks)
@@ -488,15 +488,15 @@ disks_free_mount_info(GPtrArray * pdisks)
 gboolean
 exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
-	int i;
+    int i;
 
-	TRACE("Entering exclude_filesystems\n");
+    TRACE("Entering exclude_filesystems\n");
 
-	g_assert(excluded_FSs != NULL);
+    g_assert(excluded_FSs != NULL);
 
     for (i=0; i < excluded_FSs->len; i++)
     {
-		DBG("Comparing %s and %s to %s\n", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
+        DBG("Comparing %s and %s to %s\n", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
         if (g_ascii_strcasecmp (
                 (gchar *) g_ptr_array_index(excluded_FSs, i), mountpoint)==0
             ||
@@ -508,7 +508,7 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 
     TRACE("Leaving exclude_filesystems with FALSE\n");
 
-	return FALSE;
+    return FALSE;
 }
 
 
@@ -524,7 +524,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
     FILE * fmtab = NULL; /* file /etc/mtab */
     struct mntent * pmntent = NULL; /* struct for mnt info */
     struct statfs * pstatfs = NULL;
-    gboolean exclude =	FALSE;
+    gboolean exclude =  FALSE;
 
     TRACE("Entering disks_refresh\n");
 
@@ -543,45 +543,45 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
     /* start looking for mounted devices */
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab)) {
 
-		DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
+        DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
 
-		statfs (pmntent->mnt_dir, pstatfs);
+        statfs (pmntent->mnt_dir, pstatfs);
 
-		/* if we got the stat and the block number is non-zero */
+        /* if we got the stat and the block number is non-zero */
 
-		/* get pointer on disk from pdisks */
-		/* CHANGED to reflect change in disk_search */
-		pdisk = disks_search (pdisks, pmntent->mnt_dir);
-		if (excluded_FSs!=NULL)
-			exclude = exclude_filesystem (excluded_FSs, pmntent->mnt_dir, pmntent->mnt_fsname);
+        /* get pointer on disk from pdisks */
+        /* CHANGED to reflect change in disk_search */
+        pdisk = disks_search (pdisks, pmntent->mnt_dir);
+        if (excluded_FSs!=NULL)
+            exclude = exclude_filesystem (excluded_FSs, pmntent->mnt_dir, pmntent->mnt_fsname);
 
-		if (pdisk == NULL) { /* if disk is not found in pdisks */
+        if (pdisk == NULL) { /* if disk is not found in pdisks */
 
-			/* create a new struct t_disk and add it to pdisks */
-			/* test for mnt_dir==none or neither block device nor NFS or system device */
-			if ( exclude ||
-			  g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
-			  !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
-			  g_str_has_prefix(pmntent->mnt_type, "fuse") ||
-			  g_str_has_prefix(pmntent->mnt_type, "nfs") ||
-			  g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
-			  g_str_has_prefix(pmntent->mnt_type, "cifs") ||
-			  g_str_has_prefix(pmntent->mnt_type, "shfs") ) ||
-			  g_str_has_prefix(pmntent->mnt_dir, "/sys/")
+            /* create a new struct t_disk and add it to pdisks */
+            /* test for mnt_dir==none or neither block device nor NFS or system device */
+            if ( exclude ||
+              g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
+              !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
+              g_str_has_prefix(pmntent->mnt_type, "fuse") ||
+              g_str_has_prefix(pmntent->mnt_type, "nfs") ||
+              g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
+              g_str_has_prefix(pmntent->mnt_type, "cifs") ||
+              g_str_has_prefix(pmntent->mnt_type, "shfs") ) ||
+              g_str_has_prefix(pmntent->mnt_dir, "/sys/")
 
-			) continue;
+            ) continue;
 
-			/* else have valid entry reflecting block device or NFS */
-			pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
-			pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
-			g_ptr_array_add (pdisks, pdisk);
-		}
+            /* else have valid entry reflecting block device or NFS */
+            pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
+            pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
+            g_ptr_array_add (pdisks, pdisk);
+        }
 
-		/* create new t_mount_info */
-		mount_info = mount_info_new_from_stat (pstatfs, pmntent->mnt_type,
-											   pmntent->mnt_dir);
-		/* add it to pdisk */
-		pdisk->mount_info = mount_info ;
+        /* create new t_mount_info */
+        mount_info = mount_info_new_from_stat (pstatfs, pmntent->mnt_type,
+                                               pmntent->mnt_dir);
+        /* add it to pdisk */
+        pdisk->mount_info = mount_info ;
 
     } /* end for */
 
@@ -627,7 +627,7 @@ disk_classify (char *device, char *mountpoint)
 gboolean
 disk_check_mounted (const char *disk)
 {
-	FILE *fmtab = NULL; /* file /etc/mtab */
+    FILE *fmtab = NULL; /* file /etc/mtab */
     struct mntent *pmntent = NULL; /* struct for mnt info */
     gboolean retval = FALSE;
 
@@ -638,11 +638,11 @@ disk_check_mounted (const char *disk)
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab))
     {
         if (strcmp(pmntent->mnt_dir, disk)==0 ||
-			strcmp(pmntent->mnt_fsname, disk)==0 )
-		{
-			retval = TRUE;
-			break;
-		}
+            strcmp(pmntent->mnt_fsname, disk)==0 )
+        {
+            retval = TRUE;
+            break;
+        }
     }
 
     endmntent (fmtab); /* close file */

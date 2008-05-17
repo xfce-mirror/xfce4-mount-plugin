@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-18 21:50+0200\n"
+"POT-Creation-Date: 2008-05-17 11:38+0200\n"
 "PO-Revision-Date: 2008-02-25 20:13+0000\n"
 "Last-Translator: Xiaobin Wu <xwu422@googlemail.com>\n"
 "Language-Team: \n"
@@ -94,51 +94,50 @@ msgstr "设备\"%s\" 可以安全地移除了。"
 msgid "An error occurred. The device should not be removed!"
 msgstr "有错误发生。请勿移除此设备！"
 
-#: ../panel-plugin/mount-plugin.c:216
+#: ../panel-plugin/mount-plugin.c:220
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">未挂载</span>"
 
-#: ../panel-plugin/mount-plugin.c:511
+#: ../panel-plugin/mount-plugin.c:525
 msgid "devices"
 msgstr "设备"
 
-#: ../panel-plugin/mount-plugin.c:665
+#: ../panel-plugin/mount-plugin.c:690
 msgid "Edit Properties"
 msgstr "编辑属性"
 
-#: ../panel-plugin/mount-plugin.c:672
+#: ../panel-plugin/mount-plugin.c:697
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
 msgstr "挂载设备"
 
-#: ../panel-plugin/mount-plugin.c:719
+#: ../panel-plugin/mount-plugin.c:744
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"此选项仅在您 \"unmount\" 时使用 \"sync\"参数时才有效。"
+msgstr "此选项仅在您 \"unmount\" 时使用 \"sync\"参数时才有效。"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:749
 msgid "Show _message after unmount"
 msgstr "卸载后显示消息(_M)"
 
-#: ../panel-plugin/mount-plugin.c:736
+#: ../panel-plugin/mount-plugin.c:761
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "您可以指定在面板上显示一个不同的图标。"
 
-#: ../panel-plugin/mount-plugin.c:743
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Icon:"
 msgstr "图标："
 
-#: ../panel-plugin/mount-plugin.c:747
+#: ../panel-plugin/mount-plugin.c:772
 msgid "Select an image"
 msgstr "选择图片"
 
-#: ../panel-plugin/mount-plugin.c:754
+#: ../panel-plugin/mount-plugin.c:779
 msgid "_General"
 msgstr "常规(_G)"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:794
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -150,68 +149,74 @@ msgstr ""
 "如果您不确定该写什么，试试 \"thunar %m\"。\n"
 "'%d' 代表设备， '%m' 代表挂载点。"
 
-#: ../panel-plugin/mount-plugin.c:779
+#: ../panel-plugin/mount-plugin.c:804
 msgid "_Execute after mounting:"
 msgstr "挂载后执行(_E)"
 
-#: ../panel-plugin/mount-plugin.c:802
+#: ../panel-plugin/mount-plugin.c:827
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
-"警告：这些选项仅供专家使用！ 如果您不清楚这些指令的功能，"
-"请勿轻易尝试！"
+"警告：这些选项仅供专家使用！ 如果您不清楚这些指令的功能，请勿轻易尝试！"
 
-#: ../panel-plugin/mount-plugin.c:807
+#: ../panel-plugin/mount-plugin.c:832
 msgid "_Custom commands"
 msgstr "自定义命令(_C)"
 
-#: ../panel-plugin/mount-plugin.c:826
+#: ../panel-plugin/mount-plugin.c:851
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"多数用户应该在两个命令之前都加上 \"sudo\" "
-"或者在 \"unmount %d\"命令前加上 \"sync %d &&\"\n"
+"多数用户应该在两个命令之前都加上 \"sudo\" 或者在 \"unmount %d\"命令前加上 "
+"\"sync %d &&\"\n"
 "'%d' 代表设备， '%m' 代表挂载点。"
 
-#: ../panel-plugin/mount-plugin.c:835
+#: ../panel-plugin/mount-plugin.c:860
 msgid "_Mount command:"
 msgstr "挂载命令(_M)："
 
-#: ../panel-plugin/mount-plugin.c:841
+#: ../panel-plugin/mount-plugin.c:866
 msgid "_Unmount command:"
 msgstr "卸载命令(_U)："
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:892
 msgid "_Commands"
 msgstr "命令(_C)"
 
-#: ../panel-plugin/mount-plugin.c:882
+#: ../panel-plugin/mount-plugin.c:907
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"激活此选项以显示网络文件系统，例如 NFS、 SMBFS、SHFS及 SSHFS。"
+msgstr "激活此选项以显示网络文件系统，例如 NFS、 SMBFS、SHFS及 SSHFS。"
 
-#: ../panel-plugin/mount-plugin.c:887
+#: ../panel-plugin/mount-plugin.c:912
 msgid "Display _network file systems"
 msgstr "显示网络文件系统(_N)"
 
-#: ../panel-plugin/mount-plugin.c:900
+#: ../panel-plugin/mount-plugin.c:925
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr ""
-"激活此选项，以在卸载后弹出此光驱，以及挂载前插入光驱。 "
+msgstr "激活此选项，以在卸载后弹出此光驱，以及挂载前插入光驱。 "
 
-#: ../panel-plugin/mount-plugin.c:905
+#: ../panel-plugin/mount-plugin.c:930
 msgid "_Eject CD-drives"
 msgstr "弹出光驱(_E)"
 
-#: ../panel-plugin/mount-plugin.c:918
+#: ../panel-plugin/mount-plugin.c:943
+#, fuzzy
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "激活此选项，以在卸载后弹出此光驱，以及挂载前插入光驱。 "
+
+#: ../panel-plugin/mount-plugin.c:947
+msgid "Display _mount points only"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:962
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -221,11 +226,11 @@ msgstr ""
 "以空格为分隔符。\n"
 "您可以指定正确的设备或挂载点。"
 
-#: ../panel-plugin/mount-plugin.c:928
+#: ../panel-plugin/mount-plugin.c:972
 msgid "E_xclude specified file systems"
 msgstr "剔除指定文件系统(_X)"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:987
 msgid "_File systems"
 msgstr "文件系统(_F)"
 

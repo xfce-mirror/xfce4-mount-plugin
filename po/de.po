@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-16 16:30+0100\n"
-"PO-Revision-Date: 2007-07-04 23:21+0200\n"
+"POT-Creation-Date: 2008-05-17 11:38+0200\n"
+"PO-Revision-Date: 2008-05-17 11:39+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -221,15 +221,14 @@ msgid "_Eject CD-drives"
 msgstr "CD-_Laufwerke auswerfen"
 
 #: ../panel-plugin/mount-plugin.c:943
-#, fuzzy
 msgid "Activate this option to only have the mount points be displayed."
 msgstr ""
-"Schalten Sie diese Option ein, um ein CD-Laufwerk nach dem Aushängen "
-"auszufahren oder vor dem Einhängen einzufahren."
+"Schalten Sie diese Option ein, um nur die Einhängepunkte angezeigt zu "
+"bekommen."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Nur die _Einhängepunkt anzeigen"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
