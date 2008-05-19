@@ -116,6 +116,33 @@ format_LVM_name (const char *disk_device, gchar **formatted_diskname)
     *formatted_diskname = g_strdup_printf("LVM  %d:%d", volume, logvol);
 }
 
+/**
+ *  Set character sizes for all entries to maximum.
+ */
+static void
+disk_display_set_sizes (GPtrArray *array)
+{
+    int i, max_width_label_disk=0, max_width_label_mount_info=0, tmp;
+    t_disk_display *disk_display;
+
+    for (i=0; i<array->len; i++) {
+        disk_display= g_ptr_array_index (array, i); /* get the disk */
+        tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_mount_info)));
+        if (tmp>max_width_label_mount_info)
+            max_width_label_mount_info = tmp;
+
+        tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_disk)));
+        if (tmp>max_width_label_disk)
+            max_width_label_disk = tmp;
+    }
+
+    for (i=0; i<array->len; i++) {
+        disk_display = g_ptr_array_index (array, i); /* get the disk */
+        gtk_label_set_width_chars(GTK_LABEL(disk_display->label_disk), max_width_label_disk);
+        gtk_label_set_width_chars(GTK_LABEL(disk_display->label_mount_info), max_width_label_mount_info);
+    }
+
+}
 
 /**
  * Create a new t_disk_display from t_disk infos.
@@ -146,22 +173,22 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
             formatted_diskname = g_strdup(disk->device);
 
         if (mounter->exclude_devicenames)
-        dd->label_disk = gtk_label_new (disk->mount_point);
-    else
-        dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
+            dd->label_disk = gtk_label_new (disk->mount_point);
+        else
+            dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
                                         disk->mount_point, NULL));
 
-    g_free (formatted_diskname);
+        g_free (formatted_diskname);
 
         /*change to uniform label size*/
-        gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32);
+        /*gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32); */
         /* gtk_label_set_justify(GTK_LABEL(dd->label_disk),GTK_JUSTIFY_LEFT); */
         gtk_misc_set_alignment(GTK_MISC(dd->label_disk),0.0, 0.5);
         gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
 
         dd->label_mount_info = gtk_label_new("");
         /*change to uniform label size*/
-        gtk_label_set_width_chars(GTK_LABEL(dd->label_mount_info),25);
+        /* gtk_label_set_width_chars(GTK_LABEL(dd->label_mount_info),25); */
         gtk_label_set_use_markup(GTK_LABEL(dd->label_mount_info),TRUE);
         /* gtk_label_set_justify (GTK_LABEL(dd->label_mount_info),
                                GTK_JUSTIFY_RIGHT); */
@@ -181,13 +208,15 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 
 
 static void
-disk_display_refresh (t_disk_display * disk_display,
-                                 t_mount_info * mount_info)
+disk_display_refresh (t_disk_display * disk_display)
 {
+    t_mount_info * mount_info;
     char * text;
     char * used;
     char * size;
     char * avail;
+
+    mount_info = disk_display->disk->mount_info;
 
     TRACE("enters disk_display_refresh");
 
@@ -260,7 +289,7 @@ mounter_data_new (t_mounter *mt)
     int i, res;
     t_disk * disk;
     t_disk_display * disk_display;
-    GPtrArray *array =  NULL;
+    GPtrArray *array =  NULL, *disk_displays = NULL;
     char *dev_mp; /* device or mountpoint */
     gboolean removed_device;
 
@@ -286,20 +315,23 @@ mounter_data_new (t_mounter *mt)
 
     /* menu with menu_item */
     mt->menu = gtk_menu_new ();
-
+    disk_displays =g_ptr_array_new();
     for (i=0; i < mt->pdisks->len; i++)
     {
-        disk = g_ptr_array_index (mt->pdisks,i); /* get the disk */
-        disk_display = disk_display_new (disk,mt); /* creates a disk_display */
-
+        disk = g_ptr_array_index (mt->pdisks, i); /* get the disk */
+        disk_display = disk_display_new (disk, mt); /* creates a disk_display */
+        disk_display->disk = disk;
+        g_ptr_array_add(disk_displays, disk_display);
         /* fill in mount infos */
-        disk_display_refresh (disk_display,disk->mount_info);
+        disk_display_refresh (disk_display);
 
         /* add the menu_item to the menu */
         gtk_menu_shell_append (GTK_MENU_SHELL(mt->menu),
                                disk_display->menu_item);
     }
     gtk_widget_show_all(mt->menu);
+
+    disk_display_set_sizes(disk_displays);
 
     mt->icon = PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg";
     mt->mount_command = DEFAULT_MOUNT_COMMAND;

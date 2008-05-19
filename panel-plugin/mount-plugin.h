@@ -91,6 +91,7 @@ typedef struct
     GtkWidget * label_disk;
     GtkWidget * label_mount_info;
     GtkWidget * progress_bar;
+    t_disk *disk; /* People, learn to program in an object-oriented way! */
 } t_disk_display;
 
 

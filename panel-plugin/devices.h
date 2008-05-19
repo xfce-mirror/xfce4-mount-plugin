@@ -1,7 +1,7 @@
 /* devices.h */
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
-Copyright (C) 2007 Fabian Nowak <timystery@arcor.de>
+Copyright (C) 2007 , 2008Fabian Nowak <timystery@arcor.de>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -24,6 +24,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <glib.h>
 
 #include "helpers.h"
+/* #include "mount-plugin.h" */
+/* extern t_disk_display ; */
+/* People, learn to program in an object-oriented way! */
 
 #ifdef DEBUG
 #undef DEBUG
@@ -77,7 +80,8 @@ typedef struct s_disk {
     char *device;                 /**< Device name, e.g. /dev/cdrom */
     char *mount_point;             /**< Device mount point, e.g. /mnt/cdrom */
     t_mount_info *  mount_info; /**< NULL if not mounted */
-    t_deviceclass dc;             /**<Ddevice classification */
+    /*`t_disk_display *disk_display; */ /* People, learn to program in an object-oriented way! */
+    t_deviceclass dc;             /**< Device classification */
 } t_disk;
 
 
@@ -163,10 +167,10 @@ t_disk * disks_search (GPtrArray * pdisks, char * device);
 
 /**
  * Lookup given mountpoint and device for exclusion
- * @param excluded_FSs	Pointer to array of excluded filesystems
- * @param mountpoint	Mountpoint of device to search for
- * @param device		Original device path to search for
- * @return				TRUE, if device is to be excluded
+ * @param excluded_FSs  Pointer to array of excluded filesystems
+ * @param mountpoint    Mountpoint of device to search for
+ * @param device        Original device path to search for
+ * @return              TRUE, if device is to be excluded
  */
 gboolean exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device);
 
@@ -189,8 +193,8 @@ t_deviceclass disk_classify (char* device, char *mountpoint);
 
 /**
  * Checks, if disk is still mounted
- * @param disk			device name or mountpoint to check
- * @return				true, if mounted, else false.
+ * @param disk          device name or mountpoint to check
+ * @return              true, if mounted, else false.
  */
 gboolean disk_check_mounted (const char *disk);
 
