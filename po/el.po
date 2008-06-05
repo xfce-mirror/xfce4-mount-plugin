@@ -1,22 +1,25 @@
+# translation of el.po to Greek
 # Greek translation of the xfce4-mount-plugin package.
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
-# Stavros Giannouris <stavrosg@serverhive.com>, 2005-2006.
 #
+# Stavros Giannouris <stavrosg@serverhive.com>, 2005-2006.
+# Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-17 11:38+0200\n"
-"PO-Revision-Date: 2006-08-04 22:18+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg@serverhive.com>\n"
-"Language-Team: Greek <xfce-i18n@xfce.org>\n"
+"PO-Revision-Date: 2008-05-25 19:27+0300\n"
+"Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -41,42 +44,42 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:66
 #, c-format
 msgid "size:                %g\n"
-msgstr ""
+msgstr "μέγεθος:                %g\n"
 
 #: ../panel-plugin/devices.c:67
-#, fuzzy, c-format
+#, c-format
 msgid "used size:           %g\n"
-msgstr "κατειλημμένο: %g\n"
+msgstr "χρησιμοποιημένο μέγεθος:           %g\n"
 
 #: ../panel-plugin/devices.c:68
-#, fuzzy, c-format
+#, c-format
 msgid "available siz:       %g\n"
-msgstr "διαθέσιμο: %g\n"
+msgstr "διαθέσιμο μέγεθος: %g\n"
 
 #: ../panel-plugin/devices.c:69
-#, fuzzy, c-format
+#, c-format
 msgid "percentage used:     %d\n"
-msgstr "ποσοστό σε χρήση: %d\n"
+msgstr "ποσοστό σε χρήση:     %d\n"
 
 #: ../panel-plugin/devices.c:70
-#, fuzzy, c-format
+#, c-format
 msgid "file system type:    %s\n"
-msgstr "τύπος συστήματος αρχείων: %s\n"
+msgstr "τύπος συστήματος αρχείων:    %s\n"
 
 #: ../panel-plugin/devices.c:71
-#, fuzzy, c-format
+#, c-format
 msgid "actual mount point:  %s\n"
-msgstr "σημείο σύνδεσης: %s\n"
+msgstr "σημείο προσάρτησης:  %s\n"
 
 #: ../panel-plugin/devices.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "disk: %s\n"
 msgstr "δίσκος: %s\n"
 
 #: ../panel-plugin/devices.c:156
-#, fuzzy, c-format
+#, c-format
 msgid "mount point: %s\n"
-msgstr "σημείο προσάρτητης : %s\n"
+msgstr "σημείο προσάρτησης: %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
@@ -85,8 +88,7 @@ msgstr "μη προσαρτημένο\n"
 
 #: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
-msgstr ""
-"Προέκυψε ένα σφάλμα κατά την εκτέλεση επιλεγμένης εντολής του mount plugin.."
+msgstr "Προέκυψε ένα σφάλμα κατά την εκτέλεση επιλεγμένης εντολής του mount plugin.."
 
 #: ../panel-plugin/mount-plugin.c:54
 #, c-format
@@ -94,7 +96,6 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "Η συσκευή \"%s\" μπορεί να αφαιρεθεί με ασφάλεια."
 
 #: ../panel-plugin/mount-plugin.c:57
-#, fuzzy
 msgid "An error occurred. The device should not be removed!"
 msgstr "Προέκυψε ένα σφάλμα. Η συσκευή δεν πρέπει να αφαιρεθεί!"
 
@@ -124,14 +125,12 @@ msgstr ""
 "εντολής αποπροσάρτησης."
 
 #: ../panel-plugin/mount-plugin.c:749
-#, fuzzy
 msgid "Show _message after unmount"
-msgstr "Προβολή μηνύματος μετά την αποπροσάρτηση"
+msgstr "Προβολή μ_ηνύματος μετά την αποπροσάρτηση"
 
 #: ../panel-plugin/mount-plugin.c:761
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
-"Μπορείτε να ορίσετε ένα ξεχωριστό εικονίδιο που θα προβάλλεται στο ταμπλό."
+msgstr "Μπορείτε να ορίσετε ένα ξεχωριστό εικονίδιο που θα προβάλλεται στο ταμπλό."
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Icon:"
@@ -142,12 +141,11 @@ msgid "Select an image"
 msgstr "Επιλογή μιας εικόνας"
 
 #: ../panel-plugin/mount-plugin.c:779
-#, fuzzy
 msgid "_General"
-msgstr "Γενικά"
+msgstr "Γ_ενικά"
 
 #: ../panel-plugin/mount-plugin.c:794
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
@@ -156,12 +154,12 @@ msgid ""
 msgstr ""
 "Αυτή η εντολή θα εκτελεστεί μετά τη σύνδεση της συσκευής με το σημείο "
 "σύνδεσης ως όρισμα.\n"
-"Εάν δεν είστε σίγουροι, δοκιμάστε με \"xffm\" ή \"rox\" ή \"thunar\"."
+"Εάν δεν είστε σίγουροι, δοκιμάστε μέσω του\"thunar %m\".\n"
+"'%d' που μπορεί να καθορίσει την συσκευή, '%m' για το σημείο προσάρτησης."
 
 #: ../panel-plugin/mount-plugin.c:804
-#, fuzzy
 msgid "_Execute after mounting:"
-msgstr "Εκτέλεση μετά την προσάρτηση:"
+msgstr "Εκ_τέλεση μετά την προσάρτηση:"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid ""
@@ -172,34 +170,28 @@ msgstr ""
 "κάνουν, μην τις πειράξετε καλύτερα."
 
 #: ../panel-plugin/mount-plugin.c:832
-#, fuzzy
 msgid "_Custom commands"
-msgstr "Εντολές"
+msgstr "Εν_τολές"
 
 #: ../panel-plugin/mount-plugin.c:851
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Οι περισσότεροι χρήστες θα θέλουν μόνο να προσθέσουν το \"sudo\" πριν από "
-"τις 2 εντολές η το \"sync &&\" στην εντολή \"unmount\""
+msgstr "Οι περισσότεροι χρήστες θέλουν μόνο να προσθέσουν το \"sudo\" και στις δύο εντολές ή να προσθέσουν το \"sync %d &&\" στην εντολή \"από-προσάρτησης %d\" .\n'%d' χρησιμοποιείται στον καθορισμό των συσκευών, '%m' για τα σημεία προσάρτησης."
 
 #: ../panel-plugin/mount-plugin.c:860
-#, fuzzy
 msgid "_Mount command:"
-msgstr "Εντολή προσάρτησης:"
+msgstr "Εν_τολή προσάρτησης:"
 
 #: ../panel-plugin/mount-plugin.c:866
-#, fuzzy
 msgid "_Unmount command:"
-msgstr "Εντολή αποπροσάρτησης:"
+msgstr "Εν_τολή αποπροσάρτησης:"
 
 #: ../panel-plugin/mount-plugin.c:892
-#, fuzzy
 msgid "_Commands"
-msgstr "Εντολές"
+msgstr "Εν_τολές"
 
 #: ../panel-plugin/mount-plugin.c:907
 msgid ""
@@ -210,27 +202,26 @@ msgstr ""
 "SMBFS, SHFS και SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:912
-#, fuzzy
 msgid "Display _network file systems"
-msgstr "Προβολή δικτυακών συστημάτων αρχείων"
+msgstr "Προβολή δ_ικτυακών συστημάτων αρχείων"
 
 #: ../panel-plugin/mount-plugin.c:925
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr ""
+msgstr "Ενεργοποιώντας αυτή την επιλογή θα μπορεί επίσης να εξάγει έναν οδηγό CD μετά την αποπροσάρτηση του και την εισαγωγή του πριν την προσάρτηση του"
 
 #: ../panel-plugin/mount-plugin.c:930
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "Εξ_αγωγή των οδηγών CD"
 
 #: ../panel-plugin/mount-plugin.c:943
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
+msgstr "Ενεργοποιώντας αυτή την επιλογή εμφανίζονται μόνο τα προσαρτημένα σημεία."
 
 #: ../panel-plugin/mount-plugin.c:947
 msgid "Display _mount points only"
-msgstr ""
+msgstr "Εμφάνιση των προσαρτημένων σημείων μόνο"
 
 #: ../panel-plugin/mount-plugin.c:962
 msgid ""
@@ -238,28 +229,20 @@ msgid ""
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
+"Εξαιρούνται τα ακόλουθα αρχεία συστημάτων από το μενού.\n"
+"Η λίστα είναι απλά διαχωρισμένη με κενά.\n"
+"Είναι ευθύνη του χρήστη ο σωστός καθορισμός των συσκευών ή των σημείων"
+"προσάρτησης."
 
 #: ../panel-plugin/mount-plugin.c:972
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "Εξαιρούνται τα προσδιορίσμενα αρχεία συστήματος"
 
 #: ../panel-plugin/mount-plugin.c:987
 msgid "_File systems"
-msgstr ""
+msgstr "Συστημάτων αρχείων"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Εμφανίζει όλες τις προσαρτώμενες συσκευές και τις (απο)προσαρτά κατά βούληση."
+msgstr "Εμφανίζει όλες τις προσαρτώμενες συσκευές και τις (απο)προσαρτά κατά βούληση."
 
-#~ msgid "size : %g\n"
-#~ msgstr "μέγεθος: %g\n"
-
-#~ msgid "<b>Commands</b>"
-#~ msgstr "<b>Εντολές</b>"
-
-#~ msgid "Specify own commands"
-#~ msgstr "Ορισμός προσαρμοσμένων εντολών"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>Γενικά</b>"
