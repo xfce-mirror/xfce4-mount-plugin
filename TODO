@@ -1,4 +1,6 @@
-Have a look at the icon stuff: when changing from binary install to custom and thus from /usr to /ur/local, no image is shown at all; can't find the nice image in the filesystem easily.
+Use fusermount -u for FUSE file systems.
+
+Have a look at the icon stuff: when changing from binary install to custom and thus from /usr to /ur/local, no image is shown at all; can't find the nice image in the filesystem easily. Perhaps simply test for /usr/share und /usr/local/share/ and some /opt/share/ paths in this order, and then display nothing at all; or search relative to the plugin path.
 
 Add notification messages instead of popups when removing the device was successful.
 
