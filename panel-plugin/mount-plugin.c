@@ -726,6 +726,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                 GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
                 GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
 
+    gtk_window_set_icon_name(GTK_WINDOW(dlg),"xfce-mount");
+
     gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
 
     /* header = xfce_create_header (NULL, _("Mount devices"));
