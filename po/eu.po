@@ -237,7 +237,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:972
 msgid "E_xclude specified file systems"
-msgstr "Zehazturiko muntatze puntuak ez erabili"
+msgstr "Zehazturiko muntatze puntuak e_z erabili"
 
 #: ../panel-plugin/mount-plugin.c:987
 msgid "_File systems"
