@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-17 11:38+0200\n"
-"PO-Revision-Date: 2008-10-19 23:08+0900\n"
+"PO-Revision-Date: 2008-11-09 14:52+0900\n"
 "Last-Translator: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -91,11 +91,11 @@ msgstr "マウントプラグイン: コマンドの実行中にエラーが発�
 #: ../panel-plugin/mount-plugin.c:54
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "デバイス「%s」を取り外す用意が整いました。"
+msgstr "デバイス \"%s\" を取り外す用意が整いました。"
 
 #: ../panel-plugin/mount-plugin.c:57
 msgid "An error occurred. The device should not be removed!"
-msgstr "エラーが発生しました。デバイスを取り外してはいけません！"
+msgstr "エラーが発生しました。デバイスを取り外してはいけません!"
 
 #: ../panel-plugin/mount-plugin.c:220
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -116,7 +116,7 @@ msgstr "マウントデバイス"
 
 #: ../panel-plugin/mount-plugin.c:744
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "このオプションは「unmount」コマンド文字列に「sync」を入れている場合にお勧めします。"
+msgstr "このオプションは \"unmount\" コマンド文字列に \"sync\" を入れている場合にお勧めします。"
 
 #: ../panel-plugin/mount-plugin.c:749
 msgid "Show _message after unmount"
@@ -146,7 +146,7 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "このコマンドは、引数にあるデバイスのマウント場所にデバイスがマウントされた後に実行されます。\n"
-"何を入力するか分からないのでしたら、「thunar %m」を試してみて下さい。\n"
+"何を入力するか分からないのでしたら、\"thunar %m\" を試してみて下さい。\n"
 "'%d' はデバイスを指定するために、'%m' はマウントポイントをに指定するために使用できます。"
 
 #: ../panel-plugin/mount-plugin.c:804
@@ -167,7 +167,7 @@ msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"大半のユーザーは両コマンドの先頭に「sudo」を付けるか、「unmount %d」コマンドの先頭に「sync  %d &&」を付けるだけでよいと思います。\n"
+"大半のユーザーは両コマンドの先頭に \"sudo\" を付けるか、\"unmount %d\" コマンドの先頭に \"sync  %d &&\" を付けるだけでよいと思います。\n"
 "'%d' はデバイスを指定するために、'%m' はマウントポイントをに指定するために使用します。"
 
 #: ../panel-plugin/mount-plugin.c:860
@@ -184,11 +184,11 @@ msgstr "コマンド(_C):"
 
 #: ../panel-plugin/mount-plugin.c:907
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "このオプションを有効にすると NFS, SMBFS, SHFS および SSHFS のようなネットワーク・ファイルシステムも表示します。"
+msgstr "このオプションを有効にすると NFS, SMBFS, SHFS および SSHFS のようなネットワークファイルシステムも表示します。"
 
 #: ../panel-plugin/mount-plugin.c:912
 msgid "Display _network file systems"
-msgstr "ネットワーク・ファイルシステム表示する"
+msgstr "ネットワークファイルシステム表示する"
 
 #: ../panel-plugin/mount-plugin.c:925
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
