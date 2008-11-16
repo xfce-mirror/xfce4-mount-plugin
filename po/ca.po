@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-13 00:16+0100\n"
-"PO-Revision-Date: 2008-03-21 20:50+0100\n"
+"PO-Revision-Date: 2008-11-16 11:37+0100\n"
 "Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Catalan <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Catalan\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -107,7 +107,7 @@ msgstr "dispositius"
 
 #: ../panel-plugin/mount-plugin.c:724
 msgid "Mount Plugin"
-msgstr ""
+msgstr "Connector per muntar dispositius"
 
 # Traduit "unmount" per «umount», s'hauria de comprovar.
 #: ../panel-plugin/mount-plugin.c:780
@@ -222,7 +222,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:983
 msgid "Display _mount points only"
-msgstr "Mostra tant sols els punts de muntatge"
+msgstr "Mostra tant sols els punts de _muntatge"
 
 #: ../panel-plugin/mount-plugin.c:998
 msgid ""
