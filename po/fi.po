@@ -1,0 +1,247 @@
+# Finnish translation of xfce4-mount-plugin.
+# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
+# Copyright (C) 2005-2008 Fabian Nowak.
+# This file is distributed under the same license as the xfce4-mount-plugin package.
+# Elias Julkunen <elias.julkunen@gmail.com>, 2008.
+# Jari Rahkonen <jari.rahkonen@pp1.inet.fi>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-mount-plugin 0.5.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-17 15:02+0200\n"
+"PO-Revision-Date: 2008-12-17 15:52+0200\n"
+"Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
+"Language-Team: Finnish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../panel-plugin/devices.c:54
+#, c-format
+msgid "%.1f t"
+msgstr "%.1f t"
+
+#: ../panel-plugin/devices.c:55
+#, c-format
+msgid "%.1f kt"
+msgstr "%.1f kt"
+
+#: ../panel-plugin/devices.c:56
+#, c-format
+msgid "%.1f Mt"
+msgstr "%.1f Mt"
+
+#: ../panel-plugin/devices.c:57
+#, c-format
+msgid "%.1f Gt"
+msgstr "%.1f Gt"
+
+#: ../panel-plugin/devices.c:66
+#, c-format
+msgid "size:                %g\n"
+msgstr "Koko:                %g\n"
+
+#: ../panel-plugin/devices.c:67
+#, c-format
+msgid "used size:           %g\n"
+msgstr "Käytössä:            %g\n"
+
+#: ../panel-plugin/devices.c:68
+#, c-format
+msgid "available siz:       %g\n"
+msgstr "Vapaana:             %g\n"
+
+#: ../panel-plugin/devices.c:69
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "Prosenttia käytössä: %d\n"
+
+#: ../panel-plugin/devices.c:70
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "Tiedostojärjestelmä: %s\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr "Todell. liitoskohta: %s\n"
+
+#: ../panel-plugin/devices.c:155
+#, c-format
+msgid "disk: %s\n"
+msgstr "Levy: %s\n"
+
+#: ../panel-plugin/devices.c:156
+#, c-format
+msgid "mount point: %s\n"
+msgstr "Liitoskohta: %s\n"
+
+#: ../panel-plugin/devices.c:160
+#, c-format
+msgid "not mounted\n"
+msgstr "Ei liitetty\n"
+
+#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+msgid "Mount Plugin: Error executing command."
+msgstr "Liitosliitännäinen: Virhe suoritettaessa komentoa."
+
+#: ../panel-plugin/mount-plugin.c:54
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "Laitteen \"%s\" voi irrottaa turvallisesti."
+
+#: ../panel-plugin/mount-plugin.c:57
+msgid "An error occurred. The device should not be removed!"
+msgstr "Virhe. Laitetta ei saa irrottaa!"
+
+#: ../panel-plugin/mount-plugin.c:249
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">Ei liitetty</span>"
+
+#: ../panel-plugin/mount-plugin.c:557
+msgid "devices"
+msgstr "Laitteet"
+
+#: ../panel-plugin/mount-plugin.c:724
+msgid "Mount Plugin"
+msgstr "Liitosliitännäinen"
+
+#: ../panel-plugin/mount-plugin.c:780
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Tämä on hyödyksi ja suositeltavaa ainoastaan silloin, kun \"sync\" sisältyy "
+"määrittämääsi irrotuskomentoon."
+
+#: ../panel-plugin/mount-plugin.c:785
+msgid "Show _message after unmount"
+msgstr "Näytä _viesti irrottamisen jälkeen"
+
+#: ../panel-plugin/mount-plugin.c:797
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "Valitse paneelissa näytettävä kuvake."
+
+#: ../panel-plugin/mount-plugin.c:804
+msgid "Icon:"
+msgstr "Kuvake:"
+
+#: ../panel-plugin/mount-plugin.c:808
+msgid "Select an image"
+msgstr "Valitse kuva"
+
+#: ../panel-plugin/mount-plugin.c:815
+msgid "_General"
+msgstr "_Yleiset"
+
+#: ../panel-plugin/mount-plugin.c:830
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"thunar %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Tämä komento suoritetaan laitteen liittämisen jälkeen.\n"
+"Jos et tiedä mitä kirjoittaisit, kokeile komentoa \"thunar %m\".\n"
+"Määre \"%d\" tarkoittaa laitetta ja \"%m\" liitoskohtaa."
+
+#: ../panel-plugin/mount-plugin.c:840
+msgid "_Execute after mounting:"
+msgstr "_Suorita liittämisen jälkeen:"
+
+#: ../panel-plugin/mount-plugin.c:863
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"VAROITUS: Nämä asetukset ovat vain edistyneille käyttäjille. Jos et tiedä "
+"niiden tarkoitusta, jätä ne rauhaan."
+
+#: ../panel-plugin/mount-plugin.c:868
+msgid "_Custom commands"
+msgstr "_Omat komennot"
+
+#: ../panel-plugin/mount-plugin.c:887
+#, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Yleensä ainoa mahdollisesti tarvittava muutos komentosarjoihin on komennon "
+"\"sudo\" lisääminen niiden molempien alkuun tai komennon \"sync %d &&\" "
+"lisääminen ennen \"unmount %d\" -komentoa.\n"
+"\"%d\" tarkoittaa laitetta ja \"%m\" liitoskohtaa."
+
+#: ../panel-plugin/mount-plugin.c:896
+msgid "_Mount command:"
+msgstr "_Liitoskomento:"
+
+#: ../panel-plugin/mount-plugin.c:902
+msgid "_Unmount command:"
+msgstr "_Irrotuskomento:"
+
+#: ../panel-plugin/mount-plugin.c:928
+msgid "_Commands"
+msgstr "_Komennot"
+
+#: ../panel-plugin/mount-plugin.c:943
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Valitse tämä näyttääksesi myös verkkotiedostojärjestelmät kuten NFS, SMBFS, "
+"SHFS ja SSHFS."
+
+#: ../panel-plugin/mount-plugin.c:948
+msgid "Display _network file systems"
+msgstr "Näytä _verkkotiedostojärjestelmät"
+
+#: ../panel-plugin/mount-plugin.c:961
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+"Jos valitset tämän, CD-levy poistetaan asemasta irrottamisen jälkeen ja "
+"asema suljetaan ennen liittämistä."
+
+#: ../panel-plugin/mount-plugin.c:966
+msgid "_Eject CD-drives"
+msgstr "_Poista CD-levyt"
+
+#: ../panel-plugin/mount-plugin.c:979
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "Jos valitset tämän, näytetään pelkästään liitoskohdat."
+
+#: ../panel-plugin/mount-plugin.c:983
+msgid "Display _mount points only"
+msgstr "Näytä vain _liitoskohdat"
+
+#: ../panel-plugin/mount-plugin.c:998
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points."
+msgstr ""
+"Älä näytä seuraavia tiedostojärjestelmiä valikossa.\n"
+"Luettele haluamasi laitteet tai liitoskohdat välilyönneillä erotettuina."
+
+#: ../panel-plugin/mount-plugin.c:1008
+msgid "E_xclude specified file systems"
+msgstr "_Ohita määritetyt tiedostojärjestelmät"
+
+#: ../panel-plugin/mount-plugin.c:1023
+msgid "_File systems"
+msgstr "_Tiedostojärjestelmät"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "Liitä laitteita"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr ""
+"Näyttää liitettävissä olevat laitteet ja liittää tai irrottaa ne "
+"pyydettäessä."
