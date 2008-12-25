@@ -66,7 +66,7 @@ msgstr "ファイルシステム:      %s\n"
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "実際のマウント位置:    %s\n"
+msgstr "実際のマウントポイント:    %s\n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -76,7 +76,7 @@ msgstr "ディスク: %s\n"
 #: ../panel-plugin/devices.c:156
 #, c-format
 msgid "mount point: %s\n"
-msgstr "マウント位置 : %s\n"
+msgstr "マウントポイント : %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
@@ -195,11 +195,11 @@ msgstr "CD ドライブから取り出す(_E)"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "マウント位置の表示のみ行いたいときにこのオプションを有効にします。"
+msgstr "マウントポイントの表示のみ行いたいときにこのオプションを有効にします。"
 
 #: ../panel-plugin/mount-plugin.c:983
 msgid "Display _mount points only"
-msgstr "マウント位置のみを表示する(_M)"
+msgstr "マウントポイントのみを表示する(_M)"
 
 #: ../panel-plugin/mount-plugin.c:998
 msgid ""

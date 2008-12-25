@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-13 00:16+0100\n"
-"PO-Revision-Date: 2008-06-21 09:10+0700\n"
+"PO-Revision-Date: 2008-12-19 22:35+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr "tipe sistem berkas:    %s\n"
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "titik mount sebenarnya:  %s\n"
+msgstr "titik kait sebenarnya:  %s\n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -74,16 +74,17 @@ msgstr "disk: %s\n"
 #: ../panel-plugin/devices.c:156
 #, c-format
 msgid "mount point: %s\n"
-msgstr "titik mount: %s\n"
+msgstr "titik kait: %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
 msgid "not mounted\n"
-msgstr "tak dimount\n"
+msgstr "tak dikait\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:245
+#: ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
-msgstr "Plugin Mount: Galat mengeksekusi perintah."
+msgstr "Plugin Kait: Galat mengeksekusi perintah."
 
 #: ../panel-plugin/mount-plugin.c:54
 #, c-format
@@ -96,7 +97,7 @@ msgstr "Galat terjadi. Divais jangan sampai dilepas!"
 
 #: ../panel-plugin/mount-plugin.c:249
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#FF0000\">tak dimount</span>"
+msgstr "<span foreground=\"#FF0000\">tak dikait</span>"
 
 #: ../panel-plugin/mount-plugin.c:557
 msgid "devices"
@@ -104,19 +105,15 @@ msgstr "divais"
 
 #: ../panel-plugin/mount-plugin.c:724
 msgid "Mount Plugin"
-msgstr ""
+msgstr "Plugin Kait"
 
 #: ../panel-plugin/mount-plugin.c:780
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"Ini hanya berguna dan disarankan jika anda menentukan \"sync\" sebagai "
-"bagian dari tali perintah \"unmount\"."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "Ini hanya berguna dan disarankan jika anda menentukan \"sync\" sebagai bagian dari tali perintah \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Show _message after unmount"
-msgstr "Tampilkan _pesan setelah lepas mount."
+msgstr "Tampilkan _pesan setelah lepas kaitan."
 
 #: ../panel-plugin/mount-plugin.c:797
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -137,27 +134,21 @@ msgstr "_Umum"
 #: ../panel-plugin/mount-plugin.c:830
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Perintah ini akan dieksekusi setelah memount divais dengan titik mount "
-"divais sebagai argumen.\n"
+"Perintah ini akan dieksekusi setelah mengait divais dengan titik kait divais sebagai argumen.\n"
 "Jika anda tidak yakin apa yang dimasukkan, coba \"thunar %m\".\n"
-"'%d' dapat digunakan untuk menentukan divais, '%m' untuk titk mount."
+"'%d' dapat digunakan untuk menentukan divais, '%m' untuk titik kait."
 
 #: ../panel-plugin/mount-plugin.c:840
 msgid "_Execute after mounting:"
-msgstr "_Eksekusi setela memount:"
+msgstr "_Eksekusi setelah mengait:"
 
 #: ../panel-plugin/mount-plugin.c:863
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"PERINGATAN: Opsi ini hanya untuk yang telah ahli! Jika anda tidak tahu "
-"kegunaannya, segera singkirkan tangan anda!"
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "PERINGATAN: Opsi ini hanya untuk yang telah ahli! Jika anda tidak tahu kegunaannya, segera singkirkan tangan anda!"
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Custom commands"
@@ -166,45 +157,35 @@ msgstr "_Perintah suai"
 #: ../panel-plugin/mount-plugin.c:887
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Kebanyakan pengguna hanya ingin menambah \"sudo\" bagi kedua perintah atau "
-"menambah \"sync %d &&\" ke perintah \"unmount %d\".\n"
-"'%d' digunakan untuk menentukan divais, '%m' untuk titik mount."
+"Kebanyakan pengguna hanya ingin menambah \"sudo\" bagi kedua perintah atau menambah \"sync %d &&\" ke perintah \"unmount %d\".\n"
+"'%d' digunakan untuk menentukan divais, '%m' untuk titik kait."
 
 #: ../panel-plugin/mount-plugin.c:896
 msgid "_Mount command:"
-msgstr "_Perintah mount:"
+msgstr "_Perintah kait:"
 
 #: ../panel-plugin/mount-plugin.c:902
 msgid "_Unmount command:"
-msgstr "P_erintah lepas mount:"
+msgstr "P_erintah lepas kait:"
 
 #: ../panel-plugin/mount-plugin.c:928
 msgid "_Commands"
 msgstr "Pe_rintah:"
 
 #: ../panel-plugin/mount-plugin.c:943
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"Aktifkan opsi ini untuk menampilkan pula sistem berkas jaringan seperti NFS, "
-"SMBFS, SHFS dan SSHFS."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "Aktifkan opsi ini untuk menampilkan pula sistem berkas jaringan seperti NFS, SMBFS, SHFS dan SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:948
 msgid "Display _network file systems"
 msgstr "Tampilkan _sistem berkas jaringan"
 
 #: ../panel-plugin/mount-plugin.c:961
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Aktifkan opsi ini untuk mengeluarkan pula penggerak CD setelah lepas mount "
-"dan untuk memasukkan sebelum memount."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "Aktifkan opsi ini untuk mengeluarkan pula penggerak CD setelah lepas kait dan untuk memasukkan sebelum mengait."
 
 #: ../panel-plugin/mount-plugin.c:966
 msgid "_Eject CD-drives"
@@ -212,11 +193,11 @@ msgstr "_Keluarkan penggerak CD"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Aktifkan opsi ini agar hanya titik mount yang ditampilkan."
+msgstr "Aktifkan opsi ini agar hanya titik kait yang ditampilkan."
 
 #: ../panel-plugin/mount-plugin.c:983
 msgid "Display _mount points only"
-msgstr "Hanya _tampilkan titik mount"
+msgstr "Hanya _tampilkan titik kait"
 
 #: ../panel-plugin/mount-plugin.c:998
 msgid ""
@@ -226,7 +207,7 @@ msgid ""
 msgstr ""
 "Jangan sertakan sistem berkas berikut di menu.\n"
 "Senarai dipisahkan oleh spasi sederhana.\n"
-"Terserah pada anda untuk menentukan divais atau titk mount yang benar."
+"Terserah pada anda untuk menentukan divais atau titik kait yang benar."
 
 #: ../panel-plugin/mount-plugin.c:1008
 msgid "E_xclude specified file systems"
@@ -238,12 +219,12 @@ msgstr "_Sistem berkas"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
-msgstr "Divais mount"
+msgstr "Divais kait"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Tampilkan semua divais yang dapat dimount dan (lepas)mount sesuai permintaan."
+msgstr "Tampilkan semua divais yang dapat dikait dan (lepas)kait sesuai permintaan."
 
 #~ msgid "Edit Properties"
 #~ msgstr "Sunting Properti"
+
