@@ -1,3 +1,7 @@
+2009-01-18  Maximilian Schleiss <maximilian@xfce.org>
+
+	* it.po; LINGUAS: Italian translation added (Walter Comunello)
+
 2009-01-16 Og Maciel <ogmaciel@gnome.org>
 
 	* xfce4-mount-plugin.pot: Updated.
