@@ -315,18 +315,34 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
  * @return                GPtrArray *pdisks containing elements to be displayed
  */
 GPtrArray *
-disks_new (gboolean include_NFSs)
+disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog)
 {
     GPtrArray * pdisks; /* to be returned */
     t_disk * pdisk;
     struct fstab *pfstab;
     gboolean has_valid_mount_device;
+    GtkWidget *dialog;
+
+    pdisks = g_ptr_array_new();
 
     /* open fstab */
     if (setfsent()!=1)
-        return NULL; /* on error return NULL */
+    {
+        /* popup notification dialog */
+        if (! (*showed_fstab_dialog) ) {
+            dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
+    "Your /etc/fstab could not be read. This will severely degrade the plugin's abilities.");
+            /* gtk_dialog_run (GTK_DIALOG (dialog)); */
+            g_signal_connect (dialog, "response",
+                    G_CALLBACK (gtk_widget_destroy), dialog);
+             gtk_widget_show (dialog);
+             *showed_fstab_dialog = TRUE;
+         }
 
-    pdisks = g_ptr_array_new();
+        return pdisks; /* on error return empty pdisks */
+    }
+
 
     for (pfstab = getfsent(); pfstab!=NULL; pfstab = getfsent())
     {

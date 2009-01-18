@@ -120,9 +120,10 @@ int disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboo
  * Fill a GPtrArray with pointers on struct t_disk containing infos on devices
  * and theoretical mount point. Uses setfsent() and getfsent().
  * @param include_NFSs    TRUE if remote file systems should also be displayed.
+ * @param showed_fstab_dialog Pointer to whether dialog has already been shown before
  * @return                GPtrArray with t_disks
  */
-GPtrArray * disks_new (gboolean include_NFSs) ;
+GPtrArray * disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog) ;
 
 
 /**

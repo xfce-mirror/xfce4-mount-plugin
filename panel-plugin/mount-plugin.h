@@ -52,7 +52,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #define DEFAULT_MOUNT_COMMAND "mount %d"
 #define DEFAULT_UMOUNT_COMMAND "umount %d"
 
-#define DEFAULT_ICON PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg"
+#define DEFAULT_ICON PACKAGE_DATA_DIR "/icons/hicolor/scalable/apps/xfce-mount.svg"
 
 static GtkTooltips *tooltips = NULL;
 
@@ -73,6 +73,7 @@ typedef struct
     gboolean exclude_FSs;
     gboolean exclude_devicenames;
     gboolean eject_drives;
+    gboolean showed_fstab_dialog;
     GtkWidget *button;
     GdkPixbuf *button_pb;
     GtkWidget *menu;

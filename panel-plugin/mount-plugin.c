@@ -19,6 +19,9 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
+
+#include <stdlib.h>
+
 #include "mount-plugin.h"
 
 static void
@@ -54,7 +57,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
                         msg = _("The device \"%s\" should be removable safely "
                                     "now.");
                     else
-                        msg = _("An error occurred. The device should not be "
+                        msg = _("An error occurred. The device \"%s\" should not be "
                                     "removed!");
 
                 my_dlg = gtk_message_dialog_new (NULL,
@@ -294,7 +297,7 @@ mounter_data_new (t_mounter *mt)
     gboolean removed_device;
 
     /*get static infos from /etc/fstab */
-    mt->pdisks = disks_new (mt->include_NFSs);
+    mt->pdisks = disks_new (mt->include_NFSs, &(mt->showed_fstab_dialog));
 
     /* remove unwanted file systems from list */
     if (mt->exclude_FSs) {
@@ -702,13 +705,13 @@ exlude_FSs_toggled (GtkWidget *widget, t_mounter_dialog *md)
 }
 
 
-static gboolean
+/*static gboolean
 exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
 
 
     return TRUE;
-}
+}*/
 
 static void
 mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
@@ -718,7 +721,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     xfce_panel_plugin_block_menu (plugin);
 
-    GtkWidget *dlg, *header;
+    GtkWidget *dlg; //, *header;
     //dlg = gtk_dialog_new_with_buttons (_("Edit Properties"),
     dlg = xfce_titled_dialog_new_with_buttons(
                 _("Mount Plugin"),
