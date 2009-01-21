@@ -1,3 +1,8 @@
+18 january 2009
+- Fixed crash when not being able to read fstab; showing notification dialog
+and allowing to continue regularly
+- Fixed unmount problem with sshfs
+
 27 october 2008
 - New xfce-style header
 
