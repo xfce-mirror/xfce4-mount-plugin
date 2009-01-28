@@ -4,13 +4,13 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 #
-# Piarres Beobide <pi@beobide.net>, 2006, 2008.
+# Piarres Beobide <pi@beobide.net>, 2006, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-21 21:56+0100\n"
-"PO-Revision-Date: 2008-11-05 14:25+0200\n"
+"PO-Revision-Date: 2009-01-28 01:19+0100\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.0\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -95,9 +95,9 @@ msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" gailua orain ziurtasunez deskonektatu daiteke."
 
 #: ../panel-plugin/mount-plugin.c:60
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Errore bat gertatu da. Gailua ez zen kendu beharko!"
+msgstr "Errore bat gertatu da. \"%s\" gailua ez zen kendu beharko!"
 
 #: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -249,5 +249,3 @@ msgstr "Gailuak muntatu"
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Gailu muntagarri guztiak bistarazi eta eskatzean (des)muntatu."
 
-#~ msgid "Edit Properties"
-#~ msgstr "Propietateak Editatu"
