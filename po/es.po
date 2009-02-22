@@ -1,0 +1,226 @@
+# Spanish translations for xfce package
+# Traducciones al español para el paquete xfce.
+# Copyright (C) 2009 THE xfce'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce package.
+#  <abel.martin.ruiz@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce 4-mount-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-16 12:37-0500\n"
+"PO-Revision-Date: 2009-02-22 23:52+0100\n"
+"Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/devices.c:54
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f B"
+
+#: ../panel-plugin/devices.c:55
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../panel-plugin/devices.c:56
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: ../panel-plugin/devices.c:57
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../panel-plugin/devices.c:66
+#, c-format
+msgid "size:                %g\n"
+msgstr "tamaño:                %g\n"
+
+#: ../panel-plugin/devices.c:67
+#, c-format
+msgid "used size:           %g\n"
+msgstr "tamaño usado:           %g\n"
+
+#: ../panel-plugin/devices.c:68
+#, c-format
+msgid "available siz:       %g\n"
+msgstr "tamaño disponible:       %g\n"
+
+#: ../panel-plugin/devices.c:69
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "porcentaje usado:     %d\n"
+
+#: ../panel-plugin/devices.c:70
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "tipo de sistema de ficheros:    %s\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr "punto de montaje real:  %s\n"
+
+#: ../panel-plugin/devices.c:155
+#, c-format
+msgid "disk: %s\n"
+msgstr "disco: %s\n"
+
+#: ../panel-plugin/devices.c:156
+#, c-format
+msgid "mount point: %s\n"
+msgstr "punto de montaje: %s\n"
+
+#: ../panel-plugin/devices.c:160
+#, c-format
+msgid "not mounted\n"
+msgstr "sin montar\n"
+
+#: ../panel-plugin/devices.c:245
+#: ../panel-plugin/devices.c:294
+msgid "Mount Plugin: Error executing command."
+msgstr "Complemento de montaje: Error al ejecutar comando."
+
+#: ../panel-plugin/mount-plugin.c:54
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "El dispositivo \"%s\" ya puede ser retirado con seguridad."
+
+#: ../panel-plugin/mount-plugin.c:57
+msgid "An error occurred. The device should not be removed!"
+msgstr "Ocurrió un error. ¡No se debería retirar el dispositivo!"
+
+#: ../panel-plugin/mount-plugin.c:249
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">no montado</span>"
+
+#: ../panel-plugin/mount-plugin.c:557
+msgid "devices"
+msgstr "dispositivos"
+
+#: ../panel-plugin/mount-plugin.c:724
+msgid "Mount Plugin"
+msgstr "Complemento de montaje"
+
+#: ../panel-plugin/mount-plugin.c:780
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "Esto sólo es útil y se recomienda si especifica \"sync\" como parte de la cadena del comando \"desmontar\"."
+
+#: ../panel-plugin/mount-plugin.c:785
+msgid "Show _message after unmount"
+msgstr "Mostrar _mensaje después de desmontar"
+
+#: ../panel-plugin/mount-plugin.c:797
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "Puede especificar un icono distinto para mostrarse en el panel."
+
+#: ../panel-plugin/mount-plugin.c:804
+msgid "Icon:"
+msgstr "Icono:"
+
+#: ../panel-plugin/mount-plugin.c:808
+msgid "Select an image"
+msgstr "Seleccionar imagen"
+
+#: ../panel-plugin/mount-plugin.c:815
+msgid "_General"
+msgstr "_General"
+
+#: ../panel-plugin/mount-plugin.c:830
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"thunar %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Este comando se ejecutará después de montar el dispositivo con el punto de montaje del dispositivo como argumento.\n"
+"Si no está seguro sobre qué introducir, pruebe con \"thunar %m\".\n"
+"'%d' puede ser usado para especificar el dispositivo, '%m' para el punto de montaje."
+
+#: ../panel-plugin/mount-plugin.c:840
+msgid "_Execute after mounting:"
+msgstr "_Ejecutar después de montar:"
+
+#: ../panel-plugin/mount-plugin.c:863
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "ATENCIÓN: ¡Estas opciones son sólo para expertos! ¡Si no sabe para qué sirven, no las toque!"
+
+#: ../panel-plugin/mount-plugin.c:868
+msgid "_Custom commands"
+msgstr "Comandos _personalizados"
+
+#: ../panel-plugin/mount-plugin.c:887
+#, fuzzy, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr "La mayoría de los usuarios solo querrán añadir \"sudo\" delante de ambos comandos o añadir \"sync %d &&\" al comando \"desmontar %d\""
+
+#: ../panel-plugin/mount-plugin.c:896
+msgid "_Mount command:"
+msgstr "Comando _montar:"
+
+#: ../panel-plugin/mount-plugin.c:902
+msgid "_Unmount command:"
+msgstr "Comando _desmontar:"
+
+#: ../panel-plugin/mount-plugin.c:928
+msgid "_Commands"
+msgstr "_Comandos"
+
+#: ../panel-plugin/mount-plugin.c:943
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "Active esta opción para mostrar también sistemas de ficheros en red como NFS, SMBFS, SHFS y SSHFS."
+
+#: ../panel-plugin/mount-plugin.c:948
+msgid "Display _network file systems"
+msgstr "Mostrar sistemas de ficheros en _red"
+
+#: ../panel-plugin/mount-plugin.c:961
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "Activar esta opción para expulsar también una unidad de CD después de desmontarla y para insertar antes de montar."
+
+#: ../panel-plugin/mount-plugin.c:966
+msgid "_Eject CD-drives"
+msgstr "_Expulsar unidades de CD"
+
+#: ../panel-plugin/mount-plugin.c:979
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "Activar esta opción para que solo se muestren los puntos de montaje."
+
+#: ../panel-plugin/mount-plugin.c:983
+msgid "Display _mount points only"
+msgstr "Mostrar puntos de _montaje solamente"
+
+#: ../panel-plugin/mount-plugin.c:998
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points."
+msgstr ""
+"Excluir los siguientes sistemas de ficheros del menú.\n"
+"La lista está separada por espacios simples.\n"
+"Le corresponde especificar correctamente dispositivos y puntos de montaje."
+
+#: ../panel-plugin/mount-plugin.c:1008
+msgid "E_xclude specified file systems"
+msgstr "E_xcluir los sistemas de ficheros especificados"
+
+#: ../panel-plugin/mount-plugin.c:1023
+msgid "_File systems"
+msgstr "Sistemas de _ficheros"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "Dispositivos para montar"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr "Muestra todos los dispositivos que pueden ser montados y los (des)monta bajo demanda."
+
