@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-14 09:31+0000\n"
-"PO-Revision-Date: 2008-07-09 10:31+0300\n"
+"PO-Revision-Date: 2009-02-24 19:48+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,7 @@ msgstr ""
 "X-Poedit-Country: UKRAINE\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -209,7 +208,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:944
 msgid "Display _network file systems"
-msgstr "Показувати мере_жеві файлові системи"
+msgstr "Відображати мере_жеві файлові системи"
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid ""
@@ -251,5 +250,5 @@ msgstr "_Файлові системи"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Показати всі доступні для монтування пристрої і демонтовані тут в запиті."
+msgstr "Показати всі доступні для монтування пристрої і демонтовані тут в запиті."
+

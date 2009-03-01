@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce 4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-16 12:37-0500\n"
-"PO-Revision-Date: 2009-02-22 23:52+0100\n"
+"PO-Revision-Date: 2009-02-23 20:54+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -156,11 +156,13 @@ msgid "_Custom commands"
 msgstr "Comandos _personalizados"
 
 #: ../panel-plugin/mount-plugin.c:887
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "La mayoría de los usuarios solo querrán añadir \"sudo\" delante de ambos comandos o añadir \"sync %d &&\" al comando \"desmontar %d\""
+msgstr ""
+"La mayoría de los usuarios solo querrán añadir \"sudo\" delante de ambos comandos o añadir \"sync %d &&\" al comando \"desmontar %d\".\n"
+"'%d' se usa para especificar el dispositivo, '%m' para el punto de montaje."
 
 #: ../panel-plugin/mount-plugin.c:896
 msgid "_Mount command:"
