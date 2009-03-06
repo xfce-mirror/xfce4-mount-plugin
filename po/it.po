@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-13 00:16+0100\n"
-"PO-Revision-Date: 2009-01-14 17:15+0100\n"
+"PO-Revision-Date: 2009-03-04 09:11+0100\n"
 "Last-Translator: Walter Comunello <masterz3d@gmail.com>\n"
 "Language-Team: Darkforge Team <www.darkforge.it>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "filesystem:    %s\n"
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "mount point attuale:  %s\n"
+msgstr "punto di montaggio attuale:  %s\n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -73,7 +73,7 @@ msgstr "disco: %s\n"
 #: ../panel-plugin/devices.c:156
 #, c-format
 msgid "mount point: %s\n"
-msgstr "mount point: %s\n"
+msgstr "punto di montaggio: %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
@@ -137,8 +137,8 @@ msgid ""
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Questo comando verrà eseguito dopo il montaggio del volume con il mount point della periferica come argomento.\n"
-"Se non si è sicuri di cosa inserire, si può provare \"thunar %m\".\n"
+"Questo comando verrà eseguito dopo il montaggio del volume con il punto di montaggio della periferica come argomento.\n"
+"Se non si è sicuri su cosa inserire, si può provare \"thunar %m\".\n"
 "'%d' può essere usato per specificare il volume, '%m' il mount point."
 
 #: ../panel-plugin/mount-plugin.c:840
