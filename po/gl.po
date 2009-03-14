@@ -1,9 +1,10 @@
 # Galician translation of xfce4-mount-plugin
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
 # Copytight (C) 2005-2007 Fabian Nowak.
-# Copyright (C) 2008 Leandro Regueiro
+# Copyright (C) 2008-2009 Leandro Regueiro
 # This file is distributed under the same license as the xfce4-mount-plugin package.
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2006, 2008.
+#
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2006, 2008, 2009.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
@@ -11,9 +12,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
 "POT-Creation-Date: 2009-01-16 12:37-0500\n"
-"PO-Revision-Date: 2009-02-11 16:13+0100\n"
+"PO-Revision-Date: 2009-03-07 12:56+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -52,9 +53,9 @@ msgid "used size:           %g\n"
 msgstr "tamaño usado:           %g\n"
 
 #: ../panel-plugin/devices.c:68
-#, fuzzy, c-format
+#, c-format
 msgid "available siz:       %g\n"
-msgstr "Filtros dispoñibles"
+msgstr "tamaño dispoñible:       %g\n"
 
 #: ../panel-plugin/devices.c:69
 #, c-format
@@ -94,7 +95,7 @@ msgstr "Plugin de Montaxe: Erro ó executar o comando."
 #: ../panel-plugin/mount-plugin.c:54
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr ""
+msgstr "Xa se pode extraer de xeito seguro o dispositivo \"%s\"."
 
 #: ../panel-plugin/mount-plugin.c:57
 msgid "An error occurred. The device should not be removed!"
@@ -188,11 +189,11 @@ msgstr "Amosa_r os sistemas de ficheiros por rede"
 
 #: ../panel-plugin/mount-plugin.c:961
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr ""
+msgstr "Activar esta opción para expulsar unha unidade de CD despois de desmontar e para introducila antes de montar."
 
 #: ../panel-plugin/mount-plugin.c:966
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "_Expulsar as unidades de CD"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid "Activate this option to only have the mount points be displayed."
@@ -213,9 +214,8 @@ msgstr ""
 "Depende de vostede especificar dispositivos ou puntos de montaxe correctos."
 
 #: ../panel-plugin/mount-plugin.c:1008
-#, fuzzy
 msgid "E_xclude specified file systems"
-msgstr "Abrir un ficheiro de imaxe dunha localización especificada"
+msgstr "E_xcluír os sistemas de ficheiros especificados"
 
 #: ../panel-plugin/mount-plugin.c:1023
 msgid "_File systems"
