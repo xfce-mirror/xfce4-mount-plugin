@@ -162,6 +162,21 @@ disk_print (t_disk * pdisk)
     return;
 }
 
+char *
+shorten_disk_name (const char *dev)
+{
+    char *r, *lastchars;
+    if (strncmp(dev, "UUID", 4)==0 && strlen(dev)>13)
+    {
+        lastchars = (char *) (dev + strlen(dev) - 5);
+        r = (char *) malloc (14*sizeof(char));
+        snprintf (r, 14, "UUID=...%s", lastchars);
+    }
+    else
+        r = g_strdup (dev);
+
+    return r;
+}
 
 t_disk *
 disk_new (const char * dev, const char * mountpoint)
@@ -173,7 +188,7 @@ disk_new (const char * dev, const char * mountpoint)
     if ( dev != NULL && mountpoint != NULL)
     {
         pdisk = g_new0 (t_disk,1);
-        pdisk->device = g_strdup(dev);
+        pdisk->device = shorten_disk_name (dev);
         pdisk->mount_point = g_strdup (mountpoint);
         pdisk->mount_info = NULL;
 

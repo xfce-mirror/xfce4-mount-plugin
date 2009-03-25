@@ -296,7 +296,7 @@ mounter_data_new (t_mounter *mt)
     char *dev_mp; /* device or mountpoint */
     gboolean removed_device;
 
-    /*get static infos from /etc/fstab */
+    /* get static infos from /etc/fstab */
     mt->pdisks = disks_new (mt->include_NFSs, &(mt->showed_fstab_dialog));
 
     /* remove unwanted file systems from list */

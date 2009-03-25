@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-21 21:56+0100\n"
-"PO-Revision-Date: 2009-01-21 21:56+0100\n"
+"PO-Revision-Date: 2009-03-25 00:07+0100\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -225,7 +225,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
-msgstr "Nur die _Einhängepunkt anzeigen"
+msgstr "Nur den _Einhängepunkt anzeigen"
 
 #: ../panel-plugin/mount-plugin.c:1001
 msgid ""
