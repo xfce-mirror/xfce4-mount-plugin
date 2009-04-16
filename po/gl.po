@@ -12,10 +12,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
-"Report-Msgid-Bugs-To: xfce-i18n@xfce.org\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-16 12:37-0500\n"
-"PO-Revision-Date: 2009-03-07 12:56+0100\n"
-"Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
+"PO-Revision-Date: 2009-04-14 21:45+0100\n"
+"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,7 @@ msgstr "Engadido de montaxe"
 
 #: ../panel-plugin/mount-plugin.c:780
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr ""
+msgstr "Isto só é útil e recomendable se especifica \"sync\" coma parte da cadea de execución do comando \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Show _message after unmount"
@@ -160,6 +160,7 @@ msgstr "ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que 
 msgid "_Custom commands"
 msgstr "Comandos personalizados"
 
+# antepoñer
 #: ../panel-plugin/mount-plugin.c:887
 #, c-format
 msgid ""
@@ -227,7 +228,7 @@ msgstr "Montar dispositivos"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
+msgstr "Mostra os dispositivos montables e (des)móntaos segundo se solicite."
 
 #~ msgid "Edit Properties"
 #~ msgstr "Editar Propiedades"
