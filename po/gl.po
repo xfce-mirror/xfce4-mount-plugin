@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-01-16 12:37-0500\n"
-"PO-Revision-Date: 2009-04-14 21:45+0100\n"
+"PO-Revision-Date: 2009-04-18 12:35+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "non montado\n"
 #: ../panel-plugin/devices.c:245
 #: ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
-msgstr "Plugin de Montaxe: Erro ó executar o comando."
+msgstr "Engadido de montaxe: Erro ó executar o comando."
 
 #: ../panel-plugin/mount-plugin.c:54
 #, c-format
@@ -160,13 +160,14 @@ msgstr "ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que 
 msgid "_Custom commands"
 msgstr "Comandos personalizados"
 
-# antepoñer
 #: ../panel-plugin/mount-plugin.c:887
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
+"A maioría dos usuarios só quererán antepoñer \"sudo\" ós dous comandos ou antepoñer \"sync %d &&\" ao comando \"unmount %d\".\n"
+"'%d' úsase para especificar o dispositivo, '%m' para o punto de montaxe."
 
 #: ../panel-plugin/mount-plugin.c:896
 msgid "_Mount command:"
