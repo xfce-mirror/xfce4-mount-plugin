@@ -1,20 +1,21 @@
-# Hungarian translation of the xfce4-mount-plugin package.
-# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005-2007 Fabian Nowak.
+# Hungarian translation of xfce4-mount-plugin
+# Copyright 2009. Free Software Foundation, Inc.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
-# SZERVÁC Attila <sas@321.hu>, 2005.
 #
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-13 00:16+0100\n"
-"PO-Revision-Date: 2008-04-17 09:31+0100\n"
-"Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
-"Language-Team: Hungarian <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2009-07-23 12:19+0200\n"
+"PO-Revision-Date: 2009-07-24 02:47+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <gnome at gnome dot hu>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -44,12 +45,12 @@ msgstr "méret:               %g\n"
 #: ../panel-plugin/devices.c:67
 #, c-format
 msgid "used size:           %g\n"
-msgstr "használt méret:       %g\n"
+msgstr "használt méret:      %g\n"
 
 #: ../panel-plugin/devices.c:68
 #, c-format
 msgid "available siz:       %g\n"
-msgstr "elérhető méret:       %g\n"
+msgstr "elérhető méret:      %g\n"
 
 #: ../panel-plugin/devices.c:69
 #, c-format
@@ -59,12 +60,12 @@ msgstr "használt százalék:   %d\n"
 #: ../panel-plugin/devices.c:70
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "fájlrendszer típus:   %s\n"
+msgstr "fájlrendszer típusa: %s\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "jelen csatolási pont: %s\n"
+msgstr "tényleges csatolási pont: %s\n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -81,59 +82,59 @@ msgstr "csatolási pont: %s\n"
 msgid "not mounted\n"
 msgstr "nincs csatolva\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "Hiba a parancs futtatásakor"
-
-#: ../panel-plugin/mount-plugin.c:54
-#, c-format
-msgid "The device \"%s\" should be removable safely now."
-msgstr "A \"%s\" eszköz biztonságosan eltávolítható."
+msgstr "Csatoló bővítmény: hiba a parancs végrehajtásakor."
 
 #: ../panel-plugin/mount-plugin.c:57
-msgid "An error occurred. The device should not be removed!"
-msgstr "Hiba történt. Az eszközt nem lehet eltávolítani!"
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "Az eszköz („%s”) most már biztonságosan eltávolítható."
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:60
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "Hiba történt. Az eszközt („%s”) ne távolítsa el!"
+
+#: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nincs csatolva</span>"
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
 msgstr "eszközök"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
-msgstr "Csatoló"
+msgstr "Csatoló bővítmény"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:783
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Ez csak akkor ajánlott, ha megadod a \"sync\"-et az \"unmount\" prancsban."
+msgstr "Ez csak akkor hasznos és javasolt, ha az „umount” parancs részeként megadja a „sync” kapcsolót is."
 
-#: ../panel-plugin/mount-plugin.c:785
+#: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
-msgstr "Üzenet _mutatása lecsatolás után"
+msgstr "Üzenet _megjelenítése leválasztás után"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Megadhatsz egy a panelre teendő eltérő ikont."
+msgstr "Megadhat egyedi ikont a panelen való megjelenítéshez."
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
-msgstr "Válassz egy képet"
+msgstr "Válasszon képet"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
-msgstr "Általános"
+msgstr "Ál_talános"
 
-#: ../panel-plugin/mount-plugin.c:830
+#: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -141,96 +142,89 @@ msgid ""
 "If you are unsure what to insert, try \"thunar %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"E parancs fut egy eszköz csatolása után annak csatolási pontját "
-"argumentumként átadva. \n"
-"Használd például ezt: \"thunar %m\".\n"
-"A '%d' eszközt, a '%m' csatolási pontot ad."
+"Ez a parancs az eszköz csatolása után lesz végrehajtva az eszköz csatolási pontját paraméterként használva.\n"
+"Ha bizonytalan, próbálja megadni a „thunar %m” parancsot.\n"
+"A „%d” használható az eszköz, a „%m” pedig a csatolási pont megadására."
 
-#: ../panel-plugin/mount-plugin.c:840
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
-msgstr "Csatolás után fut:"
+msgstr "_Végrehajtás csatolás után:"
 
-#: ../panel-plugin/mount-plugin.c:863
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"FIGYELEM: E lehetőséges csak szakértőknek valók! Ha nem tudod, mire jók, ne "
-"módosítsd!"
+msgstr "FIGYELMEZTETÉS: ezeket a beállításokat szakértőknek terveztük! Ha nem tudja, mire lehetnek jók, ne módosítson semmit!"
 
-#: ../panel-plugin/mount-plugin.c:868
+#: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
-msgstr "Egyéni parancsok"
+msgstr "_Egyéni parancsok"
 
-#: ../panel-plugin/mount-plugin.c:887
+#: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"A legtöbb felhasználó csak \"sudo\"-t akar mindkét parancs, vagy \"sync %d &&"
-"\"-t az \"unmount %d\" parancs elé.\n"
-"A '%d' eszközt, a '%m' csatolási pontot ad."
+"A legtöbb esetben csak a „sudo” kellhet mindkét parancs elé, vagy a „sync %d &&” az „umount %d” parancs elé.\n"
+"A „%d” használható az eszköz, a „%m” pedig a csatolási pont megadására."
 
-#: ../panel-plugin/mount-plugin.c:896
+#: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
-msgstr "Csatoló parancs:"
+msgstr "_Csatolási parancs:"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
-msgstr "Lecsatoló parancs:"
+msgstr "_Leválasztási parancs:"
 
-#: ../panel-plugin/mount-plugin.c:928
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
-msgstr "Parancsok"
+msgstr "_Parancsok"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:946
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"E lehetőség az NFS, SMBFS, SHFS, SSHFS, stb. fájlrendszereket is kiírja."
+msgstr "Hálózati fájlrendszerek megjelenítése, mint például NFS, SMBFS, SHFS és SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
-msgstr "Hálózati fájlrendszereket is"
+msgstr "_Hálózati fájlrendszerek megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:961
+#: ../panel-plugin/mount-plugin.c:964
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr ""
-"Használd e lehetőséget egy CD-meghajtó kinyitásához lecsatolás után és "
-"becsukásához csatolás előtt."
+msgstr "CD-meghajtók kiadása leválasztás után és behúzása csatolás előtt."
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
-msgstr "CD-meghajtók kinyitása."
+msgstr "C_D-meghajtók kiadása"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Használd e lehetőséget csak a csatolási pontok mutatásához."
+msgstr "Csak a csatolási pontok megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
-msgstr "Csak a csatolási pontok mutatása"
+msgstr "Cs_ak a csatolási pontok megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:998
+#: ../panel-plugin/mount-plugin.c:1001
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
-"Az alábbi fájlrendszerek kizárása a menüből.\n"
-"A listában a szóköz választ el.\n"
-"Helyes eszközöket és csatolási pontokat használj."
+"A következő fájlrendszerek kihagyása a menüből.\n"
+"A listát szóközök választják el.\n"
+"A megfelelő eszközök vagy csatolási pontok megadása az Ön feladata."
 
-#: ../panel-plugin/mount-plugin.c:1008
+#: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
-msgstr "Kivéve az alábbi fájlrendszereket"
+msgstr "Megadott fájlrendszerek ki_hagyása"
 
-#: ../panel-plugin/mount-plugin.c:1023
+#: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
 msgstr "_Fájlrendszerek"
 
@@ -240,19 +234,5 @@ msgstr "Eszközök csatolása"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Minden csatolható eszközt mutat és kérésre (le)csatolja őket"
+msgstr "Minden csatolható eszköz megjelenítése és kérésre leválasztása."
 
-#~ msgid "Edit Properties"
-#~ msgstr "Tulajdonságok"
-
-#~ msgid "size : %g\n"
-#~ msgstr "méret : %g\n"
-
-#~ msgid "<b>Commands</b>"
-#~ msgstr "<b>Parancsok</b>"
-
-#~ msgid "Specify own commands"
-#~ msgstr "Saját parancs megadása"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>Általános</b>"
