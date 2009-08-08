@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce 4-mount-complementu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-16 12:37-0500\n"
+"PO-Revision-Date: 2009-07-13 19:54+0100\n"
+"Last-Translator: Marcos Antonio Alvarez Costales <marcoscostales@gmail.com>\n"
+"Language-Team: Asturian <alministradores@softastur.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/devices.c:54
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f B"
+
+#: ../panel-plugin/devices.c:55
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../panel-plugin/devices.c:56
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: ../panel-plugin/devices.c:57
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../panel-plugin/devices.c:66
+#, c-format
+msgid "size:                %g\n"
+msgstr "tamañu:                %g\n"
+
+#: ../panel-plugin/devices.c:67
+#, c-format
+msgid "used size:           %g\n"
+msgstr "tamañu usáu:           %g\n"
+
+#: ../panel-plugin/devices.c:68
+#, c-format
+msgid "available siz:       %g\n"
+msgstr "tamañu disponible:       %g\n"
+
+#: ../panel-plugin/devices.c:69
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "porcentaxe usáu:     %d\n"
+
+#: ../panel-plugin/devices.c:70
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "triba de sistema de ficheros:    %s\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr "puntu de montaxe real:  %s\n"
+
+#: ../panel-plugin/devices.c:155
+#, c-format
+msgid "disk: %s\n"
+msgstr "discu: %s\n"
+
+#: ../panel-plugin/devices.c:156
+#, c-format
+msgid "mount point: %s\n"
+msgstr "puntu de montaxe: %s\n"
+
+#: ../panel-plugin/devices.c:160
+#, c-format
+msgid "not mounted\n"
+msgstr "ensin montar\n"
+
+#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#, fuzzy
+msgid "Mount Plugin: Error executing command."
+msgstr "Complementu de montaxe: Fallu al executar comandu."
+
+#: ../panel-plugin/mount-plugin.c:54
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "El preséu \"%s\" yá puede retirase con seguridá."
+
+#: ../panel-plugin/mount-plugin.c:57
+msgid "An error occurred. The device should not be removed!"
+msgstr "Ocurrió un fallu. ¡Nun tendría de retirase'l preséu!"
+
+#: ../panel-plugin/mount-plugin.c:249
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">non montáu</span>"
+
+#: ../panel-plugin/mount-plugin.c:557
+msgid "devices"
+msgstr "preseos"
+
+#: ../panel-plugin/mount-plugin.c:724
+msgid "Mount Plugin"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:780
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Esto namái ye útil y encamiéntase si especifiques \"sync\" como parte de la "
+"cadena del comandu \"desmontar\"."
+
+#: ../panel-plugin/mount-plugin.c:785
+msgid "Show _message after unmount"
+msgstr "Amosar _mensaxe dempués de desmontar"
+
+#: ../panel-plugin/mount-plugin.c:797
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "Puedes especificar un iconu distintu p'amosase nel panel."
+
+#: ../panel-plugin/mount-plugin.c:804
+msgid "Icon:"
+msgstr "Iconu:"
+
+#: ../panel-plugin/mount-plugin.c:808
+msgid "Select an image"
+msgstr "Seleicionar imaxe"
+
+#: ../panel-plugin/mount-plugin.c:815
+msgid "_General"
+msgstr "_Xeneral"
+
+#: ../panel-plugin/mount-plugin.c:830
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"thunar %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"Esti comandu executará dempués de montar el preséu col puntu de montaxe del "
+"preséu como argumentu.\n"
+"Si nun tas seguru sobro qué introducir, preba con \"thunar %m\".\n"
+"'%d' puede ser usáu pa especificar el preséu, '%m' pal puntu de montaxe."
+
+#: ../panel-plugin/mount-plugin.c:840
+msgid "_Execute after mounting:"
+msgstr "_Executar dempués de montar:"
+
+#: ../panel-plugin/mount-plugin.c:863
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"ATENCIÓN: ¡Estes opciones son namái pa espertos! ¡Si nun sabes pa qué "
+"sirven, nun les toques!"
+
+#: ../panel-plugin/mount-plugin.c:868
+msgid "_Custom commands"
+msgstr "Comandos _personalizaos"
+
+#: ../panel-plugin/mount-plugin.c:887
+#, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr ""
+"La mayoría de los usuarios namái querrán amestar \"sudo\" delantre de dambos "
+"comandos o amestar \"sync %d &&\" al comandu \"desmontar %d\".\n"
+"'%d' úsase pa especificar el preséu, '%m' pal puntu de montaxe."
+
+#: ../panel-plugin/mount-plugin.c:896
+msgid "_Mount command:"
+msgstr "Comandu _montar:"
+
+#: ../panel-plugin/mount-plugin.c:902
+msgid "_Unmount command:"
+msgstr "Comandu _desmontar:"
+
+#: ../panel-plugin/mount-plugin.c:928
+msgid "_Commands"
+msgstr "_Comandos"
+
+#: ../panel-plugin/mount-plugin.c:943
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Activa esta opción p'amosar tamién sistemes de ficheros en rede como NFS, "
+"SMBFS, SHFS y SSHFS."
+
+#: ../panel-plugin/mount-plugin.c:948
+msgid "Display _network file systems"
+msgstr "Amosar sistemes de ficheros en _rede"
+
+#: ../panel-plugin/mount-plugin.c:961
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+"Activar esta opción pa espulsar tamién una unidá de CD dempués de desmontala "
+"y pa inxertar enantes de montar."
+
+#: ../panel-plugin/mount-plugin.c:966
+msgid "_Eject CD-drives"
+msgstr "_Espulsar unidaes de CD"
+
+#: ../panel-plugin/mount-plugin.c:979
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "Activar esta opción pa que namái s'amuesen puntos de montaxe."
+
+#: ../panel-plugin/mount-plugin.c:983
+msgid "Display _mount points only"
+msgstr "Amosar namái puntos de _montaxe"
+
+#: ../panel-plugin/mount-plugin.c:998
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points."
+msgstr ""
+"Escluyir los siguientes sistemes de ficheros del menú.\n"
+"La llista ta dixebrada por espacios simples.\n"
+"Correspuéndete especificar correutamente preseos y puntos de montaxe."
+
+#: ../panel-plugin/mount-plugin.c:1008
+msgid "E_xclude specified file systems"
+msgstr "E_scluyir los sistemes de ficheros especificaos"
+
+#: ../panel-plugin/mount-plugin.c:1023
+msgid "_File systems"
+msgstr "Sistemes de _ficheros"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "Preseos pa montar"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr ""
+"Amuesa tolos preseos que pueden ser montaos y (des)montalos baxo demanda."
+
+#~ msgid "Mount Complementu"
+#~ msgstr "Complementu de montaxe"
