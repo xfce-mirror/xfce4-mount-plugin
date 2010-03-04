@@ -3,7 +3,7 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Eugene Ostapets <eostapets@altlinux.ru>, 2005-2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
@@ -84,8 +84,7 @@ msgstr "точка монтирования: %s\n"
 msgid "not mounted\n"
 msgstr "не смонтировано\n"
 
-#: ../panel-plugin/devices.c:245
-#: ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
 msgid "Mount Plugin: Error executing command."
 msgstr "Модуль монтирования: Ошибка при выполнении команды"
 
@@ -146,9 +145,8 @@ msgstr ""
 "'%d' может быть использован для указания устройства, '%m' для точки монтирования."
 
 #: ../panel-plugin/mount-plugin.c:840
-#, fuzzy
 msgid "_Execute after mounting:"
-msgstr "команда исполняемая после монтирования устройства"
+msgstr "_Выполнить после монтирования"
 
 #: ../panel-plugin/mount-plugin.c:863
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
@@ -187,7 +185,7 @@ msgstr "Показывать _сетевые файловые системы"
 
 #: ../panel-plugin/mount-plugin.c:961
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr ""
+msgstr "Включение этой опции также выдвинет лоток Cd-привода после отмонтирования и задвинет его при монтировании"
 
 #: ../panel-plugin/mount-plugin.c:966
 msgid "_Eject CD-drives"
@@ -220,9 +218,8 @@ msgid "_File systems"
 msgstr "_Файловые системы"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
-#, fuzzy
 msgid "Mount devices"
-msgstr "монтирование/отображение устройств"
+msgstr "монтирование устройств"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
