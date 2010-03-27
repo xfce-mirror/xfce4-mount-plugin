@@ -108,7 +108,7 @@ msgstr "Geräte einhängen"
 
 #: ../panel-plugin/mount-plugin.c:780
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Dies ist nur sinnvoll und empfohlen, falls \"sync\" als Teil des \"unmount\"-Befehls angegeben wird."
+msgstr "Dies ist nur sinnvoll und empfohlen, falls »sync« als Teil des »unmount«-Befehls angegeben wird."
 
 #: ../panel-plugin/mount-plugin.c:785
 msgid "Show _message after unmount"
@@ -210,7 +210,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:1008
 msgid "E_xclude specified file systems"
-msgstr "_Folgende Dateisysteme ausschließen"
+msgstr "_Folgende Dateisysteme ausschließen:"
 
 #: ../panel-plugin/mount-plugin.c:1023
 msgid "_File systems"
