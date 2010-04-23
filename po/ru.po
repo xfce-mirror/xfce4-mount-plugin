@@ -162,6 +162,8 @@ msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
+"Большинство пользователей используют \"sudo\" или \"sync %d &&\" перед \"unmount %d\".\n"
+"'%d' обычно обозначает устройство, '%m' - точку монтирования."
 
 #: ../panel-plugin/mount-plugin.c:896
 msgid "_Mount command:"
