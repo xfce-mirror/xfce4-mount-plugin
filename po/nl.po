@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-16 12:37-0500\n"
+"POT-Creation-Date: 2010-06-01 18:58+0000\n"
 "PO-Revision-Date: 2008-05-17 12:41+0100\n"
 "Last-Translator: Vincent Tunru <imnotb@gmail.com>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -78,56 +78,57 @@ msgstr "koppelpuntT: %s\n"
 msgid "not mounted\n"
 msgstr "niet aangekoppeld\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
 msgstr "Aankoppelingsplugin: Fout bij het uitvoeren van commando"
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:57
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Het apparaat \"%s\" kan nu veilig verwijderd worden."
 
-#: ../panel-plugin/mount-plugin.c:57
-msgid "An error occurred. The device should not be removed!"
-msgstr "Er is een fout opgetreden. Koppel het apparaat niet los!"
+#: ../panel-plugin/mount-plugin.c:60
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "Er is een fout opgetreden. Koppel apparaat \"%s\" niet los!"
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">niet aangekoppeld</span>"
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
 msgstr "apparaten"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
 msgstr "Aankoppel Plugin"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:783
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
 msgstr "Dit is alleen nuttig en aanbevolen als u opgeeft \"sync\" als onderdeel van de \"unmount\" command string."
 
-#: ../panel-plugin/mount-plugin.c:785
+#: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
 msgstr "_Bericht weergeven na loskoppeling"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "U kunt een ander pictogram kiezen om in het paneel weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
 msgstr "Kies een afbeelding"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
 msgstr "Al_gemeen"
 
-#: ../panel-plugin/mount-plugin.c:830
+#: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -138,19 +139,19 @@ msgstr ""
 "U kunt \"thunar %m\" proberen als u niet weet wat u hier moet invullen.\n"
 "'%d' kan gebruikt worden om het apparaat weer te geven, '%m' kan gebruikt worden om het koppelpunt aan te geven."
 
-#: ../panel-plugin/mount-plugin.c:840
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
 msgstr "Na koppeling _uitvoeren:"
 
-#: ../panel-plugin/mount-plugin.c:863
+#: ../panel-plugin/mount-plugin.c:866
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
 msgstr "WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan te raden deze opties niet aan te passen tenzij u weet wat u doet."
 
-#: ../panel-plugin/mount-plugin.c:868
+#: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
 msgstr "_Aangepaste commando's"
 
-#: ../panel-plugin/mount-plugin.c:887
+#: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
@@ -159,43 +160,43 @@ msgstr ""
 "De meeste mensen willen \"sudo\" voor beide commando's invoegen of \"sync %d &&\" voor \"unmount %d\" invoegen.\n"
 "'%d' kan gebruikt worden om het apparaat weer te geven, '%m' kan gebruikt worden om het koppelpunt aan te geven."
 
-#: ../panel-plugin/mount-plugin.c:896
+#: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
 msgstr "_Aankoppelingscommando:"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
 msgstr "_Ontkoppelingscommando:"
 
-#: ../panel-plugin/mount-plugin.c:928
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
 msgstr "_Commando's"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
 msgstr "Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en SSHFS weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
 msgstr "_Netwerk-bestandssystemen weergeven"
 
-#: ../panel-plugin/mount-plugin.c:961
+#: ../panel-plugin/mount-plugin.c:964
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
 msgstr "Activeer deze optie om een CD na het loskoppelen ook uit te werpen en in te voegen voor het aankoppelen."
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "CD's _uitwerpen"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Activeer deze optie om alleen de koppelpunten weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
 msgstr "Alleen _koppelpunten weergeven"
 
-#: ../panel-plugin/mount-plugin.c:998
+#: ../panel-plugin/mount-plugin.c:1001
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -205,11 +206,11 @@ msgstr ""
 "Gebruik spaties als scheidingsteken.\n"
 "Het is aan u correcte schijven en koppelpunten in te geven."
 
-#: ../panel-plugin/mount-plugin.c:1008
+#: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
 msgstr "Aangegeven bestandssystemen u_itsluiten"
 
-#: ../panel-plugin/mount-plugin.c:1023
+#: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
 msgstr "_Bestandssystemen"
 
