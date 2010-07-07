@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-22 10:03+0000\n"
+"POT-Creation-Date: 2010-07-07 10:03+0000\n"
 "PO-Revision-Date: 2009-07-15 17:55+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -119,7 +119,7 @@ msgstr "Isto só é útil e recomendable se especifica \"sync\" coma parte da ca
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
-msgstr "Amosar _mensaxe despois de desmontar"
+msgstr "Mostrar _mensaxe despois de desmontar"
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -183,11 +183,11 @@ msgstr "_Comandos"
 
 #: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "Activar esta opción para amosar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
+msgstr "Activar esta opción para mostrar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
-msgstr "Amosa_r os sistemas de ficheiros por rede"
+msgstr "Mostrar_r os sistemas de ficheiros por rede"
 
 #: ../panel-plugin/mount-plugin.c:964
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
