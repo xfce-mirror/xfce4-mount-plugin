@@ -150,7 +150,7 @@ msgstr "دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەر
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Custom commands"
-msgstr ""
+msgstr "Custom بۇيرۇقلار(_C)"
 
 #: ../panel-plugin/mount-plugin.c:887
 #, c-format
