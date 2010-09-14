@@ -832,7 +832,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
         _("This command will be executed after mounting the device with the "
         "mount point of the device as argument.\n"
-        "If you are unsure what to insert, try \"thunar %m\".\n"
+        "If you are unsure what to insert, try \"exo-open %m\".\n"
         "'%d' can be used to specify the device, '%m' for the mountpoint."),
         NULL);
 
