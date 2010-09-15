@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Walter Comunello <masterz3d@gmail.com>, 2008
 # Cristian Marchi <cri.penta@gmail.com>, 2010
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-06 10:03+0000\n"
+"POT-Creation-Date: 2010-09-15 10:04+0000\n"
 "PO-Revision-Date: 2010-07-06 15:59+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian Translation Team <xfce-it-translators@googlegroups.com>\n"
@@ -81,8 +81,7 @@ msgstr "punto di montaggio: %s\n"
 msgid "not mounted\n"
 msgstr "non montato\n"
 
-#: ../panel-plugin/devices.c:260
-#: ../panel-plugin/devices.c:309
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
 msgstr "Plugin di montaggio: errore nell'esecuzione del comando."
 
@@ -139,12 +138,12 @@ msgstr "_Generale"
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Questo comando verrà eseguito dopo il montaggio del dispositivo con il punto di montaggio come argomento.\n"
-"Se non si è sicuri su cosa inserire, provare con \"thunar %m\".\n"
-"\"%d\" può essere usato per specificare il volume, \"%m\" il pnto di montaggio"
+"Se non si è sicuri su cosa inserire, provare con \"exo-open %m\".\n"
+"\"%d\" può essere usato per specificare il volume, \"%m\" il punto di montaggio"
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
@@ -232,4 +231,3 @@ msgstr "Monta dispositivi"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Mostra tutti i dispositivi montabili e li (s)monta a richiesta"
-
