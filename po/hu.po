@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-16 12:37-0500\n"
+"POT-Creation-Date: 2010-11-03 11:04+0000\n"
 "PO-Revision-Date: 2009-07-24 02:47+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at gnome dot hu>\n"
@@ -82,79 +82,80 @@ msgstr "csatolási pont: %s\n"
 msgid "not mounted\n"
 msgstr "nincs csatolva\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
 msgstr "Csatoló bővítmény: hiba a parancs végrehajtásakor."
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:57
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Az eszköz („%s”) most már biztonságosan eltávolítható."
 
-#: ../panel-plugin/mount-plugin.c:57
-msgid "An error occurred. The device should not be removed!"
-msgstr "Hiba történt. Az eszközt ne távolítsa el!"
+#: ../panel-plugin/mount-plugin.c:60
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "Hiba történt. Az eszközt („%s”) ne távolítsa el!"
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nincs csatolva</span>"
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
 msgstr "eszközök"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
 msgstr "Csatoló bővítmény"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:783
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
 msgstr "Ez csak akkor hasznos és javasolt, ha az „umount” parancs részeként megadja a „sync” kapcsolót is."
 
-#: ../panel-plugin/mount-plugin.c:785
+#: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
 msgstr "Üzenet _megjelenítése leválasztás után"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Megadhat egyedi ikont a panelen való megjelenítéshez."
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
 msgstr "Válasszon képet"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
 msgstr "Ál_talános"
 
-#: ../panel-plugin/mount-plugin.c:830
+#: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Ez a parancs az eszköz csatolása után lesz végrehajtva az eszköz csatolási pontját paraméterként használva.\n"
-"Ha bizonytalan, próbálja megadni a „thunar %m” parancsot.\n"
+"Ha bizonytalan a behelyezendő eszközt illetően, próbálja kiadni az „exo-open %m” parancsot.\n"
 "A „%d” használható az eszköz, a „%m” pedig a csatolási pont megadására."
 
-#: ../panel-plugin/mount-plugin.c:840
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
 msgstr "_Végrehajtás csatolás után:"
 
-#: ../panel-plugin/mount-plugin.c:863
+#: ../panel-plugin/mount-plugin.c:866
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
 msgstr "FIGYELMEZTETÉS: ezeket a beállításokat szakértőknek terveztük! Ha nem tudja, mire lehetnek jók, ne módosítson semmit!"
 
-#: ../panel-plugin/mount-plugin.c:868
+#: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
 msgstr "_Egyéni parancsok"
 
-#: ../panel-plugin/mount-plugin.c:887
+#: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
@@ -163,43 +164,43 @@ msgstr ""
 "A legtöbb esetben csak a „sudo” kellhet mindkét parancs elé, vagy a „sync %d &&” az „umount %d” parancs elé.\n"
 "A „%d” használható az eszköz, a „%m” pedig a csatolási pont megadására."
 
-#: ../panel-plugin/mount-plugin.c:896
+#: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
 msgstr "_Csatolási parancs:"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
 msgstr "_Leválasztási parancs:"
 
-#: ../panel-plugin/mount-plugin.c:928
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
 msgstr "_Parancsok"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
 msgstr "Hálózati fájlrendszerek megjelenítése, mint például NFS, SMBFS, SHFS és SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
 msgstr "_Hálózati fájlrendszerek megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:961
+#: ../panel-plugin/mount-plugin.c:964
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
 msgstr "CD-meghajtók kiadása leválasztás után és behúzása csatolás előtt."
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "C_D-meghajtók kiadása"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Csak a csatolási pontok megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
 msgstr "Cs_ak a csatolási pontok megjelenítése"
 
-#: ../panel-plugin/mount-plugin.c:998
+#: ../panel-plugin/mount-plugin.c:1001
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -209,11 +210,11 @@ msgstr ""
 "A listát szóközök választják el.\n"
 "A megfelelő eszközök vagy csatolási pontok megadása az Ön feladata."
 
-#: ../panel-plugin/mount-plugin.c:1008
+#: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
 msgstr "Megadott fájlrendszerek ki_hagyása"
 
-#: ../panel-plugin/mount-plugin.c:1023
+#: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
 msgstr "_Fájlrendszerek"
 
