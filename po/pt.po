@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-24 10:04+0000\n"
+"POT-Creation-Date: 2010-11-17 11:05+0000\n"
 "PO-Revision-Date: 2009-08-18 22:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -82,7 +82,7 @@ msgstr "não montado\n"
 
 #: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "Mount Plugin: Erro a executar comando."
+msgstr "\"Plug-in\" de montagem: erro ao executar comando."
 
 #: ../panel-plugin/mount-plugin.c:57
 #, c-format
@@ -92,7 +92,7 @@ msgstr "O dispositivo \"%s\" pode ser removido com segurança."
 #: ../panel-plugin/mount-plugin.c:60
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Ocorreu um erro. O dispositivo \"%s\"  não deve ser removido!"
+msgstr "Ocorreu um erro. O dispositivo \"%s\" não deve ser removido!"
 
 #: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -104,11 +104,11 @@ msgstr "dispositivos"
 
 #: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
-msgstr "Plugin de Montagem"
+msgstr "\"Plug-in\" de montagem"
 
 #: ../panel-plugin/mount-plugin.c:783
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Isto só é útil e recomendado se indicar \"sync\" como parte da string de comando \"unmount\""
+msgstr "Isto só é útil e recomendado se indicar \"sync\" como parte da linha de comando \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
@@ -116,7 +116,7 @@ msgstr "Mostrar _mensagem após desmontar"
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Pode indicar um ícone distinto a ser mostrado no painel."
+msgstr "Pode indicar um ícone distinto a exibir no painel."
 
 #: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
@@ -124,7 +124,7 @@ msgstr "Ícone:"
 
 #: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
-msgstr "Seleccione uma Imagem"
+msgstr "Seleccione uma imagem"
 
 #: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 "Este comando irá ser executado depois de montar o dispositivo com o ponto de montagem do dispositivo como argumento.\n"
 "Se está inseguro, tente \"exo-open %m\".\n"
-"'%d'  que pode ser usado para indicar o dispositivo, '%m' para o ponto de montagem."
+"%d é utilizado para indicar o dispositivo e %m para o ponto de montagem."
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
@@ -147,11 +147,11 @@ msgstr "_Executar depois de montar:"
 
 #: ../panel-plugin/mount-plugin.c:866
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "AVISO: Estas opções são para avançados! Se não sabe para que servem, mantenha as mãos afastadas!"
+msgstr "AVISO: Estas opções são para peritos! Se não sabe para que servem, não as utilize!"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
-msgstr "_Comandos Personalizados"
+msgstr "_Comandos personalizados"
 
 #: ../panel-plugin/mount-plugin.c:890
 #, c-format
@@ -160,7 +160,7 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "A maioria dos utilizadores quererá prefixar \"sudo\" para ambos os comandos ou prefixar \"sync %d &&\" para \"unmount %d\".\n"
-"'%d' é usado para indicar o dispositivo, '%m' para o ponto de montagem."
+"%d é utilizado para indicar o dispositivo e %m para o ponto de montagem."
 
 #: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
@@ -184,11 +184,11 @@ msgstr "Mostrar sistema de ficheiros de _rede"
 
 #: ../panel-plugin/mount-plugin.c:964
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr "Activar esta opção para ejectar uma CD-drive depois de desmontar e para inserir antes de montar."
+msgstr "Activar esta opção para ejectar uma unidade de CD depois de desmontar e para inserir antes de montar."
 
 #: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
-msgstr "_Ejectar CD-drives"
+msgstr "_Ejectar unidades de CD"
 
 #: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
