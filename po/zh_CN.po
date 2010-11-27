@@ -4,12 +4,12 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Xiaobin Wu <xwu422@googlemail.com>, 2008.
 # Hunt Xu <huntxu@live.cn>, 2008, 2009, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-06 22:03+0000\n"
+"POT-Creation-Date: 2010-11-27 11:04+0000\n"
 "PO-Revision-Date: 2010-06-07 08:40+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -109,9 +109,7 @@ msgid "Mount Plugin"
 msgstr "挂载插件"
 
 #: ../panel-plugin/mount-plugin.c:783
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
 msgstr "此选项仅在您 \"unmount\" 时使用 \"sync\"参数时才有效。"
 
 #: ../panel-plugin/mount-plugin.c:788
@@ -137,13 +135,12 @@ msgstr "常规(_G)"
 #: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"此命令会在设备挂载后被执行，以挂载点作为参数。\n"
-"如果您不确定该写什么，试试 \"thunar %m\"。\n"
+"此命令会在设备挂载后被执行，以该设备的挂载点作为参数。\n"
+"如果您不确定此处该输入什么内容，试试 \"exo-open %m\"。\n"
 "'%d' 代表设备， '%m' 代表挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:843
@@ -151,11 +148,8 @@ msgid "_Execute after mounting:"
 msgstr "挂载后执行(_E)"
 
 #: ../panel-plugin/mount-plugin.c:866
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"警告：这些选项仅供专家使用！ 如果您不清楚这些指令的功能，请勿轻易尝试！"
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "警告：这些选项仅供专家使用！ 如果您不清楚这些指令的功能，请勿轻易尝试！"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
@@ -164,12 +158,10 @@ msgstr "自定义命令(_C)"
 #: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"多数用户应该在两个命令之前都加上 \"sudo\" 或者在 \"unmount %d\"命令前加上 "
-"\"sync %d &&\"\n"
+"多数用户应该在两个命令之前都加上 \"sudo\" 或者在 \"unmount %d\"命令前加上 \"sync %d &&\"\n"
 "'%d' 代表设备， '%m' 代表挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:899
@@ -185,9 +177,7 @@ msgid "_Commands"
 msgstr "命令(_C)"
 
 #: ../panel-plugin/mount-plugin.c:946
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
 msgstr "激活此选项以显示网络文件系统，例如 NFS、 SMBFS、SHFS及 SSHFS。"
 
 #: ../panel-plugin/mount-plugin.c:951
@@ -195,9 +185,7 @@ msgid "Display _network file systems"
 msgstr "显示网络文件系统(_N)"
 
 #: ../panel-plugin/mount-plugin.c:964
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
 msgstr "激活此选项，以在卸载后弹出此光驱，以及挂载前插入光驱。 "
 
 #: ../panel-plugin/mount-plugin.c:969
