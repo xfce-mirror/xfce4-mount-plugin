@@ -6,12 +6,12 @@
 # Terje Uriansrud <ter@operamail.com>, 2007.
 # Christian Lomsdalen <christian@vindstille.net>, 2007.
 # Terje Uriansrud <terje@uriansrud.net>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-27 23:38+0100\n"
+"POT-Creation-Date: 2010-12-10 23:05+0000\n"
 "PO-Revision-Date: 2006-08-07 00:00+0200\n"
 "Last-Translator: Terje Uriansrud <terje@uriansrud.net>\n"
 "Language-Team: Norwegian Bokmal <i18n-nb@lister.ping.uio.no>\n"
@@ -84,7 +84,7 @@ msgstr "monteringspunkt : %s\n"
 msgid "not mounted\n"
 msgstr "ikke montert\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
 msgstr "Mount Plugin: Feil ved utføring av kommando."
 
@@ -111,12 +111,8 @@ msgid "Mount Plugin"
 msgstr "Montering"
 
 #: ../panel-plugin/mount-plugin.c:783
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"Dette valget er kun å anbefale hvis du har angitt \"sync\" som en del av "
-"\"unmount\" kommandoen."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "Dette valget er kun å anbefale hvis du har angitt \"sync\" som en del av \"unmount\" kommandoen."
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
@@ -141,13 +137,12 @@ msgstr "_Generelt"
 #: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Denne kommandoen vil bli utført etter at du har montert enheten.\n"
-"Hvis du er usikker på hva du vil sette inn, prøv \"thunar %m\".\n"
+"Hvis du er usikker på hva du vil sette inn, prøv \"exo-open %m\".\n"
 "'%d' kan brukes for å angi enheten, '%m' for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:843
@@ -155,12 +150,8 @@ msgid "_Execute after mounting:"
 msgstr "_Kjør etter montering:"
 
 #: ../panel-plugin/mount-plugin.c:866
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"ADVARSEL: Disse valgene er kun for eksperter! Hvis du ikke vet hva de "
-"innebærer så kan det være lurt å finne ut av det før du prøver."
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "ADVARSEL: Disse valgene er kun for eksperter! Hvis du ikke vet hva de innebærer så kan det være lurt å finne ut av det før du prøver."
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
@@ -169,12 +160,10 @@ msgstr "_Egendefinerte kommandoer"
 #: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"De fleste brukere har mulighet til å kjøre \"sudo\" foran begge kommandoer, "
-"eller \"sync %d &&\" foran \"unmount %d\" kommandoen.\n"
+"De fleste brukere har mulighet til å kjøre \"sudo\" foran begge kommandoer, eller \"sync %d &&\" foran \"unmount %d\" kommandoen.\n"
 "'%d' kan brukes for å angi enheten, '%m' for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:899
@@ -190,21 +179,15 @@ msgid "_Commands"
 msgstr "_Kommandoer"
 
 #: ../panel-plugin/mount-plugin.c:946
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"Aktiver dette valget for også å vise filsystemwe som ligger i nettverket, f."
-"eks. NFS, SMBFS, SHFS og SSHFS."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "Aktiver dette valget for også å vise filsystemwe som ligger i nettverket, f.eks. NFS, SMBFS, SHFS og SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
 msgstr "Vis også filsystemer i _nettverket"
 
 #: ../panel-plugin/mount-plugin.c:964
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
 msgstr "Aktiver denne for også å løse ut CD'en etter avmontering."
 
 #: ../panel-plugin/mount-plugin.c:969
