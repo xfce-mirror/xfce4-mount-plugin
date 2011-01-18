@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-08 11:04+0000\n"
+"POT-Creation-Date: 2011-01-18 17:06+0000\n"
 "PO-Revision-Date: 2009-07-15 17:55+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -89,7 +89,7 @@ msgstr "non montado\n"
 
 #: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "Engadido de montaxe: Erro ó executar o comando."
+msgstr "Engadido de montaxe: Erro ao executar a orde."
 
 #: ../panel-plugin/mount-plugin.c:57
 #, c-format
@@ -115,7 +115,7 @@ msgstr "Engadido de montaxe"
 
 #: ../panel-plugin/mount-plugin.c:783
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Isto só é útil e recomendable se especifica \"sync\" coma parte da cadea de execución do comando \"unmount\"."
+msgstr "Isto só é útil e recomendable se especifica \"sync\" como parte da cadea de execución da orde \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
@@ -144,7 +144,7 @@ msgid ""
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Este comando hase executar despois de montar o dispositivo co punto de montaxe do dispositivo como argumento.\n"
+"Esta orde hase executar despois de montar o dispositivo co punto de montaxe do dispositivo como argumento.\n"
 "Se non está seguro de que debe introducir, probe \"exo-open %m\".\n"
 "Pódese usar '%d' para especificar o dispositivo, e '%m' para especificar o punto de montaxe."
 
@@ -158,7 +158,7 @@ msgstr "ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que 
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
-msgstr "Comandos personalizados"
+msgstr "Ordes personalizadas"
 
 #: ../panel-plugin/mount-plugin.c:890
 #, c-format
@@ -166,20 +166,20 @@ msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"A maioría dos usuarios só quererán antepoñer \"sudo\" ós dous comandos ou antepoñer \"sync %d &&\" ao comando \"unmount %d\".\n"
+"A maioría dos usuarios só quererán antepoñer \"sudo\" ás dúas ordes ou antepoñer \"sync %d &&\" á orde \"unmount %d\".\n"
 "'%d' úsase para especificar o dispositivo, '%m' para o punto de montaxe."
 
 #: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
-msgstr "Comando de _montaxe:"
+msgstr "Orde de _montaxe:"
 
 #: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
-msgstr "Comando de _desmontaxe:"
+msgstr "Orde de _desmontaxe:"
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
-msgstr "_Comandos"
+msgstr "_Ordes"
 
 #: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
