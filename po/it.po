@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-15 10:04+0000\n"
+"POT-Creation-Date: 2011-02-13 11:06+0000\n"
 "PO-Revision-Date: 2010-07-06 15:59+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian Translation Team <xfce-it-translators@googlegroups.com>\n"
@@ -119,7 +119,7 @@ msgstr "Mostra _messaggio dopo lo smontaggio"
 # tooltip
 #: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "E' possibile specificare un'icona distinta da visualizzare nel pannello"
+msgstr "È possibile specificare un'icona distinta da visualizzare nel pannello"
 
 #: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
@@ -214,7 +214,7 @@ msgid ""
 msgstr ""
 "Esclude i seguenti file system dal menu.\n"
 "La lista è separata da spazi semplici.\n"
-"E' necessario specificare i dispositivi o i punti di montaggio corretti"
+"È necessario specificare i dispositivi o i punti di montaggio corretti"
 
 #: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
