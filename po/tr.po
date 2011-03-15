@@ -1,8 +1,9 @@
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4 mount plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-17 11:38+0200\n"
+"POT-Creation-Date: 2011-03-15 05:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
@@ -76,85 +77,80 @@ msgstr "bağlama noktası: %s\n"
 msgid "not mounted\n"
 msgstr "bağlanmamış\n"
 
-#: ../panel-plugin/devices.c:245
-#: ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
 msgstr "Bağlama Eklentisi: Komut çalıştırılırken hata oluştu."
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:57
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" aygıtı güvenle kaldırılabilir."
 
-#: ../panel-plugin/mount-plugin.c:57
-msgid "An error occurred. The device should not be removed!"
-msgstr "Hata oluştu. Aygıt kaldırılamıyor!"
+#: ../panel-plugin/mount-plugin.c:60
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "Hata oluştu. \"%s\" Aygıtı kaldırılamadı."
 
-#: ../panel-plugin/mount-plugin.c:220
+#: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">bağlanmamış</span>"
 
-#: ../panel-plugin/mount-plugin.c:525
+#: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
 msgstr "aygıtlar"
 
-#: ../panel-plugin/mount-plugin.c:690
-msgid "Edit Properties"
-msgstr "Tercihleri Düzenle"
+#: ../panel-plugin/mount-plugin.c:727
+msgid "Mount Plugin"
+msgstr "Aygıt Bağlama Eklentisi"
 
-#: ../panel-plugin/mount-plugin.c:697
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
-msgid "Mount devices"
-msgstr "Aygıtları Bağla"
-
-#: ../panel-plugin/mount-plugin.c:744
+#: ../panel-plugin/mount-plugin.c:783
 msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
 msgstr "Bu işlemi eğer \"sync\" komutunu \"unmount\" komutunun bir parçası olarak kullanıyorsanız yapmanız tavsiye edilmektedir."
 
-#: ../panel-plugin/mount-plugin.c:749
+#: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
 msgstr "Ayırma işleminden sonra _mesaj göster"
 
-#: ../panel-plugin/mount-plugin.c:761
+#: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Panelde gösterilmek üzere farklı bir simge belirleyebilirsiniz."
 
-#: ../panel-plugin/mount-plugin.c:768
+#: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
 msgstr "Simge"
 
-#: ../panel-plugin/mount-plugin.c:772
+#: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
 msgstr "Resim seçiniz"
 
-#: ../panel-plugin/mount-plugin.c:779
+#: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
 msgstr "_Genel"
 
-#: ../panel-plugin/mount-plugin.c:794
-#, c-format
+#: ../panel-plugin/mount-plugin.c:833
+#, fuzzy, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "Aygıt sisteme bağlandıktan sonra bağlama noktasını açacak bir komut çalıştırabilirsiniz.\n"
 "Eğer emin değilseniz, \"thunar %m\" komutunu deneyebilirsiniz.\n"
 "Aygıtı belirtmek için '%d' değerini, bağlama noktasını belirtmek için '%m' kullanabilirsiniz. "
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
 msgstr "Bağladıktan sonra çalıştı_r:"
 
-#: ../panel-plugin/mount-plugin.c:827
+#: ../panel-plugin/mount-plugin.c:866
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
 msgstr "UYARI: Bu seçenekler uzman kullanıcılar içindir! Ne işe yaradığını bilmiyorsanız lütfen denemeyiniz!"
 
-#: ../panel-plugin/mount-plugin.c:832
+#: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
 msgstr "_Özel komutlar"
 
-#: ../panel-plugin/mount-plugin.c:851
+#: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
@@ -163,43 +159,43 @@ msgstr ""
 "Çoğu kullanıcı komutların her komutun başına \"sudo\" eklemektedir veya \"unmount %d\" komutunun başına \"sync %d &&\" eklemektedir.\n"
 "'%d' aygıtı belirtmek için kullanılmaktadır, '%m' ise bağlama noktasını belirtmek için kullanılmaktadır."
 
-#: ../panel-plugin/mount-plugin.c:860
+#: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
 msgstr "_Bağlama komutu:"
 
-#: ../panel-plugin/mount-plugin.c:866
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
 msgstr "_Ayırma komutu:"
 
-#: ../panel-plugin/mount-plugin.c:892
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
 msgstr "_Komutlar"
 
-#: ../panel-plugin/mount-plugin.c:907
+#: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
 msgstr "NFS, SMBFS,SHFS ve SSHFS gibi dosya sistemlerini göstermek için bu seçeneği etkinleştirebilirsiniz."
 
-#: ../panel-plugin/mount-plugin.c:912
+#: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
 msgstr "Ağ dosya sistemleri_ni göster"
 
-#: ../panel-plugin/mount-plugin.c:925
+#: ../panel-plugin/mount-plugin.c:964
 msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
 msgstr "Bu seçeneği etkinleştirerek ayırdıktan sonra veya bağlamadan önce CD-sürücünüzün açılmasını sağlayabilirsiniz."
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "CD sürücül_eri aç"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Bu seçeneği sadece bağlama noktalarını göstermek istiyorsanız seçebilirsiniz."
 
-#: ../panel-plugin/mount-plugin.c:947
+#: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
 msgstr "Sadece bağla_ma noktaları göster"
 
-#: ../panel-plugin/mount-plugin.c:962
+#: ../panel-plugin/mount-plugin.c:1001
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -209,15 +205,21 @@ msgstr ""
 "Listeyi arasına boşluk koyarak genişletebilirsiniz.\n"
 "Doğru aygıtları ve bağlama noktalarını belirtmek  sizin inisiyatifinize bağlıdır."
 
-#: ../panel-plugin/mount-plugin.c:972
+#: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
 msgstr "Belirtilen sürücüleri har_iç tut"
 
-#: ../panel-plugin/mount-plugin.c:987
+#: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
 msgstr "_Dosya sistemleri"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+msgid "Mount devices"
+msgstr "Aygıtları Bağla"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Bağlanabilir aygıtları gösterir ve talebe göre bağlar/ayırır. "
 
+#~ msgid "Edit Properties"
+#~ msgstr "Tercihleri Düzenle"
