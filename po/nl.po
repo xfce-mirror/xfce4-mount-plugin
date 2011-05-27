@@ -1,17 +1,23 @@
+# Dutch translation of the xfce4-mount-plugin package.
+# Copyright (C) The Xfce development team.
+# This file is distributed under the same license as the 
+# xfce4-mount-plugin package.
+# Vincent Tunru <imnotb@gmail.com>
+# Pjotr, 2011.
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-01 18:58+0000\n"
-"PO-Revision-Date: 2008-05-17 12:41+0100\n"
-"Last-Translator: Vincent Tunru <imnotb@gmail.com>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"POT-Creation-Date: 2011-05-27 04:04+0000\n"
+"PO-Revision-Date: 2011-05-25 11:34+0200\n"
+"Last-Translator: Pjotr\n"
+"Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Dutch\n"
-"X-Poedit-Country: NETHERLANDS\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -56,12 +62,12 @@ msgstr "percentage in gebruik:     %d\n"
 #: ../panel-plugin/devices.c:70
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "bestandssysteem:    %s\n"
+msgstr "type bestandssysteem:    %s\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "werkelijke aankoppel punt:%s \n"
+msgstr "werkelijke koppelpunt:%s \n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -71,7 +77,7 @@ msgstr "schijf: %s\n"
 #: ../panel-plugin/devices.c:156
 #, c-format
 msgid "mount point: %s\n"
-msgstr "koppelpuntT: %s\n"
+msgstr "koppelpunt: %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
@@ -80,7 +86,7 @@ msgstr "niet aangekoppeld\n"
 
 #: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "Aankoppelingsplugin: Fout bij het uitvoeren van commando"
+msgstr "Aankoppelingsplugin: Fout bij het uitvoeren van opdracht."
 
 #: ../panel-plugin/mount-plugin.c:57
 #, c-format
@@ -102,19 +108,23 @@ msgstr "apparaten"
 
 #: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
-msgstr "Aankoppel Plugin"
+msgstr "Aankoppel-plugin"
 
 #: ../panel-plugin/mount-plugin.c:783
-msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Dit is alleen nuttig en aanbevolen als u opgeeft \"sync\" als onderdeel van de \"unmount\" command string."
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Dit is alleen nuttig en aanbevolen als u \"sync\" opgeeft als onderdeel van "
+"het \"unmount\" opdracht-tekstsnoer."
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
-msgstr "_Bericht weergeven na loskoppeling"
+msgstr "_Bericht weergeven na ontkoppeling"
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "U kunt een ander pictogram kiezen om in het paneel weer te geven."
+msgstr "U kunt een ander pictogram kiezen om in de werkbalk weer te geven."
 
 #: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
@@ -131,62 +141,80 @@ msgstr "Al_gemeen"
 #: ../panel-plugin/mount-plugin.c:833
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Nadat het apparaat is aangekoppeld zal dit commando worden uitgevoerd met het koppelpunt als argument.\n"
-"U kunt \"thunar %m\" proberen als u niet weet wat u hier moet invullen.\n"
-"'%d' kan gebruikt worden om het apparaat weer te geven, '%m' kan gebruikt worden om het koppelpunt aan te geven."
+"Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met "
+"het koppelpunt van het apparaat als argument.\n"
+"U kunt \"exo-open %m\" proberen als u niet weet wat u hier moet invullen.\n"
+"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
+"worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
 msgstr "Na koppeling _uitvoeren:"
 
 #: ../panel-plugin/mount-plugin.c:866
-msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan te raden deze opties niet aan te passen tenzij u weet wat u doet."
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan "
+"te raden deze opties niet aan te passen tenzij u weet wat u doet!"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
-msgstr "_Aangepaste commando's"
+msgstr "_Aangepaste opdrachten"
 
 #: ../panel-plugin/mount-plugin.c:890
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"De meeste mensen willen \"sudo\" voor beide commando's invoegen of \"sync %d &&\" voor \"unmount %d\" invoegen.\n"
-"'%d' kan gebruikt worden om het apparaat weer te geven, '%m' kan gebruikt worden om het koppelpunt aan te geven."
+"De meeste mensen willen \"sudo\" voor beide opdrachten invoegen of \"sync %d "
+"&&\" voor \"unmount %d\" invoegen.\n"
+"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
+"worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
-msgstr "_Aankoppelingscommando:"
+msgstr "_Aankoppelingsopdracht:"
 
 #: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
-msgstr "_Ontkoppelingscommando:"
+msgstr "_Ontkoppelingsopdracht:"
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
-msgstr "_Commando's"
+msgstr "_Opdrachten"
 
 #: ../panel-plugin/mount-plugin.c:946
-msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en SSHFS weer te geven."
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en "
+"SSHFS weer te geven."
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
 msgstr "_Netwerk-bestandssystemen weergeven"
 
 #: ../panel-plugin/mount-plugin.c:964
-msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr "Activeer deze optie om een CD na het loskoppelen ook uit te werpen en in te voegen voor het aankoppelen."
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+"Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen en in te "
+"voegen voor het aankoppelen."
 
 #: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
-msgstr "CD's _uitwerpen"
+msgstr "CD-stations _uitwerpen"
 
 #: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
@@ -204,7 +232,7 @@ msgid ""
 msgstr ""
 "Geef de volgende bestandssystemen niet weer in het menu.\n"
 "Gebruik spaties als scheidingsteken.\n"
-"Het is aan u correcte schijven en koppelpunten in te geven."
+"Het is aan u om correcte apparaten of koppelpunten op te geven."
 
 #: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
@@ -220,7 +248,8 @@ msgstr "Apparaten aankoppelen"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Geeft alle apparaten weer en geeft de mogelijkheid deze aan- of los te koppelen."
+msgstr ""
+"Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
 
 #~ msgid "Edit Properties"
 #~ msgstr "Eigenschappen bewerken"
