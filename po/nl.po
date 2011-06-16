@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-27 04:04+0000\n"
-"PO-Revision-Date: 2011-05-25 11:34+0200\n"
+"POT-Creation-Date: 2011-06-16 10:05+0000\n"
+"PO-Revision-Date: 2011-06-15 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:54
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
-msgstr "Na koppeling _uitvoeren:"
+msgstr "_Na koppeling uitvoeren:"
 
 #: ../panel-plugin/mount-plugin.c:866
 msgid ""
@@ -209,8 +209,8 @@ msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
-"Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen en in te "
-"voegen voor het aankoppelen."
+"Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen "
+"en in te voegen voor het aankoppelen."
 
 #: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
@@ -236,7 +236,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
-msgstr "Aangegeven bestandssystemen u_itsluiten"
+msgstr "_Aangegeven bestandssystemen uitsluiten"
 
 #: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
@@ -248,8 +248,7 @@ msgstr "Apparaten aankoppelen"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
+msgstr "Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
 
 #~ msgid "Edit Properties"
 #~ msgstr "Eigenschappen bewerken"
