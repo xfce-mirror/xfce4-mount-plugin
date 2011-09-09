@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 10:05+0000\n"
-"PO-Revision-Date: 2011-06-15 11:34+0200\n"
+"POT-Creation-Date: 2011-09-09 04:05+0000\n"
+"PO-Revision-Date: 2011-09-09 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "type bestandssysteem:    %s\n"
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "werkelijke koppelpunt:%s \n"
+msgstr "werkelijk koppelpunt:%s \n"
 
 #: ../panel-plugin/devices.c:155
 #, c-format
@@ -86,7 +86,7 @@ msgstr "niet aangekoppeld\n"
 
 #: ../panel-plugin/devices.c:260 ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "Aankoppelingsplugin: Fout bij het uitvoeren van opdracht."
+msgstr "Aankoppelingsplugin: fout bij het uitvoeren van opdracht."
 
 #: ../panel-plugin/mount-plugin.c:57
 #, c-format
