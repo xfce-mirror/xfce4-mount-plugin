@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4 mount plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-15 05:05+0000\n"
+"POT-Creation-Date: 2011-09-14 10:05+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
@@ -128,15 +128,15 @@ msgid "_General"
 msgstr "_Genel"
 
 #: ../panel-plugin/mount-plugin.c:833
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Aygıt sisteme bağlandıktan sonra bağlama noktasını açacak bir komut çalıştırabilirsiniz.\n"
-"Eğer emin değilseniz, \"thunar %m\" komutunu deneyebilirsiniz.\n"
-"Aygıtı belirtmek için '%d' değerini, bağlama noktasını belirtmek için '%m' kullanabilirsiniz. "
+"Bu komut aygıt sisteme bağlandığında aygıtın bağlanma noktası argüman olarak çalıştırılacak.\n"
+"Eğer ne ekleyeceğiniz konusunda emin değilseniz, \"exo-open %m\" 'i deneyin.\n"
+"'%d' aygıtı belirtmek için, '%m' bağlanma noktasını belirtmek için kullanılabilir."
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
