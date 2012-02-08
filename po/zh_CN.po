@@ -148,7 +148,7 @@ msgid ""
 msgstr ""
 "此命令在以设备挂载点为参数挂载设备后执行。\n"
 "若您不确定该插入什么，试试 “exo-open %m”。\n"
-"可用 ‘%d’ 指定设备，‘%m’ 指定挂载点。"
+"可使用 ‘%d’ 指定设备，‘%m’ 指定挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
@@ -175,7 +175,7 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 "大多数用户仅希望在两个命令之前都加上 “sudo” "
-"或者在 “unmount %d” 命令前加上 “sync %d &&”。\n"
+"或在 “unmount %d” 命令前加上 “sync %d &&”。\n"
 "‘%d’ 用来指定设备，‘%m’ 为挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:899
