@@ -4,15 +4,15 @@
 # the xfce4-mount-plugin package.
 # Xiaobin Wu <xwu422@googlemail.com>, 2008.
 # Hunt Xu <huntxu@live.cn>, 2008, 2009, 2010.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-09 04:10+0000\n"
+"POT-Creation-Date: 2012-02-08 12:00+0000\n"
 "PO-Revision-Date: 2010-06-07 08:40+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -27,17 +27,17 @@ msgstr "%.1f B"
 #: ../panel-plugin/devices.c:55
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f KB"
+msgstr "%.1f K"
 
 #: ../panel-plugin/devices.c:56
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f MB"
+msgstr "%.1f M"
 
 #: ../panel-plugin/devices.c:57
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f GB"
+msgstr "%.1f G"
 
 #: ../panel-plugin/devices.c:66
 #, c-format
@@ -115,8 +115,8 @@ msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
-"这仅在您将 “sync” 作为 “unmount” "
-"命令字符串一部分指定时才有用并推荐。"
+"这仅在您将 “sync” 作为 “unmount” 命令"
+"字符串一部分指定时才有用并推荐。"
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
@@ -146,9 +146,9 @@ msgid ""
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"此命令将在以设备挂载点作为参数挂载设备后执行。\n"
-"如果您不确定该插入什么，试试 “exo-open %m”。\n"
-"‘%d’ 能用来指定设备，‘%m’ 为挂载点。"
+"此命令在以设备挂载点为参数挂载设备后执行。\n"
+"若您不确定该插入什么，试试 “exo-open %m”。\n"
+"可用 ‘%d’ 指定设备，‘%m’ 指定挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
@@ -159,7 +159,9 @@ msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
-"警告：这些选项仅供专家使用！如果您不知道它们有益于什么，不要动手！"
+""
+"警告：这些选项仅供专家使用！如果您不知道"
+"它们有益于什么，不要动手！"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
@@ -172,8 +174,8 @@ msgid ""
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"大多数用户仅希望在两个命令之前都加上 “sudo” 或者"
-"在 “unmount %d” 命令前加上 “sync %d &&”。\n"
+"大多数用户仅希望在两个命令之前都加上 “sudo” "
+"或者在 “unmount %d” 命令前加上 “sync %d &&”。\n"
 "‘%d’ 用来指定设备，‘%m’ 为挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:899
@@ -193,8 +195,8 @@ msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
-"激活此项也可显示网络文件系统比如 "
-"NFS、SMBFS、SHFS 和 SSHFS。"
+"激活此项也可显示网络文件系统如 NFS、SMBFS、"
+"SHFS 和 SSHFS。"
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
@@ -204,7 +206,8 @@ msgstr "显示网络文件系统(_N)"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr "激活此项也可在卸载后弹出光驱和挂载前插入光驱。"
+msgstr ""
+"激活此项也可在卸载后弹出光驱和挂载前插入光驱。"
 
 #: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
@@ -225,7 +228,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 "从菜单中剔除以下文件系统。\n"
-"此列表用空格分隔。\n"
+"此列表就用空格隔开。\n"
 "您可以指定正确的设备或挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:1011
@@ -242,4 +245,5 @@ msgstr "挂载设备"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "显示所有可挂载的设备并在需要时挂载或卸载它们。"
+msgstr ""
+"显示所有可挂载的设备并在需要时挂载或卸载它们。"
