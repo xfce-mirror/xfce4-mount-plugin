@@ -3,15 +3,17 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # ByungHyun Choi <byunghyun.choi@gmail.com>, 2005-2007.
+# Seong-ho, Cho <darkcircle.042^@gmail.com>, 2011-2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-13 00:16+0100\n"
-"PO-Revision-Date: 2007-02-20 12:37+0900\n"
-"Last-Translator: ByungHyun Choi <byunghyun.choi@debianusers.org>\n"
+"Report-Msgid-Bugs-To: Korean <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2012-02-27 16:39+0000\n"
+"PO-Revision-Date: 2012-02-28 06:32+0900\n"
+"Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <xfce-i18n@xfce.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,204 +41,184 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:66
 #, c-format
 msgid "size:                %g\n"
-msgstr ""
+msgstr "크기:                %g\n"
 
 #: ../panel-plugin/devices.c:67
-#, fuzzy, c-format
+#, c-format
 msgid "used size:           %g\n"
-msgstr "사용: %g\n"
+msgstr "사용 크기:           %g\n"
 
 #: ../panel-plugin/devices.c:68
-#, fuzzy, c-format
+#, c-format
 msgid "available siz:       %g\n"
-msgstr "남은 공간 : %g\n"
+msgstr "남은 공간:           %g\n"
 
 #: ../panel-plugin/devices.c:69
-#, fuzzy, c-format
+#, c-format
 msgid "percentage used:     %d\n"
-msgstr "사용율 : %d\n"
+msgstr "사용율:              %d\n"
 
 #: ../panel-plugin/devices.c:70
-#, fuzzy, c-format
+#, c-format
 msgid "file system type:    %s\n"
-msgstr "화일 시스템 : %s\n"
+msgstr "파일 시스템 유형:     %s\n"
 
 #: ../panel-plugin/devices.c:71
-#, fuzzy, c-format
+#, c-format
 msgid "actual mount point:  %s\n"
-msgstr "실제 마운트 위치 : %s\n"
+msgstr "실제 마운트 위치:     %s\n"
 
 #: ../panel-plugin/devices.c:155
-#, fuzzy, c-format
+#, c-format
 msgid "disk: %s\n"
-msgstr "디스크 : %s\n"
+msgstr "디스크: %s\n"
 
 #: ../panel-plugin/devices.c:156
-#, fuzzy, c-format
+#, c-format
 msgid "mount point: %s\n"
-msgstr "마운트 위치 : %s\n"
+msgstr "마운트 위치: %s\n"
 
 #: ../panel-plugin/devices.c:160
 #, c-format
 msgid "not mounted\n"
 msgstr "마운트되지 않았습니다\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:260
+#: ../panel-plugin/devices.c:309
 msgid "Mount Plugin: Error executing command."
-msgstr "마운트 플럭인: 명령어 실행중 오류."
+msgstr "마운트 플러그인: 명령어 실행중 오류."
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/mount-plugin.c:57
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" 장치를 안전하게 분리할 수 있습니다."
 
-#: ../panel-plugin/mount-plugin.c:57
-#, fuzzy
-msgid "An error occurred. The device should not be removed!"
-msgstr "오류발생! 장치를 분리하지 마십시오!"
+#: ../panel-plugin/mount-plugin.c:60
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "오류가 발생했습니다. 장치 \"%s\"을(를) 제거할 수 없습니다!"
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#000000\">마운트되지 않음</span>"
+msgstr "<span foreground=\"#FF0000\">마운트 하지 않음</span>"
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
 msgstr "장치"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Mount Plugin"
-msgstr ""
+msgstr "마운트 플러그인"
 
-#: ../panel-plugin/mount-plugin.c:780
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 추천하고"
-"자 합니다."
+#: ../panel-plugin/mount-plugin.c:783
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 추천하고자 합니다."
 
-#: ../panel-plugin/mount-plugin.c:785
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
-msgstr "언마운트하고 나서 메시지 보이기"
+msgstr "마운트 해제 후 메시지 보이기(_M)"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "패널에 보이는 아이콘을 설정합니다."
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:807
 msgid "Icon:"
 msgstr "아이콘:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:811
 msgid "Select an image"
 msgstr "그림 선택"
 
-#: ../panel-plugin/mount-plugin.c:815
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:818
 msgid "_General"
-msgstr "일반"
+msgstr "일반(_G)"
 
-#: ../panel-plugin/mount-plugin.c:830
-#, fuzzy, c-format
+#: ../panel-plugin/mount-plugin.c:833
+#, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"이 명령어는 장치가 마운트되고 나서 실행됩니다.\n"
-"어떤 명령어를 입력할지 망설이신다면, \"xffm\" 또는 \"rox\", \"thunar\"를 입력"
-"해 보십시오."
+"이 명령어는 인수로서의 장치 마운트 포인트에 장치가 마운트되고 나서 실행됩니다.\n"
+"어떤 명령어를 입력할지 망설이신다면, \"exo-open %m\"을(를) 입력해 보십시오.\n"
+"'%d'은(는) 장치를 지정할 때 사용하고, '%m'은(는) 마운트 지점을 지정할 때 사용합니다."
 
-#: ../panel-plugin/mount-plugin.c:840
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Execute after mounting:"
-msgstr "마운트하고 난 뒤 실행 명령어:"
+msgstr "마운트 후 실행(_E):"
 
-#: ../panel-plugin/mount-plugin.c:863
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"경고: 이 옵션은 고급사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 "
-"만지지 마십시오."
+#: ../panel-plugin/mount-plugin.c:866
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "경고: 이 옵션은 고급사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 만지지 마십시오."
 
-#: ../panel-plugin/mount-plugin.c:868
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
-msgstr "명령어"
+msgstr "사용자 정의 명령(_C)"
 
-#: ../panel-plugin/mount-plugin.c:887
-#, fuzzy, c-format
+#: ../panel-plugin/mount-plugin.c:890
+#, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"대부분 사용자들은 명령어에 \"sudo\"를 덧붙이거나 \"unmount\" 명령에 \"sync &&"
-"\"를 덧붙여 사용하기를 원합니다."
+"대부분 사용자들은 명령어에 \"sudo\"를 덧붙이거나 \"unmount %d\" 명령에 \"sync %d &&\"을(를) 덧붙여 사용하기를 원합니다.\n"
+"'%d'은(는) 장치를 지정할 때 사용하고 '%m'은(는) 마운트 지점을 지정할 때 사용합니다."
 
-#: ../panel-plugin/mount-plugin.c:896
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:899
 msgid "_Mount command:"
-msgstr "마운트 명령:"
+msgstr "마운트 명령(_M):"
 
-#: ../panel-plugin/mount-plugin.c:902
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:905
 msgid "_Unmount command:"
-msgstr "언마운트 명령:"
+msgstr "마운트 해제 명령(_U):"
 
-#: ../panel-plugin/mount-plugin.c:928
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Commands"
-msgstr "명령어"
+msgstr "명령(_C)"
 
-#: ../panel-plugin/mount-plugin.c:943
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 화일 시스템을 보여주기 위한 "
-"것입니다."
+#: ../panel-plugin/mount-plugin.c:946
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 화일 시스템을 보여주기 위한 것입니다."
 
-#: ../panel-plugin/mount-plugin.c:948
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
-msgstr "네트워크 화일 시스템 보이기"
+msgstr "네트워크 파일 시스템 보이기(_N)"
 
-#: ../panel-plugin/mount-plugin.c:961
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
+#: ../panel-plugin/mount-plugin.c:964
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "마운트 해제후 CD-드라이브를 꺼내고 마운트 하기 전에 삽입하려면 이 옵션을 활성화합니다."
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "CD-드라이브 꺼내기(_E)"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
+msgstr "마운트 지점만 보여야 할 경우 이 옵션을 활성화 합니다."
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:986
 msgid "Display _mount points only"
-msgstr ""
+msgstr "마운트 지점만 표시(_M)"
 
-#: ../panel-plugin/mount-plugin.c:998
+#: ../panel-plugin/mount-plugin.c:1001
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
+"메뉴로부터 다음 파일 시스템을 제외합니다.\n"
+"목록은 단순 공백으로 구분되어 있습니다.\n"
+"이는 올바른 장치나 마운트 지점을 지정할 수 있게 해줍니다."
 
-#: ../panel-plugin/mount-plugin.c:1008
+#: ../panel-plugin/mount-plugin.c:1011
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "지정한 파일 시스템 제외(_X)"
 
-#: ../panel-plugin/mount-plugin.c:1023
+#: ../panel-plugin/mount-plugin.c:1026
 msgid "_File systems"
-msgstr ""
+msgstr "파일 시스템(_F)"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
