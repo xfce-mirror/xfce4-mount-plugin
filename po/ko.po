@@ -151,7 +151,7 @@ msgstr "마운트 후 실행(_E):"
 
 #: ../panel-plugin/mount-plugin.c:866
 msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "경고: 이 옵션은 고급사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 만지지 마십시오."
+msgstr "경고: 이 옵션은 고급 사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 만지지 마십시오."
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
@@ -180,7 +180,7 @@ msgstr "명령(_C)"
 
 #: ../panel-plugin/mount-plugin.c:946
 msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 화일 시스템을 보여주기 위한 것입니다."
+msgstr "이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 파일 시스템을 보여주기 위한 것입니다."
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
