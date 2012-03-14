@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-08 12:00+0000\n"
+"POT-Creation-Date: 2012-03-14 10:54+0000\n"
 "PO-Revision-Date: 2010-06-07 08:40+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:54
 #, c-format
@@ -114,9 +115,7 @@ msgstr "挂载插件"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"这仅在您将 “sync” 作为 “unmount” 命令"
-"字符串一部分指定时才有用并推荐。"
+msgstr "这仅在您将 “sync” 作为 “unmount” 命令字符串一部分指定时才有用并推荐。"
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
@@ -158,10 +157,7 @@ msgstr "挂载后执行(_E)："
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-""
-"警告：这些选项仅供专家使用！如果您不知道"
-"它们有益于什么，不要动手！"
+msgstr "警告：这些选项仅供专家使用！如果您不知道它们有益于什么，不要动手！"
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "_Custom commands"
@@ -174,8 +170,8 @@ msgid ""
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"大多数用户仅希望在两个命令之前都加上 “sudo” "
-"或在 “unmount %d” 命令前加上 “sync %d &&”。\n"
+"大多数用户仅希望在两个命令之前都加上 “sudo” 或在 “unmount %d” 命令前加上 "
+"“sync %d &&”。\n"
 "‘%d’ 用来指定设备，‘%m’ 为挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:899
@@ -194,9 +190,7 @@ msgstr "命令(_C)"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"激活此项也可显示网络文件系统如 NFS、SMBFS、"
-"SHFS 和 SSHFS。"
+msgstr "激活此项也可显示网络文件系统如 NFS、SMBFS、SHFS 和 SSHFS。"
 
 #: ../panel-plugin/mount-plugin.c:951
 msgid "Display _network file systems"
@@ -206,8 +200,7 @@ msgstr "显示网络文件系统(_N)"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr ""
-"激活此项也可在卸载后弹出光驱和挂载前插入光驱。"
+msgstr "激活此项也可在卸载后弹出光驱和挂载前插入光驱。"
 
 #: ../panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
@@ -245,5 +238,4 @@ msgstr "挂载设备"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"显示所有可挂载的设备并在需要时挂载或卸载它们。"
+msgstr "显示所有可挂载的设备并在需要时挂载或卸载它们。"
