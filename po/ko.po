@@ -81,7 +81,7 @@ msgstr "마운트 위치: %s\n"
 #: ../panel-plugin/devices.c:160
 #, c-format
 msgid "not mounted\n"
-msgstr "마운트되지 않았습니다\n"
+msgstr "마운트하지 않았습니다\n"
 
 #: ../panel-plugin/devices.c:260
 #: ../panel-plugin/devices.c:309
@@ -222,23 +222,9 @@ msgstr "파일 시스템(_F)"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
 msgid "Mount devices"
-msgstr "마운트 장치"
+msgstr "장치 마운트"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "마운트 가능한 장치를 보이고 필요에 따라 마운트 또는 언마운트합니다."
 
-#~ msgid "Edit Properties"
-#~ msgstr "속성 변경"
-
-#~ msgid "size : %g\n"
-#~ msgstr "크기: %g\n"
-
-#~ msgid "<b>Commands</b>"
-#~ msgstr "<b>명령어</b>"
-
-#~ msgid "Specify own commands"
-#~ msgstr "나만의 명령어"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>일반</b>"
