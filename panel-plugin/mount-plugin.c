@@ -24,6 +24,13 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #include "mount-plugin.h"
 
+#ifdef LIBXFCE4PANEL_CHECK_VERSION
+#if LIBXFCE4PANEL_CHECK_VERSION (4,9,0)
+#define HAS_PANEL_49
+#endif
+#endif
+
+
 static void
 on_message_dialog_response (GtkWidget *widget, gpointer *data)
 {
@@ -86,7 +93,10 @@ static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
    /* shrink the gtk button's image to new size -*/
-   gtk_widget_set_size_request (GTK_WIDGET(mt->button), size - 4, size - 4);
+#ifdef HAS_PANEL_49
+   size /= xfce_panel_plugin_get_nrows (plugin);
+#endif
+   gtk_widget_set_size_request (GTK_WIDGET(mt->button), size, size);
 
 }
 
@@ -1050,6 +1060,10 @@ mount_construct (XfcePanelPlugin *plugin)
     mounter->button_pb = gdk_pixbuf_new_from_file (mounter->icon, NULL);
        xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mounter->button),
                                    mounter->button_pb);
+
+#ifdef HAS_PANEL_49
+    xfce_panel_plugin_set_small (plugin, TRUE);
+#endif
 
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
 
