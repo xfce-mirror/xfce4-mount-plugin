@@ -116,7 +116,7 @@ msgstr "\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유�
 
 #: ../panel-plugin/mount-plugin.c:788
 msgid "Show _message after unmount"
-msgstr "마운트 해제 후 메시지 보기(_M)"
+msgstr "마운트 해제 후 메시지 표시(_M)"
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "You can specify a distinct icon to be displayed in the panel."
