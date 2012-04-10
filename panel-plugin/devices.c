@@ -233,22 +233,30 @@ disk_free(t_disk **pdisk)
  * Return exit status of the mount command
  */
 void
-disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject)
+disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject, gboolean use_sudo)
 {
     gchar *tmp=NULL, *cmd, *tmp2 = NULL;
     GError *error = NULL;
     gboolean val;
 
-    DBG("disk_mount: eject=%d\n", eject);
+    DBG("disk_mount: eject=%d, use_sudo=%d\n", eject, use_sudo);
 
     if (pdisk != NULL)
     {
         deviceprintf (&tmp, mount_command, pdisk->device);
         mountpointprintf (&tmp2, tmp, pdisk->mount_point);
-        if (eject)
-            cmd = g_strconcat ("sh -c ' eject -t ", pdisk->device, " && ", tmp2, NULL);
+        /* re-use tmp */
+        g_free(tmp);
+        tmp = NULL;
+        if (use_sudo)
+            tmp = g_strdup ("sudo sh -c '");
         else
-            cmd = g_strconcat ("sh -c ' ", tmp2, NULL);
+            tmp = g_strdup ("sh -c '");
+
+        if (eject)
+            cmd = g_strconcat (tmp, " eject -t ", pdisk->device, " && ", tmp2, NULL);
+        else
+            cmd = g_strconcat (tmp, tmp2, NULL);
 
         g_free(tmp);
         g_free(tmp2);
@@ -279,7 +287,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
  * Return exit status of the umount command.
  */
 int
-disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject)
+disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject, gboolean use_sudo)
 {
     int retval = NONE;
     gchar *tmp = NULL, *tmp2 = NULL;
@@ -287,7 +295,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
     char *cmd;
     GError *error = NULL;
 
-    DBG("disk_umount: eject=%d\n", eject);
+    DBG("disk_umount: eject=%d, use_sudo=%d\n", eject, use_sudo);
 
 
     if (pdisk != NULL)
@@ -295,7 +303,10 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
 
         deviceprintf(&tmp, umount_command, pdisk->device);
         mountpointprintf(&tmp2, tmp, pdisk->mount_point);
-        cmd = g_strconcat ("sh -c '", tmp2, NULL);
+        if (use_sudo)
+            cmd = g_strconcat ("sudo sh -c '", tmp2, NULL);
+        else
+            cmd = g_strconcat ("sh -c '", tmp2, NULL);
 
         /* re-use tmp */
         g_free(tmp);

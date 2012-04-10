@@ -58,7 +58,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
     if (disk != NULL) {
         if (disk->mount_info != NULL) { /* disk is mounted */
             int result = disk_umount (disk, mt->umount_command,
-                                      mt->message_dialog, eject);
+                                      mt->message_dialog, eject, mt->use_sudo);
 
             if (mt->message_dialog && (!eject || result!=NONE) ) { /* popup dialog */
 
@@ -84,7 +84,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
             }
         }
         else { /* disk is not mounted */
-            disk_mount (disk, mt->on_mount_cmd, mt->mount_command, eject);
+            disk_mount (disk, mt->on_mount_cmd, mt->mount_command, eject, mt->use_sudo);
         }
     }
 
@@ -364,6 +364,8 @@ mounter_data_new (t_mounter *mt)
 
     mt->exclude_devicenames = FALSE;
 
+    mt->use_sudo = FALSE;
+
     TRACE ("leaves mounter_data_new");
 
     return ;
@@ -374,7 +376,7 @@ static void
 mounter_refresh (t_mounter * mt)
 {
     gchar *mount, *umount, *icon, *excl_filesystems;
-    gboolean msg_dlg, incl_NFSs, excl_FSs, excl_DNs, eject;
+    gboolean msg_dlg, incl_NFSs, excl_FSs, excl_DNs, use_sudo, eject;
     TRACE ("enters mounter_refresh");
 
     mounter_data_free (mt);
@@ -387,6 +389,7 @@ mounter_refresh (t_mounter * mt)
     incl_NFSs = mt->include_NFSs;
     excl_FSs = mt->exclude_FSs;
     excl_DNs = mt->exclude_devicenames;
+    use_sudo = mt->use_sudo;
     eject = mt->eject_drives;
 
     mounter_data_new (mt);
@@ -399,6 +402,7 @@ mounter_refresh (t_mounter * mt)
     mt->include_NFSs = incl_NFSs;
     mt->exclude_FSs = excl_FSs;
     mt->exclude_devicenames = excl_DNs;
+    mt->use_sudo = use_sudo;
     mt->eject_drives = eject;
 
     TRACE ("leaves mounter_refresh");
@@ -477,6 +481,9 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     if ( (value = xfce_rc_read_entry(rc, "eject_drives", NULL)) )
         mt->eject_drives= atoi (value);
 
+    if ( (value = xfce_rc_read_entry(rc, "use_sudo", NULL)) )
+        mt->use_sudo= atoi (value);
+
     xfce_rc_close (rc);
 
     TRACE ("leaves read_config");
@@ -527,6 +534,9 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 
     if ( mt->eject_drives==1 )
         xfce_rc_write_entry (rc, "eject_drives", "1");
+
+    if ( mt->use_sudo==1 )
+        xfce_rc_write_entry (rc, "use_sudo", "1");
 
     xfce_rc_write_entry (rc, "icon", mt->icon);
 
@@ -631,6 +641,9 @@ mounter_apply_options (t_mounter_dialog *md)
 
     mt->eject_drives = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_eject_drives));
+
+    mt->use_sudo = gtk_toggle_button_get_active
+            (GTK_TOGGLE_BUTTON(md->show_use_sudo));
 
     mt->exclude_FSs = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_exclude_FSs));
@@ -830,6 +843,23 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     _vbox = gtk_vbox_new (FALSE, BORDER);
     gtk_container_border_width (GTK_CONTAINER(_vbox), BORDER);
     gtk_widget_show (_vbox);
+
+        /* use sudo checkbox */
+    _eventbox = gtk_event_box_new ();
+    gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
+                        FALSE, FALSE, 0);
+    gtk_widget_show (_eventbox);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+        _("Activate this option to use sudo(8) to run mount/umount commands. Needs to be configured without password."),
+        NULL );
+
+    md->show_use_sudo = gtk_check_button_new_with_mnemonic (
+                                _("Use _sudo") );
+
+    gtk_widget_show (md->show_use_sudo);
+    gtk_container_add (GTK_CONTAINER (_eventbox), md->show_use_sudo );
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_use_sudo),
+                                mt->use_sudo);
 
         /* After-mount command */
     _eventbox = gtk_event_box_new ();
