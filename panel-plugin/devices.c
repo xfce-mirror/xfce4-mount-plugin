@@ -3,6 +3,7 @@
 /*
 Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
 Copyright (C) 2005-2008 Fabian Nowak timystery@arcor.de.
+Copyright (C) 2009 Landry Breuil <landry@xfce.org>
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
