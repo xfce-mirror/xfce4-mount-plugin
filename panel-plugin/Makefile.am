@@ -1,9 +1,9 @@
-plugindir = $(libexecdir)/xfce4/panel-plugins
-plugin_PROGRAMS = xfce4-mount-plugin
+plugindir = $(libdir)/xfce4/panel/plugins
+plugin_LTLIBRARIES = libmount.la
 
 LIBS = @LIBS@ @SOLLIBS@
 
-xfce4_mount_plugin_SOURCES =                                \
+libmount_la_SOURCES =                                \
 	devices.c                                           \
 	devices.h                                           \
 	mount-plugin.c  				\
@@ -11,37 +11,37 @@ xfce4_mount_plugin_SOURCES =                                \
 	helpers.c						\
 	helpers.h
 
-xfce4_mount_plugin_CFLAGS =			         \
+libmount_la_CFLAGS =			         \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
 	@LIBXFCE4PANEL_CFLAGS@				\
 	@LIBXFCEGUI4_CFLAGS@
 
-xfce4_mount_plugin_LDADD =                                \
+libmount_LIBADD =                                \
 	@SOLLIBS@                                   			\
 	@LIBXFCE4PANEL_LIBS@				\
 	@LIBXFCEGUI4_LIBS@
 
+libmount_la_LDFLAGS = \
+	-avoid-version \
+	-module \
+	-no-undefined \
+	-export-symbols-regex '^xfce_panel_module_(preinit|init|construct)' \
+	$(PLATFORM_LDFLAGS)
+
 # .desktop file
 #
-# Some automake trickery here. Because we cannot use $(libexecdir) in the
-# automake stage, we'll use sed to get the full path into the .desktop file.
-# We also need to let intltool merge the translated fields, so we add an
-# additional level of indirection: a <name>.desktop.in.in file.
-# 
-desktop_in_in_files = xfce4-mount-plugin.desktop.in.in
-desktop_in_files = $(desktop_in_in_files:.desktop.in.in=.desktop.in)
+desktop_in_files = xfce4-mount-plugin.desktop.in
 	
-desktopdir = $(datadir)/xfce4/panel-plugins
+desktopdir = $(datadir)/xfce4/panel/plugins
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST =														\
 	icons.h 														\
 	kcmpartitions.png												\
-	$(desktop_in_in_files)
+	$(desktop_in_files)
 
-DISTCLEANFILES =													\
-	$(desktop_DATA) $(desktop_in_files)
+DISTCLEANFILES = $(desktop_DATA)
 	
 noinst_DATA =							                           \
 	icons.h 						                                 \
@@ -50,11 +50,3 @@ noinst_DATA =							                           \
 icons.h: $(srcdir)/kcmpartitions.png
 	gdk-pixbuf-csource --raw --build-list 			            \
 	icon_plugin kcmpartitions.png > icons.h
-	
-# get full path into .desktop file
-%.desktop.in: %.desktop.in.in
-	sed -e "s^@PLUGIN_PATH@^$(libexecdir)/xfce4/panel-plugins^" \
-		$< > $@
-
-
-

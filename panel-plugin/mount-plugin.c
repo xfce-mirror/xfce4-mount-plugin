@@ -1083,4 +1083,4 @@ mount_construct (XfcePanelPlugin *plugin)
 
 }
 
-XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL (mount_construct);
+XFCE_PANEL_PLUGIN_REGISTER (mount_construct);
