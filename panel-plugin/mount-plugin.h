@@ -73,6 +73,7 @@ typedef struct
     gboolean eject_drives;
     gboolean showed_fstab_dialog;
     GtkWidget *button;
+    GtkWidget *image;
     GtkWidget *menu;
     GPtrArray *pdisks; /* contains pointers to struct t_disk */
 } t_mounter;

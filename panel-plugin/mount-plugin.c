@@ -565,7 +565,9 @@ create_mounter_control (XfcePanelPlugin *plugin)
     g_assert (mounter->icon!=NULL);
 
     mounter->button = gtk_button_new ();
-    gtk_button_set_image (GTK_BUTTON(mounter->button), xfce_panel_image_new_from_source (mounter->icon));
+    mounter->image = xfce_panel_image_new_from_source (mounter->icon);
+    gtk_widget_show(mounter->image);
+    gtk_container_add (GTK_CONTAINER(mounter->button), mounter->image);
     gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
 
     gtk_tooltips_set_tip (tooltips, GTK_WIDGET(mounter->button), _("devices"),
@@ -651,7 +653,10 @@ mounter_apply_options (t_mounter_dialog *md)
                    "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
                    PACKAGE_DATA_DIR );
 
-    gtk_button_set_image (GTK_BUTTON(mt->button), xfce_panel_image_new_from_source (mt->icon));
+    gtk_container_remove(GTK_CONTAINER(mt->button), mt->image);
+    mt->image = xfce_panel_image_new_from_source (mt->icon);
+    gtk_widget_show(mt->image);
+    gtk_container_add (GTK_CONTAINER(mt->button), mt->image);
 
     TRACE ("leaves mounter_apply_options");
 }
