@@ -14,12 +14,12 @@ libmount_la_SOURCES =                                \
 libmount_la_CFLAGS =			         \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
 	@LIBXFCE4PANEL_CFLAGS@				\
-	@LIBXFCEGUI4_CFLAGS@
+	@LIBXFCE4UI_CFLAGS@
 
-libmount_LIBADD =                                \
+libmount_la_LIBADD =                                \
 	@SOLLIBS@                                   			\
 	@LIBXFCE4PANEL_LIBS@				\
-	@LIBXFCEGUI4_LIBS@
+	@LIBXFCE4UI_LIBS@
 
 libmount_la_LDFLAGS = \
 	-avoid-version \

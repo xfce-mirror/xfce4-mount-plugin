@@ -40,8 +40,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #include <libxfce4panel/xfce-panel-plugin.h>
 #include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/xfce-exec.h>
-#include <libxfcegui4/dialogs.h>
+#include <libxfce4ui/libxfce4ui.h>
 
 #include "devices.h"
 
@@ -266,9 +265,9 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         g_printf ("cmd: '%s'\n", cmd);
         #endif
 
-        val = xfce_exec (cmd, FALSE, FALSE, &error);
+        val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), cmd, FALSE, TRUE, &error);
         if (!val)
-            xfce_err (_("Mount Plugin: Error executing command."));
+            xfce_dialog_show_error (NULL, error, g_strconcat ("%s Cause:%%s", _("Mount Plugin: Error executing command.")));
 
         g_free(cmd);
         g_free(tmp);
@@ -314,10 +313,10 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
         g_printf ("cmd: '%s'\n", tmp);
         #endif
 
-        val = xfce_exec_sync (tmp, FALSE, FALSE, &error);
+        val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), tmp, FALSE, TRUE, &error);
 
         if  (!val) {
-            xfce_err (_("Mount Plugin: Error executing command."));
+            xfce_dialog_show_error (NULL, error, g_strconcat ("%s Cause:%%s", _("Mount Plugin: Error executing command.")));
             retval = ERROR;
         }
 

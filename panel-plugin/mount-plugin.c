@@ -23,6 +23,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <stdlib.h>
 
 #include "mount-plugin.h"
+#include <libxfce4ui/libxfce4ui.h>
 
 #ifdef LIBXFCE4PANEL_CHECK_VERSION
 #if LIBXFCE4PANEL_CHECK_VERSION (4,9,0)
@@ -92,12 +93,12 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
+   GtkWidget* image;
    /* shrink the gtk button's image to new size -*/
 #ifdef HAS_PANEL_49
    size /= xfce_panel_plugin_get_nrows (plugin);
 #endif
    gtk_widget_set_size_request (GTK_WIDGET(mt->button), size, size);
-
 }
 
 /**
@@ -563,8 +564,8 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     g_assert (mounter->icon!=NULL);
 
-    mounter->button_pb = gdk_pixbuf_new_from_file (mounter->icon, NULL);
-    mounter->button = xfce_iconbutton_new_from_pixbuf (mounter->button_pb);
+    mounter->button = gtk_button_new ();
+    gtk_button_set_image (GTK_BUTTON(mounter->button), xfce_panel_image_new_from_source (mounter->icon));
     gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
 
     gtk_tooltips_set_tip (tooltips, GTK_WIDGET(mounter->button), _("devices"),
@@ -650,8 +651,7 @@ mounter_apply_options (t_mounter_dialog *md)
                    "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
                    PACKAGE_DATA_DIR );
 
-       mt->button_pb = gdk_pixbuf_new_from_file (mt->icon, NULL);
-       xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mt->button), mt->button_pb);
+    gtk_button_set_image (GTK_BUTTON(mt->button), xfce_panel_image_new_from_source (mt->icon));
 
     TRACE ("leaves mounter_apply_options");
 }
@@ -1057,9 +1057,7 @@ mount_construct (XfcePanelPlugin *plugin)
 
     mounter_read_config (plugin, mounter);
 
-    mounter->button_pb = gdk_pixbuf_new_from_file (mounter->icon, NULL);
-       xfce_iconbutton_set_pixbuf (XFCE_ICONBUTTON(mounter->button),
-                                   mounter->button_pb);
+    gtk_button_set_image (GTK_BUTTON(mounter->button), xfce_panel_image_new_from_source (mounter->icon));
 
 #ifdef HAS_PANEL_49
     xfce_panel_plugin_set_small (plugin, TRUE);

@@ -36,8 +36,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
-#include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/libxfcegui4.h>
 
 #include <string.h>
 
@@ -75,7 +73,6 @@ typedef struct
     gboolean eject_drives;
     gboolean showed_fstab_dialog;
     GtkWidget *button;
-    GdkPixbuf *button_pb;
     GtkWidget *menu;
     GPtrArray *pdisks; /* contains pointers to struct t_disk */
 } t_mounter;
