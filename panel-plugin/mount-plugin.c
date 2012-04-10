@@ -1055,10 +1055,6 @@ mount_construct (XfcePanelPlugin *plugin)
 
     mounter = create_mounter_control (plugin);
 
-    mounter_read_config (plugin, mounter);
-
-    gtk_button_set_image (GTK_BUTTON(mounter->button), xfce_panel_image_new_from_source (mounter->icon));
-
 #ifdef HAS_PANEL_49
     xfce_panel_plugin_set_small (plugin, TRUE);
 #endif
