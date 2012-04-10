@@ -40,6 +40,8 @@ dnl Substitute in Makefiles
 AC_SUBST(OS)
 
 AC_CHECK_FUNCS([gethostname])
+AC_CHECK_FUNCS([getmntent])
+AC_CHECK_FUNCS([getmntinfo])
 AC_CHECK_FUNCS([memset])
 AC_CHECK_FUNCS([socket])
 AC_CHECK_FUNCS([strstr])
