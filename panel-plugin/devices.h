@@ -199,6 +199,16 @@ t_deviceclass disk_classify (char* device, char *mountpoint);
  */
 gboolean disk_check_mounted (const char *disk);
 
+void mount_info_print(t_mount_info * mount_info);
+t_mount_info * mount_info_new (float size, float used, float avail, unsigned int percent, char * type, char * mounted_on);
+t_mount_info * mount_info_new_from_stat (struct statfs * pstatfs, char * mnt_type, char * mnt_dir);
+void mount_info_free(t_mount_info * * mount_info);
+void disk_print (t_disk * pdisk);
+char * shorten_disk_name (const char *dev);
+t_disk * disk_new (const char * dev, const char * mountpoint);
+void disk_free(t_disk **pdisk);
+void disks_free_mount_info(GPtrArray * pdisks);
+
 #endif /* _DEVICES_H_ */
 
 

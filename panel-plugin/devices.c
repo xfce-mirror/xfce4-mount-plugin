@@ -236,9 +236,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
     GError *error = NULL;
     gboolean val;
 
-    #ifdef DEBUG
-    g_printf ("disk_mount: eject=%d\n", eject);
-    #endif
+    DBG("disk_mount: eject=%d\n", eject);
 
     if (pdisk != NULL)
     {
@@ -262,13 +260,10 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         else
             cmd = g_strconcat (cmd, " '", NULL);
 
-        #ifdef DEBUG
-        g_printf ("cmd: '%s'\n", cmd);
-        #endif
-
         val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), cmd, FALSE, TRUE, &error);
+        DBG("cmd: '%s', returned %d \n", tmp, val);
         if (!val)
-            xfce_dialog_show_error (NULL, error, g_strconcat ("%s Cause:%%s", _("Mount Plugin: Error executing command.")));
+            xfce_dialog_show_error (NULL, error, "%s", _("Mount Plugin: Error executing command."));
 
         g_free(cmd);
         g_free(tmp);
@@ -289,9 +284,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
     char *cmd;
     GError *error = NULL;
 
-    #ifdef DEBUG
-    g_printf ("disk_umount: eject=%d\n", eject);
-    #endif
+    DBG("disk_umount: eject=%d\n", eject);
 
 
     if (pdisk != NULL)
@@ -310,14 +303,11 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
         else
             tmp = g_strconcat (cmd, " '", NULL);
 
-        #ifdef DEBUG
-        g_printf ("cmd: '%s'\n", tmp);
-        #endif
-
         val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), tmp, FALSE, TRUE, &error);
+        DBG("cmd: '%s', returned %d \n", tmp, val);
 
         if  (!val) {
-            xfce_dialog_show_error (NULL, error, g_strconcat ("%s Cause:%%s", _("Mount Plugin: Error executing command.")));
+            xfce_dialog_show_error (NULL, error, "%s", _("Mount Plugin: Error executing command."));
             retval = ERROR;
         }
 
@@ -405,7 +395,7 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog)
 void
 disks_free (GPtrArray ** pdisks)
 {
-    int i ;
+    unsigned int i ;
     t_disk * pdisk ;
 
     if (*pdisks != NULL)
@@ -427,7 +417,7 @@ disks_free (GPtrArray ** pdisks)
 void
 disks_print (GPtrArray * pdisks)
 {
-    int i ;
+    unsigned int i ;
     for (i=0; i < pdisks->len ; i++)
     {
         disk_print (g_ptr_array_index(pdisks, i));
@@ -444,7 +434,7 @@ disks_print (GPtrArray * pdisks)
 gboolean
 disks_remove_device (GPtrArray * pdisks, char *device)
 {
-    int i;
+    unsigned int i;
     gpointer p=NULL;
 
     for (i=0; i < pdisks->len ; i++)
@@ -468,7 +458,7 @@ disks_remove_device (GPtrArray * pdisks, char *device)
 gboolean
 disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
 {
-    int i;
+    unsigned int i;
     gpointer p=NULL;
 
     for (i=0; i < pdisks->len ; i++)
@@ -492,7 +482,7 @@ disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
 t_disk *
 disks_search (GPtrArray * pdisks, char * mount_point)
 {
-    int i ;
+    unsigned int i ;
 
     for (i=0; i < pdisks->len ; i++)
     {
@@ -513,7 +503,7 @@ disks_search (GPtrArray * pdisks, char * mount_point)
 void
 disks_free_mount_info(GPtrArray * pdisks)
 {
-    int i ;
+    unsigned int i ;
 
     for (i=0; i < pdisks->len ; i++)
     {
@@ -530,7 +520,7 @@ disks_free_mount_info(GPtrArray * pdisks)
 gboolean
 exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
-    int i;
+    unsigned int i;
 
     TRACE("Entering exclude_filesystems\n");
 
@@ -572,10 +562,10 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
     struct statfs * pstatfs = NULL;
     gboolean exclude =  FALSE;
 
-    TRACE("Entering disks_refresh\n");
-
     t_mount_info * mount_info;
     t_disk * pdisk ;
+
+    TRACE("Entering disks_refresh\n");
 
     /* remove t_mount_info for all devices */
     disks_free_mount_info (pdisks);

@@ -93,7 +93,6 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
-   GtkWidget* image;
    /* shrink the gtk button's image to new size -*/
 #ifdef HAS_PANEL_49
    size /= xfce_panel_plugin_get_nrows (plugin);
@@ -136,7 +135,7 @@ format_LVM_name (const char *disk_device, gchar **formatted_diskname)
 static void
 disk_display_set_sizes (GPtrArray *array)
 {
-    int i, max_width_label_disk=0, max_width_label_mount_info=0, tmp;
+    unsigned int i, max_width_label_disk=0, max_width_label_mount_info=0, tmp;
     t_disk_display *disk_display;
 
     for (i=0; i<array->len; i++) {
@@ -298,14 +297,14 @@ mounter_free (XfcePanelPlugin *plugin, t_mounter *mounter)
 static void
 mounter_data_new (t_mounter *mt)
 {
-    TRACE ("enters mounter_data_new");
-
-    int i, res;
+    unsigned int i, res;
     t_disk * disk;
     t_disk_display * disk_display;
     GPtrArray *array =  NULL, *disk_displays = NULL;
     char *dev_mp; /* device or mountpoint */
     gboolean removed_device;
+
+    TRACE ("enters mounter_data_new");
 
     /* get static infos from /etc/fstab */
     mt->pdisks = disks_new (mt->include_NFSs, &(mt->showed_fstab_dialog));
