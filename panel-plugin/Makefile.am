@@ -36,17 +36,6 @@ desktopdir = $(datadir)/xfce4/panel/plugins
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST =														\
-	icons.h 														\
-	kcmpartitions.png												\
-	$(desktop_in_files)
+EXTRA_DIST = $(desktop_in_files)
 
 DISTCLEANFILES = $(desktop_DATA)
-	
-noinst_DATA =							                           \
-	icons.h 						                                 \
-	kcmpartitions.png
-
-icons.h: $(srcdir)/kcmpartitions.png
-	gdk-pixbuf-csource --raw --build-list 			            \
-	icon_plugin kcmpartitions.png > icons.h
