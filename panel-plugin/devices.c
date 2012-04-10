@@ -264,9 +264,9 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             cmd = g_strconcat (cmd, " '", NULL);
 
         val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), cmd, FALSE, TRUE, &error);
-        DBG("cmd: '%s', returned %d \n", tmp, val);
-        if (!val)
-            xfce_dialog_show_error (NULL, error, "%s", _("Mount Plugin: Error executing command."));
+        DBG("cmd: '%s', returned %d \n", cmd, val);
+        if (val)
+            xfce_dialog_show_error (NULL, error, _("Mount Plugin: Error executing command."));
 
         g_free(cmd);
         g_free(tmp);
@@ -309,8 +309,8 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean
         val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), tmp, FALSE, TRUE, &error);
         DBG("cmd: '%s', returned %d \n", tmp, val);
 
-        if  (!val) {
-            xfce_dialog_show_error (NULL, error, "%s", _("Mount Plugin: Error executing command."));
+        if  (val) {
+            xfce_dialog_show_error (NULL, error, _("Mount Plugin: Error executing command."));
             retval = ERROR;
         }
 
