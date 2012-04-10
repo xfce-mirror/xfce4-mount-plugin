@@ -28,13 +28,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 /* extern t_disk_display ; */
 /* People, learn to program in an object-oriented way! */
 
-#ifdef DEBUG
-#undef DEBUG
-#endif
-#ifdef DEBUG_TRACE
-#undef DEBUG_TRACE
-#endif
-
 /**
  * An enum.
  * NONE and ERROR as aliases.
@@ -201,7 +194,6 @@ gboolean disk_check_mounted (const char *disk);
 
 void mount_info_print(t_mount_info * mount_info);
 t_mount_info * mount_info_new (float size, float used, float avail, unsigned int percent, char * type, char * mounted_on);
-t_mount_info * mount_info_new_from_stat (struct statfs * pstatfs, char * mnt_type, char * mnt_dir);
 void mount_info_free(t_mount_info * * mount_info);
 void disk_print (t_disk * pdisk);
 char * shorten_disk_name (const char *dev);

@@ -25,6 +25,8 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include "mount-plugin.h"
 #include <libxfce4ui/libxfce4ui.h>
 
+void format_LVM_name (const char *disk_device, gchar **formatted_diskname);
+
 #ifdef LIBXFCE4PANEL_CHECK_VERSION
 #if LIBXFCE4PANEL_CHECK_VERSION (4,9,0)
 #define HAS_PANEL_49
@@ -371,19 +373,21 @@ mounter_data_new (t_mounter *mt)
 static void
 mounter_refresh (t_mounter * mt)
 {
+    gchar *mount, *umount, *icon, *excl_filesystems;
+    gboolean msg_dlg, incl_NFSs, excl_FSs, excl_DNs, eject;
     TRACE ("enters mounter_refresh");
 
     mounter_data_free (mt);
-    gchar *mount = g_strdup (mt->mount_command);
-    gchar *umount = g_strdup (mt->umount_command);
-    gchar *icon = g_strdup (mt->icon);
-    gchar *excl_filesystems = g_strdup (mt->excluded_filesystems);
+    mount = g_strdup (mt->mount_command);
+    umount = g_strdup (mt->umount_command);
+    icon = g_strdup (mt->icon);
+    excl_filesystems = g_strdup (mt->excluded_filesystems);
     DBG ("Changed icon value from '%s' to '%s'.\n", mt->icon, icon);
-    gboolean msg_dlg = mt->message_dialog;
-    gboolean incl_NFSs = mt->include_NFSs;
-    gboolean excl_FSs = mt->exclude_FSs;
-    gboolean excl_DNs = mt->exclude_devicenames;
-    gboolean eject = mt->eject_drives;
+    msg_dlg = mt->message_dialog;
+    incl_NFSs = mt->include_NFSs;
+    excl_FSs = mt->exclude_FSs;
+    excl_DNs = mt->exclude_devicenames;
+    eject = mt->eject_drives;
 
     mounter_data_new (mt);
     mt->icon = g_strdup (icon);
@@ -422,11 +426,10 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
 static void
 mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
-    TRACE ("enter read_config");
-
     const char *value;
     char *file;
     XfceRc *rc;
+    TRACE ("enter read_config");
 
     if ( !( file = xfce_panel_plugin_lookup_rc_file (plugin) ) )
         return;
@@ -483,10 +486,9 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 static void
 mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
-    TRACE ("enter write_config");
-
-     XfceRc *rc;
+    XfceRc *rc;
     char *file;
+    TRACE ("enter write_config");
 
     if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
         return;
@@ -537,9 +539,8 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 static t_mounter *
 create_mounter_control (XfcePanelPlugin *plugin)
 {
-    TRACE ("enters create_mounter_control");
-
     t_mounter *mounter;
+    TRACE ("enters create_mounter_control");
 
     mounter = g_new0(t_mounter,1);
 
@@ -591,15 +592,15 @@ free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 static void
 mounter_apply_options (t_mounter_dialog *md)
 {
+    const char * tmp;
+    gboolean incl_NFSs, excl_FSs;
+    t_mounter * mt = md->mt;
     TRACE ("enters mounter_apply_options");
 
-    t_mounter * mt = md->mt;
-
-    const char * tmp;
     tmp = gtk_entry_get_text (GTK_ENTRY(md->string_cmd));
 
-    gboolean incl_NFSs = mt->include_NFSs;
-    gboolean excl_FSs = mt->exclude_FSs;
+    incl_NFSs = mt->include_NFSs;
+    excl_FSs = mt->exclude_FSs;
 
     g_free (mt->on_mount_cmd);
     if (tmp && *tmp)
@@ -731,11 +732,21 @@ static void
 mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 {
 
+    GtkWidget *dlg;
+    GtkWidget *vbox;
+    GtkWidget *_eventbox;
+    GtkWidget *_label;
+    GtkWidget *_vbox, *_vbox2;
+    GtkWidget *_hbox;
+    GtkTooltips *tip;
+    GtkWidget *_notebook;
+    t_mounter_dialog * md;
+    gboolean set_active;
+
     TRACE ("enters mounter_create_options");
 
     xfce_panel_plugin_block_menu (plugin);
 
-    GtkWidget *dlg;
     dlg = xfce_titled_dialog_new_with_buttons(
                 _("Mount Plugin"),
                 GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
@@ -747,8 +758,6 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     gtk_container_set_border_width (GTK_CONTAINER (dlg), 2);
 
-    GtkWidget *vbox;
-    t_mounter_dialog * md;
 
     md = g_new0 (t_mounter_dialog, 1);
 
@@ -757,15 +766,6 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     md->dialog = dlg;
 
     vbox = GTK_DIALOG (dlg)->vbox;
-
-    /* "local" variables */
-    GtkWidget *_eventbox;
-    GtkWidget *_label;
-    GtkWidget *_vbox, *_vbox2;
-    GtkWidget *_hbox;
-    GtkTooltips *tip;
-    GtkWidget *_notebook;
-
 
     _notebook = gtk_notebook_new ();
     gtk_widget_show (_notebook);
@@ -876,7 +876,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->specify_commands = gtk_check_button_new_with_mnemonic (
                                 _("_Custom commands") );
-    gboolean set_active =
+    set_active =
         ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 ||
         strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 ) ?
                 TRUE : FALSE;
@@ -1046,9 +1046,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 static void
 mount_construct (XfcePanelPlugin *plugin)
 {
-    xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
-
     t_mounter *mounter;
+
+    xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
     mounter = create_mounter_control (plugin);
 

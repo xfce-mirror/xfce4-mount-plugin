@@ -45,6 +45,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #include "devices.h"
 
+/* declare that one here to appease -Werror */
+t_mount_info * mount_info_new_from_stat (struct statfs * pstatfs, char * mnt_type, char * mnt_dir);
+
 #define KB 1024
 #define MB 1048576
 #define GB 1073741824
