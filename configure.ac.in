@@ -99,7 +99,6 @@ AC_DEFINE_UNQUOTED([PACKAGE_DATA_DIR], "${packageprefix}/${packagedatadir}", ["D
 
 AC_OUTPUT([
 Makefile
-xfce4-mount-plugin.spec
 panel-plugin/Makefile
 icons/Makefile
 po/Makefile.in

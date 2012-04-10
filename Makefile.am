@@ -27,7 +27,6 @@ EXTRA_DIST =                     			\
 	NEWS									\
 	README									\
 	TODO									\
-	xfce4-mount-plugin.spec.in       		\
 	intltool-extract.in						\
 	intltool-merge.in						\
 	intltool-update.in
@@ -35,5 +34,4 @@ EXTRA_DIST =                     			\
 DISTCLEANFILES =							\
 	intltool-extract						\
 	intltool-merge							\
-	intltool-update							\
-	xfce4-mount-plugin.spec
+	intltool-update
