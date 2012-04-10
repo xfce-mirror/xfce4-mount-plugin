@@ -99,7 +99,7 @@ msgstr "Une erreur s'est produite. Le périphérique \"%s\" ne devrait pas être
 
 #: ../panel-plugin/mount-plugin.c:252
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#000000\" size=\"%s\">non monté</span>"
+msgstr "<span foreground=\"#FF0000\">non monté</span>"
 
 #: ../panel-plugin/mount-plugin.c:560
 msgid "devices"
