@@ -8,200 +8,235 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-11 11:05+0000\n"
+"POT-Creation-Date: 2012-04-11 14:25+0200\n"
 "PO-Revision-Date: 2010-12-11 14:31+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <xfce-i18n@xfce.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:66
+#: ../panel-plugin/devices.c:80
 #, c-format
 msgid "size:                %g\n"
 msgstr "velikost:            %g\n"
 
-#: ../panel-plugin/devices.c:67
+#: ../panel-plugin/devices.c:81
 #, c-format
 msgid "used size:           %g\n"
 msgstr "obsazeno:            %g\n"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:82
 #, c-format
 msgid "available siz:       %g\n"
 msgstr "volných:             %g\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:83
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "obsazeno procent:    %d\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:84
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "typ systému souborů: %s\n"
 
-#: ../panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:85
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "aktuální bod připojení: %s\n"
 
-#: ../panel-plugin/devices.c:155
+#: ../panel-plugin/devices.c:169
 #, c-format
 msgid "disk: %s\n"
 msgstr "disk: %s\n"
 
-#: ../panel-plugin/devices.c:156
+#: ../panel-plugin/devices.c:170
 #, c-format
 msgid "mount point: %s\n"
 msgstr "bod připojení: %s\n"
 
-#: ../panel-plugin/devices.c:160
+#: ../panel-plugin/devices.c:174
 #, c-format
 msgid "not mounted\n"
 msgstr "nepřipojeno\n"
 
-#: ../panel-plugin/devices.c:260
-#: ../panel-plugin/devices.c:309
+#: ../panel-plugin/devices.c:278 ../panel-plugin/devices.c:326
 msgid "Mount Plugin: Error executing command."
 msgstr "Zásuvný modul Připojené svazky: Chyba při spuštění programu"
 
-#: ../panel-plugin/mount-plugin.c:57
+#: ../panel-plugin/mount-plugin.c:67
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Zařízení %s lze nyní bezpečně odebrat."
 
-#: ../panel-plugin/mount-plugin.c:60
+#: ../panel-plugin/mount-plugin.c:70
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Došlo k chybě. Zařízení \"%s\" by nemělo být odebráno!"
 
-#: ../panel-plugin/mount-plugin.c:252
+#: ../panel-plugin/mount-plugin.c:264
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nepřipojeno</span>"
 
-#: ../panel-plugin/mount-plugin.c:560
+#: ../panel-plugin/mount-plugin.c:583
 msgid "devices"
 msgstr "zařízení"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:764
 msgid "Mount Plugin"
 msgstr "Zásuvný modul Připojené svazky"
 
-#: ../panel-plugin/mount-plugin.c:783
-msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
-msgstr "Je užitečné a zároveň se doporučuje, abyste doplnili řetězec „sync“ jako součást řetězce pro odpojení „unmount“."
+#: ../panel-plugin/mount-plugin.c:769
+#, fuzzy
+msgid "Properties"
+msgstr "Upravit vlastnosti"
 
-#: ../panel-plugin/mount-plugin.c:788
+#: ../panel-plugin/mount-plugin.c:803
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr ""
+"Je užitečné a zároveň se doporučuje, abyste doplnili řetězec „sync“ jako "
+"součást řetězce pro odpojení „unmount“."
+
+#: ../panel-plugin/mount-plugin.c:808
 msgid "Show _message after unmount"
 msgstr "Zo_brazit zprávu po odpojení"
 
-#: ../panel-plugin/mount-plugin.c:800
+#: ../panel-plugin/mount-plugin.c:820
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Můžete určit různé ikony pro zobrazení v panelu."
 
-#: ../panel-plugin/mount-plugin.c:807
+#: ../panel-plugin/mount-plugin.c:827
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: ../panel-plugin/mount-plugin.c:811
+#: ../panel-plugin/mount-plugin.c:831
 msgid "Select an image"
 msgstr "Vyberte soubor s obrázkem"
 
-#: ../panel-plugin/mount-plugin.c:818
+#: ../panel-plugin/mount-plugin.c:838
 msgid "_General"
 msgstr "_Obecné"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:853
+msgid ""
+"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
+"be configured without password."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:857
+msgid "Use _sudo"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:870
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Tento příkaz bude spuštěn po připojení zařízení s umístěním přípojného bodu jako parametrem.\n"
+"Tento příkaz bude spuštěn po připojení zařízení s umístěním přípojného bodu "
+"jako parametrem.\n"
 "Nevíte-li, jaký údaj vložit, zkuste příkaz „exo-open %m“.\n"
 "'%d' lze použít pro upřesnění zařízení, '%m' pro bod připojení."
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:880
 msgid "_Execute after mounting:"
 msgstr "Po připoje_ní spustit:"
 
-#: ../panel-plugin/mount-plugin.c:866
-msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
-msgstr "VAROVÁNÍ: Tyto volby jsou pouze pro pokročilé uživatele! Nevíte-li k čemu slouží, neměňte je!"
+#: ../panel-plugin/mount-plugin.c:903
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+"VAROVÁNÍ: Tyto volby jsou pouze pro pokročilé uživatele! Nevíte-li k čemu "
+"slouží, neměňte je!"
 
-#: ../panel-plugin/mount-plugin.c:871
+#: ../panel-plugin/mount-plugin.c:908
 msgid "_Custom commands"
 msgstr "_Vlastní příkazy"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:927
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec „sync %d &&“ před příkaz „unmount %d“.\n"
+"Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec "
+"„sync %d &&“ před příkaz „unmount %d“.\n"
 "'%d' je použit pro upřesnění názvu jednotky, '%m' pro bod připojení."
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:936
 msgid "_Mount command:"
 msgstr "_Příkaz pro připojení:"
 
-#: ../panel-plugin/mount-plugin.c:905
+#: ../panel-plugin/mount-plugin.c:942
 msgid "_Unmount command:"
 msgstr "Příkaz pro _odpojení"
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:968
 msgid "_Commands"
 msgstr "Pří_kazy"
 
-#: ../panel-plugin/mount-plugin.c:946
-msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
-msgstr "Zapnutím této volby povolíte zobrazení síťových souborových systémů, jakými jsou NFS, SMBFS, SHFS a SSHFS."
+#: ../panel-plugin/mount-plugin.c:983
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+"Zapnutím této volby povolíte zobrazení síťových souborových systémů, jakými "
+"jsou NFS, SMBFS, SHFS a SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:951
+#: ../panel-plugin/mount-plugin.c:988
 msgid "Display _network file systems"
 msgstr "Z_obrazit síťové systémy souborů"
 
-#: ../panel-plugin/mount-plugin.c:964
-msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
-msgstr "Tuto volbu aktivujte také pro vysunutí disku CD z jednotky po odpojení a pro vložení před připojením."
+#: ../panel-plugin/mount-plugin.c:1001
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+"Tuto volbu aktivujte také pro vysunutí disku CD z jednotky po odpojení a pro "
+"vložení před připojením."
 
-#: ../panel-plugin/mount-plugin.c:969
+#: ../panel-plugin/mount-plugin.c:1006
 msgid "_Eject CD-drives"
 msgstr "_Vysunout jednotky CD"
 
-#: ../panel-plugin/mount-plugin.c:982
+#: ../panel-plugin/mount-plugin.c:1019
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Tuto volbu aktivujte, chcete-li zobrazovat pouze body připojení."
 
-#: ../panel-plugin/mount-plugin.c:986
+#: ../panel-plugin/mount-plugin.c:1023
 msgid "Display _mount points only"
 msgstr "Zobrazovat pouze _body připojení"
 
-#: ../panel-plugin/mount-plugin.c:1001
+#: ../panel-plugin/mount-plugin.c:1038
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -211,24 +246,21 @@ msgstr ""
 "Seznam je oddělen jednoduchými mezerami.\n"
 "Je na vás, abyste upřesnili korektní zařízení nebo body připojení."
 
-#: ../panel-plugin/mount-plugin.c:1011
+#: ../panel-plugin/mount-plugin.c:1048
 msgid "E_xclude specified file systems"
 msgstr "Vy_nechat zadané systémy souborů"
 
-#: ../panel-plugin/mount-plugin.c:1026
+#: ../panel-plugin/mount-plugin.c:1063
 msgid "_File systems"
 msgstr "_Systémy souborů"
 
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
 msgstr "Připojená zařízení"
 
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Zobrazuje všechna připojitelná zařízení a na požádání je odpojuje."
-
-#~ msgid "Edit Properties"
-#~ msgstr "Upravit vlastnosti"
 
 #~ msgid "size : %g\n"
 #~ msgstr "velikost: %g\n"
