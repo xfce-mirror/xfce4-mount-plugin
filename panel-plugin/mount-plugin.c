@@ -355,58 +355,50 @@ static void
 mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
     const char *value;
+    gchar *icon;
     char *file;
     XfceRc *rc;
     TRACE ("enter read_config");
 
     if ( !( file = xfce_panel_plugin_lookup_rc_file (plugin) ) )
         return;
-
+    DBG("going to read config from %s", file);
     rc = xfce_rc_simple_open (file, TRUE);
     g_free (file);
 
-    if ( (value = xfce_rc_read_entry(rc, "on_mount_cmd", NULL)) )
-      mt->on_mount_cmd = g_strdup (value);
+    if (mt->icon != NULL) g_free(mt->icon);
+    if (mt->on_mount_cmd != NULL) g_free(mt->on_mount_cmd);
+    if (mt->mount_command != NULL) g_free(mt->mount_command);
+    if (mt->umount_command != NULL) g_free(mt->umount_command);
+    if (mt->excluded_filesystems != NULL) g_free(mt->excluded_filesystems);
 
-    if ( (value = xfce_rc_read_entry(rc, "icon", NULL)) )
-        mt->icon = g_strdup (value);
-    else
-        mt->icon = g_strdup_printf (
-                "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
-                PACKAGE_DATA_DIR );
+    icon = g_strdup_printf ("%s/icons/hicolor/scalable/apps/xfce-mount.svg", PACKAGE_DATA_DIR );
+    mt->icon = g_strdup(xfce_rc_read_entry(rc, "icon", icon));
+    g_free(icon);
 
-    if ( (value = xfce_rc_read_entry (rc, "mount_command", NULL)) )
-        mt->mount_command = g_strdup (value);
-    else
-        mt->mount_command = g_strdup (DEFAULT_MOUNT_COMMAND);
+    mt->on_mount_cmd = g_strdup(xfce_rc_read_entry(rc, "on_mount_cmd", ""));
+    mt->mount_command = g_strdup(xfce_rc_read_entry(rc, "mount_command", DEFAULT_MOUNT_COMMAND));
+    mt->umount_command = g_strdup(xfce_rc_read_entry(rc, "umount_command", DEFAULT_UMOUNT_COMMAND));
+    mt->excluded_filesystems = g_strdup(xfce_rc_read_entry(rc, "excluded_filesystems", ""));
 
-    if ( (value = xfce_rc_read_entry (rc, "umount_command", NULL)) )
-        mt->umount_command = g_strdup (value);
-    else
-        mt->umount_command = g_strdup (DEFAULT_UMOUNT_COMMAND);
+    /* before 0.5.7 booleans were stored as string "1".. handle legacy configs */
+    value = xfce_rc_read_entry(rc, "message_dialog", NULL);
+    mt->message_dialog = (value == NULL ? xfce_rc_read_bool_entry(rc, "message_dialog", FALSE) : atoi(value));
 
-    if ( (value = xfce_rc_read_entry (rc, "excluded_filesystems", NULL)) )
-        mt->excluded_filesystems = g_strdup (value);
-    else
-        mt->excluded_filesystems = g_strdup ("");
+    value = xfce_rc_read_entry(rc, "include_NFSs", NULL);
+    mt->include_NFSs = (value == NULL ? xfce_rc_read_bool_entry(rc, "include_NFSs", FALSE) : atoi(value));
 
-    if ( (value = xfce_rc_read_entry(rc, "message_dialog", NULL)) )
-        mt->message_dialog = atoi (value);
+    value = xfce_rc_read_entry(rc, "exclude_FSs", NULL);
+    mt->exclude_FSs = (value == NULL ? xfce_rc_read_bool_entry(rc, "exclude_FSs", FALSE) : atoi(value));
 
-    if ( (value = xfce_rc_read_entry(rc, "include_NFSs", NULL)) )
-        mt->include_NFSs= atoi (value);
+    value = xfce_rc_read_entry(rc, "exclude_devicenames", NULL);
+    mt->exclude_devicenames = (value == NULL ? xfce_rc_read_bool_entry(rc, "exclude_devicenames", FALSE) : atoi(value));
 
-    if ( (value = xfce_rc_read_entry(rc, "exclude_FSs", NULL)) )
-        mt->exclude_FSs= atoi (value);
+    value = xfce_rc_read_entry(rc, "eject_drives", NULL);
+    mt->eject_drives = (value == NULL ? xfce_rc_read_bool_entry(rc, "eject_drives", FALSE) : atoi(value));
 
-    if ( (value = xfce_rc_read_entry(rc, "exclude_devicenames", NULL)) )
-        mt->exclude_devicenames= atoi (value);
-
-    if ( (value = xfce_rc_read_entry(rc, "eject_drives", NULL)) )
-        mt->eject_drives= atoi (value);
-
-    if ( (value = xfce_rc_read_entry(rc, "use_sudo", NULL)) )
-        mt->use_sudo= atoi (value);
+    value = xfce_rc_read_entry(rc, "use_sudo", NULL);
+    mt->use_sudo = (value == NULL ? xfce_rc_read_bool_entry(rc, "use_sudo", FALSE) : atoi(value));
 
     xfce_rc_close (rc);
 
@@ -426,43 +418,24 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 
     /* int res = */ unlink (file);
 
+    DBG("going to write config to %s", file);
     rc = xfce_rc_simple_open (file, FALSE);
     g_free (file);
 
     if (!rc)
         return;
 
-    xfce_rc_write_entry (rc, "on_mount_cmd",
-         mt->on_mount_cmd ? mt->on_mount_cmd : "");
-
-    if ( strcmp(mt->mount_command, DEFAULT_MOUNT_COMMAND)!=0 )
-        xfce_rc_write_entry (rc, "mount_command", mt->mount_command);
-
-    if ( strcmp(mt->umount_command, DEFAULT_UMOUNT_COMMAND)!=0 )
-        xfce_rc_write_entry (rc, "umount_command", mt->umount_command);
-
-    if ( strlen(mt->excluded_filesystems)!=0 )
-        xfce_rc_write_entry (rc, "excluded_filesystems", mt->excluded_filesystems);
-
-    if ( mt->message_dialog==1 )
-        xfce_rc_write_entry (rc, "message_dialog", "1");
-
-    if ( mt->include_NFSs==1 )
-        xfce_rc_write_entry (rc, "include_NFSs", "1");
-
-    if ( mt->exclude_FSs==1 )
-        xfce_rc_write_entry (rc, "exclude_FSs", "1");
-
-    if ( mt->exclude_devicenames==1 )
-        xfce_rc_write_entry (rc, "exclude_devicenames", "1");
-
-    if ( mt->eject_drives==1 )
-        xfce_rc_write_entry (rc, "eject_drives", "1");
-
-    if ( mt->use_sudo==1 )
-        xfce_rc_write_entry (rc, "use_sudo", "1");
-
+    xfce_rc_write_entry (rc, "on_mount_cmd", mt->on_mount_cmd);
+    xfce_rc_write_entry (rc, "mount_command", mt->mount_command);
+    xfce_rc_write_entry (rc, "umount_command", mt->umount_command);
+    xfce_rc_write_entry (rc, "excluded_filesystems", mt->excluded_filesystems);
     xfce_rc_write_entry (rc, "icon", mt->icon);
+    xfce_rc_write_bool_entry (rc, "message_dialog", mt->message_dialog);
+    xfce_rc_write_bool_entry (rc, "include_NFSs", mt->include_NFSs);
+    xfce_rc_write_bool_entry (rc, "exclude_FSs", mt->exclude_FSs);
+    xfce_rc_write_bool_entry (rc, "exclude_devicenames", mt->exclude_devicenames);
+    xfce_rc_write_bool_entry (rc, "eject_drives", mt->eject_drives);
+    xfce_rc_write_bool_entry (rc, "use_sudo", mt->use_sudo);
 
     xfce_rc_close (rc);
 
@@ -479,11 +452,11 @@ create_mounter_control (XfcePanelPlugin *plugin)
     mounter = g_new0(t_mounter,1);
 
     /* default configuration values for when no configuration is found */
-    mounter->icon = PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg";
-    mounter->mount_command = DEFAULT_MOUNT_COMMAND;
-    mounter->umount_command = DEFAULT_UMOUNT_COMMAND;
-    mounter->on_mount_cmd = "";
-    mounter->excluded_filesystems = "";
+    mounter->icon = g_strdup(PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg");
+    mounter->mount_command = g_strdup(DEFAULT_MOUNT_COMMAND);
+    mounter->umount_command = g_strdup(DEFAULT_UMOUNT_COMMAND);
+    mounter->on_mount_cmd = g_strdup("");
+    mounter->excluded_filesystems = g_strdup("");
     mounter->message_dialog = FALSE;
     mounter->include_NFSs = FALSE;
     mounter->exclude_FSs = FALSE;
