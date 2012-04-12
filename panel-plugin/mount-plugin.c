@@ -315,24 +315,6 @@ mounter_data_new (t_mounter *mt)
 
     disk_display_set_sizes(disk_displays);
 
-    mt->icon = PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg";
-    mt->mount_command = DEFAULT_MOUNT_COMMAND;
-    mt->umount_command = DEFAULT_UMOUNT_COMMAND;
-
-    mt->excluded_filesystems = "";
-
-    mt->message_dialog = FALSE;
-
-    mt->include_NFSs = FALSE;
-
-    mt->exclude_FSs = FALSE;
-
-    mt->eject_drives = FALSE;
-
-    mt->exclude_devicenames = FALSE;
-
-    mt->use_sudo = FALSE;
-
     TRACE ("leaves mounter_data_new");
 
     return ;
@@ -342,38 +324,12 @@ mounter_data_new (t_mounter *mt)
 static void
 mounter_refresh (t_mounter * mt)
 {
-    gchar *mount, *umount, *icon, *excl_filesystems;
-    gboolean msg_dlg, incl_NFSs, excl_FSs, excl_DNs, use_sudo, eject;
     TRACE ("enters mounter_refresh");
 
     mounter_data_free (mt);
-    mount = g_strdup (mt->mount_command);
-    umount = g_strdup (mt->umount_command);
-    icon = g_strdup (mt->icon);
-    excl_filesystems = g_strdup (mt->excluded_filesystems);
-    DBG ("Changed icon value from '%s' to '%s'.", mt->icon, icon);
-    msg_dlg = mt->message_dialog;
-    incl_NFSs = mt->include_NFSs;
-    excl_FSs = mt->exclude_FSs;
-    excl_DNs = mt->exclude_devicenames;
-    use_sudo = mt->use_sudo;
-    eject = mt->eject_drives;
-
     mounter_data_new (mt);
-    mt->icon = g_strdup (icon);
-    DBG ("Changed icon value from '%s' to '%s'.", icon, mt->icon);
-    mt->mount_command = g_strdup (mount);
-    mt->umount_command = g_strdup (umount);
-    mt->excluded_filesystems = g_strdup (excl_filesystems);
-    mt->message_dialog = msg_dlg;
-    mt->include_NFSs = incl_NFSs;
-    mt->exclude_FSs = excl_FSs;
-    mt->exclude_devicenames = excl_DNs;
-    mt->use_sudo = use_sudo;
-    mt->eject_drives = eject;
 
     TRACE ("leaves mounter_refresh");
-
 }
 
 
@@ -521,10 +477,18 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     mounter = g_new0(t_mounter,1);
 
-    /* default mount command */
-    mounter->on_mount_cmd = NULL;
-
-    mounter->icon = NULL;
+    /* default configuration values for when no configuration is found */
+    mounter->icon = PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg";
+    mounter->mount_command = DEFAULT_MOUNT_COMMAND;
+    mounter->umount_command = DEFAULT_UMOUNT_COMMAND;
+    mounter->on_mount_cmd = "";
+    mounter->excluded_filesystems = "";
+    mounter->message_dialog = FALSE;
+    mounter->include_NFSs = FALSE;
+    mounter->exclude_FSs = FALSE;
+    mounter->eject_drives = FALSE;
+    mounter->exclude_devicenames = FALSE;
+    mounter->use_sudo = FALSE;
 
     mounter->plugin = plugin;
 
@@ -574,16 +538,12 @@ mounter_apply_options (t_mounter_dialog *md)
     t_mounter * mt = md->mt;
     TRACE ("enters mounter_apply_options");
 
-    tmp = gtk_entry_get_text (GTK_ENTRY(md->string_cmd));
 
     incl_NFSs = mt->include_NFSs;
     excl_FSs = mt->exclude_FSs;
 
-    g_free (mt->on_mount_cmd);
-    if (tmp && *tmp)
-        mt->on_mount_cmd = g_strdup (tmp);
-    else
-        mt->on_mount_cmd = NULL;
+    mt->on_mount_cmd = g_strdup ( tmp = gtk_entry_get_text
+                          (GTK_ENTRY(md->string_cmd)) );
 
     if ( gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->specify_commands)) ) {
