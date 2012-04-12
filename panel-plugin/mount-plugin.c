@@ -534,7 +534,6 @@ free_mounter_dialog(GtkWidget * widget, t_mounter_dialog * md)
 static void
 mounter_apply_options (t_mounter_dialog *md)
 {
-    const char * tmp;
     gboolean incl_NFSs, excl_FSs;
     t_mounter * mt = md->mt;
     TRACE ("enters mounter_apply_options");
@@ -543,7 +542,7 @@ mounter_apply_options (t_mounter_dialog *md)
     incl_NFSs = mt->include_NFSs;
     excl_FSs = mt->exclude_FSs;
 
-    mt->on_mount_cmd = g_strdup ( tmp = gtk_entry_get_text
+    mt->on_mount_cmd = g_strdup ( gtk_entry_get_text
                           (GTK_ENTRY(md->string_cmd)) );
 
     if ( gtk_toggle_button_get_active
