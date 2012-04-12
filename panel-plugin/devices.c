@@ -693,7 +693,7 @@ disk_classify (char *device, char *mountpoint)
             dc = REMOTE;
         }
     }
-    else if ( strstr(device, "cdrom") || strstr(device, "cdrw")
+    else if ( strstr(device, "cdrom") || strstr(device, "cdrw") || strstr(device, "cd")
                 || strstr(device, "dvd") || strstr(mountpoint, "cdrom")
                 || strstr(mountpoint, "cdrw") || strstr(mountpoint, "dvd")) {
         dc = CD_DVD;
