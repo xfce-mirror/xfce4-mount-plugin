@@ -354,7 +354,6 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
 static void
 mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
-    const char *value;
     gchar *icon;
     char *file;
     XfceRc *rc;
@@ -381,24 +380,33 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     mt->umount_command = g_strdup(xfce_rc_read_entry(rc, "umount_command", DEFAULT_UMOUNT_COMMAND));
     mt->excluded_filesystems = g_strdup(xfce_rc_read_entry(rc, "excluded_filesystems", ""));
 
-    /* before 0.5.7 booleans were stored as string "1".. handle legacy configs */
-    value = xfce_rc_read_entry(rc, "message_dialog", NULL);
-    mt->message_dialog = (value == NULL ? xfce_rc_read_bool_entry(rc, "message_dialog", FALSE) : atoi(value));
+    mt->use_sudo = xfce_rc_read_bool_entry(rc, "use_sudo", FALSE);
 
-    value = xfce_rc_read_entry(rc, "include_NFSs", NULL);
-    mt->include_NFSs = (value == NULL ? xfce_rc_read_bool_entry(rc, "include_NFSs", FALSE) : atoi(value));
+    /* before 0.6.0 those booleans were stored as string "1".. handle/merge legacy configs */
+    if (xfce_rc_has_entry(rc, "message_dialog"))
+        mt->message_dialog = atoi(xfce_rc_read_entry(rc, "message_dialog", NULL));
+    else
+        mt->message_dialog = xfce_rc_read_bool_entry(rc, "show_message_dialog", FALSE);
 
-    value = xfce_rc_read_entry(rc, "exclude_FSs", NULL);
-    mt->exclude_FSs = (value == NULL ? xfce_rc_read_bool_entry(rc, "exclude_FSs", FALSE) : atoi(value));
+    if (xfce_rc_has_entry(rc, "include_NFSs"))
+        mt->include_NFSs = atoi(xfce_rc_read_entry(rc, "include_NFSs", NULL));
+    else
+        mt->include_NFSs = xfce_rc_read_bool_entry(rc, "include_networked_filesystems", FALSE);
 
-    value = xfce_rc_read_entry(rc, "exclude_devicenames", NULL);
-    mt->exclude_devicenames = (value == NULL ? xfce_rc_read_bool_entry(rc, "exclude_devicenames", FALSE) : atoi(value));
+    if (xfce_rc_has_entry(rc, "exclude_FSs"))
+        mt->exclude_FSs = atoi(xfce_rc_read_entry(rc, "exclude_FSs", NULL));
+    else
+        mt->exclude_FSs = xfce_rc_read_bool_entry(rc, "exclude_selected_filesystems", FALSE);
 
-    value = xfce_rc_read_entry(rc, "eject_drives", NULL);
-    mt->eject_drives = (value == NULL ? xfce_rc_read_bool_entry(rc, "eject_drives", FALSE) : atoi(value));
+    if (xfce_rc_has_entry(rc, "exclude_devicenames"))
+        mt->exclude_devicenames = atoi(xfce_rc_read_entry(rc, "exclude_devicenames", NULL));
+    else
+        mt->exclude_devicenames = xfce_rc_read_bool_entry(rc, "exclude_devicenames_in_menu", FALSE);
 
-    value = xfce_rc_read_entry(rc, "use_sudo", NULL);
-    mt->use_sudo = (value == NULL ? xfce_rc_read_bool_entry(rc, "use_sudo", FALSE) : atoi(value));
+    if (xfce_rc_has_entry(rc, "eject_drives"))
+        mt->eject_drives = atoi(xfce_rc_read_entry(rc, "eject_drives", NULL));
+    else
+        mt->eject_drives = xfce_rc_read_bool_entry(rc, "eject_cddrives", FALSE);
 
     xfce_rc_close (rc);
 
@@ -430,11 +438,11 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
     xfce_rc_write_entry (rc, "umount_command", mt->umount_command);
     xfce_rc_write_entry (rc, "excluded_filesystems", mt->excluded_filesystems);
     xfce_rc_write_entry (rc, "icon", mt->icon);
-    xfce_rc_write_bool_entry (rc, "message_dialog", mt->message_dialog);
-    xfce_rc_write_bool_entry (rc, "include_NFSs", mt->include_NFSs);
-    xfce_rc_write_bool_entry (rc, "exclude_FSs", mt->exclude_FSs);
-    xfce_rc_write_bool_entry (rc, "exclude_devicenames", mt->exclude_devicenames);
-    xfce_rc_write_bool_entry (rc, "eject_drives", mt->eject_drives);
+    xfce_rc_write_bool_entry (rc, "show_message_dialog", mt->message_dialog);
+    xfce_rc_write_bool_entry (rc, "include_networked_filesystems", mt->include_NFSs);
+    xfce_rc_write_bool_entry (rc, "exclude_selected_filesystems", mt->exclude_FSs);
+    xfce_rc_write_bool_entry (rc, "exclude_devicenames_in_menu", mt->exclude_devicenames);
+    xfce_rc_write_bool_entry (rc, "eject_cddrives", mt->eject_drives);
     xfce_rc_write_bool_entry (rc, "use_sudo", mt->use_sudo);
 
     xfce_rc_close (rc);
