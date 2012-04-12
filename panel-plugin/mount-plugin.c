@@ -222,7 +222,7 @@ disk_display_refresh (t_disk_display * disk_display)
                      ((gdouble)mount_info->percent / 100) );
             gtk_progress_bar_set_text (
                      GTK_PROGRESS_BAR(disk_display->progress_bar),
-                     g_strdup_printf ("%d",mount_info->percent));
+                     g_strdup_printf ("%d%%",mount_info->percent));
             gtk_widget_show (GTK_WIDGET(disk_display->progress_bar));
         }
         else /* mount_info == NULL */
