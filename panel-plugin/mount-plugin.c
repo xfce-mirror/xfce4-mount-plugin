@@ -35,19 +35,10 @@ void format_LVM_name (const char *disk_device, gchar **formatted_diskname);
 
 
 static void
-on_message_dialog_response (GtkWidget *widget, gpointer *data)
-{
-    gtk_widget_destroy (widget);
-}
-
-
-static void
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 {
     t_mounter * mt;
     gboolean eject;
-    gchar *msg;
-    GtkWidget *my_dlg;
 
     TRACE ("enters on_activate_disk_display");
 
@@ -57,31 +48,7 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 
     if (disk != NULL) {
         if (disk->mount_info != NULL) { /* disk is mounted */
-            int result = disk_umount (disk, mt->umount_command,
-                                      mt->message_dialog, eject, mt->use_sudo);
-
-            if (mt->message_dialog && (!eject || result!=NONE) ) { /* popup dialog */
-
-                    msg = (gchar *) g_malloc (1024*sizeof(gchar));
-                    if (result==NONE)
-                        msg = _("The device \"%s\" should be removable safely "
-                                    "now.");
-                    else
-                        msg = _("An error occurred. The device \"%s\" should not be "
-                                    "removed!");
-
-                my_dlg = gtk_message_dialog_new (NULL,
-                        GTK_DIALOG_DESTROY_WITH_PARENT,
-                        GTK_MESSAGE_INFO,
-                        GTK_BUTTONS_OK,
-                        msg,
-                        disk->mount_point);
-
-                 g_signal_connect (my_dlg, "response",
-                        G_CALLBACK (on_message_dialog_response), my_dlg);
-                 gtk_widget_show (my_dlg);
-                    /* gtk_dialog_run (GTK_DIALOG (my_dlg)); */
-            }
+            disk_umount (disk, mt->umount_command, mt->message_dialog, eject, mt->use_sudo);
         }
         else { /* disk is not mounted */
             disk_mount (disk, mt->on_mount_cmd, mt->mount_command, eject, mt->use_sudo);

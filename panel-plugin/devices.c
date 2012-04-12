@@ -29,6 +29,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <glib.h>
 #include <stdio.h>
 #include <string.h>
+/* WEXITSTATUS */
+#include <sys/types.h>
+#include <sys/wait.h>
 #ifdef HAVE_GETMNTENT
 #include <mntent.h>
 #include <sys/vfs.h>
@@ -235,50 +238,69 @@ disk_free(t_disk **pdisk)
 void
 disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject, gboolean use_sudo)
 {
-    gchar *tmp=NULL, *cmd, *tmp2 = NULL;
+    gchar *tmp = NULL, *cmd = NULL;
+    gchar *output = NULL, *erroutput = NULL;
+    int exit_status = 0;
     GError *error = NULL;
     gboolean val;
 
-    DBG("disk_mount: eject=%d, use_sudo=%d\n", eject, use_sudo);
-
     if (pdisk != NULL)
     {
+        DBG("disk_mount: dev=%s, mountpoint=%s, mount_command=%s, on_mount_cmd=%s, eject=%d, use_sudo=%d", pdisk->device, pdisk->mount_point, mount_command, on_mount_cmd, eject, use_sudo);
+        if (eject) {
+#ifdef __OpenBSD__
+/* hack: on OpenBSD, eject(1) -t expects cd0/cd1 (or rcd0c/rcd1c), if passed /dev/cdXa it will spit 'No medium found' */
+            tmp = g_strstr_len(pdisk->device, strlen(pdisk->device), "/dev/cd");
+            if (tmp) {
+                cmd = g_strconcat ("eject -t cd", tmp + 7, NULL);
+                /* remove chars after cdX */
+                cmd[12] = '\0';
+                tmp = NULL;
+            }
+            else
+                cmd = g_strconcat ("eject -t ", pdisk->device, NULL);
+#else
+            cmd = g_strconcat ("eject -t ", pdisk->device, NULL);
+#endif
+            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+            DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
+            if (val == FALSE || exit_status != 0)
+               goto out;
+            g_free(cmd);
+            cmd = NULL;
+        }
         deviceprintf (&tmp, mount_command, pdisk->device);
-        mountpointprintf (&tmp2, tmp, pdisk->mount_point);
-        /* re-use tmp */
-        g_free(tmp);
-        tmp = NULL;
-        if (use_sudo)
-            tmp = g_strdup ("sudo sh -c '");
-        else
-            tmp = g_strdup ("sh -c '");
-
-        if (eject)
-            cmd = g_strconcat (tmp, " eject -t ", pdisk->device, " && ", tmp2, NULL);
-        else
-            cmd = g_strconcat (tmp, tmp2, NULL);
-
-        g_free(tmp);
-        g_free(tmp2);
-        tmp = NULL;
-        tmp2 = NULL;
+        mountpointprintf (&cmd, tmp, pdisk->mount_point);
+        /* cmd contains mount_command device mount_point */
+        if (use_sudo) {
+            g_free(tmp);
+            tmp = g_strdup(cmd);
+            g_free(cmd);
+            cmd = g_strconcat ("sudo ", tmp, NULL);
+        }
+        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+        DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
+        if (val == FALSE || exit_status != 0)
+           goto out;
 
         if (on_mount_cmd != NULL && strlen(on_mount_cmd)!=0) {
+            g_free(tmp);
+            tmp = NULL;
+            g_free(cmd);
+            cmd = NULL;
             deviceprintf(&tmp, on_mount_cmd, pdisk->device);
-            mountpointprintf(&tmp2, tmp, pdisk->mount_point);
-            cmd = g_strconcat (cmd, " && ", tmp2, " '", NULL);
+            mountpointprintf(&cmd, tmp, pdisk->mount_point);
+            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+            DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         }
-        else
-            cmd = g_strconcat (cmd, " '", NULL);
-
-        val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), cmd, FALSE, FALSE, &error);
-        DBG("cmd: '%s', returned %d \n", cmd, val);
-        if (val)
-            xfce_dialog_show_error (NULL, error, _("Mount Plugin: Error executing command."));
-
+out:
         g_free(cmd);
-        g_free(tmp);
-        g_free(tmp2);
+        if (tmp)
+            g_free(tmp);
+        /* show error message if smth failed */
+        if (val == FALSE || exit_status != 0)
+            xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+                _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
     }
 }
 
@@ -286,54 +308,55 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
 /**
  * Return exit status of the umount command.
  */
-int
-disk_umount (t_disk *pdisk, char* umount_command, gboolean synchronous, gboolean eject, gboolean use_sudo)
+void
+disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject, gboolean use_sudo)
 {
-    int retval = NONE;
-    gchar *tmp = NULL, *tmp2 = NULL;
-    gboolean val;
-    char *cmd;
+    gchar *tmp = NULL, *cmd = NULL;
+    gchar *output = NULL, *erroutput = NULL;
+    int exit_status = 0;
     GError *error = NULL;
-
-    DBG("disk_umount: eject=%d, use_sudo=%d\n", eject, use_sudo);
-
+    gboolean val;
 
     if (pdisk != NULL)
     {
 
+        DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d, use_sudo=%d", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject, use_sudo);
         deviceprintf(&tmp, umount_command, pdisk->device);
-        mountpointprintf(&tmp2, tmp, pdisk->mount_point);
-        if (use_sudo)
-            cmd = g_strconcat ("sudo sh -c '", tmp2, NULL);
-        else
-            cmd = g_strconcat ("sh -c '", tmp2, NULL);
+        mountpointprintf(&cmd, tmp, pdisk->mount_point);
+        /* cmd contains umount_command device mount_point */
+        if (use_sudo) {
+            g_free(tmp);
+            tmp = g_strdup(cmd);
+            g_free(cmd);
+            cmd = g_strconcat ("sudo ", tmp, NULL);
+        }
+        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+        DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
+        if (val == FALSE || exit_status != 0)
+           goto out;
 
-        /* re-use tmp */
-        g_free(tmp);
-        tmp = NULL;
-
-        if (eject)
-            tmp = g_strconcat (cmd, " && eject ", pdisk->device, " '", NULL);
-        else
-            tmp = g_strconcat (cmd, " '", NULL);
-
-        val = xfce_spawn_command_line_on_screen(gdk_screen_get_default(), tmp, FALSE, FALSE, &error);
-        DBG("cmd: '%s', returned %d \n", tmp, val);
-
-        if  (val) {
-            xfce_dialog_show_error (NULL, error, _("Mount Plugin: Error executing command."));
-            retval = ERROR;
+        if (eject) {
+            g_free(cmd);
+            cmd = NULL;
+            cmd = g_strconcat ("eject ", pdisk->device, NULL);
+            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+            DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         }
 
-        if (disk_check_mounted(pdisk->device))
-            retval = ERROR;
+out:
+        g_free(cmd);
+        if (tmp)
+            g_free(tmp);
+        /* show error message if smth failed */
+        if (val == FALSE || exit_status != 0)
+            xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+                _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 
-        g_free (cmd);
-        g_free (tmp);
-        g_free (tmp2);
+        if (show_message_dialog && !eject && val == TRUE && exit_status == 0)
+            xfce_dialog_show_info (NULL, NULL, _("The device \"%s\" should be removable safely now."), pdisk->device);
+        if (show_message_dialog && disk_check_mounted(pdisk->device))
+            xfce_dialog_show_error (NULL, NULL, _("An error occurred. The device \"%s\" should not be removed!"), pdisk->device);
     }
-
-    return retval;
 }
 
 
