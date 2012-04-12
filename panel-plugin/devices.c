@@ -559,13 +559,13 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
     unsigned int i;
 
-    TRACE("Entering exclude_filesystems\n");
+    TRACE("Entering exclude_filesystems");
 
     g_assert(excluded_FSs != NULL);
 
     for (i=0; i < excluded_FSs->len; i++)
     {
-        DBG("Comparing %s and %s to %s\n", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
+        DBG("Comparing %s and %s to %s", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
         if (g_ascii_strcasecmp (
                 (gchar *) g_ptr_array_index(excluded_FSs, i), mountpoint)==0
             ||
@@ -575,7 +575,7 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
             return TRUE;
     }
 
-    TRACE("Leaving exclude_filesystems with FALSE\n");
+    TRACE("Leaving exclude_filesystems with FALSE");
 
     return FALSE;
 }
@@ -602,7 +602,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
     t_mount_info * mount_info;
     t_disk * pdisk ;
 
-    TRACE("Entering disks_refresh\n");
+    TRACE("Entering disks_refresh");
 
     /* remove t_mount_info for all devices */
     disks_free_mount_info (pdisks);
@@ -622,12 +622,12 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 #ifdef HAVE_GETMNTENT
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab)) {
 
-        DBG (" have entry: %s on %s \n", pmntent->mnt_fsname, pmntent->mnt_dir );
+        DBG (" have entry: %s on %s", pmntent->mnt_fsname, pmntent->mnt_dir );
 
         statfs (pmntent->mnt_dir, pstatfs);
 #elif HAVE_GETMNTINFO
     for (i = 0; i < nb_mounted_fs ; i++) {
-        DBG (" have entry: %s on %s : type %s\n", pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, pstatfs[i].f_fstypename );
+        DBG (" have entry: %s on %s : type %s", pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, pstatfs[i].f_fstypename );
 #endif
 
         /* if we got the stat and the block number is non-zero */

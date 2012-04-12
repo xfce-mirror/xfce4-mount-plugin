@@ -281,7 +281,7 @@ mounter_data_new (t_mounter *mt)
     /* remove unwanted file systems from list */
     if (mt->exclude_FSs) {
         array = g_ptr_array_new();
-        DBG("excluded_filesystems=%s\n", mt->excluded_filesystems);
+        DBG("excluded_filesystems=%s", mt->excluded_filesystems);
         res = seperate_list(array, mt->excluded_filesystems);
         for (i=0; i<array->len; i++) {
             dev_mp = (char*) g_ptr_array_index(array, i);
@@ -351,7 +351,7 @@ mounter_refresh (t_mounter * mt)
     umount = g_strdup (mt->umount_command);
     icon = g_strdup (mt->icon);
     excl_filesystems = g_strdup (mt->excluded_filesystems);
-    DBG ("Changed icon value from '%s' to '%s'.\n", mt->icon, icon);
+    DBG ("Changed icon value from '%s' to '%s'.", mt->icon, icon);
     msg_dlg = mt->message_dialog;
     incl_NFSs = mt->include_NFSs;
     excl_FSs = mt->exclude_FSs;
@@ -361,7 +361,7 @@ mounter_refresh (t_mounter * mt)
 
     mounter_data_new (mt);
     mt->icon = g_strdup (icon);
-    DBG ("Changed icon value from '%s' to '%s'.\n", icon, mt->icon);
+    DBG ("Changed icon value from '%s' to '%s'.", icon, mt->icon);
     mt->mount_command = g_strdup (mount);
     mt->umount_command = g_strdup (umount);
     mt->excluded_filesystems = g_strdup (excl_filesystems);
@@ -913,7 +913,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                     GTK_FILL, GTK_SHRINK, 0, 0);
 
     md->string_mount_command = gtk_entry_new ();
-    DBG("mt->mount_command: %s\n", mt->mount_command);
+    DBG("mt->mount_command: %s", mt->mount_command);
     gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ),
                     g_strdup(mt->mount_command ));
     gtk_widget_show (md->string_mount_command );
