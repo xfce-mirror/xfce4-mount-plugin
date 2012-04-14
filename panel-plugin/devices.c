@@ -35,7 +35,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #ifdef HAVE_GETMNTENT
 #include <mntent.h>
 #include <sys/vfs.h>
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
 #include <sys/param.h>
 #include <sys/mount.h>
 #else
@@ -593,7 +593,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 #ifdef HAVE_GETMNTENT
     FILE * fmtab = NULL; /* file /etc/mtab */
     struct mntent * pmntent = NULL; /* struct for mnt info */
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     int i, nb_mounted_fs = 0;
 #endif
     struct statfs * pstatfs = NULL;
@@ -613,7 +613,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 
     /* open file */
     fmtab = setmntent (MTAB, "r"); /* mtab file */
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     /* get mounted fs */
     nb_mounted_fs = getmntinfo(&pstatfs,MNT_WAIT);
 #endif
@@ -625,7 +625,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
         DBG (" have entry: %s on %s", pmntent->mnt_fsname, pmntent->mnt_dir );
 
         statfs (pmntent->mnt_dir, pstatfs);
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     for (i = 0; i < nb_mounted_fs ; i++) {
         DBG (" have entry: %s on %s : type %s", pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, pstatfs[i].f_fstypename );
 #endif
@@ -636,13 +636,13 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
         /* CHANGED to reflect change in disk_search */
 #ifdef HAVE_GETMNTENT
         pdisk = disks_search (pdisks, pmntent->mnt_dir);
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
         pdisk = disks_search (pdisks, pstatfs[i].f_mntonname);
 #endif
         if (excluded_FSs!=NULL)
 #ifdef HAVE_GETMNTENT
             exclude = exclude_filesystem (excluded_FSs, pmntent->mnt_dir, pmntent->mnt_fsname);
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
             exclude = exclude_filesystem (excluded_FSs, pstatfs[i].f_mntonname, pstatfs[i].f_mntfromname);
 #endif
 
@@ -660,7 +660,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
               g_str_has_prefix(pmntent->mnt_type, "cifs") ||
               g_str_has_prefix(pmntent->mnt_type, "shfs") ) ||
               g_str_has_prefix(pmntent->mnt_dir, "/sys/")
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
               /* TODO: add support for more fs types on BSD */
               g_ascii_strcasecmp(pstatfs[i].f_mntonname, "none") == 0 ||
               !g_str_has_prefix(pstatfs[i].f_mntfromname, "/dev/") ||
@@ -673,7 +673,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 #ifdef HAVE_GETMNTENT
             pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
             pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
             pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
             pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
 #endif
@@ -684,7 +684,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 #ifdef HAVE_GETMNTENT
         mount_info = mount_info_new_from_stat (pstatfs, pmntent->mnt_type,
                                                pmntent->mnt_dir);
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
         mount_info = mount_info_new_from_stat (&pstatfs[i], pstatfs[i].f_fstypename,
                                                pstatfs[i].f_mntonname);
 #endif
@@ -740,7 +740,7 @@ disk_check_mounted (const char *disk)
 #ifdef HAVE_GETMNTENT
     FILE *fmtab = NULL; /* file /etc/mtab */
     struct mntent *pmntent = NULL; /* struct for mnt info */
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     struct statfs * pstatfs = NULL;
     int i, nb_mounted_fs = 0;
 #endif
@@ -749,7 +749,7 @@ disk_check_mounted (const char *disk)
 #ifdef HAVE_GETMNTENT
     /* open file */
     fmtab = setmntent (MTAB, "r"); /* mtab file */
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     /* get mounted fs */
     nb_mounted_fs = getmntinfo(&pstatfs,MNT_WAIT);
 #endif
@@ -757,14 +757,14 @@ disk_check_mounted (const char *disk)
     /* start looking for mounted devices */
 #ifdef HAVE_GETMNTENT
     for (pmntent=getmntent(fmtab); pmntent!=NULL; pmntent=getmntent(fmtab))
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
     for (i = 0; i < nb_mounted_fs ; i++)
 #endif
     {
 #ifdef HAVE_GETMNTENT
         if (strcmp(pmntent->mnt_dir, disk)==0 ||
             strcmp(pmntent->mnt_fsname, disk)==0 )
-#elif HAVE_GETMNTINFO
+#elif defined (HAVE_GETMNTINFO)
         if (strcmp(pstatfs[i].f_mntonname, disk)==0 ||
             strcmp(pstatfs[i].f_mntfromname, disk)==0 )
 #endif

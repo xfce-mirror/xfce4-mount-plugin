@@ -267,12 +267,11 @@ mounter_free (XfcePanelPlugin *plugin, t_mounter *mounter)
 static void
 mounter_data_new (t_mounter *mt)
 {
-    unsigned int i, res;
+    unsigned int i;
     t_disk * disk;
     t_disk_display * disk_display;
     GPtrArray *array =  NULL, *disk_displays = NULL;
     char *dev_mp; /* device or mountpoint */
-    gboolean removed_device;
 
     TRACE ("enters mounter_data_new");
 
@@ -283,13 +282,13 @@ mounter_data_new (t_mounter *mt)
     if (mt->exclude_FSs) {
         array = g_ptr_array_new();
         DBG("excluded_filesystems=%s", mt->excluded_filesystems);
-        res = seperate_list(array, mt->excluded_filesystems);
+        seperate_list(array, mt->excluded_filesystems);
         for (i=0; i<array->len; i++) {
             dev_mp = (char*) g_ptr_array_index(array, i);
             if ( strstr(dev_mp , "/dev") )
-                removed_device = disks_remove_device(mt->pdisks, dev_mp);
+                disks_remove_device(mt->pdisks, dev_mp);
             else
-                removed_device = disks_remove_mountpoint (mt->pdisks, dev_mp);
+                disks_remove_mountpoint (mt->pdisks, dev_mp);
         }
     }
 
