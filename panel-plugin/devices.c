@@ -653,6 +653,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
             if ( exclude ||
 #ifdef HAVE_GETMNTENT
               g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
+              g_str_has_prefix(pmntent->mnt_fsname, "gvfs-fuse-daemon") ||
               !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
               g_str_has_prefix(pmntent->mnt_type, "fuse") ||
               g_str_has_prefix(pmntent->mnt_type, "nfs") ||
