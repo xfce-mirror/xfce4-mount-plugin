@@ -11,6 +11,7 @@ stamp*
 \[config.h\].in
 *,orig
 configure
+INSTALL
 config.*
 configure.ac
 intltool*
