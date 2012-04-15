@@ -1,8 +1,6 @@
 plugindir = $(libdir)/xfce4/panel/plugins
 plugin_LTLIBRARIES = libmount.la
 
-LIBS = @LIBS@ @SOLLIBS@
-
 libmount_la_SOURCES =                                \
 	devices.c                                           \
 	devices.h                                           \
