@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-12 11:50+0200\n"
+"POT-Creation-Date: 2012-04-15 22:54+0200\n"
 "PO-Revision-Date: 2010-03-01 10:50+0200\n"
 "Last-Translator: Dima Smirnov <arch@cnc-parts.info>\n"
 "Language-Team: Russian <xfce-i18n@xfce.org>\n"
@@ -107,23 +107,23 @@ msgstr "Теперь устройство \"%s\" можно удалить."
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Произошла ошибка. Не удаляйте устройство!"
 
-#: ../panel-plugin/mount-plugin.c:231
+#: ../panel-plugin/mount-plugin.c:232
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">не смонтировано</span>"
 
-#: ../panel-plugin/mount-plugin.c:555
+#: ../panel-plugin/mount-plugin.c:495
 msgid "devices"
 msgstr "Устройства"
 
-#: ../panel-plugin/mount-plugin.c:736
+#: ../panel-plugin/mount-plugin.c:671
 msgid "Mount Plugin"
 msgstr "Модуль монтирования"
 
-#: ../panel-plugin/mount-plugin.c:741
+#: ../panel-plugin/mount-plugin.c:676
 msgid "Properties"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:775
+#: ../panel-plugin/mount-plugin.c:710
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -131,38 +131,38 @@ msgstr ""
 "Имеет смысл и рекомендуется только если в команде \"unmount\" присутствует "
 "параметр \"sync\"."
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:715
 msgid "Show _message after unmount"
 msgstr "Показывать _сообщение после размонтирования"
 
-#: ../panel-plugin/mount-plugin.c:792
+#: ../panel-plugin/mount-plugin.c:727
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 "Вы можете указать отдельные иконки, которые будут отображаться на панели."
 
-#: ../panel-plugin/mount-plugin.c:799
+#: ../panel-plugin/mount-plugin.c:734
 msgid "Icon:"
 msgstr "Значок:"
 
-#: ../panel-plugin/mount-plugin.c:803
+#: ../panel-plugin/mount-plugin.c:738
 msgid "Select an image"
 msgstr "Выберите значок"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:745
 msgid "_General"
 msgstr "_Главная"
 
-#: ../panel-plugin/mount-plugin.c:825
+#: ../panel-plugin/mount-plugin.c:760
 msgid ""
 "Activate this option to use sudo(8) to run mount/umount commands. Needs to "
 "be configured without password."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:829
+#: ../panel-plugin/mount-plugin.c:764
 msgid "Use _sudo"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:842
+#: ../panel-plugin/mount-plugin.c:777
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -176,11 +176,11 @@ msgstr ""
 "'%d' может быть использован для указания устройства, '%m' для точки "
 "монтирования."
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:787
 msgid "_Execute after mounting:"
 msgstr "_Выполнить после монтирования"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:810
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -188,11 +188,11 @@ msgstr ""
 "ВНИМАНИЕ: Эти настройки преназначены только для экспертов! Если вы не "
 "уверены в свойих действиях, то лучше ничего не делайте!"
 
-#: ../panel-plugin/mount-plugin.c:880
+#: ../panel-plugin/mount-plugin.c:815
 msgid "_Custom commands"
 msgstr "_Пользовательские комманды"
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:834
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -203,19 +203,19 @@ msgstr ""
 "\"unmount %d\".\n"
 "'%d' обычно обозначает устройство, '%m' - точку монтирования."
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:843
 msgid "_Mount command:"
 msgstr "_Команда монтирования:"
 
-#: ../panel-plugin/mount-plugin.c:914
+#: ../panel-plugin/mount-plugin.c:849
 msgid "_Unmount command:"
 msgstr "_Команда размонтирования:"
 
-#: ../panel-plugin/mount-plugin.c:940
+#: ../panel-plugin/mount-plugin.c:875
 msgid "_Commands"
 msgstr "_Комманды"
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:890
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -223,11 +223,11 @@ msgstr ""
 "Используйте данную настройку также для отображения сетевых файловых систем, "
 "таких как NFS, SMBFS, SHFS and SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:960
+#: ../panel-plugin/mount-plugin.c:895
 msgid "Display _network file systems"
 msgstr "Показывать _сетевые файловые системы"
 
-#: ../panel-plugin/mount-plugin.c:973
+#: ../panel-plugin/mount-plugin.c:908
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -235,19 +235,19 @@ msgstr ""
 "Включение этой опции также выдвинет лоток Cd-привода после отмонтирования и "
 "задвинет его при монтировании"
 
-#: ../panel-plugin/mount-plugin.c:978
+#: ../panel-plugin/mount-plugin.c:913
 msgid "_Eject CD-drives"
 msgstr "Выдвигать CD-диск"
 
-#: ../panel-plugin/mount-plugin.c:991
+#: ../panel-plugin/mount-plugin.c:926
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Отображать эту опцию только для отображения точки монтирования"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:930
 msgid "Display _mount points only"
 msgstr "Отображать только _примонтированные точки"
 
-#: ../panel-plugin/mount-plugin.c:1010
+#: ../panel-plugin/mount-plugin.c:945
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -257,13 +257,21 @@ msgstr ""
 "Этот список разделен пробелами.\n"
 "Указывайте верные устройства или точки монтирования."
 
-#: ../panel-plugin/mount-plugin.c:1020
+#: ../panel-plugin/mount-plugin.c:955
 msgid "E_xclude specified file systems"
 msgstr "Исключать указанные файловые системы"
 
-#: ../panel-plugin/mount-plugin.c:1035
+#: ../panel-plugin/mount-plugin.c:970
 msgid "_File systems"
 msgstr "_Файловые системы"
+
+#: ../panel-plugin/mount-plugin.c:995
+msgid "Show partitions/devices and allow to mount/unmount them"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:997
+msgid "Copyright (c) 2005-2012\n"
+msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
