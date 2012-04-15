@@ -979,6 +979,27 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     TRACE ("leaves mounter_create_options");
 }
 
+static void
+mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
+{
+   GdkPixbuf *icon;
+   const gchar *auth[] = { "Jean-Baptiste Dulong",
+                           "Fabian Nowak <timystery@arcor.de>",
+                           "Landry Breuil <landry at xfce.org>", NULL };
+   icon = xfce_panel_pixbuf_from_source("drive-harddisk", NULL, 32);
+   gtk_show_about_dialog(NULL,
+      "logo", icon,
+      "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
+      "version", PACKAGE_VERSION,
+      "program-name", PACKAGE_NAME,
+      "comments", _("Show partitions/devices and allow to mount/unmount them"),
+      "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin",
+      "copyright", _("Copyright (c) 2005-2012\n"),
+      "authors", auth, NULL);
+
+   if(icon)
+      g_object_unref(G_OBJECT(icon));
+}
 
 static void
 mount_construct (XfcePanelPlugin *plugin)
@@ -1001,6 +1022,9 @@ mount_construct (XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_show_configure (plugin);
     g_signal_connect (plugin, "configure-plugin",
                       G_CALLBACK (mounter_create_options), mounter);
+
+    xfce_panel_plugin_menu_show_about(plugin);
+    g_signal_connect (plugin, "about", G_CALLBACK (mounter_show_about), mounter);
 
     g_signal_connect (plugin, "size-changed", G_CALLBACK (mounter_set_size),
                          mounter);

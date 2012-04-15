@@ -1,7 +1,6 @@
 hicolorSVGdir = $(datadir)/icons/hicolor/scalable/apps
 
-hicolorSVG_DATA = \	
-	xfce-mount.svg
+hicolorSVG_DATA = xfce-mount.svg
 
 EXTRA_DIST = $(hicolorSVG_DATA)
 	
