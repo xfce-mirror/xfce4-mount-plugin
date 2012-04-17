@@ -2,22 +2,4 @@ Listen to HAL/Udev for new devices. Code is already in places-plugin, in xfdeskt
 
 Use fusermount -u for FUSE file systems.
 
-Have a look at the icon stuff: when changing from binary install to custom and thus from /usr to /ur/local, no image is shown at all; can't find the nice image in the filesystem easily. Perhaps simply test for /usr/share und /usr/local/share/ and some /opt/share/ paths in this order, and then display nothing at all; or search relative to the plugin path.
-
 Add notification messages instead of popups when removing the device was successful.
-
-Add more translations from all over the world ;-)
-
-To add your language, simply copy po/xfce4-mount-plugin.pot to 
-po/languagecode.po and edit ALL the msgstr fields in your language with an 
-UTF-8 capable editor. You can also use tools such as "msginit". 
-
-Try to also add your name and email to the information at the beginning of the 
-file.
-
-When you've finished translating, send the gzipped PO file to 
-<timystery@arcor.de> or, even better, sign up at xfce-i18n@xfce.org.
-
-Thanks, Fabian Nowak and all other users speaking your newly translated 
-language!
-
