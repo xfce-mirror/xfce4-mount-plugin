@@ -1,3 +1,6 @@
+18 april 2012 - version 0.6.1
+- remove po/LINGUAS to fix some translations problems
+
 17 april 2012 - version 0.6.0
 - port to panel 4.9
 - port to libxfce4ui
