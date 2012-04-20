@@ -4,21 +4,20 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Rimas Kudelis <rq@akl.lt>, 2005-2006.
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-20 14:07+0000\n"
 "PO-Revision-Date: 2012-01-23 09:10+0200\n"
 "Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
 "Language-Team: Lietuvių <>\n"
-"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -91,11 +90,11 @@ msgstr "Prijungimo įskiepis: Klaida vykdant komandą."
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "Returned"
-msgstr ""
+msgstr "Grąžino"
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "error was"
-msgstr ""
+msgstr "klaida buvo"
 
 #: ../panel-plugin/devices.c:356
 #, c-format
@@ -121,7 +120,7 @@ msgstr "Prijungimo įskiepis"
 
 #: ../panel-plugin/mount-plugin.c:676
 msgid "Properties"
-msgstr ""
+msgstr "Savybės"
 
 #: ../panel-plugin/mount-plugin.c:710
 msgid ""
@@ -155,11 +154,11 @@ msgstr "_Bendra"
 msgid ""
 "Activate this option to use sudo(8) to run mount/umount commands. Needs to "
 "be configured without password."
-msgstr ""
+msgstr "Aktyvuokite šią parinkty norėdami naudoti sudo(8) prijungimo/atjungimo komandoms. Veikimui be slaptažodžio reikia sukonfigūruoti."
 
 #: ../panel-plugin/mount-plugin.c:764
 msgid "Use _sudo"
-msgstr ""
+msgstr "Naudoti _sudo"
 
 #: ../panel-plugin/mount-plugin.c:777
 #, c-format
@@ -265,11 +264,11 @@ msgstr "_Failų sistemos"
 
 #: ../panel-plugin/mount-plugin.c:995
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Rodyti skirsnius/įrenginius ir leisti prijungti/atjungti juos"
 
 #: ../panel-plugin/mount-plugin.c:997
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Autorinės teisės (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
