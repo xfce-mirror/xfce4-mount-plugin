@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
-"PO-Revision-Date: 2009-10-05 23:00+0900\n"
+"POT-Creation-Date: 2012-04-21 23:30+0900\n"
+"PO-Revision-Date: 2012-04-21 13:59+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "Language: ja\n"
@@ -84,17 +84,22 @@ msgstr "マウントポイント : %s\n"
 msgid "not mounted\n"
 msgstr "マウントされていません\n"
 
+# Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
+# is split the following three strings.
 #: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
 msgid "Mount Plugin: Error executing command."
 msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
 
+# "Returned <ret_code>, " (following above msg) 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "Returned"
-msgstr ""
+msgstr "戻り値"
 
+# "error was <err_msg>" (following above msg)
+# `error was' is redundancy, I think.
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "error was"
-msgstr ""
+msgstr " "
 
 #: ../panel-plugin/devices.c:356
 #, c-format
@@ -120,7 +125,7 @@ msgstr "マウントプラグイン"
 
 #: ../panel-plugin/mount-plugin.c:676
 msgid "Properties"
-msgstr ""
+msgstr "プロパティ"
 
 #: ../panel-plugin/mount-plugin.c:710
 msgid ""
@@ -155,10 +160,12 @@ msgid ""
 "Activate this option to use sudo(8) to run mount/umount commands. Needs to "
 "be configured without password."
 msgstr ""
+"mount/umount コマンド実行時に sudo(8) を使用します。パスワードの入力なしで "
+"sudo を実行できるよう設定されている必要があります。"
 
 #: ../panel-plugin/mount-plugin.c:764
 msgid "Use _sudo"
-msgstr ""
+msgstr "sudo を使用する(_S)"
 
 #: ../panel-plugin/mount-plugin.c:777
 #, c-format
@@ -265,10 +272,11 @@ msgstr "ファイルシステム(_F)"
 #: ../panel-plugin/mount-plugin.c:995
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
+"パーティション/デバイスを表示し、それらのマウント/マウント解除が行えます"
 
 #: ../panel-plugin/mount-plugin.c:997
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -279,3 +287,7 @@ msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr ""
 "マウント可能なデバイスを表示し、必要に応じてこれらをマウント/マウント解除しま"
 "す。"
+
+#, fuzzy
+#~ msgid "Mount Plugin: Error executing command. Returned %d, error was %s"
+#~ msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
