@@ -1,22 +1,22 @@
 # Dutch translation of the xfce4-mount-plugin package.
 # Copyright (C) The Xfce development team.
-# This file is distributed under the same license as the 
+# This file is distributed under the same license as the
 # xfce4-mount-plugin package.
 # Vincent Tunru <imnotb@gmail.com>
 # Pjotr, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-21 17:42+0000\n"
 "PO-Revision-Date: 2011-09-09 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
-"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -90,11 +90,11 @@ msgstr "Aankoppelingsplugin: fout bij het uitvoeren van opdracht."
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "Returned"
-msgstr ""
+msgstr "Antwoordde"
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "error was"
-msgstr ""
+msgstr "fout was"
 
 #: ../panel-plugin/devices.c:356
 #, c-format
@@ -119,9 +119,8 @@ msgid "Mount Plugin"
 msgstr "Aankoppel-plugin"
 
 #: ../panel-plugin/mount-plugin.c:676
-#, fuzzy
 msgid "Properties"
-msgstr "Eigenschappen bewerken"
+msgstr "Eigenschappen"
 
 #: ../panel-plugin/mount-plugin.c:710
 msgid ""
@@ -155,11 +154,11 @@ msgstr "Al_gemeen"
 msgid ""
 "Activate this option to use sudo(8) to run mount/umount commands. Needs to "
 "be configured without password."
-msgstr ""
+msgstr "Activeer deze optie om sudo(8) te gebruiken voor opdrachten tot koppelen of ontkoppelen. Moet ingesteld worden zonder wachtwoord."
 
 #: ../panel-plugin/mount-plugin.c:764
 msgid "Use _sudo"
-msgstr ""
+msgstr "_Sudo gebruiken"
 
 #: ../panel-plugin/mount-plugin.c:777
 #, c-format
@@ -267,11 +266,11 @@ msgstr "_Bestandssystemen"
 
 #: ../panel-plugin/mount-plugin.c:995
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Toon partities/apparaten en sta toe om hen te koppelen of te ontkoppelen"
 
 #: ../panel-plugin/mount-plugin.c:997
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Auteursrecht (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
