@@ -3,19 +3,19 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Eugene Ostapets <eostapets@altlinux.ru>, 2005-2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-22 16:42+0000\n"
 "PO-Revision-Date: 2010-03-01 10:50+0200\n"
 "Last-Translator: Dima Smirnov <arch@cnc-parts.info>\n"
 "Language-Team: Russian <xfce-i18n@xfce.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
@@ -91,11 +91,11 @@ msgstr "Модуль монтирования: Ошибка при выполн�
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "Returned"
-msgstr ""
+msgstr "Возвращено"
 
 #: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
 msgid "error was"
-msgstr ""
+msgstr "ошибка:"
 
 #: ../panel-plugin/devices.c:356
 #, c-format
@@ -121,7 +121,7 @@ msgstr "Модуль монтирования"
 
 #: ../panel-plugin/mount-plugin.c:676
 msgid "Properties"
-msgstr ""
+msgstr "Свойства"
 
 #: ../panel-plugin/mount-plugin.c:710
 msgid ""
@@ -156,11 +156,11 @@ msgstr "_Главная"
 msgid ""
 "Activate this option to use sudo(8) to run mount/umount commands. Needs to "
 "be configured without password."
-msgstr ""
+msgstr "Использовать sudo(8) для запуска mount или umount. Требуется конфигурация, не требующая ввода пароля."
 
 #: ../panel-plugin/mount-plugin.c:764
 msgid "Use _sudo"
-msgstr ""
+msgstr "И_спользовать sudo"
 
 #: ../panel-plugin/mount-plugin.c:777
 #, c-format
@@ -267,11 +267,11 @@ msgstr "_Файловые системы"
 
 #: ../panel-plugin/mount-plugin.c:995
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Показывает разделы и устройства и позволяет их монтировать."
 
 #: ../panel-plugin/mount-plugin.c:997
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
