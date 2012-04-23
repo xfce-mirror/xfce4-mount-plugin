@@ -2,6 +2,7 @@
 *Makefile.in
 stamp*
 */.deps
+po/*.gmo
 .libs
 *.orig
 *.o
