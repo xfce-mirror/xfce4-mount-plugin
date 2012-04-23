@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2009-05-14 02:59+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -85,24 +85,24 @@ msgstr "ماؤنٹ پوائنٹ: %s\n"
 msgid "not mounted\n"
 msgstr "غیر ماؤنٹ\n"
 
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "ماؤنٹ پلگ ان: کمانڈ چلانے میں غلطی."
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "ڈیوائس \"%s\" کو ابھی محفوظ طریقے سے نکال لینا چاہیے."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, fuzzy, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "غلطی ہوئی ہے: ڈیوائس کو نہیں نکالنا چاہیے تھا!"
@@ -111,20 +111,20 @@ msgstr "غلطی ہوئی ہے: ڈیوائس کو نہیں نکالنا چاہی
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ماؤنٹ نہیں ہے</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "ڈیوائسس"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "ماؤنٹ پلگ ان"
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 #, fuzzy
 msgid "Properties"
 msgstr "خصوصیات مدون کریں"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -132,37 +132,27 @@ msgstr ""
 "یہ تب مفید اور مطلوب ہے اگر آپ \"sync\" کو بطور \"unmount\" کمانڈ سٹرنگ کا "
 "حصہ متعین کریں."
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "ان ماؤنٹ کے بعد _پیغام دکھائیں"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "آپ پینل میں دکھانے کے لیے ایک خوبصورت آئکن متعین کرسکتے ہیں."
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "آئکن:"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "تصویر منتخب کریں"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "_عام"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, fuzzy, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -175,11 +165,11 @@ msgstr ""
 "اگر آپ کو نہیں پتہ کہ کیا لکھنا ہے تو \"thunar %m\" ٹرائی کریں.\n"
 "ڈیوائس کے تعین کے لیے '%d' اور ماؤنٹ پوائنٹ کے لیے '%m' استعمال ہوتا ہے."
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "ماؤنٹ کے بعد _چلائیں:"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -187,11 +177,11 @@ msgstr ""
 "انتباہ: یہ آپشن صرف ایکسپرٹ حضرات کے لیے ہیں! اگر آپ نہیں جانتے کہ آپ کے لیے "
 "کیا درست ہے تو اپنے آپ کو انہیں چھیڑنے سے باز رکھیں!"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "_صوابدیدی کمانڈز"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -202,19 +192,19 @@ msgstr ""
 "\" یا \"sync %d &&\" لگاتے ہیں\n"
 "ڈیوائس کے تعین کے لیے '%d' استعمال ہوتی ہے. اور ماؤنٹ پؤانٹ کے لیے '%m'."
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "_ماؤنٹ کمانڈ:"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "_ان ماؤنٹ کمانڈ:"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "_کمانڈز"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -222,11 +212,11 @@ msgstr ""
 "اس آپشن کو نیٹ ورک فائل سسٹم دکھانے کے لیے فعال کریں جیسے NFS, SMBFS, SHFS "
 "and SSHFS"
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "_نیٹ ورک فائل سسٹم دکھائیں"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -234,19 +224,19 @@ msgstr ""
 "اس آپشن کو CD-drive ان ماؤنٹ کرنے کے بعد نکالنے کے لیے اور ماؤنٹ سے پہلے "
 "مندرج کرنے کے لیے فعال کریں."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "سی ڈی ڈرائیوز ن_کالیں"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "صرف ماؤنٹ پؤائنٹس کو ظاہر کرنے کے لیے اسے فعال کریں"
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "صرف _ماؤنٹ پؤائنٹ ظاہر کریں"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -256,19 +246,19 @@ msgstr ""
 "فہرست سادہ خلا سے الگ کی گئی ہے.\n"
 "یہ آپ پر ہے کہ آپ درست ڈیوائسز یا ماؤنٹ پوائنٹ متعین کریں."
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "معینہ فائل سسٹمز مستثنی کریں"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "_فائل سسٹمز:"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 

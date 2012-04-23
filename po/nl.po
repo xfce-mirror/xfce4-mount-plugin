@@ -4,19 +4,19 @@
 # xfce4-mount-plugin package.
 # Vincent Tunru <imnotb@gmail.com>
 # Pjotr, 2011.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-21 17:42+0000\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2011-09-09 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
+"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -84,24 +84,24 @@ msgstr "koppelpunt: %s\n"
 msgid "not mounted\n"
 msgstr "niet aangekoppeld\n"
 
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "Aankoppelingsplugin: fout bij het uitvoeren van opdracht."
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr "Antwoordde"
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr "fout was"
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Het apparaat \"%s\" kan nu veilig verwijderd worden."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Er is een fout opgetreden. Koppel apparaat \"%s\" niet los!"
@@ -110,19 +110,19 @@ msgstr "Er is een fout opgetreden. Koppel apparaat \"%s\" niet los!"
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">niet aangekoppeld</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "apparaten"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "Aankoppel-plugin"
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -130,37 +130,27 @@ msgstr ""
 "Dit is alleen nuttig en aanbevolen als u \"sync\" opgeeft als onderdeel van "
 "het \"unmount\" opdracht-tekstsnoer."
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "_Bericht weergeven na ontkoppeling"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "U kunt een ander pictogram kiezen om in de werkbalk weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "Kies een afbeelding"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "Al_gemeen"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr "Activeer deze optie om sudo(8) te gebruiken voor opdrachten tot koppelen of ontkoppelen. Moet ingesteld worden zonder wachtwoord."
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr "_Sudo gebruiken"
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -174,11 +164,11 @@ msgstr ""
 "'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
 "worden om het koppelpunt aan te geven."
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "_Na koppeling uitvoeren:"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -186,11 +176,11 @@ msgstr ""
 "WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan "
 "te raden deze opties niet aan te passen tenzij u weet wat u doet!"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "_Aangepaste opdrachten"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -202,19 +192,19 @@ msgstr ""
 "'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
 "worden om het koppelpunt aan te geven."
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "_Aankoppelingsopdracht:"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "_Ontkoppelingsopdracht:"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "_Opdrachten"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -222,11 +212,11 @@ msgstr ""
 "Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en "
 "SSHFS weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "_Netwerk-bestandssystemen weergeven"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -234,19 +224,19 @@ msgstr ""
 "Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen "
 "en in te voegen voor het aankoppelen."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "CD-stations _uitwerpen"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Activeer deze optie om alleen de koppelpunten weer te geven."
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "Alleen _koppelpunten weergeven"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -256,19 +246,20 @@ msgstr ""
 "Gebruik spaties als scheidingsteken.\n"
 "Het is aan u om correcte apparaten of koppelpunten op te geven."
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "_Aangegeven bestandssystemen uitsluiten"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "_Bestandssystemen"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Toon partities/apparaten en sta toe om hen te koppelen of te ontkoppelen"
+msgstr ""
+"Toon partities/apparaten en sta toe om hen te koppelen of te ontkoppelen"
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr "Auteursrecht (c) 2005-2012\n"
 
@@ -279,3 +270,13 @@ msgstr "Apparaten aankoppelen"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
+
+#~ msgid ""
+#~ "Activate this option to use sudo(8) to run mount/umount commands. Needs "
+#~ "to be configured without password."
+#~ msgstr ""
+#~ "Activeer deze optie om sudo(8) te gebruiken voor opdrachten tot koppelen "
+#~ "of ontkoppelen. Moet ingesteld worden zonder wachtwoord."
+
+#~ msgid "Use _sudo"
+#~ msgstr "_Sudo gebruiken"

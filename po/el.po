@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2011-01-07 18:23+0200\n"
 "Last-Translator: Spiros Georgaras <sng@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -87,25 +87,25 @@ msgstr "σημείο προσάρτησης: %s\n"
 msgid "not mounted\n"
 msgstr "μη προσαρτημένο\n"
 
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr ""
 "Προέκυψε ένα σφάλμα κατά την εκτέλεση επιλεγμένης εντολής του mount plugin.."
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Η συσκευή \"%s\" μπορεί να αφαιρεθεί με ασφάλεια."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Προέκυψε ένα σφάλμα. Η συσκευή \"%s\" δεν πρέπει να αφαιρεθεί!"
@@ -114,20 +114,20 @@ msgstr "Προέκυψε ένα σφάλμα. Η συσκευή \"%s\" δεν π
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">μη προσαρτημένο</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "συσκευές"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "Πρόσθετο προσαρτήσεων"
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 #, fuzzy
 msgid "Properties"
 msgstr "Επεξεργασία ιδιοτήτων"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -135,38 +135,28 @@ msgstr ""
 "Αυτό είναι χρήσιμο και συνιστάται μόνο αν έχετε το \"sync\" ως μέρος της "
 "εντολής αποπροσάρτησης."
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "Προβολή μ_ηνύματος μετά την αποπροσάρτηση"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 "Μπορείτε να ορίσετε ένα ξεχωριστό εικονίδιο που θα προβάλλεται στο ταμπλό."
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "Εικονίδιο:"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "Επιλογή μιας εικόνας"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "Γ_ενικά"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -179,11 +169,11 @@ msgstr ""
 "Εάν δεν είστε σίγουροι, δοκιμάστε \"exo-open %m\".\n"
 "'%d' που μπορεί να καθορίσει την συσκευή, '%m' για το σημείο προσάρτησης."
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "Εκ_τέλεση μετά την προσάρτηση:"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -191,11 +181,11 @@ msgstr ""
 "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Αυτές οι επιλογές είναι για προχωρημένους! Αν δε γνωρίζετε τι "
 "κάνουν, μην τις πειράξετε καλύτερα."
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "Εν_τολές"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -208,19 +198,19 @@ msgstr ""
 "'%d' χρησιμοποιείται στον καθορισμό των συσκευών, '%m' για τα σημεία "
 "προσάρτησης."
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "Εν_τολή προσάρτησης:"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "Εν_τολή αποπροσάρτησης:"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "Εν_τολές"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -228,11 +218,11 @@ msgstr ""
 "Με αυτή την επιλογή εμφανίζονται και τα συστήματα αρχείων δικτύου όπως NFS. "
 "SMBFS, SHFS και SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "Προβολή δ_ικτυακών συστημάτων αρχείων"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -240,20 +230,20 @@ msgstr ""
 "Ενεργοποιώντας αυτή την επιλογή θα μπορεί επίσης να εξάγει έναν οδηγό CD "
 "μετά την αποπροσάρτηση του και την εισαγωγή του πριν την προσάρτηση του"
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "Εξ_αγωγή των οδηγών CD"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr ""
 "Ενεργοποιώντας αυτή την επιλογή εμφανίζονται μόνο τα προσαρτημένα σημεία."
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "Ε_μφάνιση των προσαρτημένων σημείων μόνο"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -264,19 +254,19 @@ msgstr ""
 "Είναι ευθύνη του χρήστη ο σωστός καθορισμός των συσκευών ή των "
 "σημείωνπροσάρτησης."
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "Ε_ξαιρούνται τα προσδιορίσμενα αρχεία συστήματος"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "Συστημάτων αρ_χείων"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 

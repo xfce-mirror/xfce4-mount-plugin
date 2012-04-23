@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-21 23:30+0900\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2012-04-21 13:59+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
@@ -86,27 +86,27 @@ msgstr "マウントされていません\n"
 
 # Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
 # is split the following three strings.
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
 
 # "Returned <ret_code>, " (following above msg) 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr "戻り値"
 
 # "error was <err_msg>" (following above msg)
 # `error was' is redundancy, I think.
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr " "
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "デバイス \"%s\" を取り外す用意が整いました。"
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "エラーが発生しました。デバイス \"%s\" を取り外してはいけません!"
@@ -115,19 +115,19 @@ msgstr "エラーが発生しました。デバイス \"%s\" を取り外して�
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">マウントされていません</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "デバイス"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "マウントプラグイン"
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 msgid "Properties"
 msgstr "プロパティ"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -135,39 +135,27 @@ msgstr ""
 "このオプションは \"unmount\" コマンド文字列に \"sync\" を入れている場合にお勧"
 "めします。"
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "マウント解除後にメッセージを表示する(_M)"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "パネルに表示するために、異なったアイコンを指定できます。"
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "イメージの選択"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "全般(_G)"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr ""
-"mount/umount コマンド実行時に sudo(8) を使用します。パスワードの入力なしで "
-"sudo を実行できるよう設定されている必要があります。"
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr "sudo を使用する(_S)"
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -180,11 +168,11 @@ msgstr ""
 "何を入力するか分からないのでしたら、\"exo-open %m\" を試してみて下さい。\n"
 "'%d' はデバイスを、'%m' はマウントポイントを指定するために使用します。"
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "マウント後に実行(_E):"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -192,11 +180,11 @@ msgstr ""
 "警告: これらのオプションは上級者専用です! これらが何を意味するのか分からない"
 "のでしたら、決していじらないで下さい!"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "カスタムコマンド(_C):"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -207,19 +195,19 @@ msgstr ""
 "ドの先頭に \"sync  %d &&\" を付けるだけでよいと思います。\n"
 "'%d' はデバイスを、'%m' はマウントポイントを指定するために使用します。"
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "マウントコマンド(_M):"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "マウント解除コマンド(_U):"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "コマンド(_C):"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -227,11 +215,11 @@ msgstr ""
 "このオプションを有効にすると NFS, SMBFS, SHFS および SSHFS のようなネットワー"
 "クファイルシステムも表示します。"
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "ネットワークファイルシステム表示する(_N)"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -239,19 +227,19 @@ msgstr ""
 "アンマウントした後に CD ドライブのイジェクトも行う場合や、マウントする前に挿"
 "入する場合にこのオプションを有効にします。"
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "CD ドライブから取り出す(_E)"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "マウントポイントの表示のみ行いたいときにこのオプションを有効にします。"
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "マウントポイントのみを表示する(_M)"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -261,20 +249,20 @@ msgstr ""
 "複数の要素は空白で区切ります。\n"
 "正しいデバイスかマウントポイントを指定するのは、あなた次第です。"
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "特定のファイルシステムを除外する(_X)"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "ファイルシステム(_F)"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 "パーティション/デバイスを表示し、それらのマウント/マウント解除が行えます"
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr "Copyright (c) 2005-2012\n"
 
@@ -287,6 +275,16 @@ msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr ""
 "マウント可能なデバイスを表示し、必要に応じてこれらをマウント/マウント解除しま"
 "す。"
+
+#~ msgid ""
+#~ "Activate this option to use sudo(8) to run mount/umount commands. Needs "
+#~ "to be configured without password."
+#~ msgstr ""
+#~ "mount/umount コマンド実行時に sudo(8) を使用します。パスワードの入力なし"
+#~ "で sudo を実行できるよう設定されている必要があります。"
+
+#~ msgid "Use _sudo"
+#~ msgstr "sudo を使用する(_S)"
 
 #, fuzzy
 #~ msgid "Mount Plugin: Error executing command. Returned %d, error was %s"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2012-01-15 11:52+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese/Traditional <xfce-i18n@xfce.org>\n"
@@ -82,24 +82,24 @@ msgstr "掛載點：%s\n"
 msgid "not mounted\n"
 msgstr "未掛載\n"
 
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "掛載小外掛: 執行指令時發生錯誤。"
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "您現在可以放心移除裝置「%s」。"
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "遭遇錯誤。「%s」裝置不應該移除！"
@@ -108,57 +108,47 @@ msgstr "遭遇錯誤。「%s」裝置不應該移除！"
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">未掛載</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "裝置"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "掛載插件"
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 #, fuzzy
 msgid "Properties"
 msgstr "編輯屬性"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 "這只有在您指定「sync」作為「unmount」指令字串的一部分時才有用，且建議使用。"
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "卸載後顯示訊息(_M)"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "您可以指定要顯示在面板上的獨一無二圖示。"
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "圖示："
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "請選取影像"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "一般(_G)"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -170,22 +160,22 @@ msgstr ""
 "如果您不確定要寫入什麼，試試「exo-open %m」。\n"
 "「%d」可用來指定裝置，而「%m」則為掛載點。"
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "掛載後執行(_E)："
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
 "警告：這些選項僅限專家使用！如果您不清楚這些選項的益處，最好把您的手移開！"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "自訂指令(_C)"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -196,47 +186,47 @@ msgstr ""
 "%d &&」。\n"
 "「%d」用來指定裝置，而「%m」則是掛載點。"
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "掛載指令(_M)："
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "卸載指令(_U)："
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "指令(_C)"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "啟用這個選項來顯示網路檔案系統，如：NFS、SMBFS、SHFS 和 SSHFS。"
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "顯示網路檔案系統(_N)"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr "啟用此選項在掛載後也退出 CD 裝置，並在掛載前插入。"
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "退出 CD 裝置(_E)"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "啟用此選項只顯示掛載點。"
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "僅顯示掛載點(_M)"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -246,19 +236,19 @@ msgstr ""
 "清單以空格作為分隔。\n"
 "本清單完全取決於您，自由指定適當的裝置或掛載點。"
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "排除特定檔案系統(_X)"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "檔案系統(_F)"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 

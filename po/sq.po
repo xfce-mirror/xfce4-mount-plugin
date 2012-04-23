@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:54+0200\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2008-11-04 23:26+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <xfce-i18n@xfce.org>\n"
@@ -84,24 +84,24 @@ msgstr "pikë montimi: %s\n"
 msgid "not mounted\n"
 msgstr "e pamontuar\n"
 
-#: ../panel-plugin/devices.c:302 ../panel-plugin/devices.c:352
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "Shtojca e Montimeve: Gabim gjatë përmbushjes së urdhrit."
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:303 ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Pajisja \"%s\" tani mund të hiqet pa rrezik."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:346
 #, fuzzy, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ndodhi një gabim. Pajisja nuk do të duhej hequr!"
@@ -110,20 +110,20 @@ msgstr "Ndodhi një gabim. Pajisja nuk do të duhej hequr!"
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">e pamontuar</span>"
 
-#: ../panel-plugin/mount-plugin.c:495
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "pajisje"
 
-#: ../panel-plugin/mount-plugin.c:671
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:676
+#: ../panel-plugin/mount-plugin.c:669
 #, fuzzy
 msgid "Properties"
 msgstr "Përpunoni Veti"
 
-#: ../panel-plugin/mount-plugin.c:710
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -131,37 +131,27 @@ msgstr ""
 "Ky është i dobishëm dhe i këshilluar vetëm nëse jepni \"njëkohëso\" si pjesë "
 "e vargut të urdhrit \"çmonto\"."
 
-#: ../panel-plugin/mount-plugin.c:715
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "Shfaqe _mesazhin pas çmontimit"
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Për paraqitjen në panel, mund të caktoni një ikonë të dallueshme."
 
-#: ../panel-plugin/mount-plugin.c:734
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "Ikonë:"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "Përzgjidhni një pamje"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "_Të përgjithshme"
 
-#: ../panel-plugin/mount-plugin.c:760
-msgid ""
-"Activate this option to use sudo(8) to run mount/umount commands. Needs to "
-"be configured without password."
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:764
-msgid "Use _sudo"
-msgstr ""
-
-#: ../panel-plugin/mount-plugin.c:777
+#: ../panel-plugin/mount-plugin.c:753
 #, fuzzy, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -174,11 +164,11 @@ msgstr ""
 "Nëse jeni i pasigurtë rreth asaj se çfarë të jepni, provoni \"thunar %m\".\n"
 "'%d' mund të përdoret për të treguar pajisjen, '%m' për pikën e montimit."
 
-#: ../panel-plugin/mount-plugin.c:787
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "_Përmbushe pas montimit:"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -186,11 +176,11 @@ msgstr ""
 "KUJDES: Këto mundësi janë vetëm për të sprovuarit! Nëse nuk e dini se çfarë "
 "është me vlerë për ju, larg duart që këtej!"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "Urdhra _vetjakë"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -201,19 +191,19 @@ msgstr ""
 "dy urdhrat ose të paravendosin \"sync %d &&\" te urdhri \"unmount %d\".\n"
 "'%d' përdoret për të treguar pajisjen, '%m' për pikën e montimit."
 
-#: ../panel-plugin/mount-plugin.c:843
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "Urdhër _montimi:"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "Urdhër çm_ontimi:"
 
-#: ../panel-plugin/mount-plugin.c:875
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "_Urdhra"
 
-#: ../panel-plugin/mount-plugin.c:890
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -221,11 +211,11 @@ msgstr ""
 "Aktivizojeni këtë mundësi për të shfaqur edhe sisteme kartelash rrjeti si "
 "NFS, SMBFS, SHFS dhe SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:895
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "Shfaq sisteme kartelash _rrjeti"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -233,19 +223,19 @@ msgstr ""
 "Aktivizoni këtë mundësi për të nxjerrë gjithashtu një pajisje CD pas "
 "çmontimit dhe për futje përpara montimit."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "_Nxirr pajisje CD"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktivizojeni këtë mundësi vetëm për t'i shfaqur pikat e montimit."
 
-#: ../panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "Shfa vetëm pika _montimi"
 
-#: ../panel-plugin/mount-plugin.c:945
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -255,19 +245,19 @@ msgstr ""
 "Elementët e listës ndahen thjesht me hapësirë.\n"
 "Është në dorën tuaj të tregoni pajisjet e sakta apo pikat e montimit."
 
-#: ../panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr "_Përjashto sistemet e trguar të kartelave"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "Sisteme _kartelash"
 
-#: ../panel-plugin/mount-plugin.c:995
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:997
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 

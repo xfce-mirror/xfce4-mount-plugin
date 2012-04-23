@@ -6,156 +6,170 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-16 12:37-0500\n"
+"POT-Creation-Date: 2012-04-23 17:16+0200\n"
 "PO-Revision-Date: 2010-04-04 09:55+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../panel-plugin/devices.c:54
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:55
+#: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:56
+#: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:57
+#: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:66
+#: ../panel-plugin/devices.c:83
 #, c-format
 msgid "size:                %g\n"
 msgstr "ਸਾਈਜ਼:                %g\n"
 
-#: ../panel-plugin/devices.c:67
+#: ../panel-plugin/devices.c:84
 #, c-format
 msgid "used size:           %g\n"
 msgstr "ਵਰਤਿਆ ਸਾਈਜ਼:           %g\n"
 
-#: ../panel-plugin/devices.c:68
+#: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available siz:       %g\n"
 msgstr "ਉਪਲੱਬਧ ਸਾਈਜ਼:       %g\n"
 
-#: ../panel-plugin/devices.c:69
+#: ../panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "ਵਰਤੋਂ ਫੀਸਦੀ:     %d\n"
 
-#: ../panel-plugin/devices.c:70
+#: ../panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "ਫਾਇਲ ਸਿਸਟਮ ਟਾਈਪ:    %s\n"
 
-#: ../panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "ਅਸਲ ਮਾਊਂਟ ਪੁਆਇੰਟ:  %s\n"
 
-#: ../panel-plugin/devices.c:155
+#: ../panel-plugin/devices.c:172
 #, c-format
 msgid "disk: %s\n"
 msgstr "ਡਿਸਕ: %s\n"
 
-#: ../panel-plugin/devices.c:156
+#: ../panel-plugin/devices.c:173
 #, c-format
 msgid "mount point: %s\n"
 msgstr "ਮਾਊਂਟ ਪੁਆਇੰਟ: %s\n"
 
-#: ../panel-plugin/devices.c:160
+#: ../panel-plugin/devices.c:177
 #, c-format
 msgid "not mounted\n"
 msgstr "ਮਾਊਂਟ ਨਹੀਂ\n"
 
-#: ../panel-plugin/devices.c:245 ../panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
 msgid "Mount Plugin: Error executing command."
 msgstr "ਮਾਊਂਟ ਪਲੱਗਿਨ: ਕਮਾਂਡ ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ।"
 
-#: ../panel-plugin/mount-plugin.c:54
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+msgid "Returned"
+msgstr ""
+
+#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+msgid "error was"
+msgstr ""
+
+#: ../panel-plugin/devices.c:344
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:57
-msgid "An error occurred. The device should not be removed!"
+#: ../panel-plugin/devices.c:346
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:232
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ਮਾਊਂਟ ਨਹੀਂ ਹੈ</span>"
 
-#: ../panel-plugin/mount-plugin.c:557
+#: ../panel-plugin/mount-plugin.c:491
 msgid "devices"
 msgstr "ਜੰਤਰ"
 
-#: ../panel-plugin/mount-plugin.c:724
+#: ../panel-plugin/mount-plugin.c:664
 msgid "Mount Plugin"
 msgstr "ਮਾਊਂਟ ਪਲੱਗਇਨ"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:669
+msgid "Properties"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:703
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:785
+#: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
 msgstr "ਅਣ-ਮਾਊਂਤ ਦੇ ਬਾਅਦ ਸੁਨੇਹੇ ਵੇਖੋ(_m)"
 
-#: ../panel-plugin/mount-plugin.c:797
+#: ../panel-plugin/mount-plugin.c:720
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:804
+#: ../panel-plugin/mount-plugin.c:727
 msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
-#: ../panel-plugin/mount-plugin.c:808
+#: ../panel-plugin/mount-plugin.c:731
 msgid "Select an image"
 msgstr "ਈਮੇਜ਼ ਫਾਇਲ ਚੁਣੋ"
 
-#: ../panel-plugin/mount-plugin.c:815
+#: ../panel-plugin/mount-plugin.c:738
 msgid "_General"
 msgstr "ਆਮ(_G)"
 
-#: ../panel-plugin/mount-plugin.c:830
+#: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
 "of the device as argument.\n"
-"If you are unsure what to insert, try \"thunar %m\".\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:840
+#: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "ਮਾਊਂਟ ਕਰਨ ਦੇ ਬਾਅਦ ਚਲਾਓ(_E):"
 
-#: ../panel-plugin/mount-plugin.c:863
+#: ../panel-plugin/mount-plugin.c:786
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:868
+#: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
 msgstr "ਕਸਟਮ ਕਮਾਂਡ(_C)"
 
-#: ../panel-plugin/mount-plugin.c:887
+#: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -163,66 +177,73 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:896
+#: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
 msgstr "ਮਾਊਂਟ ਕਮਾਂਡ(_M):"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:825
 msgid "_Unmount command:"
 msgstr "ਅਣ-ਮਾਊਂਟ ਕਮਾਂਡ(_U):"
 
-#: ../panel-plugin/mount-plugin.c:928
+#: ../panel-plugin/mount-plugin.c:851
 msgid "_Commands"
 msgstr "ਕਮਾਂਡਾਂ(_C)"
 
-#: ../panel-plugin/mount-plugin.c:943
+#: ../panel-plugin/mount-plugin.c:866
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "ਨੈੱਟਵਰਕ ਫਾਇਲ ਸਿਸਟਮ ਵੇਖੋ(_n)"
 
-#: ../panel-plugin/mount-plugin.c:961
+#: ../panel-plugin/mount-plugin.c:884
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
 msgstr "ਸੀਡੀ-ਡਰਾਇਵ ਕੱਢੋ(_E)"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Activate this option to only have the mount points be displayed."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:906
 msgid "Display _mount points only"
 msgstr "ਕੇਵਲ ਮਾਊਂਟ ਪੁਆਇੰਟ ਵੇਖੋ(_m)"
 
-#: ../panel-plugin/mount-plugin.c:998
+#: ../panel-plugin/mount-plugin.c:921
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1008
+#: ../panel-plugin/mount-plugin.c:931
 msgid "E_xclude specified file systems"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1023
+#: ../panel-plugin/mount-plugin.c:946
 msgid "_File systems"
 msgstr "ਫਾਇਲ ਸਿਸਟਮ(_F)"
 
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:1
+#: ../panel-plugin/mount-plugin.c:971
+msgid "Show partitions/devices and allow to mount/unmount them"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:973
+msgid "Copyright (c) 2005-2012\n"
+msgstr ""
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
 msgstr "ਮਾਊਂਟ ਜੰਤਰ"
 
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.in.h:2
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr ""
-
