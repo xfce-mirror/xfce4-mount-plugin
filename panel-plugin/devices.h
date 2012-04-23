@@ -93,9 +93,8 @@ char * get_size_human_readable(float size);
  * @param on_mount_cmd    Command to execute after successfully mounting the device
  * @param mount_command    Command to use for mounting the device, still containing placeholders like \%d and \%m.
  * @param eject            Whether to inject the device before mounting.
- * @param use_sudo         Whether to use sudo to run the mount command.
  */
-void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject, gboolean use_sudo);
+void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject);
 
 
 /**
@@ -104,9 +103,8 @@ void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolea
  * @param umount_command    Command to use for unmounting the device, still containing placeholders like \%d and \%m.
  * @param show_message_dialog Whether to show a dialog upon successful umount for device removal
  * @param eject            Whether to eject the device after unmounting.
- * @param use_sudo         Whether to use sudo to run the umount command.
  */
-void disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject, gboolean use_sudo);
+void disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject);
 
 
 /**

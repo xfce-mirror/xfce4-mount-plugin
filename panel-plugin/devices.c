@@ -236,7 +236,7 @@ disk_free(t_disk **pdisk)
  * Return exit status of the mount command
  */
 void
-disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject, gboolean use_sudo)
+disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eject)
 {
     gchar *tmp = NULL, *cmd = NULL;
     gchar *output = NULL, *erroutput = NULL;
@@ -246,7 +246,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
 
     if (pdisk != NULL)
     {
-        DBG("disk_mount: dev=%s, mountpoint=%s, mount_command=%s, on_mount_cmd=%s, eject=%d, use_sudo=%d", pdisk->device, pdisk->mount_point, mount_command, on_mount_cmd, eject, use_sudo);
+        DBG("disk_mount: dev=%s, mountpoint=%s, mount_command=%s, on_mount_cmd=%s, eject=%d", pdisk->device, pdisk->mount_point, mount_command, on_mount_cmd, eject);
         if (eject) {
 #ifdef __OpenBSD__
 /* hack: on OpenBSD, eject(1) -t expects cd0/cd1 (or rcd0c/rcd1c), if passed /dev/cdXa it will spit 'No medium found' */
@@ -272,12 +272,6 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         deviceprintf (&tmp, mount_command, pdisk->device);
         mountpointprintf (&cmd, tmp, pdisk->mount_point);
         /* cmd contains mount_command device mount_point */
-        if (use_sudo) {
-            g_free(tmp);
-            tmp = g_strdup(cmd);
-            g_free(cmd);
-            cmd = g_strconcat ("sudo ", tmp, NULL);
-        }
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         if (val == FALSE || exit_status != 0)
@@ -309,7 +303,7 @@ out:
  * Return exit status of the umount command.
  */
 void
-disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject, gboolean use_sudo)
+disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject)
 {
     gchar *tmp = NULL, *cmd = NULL;
     gchar *output = NULL, *erroutput = NULL;
@@ -320,16 +314,10 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
     if (pdisk != NULL)
     {
 
-        DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d, use_sudo=%d", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject, use_sudo);
+        DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject);
         deviceprintf(&tmp, umount_command, pdisk->device);
         mountpointprintf(&cmd, tmp, pdisk->mount_point);
         /* cmd contains umount_command device mount_point */
-        if (use_sudo) {
-            g_free(tmp);
-            tmp = g_strdup(cmd);
-            g_free(cmd);
-            cmd = g_strconcat ("sudo ", tmp, NULL);
-        }
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         if (val == FALSE || exit_status != 0)
