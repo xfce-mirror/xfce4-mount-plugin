@@ -5,19 +5,19 @@
 # Xiaobin Wu <xwu422@googlemail.com>, 2008.
 # Hunt Xu <huntxu@live.cn>, 2008, 2009, 2010.
 # Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-25 19:52+0200\n"
+"POT-Creation-Date: 2012-04-25 20:51+0000\n"
 "PO-Revision-Date: 2010-06-07 08:40+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -99,9 +99,8 @@ msgid "error was"
 msgstr "错误是"
 
 #: ../panel-plugin/devices.c:296
-#, fuzzy
 msgid "Mount Plugin: Error executing on-mount command."
-msgstr "挂载插件：执行命令时出错。"
+msgstr "挂载插件：执行 on-mount 时出错。"
 
 #: ../panel-plugin/devices.c:348
 #, c-format
