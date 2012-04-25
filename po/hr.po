@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2011-05-16 00:39+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yahoo.com>\n"
@@ -89,24 +89,30 @@ msgstr "točka montiranja: %s\n"
 msgid "not mounted\n"
 msgstr "nije montirano\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "Priključak montiranja: Greška u izvođenju naredbe"
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "Priključak montiranja: Greška u izvođenju naredbe"
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Uređaj \"%s\" bi trebao sada biti sigurno uklonjiv"
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Došlo je do greške. Uređaj \"%s\" ne bi trebalo uklanjati!"

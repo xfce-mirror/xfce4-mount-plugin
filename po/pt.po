@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2012-01-09 15:05-0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
@@ -81,24 +81,30 @@ msgstr "ponto de montagem: %s\n"
 msgid "not mounted\n"
 msgstr "não montado\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "\"Plug-in\" de montagem: erro ao executar comando."
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "\"Plug-in\" de montagem: erro ao executar comando."
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "O dispositivo \"%s\" pode ser removido com segurança."
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ocorreu um erro. O dispositivo \"%s\" não deve ser removido!"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2009-05-14 02:59+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -85,24 +85,30 @@ msgstr "ماؤنٹ پوائنٹ: %s\n"
 msgid "not mounted\n"
 msgstr "غیر ماؤنٹ\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "ماؤنٹ پلگ ان: کمانڈ چلانے میں غلطی."
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "ماؤنٹ پلگ ان: کمانڈ چلانے میں غلطی."
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "ڈیوائس \"%s\" کو ابھی محفوظ طریقے سے نکال لینا چاہیے."
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, fuzzy, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "غلطی ہوئی ہے: ڈیوائس کو نہیں نکالنا چاہیے تھا!"

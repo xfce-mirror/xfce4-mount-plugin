@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2012-04-21 13:59+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
@@ -86,27 +86,35 @@ msgstr "マウントされていません\n"
 
 # Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
 # is split the following three strings.
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
 
 # "Returned <ret_code>, " (following above msg) 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr "戻り値"
 
 # "error was <err_msg>" (following above msg)
 # `error was' is redundancy, I think.
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr " "
 
-#: ../panel-plugin/devices.c:344
+# Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
+# is split the following three strings.
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "デバイス \"%s\" を取り外す用意が整いました。"
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "エラーが発生しました。デバイス \"%s\" を取り外してはいけません!"

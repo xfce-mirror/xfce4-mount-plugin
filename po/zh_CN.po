@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2010-06-07 08:40+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
@@ -85,24 +85,30 @@ msgstr "挂载点：%s\n"
 msgid "not mounted\n"
 msgstr "未挂载\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "挂载插件：执行命令时出错。"
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr "已返回"
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr "错误是"
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "挂载插件：执行命令时出错。"
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "现在应该可以安全地移除设备 “%s” 了。"
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "出错。不应移除设备 “%s”！"

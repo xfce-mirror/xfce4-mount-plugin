@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2009-03-11 12:49+0100\n"
 "Last-Translator: Harald Servat <redcrash@gmail.com>\n"
 "Language-Team: Catalan <xfce-i18n@xfce.org>\n"
@@ -85,24 +85,30 @@ msgstr "punt de muntatge: %s\n"
 msgid "not mounted\n"
 msgstr "no muntat\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "Connector per muntar: s’ha produït un error en executar l'ordre."
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "Connector per muntar: s’ha produït un error en executar l'ordre."
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "El dispositiu «%s» ja es pot extreure de forma segura."
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "S'ha produït un error. El dispositiu \"%s\" no es pot treure!"

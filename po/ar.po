@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 19:52+0200\n"
 "PO-Revision-Date: 2012-02-04 10:20+0300\n"
 "Last-Translator: Mohammad Alhargan <malham1@hotmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/opensuse-11-4/ar/list/\n"
@@ -82,24 +82,30 @@ msgstr "نقطة التوصيل: %s\n"
 msgid "not mounted\n"
 msgstr "غير موصل\n"
 
-#: ../panel-plugin/devices.c:296 ../panel-plugin/devices.c:340
+#. show error message if smth failed
+#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "ملحق التوصيل: خطأ أتناء تنفيذ الأمر."
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr ""
 
-#: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr ""
 
-#: ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:296
+#, fuzzy
+msgid "Mount Plugin: Error executing on-mount command."
+msgstr "ملحق التوصيل: خطأ أتناء تنفيذ الأمر."
+
+#: ../panel-plugin/devices.c:348
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "يمكن إزالة الجهاز \"%s\" بأمان الأن."
 
-#: ../panel-plugin/devices.c:346
+#: ../panel-plugin/devices.c:350
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "حدث خطأ. الجهاز \"%s\" لايمكن إزالته!"
