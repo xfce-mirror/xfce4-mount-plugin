@@ -3,19 +3,19 @@
 # Copyright (C) 2005-2008 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Fabian Nowak <timystery@arcor.de>, 2005-2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-23 17:16+0200\n"
+"POT-Creation-Date: 2012-04-25 13:42+0000\n"
 "PO-Revision-Date: 2009-03-25 00:07+0100\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German <xfce-i18n@xfce.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -91,8 +91,9 @@ msgid "Returned"
 msgstr ""
 
 #: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
+#, fuzzy
 msgid "error was"
-msgstr ""
+msgstr "Fehlermeldung war"
 
 #: ../panel-plugin/devices.c:344
 #, c-format
@@ -118,9 +119,8 @@ msgid "Mount Plugin"
 msgstr "Geräte einhängen"
 
 #: ../panel-plugin/mount-plugin.c:669
-#, fuzzy
 msgid "Properties"
-msgstr "Eigenschaften ändern"
+msgstr "Eigenschaften"
 
 #: ../panel-plugin/mount-plugin.c:703
 msgid ""
@@ -265,7 +265,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:973
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Copyright © 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
