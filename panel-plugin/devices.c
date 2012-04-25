@@ -275,7 +275,12 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         if (val == FALSE || exit_status != 0)
-           goto out;
+        {
+            /* show error message if smth failed */
+            xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+                _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
+            goto out;
+        }
 
         if (on_mount_cmd != NULL && strlen(on_mount_cmd)!=0) {
             g_free(tmp);
@@ -284,17 +289,16 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             cmd = NULL;
             deviceprintf(&tmp, on_mount_cmd, pdisk->device);
             mountpointprintf(&cmd, tmp, pdisk->mount_point);
-            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
-            DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
+            val = g_spawn_command_line_async (cmd, &error);
+            DBG("cmd: '%s', returned %d", cmd, val);
+            /* show error message if smth failed */
+            if (val == FALSE)
+                xfce_dialog_show_error (NULL, error, "%s", _("Mount Plugin: Error executing on-mount command."));
         }
 out:
         g_free(cmd);
         if (tmp)
             g_free(tmp);
-        /* show error message if smth failed */
-        if (val == FALSE || exit_status != 0)
-            xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
-                _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
     }
 }
 
