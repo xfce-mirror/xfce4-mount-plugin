@@ -91,7 +91,6 @@ msgid "Returned"
 msgstr ""
 
 #: ../panel-plugin/devices.c:297 ../panel-plugin/devices.c:341
-#, fuzzy
 msgid "error was"
 msgstr "Fehlermeldung war"
 
