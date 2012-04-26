@@ -4,19 +4,19 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Daichi Kawahata <daichi@xfce.org>, 2006.
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-25 19:52+0200\n"
+"POT-Creation-Date: 2012-04-26 02:36+0000\n"
 "PO-Revision-Date: 2012-04-21 13:59+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -84,14 +84,15 @@ msgstr "マウントポイント : %s\n"
 msgid "not mounted\n"
 msgstr "マウントされていません\n"
 
-# Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
-# is split the following three strings.
 #. show error message if smth failed
+# Message "Mount Plugin: Error executing command. Returned <ret_code>, error
+# was <err_msg>"
+# is split the following three strings.
 #: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
 
-# "Returned <ret_code>, " (following above msg) 
+# "Returned <ret_code>, " (following above msg)
 #: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr "戻り値"
@@ -102,12 +103,12 @@ msgstr "戻り値"
 msgid "error was"
 msgstr " "
 
-# Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
+# Message "Mount Plugin: Error executing command. Returned <ret_code>, error
+# was <err_msg>"
 # is split the following three strings.
 #: ../panel-plugin/devices.c:296
-#, fuzzy
 msgid "Mount Plugin: Error executing on-mount command."
-msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
+msgstr "マウントプラグイン: mount コマンドの実行中にエラーが発生しました。"
 
 #: ../panel-plugin/devices.c:348
 #, c-format
@@ -294,6 +295,5 @@ msgstr ""
 #~ msgid "Use _sudo"
 #~ msgstr "sudo を使用する(_S)"
 
-#, fuzzy
 #~ msgid "Mount Plugin: Error executing command. Returned %d, error was %s"
 #~ msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
