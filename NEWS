@@ -1,3 +1,7 @@
+27 april 2012 - version 0.6.3
+- Launch the on-mount command async to avoid blocking plugin UI
+- translation updates
+
 23 april 2012 - version 0.6.2
 - remove sudo option
 - translation updates

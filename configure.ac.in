@@ -10,7 +10,7 @@ dnl for Xfce4-panel 4.8 and higher only!
 
 m4_define([mount_version_major], [0])
 m4_define([mount_version_minor], [6])
-m4_define([mount_version_micro], [2])
+m4_define([mount_version_micro], [3])
 m4_define([mount_version_tag], []) # Leave empty for releases
 m4_define([mount_version_build], [@REVISION@])
 m4_define([mount_version], [mount_version_major().mount_version_minor().mount_version_micro()ifelse(mount_version_tag(), [], [], [mount_version_tag()-mount_version_build()])])
