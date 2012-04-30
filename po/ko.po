@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-25 19:52+0200\n"
-"PO-Revision-Date: 2012-04-21 01:23+0900\n"
+"POT-Creation-Date: 2012-04-29 22:39+0000\n"
+"PO-Revision-Date: 2012-04-30 09:03+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce-i18n <xfce-i18n@xfce.org>\n"
 "Language: ko\n"
@@ -84,22 +84,24 @@ msgid "not mounted\n"
 msgstr "마운트하지 않았습니다\n"
 
 #. show error message if smth failed
-#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
+#: ../panel-plugin/devices.c:280
+#: ../panel-plugin/devices.c:344
 msgid "Mount Plugin: Error executing command."
 msgstr "마운트 플러그인: 명령어 실행중 오류."
 
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
+#: ../panel-plugin/devices.c:281
+#: ../panel-plugin/devices.c:345
 msgid "Returned"
 msgstr "반환함"
 
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
+#: ../panel-plugin/devices.c:281
+#: ../panel-plugin/devices.c:345
 msgid "error was"
 msgstr "에러는 다음과 같습니다. "
 
 #: ../panel-plugin/devices.c:296
-#, fuzzy
 msgid "Mount Plugin: Error executing on-mount command."
-msgstr "마운트 플러그인: 명령어 실행중 오류."
+msgstr "마운트 플러그인: 마운트 명령 실행 중 오류가 발생했습니다."
 
 #: ../panel-plugin/devices.c:348
 #, c-format
@@ -128,12 +130,8 @@ msgid "Properties"
 msgstr "속성"
 
 #: ../panel-plugin/mount-plugin.c:703
-msgid ""
-"This is only useful and recommended if you specify \"sync\" as part of the "
-"\"unmount\" command string."
-msgstr ""
-"\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 추천하고"
-"자 합니다."
+msgid "This is only useful and recommended if you specify \"sync\" as part of the \"unmount\" command string."
+msgstr "\"unmount\" 명령의 일부로 \"sync\"를 추가하면 상당히 유용하기 때문에 추천하고자 합니다."
 
 #: ../panel-plugin/mount-plugin.c:708
 msgid "Show _message after unmount"
@@ -158,28 +156,21 @@ msgstr "일반(_G)"
 #: ../panel-plugin/mount-plugin.c:753
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"이 명령어는 인수로서의 장치 마운트 포인트에 장치를 마운트하고 나서 실행합니"
-"다.\n"
+"이 명령어는 인수로서의 장치 마운트 포인트에 장치를 마운트하고 나서 실행합니다.\n"
 "어떤 명령어를 입력할지 망설이신다면, \"exo-open %m\"을(를) 입력해 보십시오.\n"
-"'%d'은(는) 장치를 지정할 때 사용하고, '%m'은(는) 마운트 지점을 지정할 때 사용"
-"합니다."
+"'%d'은(는) 장치를 지정할 때 사용하고, '%m'은(는) 마운트 지점을 지정할 때 사용합니다."
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "_Execute after mounting:"
 msgstr "마운트 후 실행(_E):"
 
 #: ../panel-plugin/mount-plugin.c:786
-msgid ""
-"WARNING: These options are for experts only! If you do not know what they "
-"may be good for, keep your hands off!"
-msgstr ""
-"경고: 이 옵션은 고급 사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 "
-"만지지 마십시오."
+msgid "WARNING: These options are for experts only! If you do not know what they may be good for, keep your hands off!"
+msgstr "경고: 이 옵션은 고급 사용자를 위한 것입니다. 무엇을 어떻게 해야할지 모르시면 만지지 마십시오."
 
 #: ../panel-plugin/mount-plugin.c:791
 msgid "_Custom commands"
@@ -188,14 +179,11 @@ msgstr "사용자 정의 명령(_C)"
 #: ../panel-plugin/mount-plugin.c:810
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"대부분의 사용자는 명령어에 \"sudo\"를 덧붙이거나 \"unmount %d\" 명령에 "
-"\"sync %d &&\"을(를) 덧붙여 사용하기를 원합니다.\n"
-"'%d'은(는) 장치를 지정할 때 사용하고 '%m'은(는) 마운트 지점을 지정할 때 사용"
-"합니다."
+"대부분의 사용자는 명령어에 \"sudo\"를 덧붙이거나 \"unmount %d\" 명령에 \"sync %d &&\"을(를) 덧붙여 사용하기를 원합니다.\n"
+"'%d'은(는) 장치를 지정할 때 사용하고 '%m'은(는) 마운트 지점을 지정할 때 사용합니다."
 
 #: ../panel-plugin/mount-plugin.c:819
 msgid "_Mount command:"
@@ -210,24 +198,16 @@ msgid "_Commands"
 msgstr "명령(_C)"
 
 #: ../panel-plugin/mount-plugin.c:866
-msgid ""
-"Activate this option to also display network file systems like NFS, SMBFS, "
-"SHFS and SSHFS."
-msgstr ""
-"이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 파일 시스템을 보여주기 위한 "
-"것입니다."
+msgid "Activate this option to also display network file systems like NFS, SMBFS, SHFS and SSHFS."
+msgstr "이 옵션은 NFS, SMBFS, SHFS 및 SSHFS등의 네트워크 파일 시스템을 보여주기 위한 것입니다."
 
 #: ../panel-plugin/mount-plugin.c:871
 msgid "Display _network file systems"
 msgstr "네트워크 파일 시스템 보기(_N)"
 
 #: ../panel-plugin/mount-plugin.c:884
-msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"마운트 해제후 CD-드라이브를 꺼내고 마운트 하기 전에 삽입하려면 이 옵션을 활성"
-"화합니다."
+msgid "Activate this option to also eject a CD-drive after unmounting and to insert before mounting."
+msgstr "마운트 해제후 CD-드라이브를 꺼내고 마운트 하기 전에 삽입하려면 이 옵션을 활성화합니다."
 
 #: ../panel-plugin/mount-plugin.c:889
 msgid "_Eject CD-drives"
