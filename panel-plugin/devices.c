@@ -180,14 +180,18 @@ disk_print (t_disk * pdisk)
 }
 
 char *
-shorten_disk_name (const char *dev)
+shorten_disk_name (const char *dev, int len)
 {
-    char *r, *lastchars;
-    if (strncmp(dev, "UUID", 4)==0 && strlen(dev)>13)
+    char *r, *lastchars, *firstchars;
+    //if (strncmp(dev, "UUID", 4)==0 && 
+    if (strlen(dev)>len)
     {
+        // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        r = (char *) malloc (14*sizeof(char));
-        snprintf (r, 14, "UUID=...%s", lastchars);
+        firstchars = (char *) malloc (len-5*sizeof(char));
+        snprintf(firstchars, len-5, dev);
+        r = (char *) malloc (len*sizeof(char));
+        snprintf (r, len, "%s…%s", firstchars, lastchars);
     }
     else
         r = g_strdup (dev);

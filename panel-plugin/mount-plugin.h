@@ -62,6 +62,8 @@ typedef struct
     gboolean include_NFSs; /**< whether to also display network file systems */
     gboolean exclude_FSs;
     gboolean exclude_devicenames;
+    gboolean trim_devicenames;
+    gint trim_devicename_count;
     gboolean eject_drives;
     gboolean showed_fstab_dialog;
     GtkWidget *button;
@@ -106,6 +108,8 @@ typedef struct
     GtkWidget *show_exclude_FSs;
     GtkWidget *show_eject_drives;
     GtkWidget *show_exclude_devicenames;
+    GtkWidget *show_trim_devicenames;
+    GtkWidget *spin_trim_devicename_count;
     GtkWidget *string_excluded_filesystems;
 }
 t_mounter_dialog;

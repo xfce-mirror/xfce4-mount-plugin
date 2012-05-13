@@ -461,6 +461,8 @@ create_mounter_control (XfcePanelPlugin *plugin)
     mounter->umount_command = g_strdup(DEFAULT_UMOUNT_COMMAND);
     mounter->on_mount_cmd = g_strdup("");
     mounter->excluded_filesystems = g_strdup("");
+    mounter->trim_devicenames = TRUE;
+    mounter->trim_devicename_count = 14;
     mounter->message_dialog = FALSE;
     mounter->include_NFSs = FALSE;
     mounter->exclude_FSs = FALSE;
@@ -550,6 +552,12 @@ mounter_apply_options (t_mounter_dialog *md)
 
     mt->exclude_devicenames = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames));
+            
+    mt->trim_devicenames = gtk_toggle_button_get_active
+            (GTK_TOGGLE_BUTTON(md->show_trim_devicenames));
+            
+    mt->trim_devicename_count = gtk_spin_button_get_value_as_int
+            (GTK_SPIN_BUTTON(md->spin_trim_devicename_count));
 
     if (mt->include_NFSs!=incl_NFSs || mt->exclude_FSs!=excl_FSs
         || strlen(mt->excluded_filesystems)!=0) {
@@ -640,6 +648,17 @@ exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 
     return TRUE;
 }*/
+
+static gboolean
+trim_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
+{
+    gboolean val;
+    
+    val = gtk_check_button_get_active(GTK_CHECK_BUTTON(widget));
+    gtk_widget_set_sensitive(GTK_WIDGET(md->show_trim_devicenames), !val);
+
+    return TRUE;
+}
 
 static void
 mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
@@ -910,7 +929,36 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames),
                                 mt->exclude_devicenames);
 
-
+    /* Trim device names */
+    _eventbox = gtk_event_box_new ();
+    gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
+                        FALSE, FALSE, 0);
+    gtk_widget_show (_eventbox);
+    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+        _("Trim the device names to the number of characters specified in the spin button."),
+        NULL );
+    _hbox = gtk_hbox_new (FALSE, BORDER);
+    gtk_widget_show (_hbox);
+    gtk_container_add (GTK_CONTAINER (_eventbox), _hbox );
+    gtk_widget_set_sensitive(GTK_WIDGET(_hbox), !mt->exclude_devicenames);
+    md->show_trim_devicenames = gtk_check_button_new_with_mnemonic (
+                                _("Trim device names: ") );
+    gtk_widget_show (md->show_trim_devicenames);
+    gtk_box_pack_start (GTK_BOX (_hbox), GTK_WIDGET(md->show_trim_devicenames),
+                        FALSE, FALSE, 0);
+    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_trim_devicenames),
+                                mt->trim_devicenames);
+                                
+    _label = gtk_label_new(_(" characters"));
+    gtk_widget_show (_label);
+    gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(_label),
+                        FALSE, FALSE, 0);
+    md->spin_trim_devicename_count = gtk_spin_button_new_with_range (5.0, 99.0, 1.0);
+    gtk_spin_button_set_value(GTK_SPIN_BUTTON(md->spin_trim_devicename_count), (double) mt->trim_devicename_count);
+    gtk_widget_show (md->spin_trim_devicename_count);
+    gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(md->spin_trim_devicename_count),
+                        FALSE, FALSE, 0);
+    
 
         /* Exclude file systems  */
     _eventbox = gtk_event_box_new ();
@@ -961,7 +1009,7 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
    GdkPixbuf *icon;
    const gchar *auth[] = { "Jean-Baptiste Dulong",
                            "Fabian Nowak <timystery@arcor.de>",
-                           "Landry Breuil <landry at xfce.org>", NULL };
+                           "Landry Breuil <landry@xfce.org>", NULL };
    icon = xfce_panel_pixbuf_from_source("drive-harddisk", NULL, 32);
    gtk_show_about_dialog(NULL,
       "logo", icon,
@@ -972,6 +1020,7 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
       "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin",
       "copyright", _("Copyright (c) 2005-2012\n"),
       "authors", auth, NULL);
+  // TODO: add translators.
 
    if(icon)
       g_object_unref(G_OBJECT(icon));
