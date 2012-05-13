@@ -150,11 +150,21 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         dd->hbox = gtk_hbox_new (FALSE, 10);
         gtk_container_add (GTK_CONTAINER(dd->menu_item), dd->hbox);
 
-        if (g_str_has_prefix(disk->device, "/dev/mapper/"))
-            format_LVM_name (disk->device, &formatted_diskname);
+        if (mounter->trim_devicenames)
+        {
+          if (g_str_has_prefix(disk->device, "/dev/mapper/"))
+            format_LVM_name (disk->device_short, &formatted_diskname);
+          else
+            formatted_diskname = g_strdup(disk->device_short);
+        }
         else
+        {
+          if (g_str_has_prefix(disk->device, "/dev/mapper/"))
+            format_LVM_name (disk->device, &formatted_diskname);
+          else
             formatted_diskname = g_strdup(disk->device);
-
+        }
+        
         if (mounter->exclude_devicenames)
             dd->label_disk = gtk_label_new (disk->mount_point);
         else
@@ -276,7 +286,7 @@ mounter_data_new (t_mounter *mt)
     TRACE ("enters mounter_data_new");
 
     /* get static infos from /etc/fstab */
-    mt->pdisks = disks_new (mt->include_NFSs, &(mt->showed_fstab_dialog));
+    mt->pdisks = disks_new (mt->include_NFSs, &(mt->showed_fstab_dialog), mt->trim_devicename_count);
 
     /* remove unwanted file systems from list */
     if (mt->exclude_FSs) {
@@ -293,7 +303,7 @@ mounter_data_new (t_mounter *mt)
     }
 
     /* get dynamic infos on mounts */
-    disks_refresh (mt->pdisks, array /* =GPtrArray *excluded_FSs */ );
+    disks_refresh (mt->pdisks, array /* =GPtrArray *excluded_FSs */ , mt->trim_devicename_count);
 
     /* menu with menu_item */
     mt->menu = gtk_menu_new ();
@@ -389,6 +399,13 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
         mt->include_NFSs = atoi(xfce_rc_read_entry(rc, "include_NFSs", NULL));
     else
         mt->include_NFSs = xfce_rc_read_bool_entry(rc, "include_networked_filesystems", FALSE);
+        
+    if (xfce_rc_has_entry(rc, "trim_devicenames"))
+        mt->trim_devicenames = xfce_rc_read_bool_entry(rc, "trim_devicenames", FALSE);
+
+    if (xfce_rc_has_entry(rc, "td_count"))
+        mt->trim_devicename_count = atoi(xfce_rc_read_entry(rc, "td_count", NULL));
+
 
     if (xfce_rc_has_entry(rc, "exclude_FSs"))
         mt->exclude_FSs = atoi(xfce_rc_read_entry(rc, "exclude_FSs", NULL));
@@ -415,7 +432,7 @@ static void
 mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
 {
     XfceRc *rc;
-    char *file;
+    char *file, tmp[4];
     TRACE ("enter write_config");
 
     if (!(file = xfce_panel_plugin_save_location (plugin, TRUE)))
@@ -437,6 +454,9 @@ mounter_write_config (XfcePanelPlugin *plugin, t_mounter *mt)
     xfce_rc_write_entry (rc, "icon", mt->icon);
     xfce_rc_write_bool_entry (rc, "show_message_dialog", mt->message_dialog);
     xfce_rc_write_bool_entry (rc, "include_networked_filesystems", mt->include_NFSs);
+    xfce_rc_write_bool_entry (rc, "trim_devicenames", mt->trim_devicenames);
+    snprintf(tmp, 4, "%d", mt->trim_devicename_count);
+    xfce_rc_write_entry (rc, "td_count", tmp);
     xfce_rc_write_bool_entry (rc, "exclude_selected_filesystems", mt->exclude_FSs);
     xfce_rc_write_bool_entry (rc, "exclude_devicenames_in_menu", mt->exclude_devicenames);
     xfce_rc_write_bool_entry (rc, "eject_cddrives", mt->eject_drives);
@@ -455,16 +475,16 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     mounter = g_new0(t_mounter,1);
 
-    /* default configuration values for when no configuration is found */
+    /* default configuration values if no configuration is found */
     mounter->icon = g_strdup(PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg");
     mounter->mount_command = g_strdup(DEFAULT_MOUNT_COMMAND);
     mounter->umount_command = g_strdup(DEFAULT_UMOUNT_COMMAND);
     mounter->on_mount_cmd = g_strdup("");
     mounter->excluded_filesystems = g_strdup("");
-    mounter->trim_devicenames = TRUE;
-    mounter->trim_devicename_count = 14;
     mounter->message_dialog = FALSE;
     mounter->include_NFSs = FALSE;
+    mounter->trim_devicenames = TRUE;
+    mounter->trim_devicename_count = 14;
     mounter->exclude_FSs = FALSE;
     mounter->eject_drives = FALSE;
     mounter->exclude_devicenames = FALSE;
@@ -641,21 +661,24 @@ exlude_FSs_toggled (GtkWidget *widget, t_mounter_dialog *md)
 }
 
 
-/*static gboolean
+static gboolean
 exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
-
+    gboolean val;
+    
+    val = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
+    gtk_widget_set_sensitive(gtk_widget_get_parent(GTK_WIDGET(md->show_trim_devicenames)), !val);
 
     return TRUE;
-}*/
+}
 
 static gboolean
 trim_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
     gboolean val;
     
-    val = gtk_check_button_get_active(GTK_CHECK_BUTTON(widget));
-    gtk_widget_set_sensitive(GTK_WIDGET(md->show_trim_devicenames), !val);
+    val = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
+    gtk_widget_set_sensitive(GTK_WIDGET(md->spin_trim_devicename_count), val);
 
     return TRUE;
 }
@@ -928,7 +951,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_container_add (GTK_CONTAINER (_eventbox), md->show_exclude_devicenames );
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames),
                                 mt->exclude_devicenames);
-
+    g_signal_connect ( G_OBJECT(md->show_exclude_devicenames), "toggled",
+        G_CALLBACK(exclude_devicenames_toggled), md);
+        
     /* Trim device names */
     _eventbox = gtk_event_box_new ();
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
@@ -948,12 +973,14 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                         FALSE, FALSE, 0);
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON(md->show_trim_devicenames),
                                 mt->trim_devicenames);
-                                
+    g_signal_connect ( G_OBJECT(md->show_trim_devicenames), "toggled",
+        G_CALLBACK(trim_devicenames_toggled), md);
+                    
     _label = gtk_label_new(_(" characters"));
     gtk_widget_show (_label);
     gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(_label),
                         FALSE, FALSE, 0);
-    md->spin_trim_devicename_count = gtk_spin_button_new_with_range (5.0, 99.0, 1.0);
+    md->spin_trim_devicename_count = gtk_spin_button_new_with_range (9.0, 99.0, 1.0);
     gtk_spin_button_set_value(GTK_SPIN_BUTTON(md->spin_trim_devicename_count), (double) mt->trim_devicename_count);
     gtk_widget_show (md->spin_trim_devicename_count);
     gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(md->spin_trim_devicename_count),

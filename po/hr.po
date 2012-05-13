@@ -5,20 +5,21 @@
 # This file is distributed under the same license as the  xfce4-mount-plugin package.
 # Ivica KOlić <ikoli@yahoo.com>, 2011.
 # Ivica Kolić <ikoli@yahoo.com>, 2011.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-01 20:39+0000\n"
+"POT-Creation-Date: 2012-05-14 00:16+0200\n"
 "PO-Revision-Date: 2011-05-16 00:39+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yahoo.com>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: CROATIA\n"
@@ -89,75 +90,78 @@ msgid "not mounted\n"
 msgstr "nije montirano\n"
 
 #. show error message if smth failed
-#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
-msgid "Mount Plugin: Error executing command."
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#: ../panel-plugin/devices.c:288
+#, c-format
+msgid "Failed to mount device \"%s\"."
+msgstr ""
+
+#: ../panel-plugin/devices.c:303
+#, fuzzy, c-format
+msgid "Error executing on-mount command \"%s\"."
 msgstr "Priključak montiranja: Greška u izvođenju naredbe"
 
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
-msgid "Returned"
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
+#: ../panel-plugin/devices.c:353
+#, c-format
+msgid "Failed to umount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
-msgid "error was"
-msgstr ""
-
-#: ../panel-plugin/devices.c:296
-msgid "Mount Plugin: Error executing on-mount command."
-msgstr ""
-
-#: ../panel-plugin/devices.c:348
+#: ../panel-plugin/devices.c:356
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Uređaj \"%s\" bi trebao sada biti sigurno uklonjiv"
 
-#: ../panel-plugin/devices.c:350
+#: ../panel-plugin/devices.c:358
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Došlo je do greške. Uređaj \"%s\" ne bi trebalo uklanjati!"
 
-#: ../panel-plugin/mount-plugin.c:232
+#: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nije montiran</span>"
 
-#: ../panel-plugin/mount-plugin.c:491
+#: ../panel-plugin/mount-plugin.c:513
 msgid "devices"
 msgstr "uređaji"
 
-#: ../panel-plugin/mount-plugin.c:664
+#: ../panel-plugin/mount-plugin.c:706
 msgid "Mount Plugin"
 msgstr "Priključak montiranja"
 
-#: ../panel-plugin/mount-plugin.c:669
+#: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:703
+#: ../panel-plugin/mount-plugin.c:745
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:708
+#: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
 msgstr "Prikaži _poruku nakon odmontiranja"
 
-#: ../panel-plugin/mount-plugin.c:720
+#: ../panel-plugin/mount-plugin.c:762
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Možete odrediti zasebnu ikonu da bude prikazana na ploči.."
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:769
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: ../panel-plugin/mount-plugin.c:731
+#: ../panel-plugin/mount-plugin.c:773
 msgid "Select an image"
 msgstr "Odaberite sliku"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:780
 msgid "_General"
 msgstr "_Općenito"
 
-#: ../panel-plugin/mount-plugin.c:753
+#: ../panel-plugin/mount-plugin.c:795
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -166,11 +170,11 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:763
+#: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
 msgstr "_Izvrši nakon montiranja:"
 
-#: ../panel-plugin/mount-plugin.c:786
+#: ../panel-plugin/mount-plugin.c:828
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -178,11 +182,11 @@ msgstr ""
 "UPOZORENJE: Ove opcije su samo za stručnjake! Ako ne znate čemu služei , ne "
 "dirajte ih!"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
 msgstr "_Prilagođene naredbe"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:852
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -190,19 +194,19 @@ msgid ""
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:819
+#: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
 msgstr "_Naredba montiranja:"
 
-#: ../panel-plugin/mount-plugin.c:825
+#: ../panel-plugin/mount-plugin.c:867
 msgid "_Unmount command:"
 msgstr "_Naredba odmontiranja:"
 
-#: ../panel-plugin/mount-plugin.c:851
+#: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
 msgstr "_Naredbe"
 
-#: ../panel-plugin/mount-plugin.c:866
+#: ../panel-plugin/mount-plugin.c:908
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -210,29 +214,43 @@ msgstr ""
 "Aktivirajte ovu opciju za prikaz mrežnih datotečnih sustava kao NFS, SMBFS, "
 "SHFS i SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:871
+#: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
 msgstr "Prikaži _mrežne datotečne sustave"
 
-#: ../panel-plugin/mount-plugin.c:884
+#: ../panel-plugin/mount-plugin.c:926
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:889
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
 msgstr "_Izbaci CD-pogone"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:944
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktivirajte ovu opciju samo da biste imali prikaz točaka montiranja."
 
-#: ../panel-plugin/mount-plugin.c:906
+#: ../panel-plugin/mount-plugin.c:948
 msgid "Display _mount points only"
 msgstr "Prikaži samo _točke montiranja"
 
-#: ../panel-plugin/mount-plugin.c:921
+#: ../panel-plugin/mount-plugin.c:963
+msgid ""
+"Trim the device names to the number of characters specified in the spin "
+"button."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:970
+msgid "Trim device names: "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:979
+msgid " characters"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:996
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -242,19 +260,19 @@ msgstr ""
 "Lista je odvojena razmakom.\n"
 "O vama ovosi određivanje točnih uređaja i točaka montiranja."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
 msgstr "I_sključi određene datotečne sustave"
 
-#: ../panel-plugin/mount-plugin.c:946
+#: ../panel-plugin/mount-plugin.c:1021
 msgid "_File systems"
 msgstr "_Datotečni sustavi"
 
-#: ../panel-plugin/mount-plugin.c:971
+#: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:973
+#: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 

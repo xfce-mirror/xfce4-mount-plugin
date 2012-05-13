@@ -71,6 +71,7 @@ typedef struct s_mount_info {
  */
 typedef struct s_disk {
     char *device;                 /**< Device name, e.g. /dev/cdrom */
+    char *device_short;           /**< Abbreviated name for display only */
     char *mount_point;             /**< Device mount point, e.g. /mnt/cdrom */
     t_mount_info *  mount_info; /**< NULL if not mounted */
     /*`t_disk_display *disk_display; */ /* People, learn to program in an object-oriented way! */
@@ -114,7 +115,7 @@ void disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dia
  * @param showed_fstab_dialog Pointer to whether dialog has already been shown before
  * @return                GPtrArray with t_disks
  */
-GPtrArray * disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog) ;
+GPtrArray * disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length) ;
 
 
 /**
@@ -171,7 +172,7 @@ gboolean exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *
  * elements.
  * @param pdisks    Pointer array of t_disk
  */
-void disks_refresh (GPtrArray * pdisks, GPtrArray *excluded_FSs);
+void disks_refresh (GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length);
 
 
 /**
@@ -194,8 +195,8 @@ void mount_info_print(t_mount_info * mount_info);
 t_mount_info * mount_info_new (float size, float used, float avail, unsigned int percent, char * type, char * mounted_on);
 void mount_info_free(t_mount_info * * mount_info);
 void disk_print (t_disk * pdisk);
-char * shorten_disk_name (const char *dev);
-t_disk * disk_new (const char * dev, const char * mountpoint);
+char * shorten_disk_name (const char *dev, gint length);
+t_disk * disk_new (const char * dev, const char * mountpoint, gint length);
 void disk_free(t_disk **pdisk);
 void disks_free_mount_info(GPtrArray * pdisks);
 

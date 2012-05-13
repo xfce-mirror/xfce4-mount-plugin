@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-25 19:52+0200\n"
+"POT-Creation-Date: 2012-05-14 00:16+0200\n"
 "PO-Revision-Date: 2010-10-18 20:32+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -82,50 +82,52 @@ msgid "not mounted\n"
 msgstr "inte monterad\n"
 
 #. show error message if smth failed
-#: ../panel-plugin/devices.c:280 ../panel-plugin/devices.c:344
-msgid "Mount Plugin: Error executing command."
-msgstr "Montering: Fel vid körning av kommando."
-
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
-msgid "Returned"
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#: ../panel-plugin/devices.c:288
+#, c-format
+msgid "Failed to mount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:281 ../panel-plugin/devices.c:345
-msgid "error was"
-msgstr ""
-
-#: ../panel-plugin/devices.c:296
-#, fuzzy
-msgid "Mount Plugin: Error executing on-mount command."
+#: ../panel-plugin/devices.c:303
+#, fuzzy, c-format
+msgid "Error executing on-mount command \"%s\"."
 msgstr "Montering: Fel vid körning av kommando."
 
-#: ../panel-plugin/devices.c:348
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
+#: ../panel-plugin/devices.c:353
+#, c-format
+msgid "Failed to umount device \"%s\"."
+msgstr ""
+
+#: ../panel-plugin/devices.c:356
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Enheten \"%s\" kan nu säkert kopplas från."
 
-#: ../panel-plugin/devices.c:350
+#: ../panel-plugin/devices.c:358
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ett fel inträffade. Enheten \"%s\" ska inte kopplas från!"
 
-#: ../panel-plugin/mount-plugin.c:232
+#: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">inte monterad</span>"
 
-#: ../panel-plugin/mount-plugin.c:491
+#: ../panel-plugin/mount-plugin.c:513
 msgid "devices"
 msgstr "enheter"
 
-#: ../panel-plugin/mount-plugin.c:664
+#: ../panel-plugin/mount-plugin.c:706
 msgid "Mount Plugin"
 msgstr "Montering"
 
-#: ../panel-plugin/mount-plugin.c:669
+#: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:703
+#: ../panel-plugin/mount-plugin.c:745
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -133,27 +135,27 @@ msgstr ""
 "Detta är endast användbart och rekommenderas om du anger \"sync\" som del av "
 "kommandosträngen för \"unmount\"."
 
-#: ../panel-plugin/mount-plugin.c:708
+#: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
 msgstr "Visa _meddelande efter avmontering"
 
-#: ../panel-plugin/mount-plugin.c:720
+#: ../panel-plugin/mount-plugin.c:762
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Du kan ange en specifik ikon att visa i panelen."
 
-#: ../panel-plugin/mount-plugin.c:727
+#: ../panel-plugin/mount-plugin.c:769
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ../panel-plugin/mount-plugin.c:731
+#: ../panel-plugin/mount-plugin.c:773
 msgid "Select an image"
 msgstr "Välj en bild"
 
-#: ../panel-plugin/mount-plugin.c:738
+#: ../panel-plugin/mount-plugin.c:780
 msgid "_General"
 msgstr "A_llmänt"
 
-#: ../panel-plugin/mount-plugin.c:753
+#: ../panel-plugin/mount-plugin.c:795
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -166,11 +168,11 @@ msgstr ""
 "Om du är osäker på vad du ska mata in, prova \"exo-open %m\".\n"
 "\"%d\" kan användas för att ange enheten, \"%m\" för monteringspunkten."
 
-#: ../panel-plugin/mount-plugin.c:763
+#: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
 msgstr "_Kör efter montering:"
 
-#: ../panel-plugin/mount-plugin.c:786
+#: ../panel-plugin/mount-plugin.c:828
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -178,11 +180,11 @@ msgstr ""
 "VARNING: Dessa alternativ är endast för experter! Om du inte vet vad de kan "
 "vara bra för så rör ingenting!"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
 msgstr "_Anpassade kommandon"
 
-#: ../panel-plugin/mount-plugin.c:810
+#: ../panel-plugin/mount-plugin.c:852
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -193,19 +195,19 @@ msgstr ""
 "eller inleda med \"sync %d &&\" för kommandot \"unmount %d\".\n"
 "\"%d\" används för att ange enheten, \"%m\" för monteringspunkten."
 
-#: ../panel-plugin/mount-plugin.c:819
+#: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
 msgstr "Kommando för _montering:"
 
-#: ../panel-plugin/mount-plugin.c:825
+#: ../panel-plugin/mount-plugin.c:867
 msgid "_Unmount command:"
 msgstr "Kommando för _avmontering:"
 
-#: ../panel-plugin/mount-plugin.c:851
+#: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
 msgstr "_Kommandon"
 
-#: ../panel-plugin/mount-plugin.c:866
+#: ../panel-plugin/mount-plugin.c:908
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -213,11 +215,11 @@ msgstr ""
 "Aktivera detta alternativ för att även visa nätverksfilsystem som NFS, "
 "SMBFS, SHFS och SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:871
+#: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
 msgstr "Visa _nätverksfilsystem"
 
-#: ../panel-plugin/mount-plugin.c:884
+#: ../panel-plugin/mount-plugin.c:926
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -225,19 +227,33 @@ msgstr ""
 "Aktivera detta alternativ för att även mata ut en cd-enhet efter avmontering "
 "och för att mata in före montering."
 
-#: ../panel-plugin/mount-plugin.c:889
+#: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
 msgstr "Mata _ut cd-enheter"
 
-#: ../panel-plugin/mount-plugin.c:902
+#: ../panel-plugin/mount-plugin.c:944
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktivera detta alternativ för att endast visa monteringspunkter."
 
-#: ../panel-plugin/mount-plugin.c:906
+#: ../panel-plugin/mount-plugin.c:948
 msgid "Display _mount points only"
 msgstr "Visa endast _monteringspunkter"
 
-#: ../panel-plugin/mount-plugin.c:921
+#: ../panel-plugin/mount-plugin.c:963
+msgid ""
+"Trim the device names to the number of characters specified in the spin "
+"button."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:970
+msgid "Trim device names: "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:979
+msgid " characters"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:996
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -247,19 +263,19 @@ msgstr ""
 "Listan separeras genom vanliga blanksteg.\n"
 "Du bör ange korrekta enheter eller monteringspunkter."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
 msgstr "E_xkludera angivna filsystem"
 
-#: ../panel-plugin/mount-plugin.c:946
+#: ../panel-plugin/mount-plugin.c:1021
 msgid "_File systems"
 msgstr "_Filsystem"
 
-#: ../panel-plugin/mount-plugin.c:971
+#: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:973
+#: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
 msgstr ""
 
@@ -270,3 +286,6 @@ msgstr "Montera enheter"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Visar alla monteringsbara enheter och (av)monterar dem på begäran."
+
+#~ msgid "Mount Plugin: Error executing command."
+#~ msgstr "Montering: Fel vid körning av kommando."

@@ -180,18 +180,18 @@ disk_print (t_disk * pdisk)
 }
 
 char *
-shorten_disk_name (const char *dev, int len)
+shorten_disk_name (const char *dev, gint len)
 {
     char *r, *lastchars, *firstchars;
     //if (strncmp(dev, "UUID", 4)==0 && 
-    if (strlen(dev)>len)
+    if (strlen(dev)>len+3)
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        firstchars = (char *) malloc (len-5*sizeof(char));
-        snprintf(firstchars, len-5, dev);
-        r = (char *) malloc (len*sizeof(char));
-        snprintf (r, len, "%s…%s", firstchars, lastchars);
+        firstchars = (char *) malloc ((len-5-3)*sizeof(char)); // 3 additional ones for the three dots
+        firstchars = strndup(dev, len-5-3);
+        r = (char *) malloc ((len+1)*sizeof(char));
+        snprintf (r, len+1, "%s...%s", firstchars, lastchars);
     }
     else
         r = g_strdup (dev);
@@ -200,7 +200,7 @@ shorten_disk_name (const char *dev, int len)
 }
 
 t_disk *
-disk_new (const char * dev, const char * mountpoint)
+disk_new (const char * dev, const char * mountpoint, gint len)
 {
     t_disk  * pdisk;
 
@@ -209,7 +209,8 @@ disk_new (const char * dev, const char * mountpoint)
     if ( dev != NULL && mountpoint != NULL)
     {
         pdisk = g_new0 (t_disk,1);
-        pdisk->device = shorten_disk_name (dev);
+        pdisk->device_short = shorten_disk_name (dev, len);
+        pdisk->device = g_strdup(dev);
         pdisk->mount_point = g_strdup (mountpoint);
         pdisk->mount_info = NULL;
 
@@ -227,6 +228,7 @@ disk_free(t_disk **pdisk)
     if (*pdisk !=NULL)
     {
         g_free ((*pdisk)->device);
+        g_free ((*pdisk)->device_short);
         g_free ((*pdisk)->mount_point);
         mount_info_free (&((*pdisk)->mount_info));
         g_free(*pdisk);
@@ -366,7 +368,7 @@ out:
  * @return                GPtrArray *pdisks containing elements to be displayed
  */
 GPtrArray *
-disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog)
+disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
 {
     GPtrArray * pdisks; /* to be returned */
     t_disk * pdisk;
@@ -410,7 +412,7 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog)
 
         if ( has_valid_mount_device &&
                 g_str_has_prefix(pfstab->fs_file, "/") ) {
-            pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file);
+            pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file, length);
             pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
             g_ptr_array_add (pdisks , pdisk);
 
@@ -584,7 +586,7 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
  * struct t_disk * elements.
  */
 void
-disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
+disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length)
 {
     /* using getmntent/getmntinfo to get filesystems mount information */
 
@@ -670,10 +672,10 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs)
 
             /* else have valid entry reflecting block device or NFS */
 #ifdef HAVE_GETMNTENT
-            pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir);
+            pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir, length);
             pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
 #elif defined (HAVE_GETMNTINFO)
-            pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
+            pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, length);
             pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
 #endif
             g_ptr_array_add (pdisks, pdisk);
