@@ -4,19 +4,19 @@
 # xfce4-mount-plugin package.
 # Vincent Tunru <imnotb@gmail.com>
 # Pjotr, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-14 04:27+0000\n"
 "PO-Revision-Date: 2011-09-09 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
-"Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -85,24 +85,27 @@ msgid "not mounted\n"
 msgstr "niet aangekoppeld\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "Kon apparaat '%s' niet aankoppelen."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Aankoppelingsplugin: fout bij het uitvoeren van koppelopdracht."
+msgstr "Fout bij het uitvoeren van aankoppelopdracht '%s'."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:353
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "Kon apparaat 's' niet ontkoppelen."
 
 #: ../panel-plugin/devices.c:356
 #, c-format
@@ -248,15 +251,15 @@ msgstr "Alleen _koppelpunten weergeven"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Verkort de apparaatnamen tot het aantal tekens dat is opgegeven in de draaiknop."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Verkort apparaatnamen:"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr "tekens"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
