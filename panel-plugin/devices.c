@@ -723,9 +723,9 @@ disk_classify (char *device, char *mountpoint)
             dc = REMOTE;
         }
     }
-    else if ( strstr(device, "cdrom") || strstr(device, "cdrw") 
-                || strstr(device, "dvd") || strstr(mountpoint, "cdrom")
-                || strstr(mountpoint, "cdrw") || strstr(mountpoint, "dvd")) {
+		/* it needs to be said _here_ that BSDs use cd0, cd1 etc., so we hope cd* works for cdrw, cdrom and cd0,1,... nd no other devices */
+    else if ( strstr(device, "cd") 
+                || strstr(device, "dvd") || strstr(mountpoint, "cd") || strstr(mountpoint, "dvd")) {
         dc = CD_DVD;
     }
     else if ( strstr(mountpoint, "usr") || strstr(mountpoint, "var")
