@@ -325,8 +325,12 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
     if (pdisk != NULL)
     {
 
-        DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject);
-        deviceprintf(&tmp, umount_command, pdisk->device);
+        DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d, type=%s", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject, pdisk->mount_info->type);
+        if (strstr(pdisk->mount_info->type, "fuse"))
+          deviceprintf(&tmp, "fusermount -u %m", pdisk->device);
+        else
+          deviceprintf(&tmp, umount_command, pdisk->device);
+        
         mountpointprintf(&cmd, tmp, pdisk->mount_point);
         /* cmd contains umount_command device mount_point */
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
