@@ -184,7 +184,7 @@ shorten_disk_name (const char *dev, gint len)
 {
     char *r, *lastchars, *firstchars;
     //if (strncmp(dev, "UUID", 4)==0 && 
-    if (strlen(dev)>len+3)
+    if (strlen(dev)>len) // len canot be set lower than 9
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
@@ -655,18 +655,20 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length)
               g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
               g_str_has_prefix(pmntent->mnt_fsname, "gvfs-fuse-daemon") ||
               !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
-              g_str_has_prefix(pmntent->mnt_type, "fuse") ||
-              g_str_has_prefix(pmntent->mnt_type, "nfs") ||
-              g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
-              g_str_has_prefix(pmntent->mnt_type, "cifs") ||
-              g_str_has_prefix(pmntent->mnt_type, "shfs") ) ||
+                g_str_has_prefix(pmntent->mnt_type, "fuse") ||
+                g_str_has_prefix(pmntent->mnt_type, "nfs") ||
+                g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
+                g_str_has_prefix(pmntent->mnt_type, "cifs") ||
+                g_str_has_prefix(pmntent->mnt_type, "shfs") 
+              ) ||
               g_str_has_prefix(pmntent->mnt_dir, "/sys/")
 #elif defined (HAVE_GETMNTINFO)
               /* TODO: add support for more fs types on BSD */
               g_ascii_strcasecmp(pstatfs[i].f_mntonname, "none") == 0 ||
-              !g_str_has_prefix(pstatfs[i].f_mntfromname, "/dev/") ||
-              g_str_has_prefix(pstatfs[i].f_fstypename, "nfs") ||
-              g_str_has_prefix(pstatfs[i].f_fstypename, "mfs")
+              !(g_str_has_prefix(pstatfs[i].f_mntfromname, "/dev/") ||
+                g_str_has_prefix(pstatfs[i].f_fstypename, "nfs") ||
+                g_str_has_prefix(pstatfs[i].f_fstypename, "mfs")
+              )
 #endif
             ) continue;
 
@@ -717,7 +719,7 @@ disk_classify (char *device, char *mountpoint)
             dc = REMOTE;
         }
     }
-    else if ( strstr(device, "cdrom") || strstr(device, "cdrw") || strstr(device, "cd")
+    else if ( strstr(device, "cdrom") || strstr(device, "cdrw") 
                 || strstr(device, "dvd") || strstr(mountpoint, "cdrom")
                 || strstr(mountpoint, "cdrw") || strstr(mountpoint, "dvd")) {
         dc = CD_DVD;
