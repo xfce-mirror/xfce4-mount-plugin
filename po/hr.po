@@ -5,24 +5,23 @@
 # This file is distributed under the same license as the  xfce4-mount-plugin package.
 # Ivica KOlić <ikoli@yahoo.com>, 2011.
 # Ivica Kolić <ikoli@yahoo.com>, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-15 17:54+0000\n"
 "PO-Revision-Date: 2011-05-16 00:39+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yahoo.com>\n"
-"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Country: CROATIA\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: CROATIA\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -90,31 +89,34 @@ msgid "not mounted\n"
 msgstr "nije montirano\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "Neuspjelo montiranje uređaja  \"%s\"."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
-msgid "Error executing on-mount command \"%s\"."
-msgstr "Priključak montiranja: Greška u izvođenju naredbe"
-
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
-#. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
 #, c-format
-msgid "Failed to umount device \"%s\"."
+msgid "Error executing on-mount command \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
+#. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
+#: ../panel-plugin/devices.c:357
+#, c-format
+msgid "Failed to umount device \"%s\"."
+msgstr "Neuspjelo odmontiranje uređaja  \"%s\"."
+
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Uređaj \"%s\" bi trebao sada biti sigurno uklonjiv"
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Došlo je do greške. Uređaj \"%s\" ne bi trebalo uklanjati!"
@@ -133,7 +135,7 @@ msgstr "Priključak montiranja"
 
 #: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
-msgstr ""
+msgstr "Svojstva"
 
 #: ../panel-plugin/mount-plugin.c:745
 msgid ""
@@ -169,6 +171,9 @@ msgid ""
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
+"Ova će naredba biti izvršena nakon montiranja uređaja sa točkom montiranja kao argumentom.\n"
+"IAko niste sigurni što umetnuti pokušajte\"exo-open %m\".\n"
+"'%d' može biti korišten za određivanje uređaja, '%m' za točku montiranja."
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
@@ -248,7 +253,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr "znakovi"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
@@ -270,11 +275,11 @@ msgstr "_Datotečni sustavi"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Pokaži particije/uređaje i dopusti njihovo montiranje/demontiranje"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Autorska prava (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
