@@ -4,13 +4,14 @@
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Daichi Kawahata <daichi@xfce.org>, 2006.
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.
+# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
-"PO-Revision-Date: 2012-04-21 13:59+0900\n"
+"POT-Creation-Date: 2012-05-17 20:46+0900\n"
+"PO-Revision-Date: 2012-05-17 20:56+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "Language: ja\n"
@@ -90,29 +91,28 @@ msgstr "マウントされていません\n"
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "デバイス \"%s\" のマウントに失敗しました。"
 
-# Message "Mount Plugin: Error executing command. Returned <ret_code>, error
-# was <err_msg>"
+# Message "Mount Plugin: Error executing command. Returned <ret_code>, error was <err_msg>"
 # is split the following three strings.
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "マウントプラグイン: mount コマンドの実行中にエラーが発生しました。"
+msgstr "マウントコマンド \"%s\" の実行中にエラーが発生しました。"
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "デバイス \"%s\" のマウント解除に失敗しました。"
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "デバイス \"%s\" を取り外す用意が整いました。"
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "エラーが発生しました。デバイス \"%s\" を取り外してはいけません!"
@@ -249,15 +249,15 @@ msgstr "マウントポイントのみを表示する(_M)"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "デバイス名を右のスピンボタンで指定された文字数までに調整します。"
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "デバイス名を調整する: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr "文字"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
@@ -288,7 +288,7 @@ msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "マウントデバイス"
+msgstr "デバイスのマウント"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
@@ -296,13 +296,7 @@ msgstr ""
 "マウント可能なデバイスを表示し、必要に応じてこれらをマウント/マウント解除しま"
 "す。"
 
-# Message "Mount Plugin: Error executing command. Returned <ret_code>, error
-# was <err_msg>"
-# is split the following three strings.
-#~ msgid "Mount Plugin: Error executing command."
-#~ msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
-
-# "Returned <ret_code>, " (following above msg)
+# "Returned <ret_code>, " (following above msg) 
 #~ msgid "Returned"
 #~ msgstr "戻り値"
 
@@ -321,5 +315,6 @@ msgstr ""
 #~ msgid "Use _sudo"
 #~ msgstr "sudo を使用する(_S)"
 
+#, fuzzy
 #~ msgid "Mount Plugin: Error executing command. Returned %d, error was %s"
 #~ msgstr "マウントプラグイン: コマンドの実行中にエラーが発生しました。"
