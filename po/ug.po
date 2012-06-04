@@ -3,10 +3,10 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-14 00:16+0200\n"
 "PO-Revision-Date: 2009-10-05 23:00+0900\n"
@@ -21,22 +21,22 @@ msgstr ""
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f B"
-msgstr "%.1f B"
+msgstr "%.1f ب"
 
 #: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f KB"
+msgstr "%.1f ك ب"
 
 #: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f MB"
+msgstr "%.1f م ب"
 
 #: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f GB"
+msgstr "%.1f گ ب"
 
 #: ../panel-plugin/devices.c:83
 #, c-format
@@ -66,7 +66,7 @@ msgstr "ھۆججەت سىستېمىسى تىپى:    %s\n"
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "ئەمەلىيەتتە mount قىلىنغان ئورنى:  %s\n"
+msgstr "ئەمەلىيەتتە ئېگەرلەنگەن ئورنى:  %s\n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -76,12 +76,12 @@ msgstr "دىسكا: %s\n"
 #: ../panel-plugin/devices.c:173
 #, c-format
 msgid "mount point: %s\n"
-msgstr "mount نۇقتىسى: %s\n"
+msgstr "ئېگەرلەش نۇقتىسى: %s\n"
 
 #: ../panel-plugin/devices.c:177
 #, c-format
 msgid "not mounted\n"
-msgstr "mount قىلىنمىغان\n"
+msgstr "ئېگەرلەنمىگەن\n"
 
 #. show error message if smth failed
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
@@ -89,33 +89,33 @@ msgstr "mount قىلىنمىغان\n"
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "ئۈسكۈنە «%s» نى ئېگەرلەش مەغلۇپ بولدى."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Mount قىستۇرمىسى: بۇيرۇقنى ئىجرا قىلىشتا خاتالىق كۆرۈلدى."
+msgstr "ئېگەرلىگەندە بۇيرۇق «%s» نى ئىجرا قىلىشتا خاتالىق كۆرۈلدى."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:353
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "ئۈسكۈنە «%s» نى ئېگەرسىزلەش مەغلۇپ بولدى."
 
 #: ../panel-plugin/devices.c:356
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "ئۈسكىنە \"%s\" ھازىر بىخەتەر چىقىرىۋېلىشقا بولىدۇ."
+msgstr "ئۈسكۈنە \"%s\" ھازىر بىخەتەر چىقىرىۋېلىشقا بولىدۇ."
 
 #: ../panel-plugin/devices.c:358
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "خاتالىق كۆرۈلدى. ئۈسكىنىنى چىقارماسلىق كېرەك ئىدى."
+msgstr "خاتالىق كۆرۈلدى. ئۈسكۈنە «%s» نى چىقىرىۋەتىشكە بولمايدۇ!"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#FF0000\">mount قىلىنمىدى</span>"
+msgstr "<span foreground=\"#FF0000\">ئېگەرلەنمىگەن</span>"
 
 #: ../panel-plugin/mount-plugin.c:513
 msgid "devices"
@@ -123,11 +123,11 @@ msgstr "ئۈسكۈنىلەر"
 
 #: ../panel-plugin/mount-plugin.c:706
 msgid "Mount Plugin"
-msgstr "mount قىستۇرمىسى"
+msgstr "ئېگەرلەش قىستۇرمىسى"
 
 #: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
-msgstr ""
+msgstr "خاسلىق"
 
 #: ../panel-plugin/mount-plugin.c:745
 msgid ""
@@ -137,11 +137,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
-msgstr "unmount قىلىنغاندىن كېيىن  ئۇچۇر چىقار(_M)"
+msgstr "ئېگەرسىزلىگەندىن كېيىن  ئۇچۇر چىقار(_M)"
 
 #: ../panel-plugin/mount-plugin.c:762
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
+msgstr "كۆزنەكتە كۆرسىتىلىدىغان ئۆزگىچە سىنبەلگىنى كۆرسىتىپ بېرىشكە بولىدۇ."
 
 #: ../panel-plugin/mount-plugin.c:769
 msgid "Icon:"
@@ -149,7 +149,7 @@ msgstr "سىنبەلگە:"
 
 #: ../panel-plugin/mount-plugin.c:773
 msgid "Select an image"
-msgstr "سۈرەت تاللا:"
+msgstr "سۈرەت تاللايدۇ"
 
 #: ../panel-plugin/mount-plugin.c:780
 msgid "_General"
@@ -166,19 +166,17 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
-msgstr "mount قىلغاندىن كېيىن ئىجرا قىل(_E):"
+msgstr "ئېگەرلەنگەندىن كېيىن ئىجرا قىل(_E):"
 
 #: ../panel-plugin/mount-plugin.c:828
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەرلا ئىشلىتىدۇ! ئەگەر بىلمىسىڭىز قول "
-"تەگكۈزمەڭ!"
+msgstr "دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەرلا ئىشلىتىدۇ! ئەگەر بىلمىسىڭىز قول تەگكۈزمەڭ!"
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
-msgstr "Custom بۇيرۇقلار(_C)"
+msgstr "ئىختىيارىي بۇيرۇقلار(_C)"
 
 #: ../panel-plugin/mount-plugin.c:852
 #, c-format
@@ -190,11 +188,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
-msgstr "Mount بۇرۇق(_م):"
+msgstr "ئېگەرلەش بۇيرۇقى(_M):"
 
 #: ../panel-plugin/mount-plugin.c:867
 msgid "_Unmount command:"
-msgstr "Unmount  بۇيرۇقى(_U):"
+msgstr "ئېگەرسىزلەش بۇيرۇقى(_U):"
 
 #: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
@@ -204,9 +202,7 @@ msgstr "بۇيرۇقلار(_C)"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"تور ھۆججەت سىستېمىلىرى NFS, SMBFS, SHFS and SSHFS نى كۆرسىتىش ئۈچۈن بۇ "
-"تاللانمىنى ئاكتىپلاڭ."
+msgstr "تور ھۆججەت سىستېمىلىرى NFS, SMBFS, SHFS and SSHFS نى كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
 #: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
@@ -216,9 +212,7 @@ msgstr "تور ھۆججەت سىستېمىلىرىنى كۆرسەت(_N)"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr ""
-"unmount قىلىپ بولغاندىن كېيىن دىسكىنى چىقىرىش ۋە mount قىلىشتىن بۇرۇن "
-"دىسكىنى سېلىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
+msgstr "ئېگەرسىزلەپ بولغاندىن كېيىن دىسكىنى چىقىرىش ۋە ئېگەرلەشتىن بۇرۇن دىسكىنى سېلىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
@@ -226,11 +220,11 @@ msgstr "CD قوزغاتقۇچىنى ئاچ(_E)"
 
 #: ../panel-plugin/mount-plugin.c:944
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "mount نۇقتىسىنىلا كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
+msgstr "ئېگەرلەش نۇقتىسىنىلا كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
 #: ../panel-plugin/mount-plugin.c:948
 msgid "Display _mount points only"
-msgstr "mount نۇقتىسىنىلا كۆرسەت(_M)"
+msgstr "ئېگەرلەش نۇقتىسىنىلا كۆرسەت(_M)"
 
 #: ../panel-plugin/mount-plugin.c:963
 msgid ""
@@ -244,21 +238,20 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr " ھەرپلەر"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
-msgstr ""
-"تۆۋەندىكى ھۆججەت سىستېمىلىرىنى menu دىن چىقىرىۋېتىدۇ.\n"
+msgstr "تۆۋەندىكى ھۆججەت سىستېمىلىرىنى تىزىملىكتىن چىقىرىۋېتىدۇ.\n"
 "تىزىملىك بوشلۇق بىلەن ئايرىلىدۇ.\n"
-"بۇ سىزنىڭ توغرا بولغان ئۈسكىنە ياكى mount نۇقتىسىنى بەلگىلىشىڭىزگە باغلىق."
+"بۇ سىزنىڭ توغرا بولغان ئۈسكۈنە ياكى ئېگەرلەش نۇقتىسىنى بەلگىلىشىڭىزگە باغلىق."
 
 #: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
-msgstr "بەلگىلەنگەن ھۆججەت سىستېمىلىرىنى menu دىن چىقىرىۋەت(_X)"
+msgstr "كۆرسىتىلگەن ھۆججەت سىستېمىلىرىنى تىزىملىكتىن چىقىرىۋەت(_X)"
 
 #: ../panel-plugin/mount-plugin.c:1021
 msgid "_File systems"
@@ -266,20 +259,19 @@ msgstr "ھۆججەت سىستېمىلىرىنى(_F)"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "رايونلار/ئۈسكۈنىلەرنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "نەشر ھوقۇقى 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "Mount قىلىدىغان ئۈسكۈنىلەر"
+msgstr "ئېگەرلەيدىغان ئۈسكۈنىلەر"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"ئىلتىماس قىلغاندا Mount ۋە Unmount قىلغىلى بولىدىغان ئۈسكۈنىلەرنى كۆرسىتىدۇ"
+msgstr "ئىلتىماس قىلغاندا ئېگەرلىگىلى ۋە ئېگەرسىزلىگىلى بولىدىغان ئۈسكۈنىلەرنى كۆرسىتىدۇ‪."
 
 #~ msgid "Mount Plugin: Error executing command."
 #~ msgstr "Mount قىستۇرمىسى: بۇيرۇقنى ئىجرا قىلىشتا خاتالىق كۆرۈلدى."
