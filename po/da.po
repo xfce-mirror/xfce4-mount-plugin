@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-28 10:51+0000\n"
+"POT-Creation-Date: 2012-06-11 11:54+0000\n"
 "PO-Revision-Date: 2009-01-23 16:43+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -95,9 +95,9 @@ msgid "Failed to mount device \"%s\"."
 msgstr "Kunne ikke montere enheden \"%s\"."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Mount udvidelsesmodul: Fejl ved kørsel af kommando påmontering."
+msgstr "Fejl ved udførelse af monteringskommandoen \"%s\"."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -249,11 +249,11 @@ msgstr "Vis kun _monteringspunkter"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Tilpas enhedsnavnene til antal karakterer angivet i rulleknappen."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Tilpasset enhedsnavne: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
