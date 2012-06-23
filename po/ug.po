@@ -3,12 +3,12 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Gheyret T.Kenji <gheyret@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2009-10-05 23:00+0900\n"
 "Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -98,17 +98,17 @@ msgstr "ئېگەرلىگەندە بۇيرۇق «%s» نى ئىجرا قىلىش�
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "ئۈسكۈنە «%s» نى ئېگەرسىزلەش مەغلۇپ بولدى."
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "ئۈسكۈنە \"%s\" ھازىر بىخەتەر چىقىرىۋېلىشقا بولىدۇ."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "خاتالىق كۆرۈلدى. ئۈسكۈنە «%s» نى چىقىرىۋەتىشكە بولمايدۇ!"
@@ -172,7 +172,9 @@ msgstr "ئېگەرلەنگەندىن كېيىن ئىجرا قىل(_E):"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەرلا ئىشلىتىدۇ! ئەگەر بىلمىسىڭىز قول تەگكۈزمەڭ!"
+msgstr ""
+"دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەرلا ئىشلىتىدۇ! ئەگەر بىلمىسىڭىز قول "
+"تەگكۈزمەڭ!"
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
@@ -202,7 +204,9 @@ msgstr "بۇيرۇقلار(_C)"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "تور ھۆججەت سىستېمىلىرى NFS, SMBFS, SHFS and SSHFS نى كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
+msgstr ""
+"تور ھۆججەت سىستېمىلىرى NFS, SMBFS, SHFS and SSHFS نى كۆرسىتىش ئۈچۈن بۇ "
+"تاللانمىنى ئاكتىپلاڭ."
 
 #: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
@@ -212,7 +216,9 @@ msgstr "تور ھۆججەت سىستېمىلىرىنى كۆرسەت(_N)"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
-msgstr "ئېگەرسىزلەپ بولغاندىن كېيىن دىسكىنى چىقىرىش ۋە ئېگەرلەشتىن بۇرۇن دىسكىنى سېلىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
+msgstr ""
+"ئېگەرسىزلەپ بولغاندىن كېيىن دىسكىنى چىقىرىش ۋە ئېگەرلەشتىن بۇرۇن دىسكىنى "
+"سېلىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
@@ -245,7 +251,8 @@ msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
-msgstr "تۆۋەندىكى ھۆججەت سىستېمىلىرىنى تىزىملىكتىن چىقىرىۋېتىدۇ.\n"
+msgstr ""
+"تۆۋەندىكى ھۆججەت سىستېمىلىرىنى تىزىملىكتىن چىقىرىۋېتىدۇ.\n"
 "تىزىملىك بوشلۇق بىلەن ئايرىلىدۇ.\n"
 "بۇ سىزنىڭ توغرا بولغان ئۈسكۈنە ياكى ئېگەرلەش نۇقتىسىنى بەلگىلىشىڭىزگە باغلىق."
 
@@ -259,7 +266,8 @@ msgstr "ھۆججەت سىستېمىلىرىنى(_F)"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "رايونلار/ئۈسكۈنىلەرنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
+msgstr ""
+"رايونلار/ئۈسكۈنىلەرنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
@@ -271,7 +279,9 @@ msgstr "ئېگەرلەيدىغان ئۈسكۈنىلەر"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "ئىلتىماس قىلغاندا ئېگەرلىگىلى ۋە ئېگەرسىزلىگىلى بولىدىغان ئۈسكۈنىلەرنى كۆرسىتىدۇ‪."
+msgstr ""
+"ئىلتىماس قىلغاندا ئېگەرلىگىلى ۋە ئېگەرسىزلىگىلى بولىدىغان ئۈسكۈنىلەرنى "
+"كۆرسىتىدۇ‪."
 
 #~ msgid "Mount Plugin: Error executing command."
 #~ msgstr "Mount قىستۇرمىسى: بۇيرۇقنى ئىجرا قىلىشتا خاتالىق كۆرۈلدى."

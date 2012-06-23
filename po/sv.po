@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2010-10-18 20:32+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -96,17 +96,17 @@ msgstr "Montering: Fel vid körning av kommando."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Enheten \"%s\" kan nu säkert kopplas från."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ett fel inträffade. Enheten \"%s\" ska inte kopplas från!"

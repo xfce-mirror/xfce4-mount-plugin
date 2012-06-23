@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2009-07-24 02:47+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at gnome dot hu>\n"
@@ -98,17 +98,17 @@ msgstr "Csatoló bővítmény: hiba a parancs végrehajtásakor."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Az eszköz („%s”) most már biztonságosan eltávolítható."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Hiba történt. Az eszközt („%s”) ne távolítsa el!"

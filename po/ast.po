@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-mount-complementu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2009-07-13 19:54+0100\n"
 "Last-Translator: Marcos Antonio Alvarez Costales <marcoscostales@gmail.com>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -92,17 +92,17 @@ msgstr "Complementu de montaxe: Fallu al executar comandu."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "El preséu \"%s\" yá puede retirase con seguridá."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, fuzzy, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ocurrió un fallu. ¡Nun tendría de retirase'l preséu!"

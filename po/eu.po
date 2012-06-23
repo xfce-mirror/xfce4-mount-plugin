@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 00:16+0200\n"
+"POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2009-08-18 09:10+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-eu@lists.debian.org>\n"
@@ -100,17 +100,17 @@ msgstr "Muntatze Plugina: Errorea muntatze komandoa abiaraztean."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:353
+#: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr ""
 
-#: ../panel-plugin/devices.c:356
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" gailua orain ziurtasunez deskonektatu daiteke."
 
-#: ../panel-plugin/devices.c:358
+#: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Errore bat gertatu da. \"%s\" Gailua ez zen kendu beharko!"
