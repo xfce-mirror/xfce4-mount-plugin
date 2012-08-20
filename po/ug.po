@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2012-08-19 19:45+0000\n"
 "PO-Revision-Date: 2009-10-05 23:00+0900\n"
 "Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -84,8 +84,10 @@ msgid "not mounted\n"
 msgstr "ئېگەرلەنمىگەن\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
@@ -96,7 +98,8 @@ msgstr "ئۈسكۈنە «%s» نى ئېگەرلەش مەغلۇپ بولدى."
 msgid "Error executing on-mount command \"%s\"."
 msgstr "ئېگەرلىگەندە بۇيرۇق «%s» نى ئىجرا قىلىشتا خاتالىق كۆرۈلدى."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
@@ -236,11 +239,11 @@ msgstr "ئېگەرلەش نۇقتىسىنىلا كۆرسەت(_M)"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "ئۈسكۈنە ئاتىنى باسما توپچىدا كۆرسىتىلگەن ھەرپ سانىغا ماسلاشتۇرۇپ ئوڭشايدۇ."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "ئۈسكۈنە ئاتىنى ئوڭلاش:"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
