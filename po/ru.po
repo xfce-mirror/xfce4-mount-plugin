@@ -3,19 +3,19 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Eugene Ostapets <eostapets@altlinux.ru>, 2005-2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2012-08-21 03:51+0000\n"
 "PO-Revision-Date: 2010-03-01 10:50+0200\n"
 "Last-Translator: Dima Smirnov <arch@cnc-parts.info>\n"
 "Language-Team: Russian <xfce-i18n@xfce.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
 "X-Poedit-Language: Russian\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
@@ -86,8 +86,10 @@ msgid "not mounted\n"
 msgstr "не смонтировано\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
@@ -98,7 +100,8 @@ msgstr "Не удалось подключить устройство \"%s\"."
 msgid "Error executing on-mount command \"%s\"."
 msgstr "Ошибка при выполнениии команды подключения устройства: \"%s\"."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
@@ -246,7 +249,6 @@ msgid "Display _mount points only"
 msgstr "Отображать только _примонтированные точки"
 
 #: ../panel-plugin/mount-plugin.c:963
-#, fuzzy
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
