@@ -193,6 +193,8 @@ msgid ""
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
+"نۇرغۇن ئىشلەتكۈچىلەر ئىككىلا بۇيرۇقنىڭ بېشىغا «sudo» قوشسا، ياكى «unmount %d» نىڭ بېشىغا «sync  %d &&» نى قوشسىلا بولىدۇ دەپ قارايدۇ.\r\n"
+"ئۈسكۈنە ‹%d› بىلەن، ئېگەرلەش نۇقتىسى ‹%m› بىلەن ئىپادىلىنىدۇ."
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
