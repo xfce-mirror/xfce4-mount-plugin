@@ -166,6 +166,9 @@ msgid ""
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
+"بۇ بۇيرۇق، پارامېتىردىكى ئېگەرلەش نۇقتىسىغا ئۈسكۈنە ئېگەرلەنگەندە ئىجرا بولىدۇ.\r\n"
+"نېمە كىرگۈزۈشنى بىلەلمىسىڭىز «exo-open %m» نى سىناپ بېقىڭ.\r\n"
+"ئۈسكۈنە ‹%d› بىلەن، ئېگەرلەش نۇقتىسى ‹%m› بىلەن ئىپادىلىنىدۇ."
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
