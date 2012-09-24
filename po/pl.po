@@ -272,7 +272,7 @@ msgstr "Systemy p_lików"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Pokaż partycje/urządzenia i pozwól je montować/odmontowywać"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
