@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-24 17:06+0000\n"
+"POT-Creation-Date: 2012-10-28 08:57+0000\n"
 "PO-Revision-Date: 2009-04-07 19:33+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
@@ -240,14 +240,15 @@ msgid "Display _mount points only"
 msgstr "Tylko _punkty montowania"
 
 #: ../panel-plugin/mount-plugin.c:963
+#, fuzzy
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Skraca nazwy urządzeń do liczby znaków określonej w obrocie przcisku"
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Skraca nazwy urządzeń"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
