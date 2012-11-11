@@ -3,16 +3,16 @@
 # This file is distributed under the same license as
 # the xfce4-mount-plugin package.
 # Xiaobin Wu <xwu422@googlemail.com>, 2008.
-# Hunt Xu <huntxu@live.cn>, 2008, 2009, 2010.
+# Hunt Xu <huntxu@live.cn>, 2008, 2009, 2010, 2012.
 # Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
-"PO-Revision-Date: 2010-06-07 08:40+0800\n"
-"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
+"POT-Creation-Date: 2012-11-11 10:00+0000\n"
+"PO-Revision-Date: 2012-11-11 22:24+0800\n"
+"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -94,9 +94,9 @@ msgid "Failed to mount device \"%s\"."
 msgstr "挂载设备 \"%s\" 失败。"
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "挂载插件：执行 on-mount 时出错。"
+msgstr "执行 on-mount 命令时出错 \"%s\"。"
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
@@ -239,14 +239,15 @@ msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr ""
+"截断设备的名称至输入框中指定的字符数"
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "截断设备名称: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr " 个字符"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
