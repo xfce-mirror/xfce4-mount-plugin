@@ -3,19 +3,19 @@
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
 # Michal Várady <miko.vaji@gmail.com>, 2006-2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2012-11-13 20:51+0000\n"
 "PO-Revision-Date: 2010-12-11 14:31+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech <xfce-i18n@xfce.org>\n"
-"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -84,24 +84,27 @@ msgid "not mounted\n"
 msgstr "nepřipojeno\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "Připojení zařízení %s se nezdařilo."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Zásuvný modul Připojené svazky: Chyba při spuštění programu"
+msgstr "Chyba při spouštění připojovacího příkazu %s."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "Odpojení zařízení %s se nezdařilo."
 
 #: ../panel-plugin/devices.c:360
 #, c-format
@@ -126,9 +129,8 @@ msgid "Mount Plugin"
 msgstr "Zásuvný modul Připojené svazky"
 
 #: ../panel-plugin/mount-plugin.c:711
-#, fuzzy
 msgid "Properties"
-msgstr "Upravit vlastnosti"
+msgstr "Vlastnosti"
 
 #: ../panel-plugin/mount-plugin.c:745
 msgid ""
@@ -246,15 +248,15 @@ msgstr "Zobrazovat pouze _body připojení"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Ořízne název zařízení na počet znaků uvedený v poli s tlačítky"
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Oříznout názvy zařízení:"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr "znaků"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
@@ -276,11 +278,11 @@ msgstr "_Systémy souborů"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Zobrazí oddíly a zařízení a umožní je odpojit nebo připojit"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
