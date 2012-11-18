@@ -1,20 +1,21 @@
 # Mohammad Alhargan <malham1@gmail.com>, 2012.
 # Mohammad Alhargan <malham1@hotmail.com>, 2012.
+# محمد الحرقان <malham1@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
-"PO-Revision-Date: 2012-02-04 10:20+0300\n"
-"Last-Translator: Mohammad Alhargan <malham1@hotmail.com>\n"
-"Language-Team: http://www.vertaal.com.ar/files/opensuse-11-4/ar/list/\n"
+"POT-Creation-Date: 2012-11-18 18:33+0000\n"
+"PO-Revision-Date: 2012-11-18 22:43+0300\n"
+"Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
+"Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Poedit-Language: Arabic\n"
 
 #: ../panel-plugin/devices.c:71
@@ -25,27 +26,27 @@ msgstr "%.1f بايت"
 #: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f كب"
+msgstr "%.1f ك ب"
 
 #: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f مب"
+msgstr "%.1f م ب"
 
 #: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f جب"
+msgstr "%.1f ج ب"
 
 #: ../panel-plugin/devices.c:83
 #, c-format
 msgid "size:                %g\n"
-msgstr "حجم:                %g\n"
+msgstr "الحجم:                %g\n"
 
 #: ../panel-plugin/devices.c:84
 #, c-format
 msgid "used size:           %g\n"
-msgstr "الحجم المستعمل:           %g\n"
+msgstr "الحجم المستخدم:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
@@ -55,7 +56,7 @@ msgstr "الحجم المتوفر:       %g\n"
 #: ../panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
-msgstr "نسبة المستعملة:     %d\n"
+msgstr "نسبة الإستخدام:     %d\n"
 
 #: ../panel-plugin/devices.c:87
 #, c-format
@@ -88,19 +89,19 @@ msgstr "غير موصل\n"
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "فشل توصيل الجهاز \"%s\"."
 
 #: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "ملحق التوصيل: خطأ أتناء تنفيذ الأمر."
+msgstr "حدث خطأ أثناء تنفيذ الأمر على توصيل \"%s\"."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "فشل فصل الجهاز \"%s\"."
 
 #: ../panel-plugin/devices.c:360
 #, c-format
@@ -126,15 +127,15 @@ msgstr "ملحق التوصيل"
 
 #: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
-msgstr ""
+msgstr "خصائص"
 
 #: ../panel-plugin/mount-plugin.c:745
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
-"هذا يمكن إستعماله و موصى به فقط عندما تحدد \"مزامنة\" مع الأمر \"غير موصل\" "
-"كجزء من البنية."
+"هذا يمكن إستعماله و يوصى به فقط عندما تحدد \"مزامنة\" مع الأمر \"غير موصل\" كجزء "
+"من البنية."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -241,15 +242,15 @@ msgstr "إظهار نقطة التوصيل فقط"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "تقليص أسماء الأجهزة إلى عدد الأحرف المحدد في زر زيادة ونقصان."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "تقليص أسماء الأجهزة: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
-msgstr ""
+msgstr " الحروف"
 
 #: ../panel-plugin/mount-plugin.c:996
 msgid ""
@@ -258,7 +259,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points."
 msgstr ""
 "إستثناء أنظمة الملفات التالية من القائمة.\n"
-"هذه القائمة يتم فصلها بمساحة فقط.\n"
+"هذه القائمة يتم فصلها بمسافة فقط.\n"
 "الخيار لك لتحديد الجهاز أو نقط توصيل."
 
 #: ../panel-plugin/mount-plugin.c:1006
@@ -271,11 +272,11 @@ msgstr "_نظام الملفات"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "إظهار الأقسام/الأجهزة والسماح لها بالفصل/التوصيل"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "حقوق الطبع والنشر (ج) عام 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -283,7 +284,7 @@ msgstr "توصيل الأجهزة"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "عرض كل الأجهزة القابلة للتوصيل و (إلغاء)توصيل عنذ الطلب."
+msgstr "عرض كل الأجهزة القابلة للتوصيل و (إلغاء)توصيل عند الطلب."
 
 #~ msgid "Mount Plugin: Error executing command."
 #~ msgstr "ملحق التوصيل: خطأ أتناء تنفيذ الأمر."
