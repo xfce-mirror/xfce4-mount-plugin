@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-30 07:12+0000\n"
+"POT-Creation-Date: 2012-12-15 12:33+0000\n"
 "PO-Revision-Date: 2009-01-27 22:40+0100\n"
 "Last-Translator: Maximilian Schleiss <maximilian@xfce.org>\n"
 "Language-Team: French <xfce-i18n@xfce.org>\n"
@@ -133,9 +133,8 @@ msgid "Mount Plugin"
 msgstr "Greffon de montage"
 
 #: ../panel-plugin/mount-plugin.c:711
-#, fuzzy
 msgid "Properties"
-msgstr "Éditer les propriétés"
+msgstr "Propriétés"
 
 #: ../panel-plugin/mount-plugin.c:745
 msgid ""
@@ -252,11 +251,12 @@ msgid "Display _mount points only"
 msgstr "Afficher uniquement les _points de montages"
 
 #: ../panel-plugin/mount-plugin.c:963
-#, fuzzy
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr "Couper les noms de périphériques au nombre de caractères spécifié dans le bouton rotation."
+msgstr ""
+"Couper les noms de périphériques au nombre de caractères spécifié dans le "
+"bouton rotation."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
@@ -286,7 +286,8 @@ msgstr "Systèmes de _fichiers"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Montrer les partitions / périphériques et permettent de les monter / démonter"
+msgstr ""
+"Montrer les partitions / périphériques et permettent de les monter / démonter"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
