@@ -2,23 +2,22 @@
 # Copyright (C) 2004-2005 Jean-Baptiste Dulong.
 # Copytight (C) 2005-2007 Fabian Nowak.
 # This file is distributed under the same license as the xfce4-mount-plugin package.
+#
 # Eugene Ostapets <eostapets@altlinux.ru>, 2005-2006.
-# 
+# Dima Smirnov <arch@cnc-parts.info>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: xfce4-mount-plugin 0.6.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-21 03:51+0000\n"
-"PO-Revision-Date: 2010-03-01 10:50+0200\n"
-"Last-Translator: Dima Smirnov <arch@cnc-parts.info>\n"
+"POT-Creation-Date: 2013-03-16 23:11+0400\n"
+"PO-Revision-Date: 2013-03-16 23:11+0400\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
 "Language-Team: Russian <xfce-i18n@xfce.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"X-Poedit-Language: Russian\n"
-"X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Poedit-Country: RUSSIAN FEDERATION\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -53,7 +52,7 @@ msgstr "использованный размер: %g\n"
 #: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available siz:       %g\n"
-msgstr "доступный размер : %g\n"
+msgstr "доступный размер: %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -86,37 +85,34 @@ msgid "not mounted\n"
 msgstr "не смонтировано\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
-#. Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
-#. erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr "Не удалось подключить устройство \"%s\"."
+msgstr "Не удалось подключить устройство «%s»."
 
 #: ../panel-plugin/devices.c:303
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Ошибка при выполнениии команды подключения устройства: \"%s\"."
+msgstr "Ошибка при выполнении команды подключения устройства: «%s»."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
-#. Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr "Не удалось отключить устройство \"%s\"."
+msgstr "Не удалось отключить устройство «%s»."
 
 #: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "Теперь устройство \"%s\" можно удалить."
+msgstr "Теперь устройство «%s» можно безопасно удалить."
 
 #: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Произошла ошибка. Не удаляйте устройство!"
+msgstr "Произошла ошибка. Не удаляйте устройство «%s»!"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -139,8 +135,8 @@ msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
-"Имеет смысл и рекомендуется только если в команде \"unmount\" присутствует "
-"параметр \"sync\"."
+"Имеет смысл и рекомендуется только если в команде «unmount» присутствует "
+"параметр «sync»."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -171,27 +167,27 @@ msgid ""
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Эта команда будет запущена после монтирования устройства с аргументом в виде "
-"устройства.\n"
-"Если вы не уверены, что нужно вставить, воспользуйтесь \"thunar %m\".\n"
-"'%d' может быть использован для указания устройства, '%m' для точки "
+"Эта команда будет выполнена после монтирования устройства с параметром в "
+"виде точки монтирования.\n"
+"Если вы не уверены, что нужно вставить, попробуйте «exo-open %m».\n"
+"‘%d’ может быть использован для указания устройства, ‘%m’ для точки "
 "монтирования."
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
-msgstr "_Выполнить после монтирования"
+msgstr "_Выполнить после монтирования:"
 
 #: ../panel-plugin/mount-plugin.c:828
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
-"ВНИМАНИЕ: Эти настройки преназначены только для экспертов! Если вы не "
-"уверены в свойих действиях, то лучше ничего не делайте!"
+"ВНИМАНИЕ: Эти настройки предназначены только для экспертов! Если вы не "
+"уверены в своих действиях, то лучше ничего не делайте!"
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
-msgstr "_Пользовательские комманды"
+msgstr "_Пользовательские команды"
 
 #: ../panel-plugin/mount-plugin.c:852
 #, c-format
@@ -200,9 +196,9 @@ msgid ""
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Большинство пользователей используют \"sudo\" или \"sync %d &&\" перед "
-"\"unmount %d\".\n"
-"'%d' обычно обозначает устройство, '%m' - точку монтирования."
+"Большинство пользователей добавляют «sudo» или «sync %d &&» перед «unmount "
+"%d».\n"
+"‘%d’ обозначает устройство, ‘%m’ — точку монтирования."
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
@@ -214,7 +210,7 @@ msgstr "_Команда размонтирования:"
 
 #: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
-msgstr "_Комманды"
+msgstr "_Команды"
 
 #: ../panel-plugin/mount-plugin.c:908
 msgid ""
@@ -233,8 +229,8 @@ msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
 msgstr ""
-"Включение этой опции также выдвинет лоток Cd-привода после отмонтирования и "
-"задвинет его при монтировании"
+"Включение этой опции также выдвинет лоток CD-привода после размонтирования и "
+"задвинет его при монтировании."
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
@@ -242,11 +238,11 @@ msgstr "Выдвигать CD-диск"
 
 #: ../panel-plugin/mount-plugin.c:944
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Отображать эту опцию только для отображения точки монтирования"
+msgstr "Отображать эту опцию только для отображения точки монтирования."
 
 #: ../panel-plugin/mount-plugin.c:948
 msgid "Display _mount points only"
-msgstr "Отображать только _примонтированные точки"
+msgstr "Отображать только точки _монтирования"
 
 #: ../panel-plugin/mount-plugin.c:963
 msgid ""
@@ -257,7 +253,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr "Обрезать имена устройств:"
+msgstr "Обрезать имена устройств: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
@@ -287,11 +283,11 @@ msgstr "Показывает разделы и устройства и позв�
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"
-msgstr "Copyright (c) 2005-2012\n"
+msgstr "Copyright © 2005—2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "монтирование устройств"
+msgstr "Монтирование устройств"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
