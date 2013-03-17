@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.6.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-16 23:11+0400\n"
-"PO-Revision-Date: 2013-03-16 23:11+0400\n"
+"POT-Creation-Date: 2013-03-17 11:53+0400\n"
+"PO-Revision-Date: 2013-03-17 11:54+0400\n"
 "Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
 "Language-Team: Russian <xfce-i18n@xfce.org>\n"
 "Language: ru\n"
@@ -114,6 +114,15 @@ msgstr "Теперь устройство «%s» можно безопасно �
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Произошла ошибка. Не удаляйте устройство «%s»!"
 
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr " → "
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s / %s] свободно %s"
+
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">не смонтировано</span>"
@@ -157,7 +166,7 @@ msgstr "Выберите значок"
 
 #: ../panel-plugin/mount-plugin.c:780
 msgid "_General"
-msgstr "_Главная"
+msgstr "_Основные"
 
 #: ../panel-plugin/mount-plugin.c:795
 #, c-format
@@ -202,11 +211,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
-msgstr "_Команда монтирования:"
+msgstr "Команда _монтирования:"
 
 #: ../panel-plugin/mount-plugin.c:867
 msgid "_Unmount command:"
-msgstr "_Команда размонтирования:"
+msgstr "Команда _размонтирования:"
 
 #: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
@@ -234,11 +243,11 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
-msgstr "Выдвигать CD-диск"
+msgstr "_Извлекать CD-диск"
 
 #: ../panel-plugin/mount-plugin.c:944
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Отображать эту опцию только для отображения точки монтирования."
+msgstr "Включите для отображения только точек монтирования."
 
 #: ../panel-plugin/mount-plugin.c:948
 msgid "Display _mount points only"
@@ -249,11 +258,11 @@ msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr ""
-"Обрезать имена устройств по количеству символов, указанных на spin button."
+"Обрезать имена устройств по указанному количеству символов."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr "Обрезать имена устройств: "
+msgstr "Об_резать имена устройств: "
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
@@ -271,7 +280,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
-msgstr "Исключать указанные файловые системы"
+msgstr "Иск_лючать указанные файловые системы"
 
 #: ../panel-plugin/mount-plugin.c:1021
 msgid "_File systems"
