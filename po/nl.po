@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the
 # xfce4-mount-plugin package.
 # Vincent Tunru <imnotb@gmail.com>
-# Pjotr, 2011.
+# Pjotr <pjotrvertaalt@gmail.com> , 2011 - 2013.
 #
 msgid ""
 msgstr ""
@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-16 15:44+0200\n"
 "PO-Revision-Date: 2011-09-09 11:34+0200\n"
-"Last-Translator: Pjotr\n"
+"Last-Translator: Pjotr pjotrvertaalt@gmail.com\n"
 "Language-Team: Dutch (Flemish)\n"
 "Language: nl (Dutch)\n"
 "MIME-Version: 1.0\n"
@@ -107,12 +107,12 @@ msgstr "Kon apparaat 's' niet ontkoppelen."
 #: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "Het apparaat \"%s\" kan nu veilig verwijderd worden."
+msgstr "Het apparaat '%s' kan nu veilig verwijderd worden."
 
 #: ../panel-plugin/devices.c:362
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Er is een fout opgetreden. Koppel apparaat \"%s\" niet los!"
+msgstr "Er is een fout opgetreden. Koppel apparaat '%s' niet los!"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -124,7 +124,7 @@ msgstr "apparaten"
 
 #: ../panel-plugin/mount-plugin.c:706
 msgid "Mount Plugin"
-msgstr "Aankoppel-plugin"
+msgstr "Aankoppel-invoegtoepassing"
 
 #: ../panel-plugin/mount-plugin.c:711
 msgid "Properties"
@@ -135,8 +135,8 @@ msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
-"Dit is alleen nuttig en aanbevolen als u \"sync\" opgeeft als onderdeel van "
-"het \"unmount\" opdracht-tekstsnoer."
+"Dit is alleen nuttig en aanbevolen als u 'sync' opgeeft als onderdeel van "
+"het opdracht-tekstsnoer 'unmount'."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -168,7 +168,7 @@ msgid ""
 msgstr ""
 "Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met "
 "het koppelpunt van het apparaat als argument.\n"
-"U kunt \"exo-open %m\" proberen als u niet weet wat u hier moet invullen.\n"
+"U kunt 'exo-open %m' proberen als u niet weet wat u hier moet invullen.\n"
 "'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
 "worden om het koppelpunt aan te geven."
 
@@ -195,8 +195,8 @@ msgid ""
 "\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"De meeste mensen willen \"sudo\" voor beide opdrachten invoegen of \"sync %d "
-"&&\" voor \"unmount %d\" invoegen.\n"
+"De meeste mensen willen alleen 'sudo' voor beide opdrachten zetten of "
+"'sync %d &&' voor 'unmount %d' zetten.\n"
 "'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
 "worden om het koppelpunt aan te geven."
 
@@ -312,4 +312,4 @@ msgstr "Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
 #~ "of ontkoppelen. Moet ingesteld worden zonder wachtwoord."
 
 #~ msgid "Use _sudo"
-#~ msgstr "_Sudo gebruiken"
+#~ msgstr "Gebruik _sudo"
