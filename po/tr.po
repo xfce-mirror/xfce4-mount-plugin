@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:06+0200\n"
-"PO-Revision-Date: 2013-09-06 10:41+0000\n"
+"PO-Revision-Date: 2013-09-11 11:06+0000\n"
 "Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xfce/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr "\"%s\" aygıtı bağlanamadı."
 #: ../panel-plugin/devices.c:303
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr ""
+msgstr "\"%s\" bağlama komutunu çalıştırırken hata oluştu."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -231,11 +231,11 @@ msgstr "Sadece bağla_ma noktaları göster"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Aygıt isimlerindeki boşlukların belirtildiği kadarını temizle."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Aygıt isimlerindeki boşlukları temizle:"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
