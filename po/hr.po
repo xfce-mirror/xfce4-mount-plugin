@@ -1,28 +1,24 @@
-# Croatian translation for xfce4-mount-plugin
-# Copyright (C) 2007 THE xfce4-mount-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-mount-plugin package.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the  xfce4-mount-plugin package.
-# Ivica KOlić <ikoli@yahoo.com>, 2011.
-# Ivica Kolić <ikoli@yahoo.com>, 2011.
-#
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Ivica  Kolić <ikoli@yahoo.com>, 2013
+# Ivica  Kolić <ikoli@yahoo.com>, 2011
+# Ivica  Kolić <ikoli@yahoo.com>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.6\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
-"PO-Revision-Date: 2011-05-16 00:39+0200\n"
-"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
-"Language-Team: Croatian <ikoli@yahoo.com>\n"
-"Language: hr\n"
+"POT-Creation-Date: 2013-07-03 21:06+0200\n"
+"PO-Revision-Date: 2013-09-23 09:52+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Country: CROATIA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Croatian\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -47,32 +43,32 @@ msgstr "%.1f GB"
 #: ../panel-plugin/devices.c:83
 #, c-format
 msgid "size:                %g\n"
-msgstr "veličina:                %g\n"
+msgstr "veličina: %g\n\n"
 
 #: ../panel-plugin/devices.c:84
 #, c-format
 msgid "used size:           %g\n"
-msgstr "korištena veličina:           %g\n"
+msgstr "korištena veličina: %g\n\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available siz:       %g\n"
-msgstr "dostupna veličina:       %g\n"
+msgstr "dostupna veličina %g\n\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
-msgstr "korišteni postotak.....%d\n"
+msgstr "korišteni postotak: %d\n\n"
 
 #: ../panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "tip datotečnog sustava:    %s\n"
+msgstr "tip datotečnog sustava: %s\n\n"
 
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "trenutna točka montiranja:..%s\n"
+msgstr "trenutna točka montiranja: %s\n\n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -90,8 +86,10 @@ msgid "not mounted\n"
 msgstr "nije montirano\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
@@ -102,7 +100,8 @@ msgstr "Neuspjelo montiranje uređaja  \"%s\"."
 msgid "Error executing on-mount command \"%s\"."
 msgstr ""
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
@@ -112,7 +111,7 @@ msgstr "Neuspjelo odmontiranje uređaja  \"%s\"."
 #: ../panel-plugin/devices.c:360
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "Uređaj \"%s\" bi trebao sada biti sigurno uklonjiv"
+msgstr "Uređaj \"%s\" bi trebao sada biti sigurno uklonjiv."
 
 #: ../panel-plugin/devices.c:362
 #, c-format
@@ -164,15 +163,10 @@ msgstr "_Općenito"
 #: ../panel-plugin/mount-plugin.c:795
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Ova će naredba biti izvršena nakon montiranja uređaja sa točkom montiranja "
-"kao argumentom.\n"
-"IAko niste sigurni što umetnuti pokušajte\"exo-open %m\".\n"
-"'%d' može biti korišten za određivanje uređaja, '%m' za točku montiranja."
+msgstr "Ova će naredba biti izvršena nakon montiranja uređaja sa točkom montiranja kao argumentom.\nIAko niste sigurni što umetnuti pokušajte\"exo-open %m\".\n'%d' može biti korišten za određivanje uređaja, '%m' za točku montiranja."
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
@@ -182,9 +176,7 @@ msgstr "_Izvrši nakon montiranja:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"UPOZORENJE: Ove opcije su samo za stručnjake! Ako ne znate čemu služei , ne "
-"dirajte ih!"
+msgstr "UPOZORENJE: Ove opcije su samo za stručnjake! Ako ne znate čemu služe , ne dirajte ih!"
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
@@ -193,8 +185,7 @@ msgstr "_Prilagođene naredbe"
 #: ../panel-plugin/mount-plugin.c:852
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr ""
 
@@ -214,9 +205,7 @@ msgstr "_Naredbe"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Aktivirajte ovu opciju za prikaz mrežnih datotečnih sustava kao NFS, SMBFS, "
-"SHFS i SSHFS."
+msgstr "Aktivirajte ovu opciju za prikaz mrežnih datotečnih sustava kao NFS, SMBFS, SHFS i SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
@@ -224,9 +213,9 @@ msgstr "Prikaži _mrežne datotečne sustave"
 
 #: ../panel-plugin/mount-plugin.c:926
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Aktivirajte ovu opciju za izbacivanje CD-pogona nakon odmontiranja i za umetanje prije montiranja."
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
@@ -259,10 +248,7 @@ msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
-msgstr ""
-"Isključi slijedeće datotečne sustave iz izbornika.\n"
-"Lista je odvojena razmakom.\n"
-"O vama ovosi određivanje točnih uređaja i točaka montiranja."
+msgstr "Isključi slijedeće datotečne sustave iz izbornika.\nLista je odvojena razmakom.\nO vama ovosi određivanje točnih uređaja i točaka montiranja."
 
 #: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
