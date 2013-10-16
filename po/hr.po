@@ -6,13 +6,14 @@
 # Ivica  Kolić <ikoli@yahoo.com>, 2013
 # Ivica  Kolić <ikoli@yahoo.com>, 2011
 # Ivica  Kolić <ikoli@yahoo.com>, 2011
+# luka_m, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:06+0200\n"
-"PO-Revision-Date: 2013-09-23 09:52+0000\n"
-"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"PO-Revision-Date: 2013-10-16 19:44+0000\n"
+"Last-Translator: luka_m\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +99,7 @@ msgstr "Neuspjelo montiranje uređaja  \"%s\"."
 #: ../panel-plugin/devices.c:303
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr ""
+msgstr "Greška prilikom izvršavanja naredbe na-montiranje \"%s\"."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -138,7 +139,7 @@ msgstr "Svojstva"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
+msgstr "Ovo je jedino korisno i preporučljivo ako dodate \"sync\" kao dio \"umnount\" naredbe."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -187,7 +188,7 @@ msgstr "_Prilagođene naredbe"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
+msgstr "Većina korisnika će htjeti samo dodati \"sudo\" ispred obje naredbe, ili dodati \"sync %d &&\" ispred \"unmount %d\" naredbe.\n'%d' se koristi za određivanje uređaja, '%m' za određivanje točke montiranja. "
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
@@ -233,11 +234,11 @@ msgstr "Prikaži samo _točke montiranja"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Skratite imena uređaja na broj znakova upisan u za to predviđenom polju."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
-msgstr ""
+msgstr "Skratite imena uređaja:"
 
 #: ../panel-plugin/mount-plugin.c:979
 msgid " characters"
@@ -272,4 +273,4 @@ msgstr "Montiraj uređaje"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
+msgstr "Prikazuje sve uređaje koji se mogu montirati i (de)montira ih na zahtjev."
