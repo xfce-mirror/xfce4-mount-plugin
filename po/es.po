@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:06+0200\n"
-"PO-Revision-Date: 2014-03-22 11:19+0000\n"
+"PO-Revision-Date: 2014-03-22 13:00+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@ubuntu.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -137,7 +137,7 @@ msgstr "Propiedades"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Esto sólo es útil y se recomienda si especifica \"sync\" como parte de la cadena del comando \"desmontar\"."
+msgstr "Esto solo se recomienda si especifica «sync» como parte de la cadena de la orden «unmount»."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -179,26 +179,26 @@ msgstr "ATENCIÓN: ¡Estas opciones son sólo para expertos! ¡Si no sabe para q
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
-msgstr "Comandos _personalizados"
+msgstr "Órdenes personali_zadas"
 
 #: ../panel-plugin/mount-plugin.c:852
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "La mayoría de los usuarios solo querrán añadir \"sudo\" delante de ambos comandos o añadir \"sync %d &&\" al comando \"desmontar %d\".\n'%d' se usa para especificar el dispositivo, '%m' para el punto de montaje."
+msgstr "La mayoría de los usuarios solo necesitarán añadir «sudo» delante de ambas órdenes, o «sync %d &&» a la orden «unmount %d».\n«%d» se usa para especificar el dispositivo y «%m» para el punto de montaje."
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
-msgstr "Comando _montar:"
+msgstr "Orden para el _montaje:"
 
 #: ../panel-plugin/mount-plugin.c:867
 msgid "_Unmount command:"
-msgstr "Comando _desmontar:"
+msgstr "Orden para el _desmontaje:"
 
 #: ../panel-plugin/mount-plugin.c:893
 msgid "_Commands"
-msgstr "_Comandos"
+msgstr "Ó_rdenes"
 
 #: ../panel-plugin/mount-plugin.c:908
 msgid ""
