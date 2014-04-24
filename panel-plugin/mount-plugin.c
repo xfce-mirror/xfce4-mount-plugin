@@ -351,8 +351,9 @@ on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
     {
 
         mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-        gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL, NULL, NULL, 0,
-                        event->time);
+        gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
+                        xfce_panel_plugin_position_menu, mounter->plugin,
+                        0, event->time);
         return TRUE;
     }
     TRACE ("leaves on_button_press");
