@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-11 10:00+0000\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2012-11-11 22:24+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n-cn@xfce.org>\n"
@@ -114,6 +114,15 @@ msgstr "现在应该可以安全地移除设备 “%s” 了。"
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "出错。不应移除设备 “%s”！"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -238,8 +247,7 @@ msgstr "只显示挂载点(_M)"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
-"截断设备的名称至输入框中指定的字符数"
+msgstr "截断设备的名称至输入框中指定的字符数"
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2008-11-04 23:26+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <xfce-i18n@xfce.org>\n"
@@ -113,6 +113,15 @@ msgstr "Pajisja \"%s\" tani mund të hiqet pa rrezik."
 #, fuzzy, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ndodhi një gabim. Pajisja nuk do të duhej hequr!"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"

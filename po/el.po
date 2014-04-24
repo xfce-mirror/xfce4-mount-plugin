@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2012-05-20 11:26+0300\n"
 "Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
@@ -119,6 +119,15 @@ msgstr "Η συσκευή \"%s\" μπορεί να αφαιρεθεί με ασ�
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Προέκυψε ένα σφάλμα. Η συσκευή \"%s\" δεν πρέπει να αφαιρεθεί!"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"

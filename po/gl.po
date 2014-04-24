@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 15:44+0200\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2009-07-15 17:55+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -117,6 +117,15 @@ msgstr "Xa se pode extraer de xeito seguro o dispositivo \"%s\"."
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Produciuse un erro. Non se debe extraer o dispositivo \"%s\"!"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"

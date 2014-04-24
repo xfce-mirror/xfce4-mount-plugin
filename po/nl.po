@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 21:06+0200\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2013-07-04 08:39+0000\n"
 "Last-Translator: Pjotr123 <pjotrvertaalt@gmail.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/xfce/language/nl/)\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/xfce/language/"
+"nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -83,10 +84,8 @@ msgid "not mounted\n"
 msgstr "niet aangekoppeld\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
-#. Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
-#. erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
 #: ../panel-plugin/devices.c:288
 #, c-format
 msgid "Failed to mount device \"%s\"."
@@ -97,8 +96,7 @@ msgstr "Kon apparaat '%s' niet aankoppelen."
 msgid "Error executing on-mount command \"%s\"."
 msgstr "Fout bij het uitvoeren van aankoppelopdracht '%s'."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
-#. Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:357
 #, c-format
@@ -114,6 +112,15 @@ msgstr "Het apparaat '%s' kan nu veilig verwijderd worden."
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Er is een fout opgetreden. Koppel apparaat '%s' niet los!"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -135,7 +142,9 @@ msgstr "Eigenschappen"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Dit is alleen nuttig en aanbevolen als u 'sync' opgeeft als onderdeel van het opdracht-tekstsnoer 'unmount'."
+msgstr ""
+"Dit is alleen nuttig en aanbevolen als u 'sync' opgeeft als onderdeel van "
+"het opdracht-tekstsnoer 'unmount'."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
@@ -160,10 +169,16 @@ msgstr "Al_gemeen"
 #: ../panel-plugin/mount-plugin.c:795
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point "
+"of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met het koppelpunt van het apparaat als argument.\nU kunt 'exo-open %m' proberen als u niet weet wat u hier moet invullen.\n'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt worden om het koppelpunt aan te geven."
+msgstr ""
+"Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met "
+"het koppelpunt van het apparaat als argument.\n"
+"U kunt 'exo-open %m' proberen als u niet weet wat u hier moet invullen.\n"
+"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
+"worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:805
 msgid "_Execute after mounting:"
@@ -173,7 +188,9 @@ msgstr "_Na koppeling uitvoeren:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan te raden deze opties niet aan te passen tenzij u weet wat u doet!"
+msgstr ""
+"WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan "
+"te raden deze opties niet aan te passen tenzij u weet wat u doet!"
 
 #: ../panel-plugin/mount-plugin.c:833
 msgid "_Custom commands"
@@ -182,9 +199,14 @@ msgstr "_Aangepaste opdrachten"
 #: ../panel-plugin/mount-plugin.c:852
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend "
+"\"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "De meeste mensen willen alleen 'sudo' voor beide opdrachten zetten of 'sync %d &&' voor 'unmount %d' zetten.\n'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt worden om het koppelpunt aan te geven."
+msgstr ""
+"De meeste mensen willen alleen 'sudo' voor beide opdrachten zetten of 'sync "
+"%d &&' voor 'unmount %d' zetten.\n"
+"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
+"worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:861
 msgid "_Mount command:"
@@ -202,7 +224,9 @@ msgstr "_Opdrachten"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en SSHFS weer te geven."
+msgstr ""
+"Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en "
+"SSHFS weer te geven."
 
 #: ../panel-plugin/mount-plugin.c:913
 msgid "Display _network file systems"
@@ -210,9 +234,11 @@ msgstr "_Netwerk-bestandssystemen weergeven"
 
 #: ../panel-plugin/mount-plugin.c:926
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert"
-" before mounting."
-msgstr "Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen en in te voegen voor het aankoppelen."
+"Activate this option to also eject a CD-drive after unmounting and to insert "
+"before mounting."
+msgstr ""
+"Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen "
+"en in te voegen voor het aankoppelen."
 
 #: ../panel-plugin/mount-plugin.c:931
 msgid "_Eject CD-drives"
@@ -230,7 +256,9 @@ msgstr "Alleen _koppelpunten weergeven"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr "Verkort de apparaatnamen tot het aantal tekens dat is opgegeven in de draaiknop."
+msgstr ""
+"Verkort de apparaatnamen tot het aantal tekens dat is opgegeven in de "
+"draaiknop."
 
 #: ../panel-plugin/mount-plugin.c:970
 msgid "Trim device names: "
@@ -245,7 +273,10 @@ msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
 "It is up to you to specify correct devices or mount points."
-msgstr "Geef de volgende bestandssystemen niet weer in het menu.\nGebruik spaties als scheidingsteken.\nHet is aan u om correcte apparaten of koppelpunten op te geven."
+msgstr ""
+"Geef de volgende bestandssystemen niet weer in het menu.\n"
+"Gebruik spaties als scheidingsteken.\n"
+"Het is aan u om correcte apparaten of koppelpunten op te geven."
 
 #: ../panel-plugin/mount-plugin.c:1006
 msgid "E_xclude specified file systems"
@@ -257,7 +288,8 @@ msgstr "_Bestandssystemen"
 
 #: ../panel-plugin/mount-plugin.c:1046
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Toon partities/apparaten en sta toe om hen te koppelen of te ontkoppelen"
+msgstr ""
+"Toon partities/apparaten en sta toe om hen te koppelen of te ontkoppelen"
 
 #: ../panel-plugin/mount-plugin.c:1048
 msgid "Copyright (c) 2005-2012\n"

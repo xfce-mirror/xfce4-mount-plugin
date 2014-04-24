@@ -168,7 +168,7 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         if (mounter->exclude_devicenames)
             dd->label_disk = gtk_label_new (disk->mount_point);
         else
-            dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, " -> ",
+            dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, _(" -> "),
                                         disk->mount_point, NULL));
 
         g_free (formatted_diskname);
@@ -220,7 +220,7 @@ disk_display_refresh (t_disk_display * disk_display)
             used = get_size_human_readable (mount_info->used);
             size = get_size_human_readable (mount_info->size);
             avail = get_size_human_readable (mount_info->avail);
-            text = g_strdup_printf ("[%s/%s] %s free", used, size, avail);
+            text = g_strdup_printf (_("[%s/%s] %s free"), used, size, avail);
 
             g_free(used);
             g_free(size);

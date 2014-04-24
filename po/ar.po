@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-18 18:33+0000\n"
+"POT-Creation-Date: 2014-04-24 22:41+0200\n"
 "PO-Revision-Date: 2012-11-18 22:43+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
@@ -113,6 +113,15 @@ msgstr "يمكن إزالة الجهاز \"%s\" بأمان الأن."
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "حدث خطأ. الجهاز \"%s\" لايمكن إزالته!"
 
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr ""
+
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">غير موصل</span>"
@@ -134,8 +143,8 @@ msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr ""
-"هذا يمكن إستعماله و يوصى به فقط عندما تحدد \"مزامنة\" مع الأمر \"غير موصل\" كجزء "
-"من البنية."
+"هذا يمكن إستعماله و يوصى به فقط عندما تحدد \"مزامنة\" مع الأمر \"غير موصل\" "
+"كجزء من البنية."
 
 #: ../panel-plugin/mount-plugin.c:750
 msgid "Show _message after unmount"
