@@ -183,8 +183,11 @@ char *
 shorten_disk_name (const char *dev, gint len)
 {
     char *r, *lastchars, *firstchars;
-    //if (strncmp(dev, "UUID", 4)==0 && 
-    if (strlen(dev)>len) // len canot be set lower than 9
+    if (strncmp(dev, "LABEL=", 6)==0)
+    {
+      r = g_strdup(dev+6*sizeof(char));
+    }
+    else if (strlen(dev)>len) // len canot be set lower than 9
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
@@ -404,7 +407,7 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
     for (pfstab = getfsent(); pfstab!=NULL; pfstab = getfsent())
     {
         has_valid_mount_device =
-                        g_str_has_prefix(pfstab->fs_spec, "/dev/") ||  g_str_has_prefix(pfstab->fs_spec, "UUID=");
+                        g_str_has_prefix(pfstab->fs_spec, "/dev/") ||  g_str_has_prefix(pfstab->fs_spec, "UUID=") ||  g_str_has_prefix(pfstab->fs_spec, "LABEL=");
 
         if (include_NFSs)
             has_valid_mount_device = has_valid_mount_device |
@@ -723,7 +726,7 @@ disk_classify (char *device, char *mountpoint)
             dc = REMOTE;
         }
     }
-		/* it needs to be said _here_ that BSDs use cd0, cd1 etc., so we hope cd* works for cdrw, cdrom and cd0,1,... nd no other devices */
+    /* it needs to be said _here_ that BSDs use cd0, cd1 etc., so we hope cd* works for cdrw, cdrom and cd0,1,... nd no other devices */
     else if ( strstr(device, "cd") 
                 || strstr(device, "dvd") || strstr(mountpoint, "cd") || strstr(mountpoint, "dvd")) {
         dc = CD_DVD;
