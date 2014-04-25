@@ -480,18 +480,34 @@ disks_remove_device (GPtrArray * pdisks, char *device)
 {
     unsigned int i;
     gpointer p=NULL;
+    gboolean removedEntries = FALSE;
+    char *exclude_device;
+    size_t device_len;
 
     for (i=0; i < pdisks->len ; i++)
     {
-        if ( strcmp ( ((t_disk *) g_ptr_array_index(pdisks, i))->device,
+        exclude_device = ((t_disk *) g_ptr_array_index(pdisks, i))->device;
+        if ( strcmp ( exclude_device,
             device )==0 )
+        {
             p = g_ptr_array_remove_index(pdisks, i);
+              if (p!=NULL)
+                removedEntries = TRUE;
+        }
+        
+        device_len = strlen(device);
+        
+        if ( device[device_len-1]=='*' && 
+        strncmp ( exclude_device,
+            device, device_len-1 )==0 )
+        {
+            p = g_ptr_array_remove_index(pdisks, i);
+              if (p!=NULL)
+                removedEntries = TRUE;
+        }
     }
 
-    if (p==NULL)
-        return FALSE;
-    else
-        return TRUE;
+    return removedEntries;
 }
 
 
@@ -502,20 +518,39 @@ disks_remove_device (GPtrArray * pdisks, char *device)
 gboolean
 disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
 {
+    gboolean removedEntries = FALSE;
     unsigned int i;
     gpointer p=NULL;
+    char *exclude_mp;
+    size_t mountp_len;
 
     for (i=0; i < pdisks->len ; i++)
     {
-        if (strcmp ( ((t_disk *) g_ptr_array_index(pdisks, i))->mount_point,
+        exclude_mp = ((t_disk *) g_ptr_array_index(pdisks, i))->mount_point;
+      
+        if (strcmp ( exclude_mp,
             mountp)==0)
+        {
+          DBG("REMOVED %s @ %i %s", mountp, i, exclude_mp);
             p = g_ptr_array_remove_index(pdisks, i);
+            if (p!=NULL)
+                removedEntries = TRUE;
+        }
+        
+        mountp_len = strlen(mountp);
+        
+        if ( mountp[mountp_len-1]=='*' && 
+        strncmp ( exclude_mp,
+            mountp, mountp_len-1 )==0 )
+        {
+          DBG("removed %s @ %i %s", mountp, i, exclude_mp);
+            p = g_ptr_array_remove_index(pdisks, i);
+            if (p!=NULL)
+                removedEntries = TRUE;
+        }
     }
 
-    if (p==NULL)
-        return FALSE;
-    else
-        return TRUE;
+    return removedEntries;
 }
 
 
@@ -559,12 +594,14 @@ disks_free_mount_info(GPtrArray * pdisks)
 
 
 /**
- * Searches array for device and mounpoint. Returns TRUE if found.
+ * Searches array for device and mountpoint. Returns TRUE if found.
  */
 gboolean
 exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
     unsigned int i;
+    gchar *excluded_FS_i; 
+    size_t excluded_FS_i_len = 0;
 
     TRACE("Entering exclude_filesystems");
 
@@ -572,13 +609,25 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 
     for (i=0; i < excluded_FSs->len; i++)
     {
-        DBG("Comparing %s and %s to %s", mountpoint, device, (gchar *) g_ptr_array_index(excluded_FSs, i));
+        excluded_FS_i = (gchar *) g_ptr_array_index(excluded_FSs, i);
+        DBG("Comparing %s and %s to %s", mountpoint, device, excluded_FS_i);
         if (g_ascii_strcasecmp (
-                (gchar *) g_ptr_array_index(excluded_FSs, i), mountpoint)==0
+                excluded_FS_i, mountpoint)==0
             ||
             g_ascii_strcasecmp (
-                (gchar *) g_ptr_array_index(excluded_FSs, i), device)==0
+                excluded_FS_i, device)==0
             )
+            return TRUE;
+            
+        excluded_FS_i_len = strlen(excluded_FS_i);
+        
+        if ((excluded_FS_i[excluded_FS_i_len-1]=='*') && 
+            (g_ascii_strncasecmp (
+                excluded_FS_i, mountpoint, excluded_FS_i_len-1)==0
+            ||
+            g_ascii_strncasecmp (
+                excluded_FS_i, device, excluded_FS_i_len-1)==0
+            ))
             return TRUE;
     }
 

@@ -996,7 +996,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
         _("Exclude the following file systems from the menu.\n"
         "The list is separated by simple spaces.\n"
-        "It is up to you to specify correct devices or mount points."),
+        "It is up to you to specify correct devices or mount points.\n"
+        "An asterisk (*) can be used as a placeholder at the end of\n"
+        "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"),
         NULL );
 
     _vbox2 = gtk_vbox_new (FALSE, BORDER);
