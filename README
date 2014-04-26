@@ -1,9 +1,9 @@
 # ================================================ #
-# Version 0.6.0 for Xfce Panel 4.8.0 and higher    #
+# Version 0.6.8 for Xfce Panel 4.8.0 and higher    #
 # Ported and maintained by Fabian Nowak and others #
 # ================================================ #
 
-xfce4-mount-plugin - version 0.6.0
+xfce4-mount-plugin - version 0.6.8
 
 This little plugin behaves like the "kwikdisk - removable media utility" 
 shipped with KDE.
@@ -39,6 +39,6 @@ mostly for nice ideas and features, but also for bugfixes and other stuff:
  - Jari Eskelinen
  - Joost Kremers
  - Jean-Baptiste Dulong
+ - Raphael Groner
 
 Thank you.
-
