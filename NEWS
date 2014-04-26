@@ -9,6 +9,7 @@ thereby
 
 2014/04/26 - version 0.6.6
 - New translations and most translations nearly complete. So this might be suitable for distributions to pick.
+- Introduced odd/even versioning concept: When translations of the new "odd" development versions are mostly finished, then an "even" release such as this 0.6.6 can appear.
 
 2012/05/14 - version 0.6.4
 - This release brings trimming of too long device names, cleaned-up and
