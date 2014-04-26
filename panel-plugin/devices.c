@@ -366,6 +366,54 @@ out:
     }
 }
 
+/**
+ * Checks whether the pdisk is already inserted with a similar path with more 
+ * or less slashes.
+ * @param pdisks  Pointer to disks array
+ * @param pdisk   Pointer to new disk to lateron insert into pdisks
+ * @return true if device or mount point does already exist, false otherwise
+ */
+gboolean
+device_or_mountpoint_exists (GPtrArray * pdisks, t_disk * pdisk)
+{
+  gboolean returnValue = FALSE;
+  int i;
+  t_disk *disk;
+  int stringlength1, stringlength2, stringlength3, stringlength4;
+  
+  stringlength1 = strlen(pdisk->device);
+  stringlength3 = strlen(pdisk->mount_point);
+  
+  for (i=0; i < pdisks->len ; i++)
+  {
+    disk = (t_disk *) (g_ptr_array_index(pdisks,i));
+    stringlength2 = strlen(disk->device);
+    stringlength4 = strlen(disk->mount_point);
+    
+    if (stringlength1==stringlength2+1 && pdisk->device[stringlength1-1]=='/' && strncmp(pdisk->device, disk->device, stringlength2)==0 )      
+    {
+      returnValue = TRUE;
+      break;
+    } 
+    else if (stringlength2==stringlength1+1 && disk->device[stringlength2-1]=='/' && strncmp(pdisk->device, disk->device, stringlength1)==0 )      
+    {
+      returnValue = TRUE;
+      break;
+    }
+    else if (stringlength3==stringlength4+1 && pdisk->mount_point[stringlength3-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength4)==0 )      
+    {
+      returnValue = TRUE;
+      break;
+    } 
+    else if (stringlength4==stringlength3+1 && disk->mount_point[stringlength4-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength3)==0 )      
+    {
+      returnValue = TRUE;
+      break;
+    }
+  }
+  
+  return returnValue;
+}
 
 /**
  * Fill a GPtrArray with pointers on struct t_disk containing infos on devices
@@ -392,7 +440,7 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
         if (! (*showed_fstab_dialog) ) {
             dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
                                                 GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
-    "Your /etc/fstab could not be read. This will severely degrade the plugin's abilities.");
+    _("Your /etc/fstab could not be read. This will severely degrade the plugin's abilities."));
             /* gtk_dialog_run (GTK_DIALOG (dialog)); */
             g_signal_connect (dialog, "response",
                     G_CALLBACK (gtk_widget_destroy), dialog);
@@ -421,7 +469,8 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
                 g_str_has_prefix(pfstab->fs_file, "/") ) {
             pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file, length);
             pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
-            g_ptr_array_add (pdisks , pdisk);
+            if (!device_or_mountpoint_exists(pdisks, pdisk))
+              g_ptr_array_add (pdisks , pdisk);
 
         }
 
