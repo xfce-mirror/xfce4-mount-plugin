@@ -1,23 +1,23 @@
-# Russian translation of the xfce4-mount-plugin package.
-# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005-2007 Fabian Nowak.
-# This file is distributed under the same license as the xfce4-mount-plugin package.
-#
-# Eugene Ostapets <eostapets@altlinux.ru>, 2005-2006.
-# Dima Smirnov <arch@cnc-parts.info>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dima Smirnov <arch@cnc-parts.info>, 2010
+# asvl <alyoshin.s@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.6.3\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 22:41+0200\n"
-"PO-Revision-Date: 2013-03-17 11:54+0400\n"
-"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
-"Language-Team: Russian <xfce-i18n@xfce.org>\n"
-"Language: ru\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2014-04-27 19:57+0000\n"
+"Last-Translator: asvl <alyoshin.s@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -27,7 +27,7 @@ msgstr "%.1f Б"
 #: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f КБ"
+msgstr "%.1f кБ"
 
 #: ../panel-plugin/devices.c:73
 #, c-format
@@ -85,34 +85,43 @@ msgid "not mounted\n"
 msgstr "не смонтировано\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-#: ../panel-plugin/devices.c:288
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
 msgstr "Не удалось подключить устройство «%s»."
 
-#: ../panel-plugin/devices.c:303
+#: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
 msgstr "Ошибка при выполнении команды подключения устройства: «%s»."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "Не удалось отключить устройство «%s»."
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Теперь устройство «%s» можно безопасно удалить."
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Произошла ошибка. Не удаляйте устройство «%s»!"
+
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "Невозможно прочитать файл /etc/fstab. Это значительно уменьшит возможности этого модуля."
 
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
@@ -127,169 +136,149 @@ msgstr "[%s / %s] свободно %s"
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">не смонтировано</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:514
 msgid "devices"
 msgstr "Устройства"
 
-#: ../panel-plugin/mount-plugin.c:706
+#: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
 msgstr "Модуль монтирования"
 
-#: ../panel-plugin/mount-plugin.c:711
+#: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:746
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Имеет смысл и рекомендуется только если в команде «unmount» присутствует "
-"параметр «sync»."
+msgstr "Имеет смысл и рекомендуется только если в команде «unmount» присутствует параметр «sync»."
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
 msgstr "Показывать _сообщение после размонтирования"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:763
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr ""
-"Вы можете указать отдельные иконки, которые будут отображаться на панели."
+msgstr "Вы можете указать отдельные значки, которые будут отображаться на панели."
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:770
 msgid "Icon:"
 msgstr "Значок:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:774
 msgid "Select an image"
 msgstr "Выберите значок"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:781
 msgid "_General"
 msgstr "_Основные"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:796
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Эта команда будет выполнена после монтирования устройства с параметром в "
-"виде точки монтирования.\n"
-"Если вы не уверены, что нужно вставить, попробуйте «exo-open %m».\n"
-"‘%d’ может быть использован для указания устройства, ‘%m’ для точки "
-"монтирования."
+msgstr "Эта команда будет выполнена после монтирования устройства с параметром в виде точки монтирования.\nЕсли вы не уверены, что нужно вставить, попробуйте «exo-open %m».\n‘%d’ может быть использован для указания устройства, ‘%m’ для точки монтирования."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
 msgstr "_Выполнить после монтирования:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:829
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"ВНИМАНИЕ: Эти настройки предназначены только для экспертов! Если вы не "
-"уверены в своих действиях, то лучше ничего не делайте!"
+msgstr "ВНИМАНИЕ! Эти настройки предназначены только для экспертов! Если вы не уверены в своих действиях, то лучше ничего не делайте!"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
 msgstr "_Пользовательские команды"
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:853
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Большинство пользователей добавляют «sudo» или «sync %d &&» перед «unmount "
-"%d».\n"
-"‘%d’ обозначает устройство, ‘%m’ — точку монтирования."
+msgstr "Большинство пользователей добавляют «sudo» или «sync %d &&» перед «unmount %d».\n‘%d’ обозначает устройство, ‘%m’ — точку монтирования."
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
 msgstr "Команда _монтирования:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
 msgstr "Команда _размонтирования:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
 msgstr "_Команды"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:909
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Используйте данную настройку также для отображения сетевых файловых систем, "
-"таких как NFS, SMBFS, SHFS and SSHFS."
+msgstr "Используйте данную настройку также для отображения сетевых файловых систем, таких как NFS, SMBFS, SHFS и SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
 msgstr "Показывать _сетевые файловые системы"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:927
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Включение этой опции также выдвинет лоток CD-привода после размонтирования и "
-"задвинет его при монтировании."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Включение этой опции также выдвинет лоток CD-привода после размонтирования и задвинет его при монтировании."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
 msgstr "_Извлекать CD-диск"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Включите для отображения только точек монтирования."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
 msgstr "Отображать только точки _монтирования"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:964
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Обрезать имена устройств по указанному количеству символов."
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Trim device names: "
 msgstr "Об_резать имена устройств: "
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:980
 msgid " characters"
 msgstr "символы"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:997
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
-msgstr ""
-"Исключить следующие файловые системы из меню.\n"
-"Этот список разделен пробелами.\n"
-"Указывайте верные устройства или точки монтирования."
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "Исключить следующие файловые системы из меню.\nЭтот список разделен пробелами.\nУказывайте верные устройства или точки монтирования.\nЗвёздочка (*) может использоваться как окончание пути,\nнапример, «/mnt/*» для исключения точек монтирования\nначинающихся на «/mnt».\n"
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
 msgstr "Иск_лючать указанные файловые системы"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1024
 msgid "_File systems"
 msgstr "_Файловые системы"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Показывает разделы и устройства и позволяет их монтировать."
 
-#: ../panel-plugin/mount-plugin.c:1048
+#: ../panel-plugin/mount-plugin.c:1051
 msgid "Copyright (c) 2005-2012\n"
 msgstr "Copyright © 2005—2012\n"
 
@@ -299,28 +288,4 @@ msgstr "Монтирование устройств"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Показывать все устройства, возможные для монтирования и (раз)монтировать их "
-"при запросе."
-
-#~ msgid "Mount Plugin: Error executing command."
-#~ msgstr "Модуль монтирования: Ошибка при выполнении команды"
-
-#~ msgid "Returned"
-#~ msgstr "Возвращено"
-
-#~ msgid "error was"
-#~ msgstr "ошибка:"
-
-#~ msgid ""
-#~ "Activate this option to use sudo(8) to run mount/umount commands. Needs "
-#~ "to be configured without password."
-#~ msgstr ""
-#~ "Использовать sudo(8) для запуска mount или umount. Требуется "
-#~ "конфигурация, не требующая ввода пароля."
-
-#~ msgid "Use _sudo"
-#~ msgstr "И_спользовать sudo"
-
-#~ msgid "size : %g\n"
-#~ msgstr "размер : %g\n"
+msgstr "Показывать все устройства, возможные для монтирования и (раз)монтировать их при запросе."
