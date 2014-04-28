@@ -6,13 +6,14 @@
 #  <abel.martin.ruiz@gmail.com>, 2009
 # Adolfo Jayme Barrientos <fitoschido@ubuntu.com>, 2014
 # gabrieltandil <gabriel.tandil@gmail.com>, 2014
+# Pablo Lezaeta <prflr88@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 06:31+0200\n"
-"PO-Revision-Date: 2014-04-25 11:42+0000\n"
-"Last-Translator: gabrieltandil <gabriel.tandil@gmail.com>\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2014-04-28 03:10+0000\n"
+"Last-Translator: Pablo Lezaeta <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,6 +119,12 @@ msgstr "Puede retirar el dispositivo «%s» con seguridad."
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ocurrió un error. ¡No se debe retirar el dispositivo \"%s\"!"
 
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "Su «/etc/fstab» no puede ser leída. Esto generará una reducción en las habilidades del complemento. "
+
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
 msgstr "->"
@@ -175,7 +182,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Este comando se ejecutará después de montar el dispositivo con el punto de montaje del dispositivo como argumento.\nSi no está seguro sobre qué introducir, pruebe con \"exo-open %m\".\n'%d' puede ser usado para especificar el dispositivo, '%m' para el punto de montaje."
+msgstr "Esta orden se ejecutará después de montar el dispositivo con el punto de montaje del dispositivo como argumento.\nSi no está seguro sobre qué introducir, pruebe con «exo-open %m».\n'%d' puede ser usado para especificar el dispositivo, '%m' para el punto de montaje."
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
@@ -185,7 +192,7 @@ msgstr "_Ejecutar después de montar:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "ATENCIÓN: ¡Estas opciones son sólo para expertos! ¡Si no sabe para qué sirven, no las toque!"
+msgstr "ATENCIÓN: ¡Estas opciones son solo para expertos! ¡Si no sabe para qué sirven, no las toque!"
 
 #: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
@@ -259,7 +266,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Excluir los siguientes sistemas de ficheros en el menú.\nLa lista esta separada por espacios simples.\nEsto es para que especifique los dispositivos o puntos de montaje correctos.\nUn asterisco (*) puede ser usado como comodín al final de una localización, ej. \"/mnt/*\" para excluir cualquier punto de montaje bajo \"/mnt\".\n"
+msgstr "Excluir los siguientes sistemas de ficheros en el menú.\nLa lista esta separada por espacios simples.\nEsto es para que especifique los dispositivos o puntos de montaje correctos.\nUn asterisco (*) puede ser usado como comodín al final de una localización, ej. «/mnt/*» para excluir cualquier punto de montaje bajo «/mnt».\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
