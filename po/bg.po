@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 06:31+0200\n"
-"PO-Revision-Date: 2014-04-26 06:55+0000\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2014-04-28 13:30+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -115,6 +115,12 @@ msgstr "Устройството \"%s\" вече може да бъде прем
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Възникна грешка. Устройството \"%s\" не може да бъде премахнато!"
+
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "Вашият /etc/fstab не може да бъде прочетен. Това ще направи разширението неефективно."
 
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
