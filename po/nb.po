@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-04-27 17:44+0000\n"
+"PO-Revision-Date: 2014-04-29 23:13+0000\n"
 "Last-Translator: haarek <haarektrans@gmail.com>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/xfce-panel-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr ""
 #: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "Klarte ikke å avmontere enheten «%s»."
 
 #: ../panel-plugin/devices.c:363
 #, c-format
@@ -267,7 +267,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Ekskluder følgende filsystemer fra menyen.\nListen er adskilt med enkle mellomrom.\nDet er opp til deg å angi korrekte enheter eller monteringspunkter.\nEn stjerne (*) kan brukes som en plassholder på slutten av en bane,\nfor eksempel «/mnt/*» for å utelukke monteringspunkter under «/mnt».\n\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
