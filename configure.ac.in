@@ -20,7 +20,7 @@ AC_INIT([xfce4-mount-plugin], [mount_version],
 
 MOUNT_VERSION=mount_version()
 AM_INIT_AUTOMAKE([xfce4-mount-plugin], [$MOUNT_VERSION])
-AM_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 
 AM_MAINTAINER_MODE
 
