@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 06:31+0200\n"
-"PO-Revision-Date: 2014-04-26 14:10+0000\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2014-05-01 07:43+0000\n"
 "Last-Translator: cri <cri.penta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -117,6 +117,12 @@ msgstr "Il dispositivo \"%s\" dovrebbe essere rimovibile senza problemi ora."
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Si è verificato un errore. Il dispositivo \"%s\" non dovrebbe essere rimosso!"
 
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "Il file /etc/fstab non può essere letto. Questo ridurrà drasticamente le funzionalità del plugin."
+
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
 msgstr "->"
@@ -124,7 +130,7 @@ msgstr "->"
 #: ../panel-plugin/mount-plugin.c:223
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s liberi"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -258,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Esclude i seguenti file system dal menu.\nLa lista è separata da spazi semplici.\nÈ necessario specificare i dispositivi o i punti di montaggio corretti. Si può usare un asterisco (*) come segnaposto alla fine del percorso (ad esempio \"/mnt/*\") per escludere qualsiasi punto di montaggio oltre \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
