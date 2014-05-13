@@ -17,10 +17,12 @@ m4_define([mount_version], [mount_version_major().mount_version_minor().mount_ve
 
 AC_INIT([xfce4-mount-plugin], [mount_version],
   [timystery@arcor.de])
+AC_CONFIG_SRCDIR([panel-plugin/mount-plugin.c])
 
 MOUNT_VERSION=mount_version()
-AM_INIT_AUTOMAKE([xfce4-mount-plugin], [$MOUNT_VERSION])
+AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
 
 AM_MAINTAINER_MODE
 
