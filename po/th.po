@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 21:06+0200\n"
-"PO-Revision-Date: 2014-03-21 16:38+0000\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2014-05-28 11:38+0000\n"
 "Last-Translator: theppitak <theppitak@gmail.com>\n"
-"Language-Team: Thai (http://www.transifex.com/projects/p/xfce/language/th/)\n"
+"Language-Team: Thai (http://www.transifex.com/projects/p/xfce-panel-plugins/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,12 +88,12 @@ msgstr "ไม่ได้เมานท์\n"
 #. Plugin:\n\nError executing command."),
 #. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
 #. erroutput);
-#: ../panel-plugin/devices.c:288
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
 msgstr "เมานท์อุปกรณ์ \"%s\" ไม่สำเร็จ"
 
-#: ../panel-plugin/devices.c:303
+#: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
 msgstr "เกิดข้อผิดพลาดขณะเรียกคำสั่ง \"%s\" ที่พ่วงกับการเมานท์"
@@ -101,64 +101,79 @@ msgstr "เกิดข้อผิดพลาดขณะเรียกคำ
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "เลิกเมานท์อุปกรณ์ \"%s\" ไม่สำเร็จ"
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "อุปกรณ์ \"%s\" สามารถถอดออกได้อย่างปลอดภัยแล้ว"
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "เกิดข้อผิดพลาด อุปกรณ์ \"%s\" ไม่ควรถอดออก!"
+
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "ไม่สามารถอ่านแฟ้ม /etc/fstab ได้ ซึ่งจะทำให้ปลั๊กอินนี้ทำงานได้แย่ลงอย่างมาก"
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr " -> "
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s/%s] ว่าง %s"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ไม่ได้เมานท์</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:514
 msgid "devices"
 msgstr "อุปกรณ์ต่างๆ"
 
-#: ../panel-plugin/mount-plugin.c:706
+#: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
 msgstr "ปลั๊กอินเมานท์"
 
-#: ../panel-plugin/mount-plugin.c:711
+#: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
 msgstr "คุณสมบัติ"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:746
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "ตัวเลือกนี้มีประโยชน์และแนะนำให้ใช้ก็ต่อเมื่อคุณระบุ \"sync\" เป็นส่วนหนึ่งของคำสั่ง \"เลิกเมานท์\" เท่านั้น"
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
 msgstr "แสดง_ข้อความหลังจากเลิกเมานท์"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:763
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "คุณสามารถระบุไอคอนที่ต่างออกไปเพื่อแสดงในพาเนลได้"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:770
 msgid "Icon:"
 msgstr "ไอคอน:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:774
 msgid "Select an image"
 msgstr "เลือกรูปภาพ"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:781
 msgid "_General"
 msgstr "_ทั่วไป"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:796
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -166,101 +181,103 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "คำสั่งนี้จะถูกเรียกหลังจากที่เมานท์อุปกรณ์ โดยมีจุดเมานท์ของอุปกรณ์เป็นอาร์กิวเมนต์\nถ้าคุณไม่แน่ใจว่าจะใช้คำสั่งไหน คุณอาจลองใช้ \"exo-open %m\"\n'%d' สามารถใช้แทนอุปกรณ์ และ '%m' ใช้แทนจุดเมานท์"
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
 msgstr "เ_รียกคำสั่งหลังเมานท์:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:829
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "คำเตือน: ตัวเลือกเหล่านี้สำหรับผู้เชี่ยวชาญเท่านั้น! ถ้าคุณไม่ทราบว่าตัวเลือกเหล่านี้มีไว้ทำอะไร ก็ไม่ควรแตะต้อง!"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
 msgstr "_กำหนดคำสั่งเอง"
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:853
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "ผู้ใช้ส่วนใหญ่อาจต้องการแค่เติม \"sudo\" หน้าคำสั่งทั้งสอง หรือเติม \"sync %d &&\" หน้าคำสั่ง \"umount %d\"\n'%d' ใช้แทนอุปกรณ์ และ '%m' ใช้แทนจุดเมานท์"
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
 msgstr "คำสั่งเ_มานท์:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
 msgstr "คำสั่งเ_ลิกเมานท์:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
 msgstr "_คำสั่ง"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:909
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "ใช้ตัวเลือกนี้ถ้าต้องการให้แสดงระบบแฟ้มในเครือข่ายอย่าง NFS, SMBFS, SHFS, และ SSHFS"
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
 msgstr "แสดงระบบแฟ้มในเครือ_ข่าย"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:927
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "ใช้ตัวเลือกนี้ถ้าต้องการดันแผ่นซีดีออกหลังจากเลิกเมานท์ และดึงแผ่นเข้าก่อนเมานท์"
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
 msgstr "ดั_นแผ่นซีดีออก"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "ใช้ตัวเลือกนี้ถ้าต้องการแสดงเพียงจุดเมานท์เท่านั้น"
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
 msgstr "แสดงจุดเ_มานท์เท่านั้น"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:964
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "ตัดท้ายชื่ออุปกรณ์ลงเหลือจำนวนอักขระเท่าที่ระบุในช่องปรับเลข"
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Trim device names: "
 msgstr "ตัดท้ายชื่ออุปกรณ์: "
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:980
 msgid " characters"
 msgstr " อักขระ"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:997
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
-msgstr "ตัดระบบแฟ้มต่อไปนี้ออกจากเมนู\nรายชื่อคั่นด้วยช่องว่าง\nคุณจะระบุอุปกรณ์หรือจุดเมานท์ก็ได้"
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "ตัดระบบแฟ้มต่อไปนี้ออกจากเมนู\nรายชื่อคั่นด้วยช่องว่าง\nคุณจะระบุอุปกรณ์หรือจุดเมานท์ก็ได้\nสามารถใช้ดอกจัน (*) แทนชื่อใดๆ ที่ท้ายพาธได้\nเช่น \"/mnt/*\" จะตัดจุดเมานท์ทั้งหมดใต้ \"/mnt\"\n"
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
 msgstr "_ตัดระบบแฟ้มที่ระบุออก"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1024
 msgid "_File systems"
 msgstr "ระบบแ_ฟ้ม"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "แสดงพาร์ทิชัน/อุปกรณ์ และสามารถเมานท์/เลิกเมานท์ได้"
 
-#: ../panel-plugin/mount-plugin.c:1048
+#: ../panel-plugin/mount-plugin.c:1051
 msgid "Copyright (c) 2005-2012\n"
 msgstr "Copyright (c) 2005-2012\n"
 
