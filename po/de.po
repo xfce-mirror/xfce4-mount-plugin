@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Tobias Bannert, 2014
+# Fabian Nowak, 2005-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-07-04 10:00+0000\n"
+"PO-Revision-Date: 2014-07-12 21:04+0200\n"
 "Last-Translator: Tobias Bannert\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce-panel-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +97,7 @@ msgstr "Gerät »%s« konnte nicht eingehängt werden."
 #: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Fehler beim Ausführen des Befehls zum Einhängen »%s«."
+msgstr "Fehler beim Ausführen des Befehls »%s« nach dem Einhängen."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -124,7 +125,7 @@ msgstr "Ihre /etc/fstab kann nicht gelesen werden. Das wird die Fähigkeiten der
 
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
-msgstr "→"
+msgstr " → "
 
 #: ../panel-plugin/mount-plugin.c:223
 #, c-format
@@ -155,7 +156,7 @@ msgstr "Das ist nur sinnvoll und empfohlen, falls »sync« als Teil des »unmoun
 
 #: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
-msgstr "_Benachrichtigung nach dem Aushängen"
+msgstr "Be_nachrichtigung nach dem Aushängen"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -287,4 +288,4 @@ msgstr "Geräte einhängen"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Alle Geräte die eingehängt werden können werden angezeigt und bei Mausklick ein/ausgehängt."
+msgstr "Alle einhängbaren Geräte werden angezeigt und bei Mausklick ein/ausgehängt."
