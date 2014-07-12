@@ -184,7 +184,7 @@ msgstr "Dieser Befehl wird mit dem Einhängepunkt des Geräts als Argument nach 
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
-msgstr "Nach dem _Einhängen ausführen:"
+msgstr "_Nach dem Einhängen ausführen:"
 
 #: ../panel-plugin/mount-plugin.c:829
 msgid ""
@@ -194,7 +194,7 @@ msgstr "ACHTUNG: Diese Optionen sind nur für Experten gedacht. Falls Sie nicht 
 
 #: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
-msgstr "Be_nutzerdefinierte Befehle"
+msgstr "Benut_zerdefinierte Befehle"
 
 #: ../panel-plugin/mount-plugin.c:853
 #, c-format
