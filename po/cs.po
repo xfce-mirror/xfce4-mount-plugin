@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Alois Nešpor <info@aloisnespor.info>, 2014
+# Alois Nešpor <info@aloisnespor.info>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-05-28 14:17+0000\n"
+"PO-Revision-Date: 2014-08-31 21:42+0000\n"
 "Last-Translator: Alois Nešpor <info@aloisnespor.info>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +121,7 @@ msgstr "Došlo k chybě. Zařízení \"%s\" by nemělo být odebráno!"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Váš /etc/fstab nemohl být načten.  To může značně omezovat schopnosti pluginů."
 
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
@@ -263,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Vyloučí následující souborové systémy z menu.\nSeznam je oddělen jednoduchými mezerami.\nJe na vás, abyste zadali správné zařízení nebo přípojný bod.\nHvězdičku (*) je možné použít jako zástupný symbol v cestě, například \"/mnt/*\" vyloučí všechny přípojné body v \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
