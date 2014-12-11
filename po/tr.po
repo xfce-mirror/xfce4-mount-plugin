@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014
 # Necdet Yücel <necdetyucel@gmail.com>, 2013
 # zeki <zeki.ozguryazilim@gmail.com>, 2014
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-07-15 06:38+0000\n"
-"Last-Translator: zeki <zeki.ozguryazilim@gmail.com>\n"
+"PO-Revision-Date: 2014-12-11 22:59+0000\n"
+"Last-Translator: Natavan Mirzayeva <mirzayevanatavan@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xfce-panel-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -264,7 +265,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Aşağıda gösterilen dosya sistemlerini menünün dışında tutunuz.\nListe basit  boşluklarla ayrılmıştır.\nDoğru cihazları ve bağlama noktalarını belirtmek size kalmıştır .\nYıldız işareti (*) yolun sonunda yer tutucu olarak kullanılabilir.\nÖrneğin, \"/mnt\" uzantısının aşağısındaki bağlantı noktalarını \"/mnt/*\"  uzantısının dışında tutar.\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
