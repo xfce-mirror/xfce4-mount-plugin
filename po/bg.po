@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# cybercop <cybercop_montana@abv.bg>, 2014
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2014
+# Lyubomir Vasilev, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-04-28 13:30+0000\n"
-"Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
+"PO-Revision-Date: 2015-02-23 12:57+0000\n"
+"Last-Translator: Lyubomir Vasilev\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,12 +92,12 @@ msgstr "не е монтиран\n"
 #: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr "Неуспешно монтиране на устройство \"%s\"."
+msgstr "Неуспешно монтиране на устройство „%s“"
 
 #: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Грешка при изпълнението на команда за монтиране \"%s\"."
+msgstr "Грешка при изпълнението на команда за монтиране „%s“."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -104,17 +105,17 @@ msgstr "Грешка при изпълнението на команда за м
 #: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr "Неуспешно демонтиране на устройство \"%s\"."
+msgstr "Неуспешно демонтиране на устройство „%s“."
 
 #: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "Устройството \"%s\" вече може да бъде премахнато безопасно."
+msgstr "Устройството „%s“ вече може да бъде премахнато безопасно."
 
 #: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Възникна грешка. Устройството \"%s\" не може да бъде премахнато!"
+msgstr "Възникна грешка. Устройството „%s“ не трябва да бъде премахвано!"
 
 #: ../panel-plugin/devices.c:443
 msgid ""
@@ -151,7 +152,7 @@ msgstr "Свойства"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Препоръчително е да използвате \"sync\" като част от командният ред  \"unmount\"."
+msgstr "Препоръчително е да използвате „sync“ като част от командата „unmount“."
 
 #: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
@@ -179,7 +180,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Тази команда ще бъде изпълнена след монтиране на устройството с точката на монтиране като аргумент.\nако не сте сигурни, какво да въведете, опитайте \"exo-open %m\".\n'%d' може да бъде използвано за посочване на устройството, '%m' за точката на монтиране."
+msgstr "Тази команда ще бъде изпълнена след монтиране на устройството с точката на монтиране като аргумент.\nАко не сте сигурни какво да въведете, опитайте „exo-open %m“.\n„%d“ може да бъде използвано за посочване на устройството, а „%m“ за точката на монтиране."
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
@@ -200,7 +201,7 @@ msgstr "Потребителски команди"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Повечето потребители само ще поискат да се добави \"sudo\" в двете команди или преди това \"sync %d &&\" към командата \"unmount %d\".\n'%d' се използва за задаване на устройството, '%m' за точка на монтиране."
+msgstr "За повечето потребители може да е нужно само да се постави „sudo“ пред двете команди или „sync %d &&“ пред командата „unmount %d“.\n„%d“ се използва за задаване на устройството, а „%m“ за точката на монтиране."
 
 #: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
@@ -263,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Премахване на следните файлови системи от менюто.\nСписъкът е разделен с прости интервали.\nТрябва да зададете правилните устройства или точки на монтиране.\nЗвездичката (*) може да се използва, като заместител в края на\nпътя, например, \"/mnt/*\" за да се изключат всякакви точки на монтиране \nпо- долу \"/mnt\".\n"
+msgstr "Премахване на следните файлови системи от менюто.\nСписъкът е разделен с обикновени интервали.\nТрябва да зададете правилните устройства или точки на монтиране.\nЗвездичката (*) може да се използва, като заместител в края на\nпътя, например, „/mnt/*“ за да се изключат всякакви точки на монтиране \nпод „/mnt“.\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
