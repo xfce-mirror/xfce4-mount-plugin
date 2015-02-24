@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
-# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
+# enolp <enolp@softastur.org>, 2015
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
+# Ḷḷumex03 <tornes@opmbx.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2014-05-08 07:45+0000\n"
-"Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
+"PO-Revision-Date: 2015-02-24 01:38+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +68,7 @@ msgstr "triba de sistema de ficheros:    %s\n"
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "puntu de montaxe real:  %s\n"
+msgstr "puntu de montaxe actual:  %s\n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -97,7 +98,7 @@ msgstr "Fallu al montar el preséu \"%s\"."
 #: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Erru executando comandu al montar \"%s\"."
+msgstr "Fallu executando'l comandu al montar \"%s\"."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
@@ -110,12 +111,12 @@ msgstr "Fallu al desmontar el preséu \"%s\"."
 #: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
-msgstr "El preséu \"%s\" debería agora estrayese con seguridá."
+msgstr "Agora'l preséu \"%s\" debería estrayese con seguridá."
 
 #: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
-msgstr "Asoceció un erru. ¡El preséu \"%s\" nun debería estrayese!"
+msgstr "Asoceció un fallu. ¡El preséu \"%s\" nun debería estrayese!"
 
 #: ../panel-plugin/devices.c:443
 msgid ""
@@ -205,11 +206,11 @@ msgstr "La mayoría de los usuarios namái querrán amestar \"sudo\" delantre de
 
 #: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
-msgstr "Comandu _montar:"
+msgstr "Comandu de _montaxe:"
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
-msgstr "Comandu _desmontar:"
+msgstr "Comandu de _desmontaxe:"
 
 #: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
@@ -219,7 +220,7 @@ msgstr "_Comandos"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Activa esta opción p'amosar tamién sistemes de ficheros en rede como NFS, SMBFS, SHFS y SSHFS."
+msgstr "Activa esta opción p'amosar tamién sistemes de ficheros de rede como NFS, SMBFS, SHFS y SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
@@ -229,7 +230,7 @@ msgstr "Amosar sistemes de ficheros en _rede"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Activa esta opción pa espulsar tamién una unidá de CD dempués de desmontala y pa inxertar enantes de montar."
+msgstr "Activa esta opción pa espulsar tamién una unidá de CD dempués de desmontala y pa inxertala enantes de montar."
 
 #: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
@@ -237,7 +238,7 @@ msgstr "_Espulsar unidaes de CD"
 
 #: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Activa esta opción pa que namái s'amuesen puntos de montaxe."
+msgstr "Activa esta opción pa que namái s'amuesen los puntos de montaxe."
 
 #: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
