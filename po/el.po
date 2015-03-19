@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2015-03-19 00:17+0000\n"
+"PO-Revision-Date: 2015-03-19 09:08+0000\n"
 "Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/xfce-panel-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -122,7 +122,7 @@ msgstr "Προέκυψε ένα σφάλμα. Η συσκευή \"%s\" δεν π
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Αδυναμία ανάγνωσης του /etc/fstab. Αυτό θα υποβαθμίσει σοβαρά τις ικανότητες των προσθέτων."
 
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
@@ -265,7 +265,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Να εξαιρεθούν τα ακόλουθα συστήματα αρχείων από το μενού.\nΗ λίστα διαχωρίζεται με απλά κενά.\nΑπό εσάς εξαρτάται ώστε να καθορίσετε τις σωστές συσκευές ή τα σημεία προσάρτησης.\nΈνας αστερίσκος (*) μπορεί να χρησιμοποιηθεί ως χαρακτήρας στο τέλος\nτης διαδρομής, πχ, \"/mnt/*\" για να αποκλείσει σημεία προσάρτησης κάτω από το \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
