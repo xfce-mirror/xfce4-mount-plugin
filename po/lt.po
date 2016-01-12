@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015
+# Moo, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2015-09-20 20:11+0000\n"
+"PO-Revision-Date: 2016-01-12 22:54+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Išbraukti šias failų sistemas iš meniu.\nSąrašas yra atskirtas paprastais tarpais.\nJūs turite įrašyti teisingus įrenginius ar prijungimo taškus.\nŽvaigždutė (*) kelio gale gali būti naudojama kaip vietaženklis,\npvz., \"/mnt/*\", kad išbraukti bet kokius prijungimo taškus žemiau \"/mnt\".\n"
+msgstr "Išbraukti šias failų sistemas iš meniu.\nSąrašas yra atskirtas paprastais tarpais.\nJūs turite įrašyti teisingus įrenginius ar prijungimo taškus.\nŽvaigždutė (*) kelio gale gali būti naudojama kaip vietaženklis,\npvz., \"/mnt/*\", kad būtų išbraukti bet kokie prijungimo taškai žemiau \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
