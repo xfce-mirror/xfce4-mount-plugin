@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Elishai Eliyahu <e1907@mm.st>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2016-01-20 20:40+0000\n"
+"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
+"Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f B"
+
+#: ../panel-plugin/devices.c:72
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../panel-plugin/devices.c:73
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: ../panel-plugin/devices.c:74
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../panel-plugin/devices.c:83
+#, c-format
+msgid "size:                %g\n"
+msgstr "גודל: %g\n"
+
+#: ../panel-plugin/devices.c:84
+#, c-format
+msgid "used size:           %g\n"
+msgstr "גודל בשימוש: %g\n"
+
+#: ../panel-plugin/devices.c:85
+#, c-format
+msgid "available siz:       %g\n"
+msgstr ""
+
+#: ../panel-plugin/devices.c:86
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "אחוז בשימוש: %d\n"
+
+#: ../panel-plugin/devices.c:87
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "סוג מערכת קבצים: %s\n"
+
+#: ../panel-plugin/devices.c:88
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr ""
+
+#: ../panel-plugin/devices.c:172
+#, c-format
+msgid "disk: %s\n"
+msgstr "כונן: %s\n"
+
+#: ../panel-plugin/devices.c:173
+#, c-format
+msgid "mount point: %s\n"
+msgstr "נקודת הצבה: %s\n"
+
+#: ../panel-plugin/devices.c:177
+#, c-format
+msgid "not mounted\n"
+msgstr "לא מוצב\n"
+
+#. show error message if smth failed
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
+#: ../panel-plugin/devices.c:291
+#, c-format
+msgid "Failed to mount device \"%s\"."
+msgstr "נכשל להציב התקן \"%s\" ."
+
+#: ../panel-plugin/devices.c:306
+#, c-format
+msgid "Error executing on-mount command \"%s\"."
+msgstr "שגיאה בביצוע פקודה בהצבה \"%s\"."
+
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
+#. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
+#: ../panel-plugin/devices.c:360
+#, c-format
+msgid "Failed to umount device \"%s\"."
+msgstr "נכשל לבטל הצבת התקן \"%s\"."
+
+#: ../panel-plugin/devices.c:363
+#, c-format
+msgid "The device \"%s\" should be removable safely now."
+msgstr "ההתקן \"%s\" אמור להיות בטוח לניתוק עכשיו."
+
+#: ../panel-plugin/devices.c:365
+#, c-format
+msgid "An error occurred. The device \"%s\" should not be removed!"
+msgstr "אירעה שגיאה. אסור לנתק את ההתקן \"%s\" !"
+
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "הנתיב /etc/fstab שלך לא ניתן לקריאה. זה ידרדר באופן חמור את יכולות התוסף."
+
+#: ../panel-plugin/mount-plugin.c:171
+msgid " -> "
+msgstr " -> "
+
+#: ../panel-plugin/mount-plugin.c:223
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s/%s] %s פנוי"
+
+#: ../panel-plugin/mount-plugin.c:242
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">לא מוצב</span>"
+
+#: ../panel-plugin/mount-plugin.c:514
+msgid "devices"
+msgstr "התקנים"
+
+#: ../panel-plugin/mount-plugin.c:707
+msgid "Mount Plugin"
+msgstr "תוסף הצבה"
+
+#: ../panel-plugin/mount-plugin.c:712
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: ../panel-plugin/mount-plugin.c:746
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr "זה שימושי ומומלץ רק אם אתה מציין \"sync\" כחלק ממחרוזת הפקודה \"unmount\"."
+
+#: ../panel-plugin/mount-plugin.c:751
+msgid "Show _message after unmount"
+msgstr "הצג ־מסר לאחר ביטול הצבה"
+
+#: ../panel-plugin/mount-plugin.c:763
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "אתה יכול לציין אייקון שונה להצגה בפאנל."
+
+#: ../panel-plugin/mount-plugin.c:770
+msgid "Icon:"
+msgstr "אייקון:"
+
+#: ../panel-plugin/mount-plugin.c:774
+msgid "Select an image"
+msgstr "בחר תמונה"
+
+#: ../panel-plugin/mount-plugin.c:781
+msgid "_General"
+msgstr "כללי"
+
+#: ../panel-plugin/mount-plugin.c:796
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:806
+msgid "_Execute after mounting:"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:829
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:834
+msgid "_Custom commands"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:853
+#, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:862
+msgid "_Mount command:"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:868
+msgid "_Unmount command:"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:894
+msgid "_Commands"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:909
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:914
+msgid "Display _network file systems"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:927
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:932
+msgid "_Eject CD-drives"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:945
+msgid "Activate this option to only have the mount points be displayed."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:949
+msgid "Display _mount points only"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:964
+msgid ""
+"Trim the device names to the number of characters specified in the spin "
+"button."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:971
+msgid "Trim device names: "
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:980
+msgid " characters"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:997
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:1009
+msgid "E_xclude specified file systems"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:1024
+msgid "_File systems"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:1049
+msgid "Show partitions/devices and allow to mount/unmount them"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:1051
+msgid "Copyright (c) 2005-2012\n"
+msgstr ""
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
+msgid "Mount devices"
+msgstr "הצב התקנים"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr "מציג את כל ההתקנים הניתנים להצבה ומבצע (או מבטל) הצבה שלהם לפי דרישה."
