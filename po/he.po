@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2016-01-20 20:40+0000\n"
+"PO-Revision-Date: 2016-02-05 09:49+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "גודל בשימוש: %g\n"
 #: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available siz:       %g\n"
-msgstr ""
+msgstr "גודל זמין: %g \n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -66,7 +66,7 @@ msgstr "סוג מערכת קבצים: %s\n"
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr ""
+msgstr "נקודת הצבה בפועל: %s \n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -179,82 +179,82 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
+msgstr "פקודה זו תופעל לאחר הצבת ההתקן עם נקודת ההצבה של ההתקן כארגומנט.\nאם אתה לא בטוח מה להכניס, נסה \"exo-open %m\". \nניתן להשתמש ב-'%d' לציון ההתקן, וב-'%m' לנקודת ההצבה."
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
-msgstr ""
+msgstr "הפעל לאחר הצבה:"
 
 #: ../panel-plugin/mount-plugin.c:829
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
+msgstr "אזהרה: אפשרויות אלו הן למומחים בלבד! אם אתה לא יודע למה הן טובות, אל תיגע!"
 
 #: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
-msgstr ""
+msgstr "פקודות מותאמות אישית"
 
 #: ../panel-plugin/mount-plugin.c:853
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
+msgstr "רוב המשתמשים ירצו רק לבצע \"sudo\" לשתי הפקודות או לבצע \"sync %d&&\" לפקודת \"unmount %d\".\n'%d' משמש לציון ההתקן, '%m' לנקודת ההצבה."
 
 #: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
-msgstr ""
+msgstr "פקודת הצבה:"
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
-msgstr ""
+msgstr "פקודת ביטול הצבה:"
 
 #: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
-msgstr ""
+msgstr "פקודות"
 
 #: ../panel-plugin/mount-plugin.c:909
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
+msgstr "הפעל אפשרות זו להציג גם מערכות קבצי רשת כמו NFS, SMBFS, SHFS, SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
-msgstr ""
+msgstr "הצג מערכות קבצי רשת"
 
 #: ../panel-plugin/mount-plugin.c:927
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr ""
+msgstr "הפעל אפשרות זו כדי גם לפלוט את כונן ה-CD לאחר ביטול הצבה ולהכניס לפני הצבה."
 
 #: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
-msgstr ""
+msgstr "פלוט כונני CD "
 
 #: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
+msgstr "הפעל אפשרות זו כדי שרק נקודות ההצבה יוצגו."
 
 #: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
-msgstr ""
+msgstr "הצג רק נקודות הצבה "
 
 #: ../panel-plugin/mount-plugin.c:964
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "קצץ את שמות ההתקנים למספר התווים המצוין בכפתור ה-spin. "
 
 #: ../panel-plugin/mount-plugin.c:971
 msgid "Trim device names: "
-msgstr ""
+msgstr "קצץ שמות התקנים:"
 
 #: ../panel-plugin/mount-plugin.c:980
 msgid " characters"
-msgstr ""
+msgstr "תווים"
 
 #: ../panel-plugin/mount-plugin.c:997
 msgid ""
@@ -263,23 +263,23 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "אל תכלול בתפריט את מערכות הקבצים הבאות.\nהרשימה מופרדת עם רווחים פשוטים.\nזה תלוי בך לציין את ההתקנים או נקודות ההצבה הנכונים.\nכוכבית (*) יכולה לשמש כשומרת מקום בסוף של\nנתיב, לדוגמה, \"/mnt/*\" כדי לא לכלול נקודות הצבה מתחת ל-\"/mnt\". \n"
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "אל תכלול מערכות קבצים שצוינו"
 
 #: ../panel-plugin/mount-plugin.c:1024
 msgid "_File systems"
-msgstr ""
+msgstr "מערכות קבצים"
 
 #: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "הצג מחיצות/התקנים ואפשר להציב/לבטל הצבה שלהם"
 
 #: ../panel-plugin/mount-plugin.c:1051
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "זכות יוצרים (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
