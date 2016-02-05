@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Elishai Eliyahu <e1907@mm.st>, 2016
+# GenghisKhan <genghiskhan@gmx.ca>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2016-02-05 09:49+0000\n"
-"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
+"PO-Revision-Date: 2016-02-05 14:53+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -155,7 +156,7 @@ msgstr "זה שימושי ומומלץ רק אם אתה מציין \"sync\" כח
 
 #: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
-msgstr "הצג ־מסר לאחר ביטול הצבה"
+msgstr "הצג _מסר לאחר ביטול הצבה"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -171,7 +172,7 @@ msgstr "בחר תמונה"
 
 #: ../panel-plugin/mount-plugin.c:781
 msgid "_General"
-msgstr "כללי"
+msgstr "_כללי"
 
 #: ../panel-plugin/mount-plugin.c:796
 #, c-format
@@ -183,7 +184,7 @@ msgstr "פקודה זו תופעל לאחר הצבת ההתקן עם נקודת 
 
 #: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
-msgstr "הפעל לאחר הצבה:"
+msgstr "ה_פעל לאחר הצבה:"
 
 #: ../panel-plugin/mount-plugin.c:829
 msgid ""
@@ -193,7 +194,7 @@ msgstr "אזהרה: אפשרויות אלו הן למומחים בלבד! אם �
 
 #: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
-msgstr "פקודות מותאמות אישית"
+msgstr "פקודות _מותאמות אישית"
 
 #: ../panel-plugin/mount-plugin.c:853
 #, c-format
@@ -204,15 +205,15 @@ msgstr "רוב המשתמשים ירצו רק לבצע \"sudo\" לשתי הפק�
 
 #: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
-msgstr "פקודת הצבה:"
+msgstr "פקודת הצ_בה:"
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
-msgstr "פקודת ביטול הצבה:"
+msgstr "פקודת _ביטול הצבה:"
 
 #: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
-msgstr "פקודות"
+msgstr "_פקודות"
 
 #: ../panel-plugin/mount-plugin.c:909
 msgid ""
@@ -222,7 +223,7 @@ msgstr "הפעל אפשרות זו להציג גם מערכות קבצי רשת 
 
 #: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
-msgstr "הצג מערכות קבצי רשת"
+msgstr "הצג מערכות קבצי _רשת"
 
 #: ../panel-plugin/mount-plugin.c:927
 msgid ""
@@ -232,7 +233,7 @@ msgstr "הפעל אפשרות זו כדי גם לפלוט את כונן ה-CD ל
 
 #: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
-msgstr "פלוט כונני CD "
+msgstr "_פלוט כונני CD "
 
 #: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
@@ -240,7 +241,7 @@ msgstr "הפעל אפשרות זו כדי שרק נקודות ההצבה יוצ�
 
 #: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
-msgstr "הצג רק נקודות הצבה "
+msgstr "הצג רק נקודות ה_צבה "
 
 #: ../panel-plugin/mount-plugin.c:964
 msgid ""
@@ -267,11 +268,11 @@ msgstr "אל תכלול בתפריט את מערכות הקבצים הבאות.\
 
 #: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
-msgstr "אל תכלול מערכות קבצים שצוינו"
+msgstr "_אל תכלול מערכות קבצים שצוינו"
 
 #: ../panel-plugin/mount-plugin.c:1024
 msgid "_File systems"
-msgstr "מערכות קבצים"
+msgstr "מערכות _קבצים"
 
 #: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
