@@ -34,7 +34,7 @@ AC_MINIX
 dnl Check for basic programs
 AC_PROG_CC
 AC_PROG_INSTALL
-AC_PROG_INTLTOOL
+IT_PROG_INTLTOOL([0.35.0])
 
 dnl Initialize libtool
 LT_PREREQ([2.2.6])
