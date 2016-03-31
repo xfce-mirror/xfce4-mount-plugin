@@ -1,24 +1,22 @@
-# Catalan translation of the xfce4-mount-plugin package.
-# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005-2007 Fabian Nowak.
-# This file is distributed under the same license as the xfce4-mount-plugin package.
-# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2006-2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Davidmp <medipas@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 22:41+0200\n"
-"PO-Revision-Date: 2009-03-11 12:49+0100\n"
-"Last-Translator: Harald Servat <redcrash@gmail.com>\n"
-"Language-Team: Catalan <xfce-i18n@xfce.org>\n"
-"Language: ca\n"
+"POT-Creation-Date: 2014-04-27 00:31+0200\n"
+"PO-Revision-Date: 2016-03-31 14:52+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: Catalan\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -86,214 +84,202 @@ msgid "not mounted\n"
 msgstr "no muntat\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-#: ../panel-plugin/devices.c:288
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
-msgstr ""
+msgstr "No s'ha pogut muntar el dispositiu \"%s\"."
 
-#: ../panel-plugin/devices.c:303
-#, fuzzy, c-format
+#: ../panel-plugin/devices.c:306
+#, c-format
 msgid "Error executing on-mount command \"%s\"."
-msgstr "Connector per muntar: s’ha produït un error en executar l'ordre."
+msgstr "Error executant l'odre on-mount \"%s\"."
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
-msgstr ""
+msgstr "Ha fallat desmuntar el dispositiu \"%s\"."
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "El dispositiu «%s» ja es pot extreure de forma segura."
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "S'ha produït un error. El dispositiu \"%s\" no es pot treure!"
 
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "No s'ha pogut llegir el fitxer /etc/fstab. Això pot reduir greument la capacitat del connector."
+
 #: ../panel-plugin/mount-plugin.c:171
 msgid " -> "
-msgstr ""
+msgstr " -> "
 
 #: ../panel-plugin/mount-plugin.c:223
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s lliure"
 
 #: ../panel-plugin/mount-plugin.c:242
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">no muntat</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:514
 msgid "devices"
 msgstr "dispositius"
 
-#: ../panel-plugin/mount-plugin.c:706
+#: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
 msgstr "Connector per muntar dispositius"
 
-#: ../panel-plugin/mount-plugin.c:711
-#, fuzzy
+#: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
-msgstr "Edita les propietats"
+msgstr "Propietats"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:746
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Això només és útil i recomanable si heu especificat «sync» com part de "
-"l'ordre «umount»."
+msgstr "Això només és útil i recomanable si heu especificat «sync» com part de l'ordre «umount»."
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:751
 msgid "Show _message after unmount"
 msgstr "_Mostra els missatges després de desmuntar"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:763
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Podeu especificar la icona a mostar al quadre."
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:770
 msgid "Icon:"
 msgstr "Icona:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:774
 msgid "Select an image"
 msgstr "Seleccioneu una imatge"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:781
 msgid "_General"
 msgstr "_General"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:796
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Aquesta ordre s'executarà després de muntar el dispositiu amb el punt de "
-"muntatge del dispositiu com argument.\n"
-"Si no sabeu que posar podeu provar amb «exo-open %m».\n"
-"«%d» es pot emprar per indicar el dispositiu i «%m» pel punt de muntatge."
+msgstr "Aquesta ordre s'executarà després de muntar el dispositiu amb el punt de muntatge del dispositiu com argument.\nSi no sabeu que posar podeu provar amb «exo-open %m».\n«%d» es pot emprar per indicar el dispositiu i «%m» pel punt de muntatge."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:806
 msgid "_Execute after mounting:"
 msgstr "_Executa després de muntar:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:829
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"ADVERTÈNCIA: Aquestes opcions són per usuaris experts.  Si no sabeu per què "
-"són millor que no les toqueu."
+msgstr "ADVERTÈNCIA: Aquestes opcions són per usuaris experts.  Si no sabeu per què són millor que no les toqueu."
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:834
 msgid "_Custom commands"
 msgstr "_Ordres personalitzades"
 
-# Traduit "unmount" per «umount», s'hauria de comprovar.
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:853
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Molts usuaris només voldran afegir-li «sudo» al inici a ambdós ordres o "
-"«sync %d &&» a l'ordre «umount %d».\n"
-"«%d» s'empra per indicar el dispositiu i «%m» pel punt de muntatge."
+msgstr "Molts usuaris només voldran afegir-li «sudo» al inici a ambdós ordres o «sync %d &&» a l'ordre «umount %d».\n«%d» s'empra per indicar el dispositiu i «%m» pel punt de muntatge."
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
 msgstr "Ordre de _muntatge:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
 msgstr "Ordre per desm_untar:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:894
 msgid "_Commands"
 msgstr "_Ordres"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:909
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Activeu aquesta opció per veure xarxes de l'estil de NFS, SBMFS, SHFS i SSHFS"
+msgstr "Activeu aquesta opció per veure xarxes de l'estil de NFS, SBMFS, SHFS i SSHFS"
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:914
 msgid "Display _network file systems"
 msgstr "Mostra també els sistemes de fitxers de _xarxa."
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:927
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Activeu aquesta opció i també podreu obrir la safata de CD després desmuntar "
-"i per introduir abans de muntar-lo."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Activeu aquesta opció i també podreu obrir la safata de CD després desmuntar i per introduir abans de muntar-lo."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
 msgstr "_Extreu la unitat de CD"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:945
 msgid "Activate this option to only have the mount points be displayed."
-msgstr ""
-"Activeu aquesta opció per tenir tant sols tenir els punts de muntatge "
-"mostrats."
+msgstr "Activeu aquesta opció per tenir tant sols tenir els punts de muntatge mostrats."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:949
 msgid "Display _mount points only"
 msgstr "Mostra tant sols els punts de _muntatge"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:964
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Retalla els noms dels dispositius amb el nombre de caràcters especificats al botó de girar."
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:971
 msgid "Trim device names: "
-msgstr ""
+msgstr "Retalla els noms dels dispositius:"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:980
 msgid " characters"
-msgstr ""
+msgstr "caràcters"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:997
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
-msgstr ""
-"Exclou els següents sistemes de fitxers del menú.\n"
-"La llista es separa per espais normals.\n"
-"A vos us correspon identificar els dispositius correctes o punts de muntatge."
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "Exclou els sistemes de fitxers següents del menú.\nLa llista està separat per espais simples.\nEspecificar els dispositius o els punts de muntatge correctes és cosa vostra.\nUn asterisc (*) es pot utilitzar com a marcador de posició a l'extrem\nd'un camí, per exemple: \"/mnt/*\" per excloure qualsevol punt de muntatge a continuació de \"/mnt\".\n"
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:1009
 msgid "E_xclude specified file systems"
 msgstr "E_xclou els sistemes de fitxers especificats"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1024
 msgid "_File systems"
 msgstr "Sistema de _fitxers"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Mostra particions i dispositius permet muntar-los i desmuntar-los"
 
-#: ../panel-plugin/mount-plugin.c:1048
+#: ../panel-plugin/mount-plugin.c:1051
 msgid "Copyright (c) 2005-2012\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -302,18 +288,3 @@ msgstr "Dispositius muntables"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Mostra tots els dispositius muntables i (des)muntals a petició."
-
-#~ msgid "Mount Plugin: Error executing command."
-#~ msgstr "Connector per muntar: s’ha produït un error en executar l'ordre."
-
-#~ msgid "size : %g\n"
-#~ msgstr "mida: %g\n"
-
-#~ msgid "<b>Commands</b>"
-#~ msgstr "<b>Ordres</b>"
-
-#~ msgid "Specify own commands"
-#~ msgstr "Especifiqueu ordres propies"
-
-#~ msgid "<b>General</b>"
-#~ msgstr "<b>General</b>"
