@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-04-27 00:31+0200\n"
-"PO-Revision-Date: 2016-05-02 21:03+0000\n"
+"PO-Revision-Date: 2016-05-03 16:28+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -205,7 +205,7 @@ msgstr "La majoria dels usuaris únicament voldran afegir-hi «sudo» a l'inici 
 
 #: ../panel-plugin/mount-plugin.c:862
 msgid "_Mount command:"
-msgstr "Ordre de _muntatge:"
+msgstr "Ordre per _muntar:"
 
 #: ../panel-plugin/mount-plugin.c:868
 msgid "_Unmount command:"
@@ -229,7 +229,7 @@ msgstr "Mostra els sistemes de fitxers de _xarxa"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Activeu aquesta opció i també podreu obrir la safata de CD després desmuntar i per introduir abans de muntar-lo."
+msgstr "Activeu aquesta opció també per obrir la safata de la unitat de CD després de desmuntar i per inserir abans de muntar."
 
 #: ../panel-plugin/mount-plugin.c:932
 msgid "_Eject CD-drives"
@@ -247,11 +247,11 @@ msgstr "Mostra tant sols els punts de _muntatge"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr "Retalla els noms dels dispositius amb el nombre de caràcters especificats al botó de girar."
+msgstr "Escurça els noms dels dispositius amb el nombre de caràcters especificats al botó de girar."
 
 #: ../panel-plugin/mount-plugin.c:971
 msgid "Trim device names: "
-msgstr "Retalla els noms dels dispositius:"
+msgstr "Escurça els noms dels dispositius:"
 
 #: ../panel-plugin/mount-plugin.c:980
 msgid " characters"
@@ -276,7 +276,7 @@ msgstr "Sistema de _fitxers"
 
 #: ../panel-plugin/mount-plugin.c:1049
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Mostra particions i dispositius permet muntar-los i desmuntar-los"
+msgstr "Mostra les particions/dispositius i permet muntar-los i desmuntar-los"
 
 #: ../panel-plugin/mount-plugin.c:1051
 msgid "Copyright (c) 2005-2012\n"
