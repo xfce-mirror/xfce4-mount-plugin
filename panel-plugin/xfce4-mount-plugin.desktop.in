@@ -6,3 +6,4 @@ _Comment=Shows all mountable devices and (un)mounts them on request.
 Icon=drive-harddisk
 X-XFCE-Internal=FALSE
 X-XFCE-Module=mount
+X-XFCE-API=2.0

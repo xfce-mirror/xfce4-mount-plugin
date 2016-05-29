@@ -34,6 +34,11 @@ void format_LVM_name (const char *disk_device, gchar **formatted_diskname);
 #endif
 #endif
 
+#define gtk_hbox_new(homogeneous, spacing) \
+        gtk_box_new(GTK_ORIENTATION_HORIZONTAL, spacing)
+
+#define gtk_vbox_new(homogeneous, spacing) \
+        gtk_box_new(GTK_ORIENTATION_VERTICAL, spacing)
 
 static void
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
@@ -164,7 +169,7 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
           else
             formatted_diskname = g_strdup(disk->device);
         }
-        
+
         if (mounter->exclude_devicenames)
             dd->label_disk = gtk_label_new (disk->mount_point);
         else
@@ -176,7 +181,7 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         /*change to uniform label size*/
         /*gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32); */
         /* gtk_label_set_justify(GTK_LABEL(dd->label_disk),GTK_JUSTIFY_LEFT); */
-        gtk_misc_set_alignment(GTK_MISC(dd->label_disk),0.0, 0.5);
+        gtk_widget_set_valign(dd->label_disk,GTK_ALIGN_CENTER);
         gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
 
         dd->label_mount_info = gtk_label_new("");
@@ -185,7 +190,8 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         gtk_label_set_use_markup(GTK_LABEL(dd->label_mount_info),TRUE);
         /* gtk_label_set_justify (GTK_LABEL(dd->label_mount_info),
                                GTK_JUSTIFY_RIGHT); */
-        gtk_misc_set_alignment(GTK_MISC(dd->label_mount_info),1.0, 0.5);
+        gtk_widget_set_halign((dd->label_mount_info),GTK_ALIGN_END);
+        gtk_widget_set_valign((dd->label_mount_info),GTK_ALIGN_CENTER);
         gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_info,TRUE,TRUE,0);
 
         dd->progress_bar = gtk_progress_bar_new();
@@ -400,7 +406,7 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
         mt->include_NFSs = atoi(xfce_rc_read_entry(rc, "include_NFSs", NULL));
     else
         mt->include_NFSs = xfce_rc_read_bool_entry(rc, "include_networked_filesystems", FALSE);
-        
+
     if (xfce_rc_has_entry(rc, "trim_devicenames"))
         mt->trim_devicenames = xfce_rc_read_bool_entry(rc, "trim_devicenames", FALSE);
 
@@ -492,11 +498,6 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     mounter->plugin = plugin;
 
-    if (!tooltips)
-    {
-        tooltips = gtk_tooltips_new();
-    }
-
     /*plugin button */
 
     /*get the data*/
@@ -511,8 +512,7 @@ create_mounter_control (XfcePanelPlugin *plugin)
     gtk_container_add (GTK_CONTAINER(mounter->button), mounter->image);
     gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
 
-    gtk_tooltips_set_tip (tooltips, GTK_WIDGET(mounter->button), _("devices"),
-                         NULL);
+    gtk_widget_set_tooltip_text( GTK_WIDGET(mounter->button), _("devices"));
 
     g_signal_connect (G_OBJECT(mounter->button), "button_press_event",
                       G_CALLBACK(on_button_press), mounter);
@@ -573,10 +573,10 @@ mounter_apply_options (t_mounter_dialog *md)
 
     mt->exclude_devicenames = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_exclude_devicenames));
-            
+
     mt->trim_devicenames = gtk_toggle_button_get_active
             (GTK_TOGGLE_BUTTON(md->show_trim_devicenames));
-            
+
     mt->trim_devicename_count = gtk_spin_button_get_value_as_int
             (GTK_SPIN_BUTTON(md->spin_trim_devicename_count));
 
@@ -666,7 +666,7 @@ static gboolean
 exclude_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
     gboolean val;
-    
+
     val = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
     gtk_widget_set_sensitive(gtk_widget_get_parent(GTK_WIDGET(md->show_trim_devicenames)), !val);
 
@@ -677,7 +677,7 @@ static gboolean
 trim_devicenames_toggled (GtkWidget *widget, t_mounter_dialog *md)
 {
     gboolean val;
-    
+
     val = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(widget));
     gtk_widget_set_sensitive(GTK_WIDGET(md->spin_trim_devicename_count), val);
 
@@ -694,7 +694,6 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     GtkWidget *_label;
     GtkWidget *_vbox, *_vbox2;
     GtkWidget *_hbox;
-    GtkTooltips *tip;
     GtkWidget *_notebook;
     t_mounter_dialog * md;
     gboolean set_active;
@@ -706,8 +705,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     dlg = xfce_titled_dialog_new_with_buttons(
                 _("Mount Plugin"),
                 GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-                GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
-                GTK_STOCK_CLOSE, GTK_RESPONSE_OK, NULL);
+                GTK_DIALOG_DESTROY_WITH_PARENT,
+                "gtk-close", GTK_RESPONSE_OK, NULL);
 
     xfce_titled_dialog_set_subtitle (XFCE_TITLED_DIALOG (dlg), _("Properties"));
     gtk_window_set_icon_name(GTK_WINDOW(dlg),"drive-harddisk");
@@ -721,20 +720,17 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->dialog = dlg;
 
-    vbox = GTK_DIALOG (dlg)->vbox;
+    vbox = gtk_dialog_get_content_area(GTK_DIALOG(dlg));
 
     _notebook = gtk_notebook_new ();
     gtk_widget_show (_notebook);
-    gtk_container_border_width (GTK_CONTAINER(_notebook), BORDER);
+    gtk_container_set_border_width (GTK_CONTAINER(_notebook), BORDER);
     gtk_box_pack_start (GTK_BOX (vbox), GTK_WIDGET(_notebook),
                         TRUE, TRUE, BORDER);
 
-    tip = gtk_tooltips_new ();
-    gtk_tooltips_enable (tip);
-
     /* --------------- General tab page ----------------------*/
     _vbox = gtk_vbox_new (FALSE, BORDER);
-    gtk_container_border_width (GTK_CONTAINER(_vbox), BORDER);
+    gtk_container_set_border_width (GTK_CONTAINER(_vbox), BORDER);
     gtk_widget_show (_vbox);
 
        /* Show "unmounted" message */
@@ -742,10 +738,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("This is only useful and recommended if you specify \"sync\" as part "
-        "of the \"unmount\" command string."),
-        NULL );
+        "of the \"unmount\" command string."));
 
     md->show_message_dialog = gtk_check_button_new_with_mnemonic (
                                 _("Show _message after unmount") );
@@ -759,9 +754,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
-        _("You can specify a distinct icon to be displayed in the panel."),
-        NULL );
+    gtk_widget_set_tooltip_text(_eventbox,
+        _("You can specify a distinct icon to be displayed in the panel."));
 
     _hbox = gtk_hbox_new (FALSE, BORDER);
     gtk_widget_show (_hbox);
@@ -784,7 +778,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     /* --------------- Commands tab page ----------------------*/
     _vbox = gtk_vbox_new (FALSE, BORDER);
-    gtk_container_border_width (GTK_CONTAINER(_vbox), BORDER);
+    gtk_container_set_border_width (GTK_CONTAINER(_vbox), BORDER);
     gtk_widget_show (_vbox);
 
         /* After-mount command */
@@ -792,12 +786,11 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("This command will be executed after mounting the device with the "
         "mount point of the device as argument.\n"
         "If you are unsure what to insert, try \"exo-open %m\".\n"
-        "'%d' can be used to specify the device, '%m' for the mountpoint."),
-        NULL);
+        "'%d' can be used to specify the device, '%m' for the mountpoint."));
 
     _hbox = gtk_hbox_new (FALSE, BORDER);
     gtk_widget_show (_hbox);
@@ -825,10 +818,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET (_eventbox), FALSE,
                     FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("WARNING: These options are for experts only! If you do not know "
-        "what they may be good for, keep your hands off!"),
-        NULL );
+        "what they may be good for, keep your hands off!"));
 
     md->specify_commands = gtk_check_button_new_with_mnemonic (
                                 _("_Custom commands") );
@@ -849,44 +841,41 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox2), GTK_WIDGET (_eventbox), FALSE,
                     FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("Most users will only want to prepend \"sudo\" to both "
         "commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
-        "'%d' is used to specify the device, '%m' for the mountpoint."),
-        NULL );
+        "'%d' is used to specify the device, '%m' for the mountpoint."));
 
-    md->box_mount_commands = gtk_table_new (2, 2, FALSE);
+    md->box_mount_commands = gtk_grid_new ();
     gtk_container_add (GTK_CONTAINER (_eventbox), md->box_mount_commands);
     gtk_widget_show (md->box_mount_commands);
 
     _label = gtk_label_new_with_mnemonic (_("_Mount command:"));
-    gtk_misc_set_alignment (GTK_MISC(_label), 0.0, 0.5);
+    gtk_widget_set_valign(_label,GTK_ALIGN_CENTER);
     gtk_widget_show (_label);
-    gtk_table_attach (GTK_TABLE(md->box_mount_commands), _label, 0, 1, 0, 1,
-                    GTK_FILL, GTK_SHRINK, 0, 0);
+    gtk_grid_attach (GTK_GRID(md->box_mount_commands), _label, 0, 0, 1, 1);
 
     _label = gtk_label_new_with_mnemonic (_("_Unmount command:"));
-    gtk_misc_set_alignment (GTK_MISC(_label), 0.0, 0.5);
+    gtk_widget_set_valign(_label,GTK_ALIGN_CENTER);
     gtk_widget_show (_label);
-    gtk_table_attach (GTK_TABLE(md->box_mount_commands), _label, 0, 1, 1, 2,
-                    GTK_FILL, GTK_SHRINK, 0, 0);
+    gtk_grid_attach (GTK_GRID(md->box_mount_commands), _label, 0, 1, 1, 1);
 
     md->string_mount_command = gtk_entry_new ();
     DBG("mt->mount_command: %s", mt->mount_command);
     gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ),
                     g_strdup(mt->mount_command ));
     gtk_widget_show (md->string_mount_command );
-    gtk_table_attach (GTK_TABLE(md->box_mount_commands),
-                    md->string_mount_command , 1, 2,
-                    0, 1, GTK_EXPAND|GTK_FILL, GTK_SHRINK, BORDER, 0);
+    gtk_grid_attach (GTK_GRID(md->box_mount_commands),
+                    md->string_mount_command , 1, 0,
+                    1, 1);
 
     md->string_umount_command = gtk_entry_new ();
     gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ),
                     g_strdup(mt->umount_command ));
     gtk_widget_show (md->string_umount_command );
-    gtk_table_attach (GTK_TABLE(md->box_mount_commands),
-                    md->string_umount_command , 1, 2,
-                    1, 2, GTK_EXPAND|GTK_FILL, GTK_SHRINK, BORDER, 0);
+    gtk_grid_attach (GTK_GRID(md->box_mount_commands),
+                    md->string_umount_command , 1, 1,
+                    2, 1);
 
     if (!set_active) /* following command wasn't executed by signal handler! */
         gtk_widget_set_sensitive ( md->box_mount_commands, FALSE );
@@ -897,7 +886,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     /* File systems tab page */
     _vbox = gtk_vbox_new (FALSE, BORDER);
-    gtk_container_border_width (GTK_CONTAINER(_vbox), BORDER);
+    gtk_container_set_border_width (GTK_CONTAINER(_vbox), BORDER);
     gtk_widget_show (_vbox);
 
         /* show include_NFSs */
@@ -905,10 +894,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("Activate this option to also display network file systems like "
-        "NFS, SMBFS, SHFS and SSHFS."),
-        NULL );
+        "NFS, SMBFS, SHFS and SSHFS."));
 
     md->show_include_NFSs = gtk_check_button_new_with_mnemonic (
                                 _("Display _network file systems") );
@@ -923,10 +911,9 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("Activate this option to also eject a CD-drive after unmounting"
-        " and to insert before mounting."),
-        NULL );
+        " and to insert before mounting."));
 
     md->show_eject_drives = gtk_check_button_new_with_mnemonic (
                                 _("_Eject CD-drives") );
@@ -941,9 +928,8 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
-        _("Activate this option to only have the mount points be displayed."),
-        NULL );
+    gtk_widget_set_tooltip_text(_eventbox,
+        _("Activate this option to only have the mount points be displayed."));
 
     md->show_exclude_devicenames = gtk_check_button_new_with_mnemonic (
                                 _("Display _mount points only") );
@@ -954,15 +940,14 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                                 mt->exclude_devicenames);
     g_signal_connect ( G_OBJECT(md->show_exclude_devicenames), "toggled",
         G_CALLBACK(exclude_devicenames_toggled), md);
-        
+
     /* Trim device names */
     _eventbox = gtk_event_box_new ();
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
-        _("Trim the device names to the number of characters specified in the spin button."),
-        NULL );
+    gtk_widget_set_tooltip_text(_eventbox,
+        _("Trim the device names to the number of characters specified in the spin button."));
     _hbox = gtk_hbox_new (FALSE, BORDER);
     gtk_widget_show (_hbox);
     gtk_container_add (GTK_CONTAINER (_eventbox), _hbox );
@@ -976,7 +961,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
                                 mt->trim_devicenames);
     g_signal_connect ( G_OBJECT(md->show_trim_devicenames), "toggled",
         G_CALLBACK(trim_devicenames_toggled), md);
-                    
+
     _label = gtk_label_new(_(" characters"));
     gtk_widget_show (_label);
     gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(_label),
@@ -986,20 +971,19 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_widget_show (md->spin_trim_devicename_count);
     gtk_box_pack_end (GTK_BOX (_hbox), GTK_WIDGET(md->spin_trim_devicename_count),
                         FALSE, FALSE, 0);
-    
+
 
         /* Exclude file systems  */
     _eventbox = gtk_event_box_new ();
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_tooltips_set_tip ( GTK_TOOLTIPS(tip), _eventbox,
+    gtk_widget_set_tooltip_text(_eventbox,
         _("Exclude the following file systems from the menu.\n"
         "The list is separated by simple spaces.\n"
         "It is up to you to specify correct devices or mount points.\n"
         "An asterisk (*) can be used as a placeholder at the end of\n"
-        "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"),
-        NULL );
+        "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"));
 
     _vbox2 = gtk_vbox_new (FALSE, BORDER);
     gtk_widget_show (_vbox2);

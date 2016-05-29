@@ -44,7 +44,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 #define DEFAULT_ICON PACKAGE_DATA_DIR "/icons/hicolor/scalable/apps/xfce-mount.svg"
 
-static GtkTooltips *tooltips = NULL;
 
 /**
  * structure t_mounter.
