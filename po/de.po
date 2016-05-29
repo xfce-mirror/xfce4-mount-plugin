@@ -310,9 +310,8 @@ msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Partitionen/Geräte anzeigen und Aushängen ermöglichen"
 
 #: ../panel-plugin/mount-plugin.c:1035
-#, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Urheberrecht © 2005-2012\n"
+msgstr "Urheberrecht © 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
