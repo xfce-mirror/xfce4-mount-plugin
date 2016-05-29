@@ -1,3 +1,7 @@
+2016/05/29 - Versoin 1.0.0
+- Gtk 3 Support only
+- Panel Version 4.12 only
+
 2014/04/26 - version 0.6.7
 - menu does no longer overlap the panel
 - wildcard option for devices or mountpoints that are to be excluded
