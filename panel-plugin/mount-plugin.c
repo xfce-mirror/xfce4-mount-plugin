@@ -1032,7 +1032,7 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
       "program-name", PACKAGE_NAME,
       "comments", _("Show partitions/devices and allow to mount/unmount them"),
       "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin",
-      "copyright", _("Copyright (c) 2005-2012\n"),
+      "copyright", _("Copyright (c) 2005-2016\n"),
       "authors", auth, NULL);
   // TODO: add translators.
 
