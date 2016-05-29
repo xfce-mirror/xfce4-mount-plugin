@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-mount-plugin.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 22:41+0200\n"
+"POT-Creation-Date: 2016-05-29 19:12+0200\n"
 "PO-Revision-Date: 2009-08-18 09:10+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-eu@lists.debian.org>\n"
@@ -88,47 +88,53 @@ msgstr "ez muntaturik\n"
 #. show error message if smth failed
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
 #. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-#: ../panel-plugin/devices.c:288
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
 msgstr "Huts \"%s\" gailua muntatzean"
 
-#: ../panel-plugin/devices.c:303
+#: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
 msgstr "Errorea \"%s\" muntatze komandoa abiaraztean."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "Huts \"%s\" gailua desmuntatzean"
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "\"%s\" gailua orain ziurtasunez deskonektatu daiteke."
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Errore bat gertatu da. \"%s\" Gailua ez zen kendu beharko!"
 
-#: ../panel-plugin/mount-plugin.c:171
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:176
 msgid " -> "
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:223
+#: ../panel-plugin/mount-plugin.c:229
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:242
+#: ../panel-plugin/mount-plugin.c:248
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ez muntaturik</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:515
 msgid "devices"
 msgstr "gailuak"
 
@@ -140,7 +146,7 @@ msgstr "Muntatze plugina"
 msgid "Properties"
 msgstr "Propietateak"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:742
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -148,27 +154,27 @@ msgstr ""
 "Hau erabilgarri eta gomendagarria da \"sync\" erabiltzen baduzu \"unmount\" "
 "komandoarekin."
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:746
 msgid "Show _message after unmount"
 msgstr "Bistarazi _mezua desmuntatu ostean"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:758
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Panelean bistaratzeko ikono ezberdin bat ezarri dezakezu."
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:764
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Select an image"
 msgstr "Irudi bat hautatu"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:775
 msgid "_General"
 msgstr "_Orokorra"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:790
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -181,11 +187,11 @@ msgstr ""
 "Zer ipini ziur ez badakizu probatu, \"exo-open %m\" erabiliaz.\n"
 "'%d' erabili daiteke gailua zehazteko, '%m' muntatze puntuarentzat."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:799
 msgid "_Execute after mounting:"
 msgstr "Muntatze ondoren _exekutatu:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:822
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
@@ -193,11 +199,11 @@ msgstr ""
 "ABISUA: Aukera hauek erabiltzaile aurreratuentzat bakarrik dira! Zer ipini "
 "ez badakizu mantendu zure eskuak hemendik kanpo!"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:826
 msgid "_Custom commands"
 msgstr "Komando _pertsonalizatuak"
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:845
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -208,19 +214,19 @@ msgstr ""
 "&&\"  gehitu aurretik \"unmount %d\" komandoari.\n"
 "'%d' erabili daiteke gailua zehazteko, '%m' muntatze puntuarentzat."
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:853
 msgid "_Mount command:"
 msgstr "_Muntatze komandoa:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:858
 msgid "_Unmount command:"
 msgstr "_Desmuntatze komandoa:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Commands"
 msgstr "_Komandoak"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:898
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
@@ -228,11 +234,11 @@ msgstr ""
 "Aukera hau gaitu sNFS, SMBF, SHFS eta SSHFS antzerko sare bidezko fitxategi "
 "sistemak ere bistaratzeko."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Display _network file systems"
 msgstr "Erakutsi _sare fitxategi-sistemak"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:915
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -240,56 +246,60 @@ msgstr ""
 "Aukera hau gaitu CD-gailua desmuntatu ondoren egotzi eta muntatu aurretik "
 "ixteko."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:919
 msgid "_Eject CD-drives"
 msgstr "CD-gailuak _egotzi"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:932
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aukera hau gaitu muntatze puntuak bakarrik bistarazirik izateko."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:935
 msgid "Display _mount points only"
 msgstr "Erakutsi _muntatze puntuak bakarrik"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:950
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Moztu gailu izenak spin botoian ezarritako karaktere kopuruan."
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:956
 msgid "Trim device names: "
 msgstr "Moztu gailu izenak:"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:965
 msgid " characters"
 msgstr "karaktere"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:982
+#, fuzzy
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
 "Hurrengo fitxategi sistemak menutik kanpora utzi.\n"
 "Zerrenda zuriune arruntez bereizirik dago.\n"
 "Hau gailu eta muntatze puntu zuzenak ezartzeko dago hemen."
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:993
 msgid "E_xclude specified file systems"
 msgstr "Zehazturiko muntatze puntuak e_z erabili"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1008
 msgid "_File systems"
 msgstr "_Fitxategi sistemak"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1033
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Ikusi partizio/gailuak eta muntatu/desmuntatzeko aukera eman"
 
-#: ../panel-plugin/mount-plugin.c:1048
-msgid "Copyright (c) 2005-2012\n"
+#: ../panel-plugin/mount-plugin.c:1035
+#, fuzzy
+msgid "Copyright (c) 2005-2016\n"
 msgstr "Copyright (c) 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 22:41+0200\n"
+"POT-Creation-Date: 2016-05-29 19:12+0200\n"
 "PO-Revision-Date: 2012-11-18 22:43+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
@@ -86,47 +86,53 @@ msgstr "غير موصل\n"
 #. show error message if smth failed
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
 #. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-#: ../panel-plugin/devices.c:288
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
 msgstr "فشل توصيل الجهاز \"%s\"."
 
-#: ../panel-plugin/devices.c:303
+#: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
 msgstr "حدث خطأ أثناء تنفيذ الأمر على توصيل \"%s\"."
 
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "فشل فصل الجهاز \"%s\"."
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "يمكن إزالة الجهاز \"%s\" بأمان الأن."
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "حدث خطأ. الجهاز \"%s\" لايمكن إزالته!"
 
-#: ../panel-plugin/mount-plugin.c:171
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:176
 msgid " -> "
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:223
+#: ../panel-plugin/mount-plugin.c:229
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:242
+#: ../panel-plugin/mount-plugin.c:248
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">غير موصل</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:515
 msgid "devices"
 msgstr "أجهزة"
 
@@ -138,7 +144,7 @@ msgstr "ملحق التوصيل"
 msgid "Properties"
 msgstr "خصائص"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:742
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
@@ -146,27 +152,27 @@ msgstr ""
 "هذا يمكن إستعماله و يوصى به فقط عندما تحدد \"مزامنة\" مع الأمر \"غير موصل\" "
 "كجزء من البنية."
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:746
 msgid "Show _message after unmount"
 msgstr "عرض ر_سالة بعد إلغاء التوصيل"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:758
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "يمكنك تحديد أيقونة ليتم إظهارها في الشريط."
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:764
 msgid "Icon:"
 msgstr "أيقونة:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Select an image"
 msgstr "حدد صورة"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:775
 msgid "_General"
 msgstr "_عام"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:790
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point "
@@ -178,22 +184,22 @@ msgstr ""
 "إذا كنت غير متأكد من ماذا تريد إدخاله, جرب \"exo-open %m\".\n"
 "'%d' يمكن إستعمالها لتحديد الجهاز, '%m' لنقطة توصيل."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:799
 msgid "_Execute after mounting:"
 msgstr "_تشغيل بعد توصيل:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:822
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr ""
 "تحذير: هذه الخيارات للمحترفين فقط! إن لم تكن تعلم ماذا تفعل, أبعد يدك عنها!"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:826
 msgid "_Custom commands"
 msgstr "_أوامر مخصصة"
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:845
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend "
@@ -204,30 +210,30 @@ msgstr ""
 "\"مزامنة %d &&\" إلى الأمر \"إلغاء التحميل %d\" م .\n"
 "يتم استخدام '%d' لتحديد الجهاز، والأمر '%m' لنقطة التوصيل."
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:853
 msgid "_Mount command:"
 msgstr "_أمر التوصيل:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:858
 msgid "_Unmount command:"
 msgstr "_أمر إلغاء توصيل:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Commands"
 msgstr "_أوامر"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:898
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr ""
 "تفعيل هذا الخيار أيضا لعرض نظام ملفات الشبكة مثل NFS, SMBFS, SHFS و SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Display _network file systems"
 msgstr "إظهار نظام ملفات الشبكة"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:915
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert "
 "before mounting."
@@ -235,56 +241,60 @@ msgstr ""
 "تفعيل هذا الخيار أيضا لإخراج قارء الأقراص بعد إلغاء التوصيل أو إدخاله بعد "
 "التوصيل."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:919
 msgid "_Eject CD-drives"
 msgstr "_إخراج قارء الأقراص"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:932
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "تفعيل هذا الخيار ليتم إظهار نقطة التوصيل فقط."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:935
 msgid "Display _mount points only"
 msgstr "إظهار نقطة التوصيل فقط"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:950
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "تقليص أسماء الأجهزة إلى عدد الأحرف المحدد في زر زيادة ونقصان."
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:956
 msgid "Trim device names: "
 msgstr "تقليص أسماء الأجهزة: "
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:965
 msgid " characters"
 msgstr " الحروف"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:982
+#, fuzzy
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
 "إستثناء أنظمة الملفات التالية من القائمة.\n"
 "هذه القائمة يتم فصلها بمسافة فقط.\n"
 "الخيار لك لتحديد الجهاز أو نقط توصيل."
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:993
 msgid "E_xclude specified file systems"
 msgstr "إست_ثناء نظام الملفات المحدد"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1008
 msgid "_File systems"
 msgstr "_نظام الملفات"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1033
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "إظهار الأقسام/الأجهزة والسماح لها بالفصل/التوصيل"
 
-#: ../panel-plugin/mount-plugin.c:1048
-msgid "Copyright (c) 2005-2012\n"
+#: ../panel-plugin/mount-plugin.c:1035
+#, fuzzy
+msgid "Copyright (c) 2005-2016\n"
 msgstr "حقوق الطبع والنشر (ج) عام 2005-2012\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
