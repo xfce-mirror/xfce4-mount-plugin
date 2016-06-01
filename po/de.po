@@ -287,4 +287,6 @@ msgstr "Geräte einhängen"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Alle Geräte die eingehängt werden können werden angezeigt und bei Mausklick ein/ausgehängt."
+c
+c
+msgstr "Alle Geräte, die eingehängt werden können, werden angezeigt und bei Mausklick ein-/ausgehängt."
