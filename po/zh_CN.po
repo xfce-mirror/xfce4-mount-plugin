@@ -1,25 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2008-2010,2012
 # Xiaobin Wu <xwu422@googlemail.com>, 2008
 # 玉堂白鹤 <yjwork@qq.com>, 2014
+# 玉堂白鹤 <yjwork@qq.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-29 19:12+0200\n"
-"PO-Revision-Date: 2014-05-09 06:43+0000\n"
+"POT-Creation-Date: 2016-05-30 00:31+0200\n"
+"PO-Revision-Date: 2016-06-03 08:09+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce-"
-"panel-plugins/language/zh_CN/)\n"
-"Language: zh_CN\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-panel-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -88,8 +88,10 @@ msgid "not mounted\n"
 msgstr "未挂载\n"
 
 #. show error message if smth failed
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount
+#. Plugin:\n\nError executing command."),
+#. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
+#. erroutput);
 #: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
@@ -100,7 +102,8 @@ msgstr "挂载设备 \"%s\" 失败。"
 msgid "Error executing on-mount command \"%s\"."
 msgstr "执行 on-mount 命令时出错 \"%s\"。"
 
-#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
+#. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
+#. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
 #: ../panel-plugin/devices.c:360
 #, c-format
@@ -177,14 +180,10 @@ msgstr "一般(_G)"
 #: ../panel-plugin/mount-plugin.c:790
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"此命令在以设备挂载点为参数挂载设备后执行。\n"
-"若您不确定该插入什么，试试 “exo-open %m”。\n"
-"可使用 ‘%d’ 指定设备，‘%m’ 指定挂载点。"
+msgstr "此命令在以设备挂载点为参数挂载设备后执行。\n若您不确定该插入什么，试试 “exo-open %m”。\n可使用 ‘%d’ 指定设备，‘%m’ 指定挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:799
 msgid "_Execute after mounting:"
@@ -203,13 +202,9 @@ msgstr "自定义命令(_C)"
 #: ../panel-plugin/mount-plugin.c:845
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"大多数用户仅希望在两个命令之前都加上 “sudo” 或在 “unmount %d” 命令前加上 "
-"“sync %d &&”。\n"
-"‘%d’ 用来指定设备，‘%m’ 为挂载点。"
+msgstr "大多数用户仅希望在两个命令之前都加上 “sudo” 或在 “unmount %d” 命令前加上 “sync %d &&”。\n‘%d’ 用来指定设备，‘%m’ 为挂载点。"
 
 #: ../panel-plugin/mount-plugin.c:853
 msgid "_Mount command:"
@@ -235,8 +230,8 @@ msgstr "显示网络文件系统(_N)"
 
 #: ../panel-plugin/mount-plugin.c:915
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
 msgstr "激活此项也可在卸载后弹出光驱和挂载前插入光驱。"
 
 #: ../panel-plugin/mount-plugin.c:919
@@ -272,12 +267,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
-"从菜单中排除以下文件系统。\n"
-"此列表使用简单的空格隔开。\n"
-"您可以指定正确的设备或挂载点。\n"
-"星号 (*) 可以在路径的结尾被用作占位符，\n"
-"例如，\"/mnt/*\"是排除任何在\"/mnt\" 之下的挂载点\n"
+msgstr "从菜单中排除以下文件系统。\n此列表使用简单的空格隔开。\n您可以指定正确的设备或挂载点。\n星号 (*) 可以在路径的结尾被用作占位符，\n例如，\"/mnt/*\"是排除任何在\"/mnt\" 之下的挂载点\n"
 
 #: ../panel-plugin/mount-plugin.c:993
 msgid "E_xclude specified file systems"
@@ -292,9 +282,8 @@ msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "显示属性/设备并允许挂载/卸载它们"
 
 #: ../panel-plugin/mount-plugin.c:1035
-#, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "版权 (c) 2005-2012\n"
+msgstr "版权所有 (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
