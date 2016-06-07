@@ -7,6 +7,7 @@
 # Hunt Xu <huntxu@live.cn>, 2008-2010,2012
 # Xiaobin Wu <xwu422@googlemail.com>, 2008
 # 玉堂白鹤 <yjwork@qq.com>, 2014
+# 玉堂白鹤 <yjwork@qq.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
@@ -14,8 +15,8 @@ msgstr ""
 "POT-Creation-Date: 2016-06-07 22:25+0200\n"
 "PO-Revision-Date: 2014-05-09 06:43+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce-"
-"panel-plugins/language/zh_CN/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-panel-"
+"plugins/language/zh_CN/)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -296,7 +297,7 @@ msgstr "显示属性/设备并允许挂载/卸载它们"
 #: ../panel-plugin/mount-plugin.c:1036
 #, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "版权 (c) 2005-2012\n"
+msgstr "版权所有 (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"

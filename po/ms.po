@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014
+# abuyop <abuyop@gmail.com>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 21:06+0200\n"
-"PO-Revision-Date: 2014-03-02 02:46+0000\n"
+"POT-Creation-Date: 2016-05-30 00:31+0200\n"
+"PO-Revision-Date: 2016-06-04 15:47+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/projects/p/xfce/language/ms/)\n"
+"Language-Team: Malay (http://www.transifex.com/xfce/xfce-panel-plugins/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,12 +88,12 @@ msgstr "tidak dilekap\n"
 #. Plugin:\n\nError executing command."),
 #. _("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"),
 #. erroutput);
-#: ../panel-plugin/devices.c:288
+#: ../panel-plugin/devices.c:291
 #, c-format
 msgid "Failed to mount device \"%s\"."
 msgstr "Gagal melekap peranti \"%s\"."
 
-#: ../panel-plugin/devices.c:303
+#: ../panel-plugin/devices.c:306
 #, c-format
 msgid "Error executing on-mount command \"%s\"."
 msgstr "Ralat melakukan pada perintah on-mount \"%s\"."
@@ -101,26 +101,41 @@ msgstr "Ralat melakukan pada perintah on-mount \"%s\"."
 #. xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:
 #. Error executing command."),
 #. _("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-#: ../panel-plugin/devices.c:357
+#: ../panel-plugin/devices.c:360
 #, c-format
 msgid "Failed to umount device \"%s\"."
 msgstr "Gagal menyahlekap peranti \"%s\"."
 
-#: ../panel-plugin/devices.c:360
+#: ../panel-plugin/devices.c:363
 #, c-format
 msgid "The device \"%s\" should be removable safely now."
 msgstr "Peranti \"%s\" kini sepatutnya boleh ditanggal secara selamat."
 
-#: ../panel-plugin/devices.c:362
+#: ../panel-plugin/devices.c:365
 #, c-format
 msgid "An error occurred. The device \"%s\" should not be removed!"
 msgstr "Ralat berlaku. Peranti \"%s\" tidak dapat ditanggalkan!"
 
-#: ../panel-plugin/mount-plugin.c:242
+#: ../panel-plugin/devices.c:443
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "/etc/fstab anda tidak dapat dibaca. Ia akan rosakkan keupayaan pemalam anda."
+
+#: ../panel-plugin/mount-plugin.c:176
+msgid " -> "
+msgstr "->"
+
+#: ../panel-plugin/mount-plugin.c:229
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s/%s] %s bebas"
+
+#: ../panel-plugin/mount-plugin.c:248
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">tidak dilekap</span>"
 
-#: ../panel-plugin/mount-plugin.c:513
+#: ../panel-plugin/mount-plugin.c:515
 msgid "devices"
 msgstr "peranti"
 
@@ -132,33 +147,33 @@ msgstr "Pemalam Lekap"
 msgid "Properties"
 msgstr "Sifat"
 
-#: ../panel-plugin/mount-plugin.c:745
+#: ../panel-plugin/mount-plugin.c:742
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Ia hanya berguna dan disarankan jika anda nyatakan \"sync\" sebahagian dari rentetan perintah \"unmount\"."
 
-#: ../panel-plugin/mount-plugin.c:750
+#: ../panel-plugin/mount-plugin.c:746
 msgid "Show _message after unmount"
 msgstr "Tunjuk _mesej selepas dinyahlekap"
 
-#: ../panel-plugin/mount-plugin.c:762
+#: ../panel-plugin/mount-plugin.c:758
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Anda boleh nyatakan ikon khas untuk dipapar pada panel."
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:764
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ../panel-plugin/mount-plugin.c:773
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Select an image"
 msgstr "Pilih satu imej"
 
-#: ../panel-plugin/mount-plugin.c:780
+#: ../panel-plugin/mount-plugin.c:775
 msgid "_General"
 msgstr "_Am"
 
-#: ../panel-plugin/mount-plugin.c:795
+#: ../panel-plugin/mount-plugin.c:790
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -166,103 +181,105 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Perintah ini akan dilakukna selepas melekap peranti dengan titik lekap peranti sebagai argumen.\nJika anda tidak pasti apa yang perlu disisip, cuba, \"exo-open %m\".\n'%d' boleh digunakan untuk nyatakan peranti, '%m' untuk titik lekap."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: ../panel-plugin/mount-plugin.c:799
 msgid "_Execute after mounting:"
 msgstr "_Lakukan selepas melekap:"
 
-#: ../panel-plugin/mount-plugin.c:828
+#: ../panel-plugin/mount-plugin.c:822
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "AMARAN: Pilihan ini hanya untuk pakar sahaja! Jika anda tidak tahu, lebih baik dibiarkan!"
 
-#: ../panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:826
 msgid "_Custom commands"
 msgstr "Perintah _suai"
 
-#: ../panel-plugin/mount-plugin.c:852
+#: ../panel-plugin/mount-plugin.c:845
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Kebanyakan pengguna hanya mahu tambah \"sudo\" ke kedua-dua perintah atau tambah \"sync %d &&\" ke perintah \"unmount %d\".\n'%d' digunakan untuk nyatakan peranti, '%m' untuk titik lekap."
 
-#: ../panel-plugin/mount-plugin.c:861
+#: ../panel-plugin/mount-plugin.c:853
 msgid "_Mount command:"
 msgstr "Perintah _lekap:"
 
-#: ../panel-plugin/mount-plugin.c:867
+#: ../panel-plugin/mount-plugin.c:858
 msgid "_Unmount command:"
 msgstr "Perintah n_yahlekap:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Commands"
 msgstr "_Perintah"
 
-#: ../panel-plugin/mount-plugin.c:908
+#: ../panel-plugin/mount-plugin.c:898
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Aktifkan pilihan ini juga paparkan sistem fail rangkaian seperti NFS, SMBFS, SHFS dan SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:913
+#: ../panel-plugin/mount-plugin.c:902
 msgid "Display _network file systems"
 msgstr "Papar sistem fail _rangkaian"
 
-#: ../panel-plugin/mount-plugin.c:926
+#: ../panel-plugin/mount-plugin.c:915
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Aktifkan pilihan ini juga melenting pemacu-CD selepas menyahlekap dan untuk disisip selepas melekap."
 
-#: ../panel-plugin/mount-plugin.c:931
+#: ../panel-plugin/mount-plugin.c:919
 msgid "_Eject CD-drives"
 msgstr "L_enting pemacu-CD"
 
-#: ../panel-plugin/mount-plugin.c:944
+#: ../panel-plugin/mount-plugin.c:932
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktifkan pilihan ini hanya untuk paparkan titik lekap."
 
-#: ../panel-plugin/mount-plugin.c:948
+#: ../panel-plugin/mount-plugin.c:935
 msgid "Display _mount points only"
 msgstr "Papar _titik lekap sahaja"
 
-#: ../panel-plugin/mount-plugin.c:963
+#: ../panel-plugin/mount-plugin.c:950
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Kerat nama peranti ke bilangan aksara yang dinyatakan dalam butang pusing."
 
-#: ../panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:956
 msgid "Trim device names: "
 msgstr "Kerat nama peranti:"
 
-#: ../panel-plugin/mount-plugin.c:979
+#: ../panel-plugin/mount-plugin.c:965
 msgid " characters"
 msgstr "aksara"
 
-#: ../panel-plugin/mount-plugin.c:996
+#: ../panel-plugin/mount-plugin.c:982
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
-"It is up to you to specify correct devices or mount points."
-msgstr "Asingkan sistem fail berikut dari menu\nSenarai terpisah dengan hanya jarak.\nMengikut citarasa anda untuk nyatakan peranti atau titik lekap yang betul."
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "Asingkan sistem fail berikut dari menu\nSenarai terpisah dengan tanda jarak.\nMengikut citarasa anda untuk nyatakan peranti atau titik lekap yang betul.\nSimbol asterisk (*) boleh digunakan sebagai peletak tempat dipenghujung\nlaluan, cth., \"/mnt/*\" untuk asingkan mana-mana titik lekap dibawah \"/mnt\".\n"
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: ../panel-plugin/mount-plugin.c:993
 msgid "E_xclude specified file systems"
 msgstr "A_sing sistem fail yang dinyatakan"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: ../panel-plugin/mount-plugin.c:1008
 msgid "_File systems"
 msgstr "Sistem _fail"
 
-#: ../panel-plugin/mount-plugin.c:1046
+#: ../panel-plugin/mount-plugin.c:1033
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Tunjuk sekatan/peranti dan benarkan ia dilekap/nyahlekap"
 
-#: ../panel-plugin/mount-plugin.c:1048
-msgid "Copyright (c) 2005-2012\n"
-msgstr "Hakcipta (c) 2005-2012\n"
+#: ../panel-plugin/mount-plugin.c:1035
+msgid "Copyright (c) 2005-2016\n"
+msgstr "Hakcipta (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"

@@ -3,7 +3,8 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# cri <cri.penta@gmail.com>, 2010,2013-2014
+# Cristian Marchi <cri.penta@gmail.com>, 2010,2013-2014
+# Enrico <allin@infinito.it>, 2016
 # Walter Comunello <masterz3d@gmail.com>, 2008
 msgid ""
 msgstr ""
@@ -312,7 +313,7 @@ msgstr ""
 #: ../panel-plugin/mount-plugin.c:1036
 #, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Copyright (c) 2005-2012\n"
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"

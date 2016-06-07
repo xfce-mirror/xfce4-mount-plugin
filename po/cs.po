@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Alois Nešpor <info@aloisnespor.info>, 2014
+# Alois Nešpor <info@aloisnespor.info>, 2014,2016
 # Alois Nešpor <info@aloisnespor.info>, 2014
 msgid ""
 msgstr ""
@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2016-06-07 22:25+0200\n"
 "PO-Revision-Date: 2014-08-31 21:42+0000\n"
 "Last-Translator: Alois Nešpor <info@aloisnespor.info>\n"
-"Language-Team: Czech (http://www.transifex.com/projects/p/xfce-panel-plugins/"
+"Language-Team: Czech (http://www.transifex.com/xfce/xfce-panel-plugins/"
 "language/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -305,7 +305,7 @@ msgstr "Zobrazí oddíly a zařízení a umožní je odpojit nebo připojit"
 #: ../panel-plugin/mount-plugin.c:1036
 #, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Copyright (c) 2005-2012\n"
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
