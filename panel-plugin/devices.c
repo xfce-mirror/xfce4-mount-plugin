@@ -288,7 +288,15 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             /* show error message if smth failed */
             //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
                 //_("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-            xfce_dialog_show_error (NULL, error, _("Failed to mount device \"%s\"."), pdisk->device);
+            //xfce_dialog_show_error (NULL, error, _("Failed to mount device \"%s\"."), pdisk->device);
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-error",
+                               _("Failed to mount device:"),
+                               pdisk->device,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
             goto out;
         }
 
@@ -303,7 +311,16 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             DBG("cmd: '%s', returned %d", cmd, val);
             /* show error message if smth failed */
             if (val == FALSE)
-                xfce_dialog_show_error (NULL, error, _("Error executing on-mount command \"%s\"."), on_mount_cmd);
+                //xfce_dialog_show_error (NULL, error, _("Error executing on-mount command \"%s\"."), on_mount_cmd);
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-error",
+                               _("Error executing on-mount command:"),
+                               on_mount_cmd,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
+
         }
 out:
         g_free(cmd);
@@ -333,7 +350,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
           deviceprintf(&tmp, "fusermount -u %m", pdisk->device);
         else
           deviceprintf(&tmp, umount_command, pdisk->device);
-        
+
         mountpointprintf(&cmd, tmp, pdisk->mount_point);
         /* cmd contains umount_command device mount_point */
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
@@ -357,17 +374,41 @@ out:
         if (val == FALSE || exit_status != 0)
             //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
                 //_("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-            xfce_dialog_show_error (NULL, error, _("Failed to umount device \"%s\"."), pdisk->device);
+            //xfce_dialog_show_error (NULL, error, _("Failed to umount device \"%s\"."), pdisk->device);
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-error",
+                               _("Failed to umount device:"),
+                               pdisk->device,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
 
         if (show_message_dialog && !eject && val == TRUE && exit_status == 0)
-            xfce_dialog_show_info (NULL, NULL, _("The device \"%s\" should be removable safely now."), pdisk->device);
+            //xfce_dialog_show_info (NULL, NULL, _("The device \"%s\" should be removable safely now."), pdisk->device);
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-information",
+                               _("The device should be removable safely now:"),
+                               pdisk->device,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
         if (show_message_dialog && disk_check_mounted(pdisk->device))
-            xfce_dialog_show_error (NULL, NULL, _("An error occurred. The device \"%s\" should not be removed!"), pdisk->device);
+            //xfce_dialog_show_error (NULL, NULL, _("An error occurred. The device \"%s\" should not be removed!"), pdisk->device);
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-error",
+                               _("An error occurred. The device should not be removed:"),
+                               pdisk->device,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
     }
 }
 
 /**
- * Checks whether the pdisk is already inserted with a similar path with more 
+ * Checks whether the pdisk is already inserted with a similar path with more
  * or less slashes.
  * @param pdisks  Pointer to disks array
  * @param pdisk   Pointer to new disk to lateron insert into pdisks
@@ -380,38 +421,38 @@ device_or_mountpoint_exists (GPtrArray * pdisks, t_disk * pdisk)
   int i;
   t_disk *disk;
   int stringlength1, stringlength2, stringlength3, stringlength4;
-  
+
   stringlength1 = strlen(pdisk->device);
   stringlength3 = strlen(pdisk->mount_point);
-  
+
   for (i=0; i < pdisks->len ; i++)
   {
     disk = (t_disk *) (g_ptr_array_index(pdisks,i));
     stringlength2 = strlen(disk->device);
     stringlength4 = strlen(disk->mount_point);
-    
-    if (stringlength1==stringlength2+1 && pdisk->device[stringlength1-1]=='/' && strncmp(pdisk->device, disk->device, stringlength2)==0 )      
-    {
-      returnValue = TRUE;
-      break;
-    } 
-    else if (stringlength2==stringlength1+1 && disk->device[stringlength2-1]=='/' && strncmp(pdisk->device, disk->device, stringlength1)==0 )      
+
+    if (stringlength1==stringlength2+1 && pdisk->device[stringlength1-1]=='/' && strncmp(pdisk->device, disk->device, stringlength2)==0 )
     {
       returnValue = TRUE;
       break;
     }
-    else if (stringlength3==stringlength4+1 && pdisk->mount_point[stringlength3-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength4)==0 )      
+    else if (stringlength2==stringlength1+1 && disk->device[stringlength2-1]=='/' && strncmp(pdisk->device, disk->device, stringlength1)==0 )
     {
       returnValue = TRUE;
       break;
-    } 
-    else if (stringlength4==stringlength3+1 && disk->mount_point[stringlength4-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength3)==0 )      
+    }
+    else if (stringlength3==stringlength4+1 && pdisk->mount_point[stringlength3-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength4)==0 )
+    {
+      returnValue = TRUE;
+      break;
+    }
+    else if (stringlength4==stringlength3+1 && disk->mount_point[stringlength4-1]=='/' && strncmp(pdisk->mount_point, disk->mount_point, stringlength3)==0 )
     {
       returnValue = TRUE;
       break;
     }
   }
-  
+
   return returnValue;
 }
 
@@ -438,13 +479,22 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
     {
         /* popup notification dialog */
         if (! (*showed_fstab_dialog) ) {
-            dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
-    _("Your /etc/fstab could not be read. This will severely degrade the plugin's abilities."));
+            //dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                //GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
+    //_("Your /etc/fstab could not be read. This will severely degrade the plugin's abilities."));
+
+            xfce_message_dialog (NULL,
+                               _("Xfce 4 Mount Plugin"),
+                               "dialog-info",
+                               _("Your /etc/fstab could not be read. This will severely degrade the plugin's abilities."),
+                               NULL,
+                               "gtk-ok",
+                               NULL,
+                               NULL);
             /* gtk_dialog_run (GTK_DIALOG (dialog)); */
-            g_signal_connect (dialog, "response",
-                    G_CALLBACK (gtk_widget_destroy), dialog);
-             gtk_widget_show (dialog);
+            //g_signal_connect (dialog, "response",
+                    //G_CALLBACK (gtk_widget_destroy), dialog);
+             //gtk_widget_show (dialog);
              *showed_fstab_dialog = TRUE;
          }
 
@@ -543,10 +593,10 @@ disks_remove_device (GPtrArray * pdisks, char *device)
               if (p!=NULL)
                 removedEntries = TRUE;
         }
-        
+
         device_len = strlen(device);
-        
-        if ( device[device_len-1]=='*' && 
+
+        if ( device[device_len-1]=='*' &&
         strncmp ( exclude_device,
             device, device_len-1 )==0 )
         {
@@ -576,7 +626,7 @@ disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
     for (i=0; i < pdisks->len ; i++)
     {
         exclude_mp = ((t_disk *) g_ptr_array_index(pdisks, i))->mount_point;
-      
+
         if (strcmp ( exclude_mp,
             mountp)==0)
         {
@@ -585,10 +635,10 @@ disks_remove_mountpoint (GPtrArray * pdisks, char *mountp)
             if (p!=NULL)
                 removedEntries = TRUE;
         }
-        
+
         mountp_len = strlen(mountp);
-        
-        if ( mountp[mountp_len-1]=='*' && 
+
+        if ( mountp[mountp_len-1]=='*' &&
         strncmp ( exclude_mp,
             mountp, mountp_len-1 )==0 )
         {
@@ -649,7 +699,7 @@ gboolean
 exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
     unsigned int i;
-    gchar *excluded_FS_i; 
+    gchar *excluded_FS_i;
     size_t excluded_FS_i_len = 0;
 
     TRACE("Entering exclude_filesystems");
@@ -667,10 +717,10 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
                 excluded_FS_i, device)==0
             )
             return TRUE;
-            
+
         excluded_FS_i_len = strlen(excluded_FS_i);
-        
-        if ((excluded_FS_i[excluded_FS_i_len-1]=='*') && 
+
+        if ((excluded_FS_i[excluded_FS_i_len-1]=='*') &&
             (g_ascii_strncasecmp (
                 excluded_FS_i, mountpoint, excluded_FS_i_len-1)==0
             ||
@@ -764,7 +814,7 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length)
                 g_str_has_prefix(pmntent->mnt_type, "nfs") ||
                 g_str_has_prefix(pmntent->mnt_type, "smbfs") ||
                 g_str_has_prefix(pmntent->mnt_type, "cifs") ||
-                g_str_has_prefix(pmntent->mnt_type, "shfs") 
+                g_str_has_prefix(pmntent->mnt_type, "shfs")
               ) ||
               g_str_has_prefix(pmntent->mnt_dir, "/sys/")
 #elif defined (HAVE_GETMNTINFO)
@@ -825,7 +875,7 @@ disk_classify (char *device, char *mountpoint)
         }
     }
     /* it needs to be said _here_ that BSDs use cd0, cd1 etc., so we hope cd* works for cdrw, cdrom and cd0,1,... nd no other devices */
-    else if ( strstr(device, "cd") 
+    else if ( strstr(device, "cd")
                 || strstr(device, "dvd") || strstr(mountpoint, "cd") || strstr(mountpoint, "dvd")) {
         dc = CD_DVD;
     }

@@ -40,6 +40,7 @@ void format_LVM_name (const char *disk_device, gchar **formatted_diskname);
 #define gtk_vbox_new(homogeneous, spacing) \
         gtk_box_new(GTK_ORIENTATION_VERTICAL, spacing)
 
+
 static void
 on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 {
@@ -1050,7 +1051,7 @@ mount_construct (XfcePanelPlugin *plugin)
     mounter = create_mounter_control (plugin);
 
 #ifdef HAS_PANEL_49
-    xfce_panel_plugin_set_small (plugin, TRUE);
+    xfce_panel_plugin_set_small (plugin, FALSE);
 #endif
 
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
