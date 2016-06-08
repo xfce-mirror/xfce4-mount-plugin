@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Pjotr <pjotrvertaalt@gmail.com>, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2016-05-31 14:07+0000\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2016-06-08 09:09+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/nl/)\n"
-"Language: nl\n"
+"Language-Team: Dutch (http://www.transifex.com/xfce/xfce-panel-plugins/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -87,42 +86,34 @@ msgstr "niet aangekoppeld\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Aankoppel-invoegtoepassing"
+msgstr "Xfce4 invoegtoepassing voor aankoppelen"
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Kon apparaat '%s' niet aankoppelen."
+msgstr "Kon apparaat niet aankoppelen:"
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Fout bij het uitvoeren van aankoppelopdracht '%s'."
+msgstr "Fout bij het uitvoeren van een opdracht bij het aankoppelen:"
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Kon apparaat '%s' niet aankoppelen."
+msgstr "Kon apparaat niet ontkoppelen:"
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Het apparaat '%s' kan nu veilig verwijderd worden."
+msgstr "Het apparaat zou nu veilig te verwijderen moeten zijn:"
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "Er is een fout opgetreden. Verwijder apparaat '%s' niet!"
+msgstr "Er is een fout opgetreden. Het apparaat kan beter niet worden verwijderd:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
-"Uw /etc/fstab kon niet worden gelezen. Dit zal de bruikbaarheid van de "
-"invoegtoepassing ernstig verminderen."
+msgstr "Uw /etc/fstab kon niet worden gelezen. Dit zal de bruikbaarheid van de invoegtoepassing ernstig verminderen."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -153,9 +144,7 @@ msgstr "Eigenschappen"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Dit is alleen nuttig en aanbevolen als u 'sync' opgeeft als onderdeel van "
-"het opdracht-tekstsnoer 'unmount'."
+msgstr "Dit is alleen nuttig en aanbevolen als u 'sync' opgeeft als onderdeel van het opdracht-tekstsnoer 'unmount'."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
@@ -180,17 +169,10 @@ msgstr "Al_gemeen"
 #: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met "
-"het koppelpunt van het \n"
-"apparaat als argument. U kunt 'exo-open %m' proberen als u niet weet wat u "
-"hier moet invullen.\n"
-"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
-"worden om het koppelpunt aan te geven."
+msgstr "Nadat het apparaat is aangekoppeld zal deze opdracht worden uitgevoerd met het koppelpunt van het \napparaat als argument. U kunt 'exo-open %m' proberen als u niet weet wat u hier moet invullen.\n'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -200,9 +182,7 @@ msgstr "_Na koppeling uitvoeren:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan "
-"te raden deze opties niet aan te passen tenzij u weet wat u doet!"
+msgstr "WAARSCHUWING: Deze opties zijn alleen bedoeld voor gevorderden! Het is aan te raden deze opties niet aan te passen tenzij u weet wat u doet!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -211,14 +191,9 @@ msgstr "_Aangepaste opdrachten"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"De meeste mensen willen alleen 'sudo' voor beide opdrachten zetten of 'sync "
-"%d &&' voor 'unmount %d' zetten.\n"
-"'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt "
-"worden om het koppelpunt aan te geven."
+msgstr "De meeste mensen willen alleen 'sudo' voor beide opdrachten zetten of 'sync %d &&' voor 'unmount %d' zetten.\n'%d' kan gebruikt worden om het apparaat te specificeren, '%m' kan gebruikt worden om het koppelpunt aan te geven."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -236,9 +211,7 @@ msgstr "_Opdrachten"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en "
-"SSHFS weer te geven."
+msgstr "Activeer deze optie om ook netwerk-bestandssystemen als NFS, SMBFS, SHFS en SSHFS weer te geven."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -246,11 +219,9 @@ msgstr "_Netwerk-bestandssystemen weergeven"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen "
-"enin te voegen voor het aankoppelen."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Activeer deze optie om een CD-station na het loskoppelen ook uit te werpen enin te voegen voor het aankoppelen."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -268,9 +239,7 @@ msgstr "Alleen _koppelpunten weergeven"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
-"Verkort de apparaatnamen tot het aantal tekens dat is opgegeven in de "
-"draaiknop."
+msgstr "Verkort de apparaatnamen tot het aantal tekens dat is opgegeven in de draaiknop."
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid "Trim device names: "
@@ -287,13 +256,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
-"Neem de volgende bestandssystemen niet op in het\n"
-"menu. De lijst wordt gescheiden door enkele spaties.\n"
-"Het is aan u om juiste apparaten of koppelpunten op\n"
-"te geven. Een sterretje (*) kan worden gebruikt op het\n"
-"einde van een pad, bijv. '/mnt/*' om alle koppelpunten\n"
-"onder '/mnt' uit te sluiten.\n"
+msgstr "Neem de volgende bestandssystemen niet op in het\nmenu. De lijst wordt gescheiden door enkele spaties.\nHet is aan u om juiste apparaten of koppelpunten op\nte geven. Een sterretje (*) kan worden gebruikt op het\neinde van een pad, bijv. '/mnt/*' om alle koppelpunten\nonder '/mnt' uit te sluiten.\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -305,9 +268,7 @@ msgstr "_Bestandssystemen"
 
 #: ../panel-plugin/mount-plugin.c:1034
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
-"Toon partities/apparaten en maak het mogelijk om hen te koppelen of te "
-"ontkoppelen"
+msgstr "Toon partities/apparaten en maak het mogelijk om hen te koppelen of te ontkoppelen"
 
 #: ../panel-plugin/mount-plugin.c:1036
 msgid "Copyright (c) 2005-2016\n"
@@ -320,6 +281,3 @@ msgstr "Apparaten aankoppelen"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Geeft alle koppelbare apparaten weer en (ont)koppelt ze op verzoek."
-
-#~ msgid "Failed to umount device \"%s\"."
-#~ msgstr "Kon apparaat '%s' niet ontkoppelen."
