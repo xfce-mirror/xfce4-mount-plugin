@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
 # Moo, 2015-2016
@@ -9,17 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2016-05-30 08:09+0000\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2016-06-08 08:54+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/"
-"language/lt/)\n"
-"Language: lt\n"
+"Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -59,7 +57,7 @@ msgstr "prieinamas dydis:       %g\n"
 #: ../panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
-msgstr "panaudota(procentais):     %d\n"
+msgstr "panaudota (procentais):     %d\n"
 
 #: ../panel-plugin/devices.c:87
 #, c-format
@@ -89,42 +87,34 @@ msgstr "neprijungta\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Prijungimo įskiepis"
+msgstr "Xfce 4 prijungimo įskiepis"
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Nepavyko prijungti įrenginio \"%s\"."
+msgstr "Nepavyko prijungti įrenginio:"
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Klaida, vykdant, prijungus naudojamą, komandą \"%s\"."
+msgstr "Klaida, vykdant, prijungus naudojamą komandą:"
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Nepavyko prijungti įrenginio \"%s\"."
+msgstr "Nepavyko atjungti įrenginio:"
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Dabar įrenginys „%s“ gali būti saugiai išimtas."
+msgstr "Dabar, įrenginys turėtų būti saugiai išimtas:"
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "Įvyko klaida. Įrenginys „%s“ neturėtų būti išimtas!"
+msgstr "Įvyko klaida. Įrenginys neturėtų būti išimtas:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
-"Jūsų /etc/fstab negali būti perskaitytas. Tai labai apriboja įskiepio "
-"galimybes."
+msgstr "Jūsų /etc/fstab negali būti perskaitytas. Tai labai apriboja įskiepio galimybes."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -155,13 +145,11 @@ msgstr "Savybės"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Tai naudinga ir rekomenduotina tik tada kai „unmount“ komandoje nurodote ir "
-"„sync“."
+msgstr "Tai naudinga ir rekomenduotina tik tada kai „unmount“ komandoje nurodote ir „sync“."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
-msgstr "Atjungus _rodyti pranešimą"
+msgstr "Atjungus, _rodyti pranešimą"
 
 #: ../panel-plugin/mount-plugin.c:759
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -182,15 +170,10 @@ msgstr "_Bendra"
 #: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Ši komanda bus įvykdyta po įrenginio prijungimo su prijungimo tašku kaip "
-"argumentu.\n"
-"Jei neesate įsitikinę ką pridėti, bandykite „exo-open %m“.\n"
-"„%d“ gali būti naudojama nurodyti įrenginį, „%m“ prijungimo taškui."
+msgstr "Ši komanda bus įvykdyta po įrenginio prijungimo su prijungimo tašku kaip argumentu.\nJei neesate įsitikinę ką pridėti, bandykite „exo-open %m“.\n„%d“ gali būti naudojama nurodyti įrenginį, „%m“ prijungimo taškui."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -200,9 +183,7 @@ msgstr "_Prijungus vykdyti:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"ĮSPĖJIMAS: Šios parinktys yra tik patyrusiems naudotojams! Jei nežinai kas "
-"ir kaip, geriau išvis nelįsk!"
+msgstr "ĮSPĖJIMAS: Šios parinktys yra tik patyrusiems naudotojams! Jei nežinote kas ir kaip, geriau nekiškite rankų!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -211,13 +192,9 @@ msgstr "P_asirinktinės komandos"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Dauguma naudotojų prie abiejų komandų nori pridėti „sudo“ arba pridėti „sync "
-"%d &&“ prie „unmount %d“ komandos.\n"
-"„%d“ nurodo įrenginį, „%m“ prijungimo tašką."
+msgstr "Dauguma naudotojų prie abiejų komandų nori pridėti „sudo“ arba pridėti „sync %d &&“ prie „unmount %d“ komandos.\n„%d“ nurodo įrenginį, „%m“ prijungimo tašką."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -235,9 +212,7 @@ msgstr "_Komandos"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Aktyvuokite šią parinktį, kad būtų rodomos tinklo failų sistemos, tokios "
-"kaip NFS, SMBFS, SHFS ir SSHFS."
+msgstr "Aktyvuokite šią parinktį, kad būtų rodomos tinklo failų sistemos, tokios kaip NFS, SMBFS, SHFS ir SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -245,11 +220,9 @@ msgstr "Rodyti _tinklo failų sistemas"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Aktyvuokite šią parinktį, kad po atjungimo būtų išstumtas CD diskas ir "
-"įdėtas prieš prijungiant."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Aktyvuokite šią parinktį, kad po atjungimo būtų išstumtas CD diskas ir įdėtas prieš prijungiant."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -267,9 +240,7 @@ msgstr "_Rodyti tik prijungimo taškus"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
-"Apkarpyti įrenginių pavadinimų simbolių skaičių iki langelyje nurodyto "
-"skaičiaus."
+msgstr "Apkarpyti įrenginių pavadinimų simbolių skaičių iki langelyje nurodyto skaičiaus."
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid "Trim device names: "
@@ -286,13 +257,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
-"Išbraukti šias failų sistemas iš meniu.\n"
-"Sąrašas yra atskirtas paprastais tarpais.\n"
-"Jūs turite įrašyti teisingus įrenginius ar prijungimo taškus.\n"
-"Žvaigždutė (*) kelio gale gali būti naudojama kaip vietaženklis,\n"
-"pvz., \"/mnt/*\", kad būtų išbraukti bet kokie prijungimo taškai žemiau \"/"
-"mnt\".\n"
+msgstr "Išbraukti šias failų sistemas iš meniu.\nSąrašas yra atskirtas paprastais tarpais.\nJūs turite įrašyti teisingus įrenginius ar prijungimo taškus.\nŽvaigždutė (*) kelio gale gali būti naudojama kaip vietaženklis,\npvz., \"/mnt/*\", kad būtų išbraukti bet kokie prijungimo taškai žemiau \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -316,7 +281,4 @@ msgstr "Prijungti įrenginiai"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Rodo visus prijungiamus įrenginius ir (pri)atjungimus."
-
-#~ msgid "Failed to umount device \"%s\"."
-#~ msgstr "Nepavyko atjungti įrenginio \"%s\"."
+msgstr "Rodo visus prijungiamus įrenginius ir juos prijungia/atjungia."
