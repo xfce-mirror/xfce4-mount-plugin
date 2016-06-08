@@ -295,7 +295,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
                                _("Failed to mount device:"),
                                pdisk->device,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
             goto out;
         }
@@ -318,7 +318,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
                                _("Error executing on-mount command:"),
                                on_mount_cmd,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
 
         }
@@ -381,7 +381,7 @@ out:
                                _("Failed to umount device:"),
                                pdisk->device,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
 
         if (show_message_dialog && !eject && val == TRUE && exit_status == 0)
@@ -392,7 +392,7 @@ out:
                                _("The device should be removable safely now:"),
                                pdisk->device,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
         if (show_message_dialog && disk_check_mounted(pdisk->device))
             //xfce_dialog_show_error (NULL, NULL, _("An error occurred. The device \"%s\" should not be removed!"), pdisk->device);
@@ -402,7 +402,7 @@ out:
                                _("An error occurred. The device should not be removed:"),
                                pdisk->device,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
     }
 }
@@ -489,7 +489,7 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
                                _("Your /etc/fstab could not be read. This will severely degrade the plugin's abilities."),
                                NULL,
                                "gtk-ok",
-                               NULL,
+                               GTK_RESPONSE_OK,
                                NULL);
             /* gtk_dialog_run (GTK_DIALOG (dialog)); */
             //g_signal_connect (dialog, "response",

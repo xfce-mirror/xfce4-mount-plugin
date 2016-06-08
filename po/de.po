@@ -101,7 +101,7 @@ msgstr "Fehler beim Ausführen des Befehls nach dem Einhängen:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr "Gerät konnte nicht eingehängt werden:"
+msgstr "Gerät konnte nicht ausgehängt werden:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
