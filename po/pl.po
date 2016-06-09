@@ -1,27 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# hoek <hoek@hoek.pl>, 2014
+# Dawid, 2014
 # Piotr Maliński <admin@rk.edu.pl>, 2006
 # Piotr Sokół <piotr.sokol@10g.pl>, 2009
-# Piotr Strębski <strebski@o2.pl>, 2013-2014
+# Piotr Strębski <strebski@o2.pl>, 2013-2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2014-05-09 10:17+0000\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2016-06-09 20:39+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/xfce-panel-"
-"plugins/language/pl/)\n"
-"Language: pl\n"
+"Language-Team: Polish (http://www.transifex.com/xfce/xfce-panel-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -91,42 +89,34 @@ msgstr "nie zamontowano\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Wtyczka montowania"
+msgstr "Wtyczka montowania Xfce 4"
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Nie udało się zamontować urządzenia \"%s\"."
+msgstr "Błąd montowania urządzenia:"
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Wystąpił błąd podczas polecenia montowania \"%s\"."
+msgstr "Wystąpił błąd podczas polecenia montowania:"
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Nie udało się zamontować urządzenia \"%s\"."
+msgstr "Błąd odmontowania urządzenia:"
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Można bezpiecznie usunąć urządzenie „%s”."
+msgstr "Można teraz bezpiecznie usunąć urządzenie:"
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "Wystąpił błąd. Urządzenie \"%s\" nie powinno być usuwane!"
+msgstr "Wystąpił błąd. Urządzenie nie powinno być usuwane:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
-"Nie można odczytać Twojego /etc/fstab. To znacznie pogorszy możliwości "
-"wtyczki."
+msgstr "Nie można odczytać Twojego /etc/fstab. To znacznie pogorszy możliwości wtyczki."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -157,9 +147,7 @@ msgstr "Właściwości"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Powiadamia o odmontowaniu urządzenia. Użyteczne jeśli w poleceniu "
-"odmontowywania użyto „sync”."
+msgstr "Powiadamia o odmontowaniu urządzenia. Użyteczne jeśli w poleceniu odmontowywania użyto „sync”."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
@@ -184,15 +172,10 @@ msgstr "_Ogólne"
 #: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"To polecenie zostanie wykonane po zamontowaniu urządzenia w punkcie "
-"montowania urządzenia jako argument.\n"
-"Jeśli nie masz pewności, co wstawić, spróbuj \"exo-open %m\".\n"
-"'%d' może zostać użyte w celu określenia urządzenia, '%m' do montowania."
+msgstr "To polecenie zostanie wykonane po zamontowaniu urządzenia w punkcie montowania urządzenia jako argument.\nJeśli nie masz pewności, co wstawić, spróbuj \"exo-open %m\".\n'%d' może zostać użyte w celu określenia urządzenia, '%m' do montowania."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -211,15 +194,9 @@ msgstr "_Własne"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Wprowadza własne polecenia zamontowania i odmontowania. Większość "
-"użytkowników obydwa polecenia poprzedza poleceniem „sudo” lub „sync %d &&”w "
-"przypadku polecenia „unmount %d”.\n"
-"Parametr „%d” reprezentuje zamontowane urządzenie a „%m” jego punkt "
-"montowania."
+msgstr "Wprowadza własne polecenia zamontowania i odmontowania. Większość użytkowników obydwa polecenia poprzedza poleceniem „sudo” lub „sync %d &&”w przypadku polecenia „unmount %d”.\nParametr „%d” reprezentuje zamontowane urządzenie a „%m” jego punkt montowania."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -245,8 +222,8 @@ msgstr "_Sieciowe systemy plików"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
 msgstr "Wysuwa płyty z napędów przed zamontowaniem i po odmontowaniu"
 
 #: ../panel-plugin/mount-plugin.c:920
@@ -265,8 +242,7 @@ msgstr "Tylko _punkty montowania"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
-"Skracanie nazw urządzeń do liczby znaków określonych w przycisku obrotu."
+msgstr "Skracanie nazw urządzeń do liczby znaków określonych w przycisku obrotu."
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid "Trim device names: "
@@ -283,14 +259,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
-"Wyklucz następujące systemy plików z menu.\n"
-"Lista ta jest oddzielona prostymi odstępami.\n"
-"Do Ciebie należy określenie odpowiednich urządzeń\n"
-"lub punktów montowania.\n"
-"Gwiazdka (*) może być wykorzystana jako symbol zastępczy na końcu\n"
-"ścieżki, np. \"/mnt/*\" wykluczy jakiekolwiek punkty montowania\n"
-"pod \"/mnt\".\n"
+msgstr "Wyklucz następujące systemy plików z menu.\nLista ta jest oddzielona prostymi odstępami.\nDo Ciebie należy określenie odpowiednich urządzeń\nlub punktów montowania.\nGwiazdka (*) może być wykorzystana jako symbol zastępczy na końcu\nścieżki, np. \"/mnt/*\" wykluczy jakiekolwiek punkty montowania\npod \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -305,9 +274,8 @@ msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Pokaż partycje/urządzenia i pozwól je montować/odmontowywać"
 
 #: ../panel-plugin/mount-plugin.c:1036
-#, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Prawa autorskie (c) 2005-2012\n"
+msgstr "Prawa autorskie (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -316,6 +284,3 @@ msgstr "Montowanie urządzeń"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Wyświetla urządzenia oraz je montuje i odmontowywuje"
-
-#~ msgid "Failed to umount device \"%s\"."
-#~ msgstr "Błąd przy odmontowywaniu urządzenia \"%s\"."
