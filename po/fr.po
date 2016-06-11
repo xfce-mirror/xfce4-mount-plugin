@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Charles Monzat <superboa@hotmail.fr>, 2016
 # Fabian Nowak <timystery@arcor.de>, 2005
 # gomoko <gomoko@yahoo.com>, 2014
 # jc1 <jc1.quebecos@gmail.com>, 2013
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-06-08 07:28+0000\n"
-"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"PO-Revision-Date: 2016-06-11 08:39+0000\n"
+"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce-panel-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,7 +100,7 @@ msgstr "Impossible de monter le périphérique :"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Erreur d'exécution de la commande mount :"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
@@ -111,7 +112,7 @@ msgstr "Le périphérique peut maintenant être retiré en toute sécurité :"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Une erreur s'est produite. Le périphérique ne devrait pas être déconnecté :"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
