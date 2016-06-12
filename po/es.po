@@ -5,15 +5,18 @@
 # Translators:
 #  <abel.martin.ruiz@gmail.com>, 2009
 # Fitoschido, 2014
+# Fitoschido, 2014
 # gabrieltandil <gabriel.tandil@gmail.com>, 2014,2016
+# gabrieltandil <gabriel.tandil@gmail.com>, 2014,2016
+# Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>, 2014
 # Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-06-10 12:11+0000\n"
-"Last-Translator: gabrieltandil <gabriel.tandil@gmail.com>\n"
+"PO-Revision-Date: 2016-06-12 17:09+0000\n"
+"Last-Translator: Manolo Díaz <diaz.manolo@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,19 +101,19 @@ msgstr "No se pudo montar el dispositivo:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Error al ejecutar la orden «on-mount»:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr ""
+msgstr "No se pudo desmontar el dispositivo:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "Ahora debe ser seguro quitar el dispositivo:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Ha ocurrido un error. No debería quitar el dispositivo:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
