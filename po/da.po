@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Aputsiaĸ Niels Janussen <aj@isit.gl>, 2015
 # Claus Futtrup <cfuttrup@stofanet.dk>, 2008
+# Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2016
 # Per Kongstad <p_kongstad@op.pl>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2015-02-20 07:43+0000\n"
-"Last-Translator: Aputsiaĸ Niels Janussen <aj@isit.gl>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/xfce-panel-"
-"plugins/language/da/)\n"
-"Language: da\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2016-06-23 18:29+0000\n"
+"Last-Translator: Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>\n"
+"Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../panel-plugin/devices.c:71
@@ -89,42 +89,34 @@ msgstr "ikke monteret\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Udvidelsesmodul til montering"
+msgstr "Xfce 4 Mount Plugin"
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Kunne ikke montere enheden \"%s\"."
+msgstr "Kunne ikke montere enhed:"
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Fejl ved udførelse af monteringskommandoen \"%s\"."
+msgstr "Fejl ved udførelse af monteringskommando:"
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Kunne ikke montere enheden \"%s\"."
+msgstr "Kunne ikke afmontere enhed:"
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Det bør være sikkert at fjerne enheden \"%s\" nu."
+msgstr "Enheden kan fjernes sikkert nu:"
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "En fejl fremkom. Enheden \"%s\" bør ikke fjernes!"
+msgstr "Der opstod en fejl. Enheden bør ikke fjernes:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
-"Din /etc/fstab kunne ikke læses. Dette vil forringe udvidelsesmodulerne "
-"funktionalitet i betydelig grad."
+msgstr "Din /etc/fstab kunne ikke læses. Dette vil forringe udvidelsesmodulerne funktionalitet i betydelig grad."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -155,9 +147,7 @@ msgstr "Egenskaber"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Dette er kun anvendeligt og anbefalelsesværdigt, hvis du specificerer \"sync"
-"\" som en del af \"unmount\" kommandostrengen."
+msgstr "Dette er kun anvendeligt og anbefalelsesværdigt, hvis du specificerer \"sync\" som en del af \"unmount\" kommandostrengen."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
@@ -182,15 +172,10 @@ msgstr "_Generel"
 #: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Denne kommando vil blive udført efter montering af enheden med "
-"monteringspunktet for enheden som argument.\n"
-"Hvis du er usikker på, hvad der skal indsættes, prøv \"exo-open %m\".\n"
-"'%d' kan bruges til at specificere enheden, '%m' for monteringspunktet."
+msgstr "Denne kommando vil blive udført efter montering af enheden med monteringspunktet for enheden som argument.\nHvis du er usikker på, hvad der skal indsættes, prøv \"exo-open %m\".\n'%d' kan bruges til at specificere enheden, '%m' for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -200,9 +185,7 @@ msgstr "_Udfør efter montering:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"ADVARSEL: Disse valgmuligheder er kun for eksperter! Hvis du ikke ved, hvad "
-"de kan være godt for, hold fingrene væk!"
+msgstr "ADVARSEL: Disse valgmuligheder er kun for eksperter! Hvis du ikke ved, hvad de kan være godt for, hold fingrene væk!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -211,13 +194,9 @@ msgstr "_Brugerdefinerede kommandoer"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"De fleste brugere vil kun ønske at indsætte \"sudo\" før begge kommandoer "
-"eller \"sync %d &&\" før \"unmount %d\" kommandoen.\n"
-"'%d' bruges til at specificere enheden, '%m' for monteringspunktet."
+msgstr "De fleste brugere vil kun ønske at indsætte \"sudo\" før begge kommandoer eller \"sync %d &&\" før \"unmount %d\" kommandoen.\n'%d' bruges til at specificere enheden, '%m' for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -235,9 +214,7 @@ msgstr "_Kommandoer"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Aktivér denne valgmulighed for også at vise netværksfilsystemer så som NFS, "
-"SMBFS, SHFS og SSHFS."
+msgstr "Aktivér denne valgmulighed for også at vise netværksfilsystemer så som NFS, SMBFS, SHFS og SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -245,11 +222,9 @@ msgstr "Vis _netværksfilsystemer"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Aktivér denne valgmulighed for også at skubbe et cd-drev ud efter "
-"afmontering og for at indsætte før montering."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Aktivér denne valgmulighed for også at skubbe et cd-drev ud efter afmontering og for at indsætte før montering."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -284,13 +259,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
-"Ekskludér følgende filsystemer fra menuen.\n"
-"Listen adskilles ganske enkelt af mellemrum.\n"
-"Det er op til dig at angive de korrekte enheder eller monteringspunkter.\n"
-"Der kan bruges en asterisk (*) som pladsholder i slutningen af\n"
-"en sti, f.eks. \"/mnt/*\" for at ekskludere alle monteringspunkter under \"/"
-"mnt\".\n"
+msgstr "Ekskludér følgende filsystemer fra menuen.\nListen adskilles ganske enkelt af mellemrum.\nDet er op til dig at angive de korrekte enheder eller monteringspunkter.\nDer kan bruges en asterisk (*) som pladsholder i slutningen af\nen sti, f.eks. \"/mnt/*\" for at ekskludere alle monteringspunkter under \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -305,9 +274,8 @@ msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Vis partitioner/enheder og tillad at montere/afmontere dem"
 
 #: ../panel-plugin/mount-plugin.c:1036
-#, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Copyright (c) 2005-2012\n"
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -316,6 +284,3 @@ msgstr "Montér enheder"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Vis alle montérbare enheder og (af)monter dem på forespørgsel."
-
-#~ msgid "Failed to umount device \"%s\"."
-#~ msgstr "Kunne ikke montere enheden \"%s\"."
