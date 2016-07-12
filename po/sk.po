@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-07-11 14:03+0000\n"
+"PO-Revision-Date: 2016-07-12 09:20+0000\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-panel-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr "Zlyhalo pripojenie zariadenia:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Chyba pri spustení príkazu pri pripojení:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
@@ -109,7 +109,7 @@ msgstr "Zariadenie môže byť teraz bezpečne odstránené:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Vyskytla sa chyba. Zariadenie by nemalo byť odstránené:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
@@ -274,7 +274,7 @@ msgstr "Zobraziť partície/zariadenia a povoliť ich pripojiť alebo odpojiť"
 
 #: ../panel-plugin/mount-plugin.c:1036
 msgid "Copyright (c) 2005-2016\n"
-msgstr ""
+msgstr "Autorské práva (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
