@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-10-23 14:54+0000\n"
+"PO-Revision-Date: 2016-11-24 18:08+0000\n"
 "Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/xfce/xfce-panel-plugins/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -88,7 +88,7 @@ msgstr "pas montat\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Empeuton de montatge Xfce 4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -96,7 +96,7 @@ msgstr "Impossible de montar lo periferic :"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Error d'execucion de la comanda mount :"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
@@ -114,7 +114,7 @@ msgstr "Una error s'es produita. Lo periferic «%s » deuriá pas èsser desconn
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "/etc/fstab a pas pogut èsser legit. Aquò degradarà sevèrament las capacitats de l'empeuton."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -123,7 +123,7 @@ msgstr " -> "
 #: ../panel-plugin/mount-plugin.c:230
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s liure"
 
 #: ../panel-plugin/mount-plugin.c:249
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -257,7 +257,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Exclure del menú los sistèmas de fichièrs çai-aprèp.\nPer separar los elements, utilizatz l’espaci.\nEs a vos d'especificar de periferics o punts de montatge corrèctes.\nUn asterisc (*) pòt èsser utilizat coma substituent en fin de\ncamin d’accès ; p. ex., « /mnt/* » per exclure totes los punts de montatge en dejós de « /mnt ».\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
