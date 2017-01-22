@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-01-21 17:56+0000\n"
+"PO-Revision-Date: 2017-01-22 17:59+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -91,7 +91,7 @@ msgstr "ikke monteret\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
 msgid "Xfce 4 Mount Plugin"
-msgstr "Xfce 4 Mount-plugin"
+msgstr "Xfce 4 Mount-udvidelsesmodul"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
