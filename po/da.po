@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-01-22 17:59+0000\n"
+"PO-Revision-Date: 2017-01-23 19:55+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -243,7 +243,7 @@ msgstr "Vis kun _monteringspunkter"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr "Tilpas enhedsnavnene til antal karakterer angivet i rulleknappen."
+msgstr "Tilpas enhedsnavnene til antal tegn angivet i rulleknappen."
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid "Trim device names: "
@@ -251,7 +251,7 @@ msgstr "Tilpasset enhedsnavne: "
 
 #: ../panel-plugin/mount-plugin.c:966
 msgid " characters"
-msgstr " karakterer"
+msgstr " tegn"
 
 #: ../panel-plugin/mount-plugin.c:983
 msgid ""
