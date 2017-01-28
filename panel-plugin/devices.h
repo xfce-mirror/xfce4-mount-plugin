@@ -107,15 +107,17 @@ void disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolea
  */
 void disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, gboolean eject);
 
+gboolean device_or_mountpoint_exists (GPtrArray * pdisks, t_disk * pdisk);
 
 /**
  * Fill a GPtrArray with pointers on struct t_disk containing infos on devices
  * and theoretical mount point. Uses setfsent() and getfsent().
  * @param include_NFSs    TRUE if remote file systems should also be displayed.
  * @param showed_fstab_dialog Pointer to whether dialog has already been shown before
+ * @param length Length of the mount point names to display when shortened
  * @return                GPtrArray with t_disks
  */
-GPtrArray * disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length) ;
+GPtrArray * disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length);
 
 
 /**
@@ -195,11 +197,9 @@ void mount_info_print(t_mount_info * mount_info);
 t_mount_info * mount_info_new (float size, float used, float avail, unsigned int percent, char * type, char * mounted_on);
 void mount_info_free(t_mount_info * * mount_info);
 void disk_print (t_disk * pdisk);
-char * shorten_disk_name (const char *dev, gint length);
+char * shorten_disk_name (const char *dev, guint length);
 t_disk * disk_new (const char * dev, const char * mountpoint, gint length);
 void disk_free(t_disk **pdisk);
 void disks_free_mount_info(GPtrArray * pdisks);
 
 #endif /* _DEVICES_H_ */
-
-

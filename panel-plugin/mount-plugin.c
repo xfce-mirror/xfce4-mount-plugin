@@ -351,16 +351,15 @@ mounter_refresh (t_mounter * mt)
 
 
 static gboolean
-on_button_press (GtkWidget *widget, GdkEventButton *event, t_mounter *mounter)
+on_button_press (GtkWidget *widget, GdkEventButton *eventButton, t_mounter *mounter)
 {
     TRACE ("enters on_button_press");
-    if (mounter != NULL && event->button == 1) /* left click only */
+    if (mounter != NULL && eventButton->button == 1) /* left click only */
     {
-
+        GdkEvent event;
+        event.button = *eventButton;
         mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-        gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
-                        xfce_panel_plugin_position_menu, mounter->plugin,
-                        0, event->time);
+        gtk_menu_popup_at_widget (GTK_MENU(mounter->menu), mounter->button, GDK_GRAVITY_CENTER, GDK_GRAVITY_CENTER, &event);
         return TRUE;
     }
     TRACE ("leaves on_button_press");

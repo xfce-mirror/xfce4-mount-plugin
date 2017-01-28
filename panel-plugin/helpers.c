@@ -33,8 +33,8 @@ seperate_list (GPtrArray *array, char *list)
     int retval = 0;
     char *p, *q;
 
-	if (list==NULL)
-		return retval;
+    if (list==NULL)
+        return retval;
 
     p = strdup(list);
 
@@ -103,35 +103,37 @@ int
 mountpointprintf (char **dest, char *format, char *mountpoint)
 {
     int retval=0;
-    char *p = strdup(format), *q, *r, *s, *t;
-
-    r = p;
+    char *p, *q, *r, *s, *t, *escaped_mp="";
 
     if (*dest==NULL)
         *dest = "";
 
+    p = strdup(mountpoint);
+    r = p;
+
+    while ((q=strchr(p, ' ')) != NULL) {
+        t = strdup(p);
+        s = strchr(t, ' ');
+        s[0] = '\0';
+        escaped_mp = g_strconcat (escaped_mp, t, "\\ ", NULL);
+        g_free(t);
+        p = q+1;
+    }
+    escaped_mp = g_strconcat(escaped_mp, p, NULL);
+    g_free(r);
+
+    p = strdup(format);
+    r = p;
     for (q = strstr(p, "\%m"); q!=NULL; q = strstr(p, "\%m")) {
         q[0] = '\0';
-
-        if (strchr(mountpoint, ' ')!=NULL) {
-			t = strdup(mountpoint);
-			s = strchr(t, ' ');
-			s[0] = '\\';
-			s[1] = '\0';
-			s = g_strconcat (t, strchr(mountpoint, ' '), NULL);
-			/* g_free(t); */
-        }
-        else
-			s = mountpoint;
-
-        *dest = g_strconcat (*dest, p, s, " ", NULL);
+        *dest = g_strconcat (*dest, p, escaped_mp, " ", NULL);
         p = q+2;
         retval++;
     }
     *dest = g_strconcat (*dest, p, NULL);
 
     g_free(r);
+    g_free(escaped_mp);
 
     return retval;
 }
-

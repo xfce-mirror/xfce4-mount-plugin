@@ -1,4 +1,9 @@
-2016/05/29 - Versoin 1.0.0
+2017/01/28 - Version 1.1.0
+- Gtk 3.22 supported
+- Allow several spaces in mountpoint names
+- Support fuseblk devices by not using fusermount -u for them (checks for fuse.* now)
+
+2016/05/29 - Version 1.0.0
 - Gtk 3 Support only
 - Panel Version 4.12 only
 

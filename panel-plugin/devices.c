@@ -180,14 +180,14 @@ disk_print (t_disk * pdisk)
 }
 
 char *
-shorten_disk_name (const char *dev, gint len)
+shorten_disk_name (const char *dev, guint len)
 {
     char *r, *lastchars, *firstchars;
     if (strncmp(dev, "LABEL=", 6)==0)
     {
       r = g_strdup(dev+6*sizeof(char));
     }
-    else if (strlen(dev)>len) // len canot be set lower than 9
+    else if (strlen(dev)>len) // len cannot be set lower than 9
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
@@ -346,7 +346,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
     {
 
         DBG("disk_umount: dev=%s, mountpoint=%s, umount_command=%s, show_message_dialog=%d, eject=%d, type=%s", pdisk->device, pdisk->mount_point, umount_command, show_message_dialog, eject, pdisk->mount_info->type);
-        if (strstr(pdisk->mount_info->type, "fuse"))
+        if (strstr(pdisk->mount_info->type, "fuse."))
           deviceprintf(&tmp, "fusermount -u %m", pdisk->device);
         else
           deviceprintf(&tmp, umount_command, pdisk->device);
@@ -418,7 +418,7 @@ gboolean
 device_or_mountpoint_exists (GPtrArray * pdisks, t_disk * pdisk)
 {
   gboolean returnValue = FALSE;
-  int i;
+  guint i;
   t_disk *disk;
   int stringlength1, stringlength2, stringlength3, stringlength4;
 
@@ -470,7 +470,6 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
     t_disk * pdisk;
     struct fstab *pfstab;
     gboolean has_valid_mount_device;
-    GtkWidget *dialog;
 
     pdisks = g_ptr_array_new();
 
