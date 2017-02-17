@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-02-13 12:16+0000\n"
+"PO-Revision-Date: 2017-02-17 08:58+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -136,7 +136,7 @@ msgstr "dispositius"
 
 #: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
-msgstr "Connector per muntar dispositius"
+msgstr "Connector de muntatge"
 
 #: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
@@ -258,7 +258,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Exclou els sistemes de fitxers següents del menú.\nLa llista està separada per espais simples.\nEspecificar els dispositius o els punts de muntatge correctes és cosa vostra.\nUn asterisc (*) es pot utilitzar com a marcador de posició a l'extrem\nd'un camí, per exemple: \"/mnt/*\" per excloure qualsevol punt de muntatge a continuació de \"/mnt\".\n"
+msgstr "Exclou els següents sistemes de fitxers del menú.\nLa llista està separada amb espais simples.\nL'especificació dels dispositius o punts de muntatge correctes és cosa vostra.\nEs pot utilitzar un asterisc (*) com a marcador de posició al final\nd'un camí, p. ex. \"/mnt/*\" exclou qualsevol punt de muntatge a continuació de \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -278,7 +278,7 @@ msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "Munta els dispositius"
+msgstr "Muntatge de dispositius"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
