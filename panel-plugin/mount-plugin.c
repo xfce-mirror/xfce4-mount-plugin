@@ -1050,7 +1050,10 @@ mount_construct (XfcePanelPlugin *plugin)
     mounter = create_mounter_control (plugin);
 
 #ifdef HAS_PANEL_49
-    xfce_panel_plugin_set_small (plugin, FALSE);
+    if (xfce_panel_plugin_get_mode(plugin) == XFCE_PANEL_PLUGIN_MODE_DESKBAR)
+        xfce_panel_plugin_set_small(plugin, FALSE);
+    else
+        xfce_panel_plugin_set_small (plugin, TRUE);
 #endif
 
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
