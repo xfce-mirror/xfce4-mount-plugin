@@ -1,8 +1,8 @@
 /* mount-plugin.c */
 
 /*
-Copyright (C) 2005 Jean-Baptiste jb_dul@yahoo.com
-Copyright (C) 2005-2008 Fabian Nowak timystery@arcor.de.
+Copyright (C) 2005 Jean-Baptiste <jb_dul@yahoo.com>
+Copyright (C) 2005-2017 Fabian Nowak <timystery@arcor.de>.
 Copyright (C) 2012 Landry Breuil <landry@xfce.org>
 
 This program is free software; you can redistribute it and/or
@@ -353,17 +353,30 @@ mounter_refresh (t_mounter * mt)
 static gboolean
 on_button_press (GtkWidget *widget, GdkEventButton *eventButton, t_mounter *mounter)
 {
+    gboolean result = FALSE;
+#if GTK_CHECK_VERSION (3,22,0)
+    GdkEvent event;
+#endif
     TRACE ("enters on_button_press");
-    if (mounter != NULL && eventButton->button == 1) /* left click only */
+    if (eventButton != NULL)
     {
-        GdkEvent event;
-        event.button = *eventButton;
-        mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-        gtk_menu_popup_at_widget (GTK_MENU(mounter->menu), mounter->button, GDK_GRAVITY_CENTER, GDK_GRAVITY_CENTER, &event);
-        return TRUE;
+        if (mounter != NULL && eventButton->button == 1) /* left click only */
+        {
+            mounter_refresh (mounter); /* refreshs infos regarding mounts data */
+#if GTK_CHECK_VERSION (3,22,0)
+            event.button = *eventButton;
+            gtk_menu_popup_at_widget (GTK_MENU(mounter->menu), mounter->button, GDK_GRAVITY_CENTER, GDK_GRAVITY_CENTER, &event);
+#else
+            gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
+                            xfce_panel_plugin_position_menu, mounter->plugin,
+                            0, eventButton->time);
+#endif
+            result = TRUE;
+        }
     }
     TRACE ("leaves on_button_press");
-    return FALSE ;
+
+    return result ;
 }
 
 
