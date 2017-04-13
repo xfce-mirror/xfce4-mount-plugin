@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015-2016
+# Moo, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-06-24 10:45+0000\n"
+"PO-Revision-Date: 2017-04-13 14:25+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -183,7 +183,7 @@ msgstr "_Prijungus vykdyti:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "ĮSPĖJIMAS: Šios parinktys yra tik patyrusiems naudotojams! Jei nežinote kas ir kaip, geriau nekiškite rankų!"
+msgstr "ĮSPĖJIMAS: Šie parametrai yra tik patyrusiems naudotojams! Jei nežinote kas ir kaip, geriau nekiškite rankų!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -212,7 +212,7 @@ msgstr "_Komandos"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Aktyvuokite šią parinktį, kad būtų rodomos tinklo failų sistemos, tokios kaip NFS, SMBFS, SHFS ir SSHFS."
+msgstr "Aktyvuokite šį parametrą, kad būtų rodomos tinklo failų sistemos, tokios kaip NFS, SMBFS, SHFS ir SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -222,7 +222,7 @@ msgstr "Rodyti _tinklo failų sistemas"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Aktyvuokite šią parinktį, kad po atjungimo būtų išstumtas CD diskas ir įdėtas prieš prijungiant."
+msgstr "Aktyvuokite šį parametrą, kad po atjungimo tuo pačiu būtų išstumtas CD diskas ir, kad prieš prijungiant jis būtų įdėtas."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -230,7 +230,7 @@ msgstr "_Išstumti CD-diskus"
 
 #: ../panel-plugin/mount-plugin.c:933
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Aktyvuokite šią parinktį, kad būtų rodomi tik prijungimo taškai."
+msgstr "Aktyvuokite šį parametrą, kad būtų rodomi tik prijungimo taškai."
 
 #: ../panel-plugin/mount-plugin.c:936
 msgid "Display _mount points only"
