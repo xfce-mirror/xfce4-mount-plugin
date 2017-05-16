@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
-# Mohamad Hasan Al Banna, 2014
+# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2014
+# Mohamad Hasan Al Banna <se7entime@openmailbox.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2014-05-23 17:50+0000\n"
-"Last-Translator: Mohamad Hasan Al Banna\n"
-"Language-Team: Indonesian (http://www.transifex.com/projects/p/xfce-panel-"
-"plugins/language/id/)\n"
-"Language: id\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2017-05-16 04:51+0000\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"Language-Team: Indonesian (http://www.transifex.com/xfce/xfce-panel-plugins/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../panel-plugin/devices.c:71
@@ -88,40 +88,34 @@ msgstr "tak dikait\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Plugin Kait"
+msgstr "Pengaya Kait Xfce 4"
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Gagal mengaitkan divais \"%s\"."
+msgstr "Gagal mengaitkan perangkat:"
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Galat mengeksekusi perintah saat mengaitkan \"%s\"."
+msgstr "Kesalahan menjalankan perintah pada kait:"
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Gagal mengaitkan divais \"%s\"."
+msgstr "Gagal melepas kait perangkat:"
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Divais \"%s\" dapat dilepas dengan aman sekarang."
+msgstr "Perangkat harus dilepas dengan aman sekarang:"
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "Galat terjadi. Divais \"%s\" jangan sampai dilepas!"
+msgstr "Terjadi kesalahan. Perangkat tidak boleh dilepas:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "/etc/fstab Anda tidak bisa dibaca. Ini akan sangat menurunkan kemampuan pengaya."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -152,9 +146,7 @@ msgstr "Properti"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Ini hanya berguna dan disarankan jika anda menentukan \"sync\" sebagai "
-"bagian dari tali perintah \"unmount\"."
+msgstr "Ini hanya berguna dan disarankan jika anda menentukan \"sync\" sebagai bagian dari tali perintah \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
@@ -179,15 +171,10 @@ msgstr "_Umum"
 #: ../panel-plugin/mount-plugin.c:791
 #, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Perintah ini akan dieksekusi setelah mengait divais dengan titik kait divais "
-"sebagai argumen.\n"
-"Jika anda tidak yakin apa yang dimasukkan, coba \"exo-open %m\".\n"
-"'%d' dapat digunakan untuk menentukan divais, '%m' untuk titik kait."
+msgstr "Perintah ini akan dieksekusi setelah mengait divais dengan titik kait divais sebagai argumen.\nJika anda tidak yakin apa yang dimasukkan, coba \"exo-open %m\".\n'%d' dapat digunakan untuk menentukan divais, '%m' untuk titik kait."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -197,9 +184,7 @@ msgstr "_Eksekusi setelah mengait:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"PERINGATAN: Opsi ini hanya untuk yang telah ahli! Jika anda tidak tahu "
-"kegunaannya, segera singkirkan tangan anda!"
+msgstr "PERINGATAN: Opsi ini hanya untuk yang telah ahli! Jika anda tidak tahu kegunaannya, segera singkirkan tangan anda!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -208,13 +193,9 @@ msgstr "_Perintah suai"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Kebanyakan pengguna hanya ingin menambah \"sudo\" bagi kedua perintah atau "
-"menambah \"sync %d &&\" ke perintah \"unmount %d\".\n"
-"'%d' digunakan untuk menentukan divais, '%m' untuk titik kait."
+msgstr "Kebanyakan pengguna hanya ingin menambah \"sudo\" bagi kedua perintah atau menambah \"sync %d &&\" ke perintah \"unmount %d\".\n'%d' digunakan untuk menentukan divais, '%m' untuk titik kait."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -232,9 +213,7 @@ msgstr "Pe_rintah:"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Aktifkan opsi ini untuk menampilkan pula sistem berkas jaringan seperti NFS, "
-"SMBFS, SHFS dan SSHFS."
+msgstr "Aktifkan opsi ini untuk menampilkan pula sistem berkas jaringan seperti NFS, SMBFS, SHFS dan SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -242,11 +221,9 @@ msgstr "Tampilkan _sistem berkas jaringan"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Aktifkan opsi ini untuk mengeluarkan pula penggerak CD setelah lepas kait "
-"dan untuk memasukkan sebelum mengait."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Aktifkan opsi ini untuk mengeluarkan pula penggerak CD setelah lepas kait dan untuk memasukkan sebelum mengait."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -264,9 +241,7 @@ msgstr "Hanya _tampilkan titik kait"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
-"Potong nama divais menjadi jumlah karakter yang ditentukan dalam tombol "
-"putar."
+msgstr "Potong nama divais menjadi jumlah karakter yang ditentukan dalam tombol putar."
 
 #: ../panel-plugin/mount-plugin.c:957
 msgid "Trim device names: "
@@ -283,7 +258,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Kecualikan sistem berkas berikut dari menu.\nDaftar ini dipisahkan oleh ruang sederhana.\nTerserah Anda untuk menentukan perangkat yang benar atau titik kait.\nTanda bintang (*) dapat digunakan sebagai tempat pada akhir\npath, mis., \"/mnt/*\" untuk mengecualikan titik temu di bawah \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -295,13 +270,11 @@ msgstr "_Sistem berkas"
 
 #: ../panel-plugin/mount-plugin.c:1034
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
-"Tampilkan partisi/divais dan izinkan untuk mengaitkan/melepaskan mereka"
+msgstr "Tampilkan partisi/divais dan izinkan untuk mengaitkan/melepaskan mereka"
 
 #: ../panel-plugin/mount-plugin.c:1036
-#, fuzzy
 msgid "Copyright (c) 2005-2016\n"
-msgstr "Hak Cipta 2005-2012\n"
+msgstr "Hak Cipta (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
@@ -309,8 +282,4 @@ msgstr "Divais kait"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
-"Tampilkan semua divais yang dapat dikait dan (lepas)kait sesuai permintaan."
-
-#~ msgid "Failed to umount device \"%s\"."
-#~ msgstr "Gagal melepaskan divais \"%s\"."
+msgstr "Tampilkan semua divais yang dapat dikait dan (lepas)kait sesuai permintaan."
