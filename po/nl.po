@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Pjotr <pjotrvertaalt@gmail.com>, 2014,2016
+# Pjotr <pjotrvertaalt@gmail.com>, 2014,2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-06-08 09:09+0000\n"
+"PO-Revision-Date: 2017-06-10 10:59+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/xfce/xfce-panel-plugins/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,7 @@ msgstr "niet aangekoppeld\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
 msgid "Xfce 4 Mount Plugin"
-msgstr "Xfce4 invoegtoepassing voor aankoppelen"
+msgstr "Xfce4-invoegsel voor aankoppelen"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -113,7 +113,7 @@ msgstr "Er is een fout opgetreden. Het apparaat kan beter niet worden verwijderd
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "Uw /etc/fstab kon niet worden gelezen. Dit zal de bruikbaarheid van de invoegtoepassing ernstig verminderen."
+msgstr "Uw /etc/fstab kon niet worden gelezen. Dit zal de bruikbaarheid van het invoegsel ernstig verminderen."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -134,7 +134,7 @@ msgstr "apparaten"
 
 #: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
-msgstr "Aankoppel-invoegtoepassing"
+msgstr "Aankoppel-invoegsel"
 
 #: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
