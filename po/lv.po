@@ -1,25 +1,23 @@
-# Latvian translation of the xfce4-mount-plugin package.
-# Copyright (C) 2004-2005 Jean-Baptiste Dulong.
-# Copytight (C) 2005-2007 Fabian Nowak.
-# This file is distributed under the same license as the xfce4-mount-plugin packa
-#
-# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
-# Rihards Prieditis <rprieditis@gmail.com>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Rihards Priedītis <rprieditis@gmail.com>, 2009
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-mount-plugin 0.5.2N\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 22:25+0200\n"
-"PO-Revision-Date: 2009-09-18 22:29+0100\n"
-"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
-"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
-"Language: lv\n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2017-07-25 11:28+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"Language-Team: Latvian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -89,34 +87,28 @@ msgstr "nemontēts\n"
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
-#, fuzzy
 msgid "Xfce 4 Mount Plugin"
-msgstr "Montēšanas spraudnis"
+msgstr ""
 
 #: ../panel-plugin/devices.c:295
-#, fuzzy
 msgid "Failed to mount device:"
-msgstr "Montēt ierīces"
+msgstr ""
 
 #: ../panel-plugin/devices.c:318
-#, fuzzy
 msgid "Error executing on-mount command:"
-msgstr "Montēšanas spraudnis: Kļūda izpildot komandu."
+msgstr ""
 
 #: ../panel-plugin/devices.c:381
-#, fuzzy
 msgid "Failed to umount device:"
-msgstr "Montēt ierīces"
+msgstr ""
 
 #: ../panel-plugin/devices.c:392
-#, fuzzy
 msgid "The device should be removable safely now:"
-msgstr "Ierīce \"%s\" ir droši noņemama."
+msgstr ""
 
 #: ../panel-plugin/devices.c:402
-#, fuzzy
 msgid "An error occurred. The device should not be removed:"
-msgstr "Notika kļūda. Ierīci nevajadzētu noņemt!"
+msgstr ""
 
 #: ../panel-plugin/devices.c:489
 msgid ""
@@ -146,17 +138,14 @@ msgid "Mount Plugin"
 msgstr "Montēšanas spraudnis"
 
 #: ../panel-plugin/mount-plugin.c:712
-#, fuzzy
 msgid "Properties"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīti"
 
 #: ../panel-plugin/mount-plugin.c:743
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr ""
-"Šis ir lietderīgs un ieteicams, ja jūs norādāt \"sync\", kā daļu no \"unmount"
-"\" komandas virkni."
+msgstr "Šis ir lietderīgs un ieteicams, ja jūs norādāt \"sync\", kā daļu no \"unmount\" komandas virkni."
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
@@ -179,16 +168,12 @@ msgid "_General"
 msgstr "_Vispārēji"
 
 #: ../panel-plugin/mount-plugin.c:791
-#, fuzzy, c-format
+#, c-format
 msgid ""
-"This command will be executed after mounting the device with the mount point "
-"of the device as argument.\n"
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr ""
-"Šī komanda tiks izpildīt pēc montēšanas ar montēšanas punktu, kā parametru.\n"
-"Ja nezināt, ko ievietot, mēģiniet \"thunar %m\".\n"
-"'%d' var tikt norādīts, lai norādītu ierīci, '%m' montēšanas punktam."
 
 #: ../panel-plugin/mount-plugin.c:800
 msgid "_Execute after mounting:"
@@ -198,9 +183,7 @@ msgstr "_Izpildīt pēc montēšanas:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr ""
-"UZMANĪBU: Šīs opcijas ir paredzēta tikai ekspertiem. Ja nezināt, kam tās ir "
-"domātas, rokas nost!"
+msgstr "UZMANĪBU: Šīs opcijas ir paredzēta tikai ekspertiem. Ja nezināt, kam tās ir domātas, rokas nost!"
 
 #: ../panel-plugin/mount-plugin.c:827
 msgid "_Custom commands"
@@ -209,13 +192,9 @@ msgstr "_Pielāgotās komandas"
 #: ../panel-plugin/mount-plugin.c:846
 #, c-format
 msgid ""
-"Most users will only want to prepend \"sudo\" to both commands or prepend "
-"\"sync %d &&\" to the \"unmount %d\" command.\n"
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
-"Lielākā daļa lietotāju vēlēsies pievienot \"sudo\" abām komandām vai "
-"pievienot \"sync %d &&\"  komandai \"unmount %d\".\n"
-"'%d' tiek lietots, lai norādītu ierīci, '%m' montēšanas punktu."
+msgstr "Lielākā daļa lietotāju vēlēsies pievienot \"sudo\" abām komandām vai pievienot \"sync %d &&\"  komandai \"unmount %d\".\n'%d' tiek lietots, lai norādītu ierīci, '%m' montēšanas punktu."
 
 #: ../panel-plugin/mount-plugin.c:854
 msgid "_Mount command:"
@@ -233,9 +212,7 @@ msgstr "_Komandas"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
-"Aktivizējot šo opciju, tiks attēloti arī tīklu failu sistēmas, piemēram, "
-"NFS, SMBFS, SHFS un SSHFS."
+msgstr "Aktivizējot šo opciju, tiks attēloti arī tīklu failu sistēmas, piemēram, NFS, SMBFS, SHFS un SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:903
 msgid "Display _network file systems"
@@ -243,11 +220,9 @@ msgstr "Attēlot _tīkla failu sistēmas"
 
 #: ../panel-plugin/mount-plugin.c:916
 msgid ""
-"Activate this option to also eject a CD-drive after unmounting and to insert "
-"before mounting."
-msgstr ""
-"Aktivizējot šo opciju CD tiks izgrūsts pēc atmontēšanas un ievietots pēc "
-"montēšanas."
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Aktivizējot šo opciju CD tiks izgrūsts pēc atmontēšanas un ievietots pēc montēšanas."
 
 #: ../panel-plugin/mount-plugin.c:920
 msgid "_Eject CD-drives"
@@ -276,7 +251,6 @@ msgid " characters"
 msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:983
-#, fuzzy
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -284,9 +258,6 @@ msgid ""
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
-"Izslēgt sekojošas failu sistēmas no izvēlnes.\n"
-"Saraksts tiek atdalīts ar vienkāršām atstarpēm.\n"
-"Pašam būs jānorāda pareizās ierīces vai montēšanas punkti."
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -311,6 +282,3 @@ msgstr "Montēt ierīces"
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
 msgstr "Rāda visus montējamās ierīces un (at)montē tās pēc pieprasījuma."
-
-#~ msgid "Mount Plugin: Error executing command."
-#~ msgstr "Montēšanas spraudnis: Kļūda izpildot komandu."
