@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2016-06-21 10:30+0000\n"
+"PO-Revision-Date: 2017-07-25 11:28+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr "ההתקן אמור עכשיו להיות ניתן להסרה בבטחה
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "אירעה שגיאה. אין להסיר את ההתקן:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
