@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-07-25 22:03+0000\n"
+"PO-Revision-Date: 2017-07-26 21:47+0000\n"
 "Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -108,17 +108,17 @@ msgstr ""
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Produciuse un erro. Non ser debería retirar o dispositivo:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Non foi posíbel ler /etc/fstab. Isto ha degradar de maneira grave as posibilidades do engadido."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
-msgstr ""
+msgstr " -> "
 
 #: ../panel-plugin/mount-plugin.c:230
 #, c-format
@@ -269,11 +269,11 @@ msgstr "Sistemas de _ficheiros"
 
 #: ../panel-plugin/mount-plugin.c:1034
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Mostrar particións/dispositivos e permitir des/montalos"
 
 #: ../panel-plugin/mount-plugin.c:1036
 msgid "Copyright (c) 2005-2016\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
