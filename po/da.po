@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-09-30 14:20+0000\n"
+"PO-Revision-Date: 2017-11-01 16:44+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +117,7 @@ msgstr "Der opstod en fejl. Enheden bør ikke fjernes:"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "Din /etc/fstab kunne ikke læses. Dette vil forringe pluginene funktionalitet i betydelig grad."
+msgstr "Din /etc/fstab kunne ikke læses. Dette vil forringe pluginenes funktionalitet i betydelig grad."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
@@ -138,7 +138,7 @@ msgstr "enheder"
 
 #: ../panel-plugin/mount-plugin.c:707
 msgid "Mount Plugin"
-msgstr "Plugin til montering"
+msgstr "Montering-plugin"
 
 #: ../panel-plugin/mount-plugin.c:712
 msgid "Properties"
