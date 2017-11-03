@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-11-03 11:13+0000\n"
+"PO-Revision-Date: 2017-11-03 18:00+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr "Dette er kun anvendeligt og anbefalelsesværdigt, hvis du specificerer \
 
 #: ../panel-plugin/mount-plugin.c:747
 msgid "Show _message after unmount"
-msgstr "Vis _besked efter afmontering"
+msgstr "Vis _meddelelse efter afmontering"
 
 #: ../panel-plugin/mount-plugin.c:759
 msgid "You can specify a distinct icon to be displayed in the panel."
