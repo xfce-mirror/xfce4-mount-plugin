@@ -6,13 +6,14 @@
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2015
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # ebal <ebalaskas@ebalaskas.gr>, 2008
+# Πέτρος Σαμαράς <psamaras1@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2018-03-18 16:10+0000\n"
+"Last-Translator: Πέτρος Σαμαράς <psamaras1@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/xfce/xfce-panel-plugins/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,27 +90,27 @@ msgstr "μη προσαρτημένο\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Πρόσθετο Προσάρτησης Δίσκων Xfce4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
-msgstr ""
+msgstr "Αποτυχία προσάρτησης συσκευής:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Σφάλμα κατά την εκτέλεση εντολής on-mount:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr ""
+msgstr "Αποτυχία αποπροσάρτησης συσκευής:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "Η συσκευή θα πρέπει να μπορεί να αφαιρεθεί με ασφάλεια:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Προέκυψε σφάλμα. Η συσκευή δεν θα πέπει να αφαιρεθεί:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
@@ -274,7 +275,7 @@ msgstr "Εμφάνιση κατατμήσεων/συσκευών και αποδ
 
 #: ../panel-plugin/mount-plugin.c:1036
 msgid "Copyright (c) 2005-2016\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
