@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2018-04-28 21:15+0000\n"
+"PO-Revision-Date: 2018-04-29 10:01+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -104,26 +104,26 @@ msgstr "Az eszköz leválasztása meghiúsult:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "Az eszköz most már biztonságosan eltávolítható:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Hiba történt. Az eszközt ne távolítsa el:"
 
 #: ../panel-plugin/devices.c:489
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Az /etc/fstab nem olvasható. Ez súlyosan csökkenti a bővítmény képességeit."
 
 #: ../panel-plugin/mount-plugin.c:177
 msgid " -> "
-msgstr ""
+msgstr " -> "
 
 #: ../panel-plugin/mount-plugin.c:230
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s szabad"
 
 #: ../panel-plugin/mount-plugin.c:249
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -257,7 +257,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "A következő fájlrendszerek kihagyása a menüből.\nA listát szóközök választják el.\nA megfelelő eszközök vagy csatolási pontok megadása az Ön feladata.\nA csillag (*) helykitöltőként használható az útvonalak végén, pl. az „/mnt/*” kihagyja az „/mnt” alatti lehetséges csatolási pontokat.\n"
 
 #: ../panel-plugin/mount-plugin.c:994
 msgid "E_xclude specified file systems"
@@ -273,7 +273,7 @@ msgstr "Partíciók/eszközök megjelenítése és csatolásuk/leválasztásuk l
 
 #: ../panel-plugin/mount-plugin.c:1036
 msgid "Copyright (c) 2005-2016\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2016\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
