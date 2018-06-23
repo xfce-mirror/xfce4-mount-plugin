@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dima Smirnov <arch@cnc-parts.info>, 2010
+# Sergey Alyoshin <alyoshin.s@gmail.com>, 2014,2016
+# Simple88, 2016
+# Zmicer Turok <zmicerturok@gmail.com >, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-08 00:31+0200\n"
+"PO-Revision-Date: 2018-06-23 18:27+0000\n"
+"Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
+"Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: be\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../panel-plugin/devices.c:71
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f Б"
+
+#: ../panel-plugin/devices.c:72
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f кБ"
+
+#: ../panel-plugin/devices.c:73
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f МБ"
+
+#: ../panel-plugin/devices.c:74
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f ГБ"
+
+#: ../panel-plugin/devices.c:83
+#, c-format
+msgid "size:                %g\n"
+msgstr "памер: %g\n"
+
+#: ../panel-plugin/devices.c:84
+#, c-format
+msgid "used size:           %g\n"
+msgstr "выкарыстаны памер: %g\n"
+
+#: ../panel-plugin/devices.c:85
+#, c-format
+msgid "available siz:       %g\n"
+msgstr "даступны памер: %g\n"
+
+#: ../panel-plugin/devices.c:86
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "адсотак выкарыстання: %d\n"
+
+#: ../panel-plugin/devices.c:87
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "тып файлавай сістэмы: %s\n"
+
+#: ../panel-plugin/devices.c:88
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr "актуальны пункт мантавання: %s\n"
+
+#: ../panel-plugin/devices.c:172
+#, c-format
+msgid "disk: %s\n"
+msgstr "дыск: %s\n"
+
+#: ../panel-plugin/devices.c:173
+#, c-format
+msgid "mount point: %s\n"
+msgstr "пункт мантавання: %s\n"
+
+#: ../panel-plugin/devices.c:177
+#, c-format
+msgid "not mounted\n"
+msgstr "не прымантавана\n"
+
+#: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
+#: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
+#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
+msgid "Xfce 4 Mount Plugin"
+msgstr "Убудова мантавання Xfce 4"
+
+#: ../panel-plugin/devices.c:295
+msgid "Failed to mount device:"
+msgstr "Не атрымалася прымантаваць прыладу:"
+
+#: ../panel-plugin/devices.c:318
+msgid "Error executing on-mount command:"
+msgstr "Падчас запуску загаду на прымантаванне адбылася памылка:"
+
+#: ../panel-plugin/devices.c:381
+msgid "Failed to umount device:"
+msgstr "Не атрымалася адмантаваць прыладу:"
+
+#: ../panel-plugin/devices.c:392
+msgid "The device should be removable safely now:"
+msgstr "Цяпер прыладу можна бяспечна выняць:"
+
+#: ../panel-plugin/devices.c:402
+msgid "An error occurred. The device should not be removed:"
+msgstr "Адбылася памылка. Не вымайце прыладу:"
+
+#: ../panel-plugin/devices.c:489
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "Немагчыма прачытаць файл /etc/fstab. Гэта значна паменшыць магчымасці ўбудовы."
+
+#: ../panel-plugin/mount-plugin.c:177
+msgid " -> "
+msgstr " → "
+
+#: ../panel-plugin/mount-plugin.c:230
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s / %s] вольна %s"
+
+#: ../panel-plugin/mount-plugin.c:249
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">не прымантавана</span>"
+
+#: ../panel-plugin/mount-plugin.c:516
+msgid "devices"
+msgstr "прылада"
+
+#: ../panel-plugin/mount-plugin.c:707
+msgid "Mount Plugin"
+msgstr "Убудова мантавання"
+
+#: ../panel-plugin/mount-plugin.c:712
+msgid "Properties"
+msgstr "Уласцівасці"
+
+#: ../panel-plugin/mount-plugin.c:743
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr "Мае сэнс толькі калі ў загадзе «unmount» ёсць параметр «sync»."
+
+#: ../panel-plugin/mount-plugin.c:747
+msgid "Show _message after unmount"
+msgstr "Паказваць _паведамленне пасля адмантавання"
+
+#: ../panel-plugin/mount-plugin.c:759
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "Вы можаце вызначыць асобныя значкі, што будуць адлюстроўвацца на панэлі."
+
+#: ../panel-plugin/mount-plugin.c:765
+msgid "Icon:"
+msgstr "Значок:"
+
+#: ../panel-plugin/mount-plugin.c:769
+msgid "Select an image"
+msgstr "Абраць значок"
+
+#: ../panel-plugin/mount-plugin.c:776
+msgid "_General"
+msgstr "_Асноўныя"
+
+#: ../panel-plugin/mount-plugin.c:791
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"exo-open %m\".\n"
+"'%d' can be used to specify the device, '%m' for the mountpoint."
+msgstr "Гэты загад будзе запушчаны пасля прымантавання з параметрам пункта мантавання.\nКалі вы не ведаеце што неабходна ўставіць, паспрабуйце «exo-open %m».\n‘%d’ можа выкарыстоўвацца для вызначэння прылады, ‘%m’ - для пункту мантавання."
+
+#: ../panel-plugin/mount-plugin.c:800
+msgid "_Execute after mounting:"
+msgstr "_Запусціць пасля мантавання:"
+
+#: ../panel-plugin/mount-plugin.c:823
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr "УВАГА! Гэтыя параметры толькі для экспертаў! Калі вы не разумееце што яны азначаюць, то лепш нічога не рабіце!"
+
+#: ../panel-plugin/mount-plugin.c:827
+msgid "_Custom commands"
+msgstr "_Адвольныя загады"
+
+#: ../panel-plugin/mount-plugin.c:846
+#, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr "Большасць карыстальнікаў дадае «sudo» альбо «sync %d &&» перад «unmount %d».\n‘%d’ вызначае прыладу, ‘%m’ — пункт мантавання."
+
+#: ../panel-plugin/mount-plugin.c:854
+msgid "_Mount command:"
+msgstr "Загад _прымантавання:"
+
+#: ../panel-plugin/mount-plugin.c:859
+msgid "_Unmount command:"
+msgstr "Загад _адмантавання:"
+
+#: ../panel-plugin/mount-plugin.c:884
+msgid "_Commands"
+msgstr "_Загады"
+
+#: ../panel-plugin/mount-plugin.c:899
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr "Выкарыстоўвайце гэты параметр таксама для адлюстравання сеткавых файлавых сістэм, такіх як NFS, SMBFS, SHFS и SSHFS."
+
+#: ../panel-plugin/mount-plugin.c:903
+msgid "Display _network file systems"
+msgstr "Паказваць _сеткавыя файлавыя сістэмы"
+
+#: ../panel-plugin/mount-plugin.c:916
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "Уключыце гэты параметр каб высоўваць латок CD-дыскавода пасля адмантавання і засоўваць пры прымантаванні."
+
+#: ../panel-plugin/mount-plugin.c:920
+msgid "_Eject CD-drives"
+msgstr "_Вымаць CD-дыск"
+
+#: ../panel-plugin/mount-plugin.c:933
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "Уключыце гэты параметр, каб адлюстроўваць толькі пункты мантавання."
+
+#: ../panel-plugin/mount-plugin.c:936
+msgid "Display _mount points only"
+msgstr "Адлюстроўваць толькі пункты _мантавання"
+
+#: ../panel-plugin/mount-plugin.c:951
+msgid ""
+"Trim the device names to the number of characters specified in the spin "
+"button."
+msgstr "Абразаць назвы прылад згодна вызначанай колькасці сімвалаў."
+
+#: ../panel-plugin/mount-plugin.c:957
+msgid "Trim device names: "
+msgstr "_Абразаць назвы прылад: "
+
+#: ../panel-plugin/mount-plugin.c:966
+msgid " characters"
+msgstr " сімвалы"
+
+#: ../panel-plugin/mount-plugin.c:983
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "Выключыць наступныя файлавыя сістэмы з меню.\nГэты спіс падзяляецца прагаламі.\nВызначайце сапраўдныя прылады альбо пункты мантавання.\nЗорачка (*) можа выкарыстоўвацца як завяршэнне шляху,\nнапрыклад, «/mnt/*» для выключэння пунктаў мантавання\n, што пачынаюцца з «/mnt».\n"
+
+#: ../panel-plugin/mount-plugin.c:994
+msgid "E_xclude specified file systems"
+msgstr "_Выключаць вызначаныя файлавыя сістэмы"
+
+#: ../panel-plugin/mount-plugin.c:1009
+msgid "_File systems"
+msgstr "_Файлавыя сістэмы"
+
+#: ../panel-plugin/mount-plugin.c:1034
+msgid "Show partitions/devices and allow to mount/unmount them"
+msgstr "Паказвае раздзелы/прылады і дае магчымасць іх прымантаваць/адмантаваць"
+
+#: ../panel-plugin/mount-plugin.c:1036
+msgid "Copyright (c) 2005-2016\n"
+msgstr "Copyright © 2005—2016\n\n"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
+msgid "Mount devices"
+msgstr "Мантаванне прылад"
+
+#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr "Паказваць усе прылады, якія можна прымантаваць і адмантаваць."
