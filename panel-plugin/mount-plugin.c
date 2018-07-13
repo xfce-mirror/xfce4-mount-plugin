@@ -260,9 +260,12 @@ mounter_data_free (t_mounter * mt)
 {
     TRACE ("enters mounter_data_free");
 
-    disks_free (&(mt->pdisks));
-    gtk_widget_destroy (GTK_WIDGET(mt->menu));
-    mt->menu = NULL;
+    if (mt != NULL)
+    {
+        disks_free (&(mt->pdisks));
+        gtk_widget_destroy (GTK_WIDGET(mt->menu));
+        mt->menu = NULL;
+    }
 
     TRACE ("leaves mounter_data_free");
 }

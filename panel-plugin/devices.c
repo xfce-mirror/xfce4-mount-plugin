@@ -540,7 +540,7 @@ disks_free (GPtrArray ** pdisks)
     unsigned int i ;
     t_disk * pdisk ;
 
-    if (*pdisks != NULL)
+    if (pdisks != NULL && *pdisks != NULL)
     {
         for (i=0; i < (*pdisks)->len ; i++)
         {

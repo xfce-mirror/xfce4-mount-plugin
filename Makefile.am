@@ -1,40 +1,41 @@
 @SET_MAKE@
 
 SUBDIRS = panel-plugin \
-          po		\
-	  icons
+					po					 \
+					icons
 
 distclean-local:
 	rm -rf *.cache *~
 
 dist-bz2: dist
 	zcat $(PACKAGE)-$(VERSION).tar.gz | \
-	  bzip2 --best -c > $(PACKAGE)-$(VERSION).tar.bz2
+		bzip2 --best -c > $(PACKAGE)-$(VERSION).tar.bz2
 
 distcheck-bz2: distcheck
 	zcat $(PACKAGE)-$(VERSION).tar.gz | \
-	  bzip2 --best -c > $(PACKAGE)-$(VERSION).tar.bz2
+		bzip2 --best -c > $(PACKAGE)-$(VERSION).tar.bz2
 
 ChangeLog: Makefile
 	(GIT_DIR=$(top_srcdir)/.git git log > .changelog.tmp \
-	&& mv .changelog.tmp ChangeLog; rm -f .changelog.tmp) \
-	|| (touch ChangeLog; echo 'Git directory not found: installing possibly empty changelog.' >&2)
+		&& mv .changelog.tmp ChangeLog; rm -f .changelog.tmp) \
+		|| (touch ChangeLog; echo 'Git directory not found: installing possibly empty changelog.' >&2)
 
 dist-hook: ChangeLog
 
-EXTRA_DIST =                     			\
+EXTRA_DIST =							\
 	AUTHORS									\
 	COPYING									\
 	ChangeLog								\
 	INSTALL									\
-	NEWS									\
+	NEWS										\
 	README									\
-	TODO									\
-	intltool-extract.in						\
-	intltool-merge.in						\
+	TODO										\
+	intltool-extract.in			\
+	intltool-merge.in				\
 	intltool-update.in
 
-DISTCLEANFILES =							\
-	intltool-extract						\
-	intltool-merge							\
+DISTCLEANFILES =					\
+	intltool-extract				\
+	intltool-merge					\
 	intltool-update
+
