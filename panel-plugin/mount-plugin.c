@@ -1074,8 +1074,10 @@ mount_construct (XfcePanelPlugin *plugin)
 
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
 
-    g_signal_connect (plugin, "save", G_CALLBACK (mounter_write_config),
-                      mounter);
+/* superfluous, as potential race condition with too fast shutdown of the panel exists;
+ * and unnecessary because stuff is saved when closing the settings dialog */
+/*    g_signal_connect (plugin, "save", G_CALLBACK (mounter_write_config),
+                      mounter);*/
 
     xfce_panel_plugin_menu_show_configure (plugin);
     g_signal_connect (plugin, "configure-plugin",
