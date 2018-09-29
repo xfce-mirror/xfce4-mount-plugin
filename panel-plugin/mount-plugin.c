@@ -111,24 +111,40 @@ format_LVM_name (const char *disk_device, gchar **formatted_diskname)
 static void
 disk_display_set_sizes (GPtrArray *array)
 {
-    unsigned int i, max_width_label_disk=0, max_width_label_mount_info=0, tmp;
+    unsigned int i, max_width_label_disk=0, max_width_label_mount_point=0, max_width_label_mount_info=0, tmp;
     t_disk_display *disk_display;
+    gboolean exclude_devicenames = FALSE;
 
     for (i=0; i<array->len; i++) {
         disk_display= g_ptr_array_index (array, i); /* get the disk */
+
         tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_mount_info)));
         if (tmp>max_width_label_mount_info)
             max_width_label_mount_info = tmp;
 
-        tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_disk)));
-        if (tmp>max_width_label_disk)
-            max_width_label_disk = tmp;
+        tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_mount_point)));
+        if (tmp>max_width_label_mount_point)
+            max_width_label_mount_point = tmp;
+
+        if (disk_display->label_disk != NULL)
+        {
+            tmp = strlen(gtk_label_get_text(GTK_LABEL(disk_display->label_disk)));
+            if (tmp>max_width_label_disk)
+                max_width_label_disk = tmp;
+        }
     }
 
     for (i=0; i<array->len; i++) {
         disk_display = g_ptr_array_index (array, i); /* get the disk */
-        gtk_label_set_width_chars(GTK_LABEL(disk_display->label_disk), max_width_label_disk);
+
         gtk_label_set_width_chars(GTK_LABEL(disk_display->label_mount_info), max_width_label_mount_info);
+
+        gtk_label_set_width_chars(GTK_LABEL(disk_display->label_mount_point), max_width_label_mount_point);
+
+        if (disk_display->label_disk != NULL)
+        {
+            gtk_label_set_width_chars(GTK_LABEL(disk_display->label_disk), max_width_label_disk);
+        }
     }
 
 }
@@ -158,42 +174,53 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
 
         if (mounter->trim_devicenames)
         {
-          if (g_str_has_prefix(disk->device, "/dev/mapper/"))
-            format_LVM_name (disk->device_short, &formatted_diskname);
-          else
-            formatted_diskname = g_strdup(disk->device_short);
+            if (g_str_has_prefix(disk->device, "/dev/mapper/"))
+                format_LVM_name (disk->device_short, &formatted_diskname);
+            else
+                formatted_diskname = g_strdup(disk->device_short);
         }
         else
         {
-          if (g_str_has_prefix(disk->device, "/dev/mapper/"))
-            format_LVM_name (disk->device, &formatted_diskname);
-          else
-            formatted_diskname = g_strdup(disk->device);
+            if (g_str_has_prefix(disk->device, "/dev/mapper/"))
+                format_LVM_name (disk->device, &formatted_diskname);
+            else
+                formatted_diskname = g_strdup(disk->device);
         }
 
         if (mounter->exclude_devicenames)
-            dd->label_disk = gtk_label_new (disk->mount_point);
+        {
+            dd->label_disk = NULL;
+            dd->label_mount_array = NULL;
+        }
         else
-            dd->label_disk = gtk_label_new (g_strconcat(formatted_diskname, _(" -> "),
-                                        disk->mount_point, NULL));
+        {
+            dd->label_disk = gtk_label_new (formatted_diskname);
+            dd->label_mount_array = gtk_label_new (_(" -> "));
 
+            /*change to uniform label size*/
+            /*gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32); */
+            gtk_label_set_xalign(GTK_LABEL(dd->label_disk), 1.0);
+            gtk_widget_set_valign(dd->label_disk,GTK_ALIGN_CENTER);
+            gtk_widget_set_valign(dd->label_mount_array,GTK_ALIGN_CENTER);
+
+            gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
+            gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_array,FALSE,TRUE,0);
+        }
         g_free (formatted_diskname);
 
-        /*change to uniform label size*/
-        /*gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32); */
-        /* gtk_label_set_justify(GTK_LABEL(dd->label_disk),GTK_JUSTIFY_LEFT); */
-        gtk_widget_set_valign(dd->label_disk,GTK_ALIGN_CENTER);
-        gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
+        dd->label_mount_point = gtk_label_new (disk->mount_point);
+        gtk_label_set_xalign(GTK_LABEL(dd->label_mount_point), 0.0);
+        gtk_widget_set_valign(dd->label_mount_point,GTK_ALIGN_CENTER);
+        gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_point,FALSE,TRUE,0);
 
         dd->label_mount_info = gtk_label_new("");
         /*change to uniform label size*/
         /* gtk_label_set_width_chars(GTK_LABEL(dd->label_mount_info),25); */
         gtk_label_set_use_markup(GTK_LABEL(dd->label_mount_info),TRUE);
-        /* gtk_label_set_justify (GTK_LABEL(dd->label_mount_info),
-                               GTK_JUSTIFY_RIGHT); */
-        gtk_widget_set_halign((dd->label_mount_info),GTK_ALIGN_END);
+        gtk_label_set_xalign (GTK_LABEL(dd->label_mount_info),
+                               1.0);
         gtk_widget_set_valign((dd->label_mount_info),GTK_ALIGN_CENTER);
-        gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_info,TRUE,TRUE,0);
+        gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_info,FALSE,TRUE,0);
 
         dd->progress_bar = gtk_progress_bar_new();
         gtk_box_pack_start(GTK_BOX(dd->hbox),dd->progress_bar,TRUE,TRUE,0);
