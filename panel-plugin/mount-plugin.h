@@ -81,7 +81,7 @@ typedef struct
     GtkWidget * menu_item;
     GtkWidget * hbox;
     GtkWidget * label_disk;
-    GtkWidget * label_mount_array;
+    GtkWidget * label_mount_arrow;
     GtkWidget * label_mount_point;
     GtkWidget * label_mount_info;
     GtkWidget * progress_bar;

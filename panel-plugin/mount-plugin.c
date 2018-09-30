@@ -190,21 +190,21 @@ disk_display_new (t_disk *disk, t_mounter *mounter)
         if (mounter->exclude_devicenames)
         {
             dd->label_disk = NULL;
-            dd->label_mount_array = NULL;
+            dd->label_mount_arrow = NULL;
         }
         else
         {
             dd->label_disk = gtk_label_new (formatted_diskname);
-            dd->label_mount_array = gtk_label_new (_(" -> "));
+            dd->label_mount_arrow = gtk_label_new (_(" -> "));
 
             /*change to uniform label size*/
             /*gtk_label_set_width_chars(GTK_LABEL(dd->label_disk), 32); */
             gtk_label_set_xalign(GTK_LABEL(dd->label_disk), 1.0);
             gtk_widget_set_valign(dd->label_disk,GTK_ALIGN_CENTER);
-            gtk_widget_set_valign(dd->label_mount_array,GTK_ALIGN_CENTER);
+            gtk_widget_set_valign(dd->label_mount_arrow,GTK_ALIGN_CENTER);
 
             gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_disk,FALSE,TRUE,0);
-            gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_array,FALSE,TRUE,0);
+            gtk_box_pack_start(GTK_BOX(dd->hbox),dd->label_mount_arrow,FALSE,TRUE,0);
         }
         g_free (formatted_diskname);
 
