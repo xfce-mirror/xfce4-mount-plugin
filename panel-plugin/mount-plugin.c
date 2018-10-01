@@ -321,6 +321,7 @@ mounter_data_new (t_mounter *mt)
     unsigned int i;
     t_disk * disk;
     t_disk_display * disk_display;
+    GtkWidget * title_menu_item, *title_label;
     GPtrArray *array =  NULL, *disk_displays = NULL;
     char *dev_mp; /* device or mountpoint */
 
@@ -348,6 +349,14 @@ mounter_data_new (t_mounter *mt)
 
     /* menu with menu_item */
     mt->menu = gtk_menu_new ();
+
+    title_menu_item = gtk_menu_item_new();
+    title_label = gtk_label_new(NULL);
+    gtk_label_set_markup(GTK_LABEL(title_label), _("<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount Points</span></i></b>"));
+    gtk_container_add (GTK_CONTAINER(title_menu_item), title_label);
+    gtk_menu_shell_append (GTK_MENU_SHELL(mt->menu),
+                           title_menu_item);
+
     disk_displays =g_ptr_array_new();
     for (i=0; i < mt->pdisks->len; i++)
     {
@@ -362,6 +371,7 @@ mounter_data_new (t_mounter *mt)
         gtk_menu_shell_append (GTK_MENU_SHELL(mt->menu),
                                disk_display->menu_item);
     }
+
     gtk_widget_show_all(mt->menu);
 
     disk_display_set_sizes(disk_displays);
@@ -1079,7 +1089,7 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
       "program-name", PACKAGE_NAME,
       "comments", _("Show partitions/devices and allow to mount/unmount them"),
       "website", "https://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin",
-      "copyright", _("Copyright (c) 2005-2016\n"),
+      "copyright", _("Copyright (c) 2005-2018\n"),
       "authors", auth, NULL);
   // TODO: add translators.
 
