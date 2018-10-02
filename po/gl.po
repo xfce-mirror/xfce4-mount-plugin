@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2018-08-04 08:09+0000\n"
+"POT-Creation-Date: 2018-10-02 00:31+0200\n"
+"PO-Revision-Date: 2018-10-02 09:55+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,7 @@ msgstr "non montado\n"
 
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
-#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
+#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
 msgstr "Engadido de montaxe de Xfce 4"
 
@@ -111,64 +111,70 @@ msgstr "Xa pode extraer de xeito seguro o dispositivo:"
 msgid "An error occurred. The device should not be removed:"
 msgstr "Produciuse un erro. Non ser debería retirar o dispositivo:"
 
-#: ../panel-plugin/devices.c:489
+#: ../panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "Non foi posíbel ler /etc/fstab. Isto ha degradar de maneira grave as posibilidades do engadido."
 
-#: ../panel-plugin/mount-plugin.c:177
+#: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
 msgstr " -> "
 
-#: ../panel-plugin/mount-plugin.c:230
+#: ../panel-plugin/mount-plugin.c:257
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s libre"
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">non montado</span>"
 
-#: ../panel-plugin/mount-plugin.c:516
+#: ../panel-plugin/mount-plugin.c:355
+msgid ""
+"<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
+"Points</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Engadido de montaxe do Xfce 4 – dispositivos e puntos de montaxe</span></i></b>"
+
+#: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
 msgstr "dispositivos"
 
-#: ../panel-plugin/mount-plugin.c:707
+#: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
 msgstr "Engadido de montaxe"
 
-#: ../panel-plugin/mount-plugin.c:712
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
 msgstr "Propiedades"
 
-#: ../panel-plugin/mount-plugin.c:743
+#: ../panel-plugin/mount-plugin.c:799
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Isto só é útil e recomendable se especifica \"sync\" como parte da cadea de execución da orde \"unmount\"."
 
-#: ../panel-plugin/mount-plugin.c:747
+#: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
 msgstr "Mostrar _mensaxe despois de desmontar"
 
-#: ../panel-plugin/mount-plugin.c:759
+#: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Pode especificar unha icona distinta para que se amose no panel."
 
-#: ../panel-plugin/mount-plugin.c:765
+#: ../panel-plugin/mount-plugin.c:821
 msgid "Icon:"
 msgstr "Icona:"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:825
 msgid "Select an image"
 msgstr "Seleccione unha imaxe"
 
-#: ../panel-plugin/mount-plugin.c:776
+#: ../panel-plugin/mount-plugin.c:832
 msgid "_General"
 msgstr "_Xeral"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:847
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -176,82 +182,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Esta orde hase executar despois de montar o dispositivo co punto de montaxe do dispositivo como argumento.\nSe non está seguro de que debe introducir, probe \"exo-open %m\".\nPódese usar '%d' para especificar o dispositivo, e '%m' para especificar o punto de montaxe."
 
-#: ../panel-plugin/mount-plugin.c:800
+#: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
 msgstr "_Executar despois de montar:"
 
-#: ../panel-plugin/mount-plugin.c:823
+#: ../panel-plugin/mount-plugin.c:879
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que son, manteña as súas mans alonxadas!"
 
-#: ../panel-plugin/mount-plugin.c:827
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
 msgstr "Ordes personalizadas"
 
-#: ../panel-plugin/mount-plugin.c:846
+#: ../panel-plugin/mount-plugin.c:902
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "A maioría dos usuarios só quererán antepoñer \"sudo\" ás dúas ordes ou antepoñer \"sync %d &&\" á orde \"unmount %d\".\n'%d' úsase para especificar o dispositivo, '%m' para o punto de montaxe."
 
-#: ../panel-plugin/mount-plugin.c:854
+#: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
 msgstr "Orde de _montaxe:"
 
-#: ../panel-plugin/mount-plugin.c:859
+#: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
 msgstr "Orde de _desmontaxe:"
 
-#: ../panel-plugin/mount-plugin.c:884
+#: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
 msgstr "_Ordes"
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:955
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Activar esta opción para mostrar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:903
+#: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
 msgstr "Mostrar_r os sistemas de ficheiros por rede"
 
-#: ../panel-plugin/mount-plugin.c:916
+#: ../panel-plugin/mount-plugin.c:972
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Activar esta opción para expulsar unha unidade de CD despois de desmontar e para introducila antes de montar."
 
-#: ../panel-plugin/mount-plugin.c:920
+#: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
 msgstr "_Expulsar as unidades de CD"
 
-#: ../panel-plugin/mount-plugin.c:933
+#: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Activar esta opción para que só se mostren os puntos de montaxe."
 
-#: ../panel-plugin/mount-plugin.c:936
+#: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
 msgstr "Mostrar só os puntos de _montaxe"
 
-#: ../panel-plugin/mount-plugin.c:951
+#: ../panel-plugin/mount-plugin.c:1007
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Recorta os nomes de dispositivo ao número de caracteres especificados no botón de selección numérica."
 
-#: ../panel-plugin/mount-plugin.c:957
+#: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
 msgstr "Recortar os nomes de dispositivo:"
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
 msgstr "caracteres"
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:1039
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -260,21 +266,21 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Exclúe os seguintes sistemas de ficheiros do menú.\n A lista está separada por espazos simples.\n Depende de vostede especificar os dispositivos ou os puntos de montaxe correctos.\n Pode usar un asterisco (*) como marcador de posición ao final de\n un camiño, por exemplo, \"/mnt/ *\" para excluír os puntos de montaxe a dentro de \"/mnt\".\n"
 
-#: ../panel-plugin/mount-plugin.c:994
+#: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
 msgstr "E_xcluír os sistemas de ficheiros especificados"
 
-#: ../panel-plugin/mount-plugin.c:1009
+#: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
 msgstr "Sistemas de _ficheiros"
 
-#: ../panel-plugin/mount-plugin.c:1034
+#: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Mostrar particións/dispositivos e permitir des/montalos"
 
-#: ../panel-plugin/mount-plugin.c:1036
-msgid "Copyright (c) 2005-2016\n"
-msgstr "Copyright (c) 2005-2016\n"
+#: ../panel-plugin/mount-plugin.c:1092
+msgid "Copyright (c) 2005-2018\n"
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
