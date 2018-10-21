@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-02 07:41+0000\n"
+"PO-Revision-Date: 2018-10-21 08:16+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +160,7 @@ msgstr "_Mostra els missatges després de desmuntar"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Podeu especificar la icona a mostrar al plafó."
+msgstr "Podeu especificar la icona a mostrar al tauler."
 
 #: ../panel-plugin/mount-plugin.c:821
 msgid "Icon:"
