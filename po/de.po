@@ -313,7 +313,7 @@ msgstr "Partitionen oder Geräte anzeigen und das Ein-/Aushängen ermöglichen"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
-msgstr "Urheberrecht (c) 2005-2018\n"
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
