@@ -6,14 +6,14 @@
 # Dima Smirnov <arch@cnc-parts.info>, 2010
 # Sergey Alyoshin <alyoshin.s@gmail.com>, 2014,2016
 # Simple88, 2016
-# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <zmicerturok@gmail.com>, 2018-2019
 # Zmicer Turok <zmicerturok@gmail.com >, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-11-22 16:20+0000\n"
+"PO-Revision-Date: 2019-01-16 08:49+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -182,7 +182,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Гэты загад будзе запушчаны пасля прымантавання з параметрам пункта мантавання.\nКалі вы не ведаеце што неабходна ўставіць, паспрабуйце «exo-open %m».\n‘%d’ можа выкарыстоўвацца для вызначэння прылады, ‘%m’ - для пункту мантавання."
+msgstr "Гэты загад будзе запушчаны пасля прымантавання з параметрам пункта мантавання.\nКалі вы не ведаеце што неабходна ўставіць, паспрабуйце «exo-open %m».\n‘%d’ можа выкарыстоўвацца для вызначэння прылады, ‘%m’ - для пункта мантавання."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
