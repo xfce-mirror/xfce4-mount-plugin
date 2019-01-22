@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Саша Петровић <salepetronije@gmail.com>, 2013-2014
-# Саша Петровић <salepetronije@gmail.com>, 2017
+# Саша Петровић <salepetronije@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2018-10-02 00:31+0200\n"
+"PO-Revision-Date: 2019-01-22 14:09+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -86,7 +86,7 @@ msgstr "није прикачен\n"
 
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
-#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
+#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
 msgstr "Прикључак за качење Иксфце-а 4"
 
@@ -110,64 +110,70 @@ msgstr "Уређај би сада требао бити безбедан за �
 msgid "An error occurred. The device should not be removed:"
 msgstr "Десила се грешка. Уређај не би требао бити уклањан:"
 
-#: ../panel-plugin/devices.c:489
+#: ../panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "Нисам успео да прочитам /etc/fstab. То ће битно умањити могућности прикључка."
 
-#: ../panel-plugin/mount-plugin.c:177
+#: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
 msgstr " -> "
 
-#: ../panel-plugin/mount-plugin.c:230
+#: ../panel-plugin/mount-plugin.c:257
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s слободно"
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">није прикачен</span>"
 
-#: ../panel-plugin/mount-plugin.c:516
+#: ../panel-plugin/mount-plugin.c:355
+msgid ""
+"<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
+"Points</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Прикључак качења ИксФЦЕ-а - уређаја и тачака качења</span></i></b>"
+
+#: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
 msgstr "уређаји"
 
-#: ../panel-plugin/mount-plugin.c:707
+#: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
 msgstr "Прикључак за качење"
 
-#: ../panel-plugin/mount-plugin.c:712
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
 msgstr "Особине"
 
-#: ../panel-plugin/mount-plugin.c:743
+#: ../panel-plugin/mount-plugin.c:799
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Ово је једино корисно и пропоручиво ако одредите „sync“ као део ниске наредбе „unmount“."
 
-#: ../panel-plugin/mount-plugin.c:747
+#: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
 msgstr "Прикажи _поруку после откачивања."
 
-#: ../panel-plugin/mount-plugin.c:759
+#: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Можете одредити и другу иконицу за приказ на полици."
+msgstr "Можете одредити и другачију сличицу за приказ на полици."
 
-#: ../panel-plugin/mount-plugin.c:765
+#: ../panel-plugin/mount-plugin.c:821
 msgid "Icon:"
-msgstr "Иконица:"
+msgstr "Сличица:"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:825
 msgid "Select an image"
 msgstr "Одаберите слику"
 
-#: ../panel-plugin/mount-plugin.c:776
+#: ../panel-plugin/mount-plugin.c:832
 msgid "_General"
 msgstr "_Опште"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:847
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -175,82 +181,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Ова наредба ће бити извршена после прикачивања уређаја са тачком качења уређаја као тврдњом.\nАко нисте сигурни шта треба унети, покушајте „exo-open %m“.\n„%d“ може бити коришћен да одреди уређај, „%m“ за тачку качења."
 
-#: ../panel-plugin/mount-plugin.c:800
+#: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
 msgstr "_Изврши након качења:"
 
-#: ../panel-plugin/mount-plugin.c:823
+#: ../panel-plugin/mount-plugin.c:879
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "Упозорење: Ове могућности су само за стручњаке! Уколико не знате зашто могу бити корисне, држите руке даље!"
 
-#: ../panel-plugin/mount-plugin.c:827
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
 msgstr "_Прилагођене наредбе"
 
-#: ../panel-plugin/mount-plugin.c:846
+#: ../panel-plugin/mount-plugin.c:902
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Већина корисника ће само желети предложити „sudo“ обема наредбама, или предложити „sync %d &&“ наредби „unmount %d“.\n„%d“ је употребљена да одреди уређај, „%m“ је за тачку качења."
 
-#: ../panel-plugin/mount-plugin.c:854
+#: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
 msgstr "Наредба качења:"
 
-#: ../panel-plugin/mount-plugin.c:859
+#: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
 msgstr "_Наредба откачивања:"
 
-#: ../panel-plugin/mount-plugin.c:884
+#: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
 msgstr "_Наредбе"
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:955
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Покрените ову могућност за приказивање и мрежних система датотека као што су НФС, СМБФС, СХФС, и ССХФС."
 
-#: ../panel-plugin/mount-plugin.c:903
+#: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
 msgstr "Прикажи _мрежне системе датотека"
 
-#: ../panel-plugin/mount-plugin.c:916
+#: ../panel-plugin/mount-plugin.c:972
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Укључите ову могућност за избацивање ЦД-фиоке после откачивања и за убацивање пре прикачивања."
 
-#: ../panel-plugin/mount-plugin.c:920
+#: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
 msgstr "_Избаци ЦД фиоке"
 
-#: ../panel-plugin/mount-plugin.c:933
+#: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Укључите ову могућност да би само имали приказ тачки качења."
 
-#: ../panel-plugin/mount-plugin.c:936
+#: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
 msgstr "Приказуј само тачке качења"
 
-#: ../panel-plugin/mount-plugin.c:951
+#: ../panel-plugin/mount-plugin.c:1007
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Обрежи називе уређаја на број знакова одређен у кућици са бројачем"
 
-#: ../panel-plugin/mount-plugin.c:957
+#: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
 msgstr "обрежи називе уређаја:"
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
 msgstr "знаци"
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:1039
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -259,21 +265,21 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Занемарује следеће системе датотека из изборника.\nСтавке списка се раздвајају обичним празнинама.\nТреба да одредите правилне тачке качења.\nЗвездица (*) може да се користи као попуна места на крају\nпутања, нпр. „/mnt/*“ занемарује тачке качења након „/mnt“.\n"
 
-#: ../panel-plugin/mount-plugin.c:994
+#: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
 msgstr "_Занемари одређене системе датотека"
 
-#: ../panel-plugin/mount-plugin.c:1009
+#: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
 msgstr "Систем _датотека"
 
-#: ../panel-plugin/mount-plugin.c:1034
+#: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Прикажи партиције/уређаје и дозволи њихово качење/откачивање"
+msgstr "Прикажи парчад/уређаје и дозволи њихово качење/откачивање"
 
-#: ../panel-plugin/mount-plugin.c:1036
-msgid "Copyright (c) 2005-2016\n"
-msgstr "Права умножавања (c) 2005-2016\n"
+#: ../panel-plugin/mount-plugin.c:1092
+msgid "Copyright (c) 2005-2018\n"
+msgstr "Права умножавања 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
