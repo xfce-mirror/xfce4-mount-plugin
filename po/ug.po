@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-08 00:31+0200\n"
-"PO-Revision-Date: 2017-09-23 19:03+0000\n"
+"POT-Creation-Date: 2018-10-02 00:31+0200\n"
+"PO-Revision-Date: 2018-10-01 22:31+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Uighur (http://www.transifex.com/xfce/xfce-panel-plugins/language/ug/)\n"
 "MIME-Version: 1.0\n"
@@ -84,7 +84,7 @@ msgstr "ئېگەرلەنمىگەن\n"
 
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
-#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:487
+#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
 msgstr ""
 
@@ -108,64 +108,70 @@ msgstr ""
 msgid "An error occurred. The device should not be removed:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:489
+#: ../panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:177
+#: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:230
+#: ../panel-plugin/mount-plugin.c:257
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:249
+#: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ئېگەرلەنمىگەن</span>"
 
-#: ../panel-plugin/mount-plugin.c:516
+#: ../panel-plugin/mount-plugin.c:355
+msgid ""
+"<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
+"Points</span></i></b>"
+msgstr ""
+
+#: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
 msgstr "ئۈسكۈنىلەر"
 
-#: ../panel-plugin/mount-plugin.c:707
+#: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
 msgstr "ئېگەرلەش قىستۇرمىسى"
 
-#: ../panel-plugin/mount-plugin.c:712
+#: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
 msgstr "خاسلىق"
 
-#: ../panel-plugin/mount-plugin.c:743
+#: ../panel-plugin/mount-plugin.c:799
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "بۇ تاللانما «unmount» بۇيرۇقىغا «sync» قوشۇلغاندا ئىشلىتىش تەۋسىيە قىلىنىدۇ."
 
-#: ../panel-plugin/mount-plugin.c:747
+#: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
 msgstr "ئېگەرسىزلىگەندىن كېيىن  ئۇچۇر چىقار(_M)"
 
-#: ../panel-plugin/mount-plugin.c:759
+#: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "كۆزنەكتە كۆرسىتىلىدىغان ئۆزگىچە سىنبەلگىنى كۆرسىتىپ بېرىشكە بولىدۇ."
 
-#: ../panel-plugin/mount-plugin.c:765
+#: ../panel-plugin/mount-plugin.c:821
 msgid "Icon:"
 msgstr "سىنبەلگە:"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: ../panel-plugin/mount-plugin.c:825
 msgid "Select an image"
 msgstr "سۈرەت تاللايدۇ"
 
-#: ../panel-plugin/mount-plugin.c:776
+#: ../panel-plugin/mount-plugin.c:832
 msgid "_General"
 msgstr "ئادەتتىكى(_G)"
 
-#: ../panel-plugin/mount-plugin.c:791
+#: ../panel-plugin/mount-plugin.c:847
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -173,82 +179,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "بۇ بۇيرۇق، پارامېتىردىكى ئېگەرلەش نۇقتىسىغا ئۈسكۈنە ئېگەرلەنگەندە ئىجرا بولىدۇ.\\r\nنېمە كىرگۈزۈشنى بىلەلمىسىڭىز «exo-open %m» نى سىناپ بېقىڭ.\\r\nئۈسكۈنە ‹%d› بىلەن، ئېگەرلەش نۇقتىسى ‹%m› بىلەن ئىپادىلىنىدۇ."
 
-#: ../panel-plugin/mount-plugin.c:800
+#: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
 msgstr "ئېگەرلەنگەندىن كېيىن ئىجرا قىل(_E):"
 
-#: ../panel-plugin/mount-plugin.c:823
+#: ../panel-plugin/mount-plugin.c:879
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "دىققەت: بۇ تاللانمىلارنى مۇتەخەسسىسلەرلا ئىشلىتىدۇ! ئەگەر بىلمىسىڭىز قول تەگكۈزمەڭ!"
 
-#: ../panel-plugin/mount-plugin.c:827
+#: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
 msgstr "ئىختىيارىي بۇيرۇقلار(_C)"
 
-#: ../panel-plugin/mount-plugin.c:846
+#: ../panel-plugin/mount-plugin.c:902
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "نۇرغۇن ئىشلەتكۈچىلەر ئىككىلا بۇيرۇقنىڭ بېشىغا «sudo» قوشسا، ياكى «unmount %d» نىڭ بېشىغا «sync  %d &&» نى قوشسىلا بولىدۇ دەپ قارايدۇ.\\r\nئۈسكۈنە ‹%d› بىلەن، ئېگەرلەش نۇقتىسى ‹%m› بىلەن ئىپادىلىنىدۇ."
 
-#: ../panel-plugin/mount-plugin.c:854
+#: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
 msgstr "ئېگەرلەش بۇيرۇقى(_M):"
 
-#: ../panel-plugin/mount-plugin.c:859
+#: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
 msgstr "ئېگەرسىزلەش بۇيرۇقى(_U):"
 
-#: ../panel-plugin/mount-plugin.c:884
+#: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
 msgstr "بۇيرۇقلار(_C)"
 
-#: ../panel-plugin/mount-plugin.c:899
+#: ../panel-plugin/mount-plugin.c:955
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "تور ھۆججەت سىستېمىلىرى NFS, SMBFS, SHFS and SSHFS نى كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
-#: ../panel-plugin/mount-plugin.c:903
+#: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
 msgstr "تور ھۆججەت سىستېمىلىرىنى كۆرسەت(_N)"
 
-#: ../panel-plugin/mount-plugin.c:916
+#: ../panel-plugin/mount-plugin.c:972
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "ئېگەرسىزلەپ بولغاندىن كېيىن دىسكىنى چىقىرىش ۋە ئېگەرلەشتىن بۇرۇن دىسكىنى سېلىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
-#: ../panel-plugin/mount-plugin.c:920
+#: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
 msgstr "CD قوزغاتقۇچىنى ئاچ(_E)"
 
-#: ../panel-plugin/mount-plugin.c:933
+#: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "ئېگەرلەش نۇقتىسىنىلا كۆرسىتىش ئۈچۈن بۇ تاللانمىنى ئاكتىپلاڭ."
 
-#: ../panel-plugin/mount-plugin.c:936
+#: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
 msgstr "ئېگەرلەش نۇقتىسىنىلا كۆرسەت(_M)"
 
-#: ../panel-plugin/mount-plugin.c:951
+#: ../panel-plugin/mount-plugin.c:1007
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "ئۈسكۈنە ئاتىنى باسما توپچىدا كۆرسىتىلگەن ھەرپ سانىغا ماسلاشتۇرۇپ ئوڭشايدۇ."
 
-#: ../panel-plugin/mount-plugin.c:957
+#: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
 msgstr "ئۈسكۈنە ئاتىنى ئوڭلاش: "
 
-#: ../panel-plugin/mount-plugin.c:966
+#: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
 msgstr " ھەرپلەر"
 
-#: ../panel-plugin/mount-plugin.c:983
+#: ../panel-plugin/mount-plugin.c:1039
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -257,20 +263,20 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:994
+#: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
 msgstr "كۆرسىتىلگەن ھۆججەت سىستېمىلىرىنى تىزىملىكتىن چىقىرىۋەت(_X)"
 
-#: ../panel-plugin/mount-plugin.c:1009
+#: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
 msgstr "ھۆججەت سىستېمىلىرىنى(_F)"
 
-#: ../panel-plugin/mount-plugin.c:1034
+#: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "رايونلار/ئۈسكۈنىلەرنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
 
-#: ../panel-plugin/mount-plugin.c:1036
-msgid "Copyright (c) 2005-2016\n"
+#: ../panel-plugin/mount-plugin.c:1092
+msgid "Copyright (c) 2005-2018\n"
 msgstr ""
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
