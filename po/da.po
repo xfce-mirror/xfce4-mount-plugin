@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-05-16 19:03+0000\n"
+"PO-Revision-Date: 2019-05-26 15:20+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "Kunne ikke montere enhed:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr "Fejl ved udførelse af monteringskommando:"
+msgstr "Fejl ved eksekvering af monteringskommando:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
@@ -196,7 +196,7 @@ msgstr "ADVARSEL: Disse valgmuligheder er kun for eksperter! Hvis du ikke ved, h
 
 #: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
-msgstr "_Brugerdefinerede kommandoer"
+msgstr "_Tilpassede kommandoer"
 
 #: ../panel-plugin/mount-plugin.c:902
 #, c-format
@@ -207,11 +207,11 @@ msgstr "De fleste brugere vil kun ønske at indsætte \"sudo\" før begge komman
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
-msgstr "_Montér kommando:"
+msgstr "_Montér-kommando:"
 
 #: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
-msgstr "_Afmontér kommando:"
+msgstr "_Afmontér-kommando:"
 
 #: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
@@ -221,7 +221,7 @@ msgstr "_Kommandoer"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Aktivér denne valgmulighed for også at vise netværksfilsystemer så som NFS, SMBFS, SHFS og SSHFS."
+msgstr "Aktivér denne valgmulighed for også at vise netværksfilsystemer såsom NFS, SMBFS, SHFS og SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
@@ -270,7 +270,7 @@ msgstr "Ekskluder følgende filsystemer fra menuen.\nListen adskilles ganske enk
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
-msgstr "Vis ikke _følgende filsystemer"
+msgstr "_Udelad følgende filsystemer"
 
 #: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
