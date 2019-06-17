@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-06-07 21:38+0000\n"
+"PO-Revision-Date: 2019-06-17 18:50+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr "Kunne ikke montere enhed:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr "Fejl ved eksekvering af monteringskommando:"
+msgstr "Fejl ved kørsel af monteringskommando:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
@@ -182,11 +182,11 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Denne kommando vil blive udført efter montering af enheden med monteringspunktet for enheden som argument.\nHvis du er usikker på, hvad der skal indsættes, prøv \"exo-open %m\".\n'%d' kan bruges til at specificere enheden, '%m' for monteringspunktet."
+msgstr "Denne kommando vil blive kørt efter montering af enheden med monteringspunktet for enheden som argument.\nHvis du er usikker på, hvad der skal indsættes, prøv \"exo-open %m\".\n'%d' kan bruges til at specificere enheden, '%m' for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
-msgstr "_Udfør efter montering:"
+msgstr "_Kør efter montering:"
 
 #: ../panel-plugin/mount-plugin.c:879
 msgid ""
