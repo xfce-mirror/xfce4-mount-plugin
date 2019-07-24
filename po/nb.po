@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-07-24 10:36+0000\n"
+"PO-Revision-Date: 2019-07-24 10:40+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/xfce-panel-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr "<span foreground=\"#FF0000\">ikke montert</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Xfce 4s monteringstillegg – Enheter og monteringspunkter</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
@@ -157,7 +157,7 @@ msgstr "Egenskaper"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Dette valget er kun å anbefale hvis du har angitt \"sync\" som en del av \"unmount\" kommandoen."
+msgstr "Dette valget er kun å anbefale hvis du har angitt «sync» som en del av «unmount»-kommandoen."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
@@ -185,7 +185,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Denne kommandoen vil bli utført etter at du har montert enheten.\nHvis du er usikker på hva du vil sette inn, prøv \"exo-open %m\".\n'%d' kan brukes for å angi enheten, '%m' for monteringspunktet."
+msgstr "Denne kommandoen vil bli utført etter at du har montert enheten.\nHvis du er usikker på hva du vil sette inn, prøv «exo-open %m».\n«%d» kan brukes for å angi enheten, «%m» for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
@@ -206,7 +206,7 @@ msgstr "_Egendefinerte kommandoer"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "De fleste brukere har mulighet til å kjøre \"sudo\" foran begge kommandoer, eller \"sync %d &&\" foran \"unmount %d\" kommandoen.\n'%d' kan brukes for å angi enheten, '%m' for monteringspunktet."
+msgstr "De fleste brukere har mulighet til å kjøre «sudo» foran begge kommandoer, eller «sync %d &&» foran «unmount %d»-kommandoen.\n«%d» kan brukes for å angi enheten, «%m» for monteringspunktet."
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
@@ -234,7 +234,7 @@ msgstr "Vis også filsystemer i _nettverket"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Aktiver denne for også å løse ut CD'en etter avmontering."
+msgstr "Aktiver denne for også å løse ut CD-en etter avmontering."
 
 #: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
