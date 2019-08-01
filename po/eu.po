@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# beriain, 2019
 # Piarres Beobide <pi@beobide.net>, 2006,2008-2009,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-01 22:31+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2019-08-01 09:35+0000\n"
+"Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/xfce-panel-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -132,7 +133,7 @@ msgstr "<span foreground=\"#FF0000\">ez muntaturik</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Xfce 4 Muntatze plugina – Gailuak eta muntatze puntuak</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
@@ -262,7 +263,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Hurrengo fitxategi sistemak menutik baztertu.\nZerrenda hutsuneekin bereizita dago.\nZure esku dago gailu edo muntatze puntu zuzenak zehaztea.\nIzartxo (*) bat markatzaile bezala erabil daiteke bide baten bukaeran,\nadib. \"/mnt/*\", \"/mnt\" azpiko edozein muntatze puntu baztertzeko.\n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
@@ -278,7 +279,7 @@ msgstr "Ikusi partizio/gailuak eta muntatu/desmuntatzeko aukera eman"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
-msgstr ""
+msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
