@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel Muñiz Fontoira <dani@damufo.com>, 2018
+# Daniel Muñiz Fontoira <dani@damufo.com>, 2018-2019
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2006,2008-2009
 # Xosé, 2017
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-02 09:55+0000\n"
+"PO-Revision-Date: 2019-08-02 09:05+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -152,11 +152,11 @@ msgstr "Propiedades"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Isto só é útil e recomendable se especifica \"sync\" como parte da cadea de execución da orde \"unmount\"."
+msgstr "Isto só é útil e recomendable se especifica \"sync\" como parte da cadea da orde \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr "Mostrar _mensaxe despois de desmontar"
+msgstr "Amosar _mensaxe despois de desmontar"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -219,11 +219,11 @@ msgstr "_Ordes"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Activar esta opción para mostrar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
+msgstr "Activar esta opción para amosar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
-msgstr "Mostrar_r os sistemas de ficheiros por rede"
+msgstr "Amosar os sistemas de ficheiros por _rede"
 
 #: ../panel-plugin/mount-plugin.c:972
 msgid ""
@@ -241,7 +241,7 @@ msgstr "Activar esta opción para que só se mostren os puntos de montaxe."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
-msgstr "Mostrar só os puntos de _montaxe"
+msgstr "Amosar só os puntos de _montaxe"
 
 #: ../panel-plugin/mount-plugin.c:1007
 msgid ""
@@ -264,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Exclúe os seguintes sistemas de ficheiros do menú.\n A lista está separada por espazos simples.\n Depende de vostede especificar os dispositivos ou os puntos de montaxe correctos.\n Pode usar un asterisco (*) como marcador de posición ao final de\n un camiño, por exemplo, \"/mnt/ *\" para excluír os puntos de montaxe a dentro de \"/mnt\".\n"
+msgstr "Exclúe os seguintes sistemas de ficheiros do menú.\nA lista está separada por espazos simples.\nDepende de vostede especificar os dispositivos ou os\npuntos de montaxe correctos. Pode usar un asterisco (*)\ncomo marcador de posición ao final dunha ruta, por\nexemplo, \"/mnt/ *\" para excluír os puntos de montaxe a\ndentro de \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
@@ -276,7 +276,7 @@ msgstr "Sistemas de _ficheiros"
 
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Mostrar particións/dispositivos e permitir des/montalos"
+msgstr "Amosar particións/dispositivos e permitir des/montalos"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
