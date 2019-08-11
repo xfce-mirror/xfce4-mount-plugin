@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-07-24 10:40+0000\n"
+"PO-Revision-Date: 2019-08-11 05:54+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/xfce-panel-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -110,11 +110,11 @@ msgstr "Klarte ikke å avmontere enheten:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
-msgstr "Enheten skal være trygg å fjerne nå:"
+msgstr "Enheten skal kunne fjernes trygt nå:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr "En feil oppstod. Enheten burde ikke fjernes:"
+msgstr "En feil oppstod. Enheten bør ikke fjernes:"
 
 #: ../panel-plugin/devices.c:488
 msgid ""
@@ -238,7 +238,7 @@ msgstr "Aktiver denne for også å løse ut CD-en etter avmontering."
 
 #: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
-msgstr "_Løs ut CD enheten"
+msgstr "_Løs ut CD-enheten"
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
