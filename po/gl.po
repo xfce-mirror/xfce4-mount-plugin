@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-08-02 09:05+0000\n"
+"PO-Revision-Date: 2019-08-15 09:47+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr "tamaño usado:           %g\n"
 #: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available siz:       %g\n"
-msgstr "tamaño dispoñible:       %g\n"
+msgstr "tamaño dispoñíbel:       %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -115,7 +115,7 @@ msgstr "Produciuse un erro. Non ser debería retirar o dispositivo:"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "Non foi posíbel ler /etc/fstab. Isto ha degradar de maneira grave as posibilidades do engadido."
+msgstr "Non se puido ler /etc/fstab. Isto ha degradar de maneira grave as posibilidades do engadido."
 
 #: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
@@ -152,7 +152,7 @@ msgstr "Propiedades"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Isto só é útil e recomendable se especifica \"sync\" como parte da cadea da orde \"unmount\"."
+msgstr "Isto só é útil e recomendábel se especifica \"sync\" como parte da cadea da orde \"unmount\"."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
@@ -219,7 +219,7 @@ msgstr "_Ordes"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Activar esta opción para amosar tamén sistemas de ficheiros por rede coma NFS, SMBFS, SHFS e SSHFS."
+msgstr "Activar esta opción para amosar tamén sistemas de ficheiros por rede como NFS, SMBFS, SHFS e SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
@@ -288,4 +288,4 @@ msgstr "Montar dispositivos"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Mostra os dispositivos montables e (des)móntaos segundo se solicite."
+msgstr "Amosa os dispositivos montábeis e (des)móntaos segundo se solicite."
