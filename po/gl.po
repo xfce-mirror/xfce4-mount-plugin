@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-08-15 09:47+0000\n"
+"PO-Revision-Date: 2019-08-21 14:44+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -190,7 +190,7 @@ msgstr "_Executar despois de montar:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "ADVERTENCIA: Estas opcións son só para expertos! Se non sabe para que son, manteña as súas mans alonxadas!"
+msgstr "AVISO: Estas opcións son só para expertos! Se non sabe para que son, é mellor que non as modifique!"
 
 #: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
@@ -237,7 +237,7 @@ msgstr "_Expulsar as unidades de CD"
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Activar esta opción para que só se mostren os puntos de montaxe."
+msgstr "Activar esta opción para que só se amosen os puntos de montaxe."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
