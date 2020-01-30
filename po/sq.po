@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Besnik <besnik@programeshqip.org>, 2007,2020
 # Besnik <besnik@programeshqip.org>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2020-01-29 11:05+0000\n"
+"PO-Revision-Date: 2020-01-30 10:39+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +62,7 @@ msgstr "përqindje e përdorur:     %d\n"
 #: ../panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "tip sistemi kartelash:    %s\n"
+msgstr "lloj sistemi kartelash:    %s\n"
 
 #: ../panel-plugin/devices.c:88
 #, c-format
@@ -87,11 +88,11 @@ msgstr "e pamontuar\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Shtojcë Montimesh Xfce 4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
-msgstr ""
+msgstr "S’u arrit të montohej pajisje:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
@@ -99,30 +100,30 @@ msgstr ""
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr ""
+msgstr "S’u arrit të çmontohej pajisja:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "Pajisja duhet të hiqet pa rrezik tani:"
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Ndodhi një gabim. Pajisja s’duhet hequr:"
 
 #: ../panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Kartela juaj /etc/fstab s’u lexua dot. Kjo do të ulë shumë rëndë aftësitë e shtojcës."
 
 #: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
-msgstr ""
+msgstr " -> "
 
 #: ../panel-plugin/mount-plugin.c:257
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s të lira"
 
 #: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -132,7 +133,7 @@ msgstr "<span foreground=\"#FF0000\">e pamontuar</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Shtojcë Xfce Montimesh – Pajisje dhe Pika Montimi</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
@@ -140,7 +141,7 @@ msgstr "pajisje"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
-msgstr ""
+msgstr "Shtojcë Montimesh"
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
@@ -150,7 +151,7 @@ msgstr "Veti"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Ky është i dobishëm dhe i këshilluar vetëm nëse jepni \"njëkohëso\" si pjesë e vargut të urdhrit \"çmonto\"."
+msgstr "Kjo është e dobishme dhe e këshilluar vetëm nëse jepni \"sync\" si pjesë e vargut të urdhrit \"unmonto\"."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
@@ -178,7 +179,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr ""
+msgstr "Ky urdhër do të ekzekutohet pas montimit të pajisjes me pikën e montimit të pajisjes si argument.\nNëse s’jeni i sigurt se ç’të fusni, provoni \"exo-open %m\".\n'%d' mund të përdoret për të përcaktuar pajisjen, '%m' për pikënnn e montimit."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
@@ -188,7 +189,7 @@ msgstr "_Përmbushe pas montimit:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "KUJDES: Këto mundësi janë vetëm për të sprovuarit! Nëse nuk e dini se çfarë është me vlerë për ju, larg duart që këtej!"
+msgstr "KUJDES: Këto mundësi janë vetëm për të sprovuarit! Nëse s’e dini se ç’mund të jetë me vlerë për ju, larg duart që këtej!"
 
 #: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
@@ -199,7 +200,7 @@ msgstr "Urdhra _vetjakë"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Shumicës së përdoruesve do t'u duhet vetëm të paravendosin \"sudo\" për të dy urdhrat ose të paravendosin \"sync %d &&\" te urdhri \"unmount %d\".\n'%d' përdoret për të treguar pajisjen, '%m' për pikën e montimit."
+msgstr "Shumicës së përdoruesve do t’u duhet vetëm të paravendosin \"sudo\" për të dy urdhrat ose të paravendosin \"sync %d &&\" te urdhri \"unmount %d\".\n'%d' përdoret për të treguar pajisjen, '%m' për pikën e montimit."
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
@@ -217,7 +218,7 @@ msgstr "_Urdhra"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Aktivizojeni këtë mundësi për të shfaqur edhe sisteme kartelash rrjeti si NFS, SMBFS, SHFS dhe SSHFS."
+msgstr "Aktivizojeni këtë mundësi për të shfaqur edhe sisteme kartelash rrjeti, të tillë si NFS, SMBFS, SHFS dhe SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
@@ -227,7 +228,7 @@ msgstr "Shfaq sisteme kartelash _rrjeti"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Aktivizoni këtë mundësi për të nxjerrë gjithashtu një pajisje CD pas çmontimit dhe për futje përpara montimit."
+msgstr "Aktivizojeni këtë mundësi për të nxjerrë gjithashtu një pajisje CD pas çmontimit dhe për futje përpara montimit."
 
 #: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
@@ -235,7 +236,7 @@ msgstr "_Nxirr pajisje CD"
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Aktivizojeni këtë mundësi vetëm për t'i shfaqur pikat e montimit."
+msgstr "Aktivizojeni këtë mundësi vetëm për t’i shfaqur pikat e montimit."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
@@ -245,15 +246,15 @@ msgstr "Shfa vetëm pika _montimi"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Qethi emrat e pajisjes sa numri i shenjave të përcaktuar te butoni spin."
 
 #: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
-msgstr ""
+msgstr "Qethi emrat e pajisjes: "
 
 #: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
-msgstr ""
+msgstr " shenja"
 
 #: ../panel-plugin/mount-plugin.c:1039
 msgid ""
@@ -262,11 +263,11 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Përjashto nga menuja sistemet vijues të kartelave.\nElementët e listës ndahen me hapësirë të thjeshtë.\nPërcaktimin e pajisjeve ose pikave të duhura të montimit duhet ta bëni juaj.\nNjë yllth (*) mund të përdoret si vendmbajtëse në fund të një shtegu,\np.sh., \"/mnt/*\" për të përjashtuar çfarëdo pike montimi poshtë \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
-msgstr "_Përjashto sistemet e trguar të kartelave"
+msgstr "_Përjashto sistemet e treguar të kartelave"
 
 #: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
@@ -274,7 +275,7 @@ msgstr "Sisteme _kartelash"
 
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Shfaqni pjesë/pajisje dhe lejoni montimin/çmontimin e tyre"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
