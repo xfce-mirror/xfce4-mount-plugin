@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2015
+# Aputsiak Niels Janussen <aj@isit.gl>, 2015
 # Claus Futtrup <cfuttrup@stofanet.dk>, 2008
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2016
 # Per Kongstad <p_kongstad@op.pl>, 2009
