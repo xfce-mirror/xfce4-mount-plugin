@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Arman Harutyunyan <arman.harut468@gmail.com>, 2020
+# Vahe Safaryan <vahe.safaryan@realschool.am>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2020-06-11 21:38+0000\n"
-"Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>\n"
+"PO-Revision-Date: 2020-06-12 09:13+0000\n"
+"Last-Translator: Vahe Safaryan <vahe.safaryan@realschool.am>\n"
 "Language-Team: Eastern Armenian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hye/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -199,7 +200,7 @@ msgstr "_Ընտրելի հրամաններ"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr ""
+msgstr "Աւգտատէրերի մեծամասնութիւնը աւելացնում են \"sudo\" կամ  \"sync %d&&\"  \"unmount %d\"-ից առաջ:\n'%d' աւգտագործուում է  սարքը նշելու համար, '%m' մոնտաժի համար:"
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
@@ -278,11 +279,11 @@ msgstr "Ցուցադրել մասնաբաժինները/ սարքերը եւ թ�
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
-msgstr ""
+msgstr "Հեղինակային իրաւունք (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr ""
+msgstr "Միացնել սարքերը"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
