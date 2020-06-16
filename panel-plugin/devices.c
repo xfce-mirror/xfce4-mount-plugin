@@ -82,7 +82,7 @@ mount_info_print(t_mount_info * mount_info)
     {
         printf (_("size:                %g\n"), mount_info->size);
         printf (_("used size:           %g\n") ,mount_info->used);
-        printf (_("available siz:       %g\n"), mount_info->avail);
+        printf (_("available size:       %g\n"), mount_info->avail);
         printf (_("percentage used:     %d\n"), mount_info->percent);
         printf (_("file system type:    %s\n"), mount_info->type);
         printf (_("actual mount point:  %s\n"), mount_info->mounted_on);
