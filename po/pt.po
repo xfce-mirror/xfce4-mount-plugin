@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Nuno Miguel <nunis@netcabo.pt>, 2007
-# Nuno Miguel <nunomgue@gmail.com>, 2016,2019
+# Nuno Miguel <nunomgue@gmail.com>, 2016,2019-2020
 # Sérgio Marques <smarquespt@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-01-17 12:21+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-18 15:57+0000\n"
 "Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/xfce-panel-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -52,8 +52,8 @@ msgstr "utilizado:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "disponível:       %g\n"
+msgid "available size:       %g\n"
+msgstr "espaço disponível:      %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -264,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Excluir o seguintes sistemas de ficheiros do menu.\nOs itens da lista devem ser separados por espaços.\nO utilizador deve especificar corretamente os dispositivos ou pontos de montagem.\nPode utilizar um asterisco (*) no fim de um caminho para utilizar\ncomo marcador de posição. Por exemplo \"/mnt/*\" para excluir os\npontos de montagem abaixo de \"/mnt\".\n\n"
+msgstr "Excluir o seguintes sistemas de ficheiros do menu.\nOs itens da lista devem ser separados por espaços.\nO utilizador deve especificar corretamente os dispositivos ou pontos de montagem.\nPode utilizar um asterisco (*) no fim de um caminho para utilizar\ncomo marcador de posição. Por exemplo \"/mnt/*\" para excluir os\npontos de montagem abaixo de \"/mnt\".\n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
