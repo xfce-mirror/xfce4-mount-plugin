@@ -7,13 +7,13 @@
 # Claus Futtrup <cfuttrup@stofanet.dk>, 2008
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2016
 # Per Kongstad <p_kongstad@op.pl>, 2009
-# scootergrisen, 2017-2019
+# scootergrisen, 2017-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-06-17 18:50+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-18 16:26+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -54,8 +54,8 @@ msgstr "anvendt plads:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "plads til rådighed:      %g\n"
+msgid "available size:       %g\n"
+msgstr "tilgængelig størrelse:       %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
