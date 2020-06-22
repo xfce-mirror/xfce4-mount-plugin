@@ -5,13 +5,14 @@
 # Translators:
 # Elishai Eliyahu <e1907@mm.st>, 2016,2018
 # GenghisKhan <genghiskhan@gmx.ca>, 2016
+# Omer, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-13 15:05+0000\n"
-"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-22 18:46+0000\n"
+"Last-Translator: Omer\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,22 +23,22 @@ msgstr ""
 #: ../panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f B"
-msgstr "%.1f B"
+msgstr "%.1f בייטים"
 
 #: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f KB"
+msgstr "%.1f ק\"ב"
 
 #: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f MB"
+msgstr "%.1f מ\"ב"
 
 #: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f GB"
+msgstr "%.1f ג\"ב"
 
 #: ../panel-plugin/devices.c:83
 #, c-format
@@ -51,8 +52,8 @@ msgstr "גודל בשימוש: %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "גודל זמין: %g \n"
+msgid "available size:       %g\n"
+msgstr "גודל זמין:       %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -67,7 +68,7 @@ msgstr "סוג מערכת קבצים: %s\n"
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "נקודת הצבה בפועל: %s \n"
+msgstr "נקודת עגינה בפועל: %s \n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -77,12 +78,12 @@ msgstr "כונן: %s\n"
 #: ../panel-plugin/devices.c:173
 #, c-format
 msgid "mount point: %s\n"
-msgstr "נקודת הצבה: %s\n"
+msgstr "נקודת עגינה: %s\n"
 
 #: ../panel-plugin/devices.c:177
 #, c-format
 msgid "not mounted\n"
-msgstr "לא מוצב\n"
+msgstr "לא מעוגן\n"
 
 #: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
@@ -92,15 +93,15 @@ msgstr "תוסף עגינה Xfce 4 "
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
-msgstr "נכשל בעגינת התקן:"
+msgstr "נכשלה עגינת התקן:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
-msgstr "שגיאה בביצוע פקודת בעת-עגינה:"
+msgstr "שגיאה בביצוע פקודת בעת־עגינה:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr "נכשל בביטול עגינת התקן:"
+msgstr "נכשל ביטול עגינת התקן:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
@@ -127,7 +128,7 @@ msgstr "[%s/%s] %s פנוי"
 
 #: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#FF0000\">לא מוצב</span>"
+msgstr "<span foreground=\"#FF0000\">לא מעוגן</span>"
 
 #: ../panel-plugin/mount-plugin.c:355
 msgid ""
@@ -141,7 +142,7 @@ msgstr "התקנים"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
-msgstr "תוסף הצבה"
+msgstr "תוסף עגינה"
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
@@ -155,7 +156,7 @@ msgstr "זה שימושי ומומלץ רק אם אתה מציין \"sync\" כח
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr "הצג _מסר לאחר ביטול הצבה"
+msgstr "הצג _מסר לאחר ביטול עגינה"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -179,17 +180,17 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "פקודה זו תופעל לאחר הצבת ההתקן עם נקודת ההצבה של ההתקן כארגומנט.\nאם אתה לא בטוח מה להכניס, נסה \"exo-open %m\". \nניתן להשתמש ב-'%d' לציון ההתקן, וב-'%m' לנקודת ההצבה."
+msgstr "פקודה זו תופעל לאחר עגינת ההתקן עם נקודת העגינה של ההתקן כארגומנט.\nאם אתה לא בטוח מה להכניס, נסה \"exo-open %m\". \nניתן להשתמש ב\"%d\" לציון ההתקן, וב־\"%m\" לנקודת העגינה."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
-msgstr "ה_פעל לאחר הצבה:"
+msgstr "_הפעל לאחר עגינה:"
 
 #: ../panel-plugin/mount-plugin.c:879
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "אזהרה: אפשרויות אלו הן למומחים בלבד! אם אתה לא יודע למה הן טובות, אל תיגע!"
+msgstr "אזהרה: האפשרויות הללו הן למומחים בלבד. אם אינך יודע עבור מה הן יכולות להיות טובות, אל תיגע בהן."
 
 #: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
@@ -200,15 +201,15 @@ msgstr "פקודות _מותאמות אישית"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "רוב המשתמשים ירצו רק לבצע \"sudo\" לשתי הפקודות או לבצע \"sync %d&&\" לפקודת \"unmount %d\".\n'%d' משמש לציון ההתקן, '%m' לנקודת ההצבה."
+msgstr "רוב המשתמשים ירצו רק לבצע \"sudo\" לשתי הפקודות או לבצע \"sync %d&&\" לפקודת \"unmount %d\".\n'%d' משמש לציון ההתקן, \"%m\" לנקודת העגינה."
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
-msgstr "פקודת הצ_בה:"
+msgstr "פקודת _עגינה:"
 
 #: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
-msgstr "פקודת _ביטול הצבה:"
+msgstr "פקודת _ביטול עגינה:"
 
 #: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
@@ -218,7 +219,7 @@ msgstr "_פקודות"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "הפעל אפשרות זו להציג גם מערכות קבצי רשת כמו NFS, SMBFS, SHFS, SSHFS."
+msgstr "הפעל אפשרות זו כדי להציג גם מערכות קבצי רשת כמו NFS, SMBFS, SHFS, SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
@@ -236,11 +237,11 @@ msgstr "_פלוט כונני CD "
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "הפעל אפשרות זו כדי שרק נקודות ההצבה יוצגו."
+msgstr "הפעל אפשרות זו כדי שרק נקודות העגינה יהיו מוצגות."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
-msgstr "הצג רק נקודות ה_צבה "
+msgstr "הצג רק נקודות _עגינה"
 
 #: ../panel-plugin/mount-plugin.c:1007
 msgid ""
@@ -263,7 +264,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "אל תכלול בתפריט את מערכות הקבצים הבאות.\nהרשימה מופרדת עם רווחים פשוטים.\nזה תלוי בך לציין את ההתקנים או נקודות ההצבה הנכונים.\nכוכבית (*) יכולה לשמש כשומרת מקום בסוף של\nנתיב, לדוגמה, \"/mnt/*\" כדי לא לכלול נקודות הצבה מתחת ל-\"/mnt\". \n"
+msgstr "אל תכלול בתפריט את מערכות הקבצים הבאות.\nהרשימה מופרדת עם רווחים פשוטים.\nזה תלוי בך לציין את ההתקנים או נקודות העגינה הנכונות.\nכוכבית (*) יכולה לשמש כשומרת מקום בסוף של\nנתיב, לדוגמה, \"/mnt/*\" כדי לא לכלול נקודות עגינה מתחת ל־\"/mnt\". \n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
@@ -275,7 +276,7 @@ msgstr "מערכות _קבצים"
 
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "הצג מחיצות/התקנים ואפשר להציב/לבטל הצבה שלהם"
+msgstr "הצג מחיצות/התקנים והתר את עגינתם/ביטול עגינתם"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
@@ -283,8 +284,8 @@ msgstr "זכויות יוצרים (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "הצב התקנים"
+msgstr "עגן התקנים"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "מציג את כל ההתקנים הניתנים להצבה ומבצע (או מבטל) הצבה שלהם לפי דרישה."
+msgstr "מציג את כל ההתקנים הניתנים לעגינה ומבצע להם (ביטול) עגינה לפי בקשה."
