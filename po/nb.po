@@ -8,15 +8,15 @@
 # Christian Lomsdalen <christian@vindstille.net>, 2007
 # Harald H. <haarektrans@gmail.com>, 2014
 # Jon Kristian Nilsen <jonn3@broadpark.no>, 2006
-# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
+# Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019-2020
 # Terje Uriansrud <terje@uriansrud.net>, 2009
 # Terje Uriansrud <ter@operamail.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-08-11 05:54+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-24 16:22+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/xfce/xfce-panel-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -57,8 +57,8 @@ msgstr "benyttet plass:      %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "tilgjengelig plass : %g\n"
+msgid "available size:       %g\n"
+msgstr "tilgjengelig plass: %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
