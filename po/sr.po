@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Саша Петровић <salepetronije@gmail.com>, 2013-2014
+# Саша Петровић <salepetronije@gmail.com>, 2013-2014,2017,2019
 # Саша Петровић <salepetronije@gmail.com>, 2017,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2019-01-22 14:09+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-25 13:27+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -51,8 +51,8 @@ msgstr "заузето:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "доступно:       %g\n"
+msgid "available size:       %g\n"
+msgstr "доступан простор:       %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
@@ -92,7 +92,7 @@ msgstr "Прикључак за качење Иксфце-а 4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
-msgstr "Нисам успео прикачити уређај:"
+msgstr "Нисам успео да прикачим уређај:"
 
 #: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
@@ -100,7 +100,7 @@ msgstr "Десила се грешка при извођењу наредбе:"
 
 #: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
-msgstr "Нисам успео откачити уређај:"
+msgstr "Нисам успео да откачим уређај:"
 
 #: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
@@ -108,7 +108,7 @@ msgstr "Уређај би сада требао бити безбедан за �
 
 #: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
-msgstr "Десила се грешка. Уређај не би требао бити уклањан:"
+msgstr "Десила се грешка. Уређај не би требао бити уклоњен:"
 
 #: ../panel-plugin/devices.c:488
 msgid ""
@@ -155,7 +155,7 @@ msgstr "Ово је једино корисно и пропоручиво ако
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr "Прикажи _поруку после откачивања."
+msgstr "Прикажи _поруку после откачивања"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -246,15 +246,15 @@ msgstr "Приказуј само тачке качења"
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr "Обрежи називе уређаја на број знакова одређен у кућици са бројачем"
+msgstr "Обрежи називе уређаја на број знакова одређен у кућици са бројачем."
 
 #: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
-msgstr "обрежи називе уређаја:"
+msgstr "Сажми називе уређаја: "
 
 #: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
-msgstr "знаци"
+msgstr " знаци"
 
 #: ../panel-plugin/mount-plugin.c:1039
 msgid ""
