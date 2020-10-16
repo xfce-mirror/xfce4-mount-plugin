@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Kiril Kirilov <cybercop_montana@abv.bg>, 2014,2016,2018
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2014,2016,2018,2020
 # Любомир Василев, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-02 05:54+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-17 05:46+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/xfce/xfce-panel-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -51,8 +51,8 @@ msgstr "използвано място:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "достъпно място:       %g\n"
+msgid "available size:       %g\n"
+msgstr "наличен размер:  %g\n"
 
 #: ../panel-plugin/devices.c:86
 #, c-format
