@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-01 22:31+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-16 22:47+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Arabic (http://www.transifex.com/xfce/xfce-panel-plugins/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -52,8 +52,8 @@ msgstr "الحجم المستخدم:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "الحجم المتوفر:       %g\n"
+msgid "available size:       %g\n"
+msgstr ""
 
 #: ../panel-plugin/devices.c:86
 #, c-format
