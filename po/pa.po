@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-02 00:31+0200\n"
-"PO-Revision-Date: 2018-10-01 22:31+0000\n"
+"POT-Creation-Date: 2020-06-17 00:47+0200\n"
+"PO-Revision-Date: 2020-06-16 22:47+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Panjabi (Punjabi) (http://www.transifex.com/xfce/xfce-panel-plugins/language/pa/)\n"
 "MIME-Version: 1.0\n"
@@ -50,8 +50,8 @@ msgstr "ਵਰਤਿਆ ਸਾਈਜ਼:           %g\n"
 
 #: ../panel-plugin/devices.c:85
 #, c-format
-msgid "available siz:       %g\n"
-msgstr "ਉਪਲੱਬਧ ਸਾਈਜ਼:       %g\n"
+msgid "available size:       %g\n"
+msgstr ""
 
 #: ../panel-plugin/devices.c:86
 #, c-format
