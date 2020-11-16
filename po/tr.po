@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Demiray Muhterem <mdemiray@msn.com>, 2018,2020
+# Emin Tufan <etcetin@gmail.com>, 2020
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014
 # Necdet Yücel <necdetyucel@gmail.com>, 2013,2016
 # zeki <zeki.ozguryazilim@gmail.com>, 2014
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2020-06-21 21:42+0000\n"
-"Last-Translator: Demiray Muhterem <mdemiray@msn.com>\n"
+"PO-Revision-Date: 2020-11-16 01:51+0000\n"
+"Last-Translator: Emin Tufan <etcetin@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/xfce-panel-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,12 +65,12 @@ msgstr "kullanım yüzdesi:     %d\n"
 #: ../panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "dosya sistemi:       %s\n"
+msgstr "dosya sistemi türü:       %s\n"
 
 #: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "bağlama noktası:     %s\n"
+msgstr "gerçek bağlama noktası:   %s\n"
 
 #: ../panel-plugin/devices.c:172
 #, c-format
@@ -116,7 +117,7 @@ msgstr "Hata oluştu. Aygıtı şimdi çıkartılmamalıdır:"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "/etc/fstab okunamadı. Bu eklentinin yapabildiklerini ciddi şekilde azaltır."
+msgstr "/etc/fstab okunamadı. Bu eklentinin yapabildiklerini ciddi biçimde azaltır."
 
 #: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
@@ -125,7 +126,7 @@ msgstr " -> "
 #: ../panel-plugin/mount-plugin.c:257
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr "[%s/%s] %s serbest"
+msgstr "[%s/%s] %s boş"
 
 #: ../panel-plugin/mount-plugin.c:280
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -135,7 +136,7 @@ msgstr "<span foreground=\"#FF0000\">bağlanmamış</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr "<b><i><span font_size=\"large\">Xfce 4 Bağlama Eklentisi – Cihazlar ve Bağlama Noktaları</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Xfce 4 Bağlama Eklentisi – Aygıtlar ve Bağlama Noktaları</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
@@ -153,15 +154,15 @@ msgstr "Özellikler"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Bu işlemi eğer \"sync\" komutunu \"unmount\" komutunun bir parçası olarak kullanıyorsanız yapmanız tavsiye edilmektedir."
+msgstr "Bu işlemi, eğer \"sync\" komutunu \"unmount\" komutunun bir parçası olarak kullanıyorsanız yapmanız önerilmektedir."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr "Ayırma işleminden sonra _mesaj göster"
+msgstr "Ayırma işleminden sonra _ileti göster"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Panelde gösterilmek üzere farklı bir simge belirleyebilirsiniz."
+msgstr "Panelde gösterilmek üzere başka simge belirleyebilirsiniz."
 
 #: ../panel-plugin/mount-plugin.c:821
 msgid "Icon:"
@@ -169,7 +170,7 @@ msgstr "Simge"
 
 #: ../panel-plugin/mount-plugin.c:825
 msgid "Select an image"
-msgstr "Resim seçiniz"
+msgstr "Resim seç"
 
 #: ../panel-plugin/mount-plugin.c:832
 msgid "_General"
@@ -181,7 +182,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Bu komut aygıt sisteme bağlandığında aygıtın bağlanma noktası argüman olarak çalıştırılacak.\nEğer ne ekleyeceğiniz konusunda emin değilseniz, \"exo-open %m\" 'i deneyin.\n'%d' aygıtı belirtmek için, '%m' bağlanma noktasını belirtmek için kullanılabilir."
+msgstr "Bu komut, aygıt sisteme bağlanınca aygıtın bağlanma noktası, argüman olarak çalıştırılacak.\nEğer ne ekleyeceğiniz konusunda emin değilseniz, \"exo-open %m\" komutunu deneyin.\n'%d' aygıtı belirtmek için, '%m' bağlanma noktasını belirtmek için kullanılabilir."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
@@ -202,7 +203,7 @@ msgstr "_Özel komutlar"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Çoğu kullanıcı komutların her komutun başına \"sudo\" eklemektedir veya \"unmount %d\" komutunun başına \"sync %d &&\" eklemektedir.\n'%d' aygıtı belirtmek için kullanılmaktadır, '%m' ise bağlama noktasını belirtmek için kullanılmaktadır."
+msgstr "Çoğu kullanıcı ya komutun başına \"sudo\" eklemektedir, ya da \"sync %d &&\" komutunu \"unmount %d\" komutunun başına eklemektedir.\n'%d' aygıtı belirtmek için kullanılmaktadır, '%m' ise bağlama noktasını belirtmek için kullanılmaktadır."
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
