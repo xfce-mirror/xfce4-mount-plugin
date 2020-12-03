@@ -104,7 +104,6 @@ disk_display_set_sizes (GPtrArray *array)
 {
     unsigned int i, max_width_label_disk=0, max_width_label_mount_point=0, max_width_label_mount_info=0, tmp;
     t_disk_display *disk_display;
-    gboolean exclude_devicenames = FALSE;
 
     for (i=0; i<array->len; i++) {
         disk_display= g_ptr_array_index (array, i); /* get the disk */
