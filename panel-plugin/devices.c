@@ -28,6 +28,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <fstab.h>
 #include <glib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 /* WEXITSTATUS */
 #include <sys/types.h>
@@ -191,9 +192,9 @@ shorten_disk_name (const char *dev, guint len)
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        firstchars = (char *) malloc ((len-5-3)*sizeof(char)); // 3 additional ones for the three dots
+        firstchars = malloc ((len-5-3)*sizeof(char)); // 3 additional ones for the three dots
         firstchars = strndup(dev, len-5-3);
-        r = (char *) malloc ((len+1)*sizeof(char));
+        r = malloc ((len+1)*sizeof(char));
         snprintf (r, len+1, "%s...%s", firstchars, lastchars);
     }
     else
