@@ -389,23 +389,15 @@ static gboolean
 on_button_press (GtkWidget *widget, GdkEventButton *eventButton, t_mounter *mounter)
 {
     gboolean result = FALSE;
-#if GTK_CHECK_VERSION (3,22,0)
     GdkEvent event;
-#endif
     TRACE ("enters on_button_press");
     if (eventButton != NULL)
     {
         if (mounter != NULL && eventButton->button == 1) /* left click only */
         {
             mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-#if GTK_CHECK_VERSION (3,22,0)
             event.button = *eventButton;
             gtk_menu_popup_at_widget (GTK_MENU(mounter->menu), mounter->button, GDK_GRAVITY_CENTER, GDK_GRAVITY_CENTER, &event);
-#else
-            gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
-                            xfce_panel_plugin_position_menu, mounter->plugin,
-                            0, eventButton->time);
-#endif
             result = TRUE;
         }
     }
