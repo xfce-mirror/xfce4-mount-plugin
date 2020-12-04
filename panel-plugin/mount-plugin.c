@@ -28,12 +28,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
 void format_LVM_name (const char *disk_device, gchar **formatted_diskname);
 
-#ifdef LIBXFCE4PANEL_CHECK_VERSION
-#if LIBXFCE4PANEL_CHECK_VERSION (4,9,0)
-#define HAS_PANEL_49
-#endif
-#endif
-
 #define gtk_hbox_new(homogeneous, spacing) \
         gtk_box_new(GTK_ORIENTATION_HORIZONTAL, spacing)
 
@@ -70,9 +64,7 @@ static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
    /* shrink the gtk button's image to new size -*/
-#ifdef HAS_PANEL_49
    size /= xfce_panel_plugin_get_nrows (plugin);
-#endif
    gtk_widget_set_size_request (GTK_WIDGET(mt->button), size, size);
 }
 
@@ -1106,12 +1098,10 @@ mount_construct (XfcePanelPlugin *plugin)
 
     mounter = create_mounter_control (plugin);
 
-#ifdef HAS_PANEL_49
     if (xfce_panel_plugin_get_mode(plugin) == XFCE_PANEL_PLUGIN_MODE_DESKBAR)
         xfce_panel_plugin_set_small(plugin, FALSE);
     else
         xfce_panel_plugin_set_small (plugin, TRUE);
-#endif
 
     g_signal_connect (plugin, "free-data", G_CALLBACK (mounter_free), mounter);
 
