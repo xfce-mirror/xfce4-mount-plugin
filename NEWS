@@ -1,3 +1,37 @@
+1.1.4
+======
+- Remove unused variable exclude_devicenames
+- Remove obsolete panel version 4.9 check
+- Remove checks for unused functions from configure.ac
+- Include stdlib because malloc is used
+- Spellfix. Add missing "e" to siz (size)
+- Update URLs from goodies.x.o to docs.x.o (Bug #16168)
+- Fix build with panel 4.15
+- Make build less verbose
+- Another change to the SVG icon file canvas size
+- Updated svg image to have a larger canvas so that the panel can be
+  resized up to 192 pixels size
+- Added title to popup menu; even if it is not empty (Bug #14478)
+- https URL instead of http
+- Renamed improperly named member variable of main mountpoint display
+  structure
+- Display percentage on progress bar again (regression from port to
+  Gtk3)
+- Reformatted popup information with more columns and nicer alignment.
+  (Bug #14670)
+- Fix bug 13624 by not trying to save when closing the plugin, but
+  already and only when closing the settings dialog
+- Translation Updates:
+  Albanian, Arabic, Asturian, Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), English (United
+  Kingdom), Finnish, French, Galician, German, Greek, Hebrew,
+  Hungarian, Icelandic, Indonesian, Interlingue, Italian, Japanese,
+  Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål, Occitan (post
+  1500), Panjabi (Punjabi), Polish, Portuguese, Portuguese (Brazil),
+  Russian, Serbian, Slovak, Spanish, Swedish, Thai, Turkish, Ukrainian,
+  Urdu, Urdu (Pakistan), Uyghur
+
 2017/01/28 - Version 1.1.0
 - Gtk 3.22 supported
 - Allow several spaces in mountpoint names
