@@ -12,6 +12,7 @@ po/*.gmo
 *,orig
 configure
 INSTALL
+ChangeLog
 config.*
 configure.ac
 intltool*
@@ -25,3 +26,10 @@ depcomp
 aclocal.m4
 autom4te.cache
 *.desktop
+*.tar.bz2
+*.tar.gz
+/m4/
+/po/.intltool-merge-cache*
+/po/Makefile.in.in
+/po/POTFILES
+/xfce4-mount-plugin-*/
