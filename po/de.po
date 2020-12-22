@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-22 19:56+0100\n"
+"POT-Creation-Date: 2020-12-23 00:49+0100\n"
 "PO-Revision-Date: 2020-06-17 16:01+0000\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German (http://www.transifex.com/xfce/xfce-panel-plugins/"
@@ -23,98 +23,98 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/devices.c:72
+#: ../panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:73
+#: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:74
+#: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MBytes"
 
-#: ../panel-plugin/devices.c:75
+#: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:84
+#: ../panel-plugin/devices.c:83
 #, c-format
 msgid "size:                %g\n"
 msgstr "Größe:               %g\n"
 
-#: ../panel-plugin/devices.c:85
+#: ../panel-plugin/devices.c:84
 #, c-format
 msgid "used size:           %g\n"
 msgstr "Verwendeter Platz:   %g\n"
 
-#: ../panel-plugin/devices.c:86
+#: ../panel-plugin/devices.c:85
 #, c-format
 msgid "available size:       %g\n"
 msgstr "Verfügbarer Platz:   %g\n"
 
-#: ../panel-plugin/devices.c:87
+#: ../panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "Verwendeter Anteil:  %d\n"
 
-#: ../panel-plugin/devices.c:88
+#: ../panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "Dateisystemtyp:      %s\n"
 
-#: ../panel-plugin/devices.c:89
+#: ../panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "Eigentlicher Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:173
+#: ../panel-plugin/devices.c:172
 #, c-format
 msgid "disk: %s\n"
 msgstr "Platte: %s\n"
 
-#: ../panel-plugin/devices.c:174
+#: ../panel-plugin/devices.c:173
 #, c-format
 msgid "mount point: %s\n"
 msgstr "Einhängepunkt: %s\n"
 
-#: ../panel-plugin/devices.c:178
+#: ../panel-plugin/devices.c:177
 #, c-format
 msgid "not mounted\n"
 msgstr "nicht eingehängt\n"
 
-#: ../panel-plugin/devices.c:294 ../panel-plugin/devices.c:317
-#: ../panel-plugin/devices.c:380 ../panel-plugin/devices.c:391
-#: ../panel-plugin/devices.c:401 ../panel-plugin/devices.c:487
+#: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
+#: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
+#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce-4-Einhängeerweiterung"
 
-#: ../panel-plugin/devices.c:296
+#: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
 msgstr "Einhängen des Gerätes ist fehlgeschlagen:"
 
-#: ../panel-plugin/devices.c:319
+#: ../panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
 msgstr "Fehler beim Ausführen des Befehls zum Einhängen:"
 
-#: ../panel-plugin/devices.c:382
+#: ../panel-plugin/devices.c:381
 msgid "Failed to umount device:"
 msgstr "Aushängen des Gerätes ist fehlgeschlagen:"
 
-#: ../panel-plugin/devices.c:393
+#: ../panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
 msgstr "Das Gerät sollte sich jetzt sicher entfernen lassen:"
 
-#: ../panel-plugin/devices.c:403
+#: ../panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
 msgstr "Ein Fehler ist aufgetreten. Das Gerät sollte nicht entfernt werden:"
 
-#: ../panel-plugin/devices.c:489
+#: ../panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
