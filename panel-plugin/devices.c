@@ -32,7 +32,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #include <string.h>
 /* WEXITSTATUS */
 #include <sys/types.h>
-#include <sys/wait.h>
 #ifdef HAVE_GETMNTENT
 #include <mntent.h>
 #include <sys/vfs.h>
