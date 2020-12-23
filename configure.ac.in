@@ -48,47 +48,14 @@ AC_HEADER_STDC
 dnl No more try substituting "OS" in Makefiles, but might be required in future again
 dnl AC_SUBST(OS)
 
-dnl gethostname from unistd.h => libc6 
-dnl AC_CHECK_FUNCS([gethostname])
-dnl AC_CHECK_HEADERS([unistd.h])
-
 dnl getmentent() requires stdio.h/mntent.h 
 AC_CHECK_FUNCS([getmntent])
 dnl On BSD, getmntinfo is used instead
 AC_CHECK_FUNCS([getmntinfo])
 
-dnl memset and others from string.h => libc6
-dnl AC_CHECK_FUNCS([memset])
-dnl AC_CHECK_FUNCS([strstr])
-dnl AC_CHECK_HEADERS([string.h])
-
-dnl socket is no longer included 
-dnl AC_CHECK_FUNCS([socket])
-dnl AC_CHECK_HEADERS([sys/socket.h])
-
-dnl stdlib.h for malloc checked via stdc above
-dnl AC_CHECK_FUNCS([malloc])
-
-dnl BSD style function instead of memset, from strings.h, but not used herein
-dnl AC_CHECK_FUNCS([bzero])
-
-dnl inet_ntoa and the like, but not used herein
-dnl AC_CHECK_HEADERS([arpa/inet.h])
-dnl AC_CHECK_HEADERS([netinet/in.h])
-
-dnl No ioctl command is used in the mount plugin, everything relies on getmntent
-dnl AC_CHECK_HEADERS([sys/ioctl.h])
-
-dnl param.h is part of libc6 on Linux, but important for old-style Unix and especially mount.h with getmntinfo
+dnl param.h is part of libc6 on Linux, but important for old-style Unix and especially mount.h with getmntinfo, so better keep it for now.
 AC_CHECK_HEADERS([sys/param.h])
 AC_CHECK_HEADERS([sys/mount.h])
-
-dnl GNU C library; time.h and sockio.h not used anywhere
-dnl AC_CHECK_HEADERS([sys/time.h])
-dnl AC_CHECK_HEADERS([sys/sockio.h])
-
-dnl sys/wait is not used any longer and not included in any source file
-dnl AC_HEADER_SYS_WAIT
 
 dnl Add -traditional to output variable CC if using the GNU C compiler and ioctl does not work properly without -traditional. That usually happens when the fixed header files have not been installed on an old system. Leave here commented out to comment in if some older *NIX systems might require it as was recently written on the ML.
 dnl AC_PROG_GCC_TRADITIONAL
@@ -98,8 +65,6 @@ AC_TYPE_SIZE_T
 
 dnl kstat_open is in kstat on BSD
 AC_CHECK_LIB(kstat, kstat_open, SOLLIBS="-lkstat -lsocket", SOLLIBS="")
-dnl and inet_ntop is not in libc6, but in nsl, but not needed in mount plugin
-dnl AC_CHECK_LIB(nsl, inet_ntop, SOLLIBS="$SOLLIBS -lnsl", SOLLIBS="$SOLLIBS")
 AC_SUBST(SOLLIBS)
 
 dnl configure the panel plugin
