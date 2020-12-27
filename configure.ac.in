@@ -15,23 +15,26 @@ m4_define([mount_version_micro], [4])
 m4_define([mount_version_tag], [git]) # Leave empty only for releases, but use 'git' in most cases
 m4_define([mount_version_build], [@REVISION@])
 m4_define([mount_version], [mount_version_major().mount_version_minor().mount_version_micro()ifelse(mount_version_tag(), [], [], [mount_version_tag()-mount_version_build()])])
+m4_define([mount_debug_default], [ifelse(mount_version_tag(), [git], [yes], [minimum])])
+
+AC_COPYRIGHT([Copyright (c) 2006-2020
+        The Xfce development team. All rights reserved.])
 
 AC_INIT([xfce4-mount-plugin], [mount_version],
-  [timystery@arcor.de])
-AC_CONFIG_SRCDIR([panel-plugin/mount-plugin.c])
+  [https://gitlab.xfce.org/panel-plugins/xfce4-mount-plugin/], [xfce4-mount-plugin])
 
-MOUNT_VERSION=mount_version()
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_MACRO_DIRS([m4])
 
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 dnl Check for UNIX variants
-AC_AIX
-AC_ISC_POSIX
-AC_MINIX
+dnl AC_AIX
+dnl AC_ISC_POSIX
+dnl AC_MINIX
+AC_USE_SYSTEM_EXTENSIONS
 
 dnl Check for basic programs
 AC_PROG_CC
@@ -75,7 +78,7 @@ dnl Check for i18n support
 XDT_I18N([@LINGUAS@])
 
 dnl Check for debugging support
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([mount_debug_default])
 
 dnl Set PACKAGE PREFIX
 if test "x${prefix}" = "xNONE"; then
@@ -95,10 +98,12 @@ AC_SUBST(PACKAGE_DATA_DIR)
 
 AC_DEFINE_UNQUOTED([PACKAGE_DATA_DIR], "${packageprefix}/${packagedatadir}", ["Data dir"])
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 panel-plugin/Makefile
 icons/Makefile
 po/Makefile.in
 ])
+
+AC_OUTPUT
 
