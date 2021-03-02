@@ -5,13 +5,14 @@
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016,2018
 # GenghisKhan <genghiskhan@gmx.ca>, 2016
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
 # Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2020-06-22 18:46+0000\n"
+"PO-Revision-Date: 2021-03-02 18:06+0000\n"
 "Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -28,17 +29,17 @@ msgstr "%.1f בייטים"
 #: ../panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f ק\"ב"
+msgstr "%.1f ק״ב"
 
 #: ../panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f מ\"ב"
+msgstr "%.1f מ״ב"
 
 #: ../panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f ג\"ב"
+msgstr "%.1f ג״ב"
 
 #: ../panel-plugin/devices.c:83
 #, c-format
