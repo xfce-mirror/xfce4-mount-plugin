@@ -45,9 +45,6 @@ dnl Initialize libtool
 LT_PREREQ([2.2.6])
 LT_INIT([disable-static])
 
-dnl Check for standard header files: stdlib.h, stdarg.h, string.h, and float.h; should be included in libc6 header packages
-AC_HEADER_STDC
-
 dnl No more try substituting "OS" in Makefiles, but might be required in future again
 dnl AC_SUBST(OS)
 
