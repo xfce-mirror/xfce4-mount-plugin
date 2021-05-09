@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2021-04-24 08:08+0000\n"
+"PO-Revision-Date: 2021-05-09 09:26+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "sin montar\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
-msgstr "Complemento de montaje de Xfce 4"
+msgstr "Complemento de Xfce 4 para el montaje"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -148,7 +148,7 @@ msgstr "dispositivos"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
-msgstr "Complemento de montaje"
+msgstr "Complemento para el montaje"
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
