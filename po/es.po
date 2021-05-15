@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2021-05-09 18:44+0000\n"
+"PO-Revision-Date: 2021-05-15 09:35+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "sin montar\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
-msgstr "Complemento de Xfce 4 para el montaje"
+msgstr "Montaje de dispositivos de Xfce 4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -125,7 +125,7 @@ msgstr "No se ha podido leer el archivo /etc/fstab. Esta situación reducirá co
 
 #: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
-msgstr "->"
+msgstr " -> "
 
 #: ../panel-plugin/mount-plugin.c:257
 #, c-format
@@ -140,15 +140,15 @@ msgstr "<span foreground=\"#FF0000\">sin montar</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr "<b><i><span font_size=\"large\">Complemento de Xfce4 para el montaje: dispositivos y puntos de montaje</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Dispositivos y puntos de montaje</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
-msgstr "dispositivos"
+msgstr "Dispositivos"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
-msgstr "Complemento para el montaje"
+msgstr "Montar dispositivos"
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
@@ -196,7 +196,7 @@ msgstr "_Ejecutar después del montaje:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "ADVERTENCIA: ¡Estas opciones son solo para expertos! Si no sabe para qué sirven, ¡no toque nada!"
+msgstr "ADVERTENCIA: Estas opciones son solo para expertos. Si no sabe para qué sirven, ¡no toque nada!"
 
 #: ../panel-plugin/mount-plugin.c:883
 msgid "_Custom commands"
@@ -235,11 +235,11 @@ msgstr "Mostrar los sistemas de archivos de _red"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Active esta opción para expulsar también una unidad de CD después de desmontarla y para insertarla antes de montarla."
+msgstr "Active esta opción para expulsar también el soporte de una unidad de CD después de desmontarlo y para insertarlo antes de montarlo."
 
 #: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
-msgstr "_Expulsar las unidades de CD"
+msgstr "_Expulsar los soportes de las unidades de CD"
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
@@ -247,7 +247,7 @@ msgstr "Active esta opción para que solo se muestren los puntos de montaje."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
-msgstr "Mostrar solo los puntos de _montaje"
+msgstr "_Mostrar solo los puntos de montaje"
 
 #: ../panel-plugin/mount-plugin.c:1007
 msgid ""
@@ -257,11 +257,11 @@ msgstr "Recorta los nombres de dispositivo al número de caracteres especificado
 
 #: ../panel-plugin/mount-plugin.c:1013
 msgid "Trim device names: "
-msgstr "Recortar los nombres de dispositivo: "
+msgstr "_Recortar los nombres de dispositivo: "
 
 #: ../panel-plugin/mount-plugin.c:1022
 msgid " characters"
-msgstr "Caracteres"
+msgstr " caracteres"
 
 #: ../panel-plugin/mount-plugin.c:1039
 msgid ""
@@ -270,7 +270,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Excluye del menú los sistemas de archivos siguientes.\nLa lista está separada por espacios simples.\nEs necesario especificar dispositivos o puntos de montaje correctos.\nSe puede usar un asterisco (*) como marcador de posición al final de una ruta, por ejemplo, «/mnt/*» para excluir cualquier punto de montaje por debajo de «/mnt».\n"
+msgstr "Excluye del menú los sistemas de archivos siguientes.\nLos elementos de la lista se separan por espacios simples.\nHay que especificar dispositivos o puntos de montaje correctos.\nSe puede usar un asterisco (*) como marcador de posición al final\nde una ruta, por ejemplo, «/mnt/*» para excluir cualquier punto de\nmontaje por debajo de «/mnt».\n"
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
@@ -282,7 +282,7 @@ msgstr "_Sistemas de archivos"
 
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "Muestra particiones y dispositivos, y permite montarlos y desmontarlos"
+msgstr "Permite montar y desmontar particiones y dispositivos"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
@@ -290,8 +290,8 @@ msgstr "Copyright (c) 2005-2018\n"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
 msgid "Mount devices"
-msgstr "Dispositivos para montar"
+msgstr "Montar dispositivos"
 
 #: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Muestra todos los dispositivos montables y los monta y desmonta a la carta"
+msgstr "Monta y desmonta dispositivos a la carta"
