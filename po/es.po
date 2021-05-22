@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2021-05-15 09:35+0000\n"
+"PO-Revision-Date: 2021-05-22 08:11+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "sin montar\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
-msgstr "Montaje de dispositivos de Xfce 4"
+msgstr "Montaje de dispositivos de Xfce4"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -121,7 +121,7 @@ msgstr "Se ha producido un error. No se puede retirar el dispositivo:"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "No se ha podido leer el archivo /etc/fstab. Esta situación reducirá considerablemente las capacidades del complemento."
+msgstr "No se ha podido leer el archivo /etc/fstab. Las capacidades del complemento se reducirán considerablemente."
 
 #: ../panel-plugin/mount-plugin.c:198
 msgid " -> "
@@ -158,11 +158,11 @@ msgstr "Propiedades"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Esto solo es útil y recomendable si se especifica «sync como parte de la cadena de la orden «unmount»."
+msgstr "Esta opción solo es útil y recomendable si se especifica «sync como parte de la cadena de la orden «unmount»."
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr "_Mostrar un mensaje después de desmontar"
+msgstr "_Mostrar un mensaje después del desmontaje"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -186,7 +186,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Esta orden se ejecutará después de montar el dispositivo con su punto de montaje como argumento.\nSi no está seguro de qué debe escribir, pruebe con «exo-open %m».\n«%d» se puede usar para especificar el dispositivo y «%m» para el punto de montaje."
+msgstr "Esta orden se ejecutará después de montar el dispositivo con su punto de montaje como argumento.\nSi no sabe qué debe escribir, pruebe con «exo-open %m».\n«%d» se usa para especificar el dispositivo y «%m» para el punto de montaje."
 
 #: ../panel-plugin/mount-plugin.c:856
 msgid "_Execute after mounting:"
@@ -235,15 +235,15 @@ msgstr "Mostrar los sistemas de archivos de _red"
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Active esta opción para expulsar también el soporte de una unidad de CD después de desmontarlo y para insertarlo antes de montarlo."
+msgstr "Active esta opción para expulsar el soporte de una unidad después de desmontarlo y para permitir insertarlo antes de montarlo."
 
 #: ../panel-plugin/mount-plugin.c:976
 msgid "_Eject CD-drives"
-msgstr "_Expulsar los soportes de las unidades de CD"
+msgstr "_Expulsar los CD"
 
 #: ../panel-plugin/mount-plugin.c:989
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Active esta opción para que solo se muestren los puntos de montaje."
+msgstr "Active esta opción para que se muestren solo los puntos de montaje."
 
 #: ../panel-plugin/mount-plugin.c:992
 msgid "Display _mount points only"
