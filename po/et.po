@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 00:47+0200\n"
-"PO-Revision-Date: 2021-04-22 13:37+0000\n"
+"PO-Revision-Date: 2021-09-14 20:43+0000\n"
 "Last-Translator: Priit Jõerüüt <transifex@joeruut.com>\n"
 "Language-Team: Estonian (http://www.transifex.com/xfce/xfce-panel-plugins/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -87,7 +87,7 @@ msgstr "haakimata\n"
 #: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
 #: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Xfce4 andmekandjate haakimise vidin"
 
 #: ../panel-plugin/devices.c:295
 msgid "Failed to mount device:"
@@ -132,7 +132,7 @@ msgstr "<span foreground=\"#FF0000\">haakimata</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Xfce 4 vidin andmekandjate ja haakepunktide halduseks</span></i></b>"
 
 #: ../panel-plugin/mount-plugin.c:572
 msgid "devices"
@@ -140,7 +140,7 @@ msgstr "seadmed"
 
 #: ../panel-plugin/mount-plugin.c:763
 msgid "Mount Plugin"
-msgstr ""
+msgstr "Andmekandjate haakimise vidin"
 
 #: ../panel-plugin/mount-plugin.c:768
 msgid "Properties"
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:803
 msgid "Show _message after unmount"
-msgstr ""
+msgstr "Peale _lahtihaakimist näita teadet"
 
 #: ../panel-plugin/mount-plugin.c:815
 msgid "You can specify a distinct icon to be displayed in the panel."
@@ -170,7 +170,7 @@ msgstr "Vali pilt"
 
 #: ../panel-plugin/mount-plugin.c:832
 msgid "_General"
-msgstr ""
+msgstr "Ül_dseadistused"
 
 #: ../panel-plugin/mount-plugin.c:847
 #, c-format
@@ -203,25 +203,25 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:910
 msgid "_Mount command:"
-msgstr ""
+msgstr "_Haakimise käsk:"
 
 #: ../panel-plugin/mount-plugin.c:915
 msgid "_Unmount command:"
-msgstr ""
+msgstr "_Lahtihaakimise käsk:"
 
 #: ../panel-plugin/mount-plugin.c:940
 msgid "_Commands"
-msgstr ""
+msgstr "_Käsud:"
 
 #: ../panel-plugin/mount-plugin.c:955
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr ""
+msgstr "Selle valikuga saad kuvada ka võrgupõhiseid failisüsteeme nagu NFS, SMBFS, SHFS ja SSHFS."
 
 #: ../panel-plugin/mount-plugin.c:959
 msgid "Display _network file systems"
-msgstr ""
+msgstr "Näita _võrgupõhiseid failisüsteeme"
 
 #: ../panel-plugin/mount-plugin.c:972
 msgid ""
@@ -266,15 +266,15 @@ msgstr ""
 
 #: ../panel-plugin/mount-plugin.c:1050
 msgid "E_xclude specified file systems"
-msgstr ""
+msgstr "Välista _valitud failisüsteemid"
 
 #: ../panel-plugin/mount-plugin.c:1065
 msgid "_File systems"
-msgstr ""
+msgstr "_Failisüsteemid"
 
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Näita partitsioone ja seadmeid ning luba neid haakida ja lahti haakida"
 
 #: ../panel-plugin/mount-plugin.c:1092
 msgid "Copyright (c) 2005-2018\n"
