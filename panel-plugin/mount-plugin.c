@@ -1068,13 +1068,11 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 static void
 mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
 {
-   GdkPixbuf *icon;
    const gchar *auth[] = { "Jean-Baptiste Dulong",
                            "Fabian Nowak <timystery@arcor.de>",
                            "Landry Breuil <landry@xfce.org>", NULL };
-   icon = xfce_panel_pixbuf_from_source("drive-harddisk", NULL, 32);
    gtk_show_about_dialog(NULL,
-      "logo", icon,
+      "logo-icon-name", "drive-harddisk",
       "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
       "version", PACKAGE_VERSION,
       "program-name", PACKAGE_NAME,
@@ -1083,9 +1081,6 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
       "copyright", _("Copyright (c) 2005-2018\n"),
       "authors", auth, NULL);
   // TODO: add translators.
-
-   if(icon)
-      g_object_unref(G_OBJECT(icon));
 }
 
 static void
