@@ -63,9 +63,19 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
-   /* shrink the gtk button's image to new size -*/
-   size /= xfce_panel_plugin_get_nrows (plugin);
-   gtk_widget_set_size_request (GTK_WIDGET(mt->button), size, size);
+#if LIBXFCE4PANEL_CHECK_VERSION (4, 17, 4)
+    xfce_panel_set_image_from_source (GTK_IMAGE (mt->image), mt->icon, NULL,
+                                      xfce_panel_plugin_get_icon_size (plugin),
+                                      gtk_widget_get_scale_factor (GTK_WIDGET (plugin)));
+#else
+    gint scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (plugin));
+    gint icon_size = xfce_panel_plugin_get_icon_size (plugin);
+    GdkPixbuf *pixbuf = xfce_panel_pixbuf_from_source (mt->icon, NULL, icon_size * scale_factor);
+    cairo_surface_t *surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
+    gtk_image_set_from_surface (GTK_IMAGE (mt->image), surface);
+    cairo_surface_destroy (surface);
+    g_object_unref (pixbuf);
+#endif
 }
 
 /**
@@ -555,7 +565,7 @@ create_mounter_control (XfcePanelPlugin *plugin)
     g_assert (mounter->icon!=NULL);
 
     mounter->button = gtk_button_new ();
-    mounter->image = xfce_panel_image_new_from_source (mounter->icon);
+    mounter->image = gtk_image_new ();
     gtk_widget_show(mounter->image);
     gtk_container_add (GTK_CONTAINER(mounter->button), mounter->image);
     gtk_button_set_relief (GTK_BUTTON(mounter->button), GTK_RELIEF_NONE);
@@ -643,10 +653,7 @@ mounter_apply_options (t_mounter_dialog *md)
                    "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
                    PACKAGE_DATA_DIR );
 
-    gtk_container_remove(GTK_CONTAINER(mt->button), mt->image);
-    mt->image = xfce_panel_image_new_from_source (mt->icon);
-    gtk_widget_show(mt->image);
-    gtk_container_add (GTK_CONTAINER(mt->button), mt->image);
+    mounter_set_size (mt->plugin, xfce_panel_plugin_get_size (mt->plugin), mt);
 
     TRACE ("leaves mounter_apply_options");
 }
@@ -1111,6 +1118,7 @@ mount_construct (XfcePanelPlugin *plugin)
     xfce_panel_plugin_menu_show_about(plugin);
     g_signal_connect (plugin, "about", G_CALLBACK (mounter_show_about), mounter);
 
+    mounter_set_size (plugin, xfce_panel_plugin_get_size (plugin), mounter);
     g_signal_connect (plugin, "size-changed", G_CALLBACK (mounter_set_size),
                          mounter);
 
