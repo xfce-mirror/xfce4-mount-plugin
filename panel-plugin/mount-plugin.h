@@ -23,10 +23,6 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #ifndef __MOUNT_PLUGIN_H
 # define __MOUNT_PLUGIN_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <gtk/gtk.h>
 #include <libxfce4panel/libxfce4panel.h>
 
