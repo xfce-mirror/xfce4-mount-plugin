@@ -17,7 +17,7 @@ m4_define([mount_version_build], [@REVISION@])
 m4_define([mount_version], [mount_version_major().mount_version_minor().mount_version_micro()ifelse(mount_version_tag(), [], [], [mount_version_tag()-mount_version_build()])])
 m4_define([mount_debug_default], [ifelse(mount_version_tag(), [git], [yes], [minimum])])
 
-AC_COPYRIGHT([Copyright (c) 2006-2020
+AC_COPYRIGHT([Copyright (c) 2005-2023
         The Xfce development team. All rights reserved.])
 
 AC_INIT([xfce4-mount-plugin], [mount_version],
