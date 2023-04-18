@@ -1,7 +1,0 @@
-Listen to HAL/Udev for new devices. Code is already in places-plugin, in xfdesktop and in Thunar, so shouldn't be a big deal.
-
-Use fusermount -u for FUSE file systems.
-
-Add notification messages instead of popups when removing the device was successful.
-
-Optionally exclude non-user-mountable filesystems by reading the flag "user" (not "user=").

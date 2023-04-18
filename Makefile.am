@@ -19,11 +19,8 @@ dist-hook: ChangeLog
 EXTRA_DIST =							\
 	AUTHORS									\
 	COPYING									\
-	ChangeLog								\
-	INSTALL									\
 	NEWS										\
 	README									\
-	TODO										\
 	intltool-extract.in			\
 	intltool-merge.in				\
 	intltool-update.in
