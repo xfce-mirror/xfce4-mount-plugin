@@ -15,7 +15,6 @@ libmount_la_CFLAGS =			         \
 	@LIBXFCE4UI_CFLAGS@
 
 libmount_la_LIBADD =                                \
-	@SOLLIBS@                                   			\
 	@LIBXFCE4PANEL_LIBS@				\
 	@LIBXFCE4UI_LIBS@
 

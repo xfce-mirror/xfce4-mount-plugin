@@ -31,9 +31,6 @@ AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 dnl Check for UNIX variants
-dnl AC_AIX
-dnl AC_ISC_POSIX
-dnl AC_MINIX
 AC_USE_SYSTEM_EXTENSIONS
 
 dnl Check for basic programs
@@ -52,20 +49,6 @@ dnl getmentent() requires stdio.h/mntent.h
 AC_CHECK_FUNCS([getmntent])
 dnl On BSD, getmntinfo is used instead
 AC_CHECK_FUNCS([getmntinfo])
-
-dnl param.h is part of libc6 on Linux, but important for old-style Unix and especially mount.h with getmntinfo, so better keep it for now.
-AC_CHECK_HEADERS([sys/param.h])
-AC_CHECK_HEADERS([sys/mount.h])
-
-dnl Add -traditional to output variable CC if using the GNU C compiler and ioctl does not work properly without -traditional. That usually happens when the fixed header files have not been installed on an old system. Leave here commented out to comment in if some older *NIX systems might require it as was recently written on the ML.
-dnl AC_PROG_GCC_TRADITIONAL
-
-dnl Define size_t to a suitable type, if standard headers do not define it. Used several times in devices.c. Do not remove!
-AC_TYPE_SIZE_T
-
-dnl kstat_open is in kstat on BSD
-AC_CHECK_LIB(kstat, kstat_open, SOLLIBS="-lkstat -lsocket", SOLLIBS="")
-AC_SUBST(SOLLIBS)
 
 dnl configure the panel plugin
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.50.0])
@@ -103,6 +86,4 @@ panel-plugin/Makefile
 icons/Makefile
 po/Makefile.in
 ])
-
 AC_OUTPUT
-
