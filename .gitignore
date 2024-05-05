@@ -4,6 +4,7 @@ stamp*
 */.deps
 /po/*.gmo
 .libs
+*~
 *.orig
 *.o
 *.lo
@@ -40,5 +41,5 @@ autom4te.cache
 /po/quot.sed
 /po/remove-potcdate.sed
 /po/remove-potcdate.sin
-/po/mousepad.pot
+/po/*.pot
 /xfce4-mount-plugin-*/
