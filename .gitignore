@@ -15,7 +15,6 @@ configure
 INSTALL
 ChangeLog
 config.*
-configure.ac
 mkinstalldirs
 missing
 compile
