@@ -9,20 +9,15 @@ dnl 2012 Landry Breuil <landry@xfce.org>
 dnl
 dnl for Xfce4-panel 4.12 and higher only!
 
-m4_define([mount_version_major], [1])
-m4_define([mount_version_minor], [1])
-m4_define([mount_version_micro], [6])
-m4_define([mount_version_tag], [git]) # Leave empty only for releases, but use 'git' in most cases
-m4_define([mount_version_build], [@REVISION@])
-m4_define([mount_version], [mount_version_major().mount_version_minor().mount_version_micro()ifelse(mount_version_tag(), [], [], [mount_version_tag()-mount_version_build()])])
-m4_define([mount_debug_default], [ifelse(mount_version_tag(), [git], [yes], [minimum])])
+XDT_VERSION_INIT([1.1.6], [git])
 
 AC_COPYRIGHT([Copyright (c) 2005-2023
         The Xfce development team. All rights reserved.])
 
-AC_INIT([xfce4-mount-plugin], [mount_version],
+AC_INIT([xfce4-mount-plugin], [xdt_version],
   [https://gitlab.xfce.org/panel-plugins/xfce4-mount-plugin/], [xfce4-mount-plugin])
-
+AC_PREREQ([2.69])
+AC_REVISION([xdt_version_build])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
@@ -36,7 +31,6 @@ AC_USE_SYSTEM_EXTENSIONS
 dnl Check for basic programs
 AC_PROG_CC
 AC_PROG_INSTALL
-IT_PROG_INTLTOOL([0.35.0])
 
 dnl Initialize libtool
 LT_PREREQ([2.2.6])
@@ -57,10 +51,14 @@ XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.12.0])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
 
 dnl Check for i18n support
-XDT_I18N([@LINGUAS@])
+GETTEXT_PACKAGE="$PACKAGE"
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Name of default gettext domain])
+AC_SUBST([GETTEXT_PACKAGE])
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19.8])
 
 dnl Check for debugging support
-XDT_FEATURE_DEBUG([mount_debug_default])
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl Set PACKAGE PREFIX
 if test "x${prefix}" = "xNONE"; then
