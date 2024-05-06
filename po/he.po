@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #: ../panel-plugin/devices.c:71
 #, c-format
@@ -278,11 +278,3 @@ msgstr "מערכות _קבצים"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "הצג מחיצות/התקנים והתר את עגינתם/ביטול עגינתם"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "עגן התקנים"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "מציג את כל ההתקנים הניתנים לעגינה ומבצע להם (ביטול) עגינה לפי בקשה."
