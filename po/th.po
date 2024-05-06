@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>, 2014,2019,2021\n"
 "Language-Team: Thai (http://app.transifex.com/xfce/xfce-panel-plugins/language/th/)\n"
@@ -275,11 +275,3 @@ msgstr "ระบบแ_ฟ้ม"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "แสดงพาร์ทิชัน/อุปกรณ์ และสามารถเมานท์/เลิกเมานท์ได้"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "เมานท์อุปกรณ์"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "แสดงอุปกรณ์ที่เมานท์ได้ และ(เลิก)เมานท์ตามสั่ง"
