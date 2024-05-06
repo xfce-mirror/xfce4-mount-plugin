@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Vahe Safaryan <vahe.safaryan@realschool.am>, 2020\n"
 "Language-Team: Eastern Armenian (http://app.transifex.com/xfce/xfce-panel-plugins/language/hye/)\n"
@@ -276,11 +276,3 @@ msgstr "_Նիշային համակարգեր"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Ցուցադրել մասնաբաժինները/ սարքերը եւ թույլ տալ, որ դրանք տեղադրուեն / անջատուեն"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "Միացնել սարքերը"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr ""
