@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>, 2016\n"
 "Language-Team: Occitan (post 1500) (http://app.transifex.com/xfce/xfce-panel-plugins/language/oc/)\n"
@@ -276,11 +276,3 @@ msgstr "Sistèmas de _fichièrs"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Far veire las particions / periferics e permetre de los montar / desmontar"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "Montar los periferics"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Aficha tots los periferics que pòdon èsser montats e los (des)monta a la demanda. "
