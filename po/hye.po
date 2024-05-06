@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
 # 
 # Translators:
 # Arman Harutyunyan <arman.harut468@gmail.com>, 2020
@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-06 00:55+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-05-06 12:58+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Vahe Safaryan <vahe.safaryan@realschool.am>, 2020\n"
 "Language-Team: Eastern Armenian (http://app.transifex.com/xfce/xfce-panel-plugins/language/hye/)\n"
@@ -19,161 +19,161 @@ msgstr ""
 "Language: hye\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../panel-plugin/devices.c:71
+#: panel-plugin/devices.c:71
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f Բայթ"
 
-#: ../panel-plugin/devices.c:72
+#: panel-plugin/devices.c:72
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f ԿիլոԲայթ"
 
-#: ../panel-plugin/devices.c:73
+#: panel-plugin/devices.c:73
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f ՄեգաԲայթ"
 
-#: ../panel-plugin/devices.c:74
+#: panel-plugin/devices.c:74
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f ԳեգաԲայթ"
 
-#: ../panel-plugin/devices.c:83
+#: panel-plugin/devices.c:83
 #, c-format
 msgid "size:                %g\n"
 msgstr " չափս.             %g\n"
 
-#: ../panel-plugin/devices.c:84
+#: panel-plugin/devices.c:84
 #, c-format
 msgid "used size:           %g\n"
 msgstr "աւգտագործուած չափսը.          %g\n"
 
-#: ../panel-plugin/devices.c:85
+#: panel-plugin/devices.c:85
 #, c-format
 msgid "available size:       %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:86
+#: panel-plugin/devices.c:86
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "աւգտագործուած տոկոսը.      %d\n"
 
-#: ../panel-plugin/devices.c:87
+#: panel-plugin/devices.c:87
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "նիշային համակարգի տեսակը.    %s\n"
 
-#: ../panel-plugin/devices.c:88
+#: panel-plugin/devices.c:88
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "միացման իրական կէտը.  %s\n"
 
-#: ../panel-plugin/devices.c:172
+#: panel-plugin/devices.c:172
 #, c-format
 msgid "disk: %s\n"
 msgstr "սկաւառակ. %s\n"
 
-#: ../panel-plugin/devices.c:173
+#: panel-plugin/devices.c:173
 #, c-format
 msgid "mount point: %s\n"
 msgstr "միացման կէտը. %s\n"
 
-#: ../panel-plugin/devices.c:177
+#: panel-plugin/devices.c:177
 #, c-format
 msgid "not mounted\n"
 msgstr "միացուած չէ\n"
 
-#: ../panel-plugin/devices.c:293 ../panel-plugin/devices.c:316
-#: ../panel-plugin/devices.c:379 ../panel-plugin/devices.c:390
-#: ../panel-plugin/devices.c:400 ../panel-plugin/devices.c:486
+#: panel-plugin/devices.c:293 panel-plugin/devices.c:316
+#: panel-plugin/devices.c:379 panel-plugin/devices.c:390
+#: panel-plugin/devices.c:400 panel-plugin/devices.c:486
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce 4 Միացման Ներդիր"
 
-#: ../panel-plugin/devices.c:295
+#: panel-plugin/devices.c:295
 msgid "Failed to mount device:"
 msgstr "Չյաջողուեց միանալ սարքին."
 
-#: ../panel-plugin/devices.c:318
+#: panel-plugin/devices.c:318
 msgid "Error executing on-mount command:"
 msgstr "Միացուած հրամանի կատարման սխալ."
 
-#: ../panel-plugin/devices.c:381
+#: panel-plugin/devices.c:381
 msgid "Failed to umount device:"
 msgstr "Չյաջողուեց միացնել սարքը."
 
-#: ../panel-plugin/devices.c:392
+#: panel-plugin/devices.c:392
 msgid "The device should be removable safely now:"
 msgstr "Սարքը այժմ պէտք է անվտանգ հեռացուի."
 
-#: ../panel-plugin/devices.c:402
+#: panel-plugin/devices.c:402
 msgid "An error occurred. The device should not be removed:"
 msgstr "Սխալ է տեղի ունեցել. Սարքը չպէտք է հեռացուի."
 
-#: ../panel-plugin/devices.c:488
+#: panel-plugin/devices.c:488
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "Ձեր / etc / fstab- ը հնարաւոր չէ կարդալ: Սա խստորէն կնուազեցնի ներդրաւնի ունակութիւնները:"
 
-#: ../panel-plugin/mount-plugin.c:203
+#: panel-plugin/mount-plugin.c:203
 msgid " -> "
 msgstr "->"
 
-#: ../panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:262
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s]%s ազատ"
 
-#: ../panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:285
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">չի միացուել</span>"
 
-#: ../panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:360
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce4 Mount Plugin - Սարքեր եւ Միացման Կէտեր</span></i></b>"
 
-#: ../panel-plugin/mount-plugin.c:577
+#: panel-plugin/mount-plugin.c:577
 msgid "devices"
 msgstr "սարքեր"
 
-#: ../panel-plugin/mount-plugin.c:765
+#: panel-plugin/mount-plugin.c:765
 msgid "Mount Plugin"
 msgstr "Միացման Ներդրաւն"
 
-#: ../panel-plugin/mount-plugin.c:770
+#: panel-plugin/mount-plugin.c:770
 msgid "Properties"
 msgstr "Յատկութիւններ"
 
-#: ../panel-plugin/mount-plugin.c:801
+#: panel-plugin/mount-plugin.c:801
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Սա միայն աւգտակար է եւ խորհուրդ է տրուում, եթէ Դուք նշել էք «համաժամեցում» որպէս «unmount» հրամանի տողի մաս."
 
-#: ../panel-plugin/mount-plugin.c:805
+#: panel-plugin/mount-plugin.c:805
 msgid "Show _message after unmount"
 msgstr "Ցոյց տալ _հաղորդագրութիւնը միացնելուց յետոյ"
 
-#: ../panel-plugin/mount-plugin.c:817
+#: panel-plugin/mount-plugin.c:817
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr " Դուք կարող էք նշել յստակ պատկեր, որպէսզի այն ցուցադրուի վահանակում:"
 
-#: ../panel-plugin/mount-plugin.c:823
+#: panel-plugin/mount-plugin.c:823
 msgid "Icon:"
 msgstr "Պատկերակ."
 
-#: ../panel-plugin/mount-plugin.c:827
+#: panel-plugin/mount-plugin.c:827
 msgid "Select an image"
 msgstr "Ընտրէք պատկեր"
 
-#: ../panel-plugin/mount-plugin.c:834
+#: panel-plugin/mount-plugin.c:834
 msgid "_General"
 msgstr "_ Ընդհանուր"
 
-#: ../panel-plugin/mount-plugin.c:849
+#: panel-plugin/mount-plugin.c:849
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -181,82 +181,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Այս հրամանը կկատարուի սարքի միացման կէտի տեղադրումից յետոյ որպէս փոփոխական:\nԵթէ վստահ չէք, թէ ինչ պէտք է տեղադրէք, փորձէք «exo-open %m»:\n'%d' կարող է աւգտագործուել սարքը նշելու համար, '%m'  միացման կէտի համար:"
 
-#: ../panel-plugin/mount-plugin.c:858
+#: panel-plugin/mount-plugin.c:858
 msgid "_Execute after mounting:"
 msgstr "_Գործարկէք միացումից յետոյ."
 
-#: ../panel-plugin/mount-plugin.c:881
+#: panel-plugin/mount-plugin.c:881
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "ԶԳՈՒՇԱՑՈՒՄ. Այս ընտրանքները միայն մասնագետների համար են: Եթէ չգիտէք, թէ ինչի համար կարող են լաւ լինել, ձեռքերը հեռու պահէք:"
 
-#: ../panel-plugin/mount-plugin.c:885
+#: panel-plugin/mount-plugin.c:885
 msgid "_Custom commands"
 msgstr "_Ընտրելի հրամաններ"
 
-#: ../panel-plugin/mount-plugin.c:904
+#: panel-plugin/mount-plugin.c:904
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Աւգտատէրերի մեծամասնութիւնը աւելացնում են \"sudo\" կամ  \"sync %d&&\"  \"unmount %d\"-ից առաջ:\n'%d' աւգտագործուում է  սարքը նշելու համար, '%m' մոնտաժի համար:"
 
-#: ../panel-plugin/mount-plugin.c:912
+#: panel-plugin/mount-plugin.c:912
 msgid "_Mount command:"
 msgstr "_Միացման հրաման."
 
-#: ../panel-plugin/mount-plugin.c:917
+#: panel-plugin/mount-plugin.c:917
 msgid "_Unmount command:"
 msgstr "_Անջատման հրաման. "
 
-#: ../panel-plugin/mount-plugin.c:942
+#: panel-plugin/mount-plugin.c:942
 msgid "_Commands"
 msgstr "_Հրամաններ"
 
-#: ../panel-plugin/mount-plugin.c:957
+#: panel-plugin/mount-plugin.c:957
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Ակտիւացրէք այս տարբերակը` ցուցադրելու նաեւ ցանցային նիշային համակարգեր, ինչպիսիք են NFS, SMBFS, SHFS եւ SSHFS-ը:"
 
-#: ../panel-plugin/mount-plugin.c:961
+#: panel-plugin/mount-plugin.c:961
 msgid "Display _network file systems"
 msgstr "Ցուցադրել _ցանցային նիշային համակարգերը"
 
-#: ../panel-plugin/mount-plugin.c:974
+#: panel-plugin/mount-plugin.c:974
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Ակտիվացրէք այս տարբերակը` նաեւ հեռացնելուց յետոյ CD- յիշասարքը դուրս հանելու եւ անջատելուց առաջ տեղադրելու համար:"
 
-#: ../panel-plugin/mount-plugin.c:978
+#: panel-plugin/mount-plugin.c:978
 msgid "_Eject CD-drives"
 msgstr "_Հեռացրէք CD-յիշասարքերը"
 
-#: ../panel-plugin/mount-plugin.c:991
+#: panel-plugin/mount-plugin.c:991
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Ակտիվացրէք այս տարբերակը` միայն միացման կէտերը ցուցադրելու համար:"
 
-#: ../panel-plugin/mount-plugin.c:994
+#: panel-plugin/mount-plugin.c:994
 msgid "Display _mount points only"
 msgstr "Ցուցադրել  _միացման կէտերը միայն"
 
-#: ../panel-plugin/mount-plugin.c:1009
+#: panel-plugin/mount-plugin.c:1009
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Սարքի անունները հատէք կոճակի մէջ նշուած նիշերի թուին:"
 
-#: ../panel-plugin/mount-plugin.c:1015
+#: panel-plugin/mount-plugin.c:1015
 msgid "Trim device names: "
 msgstr "Հատէք սարքերի անունները."
 
-#: ../panel-plugin/mount-plugin.c:1024
+#: panel-plugin/mount-plugin.c:1024
 msgid " characters"
 msgstr "գրանշաններ"
 
-#: ../panel-plugin/mount-plugin.c:1041
+#: panel-plugin/mount-plugin.c:1041
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -265,14 +265,22 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1052
+#: panel-plugin/mount-plugin.c:1052
 msgid "E_xclude specified file systems"
 msgstr "Գոր_ծարկէք նշուախ նիշային համակարգերը"
 
-#: ../panel-plugin/mount-plugin.c:1067
+#: panel-plugin/mount-plugin.c:1067
 msgid "_File systems"
 msgstr "_Նիշային համակարգեր"
 
-#: ../panel-plugin/mount-plugin.c:1090
+#: panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Ցուցադրել մասնաբաժինները/ սարքերը եւ թույլ տալ, որ դրանք տեղադրուեն / անջատուեն"
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:5
+msgid "Mount devices"
+msgstr "Միացնել սարքերը"
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:6
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr ""
