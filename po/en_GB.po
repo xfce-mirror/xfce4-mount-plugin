@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>, 2023\n"
 "Language-Team: English (United Kingdom) (http://app.transifex.com/xfce/xfce-panel-plugins/language/en_GB/)\n"
@@ -276,11 +276,3 @@ msgstr "_File systems"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Show partitions/devices and allow to mount/unmount them"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "Mount devices"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Shows all mountable devices and (un)mounts them on request."
