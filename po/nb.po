@@ -8,16 +8,16 @@
 # Christian Lomsdalen <christian@vindstille.net>, 2007
 # Harald H. <haarektrans@gmail.com>, 2014
 # Jon Kristian Nilsen <jonn3@broadpark.no>, 2006
-# heskjestad <cato@heskjestad.xyz>, 2019-2020
+# Kaci Heskjestad, 2019-2020
 # Terje Uriansrud <terje@uriansrud.net>, 2009
 # Terje Uriansrud <ter@operamail.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-19 01:17+0200\n"
+"POT-Creation-Date: 2024-05-06 00:55+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: heskjestad <cato@heskjestad.xyz>, 2019-2020\n"
+"Last-Translator: Kaci Heskjestad, 2019-2020\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/xfce/xfce-panel-plugins/language/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -282,11 +282,3 @@ msgstr "_Filsystemer"
 #: ../panel-plugin/mount-plugin.c:1090
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Vis partisjoner/enheter og tillat montering/avmontering av dem"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:1
-msgid "Mount devices"
-msgstr "Montering av enheter"
-
-#: ../panel-plugin/xfce4-mount-plugin.desktop.in.h:2
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Viser alle monterbare enheter og (av)monterer etter ønske."
