@@ -248,12 +248,11 @@ disk_display_refresh (t_disk_display * disk_display)
     char * size;
     char * avail;
 
-    mount_info = disk_display->disk->mount_info;
-
     TRACE("enters disk_display_refresh");
 
     if (disk_display != NULL)
     {
+        mount_info = disk_display->disk->mount_info;
         if (mount_info != NULL)
         {    /* device is mounted */
             used = get_size_human_readable (mount_info->used);
@@ -367,7 +366,8 @@ mounter_data_new (t_mounter *mt)
     {
         disk = g_ptr_array_index (mt->pdisks, i); /* get the disk */
         disk_display = disk_display_new (disk, mt); /* creates a disk_display */
-        disk_display->disk = disk;
+        if (disk_display != NULL)
+            disk_display->disk = disk;
         g_ptr_array_add(disk_displays, disk_display);
         /* fill in mount infos */
         disk_display_refresh (disk_display);
