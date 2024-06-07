@@ -191,8 +191,7 @@ shorten_disk_name (const char *dev, guint len)
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        firstchars = malloc ((len-5-3)*sizeof(char)); // 3 additional ones for the three dots
-        firstchars = strndup(dev, len-5-3);
+        firstchars = strndup(dev, len-5-3); // 3 additional ones for the three dots
         r = malloc ((len+1)*sizeof(char));
         snprintf (r, len+1, "%s...%s", firstchars, lastchars);
     }
