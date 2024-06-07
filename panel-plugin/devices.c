@@ -516,11 +516,13 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
         if ( has_valid_mount_device &&
                 g_str_has_prefix(pfstab->fs_file, "/") ) {
             pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file, length);
-            pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
-            if (!device_or_mountpoint_exists(pdisks, pdisk))
-              g_ptr_array_add (pdisks , pdisk);
-            else
-              disk_free (&pdisk);
+            if (pdisk != NULL) {
+                pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
+                if (!device_or_mountpoint_exists(pdisks, pdisk))
+                  g_ptr_array_add (pdisks , pdisk);
+                else
+                  disk_free (&pdisk);
+            }
 
         }
 
@@ -830,10 +832,12 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length)
             /* else have valid entry reflecting block device or NFS */
 #ifdef HAVE_GETMNTENT
             pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir, length);
-            pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
+            if (pdisk != NULL)
+                pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
 #elif defined (HAVE_GETMNTINFO)
             pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, length);
-            pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
+            if (pdisk != NULL)
+                pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
 #endif
             g_ptr_array_add (pdisks, pdisk);
         }
