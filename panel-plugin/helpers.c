@@ -112,6 +112,9 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     if (*dest==NULL)
         *dest = "";
 
+    if (mountpoint == NULL || format == NULL)
+        return retval;
+
     p = strdup(mountpoint);
     r = p;
 
