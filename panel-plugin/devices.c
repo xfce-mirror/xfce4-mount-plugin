@@ -871,6 +871,9 @@ disk_classify (char *device, char *mountpoint)
 {
     t_deviceclass dc = UNKNOWN;
 
+    if (device == NULL || mountpoint == NULL)
+        return dc;
+
     /* Note: Since linux-2.6.19, you cannot distinguish between scsi/removable
      * drives by sdX and hard disks by hdY, since hdY is replaced by sdY.
      */
