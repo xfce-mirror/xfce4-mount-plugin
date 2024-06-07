@@ -112,13 +112,17 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     if (*dest==NULL)
         *dest = "";
 
+    if (mountpoint == NULL || format == NULL)
+        return retval;
+
     p = strdup(mountpoint);
     r = p;
 
     while ((q=strchr(p, ' ')) != NULL) {
         t = strdup(p);
         s = strchr(t, ' ');
-        s[0] = '\0';
+        if (s != NULL)
+            s[0] = '\0';
         escaped_mp = g_strconcat (escaped_mp, t, "\\ ", NULL);
         g_free(t);
         p = q+1;

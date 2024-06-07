@@ -367,7 +367,8 @@ mounter_data_new (t_mounter *mt)
     {
         disk = g_ptr_array_index (mt->pdisks, i); /* get the disk */
         disk_display = disk_display_new (disk, mt); /* creates a disk_display */
-        disk_display->disk = disk;
+        if (disk_display != NULL)
+            disk_display->disk = disk;
         g_ptr_array_add(disk_displays, disk_display);
         /* fill in mount infos */
         disk_display_refresh (disk_display);
