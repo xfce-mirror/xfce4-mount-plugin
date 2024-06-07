@@ -191,10 +191,9 @@ shorten_disk_name (const char *dev, guint len)
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        firstchars = malloc ((len-5-3)*sizeof(char)); // 3 additional ones for the three dots
-        firstchars = strndup(dev, len-5-3);
-        r = malloc ((len+1)*sizeof(char));
-        snprintf (r, len+1, "%s...%s", firstchars, lastchars);
+        firstchars = g_strndup(dev, len-5-3); // 3 additional ones for the three dots
+        r = g_strdup_printf ("%s...%s", firstchars, lastchars);
+        g_free (firstchars);
     }
     else
         r = g_strdup (dev);
@@ -517,9 +516,13 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
         if ( has_valid_mount_device &&
                 g_str_has_prefix(pfstab->fs_file, "/") ) {
             pdisk = disk_new (pfstab->fs_spec, pfstab->fs_file, length);
-            pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
-            if (!device_or_mountpoint_exists(pdisks, pdisk))
-              g_ptr_array_add (pdisks , pdisk);
+            if (pdisk != NULL) {
+                pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
+                if (!device_or_mountpoint_exists(pdisks, pdisk))
+                  g_ptr_array_add (pdisks , pdisk);
+                else
+                  disk_free (&pdisk);
+            }
 
         }
 
@@ -829,24 +832,28 @@ disks_refresh(GPtrArray * pdisks, GPtrArray *excluded_FSs, gint length)
             /* else have valid entry reflecting block device or NFS */
 #ifdef HAVE_GETMNTENT
             pdisk = disk_new (pmntent->mnt_fsname, pmntent->mnt_dir, length);
-            pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
+            if (pdisk != NULL)
+                pdisk->dc = disk_classify (pmntent->mnt_fsname, pmntent->mnt_dir);
 #elif defined (HAVE_GETMNTINFO)
             pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, length);
-            pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
+            if (pdisk != NULL)
+                pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
 #endif
             g_ptr_array_add (pdisks, pdisk);
         }
 
-        /* create new t_mount_info */
+        if (pdisk != NULL) {
+            /* create new t_mount_info */
 #ifdef HAVE_GETMNTENT
-        mount_info = mount_info_new_from_stat (pstatfs, pmntent->mnt_type,
-                                               pmntent->mnt_dir);
+            mount_info = mount_info_new_from_stat (pstatfs, pmntent->mnt_type,
+                                                   pmntent->mnt_dir);
 #elif defined (HAVE_GETMNTINFO)
-        mount_info = mount_info_new_from_stat (&pstatfs[i], pstatfs[i].f_fstypename,
-                                               pstatfs[i].f_mntonname);
+            mount_info = mount_info_new_from_stat (&pstatfs[i], pstatfs[i].f_fstypename,
+                                                   pstatfs[i].f_mntonname);
 #endif
-        /* add it to pdisk */
-        pdisk->mount_info = mount_info ;
+            /* add it to pdisk */
+            pdisk->mount_info = mount_info;
+        }
 
     } /* end for */
 
@@ -863,6 +870,9 @@ t_deviceclass
 disk_classify (char *device, char *mountpoint)
 {
     t_deviceclass dc = UNKNOWN;
+
+    if (device == NULL || mountpoint == NULL)
+        return dc;
 
     /* Note: Since linux-2.6.19, you cannot distinguish between scsi/removable
      * drives by sdX and hard disks by hdY, since hdY is replaced by sdY.

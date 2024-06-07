@@ -35,12 +35,13 @@ int
 seperate_list (GPtrArray *array, char *list)
 {
     int retval = 0;
-    char *p, *q;
+    char *p, *q, *r;
 
     if (list==NULL)
         return retval;
 
     p = strdup(list);
+    r = p;
 
     if (array==NULL)
         array = g_ptr_array_new ();
@@ -59,6 +60,7 @@ seperate_list (GPtrArray *array, char *list)
     /* g_printf("p=%s\n", p); */
     g_ptr_array_add (array, g_strdup(p));
     retval++;
+    g_free (r);
 
     return retval;
 }
@@ -112,13 +114,17 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     if (*dest==NULL)
         *dest = "";
 
+    if (mountpoint == NULL || format == NULL)
+        return retval;
+
     p = strdup(mountpoint);
     r = p;
 
     while ((q=strchr(p, ' ')) != NULL) {
         t = strdup(p);
         s = strchr(t, ' ');
-        s[0] = '\0';
+        if (s != NULL)
+            s[0] = '\0';
         escaped_mp = g_strconcat (escaped_mp, t, "\\ ", NULL);
         g_free(t);
         p = q+1;
