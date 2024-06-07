@@ -191,9 +191,9 @@ shorten_disk_name (const char *dev, guint len)
     {
         // we want at least 5 characters at the end so that trimmed UUIDs are still readable
         lastchars = (char *) (dev + strlen(dev) - 5);
-        firstchars = strndup(dev, len-5-3); // 3 additional ones for the three dots
-        r = malloc ((len+1)*sizeof(char));
-        snprintf (r, len+1, "%s...%s", firstchars, lastchars);
+        firstchars = g_strndup(dev, len-5-3); // 3 additional ones for the three dots
+        r = g_strdup_printf ("%s...%s", firstchars, lastchars);
+        g_free (firstchars);
     }
     else
         r = g_strdup (dev);
@@ -519,6 +519,8 @@ disks_new (gboolean include_NFSs, gboolean *showed_fstab_dialog, gint length)
             pdisk->dc = disk_classify (pfstab->fs_spec, pfstab->fs_file);
             if (!device_or_mountpoint_exists(pdisks, pdisk))
               g_ptr_array_add (pdisks , pdisk);
+            else
+              disk_free (&pdisk);
 
         }
 
