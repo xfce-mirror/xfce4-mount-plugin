@@ -118,7 +118,8 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     while ((q=strchr(p, ' ')) != NULL) {
         t = strdup(p);
         s = strchr(t, ' ');
-        s[0] = '\0';
+        if (s != NULL)
+            s[0] = '\0';
         escaped_mp = g_strconcat (escaped_mp, t, "\\ ", NULL);
         g_free(t);
         p = q+1;
