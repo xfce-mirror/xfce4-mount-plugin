@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
 # 
 # Translators:
-# hoek <hoek@tuta.io>, 2014
+# d703b7c9f8279b67f8ff243fa8f12e4a_ead0287 <01cbd6dcada4ad6beac99d868e1751df_141855>, 2014
 # Marek Adamski, 2022,2024
 # Marek Adamski, 2018,2020
 # Piotr Maliński <admin@rk.edu.pl>, 2006
@@ -183,7 +183,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "To polecenie zostanie wykonane po zamontowaniu urządzenia w punkcie montowania urządzenia jako argument.\nJeśli nie masz pewności, co wstawić, spróbuj \"exo-open %m\".\n'%d' może zostać użyte w celu określenia urządzenia, '%m' do montowania."
+msgstr "To polecenie zostanie wykonane po zamontowaniu urządzenia w punkcie montowania urządzenia jako argument.\nJeśli nie masz pewności, co wstawić, spróbuj „exo-open %m”.\n„%d” może zostać użyte w celu określenia urządzenia, „%m” do montowania."
 
 #: panel-plugin/mount-plugin.c:858
 msgid "_Execute after mounting:"
@@ -267,7 +267,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Wyklucz następujące systemy plików z menu.\nLista ta jest oddzielona prostymi odstępami.\nDo Ciebie należy określenie odpowiednich urządzeń\nlub punktów montowania.\nGwiazdka (*) może być wykorzystana jako symbol zastępczy na końcu\nścieżki, np. \"/mnt/*\" wykluczy jakiekolwiek punkty montowania\npod \"/mnt\".\n"
+msgstr "Wyklucz następujące systemy plików z menu.\nLista ta jest oddzielona prostymi odstępami.\nDo Ciebie należy określenie odpowiednich urządzeń\nlub punktów montowania.\nGwiazdka (*) może być wykorzystana jako symbol zastępczy na końcu\nścieżki, np. „/mnt/*” wykluczy jakiekolwiek punkty montowania\npod „/mnt”.\n"
 
 #: panel-plugin/mount-plugin.c:1052
 msgid "E_xclude specified file systems"
