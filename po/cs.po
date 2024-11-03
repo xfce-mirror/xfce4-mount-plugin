@@ -5,7 +5,7 @@
 # Translators:
 # Alois Nešpor <info@aloisnespor.info>, 2014,2016
 # Alois Nešpor <info@aloisnespor.info>, 2014
-# Michal Várady <miko.vaji@gmail.com>, 2016,2020
+# Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024
 # Pavel Borecki <pavel.borecki@gmail.com>, 2018
 # Petr Šimáček <petr.simacek@gmail.com>, 2016
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-05-06 12:58+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2016,2020\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,11 +158,11 @@ msgstr "Je užitečné a zároveň se doporučuje, abyste doplnili řetězec „
 
 #: panel-plugin/mount-plugin.c:805
 msgid "Show _message after unmount"
-msgstr "Zo_brazit zprávu po odpojení"
+msgstr "Po odpojení zo_brazit zprávu"
 
 #: panel-plugin/mount-plugin.c:817
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Můžete určit různé ikony pro zobrazení v panelu."
+msgstr "Můžete určit zřetelnou ikonu zobrazenou v panelu."
 
 #: panel-plugin/mount-plugin.c:823
 msgid "Icon:"
@@ -203,7 +203,7 @@ msgstr "_Vlastní příkazy"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec „sync %d &&“ před příkaz „unmount %d“.\n'%d' je použit pro upřesnění názvu jednotky, '%m' pro bod připojení."
+msgstr "Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec „sync %d &&“ před příkaz „unmount %d“.\n'%d' se použije pro upřesnění názvu jednotky, '%m' pro bod připojení."
 
 #: panel-plugin/mount-plugin.c:912
 msgid "_Mount command:"
@@ -243,7 +243,7 @@ msgstr "Tuto volbu aktivujte, chcete-li zobrazovat pouze body připojení."
 
 #: panel-plugin/mount-plugin.c:994
 msgid "Display _mount points only"
-msgstr "Zobrazovat pouze _body připojení"
+msgstr "Pouze zobrazovat _body připojení"
 
 #: panel-plugin/mount-plugin.c:1009
 msgid ""
@@ -266,7 +266,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr "Vyloučí následující souborové systémy z menu.\nSeznam je oddělen jednoduchými mezerami.\nJe na vás, abyste zadali správné zařízení nebo přípojný bod.\nHvězdičku (*) je možné použít jako zástupný symbol v cestě, například \"/mnt/*\" vyloučí všechny přípojné body v \"/mnt\".\n"
+msgstr "Vyloučí následující souborové systémy z nabídky.\nSeznam je oddělen jednoduchými mezerami.\nJe na vás, abyste zadali správné zařízení nebo přípojný bod.\nHvězdičku (*) je možné použít jako zástupný symbol v cestě, například \"/mnt/*\" vyloučí všechny přípojné body v \"/mnt\".\n"
 
 #: panel-plugin/mount-plugin.c:1052
 msgid "E_xclude specified file systems"
