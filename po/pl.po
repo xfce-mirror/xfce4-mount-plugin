@@ -137,7 +137,7 @@ msgstr "<span foreground=\"#FF0000\">Nie zamontowano</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr "<b><i><span font_size=\"large\">Wtyczka montowania Xfce 4 – Urządzenia i punkty montowania</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Wtyczka montowania Xfce 4 – Urządzenia i punkty montowania</span></i></b>"
 
 #: panel-plugin/mount-plugin.c:577
 msgid "devices"
@@ -155,7 +155,7 @@ msgstr "Właściwości"
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Powiadamia o odmontowaniu urządzenia. Użyteczne jeśli w poleceniu odmontowywania użyto „sync”."
+msgstr "Przydatne i zalecane wyłącznie w przypadku, gdy polecenie „unmount” zostanie określone jako „sync”."
 
 #: panel-plugin/mount-plugin.c:805
 msgid "Show _message after unmount"
@@ -183,7 +183,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"exo-open %m\".\n"
 "'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "To polecenie zostanie wykonane po zamontowaniu urządzenia w punkcie montowania urządzenia jako argument.\nJeśli nie masz pewności, co wstawić, spróbuj „exo-open %m”.\n„%d” może zostać użyte w celu określenia urządzenia, „%m” do montowania."
+msgstr "To polecenie zostanie wykonane po zamontowaniu urządzenia z punktem montowania urządzenia jako argumentem.\nJeśli nie masz pewności, co wstawić, spróbuj „exo-open %m”.\n„%d” może zostać użyte w celu określenia urządzenia, „%m” do punktu montowania."
 
 #: panel-plugin/mount-plugin.c:858
 msgid "_Execute after mounting:"
@@ -204,7 +204,7 @@ msgstr "_Własne"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Wprowadza własne polecenia zamontowania i odmontowania. Większość użytkowników obydwa polecenia poprzedza poleceniem „sudo” lub „sync %d &&”w przypadku polecenia „unmount %d”.\nParametr „%d” reprezentuje zamontowane urządzenie a „%m” jego punkt montowania."
+msgstr "Wprowadza własne polecenia zamontowania i odmontowania. Większość użytkowników obydwa polecenia poprzedza poleceniem „sudo” lub „sync %d &&” w przypadku polecenia „unmount %d”.\nParametr „%d” służy do określenia urządzenia, „%m” do punktu montowania."
 
 #: panel-plugin/mount-plugin.c:912
 msgid "_Mount command:"
