@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-05-06 12:58+0200\n"
+"POT-Creation-Date: 2024-12-23 12:53+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Fabian <timystery@arcor.de>, 2020\n"
 "Language-Team: German (http://app.transifex.com/xfce/xfce-panel-plugins/language/de/)\n"
@@ -86,33 +86,33 @@ msgstr "Einhängepunkt: %s\n"
 msgid "not mounted\n"
 msgstr "nicht eingehängt\n"
 
-#: panel-plugin/devices.c:293 panel-plugin/devices.c:316
-#: panel-plugin/devices.c:379 panel-plugin/devices.c:390
-#: panel-plugin/devices.c:400 panel-plugin/devices.c:486
+#: panel-plugin/devices.c:292 panel-plugin/devices.c:315
+#: panel-plugin/devices.c:378 panel-plugin/devices.c:389
+#: panel-plugin/devices.c:399 panel-plugin/devices.c:485
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce-4-Einhängeerweiterung"
 
-#: panel-plugin/devices.c:295
+#: panel-plugin/devices.c:294
 msgid "Failed to mount device:"
 msgstr "Einhängen des Gerätes ist fehlgeschlagen:"
 
-#: panel-plugin/devices.c:318
+#: panel-plugin/devices.c:317
 msgid "Error executing on-mount command:"
 msgstr "Fehler beim Ausführen des Befehls nach dem Einhängen:"
 
-#: panel-plugin/devices.c:381
+#: panel-plugin/devices.c:380
 msgid "Failed to umount device:"
 msgstr "Aushängen des Gerätes ist fehlgeschlagen:"
 
-#: panel-plugin/devices.c:392
+#: panel-plugin/devices.c:391
 msgid "The device should be removable safely now:"
 msgstr "Das Gerät sollte sich jetzt sicher entfernen lassen:"
 
-#: panel-plugin/devices.c:402
+#: panel-plugin/devices.c:401
 msgid "An error occurred. The device should not be removed:"
 msgstr "Ein Fehler ist aufgetreten. Das Gerät sollte nicht entfernt werden:"
 
-#: panel-plugin/devices.c:488
+#: panel-plugin/devices.c:487
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
@@ -122,60 +122,64 @@ msgstr "Ihre /etc/fstab kann nicht gelesen werden. Das wird die Fähigkeiten der
 msgid " -> "
 msgstr " → "
 
-#: panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:261
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s frei"
 
-#: panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:284
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nicht eingehängt</span>"
 
-#: panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:359
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce 4 Mount Erweiterung - Geräte und Einhängepunkte</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:577
+#: panel-plugin/mount-plugin.c:578
 msgid "devices"
 msgstr "Geräte"
 
-#: panel-plugin/mount-plugin.c:765
+#: panel-plugin/mount-plugin.c:766
 msgid "Mount Plugin"
 msgstr "Geräte einhängen"
 
-#: panel-plugin/mount-plugin.c:770
+#: panel-plugin/mount-plugin.c:769
+msgid "_Close"
+msgstr "_Schließen"
+
+#: panel-plugin/mount-plugin.c:771
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: panel-plugin/mount-plugin.c:801
+#: panel-plugin/mount-plugin.c:802
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Das ist nur sinnvoll und empfohlen, falls »sync« als Teil des »unmount«-Befehls angegeben wird."
 
-#: panel-plugin/mount-plugin.c:805
+#: panel-plugin/mount-plugin.c:806
 msgid "Show _message after unmount"
 msgstr "Be_nachrichtigung nach dem Aushängen"
 
-#: panel-plugin/mount-plugin.c:817
+#: panel-plugin/mount-plugin.c:818
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Hier kann ein bestimmtes Symbol angegeben werden, das in der Leiste angezeigt werden soll."
 
-#: panel-plugin/mount-plugin.c:823
+#: panel-plugin/mount-plugin.c:824
 msgid "Icon:"
 msgstr "Symbol:"
 
-#: panel-plugin/mount-plugin.c:827
+#: panel-plugin/mount-plugin.c:828
 msgid "Select an image"
 msgstr "Bild wählen"
 
-#: panel-plugin/mount-plugin.c:834
+#: panel-plugin/mount-plugin.c:835
 msgid "_General"
 msgstr "_Allgemein"
 
-#: panel-plugin/mount-plugin.c:849
+#: panel-plugin/mount-plugin.c:850
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -183,82 +187,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Dieser Befehl wird mit dem Einhängepunkt des Geräts als Argument nach dem Einhängen ausgeführt.\nFalls Sie unsicher sind, was eingetragen werden soll, probieren Sie »exo-open %m«.\n»%d« kann dazu verwendet werden, das Gerät anzugeben, »%m« für den Einhängepunkt."
 
-#: panel-plugin/mount-plugin.c:858
+#: panel-plugin/mount-plugin.c:859
 msgid "_Execute after mounting:"
 msgstr "Nach dem _Einhängen ausführen:"
 
-#: panel-plugin/mount-plugin.c:881
+#: panel-plugin/mount-plugin.c:882
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "ACHTUNG: diese Optionen sind nur für Experten gedacht. Falls Sie nicht wissen, wozu sie gut sein sollten, bitte die Hände davon lassen!"
 
-#: panel-plugin/mount-plugin.c:885
+#: panel-plugin/mount-plugin.c:886
 msgid "_Custom commands"
 msgstr "Be_nutzerdefinierte Befehle"
 
-#: panel-plugin/mount-plugin.c:904
+#: panel-plugin/mount-plugin.c:905
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Die meisten Nutzer wollen nur ein »sudo« vor beide Befehle oder »sync %d &&« vor den »unmount %d«-Befehl hängen.\n»%d« kann dazu verwendet werden, das Gerät anzugeben, »%m« für den Einhängepunkt."
 
-#: panel-plugin/mount-plugin.c:912
+#: panel-plugin/mount-plugin.c:913
 msgid "_Mount command:"
 msgstr "Befehl zum _Einhängen:"
 
-#: panel-plugin/mount-plugin.c:917
+#: panel-plugin/mount-plugin.c:918
 msgid "_Unmount command:"
 msgstr "Befehl _zum Aushängen:"
 
-#: panel-plugin/mount-plugin.c:942
+#: panel-plugin/mount-plugin.c:943
 msgid "_Commands"
 msgstr "_Befehle"
 
-#: panel-plugin/mount-plugin.c:957
+#: panel-plugin/mount-plugin.c:958
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Diese Option verwenden, um auch Netzwerkdateisysteme wie NFS, SMBFS, SHFS und SSHFS anzuzeigen."
 
-#: panel-plugin/mount-plugin.c:961
+#: panel-plugin/mount-plugin.c:962
 msgid "Display _network file systems"
 msgstr "_Netzwerkdateisysteme ebenfalls anzeigen"
 
-#: panel-plugin/mount-plugin.c:974
+#: panel-plugin/mount-plugin.c:975
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Diese Option aktivieren, um ein CD-Laufwerk nach dem Aushängen auszufahren oder vor dem Einhängen einzufahren."
 
-#: panel-plugin/mount-plugin.c:978
+#: panel-plugin/mount-plugin.c:979
 msgid "_Eject CD-drives"
 msgstr "CD-_Laufwerke auswerfen"
 
-#: panel-plugin/mount-plugin.c:991
+#: panel-plugin/mount-plugin.c:992
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Diese Option aktivieren, um nur die Einhängepunkte angezeigt zu bekommen."
 
-#: panel-plugin/mount-plugin.c:994
+#: panel-plugin/mount-plugin.c:995
 msgid "Display _mount points only"
 msgstr "Nur den _Einhängepunkt anzeigen"
 
-#: panel-plugin/mount-plugin.c:1009
+#: panel-plugin/mount-plugin.c:1010
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Gerätenamen abschneiden entsprechend der angegebenen Zeichenanzahl."
 
-#: panel-plugin/mount-plugin.c:1015
+#: panel-plugin/mount-plugin.c:1016
 msgid "Trim device names: "
 msgstr "Gerätenamen abschneiden: "
 
-#: panel-plugin/mount-plugin.c:1024
+#: panel-plugin/mount-plugin.c:1025
 msgid " characters"
 msgstr " Zeichen"
 
-#: panel-plugin/mount-plugin.c:1041
+#: panel-plugin/mount-plugin.c:1042
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -267,15 +271,15 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Die folgenden Dateisysteme aus dem Menü ausschließen.\nDie Liste ist mit einfachen Leerstellen getrennt.\nEs liegt an Ihnen, die richtige Geräte oder Einhängepunkte anzugeben.\nEin Sternchen (*) kann als Platzhalter am Ende eines Pfades verwendet werden,\nz.B. »/mnt/*«, um alle Einhängepunkte unter »/mnt« auszuschließen.\n"
 
-#: panel-plugin/mount-plugin.c:1052
+#: panel-plugin/mount-plugin.c:1053
 msgid "E_xclude specified file systems"
 msgstr "_Folgende Dateisysteme ausschließen:"
 
-#: panel-plugin/mount-plugin.c:1067
+#: panel-plugin/mount-plugin.c:1068
 msgid "_File systems"
 msgstr "_Dateisysteme"
 
-#: panel-plugin/mount-plugin.c:1090
+#: panel-plugin/mount-plugin.c:1091
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Partitionen oder Geräte anzeigen und das Ein-/Aushängen ermöglichen"
 
