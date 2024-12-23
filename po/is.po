@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-05-06 12:58+0200\n"
+"POT-Creation-Date: 2024-12-23 12:53+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>, 2013-2014, 2018\n"
 "Language-Team: Icelandic (http://app.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
@@ -86,33 +86,33 @@ msgstr "tengipunktur: %s\n"
 msgid "not mounted\n"
 msgstr "ekki tengt\n"
 
-#: panel-plugin/devices.c:293 panel-plugin/devices.c:316
-#: panel-plugin/devices.c:379 panel-plugin/devices.c:390
-#: panel-plugin/devices.c:400 panel-plugin/devices.c:486
+#: panel-plugin/devices.c:292 panel-plugin/devices.c:315
+#: panel-plugin/devices.c:378 panel-plugin/devices.c:389
+#: panel-plugin/devices.c:399 panel-plugin/devices.c:485
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce 4 diskatengiviðbót"
 
-#: panel-plugin/devices.c:295
+#: panel-plugin/devices.c:294
 msgid "Failed to mount device:"
 msgstr "Mistókst að tengja tækið í skráakerfið:"
 
-#: panel-plugin/devices.c:318
+#: panel-plugin/devices.c:317
 msgid "Error executing on-mount command:"
 msgstr "Villa við að keyra tengiskipunina:"
 
-#: panel-plugin/devices.c:381
+#: panel-plugin/devices.c:380
 msgid "Failed to umount device:"
 msgstr "Mistókst að aftengja tækið:"
 
-#: panel-plugin/devices.c:392
+#: panel-plugin/devices.c:391
 msgid "The device should be removable safely now:"
 msgstr "Tækið ætti núna að vera hægt að fjarlægja á öruggan máta:"
 
-#: panel-plugin/devices.c:402
+#: panel-plugin/devices.c:401
 msgid "An error occurred. The device should not be removed:"
 msgstr "Villa kom upp. Tækið ætti ekki að fjarlægja:"
 
-#: panel-plugin/devices.c:488
+#: panel-plugin/devices.c:487
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
@@ -122,60 +122,64 @@ msgstr "Ekki tókst að lesa /etc/fstab skrána. Það mun hamla verulega virkni
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:261
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s laust"
 
-#: panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:284
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ekki tengt</span>"
 
-#: panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:359
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce 4 diskatengiviðbót – Tæki og tengipunktar</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:577
+#: panel-plugin/mount-plugin.c:578
 msgid "devices"
 msgstr "tæki"
 
-#: panel-plugin/mount-plugin.c:765
+#: panel-plugin/mount-plugin.c:766
 msgid "Mount Plugin"
 msgstr "Diskatengiviðbót"
 
-#: panel-plugin/mount-plugin.c:770
+#: panel-plugin/mount-plugin.c:769
+msgid "_Close"
+msgstr "_Loka"
+
+#: panel-plugin/mount-plugin.c:771
 msgid "Properties"
 msgstr "Eiginleikar"
 
-#: panel-plugin/mount-plugin.c:801
+#: panel-plugin/mount-plugin.c:802
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Þetta er eingöngu nytsamlegt og mælt með ef þú tiltekur \"sync\" sem hluta af \"unmount\" skipanastrengnum."
 
-#: panel-plugin/mount-plugin.c:805
+#: panel-plugin/mount-plugin.c:806
 msgid "Show _message after unmount"
 msgstr "_Birta skilaboð eftir aftengingu"
 
-#: panel-plugin/mount-plugin.c:817
+#: panel-plugin/mount-plugin.c:818
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Þú getur tiltekið ákveðna táknmynd sem nota skal á spjaldinu."
 
-#: panel-plugin/mount-plugin.c:823
+#: panel-plugin/mount-plugin.c:824
 msgid "Icon:"
 msgstr "Táknmynd:"
 
-#: panel-plugin/mount-plugin.c:827
+#: panel-plugin/mount-plugin.c:828
 msgid "Select an image"
 msgstr "Veldu mynd"
 
-#: panel-plugin/mount-plugin.c:834
+#: panel-plugin/mount-plugin.c:835
 msgid "_General"
 msgstr "_Almennt"
 
-#: panel-plugin/mount-plugin.c:849
+#: panel-plugin/mount-plugin.c:850
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -183,82 +187,82 @@ msgid ""
 "'%d' can be used to specify the device, '%m' for the mountpoint."
 msgstr "Þessi skipun verður framkvæmd eftir að tæki hefur verið tengt með tengipunkti tækisins sem viðfang skipunar.\nEf þú ert ekki viss um hvað eigi að setja þarna, prófaðu \"exo-open %m\".\n'%d' er notað til að tilgreina tæki, '%m' er fyrir tengipunkt."
 
-#: panel-plugin/mount-plugin.c:858
+#: panel-plugin/mount-plugin.c:859
 msgid "_Execute after mounting:"
 msgstr "_Keyra eftir tengingu:"
 
-#: panel-plugin/mount-plugin.c:881
+#: panel-plugin/mount-plugin.c:882
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "Athugið: þessir valkostir eru einungis fyrir sérfræðinga! Ef þú veist ekki til hvers þeir eru notaðir, ættirðu að láta þetta í friði!"
 
-#: panel-plugin/mount-plugin.c:885
+#: panel-plugin/mount-plugin.c:886
 msgid "_Custom commands"
 msgstr "Sé_rsniðnar skipanir"
 
-#: panel-plugin/mount-plugin.c:904
+#: panel-plugin/mount-plugin.c:905
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Flestir notendur munu einungis vilja bæta \"sudo\" framan við báðar skipanirnar eða bæta \"sync %d &&\" framan við \"unmount %d\" skipunina.\n'%d' er notað til að tiltaka tæki, '%m' er fyrir tengipunkt."
 
-#: panel-plugin/mount-plugin.c:912
+#: panel-plugin/mount-plugin.c:913
 msgid "_Mount command:"
 msgstr "_Tengiskipun:"
 
-#: panel-plugin/mount-plugin.c:917
+#: panel-plugin/mount-plugin.c:918
 msgid "_Unmount command:"
 msgstr "_Aftengiskipun:"
 
-#: panel-plugin/mount-plugin.c:942
+#: panel-plugin/mount-plugin.c:943
 msgid "_Commands"
 msgstr "S_kipanir"
 
-#: panel-plugin/mount-plugin.c:957
+#: panel-plugin/mount-plugin.c:958
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Virkjaðu þetta til að birta netskráakerfi á borð við NFS, SMBFS, SHFS og SSHFS."
 
-#: panel-plugin/mount-plugin.c:961
+#: panel-plugin/mount-plugin.c:962
 msgid "Display _network file systems"
 msgstr "Birta skráakerfi á _neti"
 
-#: panel-plugin/mount-plugin.c:974
+#: panel-plugin/mount-plugin.c:975
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Virkjaðu þetta til að renna inn eða spýta út geisladiskum fyrir/eftir tengingu/aftengingu í skráakerfi."
 
-#: panel-plugin/mount-plugin.c:978
+#: panel-plugin/mount-plugin.c:979
 msgid "_Eject CD-drives"
 msgstr "S_pýta út CD-drifum"
 
-#: panel-plugin/mount-plugin.c:991
+#: panel-plugin/mount-plugin.c:992
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Virkjaðu þetta til að birta einungis tengipunkta."
 
-#: panel-plugin/mount-plugin.c:994
+#: panel-plugin/mount-plugin.c:995
 msgid "Display _mount points only"
 msgstr "Ein_göngu birta tengipunkta"
 
-#: panel-plugin/mount-plugin.c:1009
+#: panel-plugin/mount-plugin.c:1010
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Stytta heiti tækja niður í þann fjölda stafa sem tilgreingur er á valhnappi."
 
-#: panel-plugin/mount-plugin.c:1015
+#: panel-plugin/mount-plugin.c:1016
 msgid "Trim device names: "
 msgstr "Stytta heiti tækja:"
 
-#: panel-plugin/mount-plugin.c:1024
+#: panel-plugin/mount-plugin.c:1025
 msgid " characters"
 msgstr " stafir"
 
-#: panel-plugin/mount-plugin.c:1041
+#: panel-plugin/mount-plugin.c:1042
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -267,15 +271,15 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Útiloka eftirfarandi skráakerfi frá valmyndinni.\nListinn er aðgreindur með einföldum bilum.\nÞað er þitt að ákveða rétt tæki eða tengipunkta.\nStjörnu (*) má nota sem algildismerki í enda slóðar,\nt.d. \"/mnt/*\" til að útiloka alla tengipunkta neðan \"/mnt\".\n"
 
-#: panel-plugin/mount-plugin.c:1052
+#: panel-plugin/mount-plugin.c:1053
 msgid "E_xclude specified file systems"
 msgstr "Úti_loka ákveðin skráakerfi"
 
-#: panel-plugin/mount-plugin.c:1067
+#: panel-plugin/mount-plugin.c:1068
 msgid "_File systems"
 msgstr "Skráa_kerfi"
 
-#: panel-plugin/mount-plugin.c:1090
+#: panel-plugin/mount-plugin.c:1091
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Sýna disksneiðar/tæki og gera kleift að tengja/aftengja"
 
