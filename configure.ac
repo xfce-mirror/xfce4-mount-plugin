@@ -9,7 +9,7 @@ dnl 2012 Landry Breuil <landry@xfce.org>
 dnl
 dnl for Xfce4-panel 4.12 and higher only!
 
-XDT_VERSION_INIT([1.1.7])
+XDT_VERSION_INIT([1.1.7], [git])
 
 AC_COPYRIGHT([Copyright (c) 2005-2024
         The Xfce development team. All rights reserved.])
