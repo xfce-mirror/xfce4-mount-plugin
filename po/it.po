@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Cristian Marchi <cri.penta@gmail.com>, 2010,2013-2014
-# Emanuele Petriglia <transifex@emanuelepetriglia.com>, 2018
+# Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2018
 # Enrico B. <enricobe@hotmail.com>, 2016
 # Vincenzo Reale <vinx.reale@gmail.com>, 2020
 # Walter Comunello <masterz3d@gmail.com>, 2008
