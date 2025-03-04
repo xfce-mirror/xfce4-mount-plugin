@@ -9,9 +9,10 @@ dnl 2012 Landry Breuil <landry@xfce.org>
 dnl
 dnl for Xfce4-panel 4.12 and higher only!
 
+m4_define([copyright_year], [2025])
 XDT_VERSION_INIT([1.1.7], [git])
 
-AC_COPYRIGHT([Copyright (c) 2005-2024
+AC_COPYRIGHT([Copyright (c) 2005-copyright_year()
         The Xfce development team. All rights reserved.])
 
 AC_INIT([xfce4-mount-plugin], [xdt_version],
@@ -22,6 +23,9 @@ AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
+COPYRIGHT_YEAR=copyright_year()
+AC_DEFINE_UNQUOTED([COPYRIGHT_YEAR], ["$COPYRIGHT_YEAR"], [Copyright year])
+AC_SUBST([COPYRIGHT_YEAR])
 
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
