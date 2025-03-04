@@ -6,8 +6,6 @@ dnl 2003-2004 Benedikt Meurer <benny@xfce.org>
 dnl 2005-2020 Fabian Nowak <timystery@arcor.de>
 dnl 2020 Olaf Hering <olaf@aepfle.de>
 dnl 2012 Landry Breuil <landry@xfce.org>
-dnl
-dnl for Xfce4-panel 4.12 and higher only!
 
 m4_define([copyright_year], [2025])
 XDT_VERSION_INIT([1.1.7], [git])
