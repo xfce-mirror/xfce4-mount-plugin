@@ -24,6 +24,9 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <stdlib.h>
 
@@ -451,7 +454,7 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     if (mt->umount_command != NULL) g_free(mt->umount_command);
     if (mt->excluded_filesystems != NULL) g_free(mt->excluded_filesystems);
 
-    icon = g_strdup_printf ("%s/icons/hicolor/scalable/apps/xfce-mount.svg", PACKAGE_DATA_DIR );
+    icon = g_strdup_printf ("%s/icons/hicolor/scalable/apps/xfce-mount.svg", DATADIR);
     mt->icon = g_strdup(xfce_rc_read_entry(rc, "icon", icon));
     g_free(icon);
 
@@ -547,7 +550,7 @@ create_mounter_control (XfcePanelPlugin *plugin)
     mounter = g_new0(t_mounter,1);
 
     /* default configuration values if no configuration is found */
-    mounter->icon = g_strdup(PACKAGE_DATA_DIR"/icons/hicolor/scalable/apps/xfce-mount.svg");
+    mounter->icon = g_strdup(DATADIR "/icons/hicolor/scalable/apps/xfce-mount.svg");
     mounter->mount_command = g_strdup(DEFAULT_MOUNT_COMMAND);
     mounter->umount_command = g_strdup(DEFAULT_UMOUNT_COMMAND);
     mounter->on_mount_cmd = g_strdup("");
@@ -657,7 +660,7 @@ mounter_apply_options (t_mounter_dialog *md)
     else
         mt->icon = g_strdup_printf (
                    "%s/icons/hicolor/scalable/apps/xfce-mount.svg",
-                   PACKAGE_DATA_DIR );
+                   DATADIR);
 
     mounter_set_size (mt->plugin, xfce_panel_plugin_get_size (mt->plugin), mt);
 
@@ -1087,7 +1090,7 @@ mounter_show_about(XfcePanelPlugin *plugin, t_mounter *mt)
    gtk_show_about_dialog(NULL,
       "logo-icon-name", "drive-harddisk",
       "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
-      "version", PACKAGE_VERSION,
+      "version", VERSION_FULL,
       "program-name", PACKAGE_NAME,
       "comments", _("Show partitions/devices and allow to mount/unmount them"),
       "website", "https://docs.xfce.org/panel-plugins/xfce4-mount-plugin",

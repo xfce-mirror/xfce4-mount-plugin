@@ -21,6 +21,7 @@ AC_REVISION([xdt_version_build])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
+AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
 
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])

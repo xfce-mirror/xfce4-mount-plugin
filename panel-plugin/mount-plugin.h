@@ -38,7 +38,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #define DEFAULT_MOUNT_COMMAND "mount %m"
 #define DEFAULT_UMOUNT_COMMAND "umount %m"
 
-#define DEFAULT_ICON PACKAGE_DATA_DIR "/icons/hicolor/scalable/apps/xfce-mount.svg"
+#define DEFAULT_ICON DATADIR "/icons/hicolor/scalable/apps/xfce-mount.svg"
 
 
 /**

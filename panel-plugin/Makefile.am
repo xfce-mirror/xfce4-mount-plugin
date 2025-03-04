@@ -11,6 +11,7 @@ libmount_la_SOURCES =                                \
 
 libmount_la_CFLAGS =			         \
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"               \
+	-DDATADIR=\"$(datadir)\"			\
 	@LIBXFCE4PANEL_CFLAGS@				\
 	@LIBXFCE4UI_CFLAGS@				\
 	@LIBXFCE4UTIL_CFLAGS@
@@ -37,6 +38,9 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 %.desktop: %.desktop.in
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-EXTRA_DIST = $(desktop_in_files)
+EXTRA_DIST = \
+	$(desktop_in_files) \
+	meson.build \
+	$(NULL)
 
 DISTCLEANFILES = $(desktop_DATA)
