@@ -1,8 +1,8 @@
 # list != NULL is checked above
-helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL 'p' where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
-helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL 'p' where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
-helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL 'p' where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
-helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL 'p' where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
+helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL .+p.+ where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
+helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL .+p.+ where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
+helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL .+p.+ where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
+helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL .+p.+ where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
 
 # mountpoint != NULL is checked above
-helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL 't' where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
+helpers.c:[0-9]+:[0-9]+: warning: use of possibly-NULL .+t.+ where non-null expected \[CWE-690\] \[-Wanalyzer-possible-null-argument\]
