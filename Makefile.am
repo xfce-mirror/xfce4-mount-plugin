@@ -21,4 +21,7 @@ EXTRA_DIST =							\
 	COPYING									\
 	NEWS										\
 	README									\
+	meson.build								\
+	po/meson.build								\
+	xfce-revision.h.in							\
 	$(NULL)

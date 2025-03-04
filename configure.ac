@@ -6,12 +6,11 @@ dnl 2003-2004 Benedikt Meurer <benny@xfce.org>
 dnl 2005-2020 Fabian Nowak <timystery@arcor.de>
 dnl 2020 Olaf Hering <olaf@aepfle.de>
 dnl 2012 Landry Breuil <landry@xfce.org>
-dnl
-dnl for Xfce4-panel 4.12 and higher only!
 
+m4_define([copyright_year], [2025])
 XDT_VERSION_INIT([1.1.7], [git])
 
-AC_COPYRIGHT([Copyright (c) 2005-2024
+AC_COPYRIGHT([Copyright (c) 2005-copyright_year()
         The Xfce development team. All rights reserved.])
 
 AC_INIT([xfce4-mount-plugin], [xdt_version],
@@ -21,6 +20,10 @@ AC_REVISION([xdt_version_build])
 AM_INIT_AUTOMAKE([1.8 dist-bzip2 tar-ustar no-dist-gzip])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
+AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
+COPYRIGHT_YEAR=copyright_year()
+AC_DEFINE_UNQUOTED([COPYRIGHT_YEAR], ["$COPYRIGHT_YEAR"], [Copyright year])
+AC_SUBST([COPYRIGHT_YEAR])
 
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -48,6 +51,7 @@ dnl configure the panel plugin
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.50.0])
 XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.22.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.16.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.16.0])
 XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.16.0])
 
 dnl Check for i18n support
