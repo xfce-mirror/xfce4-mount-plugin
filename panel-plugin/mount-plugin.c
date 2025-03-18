@@ -761,6 +761,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     GtkWidget *_notebook;
     t_mounter_dialog * md;
     gboolean set_active;
+    gchar *text;
 
     TRACE ("enters mounter_create_options");
 
@@ -850,11 +851,18 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
     gtk_box_pack_start (GTK_BOX (_vbox), GTK_WIDGET(_eventbox),
                         FALSE, FALSE, 0);
     gtk_widget_show (_eventbox);
-    gtk_widget_set_tooltip_text(_eventbox,
-        _("This command will be executed after mounting the device with the "
+    text = g_strdup_printf (
+      _("This command will be executed after mounting the device with the "
         "mount point of the device as argument.\n"
-        "If you are unsure what to insert, try \"exo-open %m\".\n"
-        "'%d' can be used to specify the device, '%m' for the mountpoint."));
+        "If you are unsure what to insert, try \"%s %%m\".\n"
+        "'%%d' can be used to specify the device, '%%m' for the mountpoint."),
+#if LIBXFCE4UI_CHECK_VERSION(4, 21, 0)
+      "xfce-open");
+#else
+      "exo-open");
+#endif
+    gtk_widget_set_tooltip_text(_eventbox, text);
+    g_free (text);
 
     _hbox = gtk_hbox_new (FALSE, BORDER);
     gtk_widget_show (_hbox);
