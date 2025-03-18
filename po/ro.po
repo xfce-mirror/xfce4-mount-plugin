@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
 # 
 # Translators:
-# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024-2025
 # vyper <xvirusxx@gmail.com>, 2016
 # vyper <xvirusxx@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-12-23 12:53+0100\n"
+"POT-Creation-Date: 2025-03-18 12:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
+"Last-Translator: vyper <xvirusxx@gmail.com>, 2016\n"
 "Language-Team: Romanian (http://app.transifex.com/xfce/xfce-panel-plugins/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,151 +117,151 @@ msgid ""
 "abilities."
 msgstr "Fișierul „/etc/fstab” nu a putut fi citit. Acest lucru va degrada sever abilitățile modulului."
 
-#: panel-plugin/mount-plugin.c:203
+#: panel-plugin/mount-plugin.c:207
 msgid " -> "
 msgstr " --> "
 
-#: panel-plugin/mount-plugin.c:261
+#: panel-plugin/mount-plugin.c:265
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s liber"
 
-#: panel-plugin/mount-plugin.c:284
+#: panel-plugin/mount-plugin.c:288
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nu este montat</span>"
 
-#: panel-plugin/mount-plugin.c:359
+#: panel-plugin/mount-plugin.c:363
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Modulul de montare Xfce 4 - Dispozitive și puncte de montare</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:578
+#: panel-plugin/mount-plugin.c:582
 msgid "devices"
 msgstr "dispozitive"
 
-#: panel-plugin/mount-plugin.c:766
+#: panel-plugin/mount-plugin.c:771
 msgid "Mount Plugin"
 msgstr "Modul de montare"
 
-#: panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:774
 msgid "_Close"
 msgstr "În_chide"
 
-#: panel-plugin/mount-plugin.c:771
+#: panel-plugin/mount-plugin.c:776
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: panel-plugin/mount-plugin.c:802
+#: panel-plugin/mount-plugin.c:807
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Acest lucru este util și recomandat numai dacă specificați „sync” ca parte a șirului comenzii „unmount”."
 
-#: panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:811
 msgid "Show _message after unmount"
 msgstr "Afișează un mesaj după demontare"
 
-#: panel-plugin/mount-plugin.c:818
+#: panel-plugin/mount-plugin.c:823
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Puteți specifica o pictogramă distinctă care să fie afișată în panou."
 
-#: panel-plugin/mount-plugin.c:824
+#: panel-plugin/mount-plugin.c:829
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:833
 msgid "Select an image"
 msgstr "Selectați o imagine"
 
-#: panel-plugin/mount-plugin.c:835
+#: panel-plugin/mount-plugin.c:840
 msgid "_General"
 msgstr "_Generale"
 
-#: panel-plugin/mount-plugin.c:850
+#: panel-plugin/mount-plugin.c:855
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"exo-open %m\".\n"
-"'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "Această comandă va fi executată după montarea dispozitivului cu punctul de montare al dispozitivului ca argument.\nDacă nu sunteți sigur ce să introduceți, încercați «exo-open %m».\n„%d” poate fi utilizat pentru a specifica dispozitivul și „%m” pentru punctul de montare."
+"If you are unsure what to insert, try \"%s %%m\".\n"
+"'%%d' can be used to specify the device, '%%m' for the mountpoint."
+msgstr "Această comandă va fi executată după montarea dispozitivului cu punctul de montare al dispozitivului ca argument.\nDacă nu sunteți sigur ce să introduceți, încercați «%s %%m».\n„%%d” poate fi utilizat pentru a specifica dispozitivul, „%%m” pentru punctul de montare."
 
-#: panel-plugin/mount-plugin.c:859
+#: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
 msgstr "_Execută după montare:"
 
-#: panel-plugin/mount-plugin.c:882
+#: panel-plugin/mount-plugin.c:894
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "AVERTISMENT: Aceste opțiuni sunt doar pentru experți! Dacă nu știți la ce pot fi bune, nu le atingeți!"
 
-#: panel-plugin/mount-plugin.c:886
+#: panel-plugin/mount-plugin.c:898
 msgid "_Custom commands"
 msgstr "_Comenzi personalizate"
 
-#: panel-plugin/mount-plugin.c:905
+#: panel-plugin/mount-plugin.c:917
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Majoritatea utilizatorilor vor dori doar să adauge «sudo» la ambele comenzi sau să adauge „sync %d &&” la comanda «unmount %d».\n„%d” este utilizat pentru a specifica dispozitivul, „%m” pentru punctul de montare."
 
-#: panel-plugin/mount-plugin.c:913
+#: panel-plugin/mount-plugin.c:925
 msgid "_Mount command:"
 msgstr "Comandă de _montare:"
 
-#: panel-plugin/mount-plugin.c:918
+#: panel-plugin/mount-plugin.c:930
 msgid "_Unmount command:"
 msgstr "Comandă de _demontare:"
 
-#: panel-plugin/mount-plugin.c:943
+#: panel-plugin/mount-plugin.c:955
 msgid "_Commands"
 msgstr "_Comenzi"
 
-#: panel-plugin/mount-plugin.c:958
+#: panel-plugin/mount-plugin.c:970
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Activați această opțiune pentru a afișa și sistemele de fișiere de rețea precum NFS, SMBFS, SHFS și SSHFS."
 
-#: panel-plugin/mount-plugin.c:962
+#: panel-plugin/mount-plugin.c:974
 msgid "Display _network file systems"
 msgstr "Afișează sistemele de fișiere di_n rețea"
 
-#: panel-plugin/mount-plugin.c:975
+#: panel-plugin/mount-plugin.c:987
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Activați această opțiune pentru a ejecta de asemenea un CD după demontare și pentru a-l introduce înainte de montare."
 
-#: panel-plugin/mount-plugin.c:979
+#: panel-plugin/mount-plugin.c:991
 msgid "_Eject CD-drives"
 msgstr "_Ejectează CD-urile"
 
-#: panel-plugin/mount-plugin.c:992
+#: panel-plugin/mount-plugin.c:1004
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Activați această opțiune pentru a afișa numai punctele de montare."
 
-#: panel-plugin/mount-plugin.c:995
+#: panel-plugin/mount-plugin.c:1007
 msgid "Display _mount points only"
 msgstr "Afișează numai punctele de _montare"
 
-#: panel-plugin/mount-plugin.c:1010
+#: panel-plugin/mount-plugin.c:1022
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Reduce numele dispozitivelor la numărul de caractere specificat."
 
-#: panel-plugin/mount-plugin.c:1016
+#: panel-plugin/mount-plugin.c:1028
 msgid "Trim device names: "
 msgstr "Reduce numele dispozitivelor la: "
 
-#: panel-plugin/mount-plugin.c:1025
+#: panel-plugin/mount-plugin.c:1037
 msgid " characters"
-msgstr "caractere"
+msgstr " caractere"
 
-#: panel-plugin/mount-plugin.c:1042
+#: panel-plugin/mount-plugin.c:1054
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -270,15 +270,15 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Exclude din meniu următoarele sisteme de fișiere.\nLista este separată prin spații simple.\nDepinde de dvs. să specificați dispozitivele sau punctele de montare corecte.\nUn asterisc (*) poate fi utilizat ca semn de înlocuire la sfârșitul unei rute,\nde exemplu, „/mnt/*” pentru a exclude toate punctele de montare aflate sub „/mnt”.\n"
 
-#: panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1065
 msgid "E_xclude specified file systems"
 msgstr "E_exclude sistemele de fișiere specificate"
 
-#: panel-plugin/mount-plugin.c:1068
+#: panel-plugin/mount-plugin.c:1080
 msgid "_File systems"
 msgstr "Sisteme de _fișiere"
 
-#: panel-plugin/mount-plugin.c:1091
+#: panel-plugin/mount-plugin.c:1103
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Afișează partițiile/dispozitivele și permite montarea/demontarea lor"
 
