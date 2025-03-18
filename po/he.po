@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2024-12-23 12:53+0100\n"
+"POT-Creation-Date: 2025-03-18 12:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
@@ -118,151 +118,151 @@ msgid ""
 "abilities."
 msgstr "הנתיב /etc/fstab שלך לא ניתן לקריאה. זה ידרדר באופן חמור את יכולות התוסף."
 
-#: panel-plugin/mount-plugin.c:203
+#: panel-plugin/mount-plugin.c:207
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:261
+#: panel-plugin/mount-plugin.c:265
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s פנוי"
 
-#: panel-plugin/mount-plugin.c:284
+#: panel-plugin/mount-plugin.c:288
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">לא מעוגן</span>"
 
-#: panel-plugin/mount-plugin.c:359
+#: panel-plugin/mount-plugin.c:363
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">תוסף עגינה Xfce 4 - התקנים ונקודות עגינה</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:578
+#: panel-plugin/mount-plugin.c:582
 msgid "devices"
 msgstr "התקנים"
 
-#: panel-plugin/mount-plugin.c:766
+#: panel-plugin/mount-plugin.c:771
 msgid "Mount Plugin"
 msgstr "תוסף עגינה"
 
-#: panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:774
 msgid "_Close"
 msgstr "_סגור"
 
-#: panel-plugin/mount-plugin.c:771
+#: panel-plugin/mount-plugin.c:776
 msgid "Properties"
 msgstr "מאפיינים"
 
-#: panel-plugin/mount-plugin.c:802
+#: panel-plugin/mount-plugin.c:807
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "זה שימושי ומומלץ רק אם אתה מציין \"sync\" כחלק ממחרוזת הפקודה \"unmount\"."
 
-#: panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:811
 msgid "Show _message after unmount"
 msgstr "הצג _מסר לאחר ביטול עגינה"
 
-#: panel-plugin/mount-plugin.c:818
+#: panel-plugin/mount-plugin.c:823
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "אתה יכול לציין אייקון שונה להצגה בפאנל."
 
-#: panel-plugin/mount-plugin.c:824
+#: panel-plugin/mount-plugin.c:829
 msgid "Icon:"
 msgstr "אייקון:"
 
-#: panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:833
 msgid "Select an image"
 msgstr "בחר תמונה"
 
-#: panel-plugin/mount-plugin.c:835
+#: panel-plugin/mount-plugin.c:840
 msgid "_General"
 msgstr "_כללי"
 
-#: panel-plugin/mount-plugin.c:850
+#: panel-plugin/mount-plugin.c:855
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
-"If you are unsure what to insert, try \"exo-open %m\".\n"
-"'%d' can be used to specify the device, '%m' for the mountpoint."
-msgstr "פקודה זו תופעל לאחר עגינת ההתקן עם נקודת העגינה של ההתקן כארגומנט.\nאם אתה לא בטוח מה להכניס, נסה \"exo-open %m\". \nניתן להשתמש ב\"%d\" לציון ההתקן, וב־\"%m\" לנקודת העגינה."
+"If you are unsure what to insert, try \"%s %%m\".\n"
+"'%%d' can be used to specify the device, '%%m' for the mountpoint."
+msgstr ""
 
-#: panel-plugin/mount-plugin.c:859
+#: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
 msgstr "_הפעל לאחר עגינה:"
 
-#: panel-plugin/mount-plugin.c:882
+#: panel-plugin/mount-plugin.c:894
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "אזהרה: האפשרויות הללו הן למומחים בלבד. אם אינך יודע עבור מה הן יכולות להיות טובות, אל תיגע בהן."
 
-#: panel-plugin/mount-plugin.c:886
+#: panel-plugin/mount-plugin.c:898
 msgid "_Custom commands"
 msgstr "פקודות _מותאמות אישית"
 
-#: panel-plugin/mount-plugin.c:905
+#: panel-plugin/mount-plugin.c:917
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "רוב המשתמשים ירצו רק לבצע \"sudo\" לשתי הפקודות או לבצע \"sync %d&&\" לפקודת \"unmount %d\".\n'%d' משמש לציון ההתקן, \"%m\" לנקודת העגינה."
 
-#: panel-plugin/mount-plugin.c:913
+#: panel-plugin/mount-plugin.c:925
 msgid "_Mount command:"
 msgstr "פקודת _עגינה:"
 
-#: panel-plugin/mount-plugin.c:918
+#: panel-plugin/mount-plugin.c:930
 msgid "_Unmount command:"
 msgstr "פקודת _ביטול עגינה:"
 
-#: panel-plugin/mount-plugin.c:943
+#: panel-plugin/mount-plugin.c:955
 msgid "_Commands"
 msgstr "_פקודות"
 
-#: panel-plugin/mount-plugin.c:958
+#: panel-plugin/mount-plugin.c:970
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "הפעל אפשרות זו כדי להציג גם מערכות קבצי רשת כמו NFS, SMBFS, SHFS, SSHFS."
 
-#: panel-plugin/mount-plugin.c:962
+#: panel-plugin/mount-plugin.c:974
 msgid "Display _network file systems"
 msgstr "הצג מערכות קבצי _רשת"
 
-#: panel-plugin/mount-plugin.c:975
+#: panel-plugin/mount-plugin.c:987
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "הפעל אפשרות זו כדי גם לפלוט את כונן ה-CD לאחר ביטול הצבה ולהכניס לפני הצבה."
 
-#: panel-plugin/mount-plugin.c:979
+#: panel-plugin/mount-plugin.c:991
 msgid "_Eject CD-drives"
 msgstr "_פלוט כונני CD "
 
-#: panel-plugin/mount-plugin.c:992
+#: panel-plugin/mount-plugin.c:1004
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "הפעל אפשרות זו כדי שרק נקודות העגינה יהיו מוצגות."
 
-#: panel-plugin/mount-plugin.c:995
+#: panel-plugin/mount-plugin.c:1007
 msgid "Display _mount points only"
 msgstr "הצג רק נקודות _עגינה"
 
-#: panel-plugin/mount-plugin.c:1010
+#: panel-plugin/mount-plugin.c:1022
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "קצץ את שמות ההתקנים למספר התווים המצוין בכפתור ה-spin. "
 
-#: panel-plugin/mount-plugin.c:1016
+#: panel-plugin/mount-plugin.c:1028
 msgid "Trim device names: "
 msgstr "קצץ שמות התקנים:"
 
-#: panel-plugin/mount-plugin.c:1025
+#: panel-plugin/mount-plugin.c:1037
 msgid " characters"
 msgstr "תווים"
 
-#: panel-plugin/mount-plugin.c:1042
+#: panel-plugin/mount-plugin.c:1054
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -271,15 +271,15 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "אל תכלול בתפריט את מערכות הקבצים הבאות.\nהרשימה מופרדת עם רווחים פשוטים.\nזה תלוי בך לציין את ההתקנים או נקודות העגינה הנכונות.\nכוכבית (*) יכולה לשמש כשומרת מקום בסוף של\nנתיב, לדוגמה, \"/mnt/*\" כדי לא לכלול נקודות עגינה מתחת ל־\"/mnt\". \n"
 
-#: panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1065
 msgid "E_xclude specified file systems"
 msgstr "_אל תכלול מערכות קבצים שצוינו"
 
-#: panel-plugin/mount-plugin.c:1068
+#: panel-plugin/mount-plugin.c:1080
 msgid "_File systems"
 msgstr "מערכות _קבצים"
 
-#: panel-plugin/mount-plugin.c:1091
+#: panel-plugin/mount-plugin.c:1103
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "הצג מחיצות/התקנים והתר את עגינתם/ביטול עגינתם"
 
