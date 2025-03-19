@@ -9,14 +9,14 @@
 # No Body, 2020
 # Xiaobin Wu <xwu422@googlemail.com>, 2008
 # 玉堂白鹤 <yjwork@qq.com>, 2014
-# 玉堂白鹤 <yjwork@qq.com>, 2016,2018
+# 玉堂白鹤 <yjwork@qq.com>, 2016,2018,2025
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-03-18 12:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: No Body, 2020\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>, 2016,2018,2025\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/xfce/xfce-panel-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -188,7 +188,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr "此命令在以设备挂载点为参数挂载设备后执行。\n您不确定该插入什么，试试\"%s %%m\"。\n可使用 '%%d' 指定设备， '%%m' 指定挂载点。"
 
 #: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
