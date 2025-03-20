@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016,2018
+# Elishai Eliyahu <elishai@mailfence.com>, 2025
 # gk <genghiskhan@gmx.ca>, 2016
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2020
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-03-18 12:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
+"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2025\n"
 "Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,7 +186,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr " פקודה זו תבוצע לאחר עגינה של ההתקן עם נקודת עגינה של ההתקן בתור ארגומנט.\nאם אתה לא בטוח מה לכתוב, נסה \"%s %%m\".\nניתן לציין את ההתקן עם '%%d', את נקודת העגינה עם '%%m'. "
 
 #: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
