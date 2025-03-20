@@ -183,7 +183,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr "Ова наредба ће бити извршена после прикачивања уређаја са тачком качења уређаја као тврдњом.\nАко не знате поуздано шта треба унети, покушајте „%s %%m“.\n„%%d“ може бити коришћен да одреди уређај, „%%m“ за тачку качења."
 
 #: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
