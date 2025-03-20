@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
 # 
 # Translators:
-# Andreas Eitel <github-aneitel@online.de>, 2020
+# Andreas Eitel <github-aneitel@online.de>, 2020,2025
 # Fabian <timystery@arcor.de>, 2020
 # Tobias Bannert <tobannert@gmail.com>, 2014,2016
 # Vinzenz Vietzke <vinz@vinzv.de>, 2018
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-03-18 12:51+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Fabian <timystery@arcor.de>, 2020\n"
+"Last-Translator: Andreas Eitel <github-aneitel@online.de>, 2020,2025\n"
 "Language-Team: German (http://app.transifex.com/xfce/xfce-panel-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,7 +185,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr "Dieser Befehl wird nach dem Einhängen des Geräts mit dem Einhängepunkt des Geräts als Argument ausgeführt.\nWenn Sie unsicher sind, was Sie einfügen sollen, versuchen Sie es mit \"%s %%m\".\n\"%%d\" kann zur Angabe des Geräts verwendet werden, \"%%m\" für den Einhängepunkt."
 
 #: panel-plugin/mount-plugin.c:871
 msgid "_Execute after mounting:"
