@@ -8,7 +8,7 @@ dnl 2020 Olaf Hering <olaf@aepfle.de>
 dnl 2012 Landry Breuil <landry@xfce.org>
 
 m4_define([copyright_year], [2025])
-XDT_VERSION_INIT([1.1.7], [git])
+XDT_VERSION_INIT([1.2.0])
 
 AC_COPYRIGHT([Copyright (c) 2005-copyright_year()
         The Xfce development team. All rights reserved.])
