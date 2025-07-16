@@ -674,8 +674,6 @@ on_optionsDialog_response (GtkWidget *dlg, int response, t_mounter_dialog * md)
 
     gtk_widget_destroy (md->dialog);
 
-    xfce_panel_plugin_unblock_menu (md->mt->plugin);
-
     mounter_write_config (md->mt->plugin, md->mt);
 
     TRACE ("leaves on_optionsDialog_response");
@@ -762,13 +760,17 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     TRACE ("enters mounter_create_options");
 
-    xfce_panel_plugin_block_menu (plugin);
+    if (mt->settings_dialog != NULL) {
+        gtk_window_present (GTK_WINDOW (mt->settings_dialog));
+        return;
+    }
 
-    dlg = xfce_titled_dialog_new_with_mixed_buttons(
+    mt->settings_dialog = dlg = xfce_titled_dialog_new_with_mixed_buttons(
                 _("Mount Plugin"),
                 GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
                 GTK_DIALOG_DESTROY_WITH_PARENT,
                 "window-close-symbolic", _("_Close"), GTK_RESPONSE_OK, NULL);
+    g_object_add_weak_pointer (G_OBJECT (mt->settings_dialog), (gpointer *) &mt->settings_dialog);
 
     xfce_titled_dialog_set_subtitle (XFCE_TITLED_DIALOG (dlg), _("Properties"));
     gtk_window_set_icon_name(GTK_WINDOW(dlg),"drive-harddisk");

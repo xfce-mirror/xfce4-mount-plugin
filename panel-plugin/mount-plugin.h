@@ -48,6 +48,7 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 typedef struct
 {
     XfcePanelPlugin *plugin;
+    GtkWidget *settings_dialog;
     char  *on_mount_cmd;
     gchar *mount_command;
     gchar *umount_command;
