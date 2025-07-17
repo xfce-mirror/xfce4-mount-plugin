@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Xfce
-# This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
 # Demiray Muhterem <mdemiray@msn.com>, 2018,2020
@@ -8,15 +8,15 @@
 # Emin Tufan Çetin <etcetin@gmail.com>, 2020
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014
 # Necdet Yücel <necdetyucel@gmail.com>, 2013,2016
-# x x, 2025
+# 3909d6133b383976bde86621da215840_711025d, 2025
 # zeki <zeki.ozguryazilim@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-03-18 12:51+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-17 00:53+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: x x, 2025\n"
+"Last-Translator: 3909d6133b383976bde86621da215840_711025d, 2025\n"
 "Language-Team: Turkish (http://app.transifex.com/xfce/xfce-panel-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,165 +24,165 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: panel-plugin/devices.c:71
+#: ../panel-plugin/devices.c:67
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: panel-plugin/devices.c:72
+#: ../panel-plugin/devices.c:68
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: panel-plugin/devices.c:73
+#: ../panel-plugin/devices.c:69
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: panel-plugin/devices.c:74
+#: ../panel-plugin/devices.c:70
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: panel-plugin/devices.c:83
+#: ../panel-plugin/devices.c:79
 #, c-format
 msgid "size:                %g\n"
 msgstr "boyut:             %g\n"
 
-#: panel-plugin/devices.c:84
+#: ../panel-plugin/devices.c:80
 #, c-format
 msgid "used size:           %g\n"
 msgstr "kullanım:             %g\n"
 
-#: panel-plugin/devices.c:85
+#: ../panel-plugin/devices.c:81
 #, c-format
 msgid "available size:       %g\n"
 msgstr "kullanılabilir boyut:       %g\n"
 
-#: panel-plugin/devices.c:86
+#: ../panel-plugin/devices.c:82
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "kullanım yüzdesi:     %d\n"
 
-#: panel-plugin/devices.c:87
+#: ../panel-plugin/devices.c:83
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "dosya sistemi türü:       %s\n"
 
-#: panel-plugin/devices.c:88
+#: ../panel-plugin/devices.c:84
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "gerçek bağlama noktası:   %s\n"
 
-#: panel-plugin/devices.c:172
+#: ../panel-plugin/devices.c:168
 #, c-format
 msgid "disk: %s\n"
 msgstr "disk: %s\n"
 
-#: panel-plugin/devices.c:173
+#: ../panel-plugin/devices.c:169
 #, c-format
 msgid "mount point: %s\n"
 msgstr "bağlama noktası: %s\n"
 
-#: panel-plugin/devices.c:177
+#: ../panel-plugin/devices.c:173
 #, c-format
 msgid "not mounted\n"
 msgstr "bağlanmamış\n"
 
-#: panel-plugin/devices.c:292 panel-plugin/devices.c:315
-#: panel-plugin/devices.c:378 panel-plugin/devices.c:389
-#: panel-plugin/devices.c:399 panel-plugin/devices.c:485
+#: ../panel-plugin/devices.c:288 ../panel-plugin/devices.c:311
+#: ../panel-plugin/devices.c:374 ../panel-plugin/devices.c:385
+#: ../panel-plugin/devices.c:395 ../panel-plugin/devices.c:481
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce 4 Bağlama Eklentisi"
 
-#: panel-plugin/devices.c:294
+#: ../panel-plugin/devices.c:290
 msgid "Failed to mount device:"
 msgstr "Aygıt bağlanamadı:"
 
-#: panel-plugin/devices.c:317
+#: ../panel-plugin/devices.c:313
 msgid "Error executing on-mount command:"
 msgstr "Bağlama komutu çalıştırılırken hata oluştu:"
 
-#: panel-plugin/devices.c:380
+#: ../panel-plugin/devices.c:376
 msgid "Failed to umount device:"
 msgstr "Aygıt bağlanamadı:"
 
-#: panel-plugin/devices.c:391
+#: ../panel-plugin/devices.c:387
 msgid "The device should be removable safely now:"
 msgstr "Aygıt artık güvenle kaldırılabilir:"
 
-#: panel-plugin/devices.c:401
+#: ../panel-plugin/devices.c:397
 msgid "An error occurred. The device should not be removed:"
 msgstr "Hata oluştu. Aygıtı şimdi çıkartılmamalıdır:"
 
-#: panel-plugin/devices.c:487
+#: ../panel-plugin/devices.c:483
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "/etc/fstab okunamadı. Bu eklentinin yapabildiklerini ciddi biçimde azaltır."
 
-#: panel-plugin/mount-plugin.c:207
+#: ../panel-plugin/mount-plugin.c:204
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:265
+#: ../panel-plugin/mount-plugin.c:262
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s boş"
 
-#: panel-plugin/mount-plugin.c:288
+#: ../panel-plugin/mount-plugin.c:285
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">bağlanmamış</span>"
 
-#: panel-plugin/mount-plugin.c:363
+#: ../panel-plugin/mount-plugin.c:360
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce 4 Bağlama Eklentisi – Aygıtlar ve Bağlama Noktaları</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:582
+#: ../panel-plugin/mount-plugin.c:579
 msgid "devices"
 msgstr "aygıtlar"
 
-#: panel-plugin/mount-plugin.c:771
+#: ../panel-plugin/mount-plugin.c:769
 msgid "Mount Plugin"
 msgstr "Aygıt Bağlama Eklentisi"
 
-#: panel-plugin/mount-plugin.c:774
+#: ../panel-plugin/mount-plugin.c:772
 msgid "_Close"
 msgstr "_Kapat"
 
-#: panel-plugin/mount-plugin.c:776
+#: ../panel-plugin/mount-plugin.c:775
 msgid "Properties"
 msgstr "Özellikler"
 
-#: panel-plugin/mount-plugin.c:807
+#: ../panel-plugin/mount-plugin.c:806
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Bu işlemi, eğer \"sync\" komutunu \"unmount\" komutunun bir parçası olarak kullanıyorsanız yapmanız önerilmektedir."
 
-#: panel-plugin/mount-plugin.c:811
+#: ../panel-plugin/mount-plugin.c:810
 msgid "Show _message after unmount"
 msgstr "Ayırma işleminden sonra _ileti göster"
 
-#: panel-plugin/mount-plugin.c:823
+#: ../panel-plugin/mount-plugin.c:822
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Panelde gösterilmek üzere başka simge belirleyebilirsiniz."
 
-#: panel-plugin/mount-plugin.c:829
+#: ../panel-plugin/mount-plugin.c:828
 msgid "Icon:"
 msgstr "Simge"
 
-#: panel-plugin/mount-plugin.c:833
+#: ../panel-plugin/mount-plugin.c:832
 msgid "Select an image"
 msgstr "Resim seç"
 
-#: panel-plugin/mount-plugin.c:840
+#: ../panel-plugin/mount-plugin.c:839
 msgid "_General"
 msgstr "_Genel"
 
-#: panel-plugin/mount-plugin.c:855
+#: ../panel-plugin/mount-plugin.c:854
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -190,82 +190,82 @@ msgid ""
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
 msgstr "Bu komut, cihazın bağlama noktasını argüman olarak kullanarak cihaz bağlandıktan sonra yürütülecektir..\nNe ekleyeceğinizden emin değilseniz \"%s %%m\" komutunu deneyin.\n'%%d' cihazı belirtmek için, '%%m' ise bağlama noktası için kullanılabilir."
 
-#: panel-plugin/mount-plugin.c:871
+#: ../panel-plugin/mount-plugin.c:870
 msgid "_Execute after mounting:"
 msgstr "Bağladıktan sonra çalıştı_r:"
 
-#: panel-plugin/mount-plugin.c:894
+#: ../panel-plugin/mount-plugin.c:893
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "UYARI: Bu seçenekler uzman kullanıcılar içindir! Ne işe yaradığını bilmiyorsanız lütfen denemeyiniz!"
 
-#: panel-plugin/mount-plugin.c:898
+#: ../panel-plugin/mount-plugin.c:897
 msgid "_Custom commands"
 msgstr "_Özel komutlar"
 
-#: panel-plugin/mount-plugin.c:917
+#: ../panel-plugin/mount-plugin.c:916
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Çoğu kullanıcı ya komutun başına \"sudo\" eklemektedir, ya da \"sync %d &&\" komutunu \"unmount %d\" komutunun başına eklemektedir.\n'%d' aygıtı belirtmek için kullanılmaktadır, '%m' ise bağlama noktasını belirtmek için kullanılmaktadır."
 
-#: panel-plugin/mount-plugin.c:925
+#: ../panel-plugin/mount-plugin.c:924
 msgid "_Mount command:"
 msgstr "_Bağlama komutu:"
 
-#: panel-plugin/mount-plugin.c:930
+#: ../panel-plugin/mount-plugin.c:929
 msgid "_Unmount command:"
 msgstr "_Ayırma komutu:"
 
-#: panel-plugin/mount-plugin.c:955
+#: ../panel-plugin/mount-plugin.c:954
 msgid "_Commands"
 msgstr "_Komutlar"
 
-#: panel-plugin/mount-plugin.c:970
+#: ../panel-plugin/mount-plugin.c:969
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "NFS, SMBFS,SHFS ve SSHFS gibi dosya sistemlerini göstermek için bu seçeneği etkinleştirebilirsiniz."
 
-#: panel-plugin/mount-plugin.c:974
+#: ../panel-plugin/mount-plugin.c:973
 msgid "Display _network file systems"
 msgstr "Ağ dosya sistemleri_ni göster"
 
-#: panel-plugin/mount-plugin.c:987
+#: ../panel-plugin/mount-plugin.c:986
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Bu seçeneği etkinleştirerek ayırdıktan sonra veya bağlamadan önce CD-sürücünüzün açılmasını sağlayabilirsiniz."
 
-#: panel-plugin/mount-plugin.c:991
+#: ../panel-plugin/mount-plugin.c:990
 msgid "_Eject CD-drives"
 msgstr "CD sürücül_eri aç"
 
-#: panel-plugin/mount-plugin.c:1004
+#: ../panel-plugin/mount-plugin.c:1003
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Bu seçeneği yalnızca bağlama noktalarını göstermek istiyorsanız seçebilirsiniz."
 
-#: panel-plugin/mount-plugin.c:1007
+#: ../panel-plugin/mount-plugin.c:1006
 msgid "Display _mount points only"
 msgstr "Yalnızca bağla_ma noktaları göster"
 
-#: panel-plugin/mount-plugin.c:1022
+#: ../panel-plugin/mount-plugin.c:1021
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Aygıt isimlerindeki boşlukların belirtildiği kadarını temizle."
 
-#: panel-plugin/mount-plugin.c:1028
+#: ../panel-plugin/mount-plugin.c:1027
 msgid "Trim device names: "
 msgstr "Aygıt isimlerindeki boşlukları temizle:"
 
-#: panel-plugin/mount-plugin.c:1037
+#: ../panel-plugin/mount-plugin.c:1036
 msgid " characters"
 msgstr "karakterler"
 
-#: panel-plugin/mount-plugin.c:1054
+#: ../panel-plugin/mount-plugin.c:1053
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -274,22 +274,14 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Aşağıda gösterilen dosya sistemlerini menünün dışında tutunuz.\nListe basit  boşluklarla ayrılmıştır.\nDoğru cihazları ve bağlama noktalarını belirtmek size kalmıştır .\nYıldız işareti (*) yolun sonunda yer tutucu olarak kullanılabilir.\nÖrneğin, \"/mnt\" uzantısının aşağısındaki bağlantı noktalarını \"/mnt/*\"  uzantısının dışında tutar.\n"
 
-#: panel-plugin/mount-plugin.c:1065
+#: ../panel-plugin/mount-plugin.c:1064
 msgid "E_xclude specified file systems"
 msgstr "Belirtilen sürücüleri har_iç tut"
 
-#: panel-plugin/mount-plugin.c:1080
+#: ../panel-plugin/mount-plugin.c:1079
 msgid "_File systems"
 msgstr "_Dosya sistemleri"
 
-#: panel-plugin/mount-plugin.c:1103
+#: ../panel-plugin/mount-plugin.c:1102
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Aygıtları/bölümleri göster ve onları bağlayıp/çözmeye izin ver"
-
-#: panel-plugin/xfce4-mount-plugin.desktop.in:5
-msgid "Mount devices"
-msgstr "Aygıtları Bağla"
-
-#: panel-plugin/xfce4-mount-plugin.desktop.in:6
-msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Bağlanabilir aygıtları gösterir ve talebe göre bağlar/ayırır. "
