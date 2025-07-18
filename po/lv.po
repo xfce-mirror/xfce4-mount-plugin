@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
 # 
 # Translators:
 # Rihards Priedītis <rprieditis@gmail.com>, 2009
@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 00:53+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:07+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2009\n"
 "Language-Team: Latvian (http://app.transifex.com/xfce/xfce-panel-plugins/language/lv/)\n"
@@ -19,165 +19,165 @@ msgstr ""
 "Language: lv\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
-#: ../panel-plugin/devices.c:67
+#: panel-plugin/devices.c:67
 #, c-format
 msgid "%.1f B"
 msgstr "%.1f B"
 
-#: ../panel-plugin/devices.c:68
+#: panel-plugin/devices.c:68
 #, c-format
 msgid "%.1f KB"
 msgstr "%.1f KB"
 
-#: ../panel-plugin/devices.c:69
+#: panel-plugin/devices.c:69
 #, c-format
 msgid "%.1f MB"
 msgstr "%.1f MB"
 
-#: ../panel-plugin/devices.c:70
+#: panel-plugin/devices.c:70
 #, c-format
 msgid "%.1f GB"
 msgstr "%.1f GB"
 
-#: ../panel-plugin/devices.c:79
+#: panel-plugin/devices.c:79
 #, c-format
 msgid "size:                %g\n"
 msgstr "izmērs:                %g\n"
 
-#: ../panel-plugin/devices.c:80
+#: panel-plugin/devices.c:80
 #, c-format
 msgid "used size:           %g\n"
 msgstr "izmantotais izmērs:           %g\n"
 
-#: ../panel-plugin/devices.c:81
+#: panel-plugin/devices.c:81
 #, c-format
 msgid "available size:       %g\n"
 msgstr ""
 
-#: ../panel-plugin/devices.c:82
+#: panel-plugin/devices.c:82
 #, c-format
 msgid "percentage used:     %d\n"
 msgstr "izlietojums procentuāli:     %d\n"
 
-#: ../panel-plugin/devices.c:83
+#: panel-plugin/devices.c:83
 #, c-format
 msgid "file system type:    %s\n"
 msgstr "failu sistēmas tips:    %s\n"
 
-#: ../panel-plugin/devices.c:84
+#: panel-plugin/devices.c:84
 #, c-format
 msgid "actual mount point:  %s\n"
 msgstr "patiesais montēšanas punkts:  %s\n"
 
-#: ../panel-plugin/devices.c:168
+#: panel-plugin/devices.c:168
 #, c-format
 msgid "disk: %s\n"
 msgstr "disks: %s\n"
 
-#: ../panel-plugin/devices.c:169
+#: panel-plugin/devices.c:169
 #, c-format
 msgid "mount point: %s\n"
 msgstr "montēšanas punkts: %s\n"
 
-#: ../panel-plugin/devices.c:173
+#: panel-plugin/devices.c:173
 #, c-format
 msgid "not mounted\n"
 msgstr "nemontēts\n"
 
-#: ../panel-plugin/devices.c:288 ../panel-plugin/devices.c:311
-#: ../panel-plugin/devices.c:374 ../panel-plugin/devices.c:385
-#: ../panel-plugin/devices.c:395 ../panel-plugin/devices.c:481
+#: panel-plugin/devices.c:288 panel-plugin/devices.c:311
+#: panel-plugin/devices.c:374 panel-plugin/devices.c:385
+#: panel-plugin/devices.c:395 panel-plugin/devices.c:481
 msgid "Xfce 4 Mount Plugin"
 msgstr ""
 
-#: ../panel-plugin/devices.c:290
+#: panel-plugin/devices.c:290
 msgid "Failed to mount device:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:313
+#: panel-plugin/devices.c:313
 msgid "Error executing on-mount command:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:376
+#: panel-plugin/devices.c:376
 msgid "Failed to umount device:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:387
+#: panel-plugin/devices.c:387
 msgid "The device should be removable safely now:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:397
+#: panel-plugin/devices.c:397
 msgid "An error occurred. The device should not be removed:"
 msgstr ""
 
-#: ../panel-plugin/devices.c:483
+#: panel-plugin/devices.c:483
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:204
+#: panel-plugin/mount-plugin.c:204
 msgid " -> "
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:262
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:285
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">nemontēts</span>"
 
-#: ../panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:360
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:579
+#: panel-plugin/mount-plugin.c:579
 msgid "devices"
 msgstr "ierīces"
 
-#: ../panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:769
 msgid "Mount Plugin"
 msgstr "Montēšanas spraudnis"
 
-#: ../panel-plugin/mount-plugin.c:772
+#: panel-plugin/mount-plugin.c:772
 msgid "_Close"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:775
+#: panel-plugin/mount-plugin.c:775
 msgid "Properties"
 msgstr "Rekvizīti"
 
-#: ../panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:806
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Šis ir lietderīgs un ieteicams, ja jūs norādāt \"sync\", kā daļu no \"unmount\" komandas virkni."
 
-#: ../panel-plugin/mount-plugin.c:810
+#: panel-plugin/mount-plugin.c:810
 msgid "Show _message after unmount"
 msgstr "Rādīt _ziņu pēc atmontēšanas"
 
-#: ../panel-plugin/mount-plugin.c:822
+#: panel-plugin/mount-plugin.c:822
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Jūs varat norādīt ikonu, kuru attēlot panelī."
 
-#: ../panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:828
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: ../panel-plugin/mount-plugin.c:832
+#: panel-plugin/mount-plugin.c:832
 msgid "Select an image"
 msgstr "Norādiet attēlu"
 
-#: ../panel-plugin/mount-plugin.c:839
+#: panel-plugin/mount-plugin.c:839
 msgid "_General"
 msgstr "_Vispārēji"
 
-#: ../panel-plugin/mount-plugin.c:854
+#: panel-plugin/mount-plugin.c:854
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -185,82 +185,82 @@ msgid ""
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:870
+#: panel-plugin/mount-plugin.c:870
 msgid "_Execute after mounting:"
 msgstr "_Izpildīt pēc montēšanas:"
 
-#: ../panel-plugin/mount-plugin.c:893
+#: panel-plugin/mount-plugin.c:893
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "UZMANĪBU: Šīs opcijas ir paredzēta tikai ekspertiem. Ja nezināt, kam tās ir domātas, rokas nost!"
 
-#: ../panel-plugin/mount-plugin.c:897
+#: panel-plugin/mount-plugin.c:897
 msgid "_Custom commands"
 msgstr "_Pielāgotās komandas"
 
-#: ../panel-plugin/mount-plugin.c:916
+#: panel-plugin/mount-plugin.c:916
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Lielākā daļa lietotāju vēlēsies pievienot \"sudo\" abām komandām vai pievienot \"sync %d &&\"  komandai \"unmount %d\".\n'%d' tiek lietots, lai norādītu ierīci, '%m' montēšanas punktu."
 
-#: ../panel-plugin/mount-plugin.c:924
+#: panel-plugin/mount-plugin.c:924
 msgid "_Mount command:"
 msgstr "_Montēšanas komanda:"
 
-#: ../panel-plugin/mount-plugin.c:929
+#: panel-plugin/mount-plugin.c:929
 msgid "_Unmount command:"
 msgstr "_Atmontēšanas komanda:"
 
-#: ../panel-plugin/mount-plugin.c:954
+#: panel-plugin/mount-plugin.c:954
 msgid "_Commands"
 msgstr "_Komandas"
 
-#: ../panel-plugin/mount-plugin.c:969
+#: panel-plugin/mount-plugin.c:969
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Aktivizējot šo opciju, tiks attēloti arī tīklu failu sistēmas, piemēram, NFS, SMBFS, SHFS un SSHFS."
 
-#: ../panel-plugin/mount-plugin.c:973
+#: panel-plugin/mount-plugin.c:973
 msgid "Display _network file systems"
 msgstr "Attēlot _tīkla failu sistēmas"
 
-#: ../panel-plugin/mount-plugin.c:986
+#: panel-plugin/mount-plugin.c:986
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Aktivizējot šo opciju CD tiks izgrūsts pēc atmontēšanas un ievietots pēc montēšanas."
 
-#: ../panel-plugin/mount-plugin.c:990
+#: panel-plugin/mount-plugin.c:990
 msgid "_Eject CD-drives"
 msgstr "_Izgrūst CD"
 
-#: ../panel-plugin/mount-plugin.c:1003
+#: panel-plugin/mount-plugin.c:1003
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktivizējiet šo opciju, tikai lai montēšanas punkti tiku attēloti"
 
-#: ../panel-plugin/mount-plugin.c:1006
+#: panel-plugin/mount-plugin.c:1006
 msgid "Display _mount points only"
 msgstr "Attēlot tikai _montēšanas punktus"
 
-#: ../panel-plugin/mount-plugin.c:1021
+#: panel-plugin/mount-plugin.c:1021
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1027
+#: panel-plugin/mount-plugin.c:1027
 msgid "Trim device names: "
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1036
+#: panel-plugin/mount-plugin.c:1036
 msgid " characters"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1053
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -269,14 +269,22 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr ""
 
-#: ../panel-plugin/mount-plugin.c:1064
+#: panel-plugin/mount-plugin.c:1064
 msgid "E_xclude specified file systems"
 msgstr "I_zkļaut norādītās failu sistēmas"
 
-#: ../panel-plugin/mount-plugin.c:1079
+#: panel-plugin/mount-plugin.c:1079
 msgid "_File systems"
 msgstr "_Failu sistēmas"
 
-#: ../panel-plugin/mount-plugin.c:1102
+#: panel-plugin/mount-plugin.c:1102
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr ""
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:5
+msgid "Mount devices"
+msgstr "Montēt ierīces"
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:6
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr "Rāda visus montējamās ierīces un (at)montē tās pēc pieprasījuma."
