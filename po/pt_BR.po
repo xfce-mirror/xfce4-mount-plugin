@@ -10,6 +10,7 @@
 # Automatically generated, 2007
 # Michael Martins, 2020
 # Michael Martins, 2020
+# Michael Martins, 2025
 # Og Maciel <ogmaciel@gnome.org>, 2009
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2014
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2014
@@ -20,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:07+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Victor Gonçalves <hotcyv@gmail.com>, 2020\n"
+"Last-Translator: Michael Martins, 2025\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/xfce/xfce-panel-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,7 +98,7 @@ msgstr "não montado\n"
 #: panel-plugin/devices.c:374 panel-plugin/devices.c:385
 #: panel-plugin/devices.c:395 panel-plugin/devices.c:481
 msgid "Xfce 4 Mount Plugin"
-msgstr "Plug-in de montagem do Xfce4"
+msgstr "Plugin de montagem do Xfce4"
 
 #: panel-plugin/devices.c:290
 msgid "Failed to mount device:"
@@ -142,7 +143,7 @@ msgstr "<span foreground=\"#FF0000\">não montado</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr "<b><i><span font_size=\"large\">Plug-in de montagem do Xfce – Dispositivos e pontos de montagem</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Plugin de montagem do Xfce – Dispositivos e pontos de montagem</span></i></b>"
 
 #: panel-plugin/mount-plugin.c:579
 msgid "devices"
@@ -150,7 +151,7 @@ msgstr "dispositivos"
 
 #: panel-plugin/mount-plugin.c:769
 msgid "Mount Plugin"
-msgstr "Plug-in de montagem"
+msgstr "Plugin de montagem"
 
 #: panel-plugin/mount-plugin.c:772
 msgid "_Close"
