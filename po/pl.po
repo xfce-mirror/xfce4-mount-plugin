@@ -137,7 +137,7 @@ msgstr "<span foreground=\"#FF0000\">Nie zamontowano</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr "<b><i><span font_size=\"large\">Wtyczka montowania Xfce 4 – Urządzenia i punkty montowania</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">Wtyczka montowania Xfce – Urządzenia i punkty montowania</span></i></b>"
 
 #: panel-plugin/mount-plugin.c:579
 msgid "devices"
