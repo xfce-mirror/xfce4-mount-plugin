@@ -20,22 +20,22 @@ msgstr ""
 #: panel-plugin/devices.c:67
 #, c-format
 msgid "%.1f B"
-msgstr "%.1f ب"
+msgstr "%.1f B"
 
 #: panel-plugin/devices.c:68
 #, c-format
 msgid "%.1f KB"
-msgstr "%.1f ك ب"
+msgstr "%.1f KB"
 
 #: panel-plugin/devices.c:69
 #, c-format
 msgid "%.1f MB"
-msgstr "%.1f م ب"
+msgstr "%.1f MB"
 
 #: panel-plugin/devices.c:70
 #, c-format
 msgid "%.1f GB"
-msgstr "%.1f گ ب"
+msgstr "%.1f GB"
 
 #: panel-plugin/devices.c:79
 #, c-format
@@ -50,7 +50,7 @@ msgstr "ئىشلىتىلگىنى:                %g\n"
 #: panel-plugin/devices.c:81
 #, c-format
 msgid "available size:       %g\n"
-msgstr ""
+msgstr "ئىشلەتكىلى بولىدىغىنى:       %g\n"
 
 #: panel-plugin/devices.c:82
 #, c-format
@@ -86,42 +86,42 @@ msgstr "ئېگەرلەنمىگەن\n"
 #: panel-plugin/devices.c:374 panel-plugin/devices.c:385
 #: panel-plugin/devices.c:395 panel-plugin/devices.c:481
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Xfce 4 ئېگەرلەش قىستۇرمىسى"
 
 #: panel-plugin/devices.c:290
 msgid "Failed to mount device:"
-msgstr ""
+msgstr "ئۈسكۈنىنى ئېگەرلىيەلمىدى:"
 
 #: panel-plugin/devices.c:313
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "on-mount بۇيرۇقىنى ئىجرا قىلىۋاتقاندا خاتالىق كۆرۈلدى:"
 
 #: panel-plugin/devices.c:376
 msgid "Failed to umount device:"
-msgstr ""
+msgstr "ئۈسكۈنىنى ئېگەرسىزلىيەلمىدى:"
 
 #: panel-plugin/devices.c:387
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "ھازىر ئۈسكۈنىنى بىخەتەر چىقىرىشقا بولىدۇ:"
 
 #: panel-plugin/devices.c:397
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "خاتالىق كۆرۈلدى. ئۈسكۈنە چىقىرىۋېتىلمەسلىكى كېرەك:"
 
 #: panel-plugin/devices.c:483
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "سىزنىڭ /etc/fstab نى ئوقۇغىلى بولمىدى. بۇ قىستۇرمىنىڭ ئىشلىتىلىشچانلىقىغا ئېغىر تەسىر كۆرسىتىدۇ."
 
 #: panel-plugin/mount-plugin.c:204
 msgid " -> "
-msgstr ""
+msgstr " -› "
 
 #: panel-plugin/mount-plugin.c:262
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s بوش"
 
 #: panel-plugin/mount-plugin.c:285
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
@@ -131,11 +131,11 @@ msgstr "<span foreground=\"#FF0000\">ئېگەرلەنمىگەن</span>"
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Xfce 4 ئېگەرلەش قىستۇرمىسى – ئۈسكۈنە ۋە ئېگەرلەش نۇقتىسى</span></i></b>"
 
 #: panel-plugin/mount-plugin.c:579
 msgid "devices"
-msgstr "ئۈسكۈنىلەر"
+msgstr "ئۈسكۈنە"
 
 #: panel-plugin/mount-plugin.c:769
 msgid "Mount Plugin"
@@ -181,7 +181,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr "بۇ بۇيرۇق ئۈسكۈنە ئېگەرلەش نۇقتىسىنى ئۆزگەرگۈچى سۈپىتىدە ئىشلىتىپ ئۈسكۈنىنى ئېگەرلەپ ئاندىن ئىجرا قىلىدۇ.\nئەگەر نېمە قىستۇرۇشنى بىلەلمىسىڭىز، «%s %%m» نى سىناڭ.\n«%%d» بىلەن ئۈسكۈنە، «%%m» بىلەن ئېگەرلەش نۇقتىسىنى بەلگىلىگىلى بولىدۇ."
 
 #: panel-plugin/mount-plugin.c:870
 msgid "_Execute after mounting:"
@@ -265,7 +265,7 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "تىزىملىكتىن تۆۋەندىكى ھۆججەت سىستېمىسىنى چىقىرىۋېتىدۇ.\nبۇ تىزىم ئاددىي بوشلۇق بىلەن ئايرىلىدۇ.\nتوغرا ئۈسكۈنە ياكى ئېگەرلەش نۇقتىسىنى بەلگىلىيەلەيسىز.\nيۇلتۇز بەلگىسى (*) نى يولنىڭ ئاخىرىدا ئورۇن بەلگىسى سۈپىتىدە ئىشلەتكىلى بولىدۇ\nمەسىلەن، «‪/mnt/*‬» نىڭ بىلدۈرىدىغىنى «‪/mnt‬» نىڭ ئاستىدىكى بارلىق ئېگەرلەش نۇقتىسىنى ئۆز ئىچىگە ئالمايدۇ\n"
 
 #: panel-plugin/mount-plugin.c:1064
 msgid "E_xclude specified file systems"
@@ -273,15 +273,15 @@ msgstr "كۆرسىتىلگەن ھۆججەت سىستېمىلىرىنى تىزى�
 
 #: panel-plugin/mount-plugin.c:1079
 msgid "_File systems"
-msgstr "ھۆججەت سىستېمىلىرىنى(_F)"
+msgstr "ھۆججەت سىستېمىسى(_F)"
 
 #: panel-plugin/mount-plugin.c:1102
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr "رايونلار/ئۈسكۈنىلەرنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
+msgstr "رايون/ئۈسكۈنىنى كۆرسىتىپ ئۇلارنى ئېگەرلەشكە/ئېگەرسىزلەشكە ئىجازەت بېرىش"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
-msgstr "ئېگەرلەيدىغان ئۈسكۈنىلەر"
+msgstr "ئۈسكۈنە ئېگەرلە"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:6
 msgid "Shows all mountable devices and (un)mounts them on request."
