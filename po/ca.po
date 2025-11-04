@@ -164,7 +164,7 @@ msgstr "_Mostra els missatges després de desmuntar"
 
 #: panel-plugin/mount-plugin.c:822
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Podeu especificar la icona a mostrar al tauler."
+msgstr "Podeu especificar la icona a mostrar al panell."
 
 #: panel-plugin/mount-plugin.c:828
 msgid "Icon:"
