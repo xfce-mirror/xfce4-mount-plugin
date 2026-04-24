@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-mount-plugin package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:07+0200\n"
+"PO-Revision-Date: 2013-07-03 19:06+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Lao (http://app.transifex.com/xfce/xfce-panel-plugins/language/lo/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: panel-plugin/devices.c:67
+#, c-format
+msgid "%.1f B"
+msgstr "%.1f B"
+
+#: panel-plugin/devices.c:68
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: panel-plugin/devices.c:69
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: panel-plugin/devices.c:70
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: panel-plugin/devices.c:79
+#, c-format
+msgid "size:                %g\n"
+msgstr "ຂະໜາດ:                %g\n"
+
+#: panel-plugin/devices.c:80
+#, c-format
+msgid "used size:           %g\n"
+msgstr "ຂະໜາດທີ່ໃຊ້ແລ້ວ:           %g\n"
+
+#: panel-plugin/devices.c:81
+#, c-format
+msgid "available size:       %g\n"
+msgstr "ຂະໜາດທີ່ວ່າງ:       %g\n"
+
+#: panel-plugin/devices.c:82
+#, c-format
+msgid "percentage used:     %d\n"
+msgstr "ເປີເຊັນທີ່ໃຊ້ແລ້ວ:     %d\n"
+
+#: panel-plugin/devices.c:83
+#, c-format
+msgid "file system type:    %s\n"
+msgstr "ຊະນິດລະບົບໄຟລ໌:    %s\n"
+
+#: panel-plugin/devices.c:84
+#, c-format
+msgid "actual mount point:  %s\n"
+msgstr "ຈຸດຕິດຕັ້ງຕົວຈິງ:  %s\n"
+
+#: panel-plugin/devices.c:168
+#, c-format
+msgid "disk: %s\n"
+msgstr "ດິສກ໌: %s\n"
+
+#: panel-plugin/devices.c:169
+#, c-format
+msgid "mount point: %s\n"
+msgstr "ຈຸດຕິດຕັ້ງ: %s\n"
+
+#: panel-plugin/devices.c:173
+#, c-format
+msgid "not mounted\n"
+msgstr "ບໍ່ໄດ້ຕິດຕັ້ງ\n"
+
+#: panel-plugin/devices.c:288 panel-plugin/devices.c:311
+#: panel-plugin/devices.c:374 panel-plugin/devices.c:385
+#: panel-plugin/devices.c:395 panel-plugin/devices.c:481
+msgid "Xfce 4 Mount Plugin"
+msgstr "ປລັກອິນການຕິດຕັ້ງ Xfce 4"
+
+#: panel-plugin/devices.c:290
+msgid "Failed to mount device:"
+msgstr "ຕິດຕັ້ງອຸປະກອນບໍ່ສຳເລັດ:"
+
+#: panel-plugin/devices.c:313
+msgid "Error executing on-mount command:"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການໃຊ້ຄຳສັ່ງຕອນຕິດຕັ້ງ:"
+
+#: panel-plugin/devices.c:376
+msgid "Failed to umount device:"
+msgstr "ຖອນການຕິດຕັ້ງອຸປະກອນບໍ່ສຳເລັດ:"
+
+#: panel-plugin/devices.c:387
+msgid "The device should be removable safely now:"
+msgstr "ຕອນນີ້ສາມາດຖອດອຸປະກອນອອກໄດ້ຢ່າງປອດໄພແລ້ວ:"
+
+#: panel-plugin/devices.c:397
+msgid "An error occurred. The device should not be removed:"
+msgstr "ເກີດຂໍ້ຜິດພາດ. ບໍ່ຄວນຖອດອຸປະກອນອອກ:"
+
+#: panel-plugin/devices.c:483
+msgid ""
+"Your /etc/fstab could not be read. This will severely degrade the plugin's "
+"abilities."
+msgstr "ບໍ່ສາມາດອ່ານໄຟລ໌ /etc/fstab ຂອງທ່ານໄດ້. ສິ່ງນີ້ຈະເຮັດໃຫ້ປະສິດທິພາບຂອງປລັກອິນຫຼຸດລົງຢ່າງຫຼວງຫຼາຍ."
+
+#: panel-plugin/mount-plugin.c:204
+msgid " -> "
+msgstr " -> "
+
+#: panel-plugin/mount-plugin.c:262
+#, c-format
+msgid "[%s/%s] %s free"
+msgstr "[%s/%s] ວ່າງ %s"
+
+#: panel-plugin/mount-plugin.c:285
+msgid "<span foreground=\"#FF0000\">not mounted</span>"
+msgstr "<span foreground=\"#FF0000\">ບໍ່ໄດ້ຕິດຕັ້ງ</span>"
+
+#: panel-plugin/mount-plugin.c:360
+msgid ""
+"<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
+"Points</span></i></b>"
+msgstr "<b><i><span font_size=\"large\">ປລັກອິນການຕິດຕັ້ງ Xfce 4 – ອຸປະກອນ ແລະ ຈຸດຕິດຕັ້ງ</span></i></b>"
+
+#: panel-plugin/mount-plugin.c:579
+msgid "devices"
+msgstr "ອຸປະກອນ"
+
+#: panel-plugin/mount-plugin.c:769
+msgid "Mount Plugin"
+msgstr "ປລັກອິນການຕິດຕັ້ງ"
+
+#: panel-plugin/mount-plugin.c:772
+msgid "_Close"
+msgstr "_ປິດ"
+
+#: panel-plugin/mount-plugin.c:775
+msgid "Properties"
+msgstr "ຄຸນສົມບັດ"
+
+#: panel-plugin/mount-plugin.c:806
+msgid ""
+"This is only useful and recommended if you specify \"sync\" as part of the "
+"\"unmount\" command string."
+msgstr "ສິ່ງນີ້ຈະມີປະໂຫຍດ ແລະ ແນະນຳໃຫ້ໃຊ້ ກໍຕໍ່ເມື່ອທ່ານລະບຸ \"sync\" ເປັນສ່ວນໜຶ່ງຂອງຄຳສັ່ງ \"unmount\"."
+
+#: panel-plugin/mount-plugin.c:810
+msgid "Show _message after unmount"
+msgstr "ສະແດງ _ຂໍ້ຄວາມ ຫຼັງຈາກຖອນການຕິດຕັ້ງ"
+
+#: panel-plugin/mount-plugin.c:822
+msgid "You can specify a distinct icon to be displayed in the panel."
+msgstr "ທ່ານສາມາດກຳນົດໄອຄອນຕ່າງຫາກເພື່ອໃຫ້ສະແດງຢູ່ໃນແຜງພາເນລ."
+
+#: panel-plugin/mount-plugin.c:828
+msgid "Icon:"
+msgstr "ໄອຄອນ:"
+
+#: panel-plugin/mount-plugin.c:832
+msgid "Select an image"
+msgstr "ເລືອກຮູບພາບ"
+
+#: panel-plugin/mount-plugin.c:839
+msgid "_General"
+msgstr "_ທົ່ວໄປ"
+
+#: panel-plugin/mount-plugin.c:854
+#, c-format
+msgid ""
+"This command will be executed after mounting the device with the mount point of the device as argument.\n"
+"If you are unsure what to insert, try \"%s %%m\".\n"
+"'%%d' can be used to specify the device, '%%m' for the mountpoint."
+msgstr "ຄຳສັ່ງນີ້ຈະຖືກປະຕິບັດຫຼັງຈາກຕິດຕັ້ງອຸປະກອນ ໂດຍໃຊ້ຈຸດຕິດຕັ້ງຂອງອຸປະກອນເປັນຕົວປ່ຽນ.\nຖ້າທ່ານບໍ່ແນ່ໃຈວ່າຈະໃສ່ຫຍັງ, ໃຫ້ລອງ \"%s %%m\".\n'%%d' ໃຊ້ເພື່ອລະບຸອຸປະກອນ, '%%m' ສຳລັບຈຸດຕິດຕັ້ງ."
+
+#: panel-plugin/mount-plugin.c:870
+msgid "_Execute after mounting:"
+msgstr "_ດຳເນີນການຫຼັງຈາກຕິດຕັ້ງ:"
+
+#: panel-plugin/mount-plugin.c:893
+msgid ""
+"WARNING: These options are for experts only! If you do not know what they "
+"may be good for, keep your hands off!"
+msgstr "ຄຳເຕືອນ: ຕົວເລືອກເຫຼົ່ານີ້ແມ່ນສຳລັບຜູ້ຊ່ຽວຊານເທົ່ານັ້ນ! ຖ້າທ່ານບໍ່ຮູ້ວ່າມັນໃຊ້ເຮັດຫຍັງ, ຫ້າມແຕະຕ້ອງ!"
+
+#: panel-plugin/mount-plugin.c:897
+msgid "_Custom commands"
+msgstr "_ຄຳສັ່ງກຳນົດເອງ"
+
+#: panel-plugin/mount-plugin.c:916
+#, c-format
+msgid ""
+"Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
+"'%d' is used to specify the device, '%m' for the mountpoint."
+msgstr "ຜູ້ໃຊ້ສ່ວນໃຫຍ່ອາດຈະຕ້ອງການພຽງແຕ່ຕື່ມ \"sudo\" ໄວ້ໜ້າທັງສອງຄຳສັ່ງ ຫຼື ຕື່ມ \"sync %d &&\" ໄວ້ໜ້າຄຳສັ່ງ \"unmount %d\".\n'%d' ໃຊ້ເພື່ອລະບຸອຸປະກອນ, '%m' ສຳລັບຈຸດຕິດຕັ້ງ."
+
+#: panel-plugin/mount-plugin.c:924
+msgid "_Mount command:"
+msgstr "_ຄຳສັ່ງຕິດຕັ້ງ:"
+
+#: panel-plugin/mount-plugin.c:929
+msgid "_Unmount command:"
+msgstr "_ຄຳສັ່ງຖອນການຕິດຕັ້ງ:"
+
+#: panel-plugin/mount-plugin.c:954
+msgid "_Commands"
+msgstr "_ຄຳສັ່ງ"
+
+#: panel-plugin/mount-plugin.c:969
+msgid ""
+"Activate this option to also display network file systems like NFS, SMBFS, "
+"SHFS and SSHFS."
+msgstr "ເປີດໃຊ້ຕົວເລືອກນີ້ເພື່ອສະແດງລະບົບໄຟລ໌ເຄືອຂ່າຍເຊັ່ນ NFS, SMBFS, SHFS ແລະ SSHFS."
+
+#: panel-plugin/mount-plugin.c:973
+msgid "Display _network file systems"
+msgstr "ສະແດງລະບົບໄຟລ໌ _ເຄືອຂ່າຍ"
+
+#: panel-plugin/mount-plugin.c:986
+msgid ""
+"Activate this option to also eject a CD-drive after unmounting and to insert"
+" before mounting."
+msgstr "ເປີດໃຊ້ຕົວເລືອກນີ້ເພື່ອດີດແຜ່ນ CD ອອກຫຼັງຈາກຖອນການຕິດຕັ້ງ ແລະ ໃຫ້ໃສ່ເຂົ້າກ່ອນການຕິດຕັ້ງ."
+
+#: panel-plugin/mount-plugin.c:990
+msgid "_Eject CD-drives"
+msgstr "_ດີດແຜ່ນ CD ອອກ"
+
+#: panel-plugin/mount-plugin.c:1003
+msgid "Activate this option to only have the mount points be displayed."
+msgstr "ເປີດໃຊ້ຕົວເລືອກນີ້ເພື່ອໃຫ້ສະແດງສະເພາະຈຸດຕິດຕັ້ງເທົ່ານັ້ນ."
+
+#: panel-plugin/mount-plugin.c:1006
+msgid "Display _mount points only"
+msgstr "ສະແດງສະເພາະ _ຈຸດຕິດຕັ້ງ"
+
+#: panel-plugin/mount-plugin.c:1021
+msgid ""
+"Trim the device names to the number of characters specified in the spin "
+"button."
+msgstr "ຕັດຊື່ອຸປະກອນໃຫ້ເຫຼືອຕາມຈຳນວນຕົວອັກສອນທີ່ກຳນົດໄວ້."
+
+#: panel-plugin/mount-plugin.c:1027
+msgid "Trim device names: "
+msgstr "ຕັດຊື່ອຸປະກອນ: "
+
+#: panel-plugin/mount-plugin.c:1036
+msgid " characters"
+msgstr " ຕົວອັກສອນ"
+
+#: panel-plugin/mount-plugin.c:1053
+msgid ""
+"Exclude the following file systems from the menu.\n"
+"The list is separated by simple spaces.\n"
+"It is up to you to specify correct devices or mount points.\n"
+"An asterisk (*) can be used as a placeholder at the end of\n"
+"a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
+msgstr "ຍົກເວັ້ນລະບົບໄຟລ໌ຕໍ່ໄປນີ້ຈາກເມນູ.\nລາຍຊື່ແມ່ນແຍກກັນດ້ວຍການຍະຫວ່າງ.\nທ່ານຕ້ອງລະບຸອຸປະກອນ ຫຼື ຈຸດຕິດຕັ້ງໃຫ້ຖືກຕ້ອງເອງ.\nສາມາດໃຊ້ເຄື່ອງໝາຍດອກຈັນ (*) ຢູ່ທ້າຍເສັ້ນທາງໄດ້,\nຕົວຢ່າງ, \"/mnt/*\" ເພື່ອຍົກເວັ້ນທຸກຈຸດຕິດຕັ້ງທີ່ຢູ່ໃຕ້ \"/mnt\".\n"
+
+#: panel-plugin/mount-plugin.c:1064
+msgid "E_xclude specified file systems"
+msgstr "_ຍົກເວັ້ນລະບົບໄຟລ໌ທີ່ລະບຸ"
+
+#: panel-plugin/mount-plugin.c:1079
+msgid "_File systems"
+msgstr "ລະບົບ _ໄຟລ໌"
+
+#: panel-plugin/mount-plugin.c:1102
+msgid "Show partitions/devices and allow to mount/unmount them"
+msgstr "ສະແດງພາທິຊັນ/ອຸປະກອນ ແລະ ອະນຸຍາດໃຫ້ຕິດຕັ້ງ/ຖອນການຕິດຕັ້ງໄດ້"
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:5
+msgid "Mount devices"
+msgstr "ຕິດຕັ້ງອຸປະກອນ"
+
+#: panel-plugin/xfce4-mount-plugin.desktop.in:6
+msgid "Shows all mountable devices and (un)mounts them on request."
+msgstr "ສະແດງອຸປະກອນທັງໝົດທີ່ຕິດຕັ້ງໄດ້ ແລະ ທຳການຕິດຕັ້ງ/ຖອນການຕິດຕັ້ງຕາມການຮ້ອງຂໍ."
