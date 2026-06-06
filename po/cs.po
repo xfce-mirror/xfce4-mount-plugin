@@ -5,7 +5,7 @@
 # Translators:
 # Alois Nešpor <info@aloisnespor.info>, 2014,2016
 # Alois Nešpor <info@aloisnespor.info>, 2014
-# Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024-2025
+# Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024-2026
 # Pavel Borecki <pavel.borecki@gmail.com>, 2018
 # Petr Šimáček <petr.simacek@gmail.com>, 2016
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2025-07-18 11:07+0200\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024-2025\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2016,2020,2024-2026\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,7 +70,7 @@ msgstr "typ systému souborů: %s\n"
 #: panel-plugin/devices.c:84
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "aktuální bod připojení: %s\n"
+msgstr "aktuální přípojný bod: %s\n"
 
 #: panel-plugin/devices.c:168
 #, c-format
@@ -80,7 +80,7 @@ msgstr "disk: %s\n"
 #: panel-plugin/devices.c:169
 #, c-format
 msgid "mount point: %s\n"
-msgstr "bod připojení: %s\n"
+msgstr "přípojný bod: %s\n"
 
 #: panel-plugin/devices.c:173
 #, c-format
@@ -117,7 +117,7 @@ msgstr "Došlo k chybě. Zařízení by nemělo být odebráno:"
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr "Váš /etc/fstab nemohl být načten.  To může značně omezovat schopnosti pluginů."
+msgstr "Váš /etc/fstab nemohl být načten.  To může značně omezovat schopnosti zásuvných modulů."
 
 #: panel-plugin/mount-plugin.c:204
 msgid " -> "
@@ -186,7 +186,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr "Tento příkaz bude spuštěn po připojení zařízení s umístěním přípojného bodu jako parametrem.\nNevíte-li, jaký údaj vložit, zkuste příkaz „%s %%m“.\n'%%d' lze použít pro upřesnění zařízení, '%%m' pro bod připojení."
+msgstr "Tento příkaz bude spuštěn po připojení zařízení s umístěním přípojného bodu jako parametrem.\nNevíte-li, jaký údaj vložit, zkuste příkaz „%s %%m“.\n'%%d' lze použít pro upřesnění zařízení, '%%m' pro přípojný bod."
 
 #: panel-plugin/mount-plugin.c:870
 msgid "_Execute after mounting:"
@@ -207,7 +207,7 @@ msgstr "_Vlastní příkazy"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec „sync %d &&“ před příkaz „unmount %d“.\n'%d' se použije pro upřesnění názvu jednotky, '%m' pro bod připojení."
+msgstr "Většina uživatelů pouze doplní před oba názvy řetězec „sudo“ nebo řetězec „sync %d &&“ před příkaz „unmount %d“.\n'%d' se použije pro upřesnění názvu jednotky, '%m' pro přípojný bod."
 
 #: panel-plugin/mount-plugin.c:924
 msgid "_Mount command:"
@@ -215,7 +215,7 @@ msgstr "_Příkaz pro připojení:"
 
 #: panel-plugin/mount-plugin.c:929
 msgid "_Unmount command:"
-msgstr "Příkaz pro _odpojení"
+msgstr "Příkaz pro _odpojení:"
 
 #: panel-plugin/mount-plugin.c:954
 msgid "_Commands"
@@ -243,11 +243,11 @@ msgstr "_Vysunout jednotky CD"
 
 #: panel-plugin/mount-plugin.c:1003
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Tuto volbu aktivujte, chcete-li zobrazovat pouze body připojení."
+msgstr "Tuto volbu aktivujte, chcete-li zobrazovat pouze přípojné body."
 
 #: panel-plugin/mount-plugin.c:1006
 msgid "Display _mount points only"
-msgstr "Pouze zobrazovat _body připojení"
+msgstr "Pouze zobrazovat přípojné _body"
 
 #: panel-plugin/mount-plugin.c:1021
 msgid ""
