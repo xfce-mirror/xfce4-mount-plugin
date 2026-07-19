@@ -427,11 +427,11 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     rc = xfce_rc_simple_open (file, TRUE);
     g_free (file);
 
-    if (mt->icon != NULL) g_free(mt->icon);
-    if (mt->on_mount_cmd != NULL) g_free(mt->on_mount_cmd);
-    if (mt->mount_command != NULL) g_free(mt->mount_command);
-    if (mt->umount_command != NULL) g_free(mt->umount_command);
-    if (mt->excluded_filesystems != NULL) g_free(mt->excluded_filesystems);
+    g_free(mt->icon);
+    g_free(mt->on_mount_cmd);
+    g_free(mt->mount_command);
+    g_free(mt->umount_command);
+    g_free(mt->excluded_filesystems);
 
     icon = g_strdup_printf ("%s/icons/hicolor/scalable/apps/xfce-mount.svg", DATADIR);
     mt->icon = g_strdup(xfce_rc_read_entry(rc, "icon", icon));

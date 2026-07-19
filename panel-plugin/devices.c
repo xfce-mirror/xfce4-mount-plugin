@@ -319,8 +319,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         }
 out:
         g_free(cmd);
-        if (tmp)
-            g_free(tmp);
+        g_free(tmp);
     }
 }
 
@@ -363,8 +362,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
 
 out:
         g_free(cmd);
-        if (tmp)
-            g_free(tmp);
+        g_free(tmp);
         /* show error message if smth failed */
         if (!val || exit_status != 0)
             //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
