@@ -268,7 +268,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
 #endif
             val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
             DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-            if (val == FALSE || exit_status != 0)
+            if (!val || exit_status != 0)
                goto out;
             g_free(cmd);
             cmd = NULL;
@@ -278,7 +278,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         /* cmd contains mount_command device mount_point */
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-        if (val == FALSE || exit_status != 0)
+        if (!val || exit_status != 0)
         {
             /* show error message if smth failed */
             //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
@@ -305,7 +305,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             val = g_spawn_command_line_async (cmd, &error);
             DBG("cmd: '%s', returned %d", cmd, val);
             /* show error message if smth failed */
-            if (val == FALSE)
+            if (!val)
                 //xfce_dialog_show_error (NULL, error, _("Error executing on-mount command \"%s\"."), on_mount_cmd);
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
@@ -350,7 +350,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
         /* cmd contains umount_command device mount_point */
         val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-        if (val == FALSE || exit_status != 0)
+        if (!val || exit_status != 0)
            goto out;
 
         if (eject) {
@@ -366,7 +366,7 @@ out:
         if (tmp)
             g_free(tmp);
         /* show error message if smth failed */
-        if (val == FALSE || exit_status != 0)
+        if (!val || exit_status != 0)
             //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
                 //_("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
             //xfce_dialog_show_error (NULL, error, _("Failed to umount device \"%s\"."), pdisk->device);
@@ -379,7 +379,7 @@ out:
                                GTK_RESPONSE_OK,
                                NULL);
 
-        if (show_message_dialog && !eject && val == TRUE && exit_status == 0)
+        if (show_message_dialog && !eject && val && exit_status == 0)
             //xfce_dialog_show_info (NULL, NULL, _("The device \"%s\" should be removable safely now."), pdisk->device);
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
