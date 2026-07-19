@@ -36,7 +36,7 @@ seperate_list (GPtrArray *array, char *list)
     if (list==NULL)
         return retval;
 
-    p = strdup(list);
+    p = g_strdup(list);
     r = p;
 
     if (array==NULL)
@@ -73,7 +73,7 @@ int
 deviceprintf (char **dest, char *format, char *device)
 {
     int retval=0;
-    char *p = strdup(format), *q, *r;
+    char *p = g_strdup(format), *q, *r;
 
     r = p;
 
@@ -113,11 +113,11 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     if (mountpoint == NULL || format == NULL)
         return retval;
 
-    p = strdup(mountpoint);
+    p = g_strdup(mountpoint);
     r = p;
 
     while ((q=strchr(p, ' ')) != NULL) {
-        t = strdup(p);
+        t = g_strdup(p);
         s = strchr(t, ' ');
         if (s != NULL)
             s[0] = '\0';
@@ -128,7 +128,7 @@ mountpointprintf (char **dest, char *format, char *mountpoint)
     escaped_mp = g_strconcat(escaped_mp, p, NULL);
     g_free(r);
 
-    p = strdup(format);
+    p = g_strdup(format);
     r = p;
     for (q = strstr(p, "\%m"); q!=NULL; q = strstr(p, "\%m")) {
         q[0] = '\0';
