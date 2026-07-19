@@ -68,19 +68,9 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
-#if LIBXFCE4PANEL_CHECK_VERSION (4, 17, 4)
     xfce_panel_set_image_from_source (GTK_IMAGE (mt->image), mt->icon, NULL,
                                       xfce_panel_plugin_get_icon_size (plugin),
                                       gtk_widget_get_scale_factor (GTK_WIDGET (plugin)));
-#else
-    gint scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (plugin));
-    gint icon_size = xfce_panel_plugin_get_icon_size (plugin);
-    GdkPixbuf *pixbuf = xfce_panel_pixbuf_from_source (mt->icon, NULL, icon_size * scale_factor);
-    cairo_surface_t *surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
-    gtk_image_set_from_surface (GTK_IMAGE (mt->image), surface);
-    cairo_surface_destroy (surface);
-    g_object_unref (pixbuf);
-#endif
 }
 
 /**
@@ -412,16 +402,8 @@ on_button_press (GtkWidget *widget, GdkEventButton *eventButton, t_mounter *moun
         if (mounter != NULL && eventButton->button == 1) /* left click only */
         {
             mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-#if LIBXFCE4PANEL_CHECK_VERSION (4, 17 ,2)
             xfce_panel_plugin_popup_menu (mounter->plugin, GTK_MENU (mounter->menu),
                                           mounter->button, (GdkEvent *) eventButton);
-#else
-G_GNUC_BEGIN_IGNORE_DEPRECATIONS
-            gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
-                            xfce_panel_plugin_position_menu, mounter->plugin,
-                            0, eventButton->time);
-G_GNUC_END_IGNORE_DEPRECATIONS
-#endif
             result = TRUE;
         }
     }
