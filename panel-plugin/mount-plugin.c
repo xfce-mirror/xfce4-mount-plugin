@@ -560,7 +560,7 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     gtk_widget_set_tooltip_text( GTK_WIDGET(mounter->button), _("devices"));
 
-    g_signal_connect (G_OBJECT(mounter->button), "button_press_event",
+    g_signal_connect (G_OBJECT(mounter->button), "button-press-event",
                       G_CALLBACK(on_button_press), mounter);
     gtk_widget_show(mounter->button);
 
