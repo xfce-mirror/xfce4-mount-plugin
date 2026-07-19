@@ -153,8 +153,7 @@ mount_info_free(t_mount_info * * mount_info)
     {
         g_free ((*mount_info)->mounted_on);
         g_free ((*mount_info)->type);
-        g_free ((*mount_info));
-        *mount_info = NULL ;
+        g_clear_pointer(mount_info, g_free);
     }
     return;
 }
@@ -229,8 +228,7 @@ disk_free(t_disk **pdisk)
         g_free ((*pdisk)->device_short);
         g_free ((*pdisk)->mount_point);
         mount_info_free (&((*pdisk)->mount_info));
-        g_free(*pdisk);
-        *pdisk = NULL;
+        g_clear_pointer(pdisk, g_free);
     }
     return;
 }
@@ -270,8 +268,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
             DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
             if (!val || exit_status != 0)
                goto out;
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&cmd, g_free);
         }
         deviceprintf (&tmp, mount_command, pdisk->device);
         mountpointprintf (&cmd, tmp, pdisk->mount_point);
@@ -296,10 +293,8 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         }
 
         if (on_mount_cmd != NULL && strlen(on_mount_cmd)!=0) {
-            g_free(tmp);
-            tmp = NULL;
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&tmp, g_free);
+            g_clear_pointer(&cmd, g_free);
             deviceprintf(&tmp, on_mount_cmd, pdisk->device);
             mountpointprintf(&cmd, tmp, pdisk->mount_point);
             val = g_spawn_command_line_async (cmd, &error);
@@ -353,8 +348,7 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
            goto out;
 
         if (eject) {
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&cmd, g_free);
             cmd = g_strconcat ("eject ", pdisk->device, NULL);
             val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
             DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
