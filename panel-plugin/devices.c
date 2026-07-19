@@ -679,7 +679,7 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
     unsigned int i;
     gchar *excluded_FS_i;
-    size_t excluded_FS_i_len = 0;
+    size_t excluded_FS_i_len;
 
     TRACE("Entering exclude_filesystems");
 
