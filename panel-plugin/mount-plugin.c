@@ -250,11 +250,11 @@ disk_display_refresh (t_disk_display * disk_display)
             size = get_size_human_readable (mount_info->size);
             avail = get_size_human_readable (mount_info->avail);
             text = g_strdup_printf (_("[%s/%s] %s free"), used, size, avail);
-
+            gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
             g_free(used);
             g_free(size);
             g_free(avail);
-            gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
+            g_free(text);
 
             gtk_progress_bar_set_fraction (
                      GTK_PROGRESS_BAR(disk_display->progress_bar),
@@ -263,9 +263,9 @@ disk_display_refresh (t_disk_display * disk_display)
                      GTK_PROGRESS_BAR(disk_display->progress_bar),
                      TRUE);
 
-            gtk_progress_bar_set_text (
-                     GTK_PROGRESS_BAR(disk_display->progress_bar),
-                     g_strdup_printf ("%d%%",mount_info->percent));
+            text = g_strdup_printf ("%d%%",mount_info->percent);
+            gtk_progress_bar_set_text (GTK_PROGRESS_BAR(disk_display->progress_bar), text);
+            g_free(text);
             gtk_widget_show (GTK_WIDGET(disk_display->progress_bar));
         }
         else /* mount_info == NULL */
@@ -855,8 +855,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->string_cmd = gtk_entry_new ();
     if (mt->on_mount_cmd != NULL)
-    gtk_entry_set_text (GTK_ENTRY(md->string_cmd),
-                        g_strdup(mt->on_mount_cmd));
+    gtk_entry_set_text (GTK_ENTRY(md->string_cmd), mt->on_mount_cmd);
     gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 15);
     gtk_widget_show (md->string_cmd);
     gtk_box_pack_start (GTK_BOX(_hbox), md->string_cmd, TRUE, TRUE, 0);
@@ -915,16 +914,14 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->string_mount_command = gtk_entry_new ();
     DBG("mt->mount_command: %s", mt->mount_command);
-    gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ),
-                    g_strdup(mt->mount_command ));
+    gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ), mt->mount_command );
     gtk_widget_show (md->string_mount_command );
     gtk_grid_attach (GTK_GRID(md->box_mount_commands),
                     md->string_mount_command , 1, 0,
                     1, 1);
 
     md->string_umount_command = gtk_entry_new ();
-    gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ),
-                    g_strdup(mt->umount_command ));
+    gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ), mt->umount_command );
     gtk_widget_show (md->string_umount_command );
     gtk_grid_attach (GTK_GRID(md->box_mount_commands),
                     md->string_umount_command , 1, 1,
