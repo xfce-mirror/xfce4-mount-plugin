@@ -153,8 +153,7 @@ mount_info_free(t_mount_info * * mount_info)
     {
         g_free ((*mount_info)->mounted_on);
         g_free ((*mount_info)->type);
-        g_free ((*mount_info));
-        *mount_info = NULL ;
+        g_clear_pointer(mount_info, g_free);
     }
     return;
 }
@@ -229,8 +228,7 @@ disk_free(t_disk **pdisk)
         g_free ((*pdisk)->device_short);
         g_free ((*pdisk)->mount_point);
         mount_info_free (&((*pdisk)->mount_info));
-        g_free(*pdisk);
-        *pdisk = NULL;
+        g_clear_pointer(pdisk, g_free);
     }
     return;
 }
@@ -245,7 +243,6 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
     gchar *tmp = NULL, *cmd = NULL;
     gchar *output = NULL, *erroutput = NULL;
     int exit_status = 0;
-    GError *error = NULL;
     gboolean val;
 
     if (pdisk != NULL)
@@ -266,24 +263,20 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
 #else
             cmd = g_strconcat ("eject -t ", pdisk->device, NULL);
 #endif
-            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, NULL);
             DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-            if (val == FALSE || exit_status != 0)
+            if (!val || exit_status != 0)
                goto out;
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&cmd, g_free);
         }
         deviceprintf (&tmp, mount_command, pdisk->device);
         mountpointprintf (&cmd, tmp, pdisk->mount_point);
         /* cmd contains mount_command device mount_point */
-        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, NULL);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-        if (val == FALSE || exit_status != 0)
+        if (!val || exit_status != 0)
         {
             /* show error message if smth failed */
-            //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin:\n\nError executing command."),
-                //_("Return value:"), WEXITSTATUS(exit_status), _("\nError was:"), erroutput);
-            //xfce_dialog_show_error (NULL, error, _("Failed to mount device \"%s\"."), pdisk->device);
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
                                "dialog-error",
@@ -296,17 +289,14 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         }
 
         if (on_mount_cmd != NULL && strlen(on_mount_cmd)!=0) {
-            g_free(tmp);
-            tmp = NULL;
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&tmp, g_free);
+            g_clear_pointer(&cmd, g_free);
             deviceprintf(&tmp, on_mount_cmd, pdisk->device);
             mountpointprintf(&cmd, tmp, pdisk->mount_point);
-            val = g_spawn_command_line_async (cmd, &error);
+            val = g_spawn_command_line_async (cmd, NULL);
             DBG("cmd: '%s', returned %d", cmd, val);
             /* show error message if smth failed */
-            if (val == FALSE)
-                //xfce_dialog_show_error (NULL, error, _("Error executing on-mount command \"%s\"."), on_mount_cmd);
+            if (!val)
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
                                "dialog-error",
@@ -319,8 +309,7 @@ disk_mount (t_disk *pdisk, char *on_mount_cmd, char* mount_command, gboolean eje
         }
 out:
         g_free(cmd);
-        if (tmp)
-            g_free(tmp);
+        g_free(tmp);
     }
 }
 
@@ -334,7 +323,6 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
     gchar *tmp = NULL, *cmd = NULL;
     gchar *output = NULL, *erroutput = NULL;
     int exit_status = 0;
-    GError *error = NULL;
     gboolean val;
 
     if (pdisk != NULL)
@@ -348,28 +336,23 @@ disk_umount (t_disk *pdisk, char* umount_command, gboolean show_message_dialog, 
 
         mountpointprintf(&cmd, tmp, pdisk->mount_point);
         /* cmd contains umount_command device mount_point */
-        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+        val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, NULL);
         DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
-        if (val == FALSE || exit_status != 0)
+        if (!val || exit_status != 0)
            goto out;
 
         if (eject) {
-            g_free(cmd);
-            cmd = NULL;
+            g_clear_pointer(&cmd, g_free);
             cmd = g_strconcat ("eject ", pdisk->device, NULL);
-            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, &error);
+            val = g_spawn_command_line_sync (cmd, &output, &erroutput, &exit_status, NULL);
             DBG("cmd: '%s', returned %d, exit_status=%d", cmd, val, exit_status);
         }
 
 out:
         g_free(cmd);
-        if (tmp)
-            g_free(tmp);
+        g_free(tmp);
         /* show error message if smth failed */
-        if (val == FALSE || exit_status != 0)
-            //xfce_dialog_show_error (NULL, error, "%s %s %d, %s %s", _("Mount Plugin: Error executing command."),
-                //_("Returned"), WEXITSTATUS(exit_status), _("error was"), erroutput);
-            //xfce_dialog_show_error (NULL, error, _("Failed to umount device \"%s\"."), pdisk->device);
+        if (!val || exit_status != 0)
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
                                "dialog-error",
@@ -379,8 +362,7 @@ out:
                                GTK_RESPONSE_OK,
                                NULL);
 
-        if (show_message_dialog && !eject && val == TRUE && exit_status == 0)
-            //xfce_dialog_show_info (NULL, NULL, _("The device \"%s\" should be removable safely now."), pdisk->device);
+        if (show_message_dialog && !eject && val && exit_status == 0)
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
                                "dialog-information",
@@ -390,7 +372,6 @@ out:
                                GTK_RESPONSE_OK,
                                NULL);
         if (show_message_dialog && disk_check_mounted(pdisk->device))
-            //xfce_dialog_show_error (NULL, NULL, _("An error occurred. The device \"%s\" should not be removed!"), pdisk->device);
             xfce_message_dialog (NULL,
                                _("Xfce 4 Mount Plugin"),
                                "dialog-error",
@@ -698,7 +679,7 @@ exclude_filesystem (GPtrArray *excluded_FSs, gchar *mountpoint, gchar *device)
 {
     unsigned int i;
     gchar *excluded_FS_i;
-    size_t excluded_FS_i_len = 0;
+    size_t excluded_FS_i_len;
 
     TRACE("Entering exclude_filesystems");
 

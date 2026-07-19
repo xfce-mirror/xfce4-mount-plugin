@@ -68,19 +68,9 @@ on_activate_disk_display (GtkWidget *widget, t_disk * disk)
 static void
 mounter_set_size (XfcePanelPlugin *plugin, int size, t_mounter *mt)
 {
-#if LIBXFCE4PANEL_CHECK_VERSION (4, 17, 4)
     xfce_panel_set_image_from_source (GTK_IMAGE (mt->image), mt->icon, NULL,
                                       xfce_panel_plugin_get_icon_size (plugin),
                                       gtk_widget_get_scale_factor (GTK_WIDGET (plugin)));
-#else
-    gint scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (plugin));
-    gint icon_size = xfce_panel_plugin_get_icon_size (plugin);
-    GdkPixbuf *pixbuf = xfce_panel_pixbuf_from_source (mt->icon, NULL, icon_size * scale_factor);
-    cairo_surface_t *surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
-    gtk_image_set_from_surface (GTK_IMAGE (mt->image), surface);
-    cairo_surface_destroy (surface);
-    g_object_unref (pixbuf);
-#endif
 }
 
 /**
@@ -260,11 +250,11 @@ disk_display_refresh (t_disk_display * disk_display)
             size = get_size_human_readable (mount_info->size);
             avail = get_size_human_readable (mount_info->avail);
             text = g_strdup_printf (_("[%s/%s] %s free"), used, size, avail);
-
+            gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
             g_free(used);
             g_free(size);
             g_free(avail);
-            gtk_label_set_text(GTK_LABEL(disk_display->label_mount_info), text);
+            g_free(text);
 
             gtk_progress_bar_set_fraction (
                      GTK_PROGRESS_BAR(disk_display->progress_bar),
@@ -273,9 +263,9 @@ disk_display_refresh (t_disk_display * disk_display)
                      GTK_PROGRESS_BAR(disk_display->progress_bar),
                      TRUE);
 
-            gtk_progress_bar_set_text (
-                     GTK_PROGRESS_BAR(disk_display->progress_bar),
-                     g_strdup_printf ("%d%%",mount_info->percent));
+            text = g_strdup_printf ("%u%%",mount_info->percent);
+            gtk_progress_bar_set_text (GTK_PROGRESS_BAR(disk_display->progress_bar), text);
+            g_free(text);
             gtk_widget_show (GTK_WIDGET(disk_display->progress_bar));
         }
         else /* mount_info == NULL */
@@ -412,16 +402,8 @@ on_button_press (GtkWidget *widget, GdkEventButton *eventButton, t_mounter *moun
         if (mounter != NULL && eventButton->button == 1) /* left click only */
         {
             mounter_refresh (mounter); /* refreshs infos regarding mounts data */
-#if LIBXFCE4PANEL_CHECK_VERSION (4, 17 ,2)
             xfce_panel_plugin_popup_menu (mounter->plugin, GTK_MENU (mounter->menu),
                                           mounter->button, (GdkEvent *) eventButton);
-#else
-G_GNUC_BEGIN_IGNORE_DEPRECATIONS
-            gtk_menu_popup (GTK_MENU(mounter->menu), NULL, NULL,
-                            xfce_panel_plugin_position_menu, mounter->plugin,
-                            0, eventButton->time);
-G_GNUC_END_IGNORE_DEPRECATIONS
-#endif
             result = TRUE;
         }
     }
@@ -445,11 +427,11 @@ mounter_read_config (XfcePanelPlugin *plugin, t_mounter *mt)
     rc = xfce_rc_simple_open (file, TRUE);
     g_free (file);
 
-    if (mt->icon != NULL) g_free(mt->icon);
-    if (mt->on_mount_cmd != NULL) g_free(mt->on_mount_cmd);
-    if (mt->mount_command != NULL) g_free(mt->mount_command);
-    if (mt->umount_command != NULL) g_free(mt->umount_command);
-    if (mt->excluded_filesystems != NULL) g_free(mt->excluded_filesystems);
+    g_free(mt->icon);
+    g_free(mt->on_mount_cmd);
+    g_free(mt->mount_command);
+    g_free(mt->umount_command);
+    g_free(mt->excluded_filesystems);
 
     icon = g_strdup_printf ("%s/icons/hicolor/scalable/apps/xfce-mount.svg", DATADIR);
     mt->icon = g_strdup(xfce_rc_read_entry(rc, "icon", icon));
@@ -578,7 +560,7 @@ create_mounter_control (XfcePanelPlugin *plugin)
 
     gtk_widget_set_tooltip_text( GTK_WIDGET(mounter->button), _("devices"));
 
-    g_signal_connect (G_OBJECT(mounter->button), "button_press_event",
+    g_signal_connect (G_OBJECT(mounter->button), "button-press-event",
                       G_CALLBACK(on_button_press), mounter);
     gtk_widget_show(mounter->button);
 
@@ -873,8 +855,7 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->string_cmd = gtk_entry_new ();
     if (mt->on_mount_cmd != NULL)
-    gtk_entry_set_text (GTK_ENTRY(md->string_cmd),
-                        g_strdup(mt->on_mount_cmd));
+    gtk_entry_set_text (GTK_ENTRY(md->string_cmd), mt->on_mount_cmd);
     gtk_entry_set_width_chars (GTK_ENTRY(md->string_cmd), 15);
     gtk_widget_show (md->string_cmd);
     gtk_box_pack_start (GTK_BOX(_hbox), md->string_cmd, TRUE, TRUE, 0);
@@ -933,16 +914,14 @@ mounter_create_options (XfcePanelPlugin *plugin, t_mounter *mt)
 
     md->string_mount_command = gtk_entry_new ();
     DBG("mt->mount_command: %s", mt->mount_command);
-    gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ),
-                    g_strdup(mt->mount_command ));
+    gtk_entry_set_text (GTK_ENTRY(md->string_mount_command ), mt->mount_command );
     gtk_widget_show (md->string_mount_command );
     gtk_grid_attach (GTK_GRID(md->box_mount_commands),
                     md->string_mount_command , 1, 0,
                     1, 1);
 
     md->string_umount_command = gtk_entry_new ();
-    gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ),
-                    g_strdup(mt->umount_command ));
+    gtk_entry_set_text (GTK_ENTRY(md->string_umount_command ), mt->umount_command );
     gtk_widget_show (md->string_umount_command );
     gtk_grid_attach (GTK_GRID(md->box_mount_commands),
                     md->string_umount_command , 1, 1,
