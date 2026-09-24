@@ -283,7 +283,7 @@ msgstr "Prikaži razdelke/naprave in jim dovoli priklop/odklop"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
-msgstr "Priklop naprav"
+msgstr "Priklopi naprave"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:6
 msgid "Shows all mountable devices and (un)mounts them on request."
