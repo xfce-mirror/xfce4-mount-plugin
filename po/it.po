@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Cristian Marchi <cri.penta@gmail.com>, 2010,2013-2014
-# Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2025
+# Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2025-2026
 # Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2018
 # Enrico B. <enricobe@hotmail.com>, 2016
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-11-11 00:59+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2025\n"
+"Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.com>, 2025-2026\n"
 "Language-Team: Italian (http://app.transifex.com/xfce/xfce-panel-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -287,7 +287,7 @@ msgstr "Mostra le partizioni e i dispositivi e permette di montarli o smontarli"
 
 #: panel-plugin/mount-plugin.c:1089
 msgid "translator-credits"
-msgstr "Vincenzo Reale <smart2128@baslug.org> 2020\nEmanuele Petriglia <inbox@emanuelepetriglia.me>, 2018\nCristian Marchi <cri.penta@gmail.com>, 2009"
+msgstr "Vincenzo Reale <smart2128@baslug.org> 2020\nEmanuele Petriglia <inbox@emanuelepetriglia.com>, 2018\nCristian Marchi <cri.penta@gmail.com>, 2009"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
