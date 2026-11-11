@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-07-18 11:07+0200\n"
+"POT-Creation-Date: 2026-11-11 00:59+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: Phan Vĩnh Thịnh <teppi@vnlinux.org>, 2006\n"
 "Language-Team: Vietnamese (http://app.transifex.com/xfce/xfce-panel-plugins/language/vi/)\n"
@@ -69,115 +69,115 @@ msgstr "loại hệ thống tệp: %s\n"
 msgid "actual mount point:  %s\n"
 msgstr "điểm gắn kết thực tế: %s\n"
 
-#: panel-plugin/devices.c:168
+#: panel-plugin/devices.c:167
 #, c-format
 msgid "disk: %s\n"
 msgstr "đĩa: %s\n"
 
-#: panel-plugin/devices.c:169
+#: panel-plugin/devices.c:168
 #, c-format
 msgid "mount point: %s\n"
 msgstr "điểm gắn kết: %s\n"
 
-#: panel-plugin/devices.c:173
+#: panel-plugin/devices.c:172
 #, c-format
 msgid "not mounted\n"
 msgstr "chưa gắn\n"
 
-#: panel-plugin/devices.c:288 panel-plugin/devices.c:311
-#: panel-plugin/devices.c:374 panel-plugin/devices.c:385
-#: panel-plugin/devices.c:395 panel-plugin/devices.c:481
+#: panel-plugin/devices.c:281 panel-plugin/devices.c:301
+#: panel-plugin/devices.c:357 panel-plugin/devices.c:367
+#: panel-plugin/devices.c:376 panel-plugin/devices.c:462
 msgid "Xfce 4 Mount Plugin"
 msgstr "Plugin gắn kết Xfce 4"
 
-#: panel-plugin/devices.c:290
+#: panel-plugin/devices.c:283
 msgid "Failed to mount device:"
 msgstr "Không thể gắn thiết bị:"
 
-#: panel-plugin/devices.c:313
+#: panel-plugin/devices.c:303
 msgid "Error executing on-mount command:"
 msgstr "Lỗi khi thực thi lệnh on-mount:"
 
-#: panel-plugin/devices.c:376
+#: panel-plugin/devices.c:359
 msgid "Failed to umount device:"
 msgstr "Không thể kết nối thiết bị:"
 
-#: panel-plugin/devices.c:387
+#: panel-plugin/devices.c:369
 msgid "The device should be removable safely now:"
 msgstr "Thiết bị nên được tháo rời một cách an toàn ngay bây giờ:"
 
-#: panel-plugin/devices.c:397
+#: panel-plugin/devices.c:378
 msgid "An error occurred. The device should not be removed:"
 msgstr "Đã xảy ra lỗi. Không nên tháo thiết bị:"
 
-#: panel-plugin/devices.c:483
+#: panel-plugin/devices.c:464
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "/etc/fstab của bạn không thể đọc được. Điều này sẽ làm suy giảm nghiêm trọng khả năng của plugin."
 
-#: panel-plugin/mount-plugin.c:204
+#: panel-plugin/mount-plugin.c:194
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:252
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s trống"
 
-#: panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:275
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">chưa gắn</span>"
 
-#: panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:350
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><_spanfontize=\"large\">Plugin gắn kết Xfce 4 – Thiết bị và điểm gắn kết</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:579
+#: panel-plugin/mount-plugin.c:561
 msgid "devices"
 msgstr "thiết bị"
 
-#: panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:751
 msgid "Mount Plugin"
 msgstr "Plugin gắn"
 
-#: panel-plugin/mount-plugin.c:772
+#: panel-plugin/mount-plugin.c:754
 msgid "_Close"
 msgstr "Đó_ng"
 
-#: panel-plugin/mount-plugin.c:775
+#: panel-plugin/mount-plugin.c:757
 msgid "Properties"
 msgstr "Thuộc tính"
 
-#: panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:788
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Điều này chỉ hữu ích và được khuyến nghị nếu bạn chỉ định \"đồng bộ hóa\" như một phần của chuỗi lệnh \"ngắt kết nối\"."
 
-#: panel-plugin/mount-plugin.c:810
+#: panel-plugin/mount-plugin.c:792
 msgid "Show _message after unmount"
 msgstr "_Hiển thị thông báo sau khi ngắt kết nối"
 
-#: panel-plugin/mount-plugin.c:822
+#: panel-plugin/mount-plugin.c:804
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Bạn có thể chỉ định một biểu tượng riêng biệt sẽ được hiển thị trong bảng điều khiển điều khiển."
 
-#: panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:810
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: panel-plugin/mount-plugin.c:832
+#: panel-plugin/mount-plugin.c:814
 msgid "Select an image"
 msgstr "Chọn một hình ảnh"
 
-#: panel-plugin/mount-plugin.c:839
+#: panel-plugin/mount-plugin.c:821
 msgid "_General"
 msgstr "Tổn_g quan"
 
-#: panel-plugin/mount-plugin.c:854
+#: panel-plugin/mount-plugin.c:836
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -185,82 +185,82 @@ msgid ""
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
 msgstr "Lệnh này sẽ được thực thi sau khi gắn thiết bị với điểm gắn kết của thiết bị làm đối số.\nNếu bạn không chắc chắn nên chèn gì, hãy thử \"%s %%m\".\n'%%d' có thể được sử dụng để chỉ định thiết bị, '%%m' cho điểm gắn kết."
 
-#: panel-plugin/mount-plugin.c:870
+#: panel-plugin/mount-plugin.c:852
 msgid "_Execute after mounting:"
 msgstr "_Thực hiện sau khi lắp:"
 
-#: panel-plugin/mount-plugin.c:893
+#: panel-plugin/mount-plugin.c:874
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "CẢNH BÁO: Những tùy chọn này chỉ dành cho người dùng có kinh nghiệm! Nếu không biết rõ về chúng, xin đừng thay đổi gì!"
 
-#: panel-plugin/mount-plugin.c:897
+#: panel-plugin/mount-plugin.c:878
 msgid "_Custom commands"
 msgstr "Lệnh tùy _chỉnh"
 
-#: panel-plugin/mount-plugin.c:916
+#: panel-plugin/mount-plugin.c:897
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Hầu hết người dùng sẽ chỉ muốn thêm \"sudo\" vào cả hai lệnh hoặc thêm \"sync %d &&\" vào lệnh \"unmount %d\".\n'%d' được sử dụng để chỉ định thiết bị, '%m' cho điểm gắn kết."
 
-#: panel-plugin/mount-plugin.c:924
+#: panel-plugin/mount-plugin.c:905
 msgid "_Mount command:"
 msgstr "_Lệnh gắn kết:"
 
-#: panel-plugin/mount-plugin.c:929
+#: panel-plugin/mount-plugin.c:910
 msgid "_Unmount command:"
 msgstr "_Lệnh ngắt kết nối:"
 
-#: panel-plugin/mount-plugin.c:954
+#: panel-plugin/mount-plugin.c:933
 msgid "_Commands"
 msgstr "_Lệnh"
 
-#: panel-plugin/mount-plugin.c:969
+#: panel-plugin/mount-plugin.c:948
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Kích hoạt tùy chọn này để màn hình các hệ thống tệp mạng như NFS, SMBFS, SHFS và SSHFS."
 
-#: panel-plugin/mount-plugin.c:973
+#: panel-plugin/mount-plugin.c:952
 msgid "Display _network file systems"
 msgstr "Hiể_n thị hệ thống tệp mạng"
 
-#: panel-plugin/mount-plugin.c:986
+#: panel-plugin/mount-plugin.c:965
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Kích hoạt tùy chọn này để đẩy ổ đĩa CD ra sau khi tháo và lắp vào trước khi lắp."
 
-#: panel-plugin/mount-plugin.c:990
+#: panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "Đẩ_y ổ đĩa CD ra"
 
-#: panel-plugin/mount-plugin.c:1003
+#: panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Kích hoạt tùy chọn này để chỉ hiển thị các điểm gắn kết."
 
-#: panel-plugin/mount-plugin.c:1006
+#: panel-plugin/mount-plugin.c:985
 msgid "Display _mount points only"
 msgstr "Chỉ Màn hình điể_m gắn kết"
 
-#: panel-plugin/mount-plugin.c:1021
+#: panel-plugin/mount-plugin.c:1000
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Cắt bớt tên thiết bị theo số ký tự được chỉ định trong nút xoay."
 
-#: panel-plugin/mount-plugin.c:1027
+#: panel-plugin/mount-plugin.c:1006
 msgid "Trim device names: "
 msgstr "Cắt tên thiết bị: "
 
-#: panel-plugin/mount-plugin.c:1036
+#: panel-plugin/mount-plugin.c:1015
 msgid " characters"
 msgstr " nhân vật"
 
-#: panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1032
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -269,17 +269,21 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Loại trừ các hệ thống tệp sau khỏi menu.\nDanh sách được phân tách bằng dấu cách đơn giản.\nBạn có thể chỉ định đúng thiết bị hoặc điểm gắn kết.\nDấu hoa thị (*) có thể được sử dụng làm phần giữ chỗ ở cuối\nmột đường dẫn, ví dụ: \"/mnt/*\" để loại trừ mọi điểm gắn kết bên dưới \"/mnt\".\n"
 
-#: panel-plugin/mount-plugin.c:1064
+#: panel-plugin/mount-plugin.c:1043
 msgid "E_xclude specified file systems"
 msgstr "_Loại trừ các hệ thống tệp được chỉ định"
 
-#: panel-plugin/mount-plugin.c:1079
+#: panel-plugin/mount-plugin.c:1058
 msgid "_File systems"
 msgstr "_Hệ thống tập tin"
 
-#: panel-plugin/mount-plugin.c:1102
+#: panel-plugin/mount-plugin.c:1086
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Hiển thị các phân vùng/thiết bị và cho phép gắn kết/ngắt kết nối chúng"
+
+#: panel-plugin/mount-plugin.c:1089
+msgid "translator-credits"
+msgstr "Vietnam Linux L10n <https://github.com/linux-l10n-vi>\nLoc Huynh <https://github.com/hthienloc>"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
