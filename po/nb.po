@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-07-18 11:07+0200\n"
+"POT-Creation-Date: 2026-11-11 00:59+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: heskjestad, 2019-2020\n"
 "Language-Team: Norwegian Bokmål (http://app.transifex.com/xfce/xfce-panel-plugins/language/nb/)\n"
@@ -75,115 +75,115 @@ msgstr "filsystemtype : %s\n"
 msgid "actual mount point:  %s\n"
 msgstr "virkelig monteringspunkt : %s\n"
 
-#: panel-plugin/devices.c:168
+#: panel-plugin/devices.c:167
 #, c-format
 msgid "disk: %s\n"
 msgstr "disk : %s\n"
 
-#: panel-plugin/devices.c:169
+#: panel-plugin/devices.c:168
 #, c-format
 msgid "mount point: %s\n"
 msgstr "monteringspunkt : %s\n"
 
-#: panel-plugin/devices.c:173
+#: panel-plugin/devices.c:172
 #, c-format
 msgid "not mounted\n"
 msgstr "ikke montert\n"
 
-#: panel-plugin/devices.c:288 panel-plugin/devices.c:311
-#: panel-plugin/devices.c:374 panel-plugin/devices.c:385
-#: panel-plugin/devices.c:395 panel-plugin/devices.c:481
+#: panel-plugin/devices.c:281 panel-plugin/devices.c:301
+#: panel-plugin/devices.c:357 panel-plugin/devices.c:367
+#: panel-plugin/devices.c:376 panel-plugin/devices.c:462
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce 4 monteringstillegg"
 
-#: panel-plugin/devices.c:290
+#: panel-plugin/devices.c:283
 msgid "Failed to mount device:"
 msgstr "Klarte ikke å montere enheten:"
 
-#: panel-plugin/devices.c:313
+#: panel-plugin/devices.c:303
 msgid "Error executing on-mount command:"
 msgstr "Feil under kjøring av ved-monterings-kommando:"
 
-#: panel-plugin/devices.c:376
+#: panel-plugin/devices.c:359
 msgid "Failed to umount device:"
 msgstr "Klarte ikke å avmontere enheten:"
 
-#: panel-plugin/devices.c:387
+#: panel-plugin/devices.c:369
 msgid "The device should be removable safely now:"
 msgstr "Enheten skal kunne fjernes trygt nå:"
 
-#: panel-plugin/devices.c:397
+#: panel-plugin/devices.c:378
 msgid "An error occurred. The device should not be removed:"
 msgstr "En feil oppstod. Enheten bør ikke fjernes:"
 
-#: panel-plugin/devices.c:483
+#: panel-plugin/devices.c:464
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "Din /etc/fstab kunne ikke leses. Dette vil i stor grad hemme tilleggets evne til å gjøre noe."
 
-#: panel-plugin/mount-plugin.c:204
+#: panel-plugin/mount-plugin.c:194
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:252
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s ledig"
 
-#: panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:275
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">ikke montert</span>"
 
-#: panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:350
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce 4s monteringstillegg – Enheter og monteringspunkter</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:579
+#: panel-plugin/mount-plugin.c:561
 msgid "devices"
 msgstr "enheter"
 
-#: panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:751
 msgid "Mount Plugin"
 msgstr "Montering"
 
-#: panel-plugin/mount-plugin.c:772
+#: panel-plugin/mount-plugin.c:754
 msgid "_Close"
 msgstr "Lukk"
 
-#: panel-plugin/mount-plugin.c:775
+#: panel-plugin/mount-plugin.c:757
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:788
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Dette valget er kun å anbefale hvis du har angitt «sync» som en del av «unmount»-kommandoen."
 
-#: panel-plugin/mount-plugin.c:810
+#: panel-plugin/mount-plugin.c:792
 msgid "Show _message after unmount"
 msgstr "Vis _melding etter avmontering"
 
-#: panel-plugin/mount-plugin.c:822
+#: panel-plugin/mount-plugin.c:804
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Du kan angi et eget ikon for framvisning i panelet."
 
-#: panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:810
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: panel-plugin/mount-plugin.c:832
+#: panel-plugin/mount-plugin.c:814
 msgid "Select an image"
 msgstr "Velg et bilde"
 
-#: panel-plugin/mount-plugin.c:839
+#: panel-plugin/mount-plugin.c:821
 msgid "_General"
 msgstr "_Generelt"
 
-#: panel-plugin/mount-plugin.c:854
+#: panel-plugin/mount-plugin.c:836
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -191,82 +191,82 @@ msgid ""
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
 msgstr ""
 
-#: panel-plugin/mount-plugin.c:870
+#: panel-plugin/mount-plugin.c:852
 msgid "_Execute after mounting:"
 msgstr "_Kjør etter montering:"
 
-#: panel-plugin/mount-plugin.c:893
+#: panel-plugin/mount-plugin.c:874
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "ADVARSEL: Disse valgene er kun for eksperter! Hvis du ikke vet hva de innebærer så kan det være lurt å finne ut av det før du prøver."
 
-#: panel-plugin/mount-plugin.c:897
+#: panel-plugin/mount-plugin.c:878
 msgid "_Custom commands"
 msgstr "_Selvvalgte kommandoer"
 
-#: panel-plugin/mount-plugin.c:916
+#: panel-plugin/mount-plugin.c:897
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "De fleste brukere har mulighet til å kjøre «sudo» foran begge kommandoer, eller «sync %d &&» foran «unmount %d»-kommandoen.\n«%d» kan brukes for å angi enheten, «%m» for monteringspunktet."
 
-#: panel-plugin/mount-plugin.c:924
+#: panel-plugin/mount-plugin.c:905
 msgid "_Mount command:"
 msgstr "_Monteringskommando:"
 
-#: panel-plugin/mount-plugin.c:929
+#: panel-plugin/mount-plugin.c:910
 msgid "_Unmount command:"
 msgstr "_Avmonteringskommando:"
 
-#: panel-plugin/mount-plugin.c:954
+#: panel-plugin/mount-plugin.c:933
 msgid "_Commands"
 msgstr "_Kommandoer"
 
-#: panel-plugin/mount-plugin.c:969
+#: panel-plugin/mount-plugin.c:948
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "Aktiver dette valget for også å vise filsystemwe som ligger i nettverket, f.eks. NFS, SMBFS, SHFS og SSHFS."
 
-#: panel-plugin/mount-plugin.c:973
+#: panel-plugin/mount-plugin.c:952
 msgid "Display _network file systems"
 msgstr "Vis også filsystemer i _nettverket"
 
-#: panel-plugin/mount-plugin.c:986
+#: panel-plugin/mount-plugin.c:965
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Aktiver denne for også å løse ut CD-en etter avmontering."
 
-#: panel-plugin/mount-plugin.c:990
+#: panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "_Løs ut CD-enheten"
 
-#: panel-plugin/mount-plugin.c:1003
+#: panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Aktiver denne for å kun vise monteringspunktene."
 
-#: panel-plugin/mount-plugin.c:1006
+#: panel-plugin/mount-plugin.c:985
 msgid "Display _mount points only"
 msgstr "Vis kun _monteringspunkter"
 
-#: panel-plugin/mount-plugin.c:1021
+#: panel-plugin/mount-plugin.c:1000
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Beskjær enhetsnavnene til antall tegn som er angitt i rotasjonsknappen."
 
-#: panel-plugin/mount-plugin.c:1027
+#: panel-plugin/mount-plugin.c:1006
 msgid "Trim device names: "
 msgstr "Beskjær enhetsnavn:"
 
-#: panel-plugin/mount-plugin.c:1036
+#: panel-plugin/mount-plugin.c:1015
 msgid " characters"
 msgstr "tegn"
 
-#: panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1032
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -275,17 +275,21 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Ekskluder følgende filsystemer fra menyen.\nListen er adskilt med enkle mellomrom.\nDet er opp til deg å angi korrekte enheter eller monteringspunkter.\nEn stjerne (*) kan brukes som en plassholder på slutten av en bane,\nfor eksempel «/mnt/*» for å utelukke monteringspunkter under «/mnt».\n\n"
 
-#: panel-plugin/mount-plugin.c:1064
+#: panel-plugin/mount-plugin.c:1043
 msgid "E_xclude specified file systems"
 msgstr "E_kskluder spesifiserte filsystemer"
 
-#: panel-plugin/mount-plugin.c:1079
+#: panel-plugin/mount-plugin.c:1058
 msgid "_File systems"
 msgstr "_Filsystemer"
 
-#: panel-plugin/mount-plugin.c:1102
+#: panel-plugin/mount-plugin.c:1086
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Vis partisjoner/enheter og tillat montering/avmontering av dem"
+
+#: panel-plugin/mount-plugin.c:1089
+msgid "translator-credits"
+msgstr "haarek - Harald <https://www.transifex.com/accounts/profile/haarek/>\nkingu - Allan Nordhøy <https://www.transifex.com/accounts/profile/kingu/>\npapparonny - Ronny K. M. Olufsen <https://www.transifex.com/accounts/profile/papparonny/>\nTerje Uriansrud <terje@uriansrud.net>"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
