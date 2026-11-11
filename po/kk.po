@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
-"POT-Creation-Date: 2025-07-18 11:07+0200\n"
+"POT-Creation-Date: 2026-11-11 00:59+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Kazakh (http://app.transifex.com/xfce/xfce-panel-plugins/language/kk/)\n"
@@ -67,115 +67,115 @@ msgstr "файлдық жүйе түрі:    %s\n"
 msgid "actual mount point:  %s\n"
 msgstr "нақты тіркеу нүктесі:  %s\n"
 
-#: panel-plugin/devices.c:168
+#: panel-plugin/devices.c:167
 #, c-format
 msgid "disk: %s\n"
 msgstr "диск: %s\n"
 
-#: panel-plugin/devices.c:169
+#: panel-plugin/devices.c:168
 #, c-format
 msgid "mount point: %s\n"
 msgstr "тіркеу нүктесі: %s\n"
 
-#: panel-plugin/devices.c:173
+#: panel-plugin/devices.c:172
 #, c-format
 msgid "not mounted\n"
 msgstr "тіркелмеген\n"
 
-#: panel-plugin/devices.c:288 panel-plugin/devices.c:311
-#: panel-plugin/devices.c:374 panel-plugin/devices.c:385
-#: panel-plugin/devices.c:395 panel-plugin/devices.c:481
+#: panel-plugin/devices.c:281 panel-plugin/devices.c:301
+#: panel-plugin/devices.c:357 panel-plugin/devices.c:367
+#: panel-plugin/devices.c:376 panel-plugin/devices.c:462
 msgid "Xfce 4 Mount Plugin"
 msgstr "Xfce 4 тіркеу плагині"
 
-#: panel-plugin/devices.c:290
+#: panel-plugin/devices.c:283
 msgid "Failed to mount device:"
 msgstr "Құрылғыны тіркеу сәтсіз аяқталды:"
 
-#: panel-plugin/devices.c:313
+#: panel-plugin/devices.c:303
 msgid "Error executing on-mount command:"
 msgstr "Тіркеу кезіндегі команданы орындау қатесі:"
 
-#: panel-plugin/devices.c:376
+#: panel-plugin/devices.c:359
 msgid "Failed to umount device:"
 msgstr "Құрылғыны тіркеуден шығару сәтсіз аяқталды:"
 
-#: panel-plugin/devices.c:387
+#: panel-plugin/devices.c:369
 msgid "The device should be removable safely now:"
 msgstr "Енді құрылғыны қауіпсіз шығаруға болады:"
 
-#: panel-plugin/devices.c:397
+#: panel-plugin/devices.c:378
 msgid "An error occurred. The device should not be removed:"
 msgstr "Қате орын алды. Құрылғыны шығаруға болмайды:"
 
-#: panel-plugin/devices.c:483
+#: panel-plugin/devices.c:464
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
 msgstr "Сіздің /etc/fstab файлыңызды оқу мүмкін емес. Бұл плагин мүмкіндіктерін едәуір нашарлатады."
 
-#: panel-plugin/mount-plugin.c:204
+#: panel-plugin/mount-plugin.c:194
 msgid " -> "
 msgstr " -> "
 
-#: panel-plugin/mount-plugin.c:262
+#: panel-plugin/mount-plugin.c:252
 #, c-format
 msgid "[%s/%s] %s free"
 msgstr "[%s/%s] %s бос"
 
-#: panel-plugin/mount-plugin.c:285
+#: panel-plugin/mount-plugin.c:275
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
 msgstr "<span foreground=\"#FF0000\">тіркелмеген</span>"
 
-#: panel-plugin/mount-plugin.c:360
+#: panel-plugin/mount-plugin.c:350
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
 msgstr "<b><i><span font_size=\"large\">Xfce 4 тіркеу плагині – Құрылғылар мен тіркеу нүктелері</span></i></b>"
 
-#: panel-plugin/mount-plugin.c:579
+#: panel-plugin/mount-plugin.c:561
 msgid "devices"
 msgstr "құрылғылар"
 
-#: panel-plugin/mount-plugin.c:769
+#: panel-plugin/mount-plugin.c:751
 msgid "Mount Plugin"
 msgstr "Тіркеу плагині"
 
-#: panel-plugin/mount-plugin.c:772
+#: panel-plugin/mount-plugin.c:754
 msgid "_Close"
 msgstr "_Жабу"
 
-#: panel-plugin/mount-plugin.c:775
+#: panel-plugin/mount-plugin.c:757
 msgid "Properties"
 msgstr "Қасиеттері"
 
-#: panel-plugin/mount-plugin.c:806
+#: panel-plugin/mount-plugin.c:788
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
 msgstr "Бұл тек \"unmount\" командалық жолының бөлігі ретінде \"sync\" опциясын көрсетсеңіз ғана пайдалы және ұсынылады."
 
-#: panel-plugin/mount-plugin.c:810
+#: panel-plugin/mount-plugin.c:792
 msgid "Show _message after unmount"
 msgstr "Тіркеуден шығарған соң _хабарламаны көрсету"
 
-#: panel-plugin/mount-plugin.c:822
+#: panel-plugin/mount-plugin.c:804
 msgid "You can specify a distinct icon to be displayed in the panel."
 msgstr "Панельде көрсету үшін бөлек таңбашаны көрсетуге болады."
 
-#: panel-plugin/mount-plugin.c:828
+#: panel-plugin/mount-plugin.c:810
 msgid "Icon:"
 msgstr "Таңбаша:"
 
-#: panel-plugin/mount-plugin.c:832
+#: panel-plugin/mount-plugin.c:814
 msgid "Select an image"
 msgstr "Суретті таңдау"
 
-#: panel-plugin/mount-plugin.c:839
+#: panel-plugin/mount-plugin.c:821
 msgid "_General"
 msgstr "_Жалпы"
 
-#: panel-plugin/mount-plugin.c:854
+#: panel-plugin/mount-plugin.c:836
 #, c-format
 msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
@@ -183,82 +183,82 @@ msgid ""
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
 msgstr "Бұл команда құрылғы тіркелгеннен кейін, құрылғының тіркеу нүктесін аргумент ретінде қолданып орындалады.\nНе кірістіру керектігін білмесеңіз, \"%s %%m\" қолданып көріңіз.\n'%%d' құрылғыны, '%%m' тіркеу нүктесін көрсету үшін қолданылады."
 
-#: panel-plugin/mount-plugin.c:870
+#: panel-plugin/mount-plugin.c:852
 msgid "_Execute after mounting:"
 msgstr "Тіркегеннен кейін о_рындау:"
 
-#: panel-plugin/mount-plugin.c:893
+#: panel-plugin/mount-plugin.c:874
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
 msgstr "ЕСКЕРТУ: Бұл опциялар тек мамандарға арналған! Егер олардың не үшін керек екенін білмесеңіз, тиіспеңіз!"
 
-#: panel-plugin/mount-plugin.c:897
+#: panel-plugin/mount-plugin.c:878
 msgid "_Custom commands"
 msgstr "_Таңдауыңызша командалар"
 
-#: panel-plugin/mount-plugin.c:916
+#: panel-plugin/mount-plugin.c:897
 #, c-format
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
 msgstr "Пайдаланушылардың көбі екі команданың алдына \"sudo\" қосуды немесе \"unmount %d\" командасының алдына \"sync %d &&\" қосуды қалайды.\n'%d' құрылғыны, '%m' тіркеу нүктесін көрсету үшін қолданылады."
 
-#: panel-plugin/mount-plugin.c:924
+#: panel-plugin/mount-plugin.c:905
 msgid "_Mount command:"
 msgstr "Тір_кеу командасы:"
 
-#: panel-plugin/mount-plugin.c:929
+#: panel-plugin/mount-plugin.c:910
 msgid "_Unmount command:"
 msgstr "Тіркеуден ш_ығару ко_мандасы:"
 
-#: panel-plugin/mount-plugin.c:954
+#: panel-plugin/mount-plugin.c:933
 msgid "_Commands"
 msgstr "_Командалар"
 
-#: panel-plugin/mount-plugin.c:969
+#: panel-plugin/mount-plugin.c:948
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
 msgstr "NFS, SMBFS, SHFS және SSHFS сияқты желілік файлдық жүйелерді де көрсету үшін бұл опцияны белсендіріңіз."
 
-#: panel-plugin/mount-plugin.c:973
+#: panel-plugin/mount-plugin.c:952
 msgid "Display _network file systems"
 msgstr "_Желілік файлдық жүйелерді көрсету"
 
-#: panel-plugin/mount-plugin.c:986
+#: panel-plugin/mount-plugin.c:965
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
 msgstr "Тіркеуден шығарғаннан кейін CD-жетегін шығару үшін және тіркеу алдында кірістіру үшін бұл опцияны белсендіріңіз."
 
-#: panel-plugin/mount-plugin.c:990
+#: panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
 msgstr "CD-жетектерін ш_ығару"
 
-#: panel-plugin/mount-plugin.c:1003
+#: panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
 msgstr "Тек тіркеу нүктелерін көрсету үшін бұл опцияны белсендіріңіз."
 
-#: panel-plugin/mount-plugin.c:1006
+#: panel-plugin/mount-plugin.c:985
 msgid "Display _mount points only"
 msgstr "Тек тіркеу _нүктелерін көрсету"
 
-#: panel-plugin/mount-plugin.c:1021
+#: panel-plugin/mount-plugin.c:1000
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
 msgstr "Құрылғы атауларын айналдыру батырмасында көрсетілген таңбалар санына дейін қысқарту."
 
-#: panel-plugin/mount-plugin.c:1027
+#: panel-plugin/mount-plugin.c:1006
 msgid "Trim device names: "
 msgstr "Құрылғы атауларын қысқарту: "
 
-#: panel-plugin/mount-plugin.c:1036
+#: panel-plugin/mount-plugin.c:1015
 msgid " characters"
 msgstr " таңба"
 
-#: panel-plugin/mount-plugin.c:1053
+#: panel-plugin/mount-plugin.c:1032
 msgid ""
 "Exclude the following file systems from the menu.\n"
 "The list is separated by simple spaces.\n"
@@ -267,17 +267,21 @@ msgid ""
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
 msgstr "Мәзірден келесі файлдық жүйелерді алып тастау.\nТізім бос орындармен ажыратылады.\nДұрыс құрылғыларды немесе тіркеу нүктелерін көрсету өз еркіңізде.\nЖолдың соңында жұлдызша (*) белгісін орын толтырғыш ретінде қолдануға болады,\nмысалы, \"/mnt/*\" астындағы кез келген тіркеу нүктелерін алып тастау үшін \"/mnt/*\" қолданыңыз.\n"
 
-#: panel-plugin/mount-plugin.c:1064
+#: panel-plugin/mount-plugin.c:1043
 msgid "E_xclude specified file systems"
 msgstr "Көрсетілген файлдық жүйелерді алып та_стау"
 
-#: panel-plugin/mount-plugin.c:1079
+#: panel-plugin/mount-plugin.c:1058
 msgid "_File systems"
 msgstr "_Файлдық жүйелер"
 
-#: panel-plugin/mount-plugin.c:1102
+#: panel-plugin/mount-plugin.c:1086
 msgid "Show partitions/devices and allow to mount/unmount them"
 msgstr "Бөлімдерді/құрылғыларды көрсету және оларды тіркеуге/ажыратуға рұқсат беру"
+
+#: panel-plugin/mount-plugin.c:1089
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
