@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Rihards Priedītis <rprieditis@gmail.com>, 2009
+# Rihards Priedītis <rprieditis@gmail.com>, 2007,2009,2026
 # Rihards Prieditis <rprieditis@inbox.lv>, 2007
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2026-11-11 00:59+0100\n"
 "PO-Revision-Date: 2013-07-03 19:06+0000\n"
-"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2009\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>, 2007,2009,2026\n"
 "Language-Team: Latvian (http://app.transifex.com/xfce/xfce-panel-plugins/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,32 +43,32 @@ msgstr "%.1f GB"
 #: panel-plugin/devices.c:79
 #, c-format
 msgid "size:                %g\n"
-msgstr "izmērs:                %g\n"
+msgstr "izmērs:               %g\n"
 
 #: panel-plugin/devices.c:80
 #, c-format
 msgid "used size:           %g\n"
-msgstr "izmantotais izmērs:           %g\n"
+msgstr "izmantotais izmērs:   %g\n"
 
 #: panel-plugin/devices.c:81
 #, c-format
 msgid "available size:       %g\n"
-msgstr ""
+msgstr "pieejamais izmērs:    %g\n"
 
 #: panel-plugin/devices.c:82
 #, c-format
 msgid "percentage used:     %d\n"
-msgstr "izlietojums procentuāli:     %d\n"
+msgstr "izmantots procentos:  %d\n"
 
 #: panel-plugin/devices.c:83
 #, c-format
 msgid "file system type:    %s\n"
-msgstr "failu sistēmas tips:    %s\n"
+msgstr "failu sistēmas tips:  %s\n"
 
 #: panel-plugin/devices.c:84
 #, c-format
 msgid "actual mount point:  %s\n"
-msgstr "patiesais montēšanas punkts:  %s\n"
+msgstr "faktiskais montēšanas punkts:  %s\n"
 
 #: panel-plugin/devices.c:167
 #, c-format
@@ -82,58 +83,58 @@ msgstr "montēšanas punkts: %s\n"
 #: panel-plugin/devices.c:172
 #, c-format
 msgid "not mounted\n"
-msgstr "nemontēts\n"
+msgstr "nav montēts\n"
 
 #: panel-plugin/devices.c:281 panel-plugin/devices.c:301
 #: panel-plugin/devices.c:357 panel-plugin/devices.c:367
 #: panel-plugin/devices.c:376 panel-plugin/devices.c:462
 msgid "Xfce 4 Mount Plugin"
-msgstr ""
+msgstr "Xfce 4 montēšanas spraudnis"
 
 #: panel-plugin/devices.c:283
 msgid "Failed to mount device:"
-msgstr ""
+msgstr "Neizdevās montēt ierīci:"
 
 #: panel-plugin/devices.c:303
 msgid "Error executing on-mount command:"
-msgstr ""
+msgstr "Kļūda, izpildot pēcmontēšanas komandu:"
 
 #: panel-plugin/devices.c:359
 msgid "Failed to umount device:"
-msgstr ""
+msgstr "Neizdevās atmontēt ierīci:"
 
 #: panel-plugin/devices.c:369
 msgid "The device should be removable safely now:"
-msgstr ""
+msgstr "Tagad ierīci var droši izņemt:"
 
 #: panel-plugin/devices.c:378
 msgid "An error occurred. The device should not be removed:"
-msgstr ""
+msgstr "Radās kļūda. Ierīci nedrīkst izņemt:"
 
 #: panel-plugin/devices.c:464
 msgid ""
 "Your /etc/fstab could not be read. This will severely degrade the plugin's "
 "abilities."
-msgstr ""
+msgstr "Neizdevās nolasīt jūsu /etc/fstab. Tas būtiski ierobežos spraudņa iespējas."
 
 #: panel-plugin/mount-plugin.c:194
 msgid " -> "
-msgstr ""
+msgstr " -> "
 
 #: panel-plugin/mount-plugin.c:252
 #, c-format
 msgid "[%s/%s] %s free"
-msgstr ""
+msgstr "[%s/%s] %s brīvs"
 
 #: panel-plugin/mount-plugin.c:275
 msgid "<span foreground=\"#FF0000\">not mounted</span>"
-msgstr "<span foreground=\"#FF0000\">nemontēts</span>"
+msgstr "<span foreground=\"#FF0000\">nav montēts</span>"
 
 #: panel-plugin/mount-plugin.c:350
 msgid ""
 "<b><i><span font_size=\"large\">Xfce 4 Mount Plugin – Devices and Mount "
 "Points</span></i></b>"
-msgstr ""
+msgstr "<b><i><span font_size=\"large\">Xfce 4 montēšanas spraudnis – ierīces un montēšanas punkti</span></i></b>"
 
 #: panel-plugin/mount-plugin.c:561
 msgid "devices"
@@ -145,25 +146,25 @@ msgstr "Montēšanas spraudnis"
 
 #: panel-plugin/mount-plugin.c:754
 msgid "_Close"
-msgstr ""
+msgstr "_Aizvērt"
 
 #: panel-plugin/mount-plugin.c:757
 msgid "Properties"
-msgstr "Rekvizīti"
+msgstr "Īpašības"
 
 #: panel-plugin/mount-plugin.c:788
 msgid ""
 "This is only useful and recommended if you specify \"sync\" as part of the "
 "\"unmount\" command string."
-msgstr "Šis ir lietderīgs un ieteicams, ja jūs norādāt \"sync\", kā daļu no \"unmount\" komandas virkni."
+msgstr "Tas ir noderīgi un ieteicams tikai tad, ja „unmount” komandas virknē norādāt „sync”."
 
 #: panel-plugin/mount-plugin.c:792
 msgid "Show _message after unmount"
-msgstr "Rādīt _ziņu pēc atmontēšanas"
+msgstr "Pēc atmontēšanas rādīt _ziņojumu"
 
 #: panel-plugin/mount-plugin.c:804
 msgid "You can specify a distinct icon to be displayed in the panel."
-msgstr "Jūs varat norādīt ikonu, kuru attēlot panelī."
+msgstr "Varat norādīt atsevišķu ikonu, ko rādīt panelī."
 
 #: panel-plugin/mount-plugin.c:810
 msgid "Icon:"
@@ -171,11 +172,11 @@ msgstr "Ikona:"
 
 #: panel-plugin/mount-plugin.c:814
 msgid "Select an image"
-msgstr "Norādiet attēlu"
+msgstr "Izvēlieties attēlu"
 
 #: panel-plugin/mount-plugin.c:821
 msgid "_General"
-msgstr "_Vispārēji"
+msgstr "_Vispārīgi"
 
 #: panel-plugin/mount-plugin.c:836
 #, c-format
@@ -183,7 +184,7 @@ msgid ""
 "This command will be executed after mounting the device with the mount point of the device as argument.\n"
 "If you are unsure what to insert, try \"%s %%m\".\n"
 "'%%d' can be used to specify the device, '%%m' for the mountpoint."
-msgstr ""
+msgstr "Šī komanda tiks izpildīta pēc ierīces montēšanas, kā argumentu nododot ierīces montēšanas punktu.\nJa nezināt, ko ievadīt, mēģiniet „%s %%m”.\n„%%d” var izmantot ierīces norādīšanai, „%%m” — montēšanas punkta norādīšanai."
 
 #: panel-plugin/mount-plugin.c:852
 msgid "_Execute after mounting:"
@@ -193,7 +194,7 @@ msgstr "_Izpildīt pēc montēšanas:"
 msgid ""
 "WARNING: These options are for experts only! If you do not know what they "
 "may be good for, keep your hands off!"
-msgstr "UZMANĪBU: Šīs opcijas ir paredzēta tikai ekspertiem. Ja nezināt, kam tās ir domātas, rokas nost!"
+msgstr "BRĪDINĀJUMS: šīs opcijas paredzētas tikai ekspertiem! Ja nezināt, kam tās noder, labāk tās neaiztieciet!"
 
 #: panel-plugin/mount-plugin.c:878
 msgid "_Custom commands"
@@ -204,7 +205,7 @@ msgstr "_Pielāgotās komandas"
 msgid ""
 "Most users will only want to prepend \"sudo\" to both commands or prepend \"sync %d &&\" to the \"unmount %d\" command.\n"
 "'%d' is used to specify the device, '%m' for the mountpoint."
-msgstr "Lielākā daļa lietotāju vēlēsies pievienot \"sudo\" abām komandām vai pievienot \"sync %d &&\"  komandai \"unmount %d\".\n'%d' tiek lietots, lai norādītu ierīci, '%m' montēšanas punktu."
+msgstr "Lielākā daļa lietotāju vēlēsies abu komandu sākumā pievienot „sudo” vai komandas „unmount %d” sākumā pievienot „sync %d &&”.\n„%d” norāda ierīci, „%m” — montēšanas punktu."
 
 #: panel-plugin/mount-plugin.c:905
 msgid "_Mount command:"
@@ -222,43 +223,43 @@ msgstr "_Komandas"
 msgid ""
 "Activate this option to also display network file systems like NFS, SMBFS, "
 "SHFS and SSHFS."
-msgstr "Aktivizējot šo opciju, tiks attēloti arī tīklu failu sistēmas, piemēram, NFS, SMBFS, SHFS un SSHFS."
+msgstr "Ieslēdziet šo opciju, lai rādītu arī tīkla failu sistēmas, piemēram, NFS, SMBFS, SHFS un SSHFS."
 
 #: panel-plugin/mount-plugin.c:952
 msgid "Display _network file systems"
-msgstr "Attēlot _tīkla failu sistēmas"
+msgstr "Rādīt _tīkla failu sistēmas"
 
 #: panel-plugin/mount-plugin.c:965
 msgid ""
 "Activate this option to also eject a CD-drive after unmounting and to insert"
 " before mounting."
-msgstr "Aktivizējot šo opciju CD tiks izgrūsts pēc atmontēšanas un ievietots pēc montēšanas."
+msgstr "Ieslēdziet šo opciju, lai pēc atmontēšanas CD diskdzinis arī izgrūstu disku un pirms montēšanas to ievilktu."
 
 #: panel-plugin/mount-plugin.c:969
 msgid "_Eject CD-drives"
-msgstr "_Izgrūst CD"
+msgstr "_Izgrūst CD diskdziņos"
 
 #: panel-plugin/mount-plugin.c:982
 msgid "Activate this option to only have the mount points be displayed."
-msgstr "Aktivizējiet šo opciju, tikai lai montēšanas punkti tiku attēloti"
+msgstr "Ieslēdziet šo opciju, lai tiktu rādīti tikai montēšanas punkti."
 
 #: panel-plugin/mount-plugin.c:985
 msgid "Display _mount points only"
-msgstr "Attēlot tikai _montēšanas punktus"
+msgstr "Rādīt tikai _montēšanas punktus"
 
 #: panel-plugin/mount-plugin.c:1000
 msgid ""
 "Trim the device names to the number of characters specified in the spin "
 "button."
-msgstr ""
+msgstr "Saīsināt ierīču nosaukumus līdz skaitītājā norādītajam rakstzīmju skaitam."
 
 #: panel-plugin/mount-plugin.c:1006
 msgid "Trim device names: "
-msgstr ""
+msgstr "Saīsināt ierīču nosaukumus: "
 
 #: panel-plugin/mount-plugin.c:1015
 msgid " characters"
-msgstr ""
+msgstr " rakstzīmes"
 
 #: panel-plugin/mount-plugin.c:1032
 msgid ""
@@ -267,11 +268,11 @@ msgid ""
 "It is up to you to specify correct devices or mount points.\n"
 "An asterisk (*) can be used as a placeholder at the end of\n"
 "a path, e.g., \"/mnt/*\" to exclude any mountpoints below \"/mnt\".\n"
-msgstr ""
+msgstr "Izslēgt no izvēlnes šīs failu sistēmas.\nSaraksta vienumus atdala ar vienkāršām atstarpēm.\nPareizas ierīces vai montēšanas punkti jānorāda jums pašiem.\nZvaigznīti (*) var izmantot kā aizstājējzīmi ceļa beigās,\npiemēram, „/mnt/*”, lai izslēgtu visus montēšanas punktus zem „/mnt”.\n"
 
 #: panel-plugin/mount-plugin.c:1043
 msgid "E_xclude specified file systems"
-msgstr "I_zkļaut norādītās failu sistēmas"
+msgstr "I_zslēgt norādītās failu sistēmas"
 
 #: panel-plugin/mount-plugin.c:1058
 msgid "_File systems"
@@ -279,11 +280,11 @@ msgstr "_Failu sistēmas"
 
 #: panel-plugin/mount-plugin.c:1086
 msgid "Show partitions/devices and allow to mount/unmount them"
-msgstr ""
+msgstr "Rādīt nodalījumus/ierīces un ļaut tos montēt/atmontēt"
 
 #: panel-plugin/mount-plugin.c:1089
 msgid "translator-credits"
-msgstr "Rihards Priedītis"
+msgstr "Rihards Priedītis <rprieditis@gmail.com>"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:5
 msgid "Mount devices"
@@ -291,4 +292,4 @@ msgstr "Montēt ierīces"
 
 #: panel-plugin/xfce4-mount-plugin.desktop.in:6
 msgid "Shows all mountable devices and (un)mounts them on request."
-msgstr "Rāda visus montējamās ierīces un (at)montē tās pēc pieprasījuma."
+msgstr "Rāda visas montējamās ierīces un pēc pieprasījuma tās montē vai atmontē."
